@@ -2,9 +2,41 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
+Reallocated field_info (elt_size=4) to 10676 items from 5000.
 Database file #1: prism-tex/references.bib
+Warning--I didn't find a database entry for "Bommes:2009"
+Warning--I didn't find a database entry for "Kazhdan:2012"
+Warning--I didn't find a database entry for "Sacht:2013"
 Warning--I didn't find a database entry for "tozoni2020low"
 Warning--I didn't find a database entry for "crane2013conformal"
+Warning--I didn't find a database entry for "libigl"
+Warning--I didn't find a database entry for "Lipman:2012"
+Warning--I didn't find a database entry for "Kovalsky:2016"
+Warning--I didn't find a database entry for "Bommes:2013"
+Warning--I didn't find a database entry for "Poranne:2014"
+Warning--I didn't find a database entry for "Pal:2014"
+Warning--I didn't find a database entry for "Harmon:2011"
+Warning--I didn't find a database entry for "harmon2010robust"
+Warning--I didn't find a database entry for "Lipman:2013ArXiv"
+Warning--I didn't find a database entry for "Misztal:2012"
+Warning--I didn't find a database entry for "Hormann:2000"
+Warning--I didn't find a database entry for "Degener:2003"
+Warning--I didn't find a database entry for "Sander:2001"
+Warning--I didn't find a database entry for "Sorkine:2002"
+Warning--I didn't find a database entry for "Fu:2015"
+Warning--I didn't find a database entry for "jimenez:2001"
+Warning--I didn't find a database entry for "Harmon:2009"
+Warning--I didn't find a database entry for "Ainsley:2012"
+Warning--I didn't find a database entry for "Levy:2002"
+Warning--I didn't find a database entry for "Zhou:2004"
+Warning--I didn't find a database entry for "Shewchuk:1996"
+Warning--I didn't find a database entry for "Liu:2008"
+Warning--I didn't find a database entry for "Si:2015"
+Warning--I didn't find a database entry for "Klingner:2009"
+Warning--I didn't find a database entry for "Dougherty2004"
+Warning--I didn't find a database entry for "Myles:2014"
+Warning--I didn't find a database entry for "Sorkine:2007"
+Warning--I didn't find a database entry for "SolomonBook"
 Warning--I didn't find a database entry for "jiang2020bijective"
 Warning--I didn't find a database entry for "bargteil2014animation"
 Warning--I didn't find a database entry for "MEZGER2009680"
@@ -126,7 +158,7 @@ Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--can't use both volume and number fields in wang2003view
 You've used 117 entries,
             1935 wiz_defined-function locations,
-            1253 strings with 24032 characters,
+            1312 strings with 24684 characters,
 and the built_in function-call counts, 50607 in all, are:
 = -- 4932
 > -- 2310
@@ -165,4 +197,4 @@ warning$ -- 11
 while$ -- 390
 width$ -- 0
 write$ -- 1528
-(There were 121 warnings)
+(There were 152 warnings)

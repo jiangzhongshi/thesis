@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  23 MAY 2022 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  23 MAY 2022 21:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1164,7 +1164,49 @@ File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
 \WF@everypar=\toks56
 Package: wrapfig 2003/01/31  v 3.6
 ))
+(/opt/texlive/texdir/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box91
+)
+\tc@llx=\dimen325
+\tc@lly=\dimen326
+\tc@urx=\dimen327
+\tc@ury=\dimen328
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen329
+\adjbox@Height=\dimen330
+\adjbox@Depth=\dimen331
+\adjbox@Totalheight=\dimen332
+\adjbox@pwidth=\dimen333
+\adjbox@pheight=\dimen334
+\adjbox@pdepth=\dimen335
+\adjbox@ptotalheight=\dimen336
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box92
+\sift@deathcycles=\count354
+\@vwid@loff=\dimen337
+\@vwid@roff=\dimen338
+))
 (docs/thesis.aux
+
+LaTeX Warning: Label `sec:related' multiply defined.
+
 
 LaTeX Warning: Label `sec:related' multiply defined.
 
@@ -1253,16 +1295,16 @@ LaTeX Font Info:    ... okay on input line 171.
 
 (/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count354
-\scratchdimen=\dimen325
-\scratchbox=\box91
-\nofMPsegments=\count355
-\nofMParguments=\count356
+\scratchcounter=\count355
+\scratchdimen=\dimen339
+\scratchbox=\box93
+\nofMPsegments=\count356
+\nofMParguments=\count357
 \everyMPshowfont=\toks57
-\MPscratchCnt=\count357
-\MPscratchDim=\dimen326
-\MPnumerator=\count358
-\makeMPintoPDFobject=\count359
+\MPscratchCnt=\count358
+\MPscratchDim=\dimen340
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
 \everyMPtoPDFconversion=\toks58
 ) (/opt/texlive/texdir/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1286,7 +1328,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/opt/texlive/texdir/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count360
+\c@section@level=\count361
 )
 LaTeX Info: Redefining \ref on input line 171.
 LaTeX Info: Redefining \pageref on input line 171.
@@ -1296,13 +1338,13 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: `wrapfig' package detected.
-\c@mv@tabular=\count361
-\c@mv@boldtabular=\count362
+\c@mv@tabular=\count362
+\c@mv@boldtabular=\count363
 (/opt/texlive/texdir/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@lstlisting=\count363
+\c@lstlisting=\count364
 LaTeX Info: Redefining \microtypecontext on input line 171.
 Package microtype Info: Applying patch `item' on input line 171.
 Package microtype Info: Applying patch `toc' on input line 171.
@@ -1433,34 +1475,52 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 8
 \openout4 = `thesis.toc'.
 
  [7]
-(docs/thesis.lof [8
+(docs/thesis.lof
+
+Package natbib Warning: Citation `Bommes:2009' on page viii undefined on input 
+line 8.
 
 
-]
+Package natbib Warning: Citation `Kazhdan:2012' on page viii undefined on input
+ line 12.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page viii undefined on input l
+ine 12.
+
+[8
+
+
+] [9]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 22.
- [9]
+(Font)              scaled to size 12.0pt on input line 37.
+ [10]
 
-LaTeX Warning: Reference `app:bilinear' on page x undefined on input line 28.
+LaTeX Warning: Reference `app:bilinear' on page xi undefined on input line 43.
 
-[10]
+[11] [12]
 
-Package natbib Warning: Citation `tozoni2020low' on page xi undefined on input 
-line 58.
+Package natbib Warning: Citation `tozoni2020low' on page xiii undefined on inpu
+t line 73.
 
 
-Package natbib Warning: Citation `crane2013conformal' on page xi undefined on i
-nput line 58.
+Package natbib Warning: Citation `crane2013conformal' on page xiii undefined on
+ input line 73.
 
 )
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [11] (docs/thesis.lot)
+ [13] (docs/thesis.lot
+
+Package natbib Warning: Citation `libigl' on page xiv undefined on input line 4
+.
+
+)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [12
+ [14
 
 
 ]
@@ -1473,135 +1533,403 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./prism-tex/01-Introduction.tex
+(./scaf-tex/sections/introduction.tex
+<scaf-tex/figs/teaser.pdf, id=66, 4500.74492pt x 1191.82263pt>
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 3.
 
-pdfTeX warning: pdflatex (file ./prism-tex/figs/teaser_edit.pdf): PDF inclusion
-: found PDF version <1.6>, but at most version <1.5> allowed
-<prism-tex/figs/teaser_edit.pdf, id=60, 557.81396pt x 508.5911pt>
-File: prism-tex/figs/teaser_edit.pdf Graphic file (type pdf)
-<use prism-tex/figs/teaser_edit.pdf>
-Package pdftex.def Info: prism-tex/figs/teaser_edit.pdf  used on input line 4.
-(pdftex.def)             Requested size: 469.75502pt x 428.30008pt.
-LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 12.
-(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
-File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
-uxBiolinumT-TLF.
-)
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 12.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 12.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 12.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 12.
-
-[3
-
-] [4 <./prism-tex/figs/teaser_edit.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 57
-.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 57.
+(Font)              scaled to size 12.0pt on input line 3.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
+n input line 5.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
+File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
+uxBiolinumT-TLF.
 )
-(./prism-tex/02-Related.tex [5]
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 5.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 5.
+
+
+Package natbib Warning: Citation `Lipman:2012' on page 3 undefined on input lin
+e 12.
+
+
+Package natbib Warning: Citation `Kovalsky:2016' on page 3 undefined on input l
+ine 12.
+
+
+Package natbib Warning: Citation `Bommes:2013' on page 3 undefined on input lin
+e 12.
+
+
+Package natbib Warning: Citation `Poranne:2014' on page 3 undefined on input li
+ne 12.
+
+
+Package natbib Warning: Citation `Pal:2014' on page 3 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `Harmon:2011' on page 3 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `harmon2010robust' on page 3 undefined on inpu
+t line 16.
+
+[3
+
+]
+
+Package natbib Warning: Citation `Lipman:2013ArXiv' on page 4 undefined on inpu
+t line 18.
+
+
+Package natbib Warning: Citation `Misztal:2012' on page 4 undefined on input li
+ne 22.
+
+
+Package natbib Warning: Citation `Kazhdan:2012' on page 4 undefined on input li
+ne 24.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page 4 undefined on input line
+ 24.
+
+) (./scaf-tex/sections/previous-work.tex [4]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 6.
- [6] [7] [8]) (./prism-tex/03-Method.tex
-<prism-tex/figs/pipeline.pdf, id=129, 498.0698pt x 184.3979pt>
-<prism-tex/figs/corona.pdf, id=130, 1024.33693pt x 567.42287pt>
+(Font)              scaled to size 14.4pt on input line 5.
+
+
+Package natbib Warning: Citation `Hormann:2000' on page 5 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Degener:2003' on page 5 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Sander:2001' on page 5 undefined on input lin
+e 6.
+
+
+Package natbib Warning: Citation `Sorkine:2002' on page 5 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Poranne:2014' on page 5 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Hormann:2000' on page 5 undefined on input li
+ne 8.
+
+
+Package natbib Warning: Citation `Fu:2015' on page 5 undefined on input line 8.
+
+
+
+Package natbib Warning: Citation `Kovalsky:2016' on page 5 undefined on input l
+ine 8.
+
+
+Package natbib Warning: Citation `Misztal:2012' on page 5 undefined on input li
+ne 15.
+
+[5]
+
+Package natbib Warning: Citation `jimenez:2001' on page 6 undefined on input li
+ne 22.
+
+
+Package natbib Warning: Citation `Harmon:2009' on page 6 undefined on input lin
+e 22.
+
+
+Package natbib Warning: Citation `harmon2010robust' on page 6 undefined on inpu
+t line 22.
+
+
+Package natbib Warning: Citation `Ainsley:2012' on page 6 undefined on input li
+ne 22.
+
+
+Package natbib Warning: Citation `Harmon:2011' on page 6 undefined on input lin
+e 24.
+
+
+Package natbib Warning: Citation `Levy:2002' on page 6 undefined on input line 
+27.
+
+
+Package natbib Warning: Citation `Zhou:2004' on page 6 undefined on input line 
+27.
+
+
+Package natbib Warning: Citation `Levy:2002' on page 6 undefined on input line 
+27.
+
+
+Package natbib Warning: Citation `Zhou:2004' on page 6 undefined on input line 
+27.
+
+
+Package natbib Warning: Citation `Sorkine:2002' on page 6 undefined on input li
+ne 27.
+
+[6]) (./scaf-tex/sections/method.tex
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.8pt on input line 18.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 18.
+
+
+Package natbib Warning: Citation `Lipman:2013ArXiv' on page 7 undefined on inpu
+t line 23.
+
+[7]
+<scaf-tex/figs/scaffold_illustration.pdf, id=86, 724.7075pt x 250.9375pt>
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.1pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 10.95pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 8.0pt on input line 28.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 6.1pt on input line 28.
+ [8]
+<scaf-tex/figs/hand_weight.pdf, id=90, 724.7075pt x 403.5075pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `Shewchuk:1996' on page 9 undefined on input l
+ine 75.
+
+
+Package natbib Warning: Citation `Kovalsky:2016' on page 9 undefined on input l
+ine 75.
+
+
+Package natbib Warning: Citation `Liu:2008' on page 9 undefined on input line 7
+8.
 
 [9]
 
-LaTeX Warning: Reference `app:dblayer' on page 10 undefined on input line 33.
+Package natbib Warning: Citation `Shewchuk:1996' on page 10 undefined on input 
+line 82.
 
-<prism-tex/figs/prism_projection.pdf, id=134, 754.83604pt x 349.48567pt>
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.95pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 8.0pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 6.1pt on input line 40.
 [10]
-<prism-tex/figs/projection.pdf, id=138, 1347.72502pt x 329.55319pt>
-<prism-tex/figs/not-section-illustrate.pdf, id=139, 412.97488pt x 160.6pt>
+
+Package natbib Warning: Citation `Shewchuk:1996' on page 11 undefined on input 
+line 89.
+
+<scaf-tex/figs/coil-remeshing.pdf, id=100, 813.0375pt x 391.4625pt>
+[11]
+
+Package natbib Warning: Citation `Si:2015' on page 12 undefined on input line 1
+19.
+
+
+Package natbib Warning: Citation `Klingner:2009' on page 12 undefined on input 
+line 119.
+
+
+Package natbib Warning: Citation `Dougherty2004' on page 12 undefined on input 
+line 127.
+
+) (./scaf-tex/sections/results.tex
+<scaf-tex/figs/database_demo.pdf, id=105, 682.55pt x 782.925pt>
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 6.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 6.
+
+
+Package natbib Warning: Citation `Bommes:2009' on page 12 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Bommes:2009' on page 12 undefined on input li
+ne 6.
+
+
+Package natbib Warning: Citation `Bommes:2009' on page 12 undefined on input li
+ne 11.
+
+
+Package natbib Warning: Citation `Myles:2014' on page 12 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `Myles:2014' on page 12 undefined on input lin
+e 11.
+
+[12]
+<scaf-tex/figs/lucy-scalability.pdf, id=109, 808.01875pt x 642.4pt>
+<scaf-tex/figs/the_animal.pdf, id=110, 2961.0625pt x 1756.5625pt>
+ [13]
+<scaf-tex/figs/maneki_neko_colorful.pdf, id=114, 923.45pt x 772.8875pt>
+
+
+Package natbib Warning: Citation `Kazhdan:2012' on page 14 undefined on input l
+ine 51.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page 14 undefined on input lin
+e 51.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page 14 undefined on input lin
+e 51.
+
+
+Package natbib Warning: Citation `Sorkine:2007' on page 14 undefined on input l
+ine 51.
+
+[14]
+<scaf-tex/figs/leg-flow.pdf, id=118, 3578.36874pt x 893.3375pt>
+
+
+Package natbib Warning: Citation `Kazhdan:2012' on page 15 undefined on input l
+ine 57.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page 15 undefined on input lin
+e 57.
+
+
+Package natbib Warning: Citation `Kazhdan:2012' on page 15 undefined on input l
+ine 57.
+
+
+Package natbib Warning: Citation `Sacht:2013' on page 15 undefined on input lin
+e 57.
+
+<scaf-tex/figs/rabbit_grow.pdf, id=119, 1789.68625pt x 1104.125pt>
+<scaf-tex/figs/dense_hilbert.pdf, id=120, 3462.9375pt x 1982.90813pt>
+<scaf-tex/figs/compare_smith.pdf, id=121, 1063.47313pt x 1065.50072pt>
+
+Package natbib Warning: Citation `Misztal:2012' on page 15 undefined on input l
+ine 92.
+
+
+Package natbib Warning: Citation `SolomonBook' on page 15 undefined on input li
+ne 92.
+
+[15]
+<scaf-tex/figs/camel_step.pdf, id=125, 1294.8375pt x 361.35pt>
+<scaf-tex/figs/random-rotate.pdf, id=126, 1047.46336pt x 1041.35043pt>
+ (./scaf-tex/sections/timings.tex
+
+Package natbib Warning: Citation `libigl' on page 16 undefined on input line 47
+.
+
+
+Package natbib Warning: Citation `libigl' on page 16 undefined on input line 47
+.
+
+)) (./scaf-tex/sections/conclusions.tex [16] [17]) [18] [19] [20] [21]
+Chapter 4.
+(./prism-tex/01-Introduction.tex
+
+pdfTeX warning: pdflatex (file ./prism-tex/figs/teaser_edit.pdf): PDF inclusion
+: found PDF version <1.6>, but at most version <1.5> allowed
+<prism-tex/figs/teaser_edit.pdf, id=147, 557.81396pt x 508.5911pt>
+File: prism-tex/figs/teaser_edit.pdf Graphic file (type pdf)
+<use prism-tex/figs/teaser_edit.pdf>
+Package pdftex.def Info: prism-tex/figs/teaser_edit.pdf  used on input line 4.
+(pdftex.def)             Requested size: 469.75502pt x 428.30008pt.
+[22
+
+] [23 <./prism-tex/figs/teaser_edit.pdf>]) (./prism-tex/02-Related.tex
+[24] [25] [26] [27]) (./prism-tex/03-Method.tex
+<prism-tex/figs/pipeline.pdf, id=213, 498.0698pt x 184.3979pt>
+<prism-tex/figs/corona.pdf, id=214, 1024.33693pt x 567.42287pt>
+ [28]
+
+LaTeX Warning: Reference `app:dblayer' on page 29 undefined on input line 33.
+
+<prism-tex/figs/prism_projection.pdf, id=218, 754.83604pt x 349.48567pt>
+[29]
+<prism-tex/figs/projection.pdf, id=224, 1347.72502pt x 329.55319pt>
+<prism-tex/figs/not-section-illustrate.pdf, id=225, 412.97488pt x 160.6pt>
 File: prism-tex/figs/not-section-illustrate.pdf Graphic file (type pdf)
 <use prism-tex/figs/not-section-illustrate.pdf>
 Package pdftex.def Info: prism-tex/figs/not-section-illustrate.pdf  used on inp
 ut line 79.
 (pdftex.def)             Requested size: 375.80544pt x 146.14621pt.
- [11]
+ [30]
 
-LaTeX Warning: Reference `app:projection' on page 12 undefined on input line 10
+LaTeX Warning: Reference `app:projection' on page 31 undefined on input line 10
 9.
 
-[12 <./prism-tex/figs/not-section-illustrate.pdf>]
+[31 <./prism-tex/figs/not-section-illustrate.pdf>]
 
 pdfTeX warning: pdflatex (file ./prism-tex/figs/composition.pdf): PDF inclusion
 : found PDF version <1.6>, but at most version <1.5> allowed
-<prism-tex/figs/composition.pdf, id=171, 1089.04866pt x 376.48154pt>
+<prism-tex/figs/composition.pdf, id=256, 1089.04866pt x 376.48154pt>
 
-LaTeX Warning: Reference `app:I1' on page 13 undefined on input line 137.
-
-
-LaTeX Warning: Reference `app:bilinear' on page 13 undefined on input line 143.
+LaTeX Warning: Reference `app:I1' on page 32 undefined on input line 137.
 
 
-[13]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 158.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 158.
+LaTeX Warning: Reference `app:bilinear' on page 32 undefined on input line 143.
 
 
-LaTeX Warning: Reference `app:qp' on page 14 undefined on input line 161.
+[32]
+
+LaTeX Warning: Reference `app:qp' on page 33 undefined on input line 161.
 
 
-LaTeX Warning: Reference `app:qp' on page 14 undefined on input line 169.
+LaTeX Warning: Reference `app:qp' on page 33 undefined on input line 169.
 
 
-LaTeX Warning: Reference `app:I1' on page 14 undefined on input line 180.
+LaTeX Warning: Reference `app:I1' on page 33 undefined on input line 180.
 
-[14]
+[33]
 
-LaTeX Warning: Reference `app:thickness' on page 15 undefined on input line 194
+LaTeX Warning: Reference `app:thickness' on page 34 undefined on input line 194
 .
 
-<prism-tex/figs/need_to_bevel.pdf, id=181, 1265.88939pt x 454.60039pt>
-[15]
-<prism-tex/figs/bevel.pdf, id=185, 798.88464pt x 226.75415pt>
-<prism-tex/figs/screwdriver_bevel.pdf, id=186, 914.59294pt x 602.25pt>
+<prism-tex/figs/need_to_bevel.pdf, id=264, 1265.88939pt x 454.60039pt>
+[34]
+<prism-tex/figs/bevel.pdf, id=268, 798.88464pt x 226.75415pt>
+<prism-tex/figs/screwdriver_bevel.pdf, id=269, 914.59294pt x 602.25pt>
 
 
-LaTeX Warning: Reference `app:bevel' on page 16 undefined on input line 248.
+LaTeX Warning: Reference `app:bevel' on page 35 undefined on input line 248.
 
-[16] [17]
+[35] [36]
 
-LaTeX Warning: Reference `app:invariant-checks' on page 18 undefined on input l
+LaTeX Warning: Reference `app:invariant-checks' on page 37 undefined on input l
 ine 281.
 
-<prism-tex/figs/local-operations.pdf, id=194, 1627.23938pt x 707.15695pt>
-[18] [19]
-<prism-tex/figs/doublewheel_pinch.pdf, id=203, 1840.28532pt x 515.21384pt>
+<prism-tex/figs/local-operations.pdf, id=277, 1627.23938pt x 707.15695pt>
+[37] [38]
+<prism-tex/figs/doublewheel_pinch.pdf, id=284, 1840.28532pt x 515.21384pt>
 File: prism-tex/figs/doublewheel_pinch.pdf Graphic file (type pdf)
 <use prism-tex/figs/doublewheel_pinch.pdf>
 Package pdftex.def Info: prism-tex/figs/doublewheel_pinch.pdf  used on input li
@@ -1609,375 +1937,371 @@ ne 357.
 (pdftex.def)             Requested size: 469.75502pt x 131.51537pt.
 
 
-LaTeX Warning: Reference `app:singularity' on page 20 undefined on input line 3
+LaTeX Warning: Reference `app:singularity' on page 39 undefined on input line 3
 78.
 
-[20 <./prism-tex/figs/doublewheel_pinch.pdf>]
-<prism-tex/figs/singular_bevel.pdf, id=523, 250.62433pt x 190.81789pt>
-<prism-tex/figs/degenerate_prism_decompose.pdf, id=524, 988.12663pt x 353.48161
+[39 <./prism-tex/figs/doublewheel_pinch.pdf>]
+<prism-tex/figs/singular_bevel.pdf, id=603, 250.62433pt x 190.81789pt>
+<prism-tex/figs/degenerate_prism_decompose.pdf, id=604, 988.12663pt x 353.48161
 pt>
 
 
-LaTeX Warning: Reference `app:singularity' on page 21 undefined on input line 4
+LaTeX Warning: Reference `app:singularity' on page 40 undefined on input line 4
 06.
 
-<prism-tex/figs/boundary_singular.pdf, id=525, 320.11597pt x 108.6178pt>
-[21]
-<prism-tex/figs/open-hand.pdf, id=529, 724.0731pt x 244.50346pt>
+<prism-tex/figs/boundary_singular.pdf, id=605, 320.11597pt x 108.6178pt>
+[40]
+<prism-tex/figs/open-hand.pdf, id=609, 724.0731pt x 244.50346pt>
 ) (./prism-tex/04-Results.tex
-<prism-tex/figs/varying_thickness.pdf, id=530, 1933.95522pt x 652.96646pt>
+<prism-tex/figs/varying_thickness.pdf, id=610, 1933.95522pt x 652.96646pt>
 File: prism-tex/figs/varying_thickness.pdf Graphic file (type pdf)
 <use prism-tex/figs/varying_thickness.pdf>
 Package pdftex.def Info: prism-tex/figs/varying_thickness.pdf  used on input li
 ne 11.
 (pdftex.def)             Requested size: 469.75502pt x 158.59824pt.
- [22]
-<prism-tex/figs/10k_gallery.pdf, id=534, 1020.82379pt x 864.11633pt>
-<prism-tex/figs/abc_gallery.pdf, id=535, 1493.4897pt x 695.41808pt>
+ [41]
+<prism-tex/figs/10k_gallery.pdf, id=615, 1020.82379pt x 864.11633pt>
+<prism-tex/figs/abc_gallery.pdf, id=616, 1493.4897pt x 695.41808pt>
 
 
 LaTeX Warning: Float too large for page by 21.08928pt on input line 38.
 
-[23 <./prism-tex/figs/varying_thickness.pdf>] [24]
-<prism-tex/figs/stats_combined.pdf, id=598, page=2, 602.25pt x 1151.512pt>
-<prism-tex/figs/stats_combined.pdf, id=599, page=1, 602.25pt x 1151.512pt>
-<prism-tex/figs/thai_comparision.pdf, id=600, 1170.30229pt x 842.09503pt>
+[42 <./prism-tex/figs/varying_thickness.pdf>] [43]
+<prism-tex/figs/stats_combined.pdf, id=679, page=2, 602.25pt x 1151.512pt>
+<prism-tex/figs/stats_combined.pdf, id=680, page=1, 602.25pt x 1151.512pt>
+<prism-tex/figs/thai_comparision.pdf, id=681, 1170.30229pt x 842.09503pt>
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 76.
- [25]
-<prism-tex/figs/shark_accuracy.pdf, id=605, 1191.29062pt x 339.5907pt>
- [26]
+ [44]
+<prism-tex/figs/shark_accuracy.pdf, id=685, 1191.29062pt x 339.5907pt>
+ [45]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 110.
- [27]
-<prism-tex/figs/rockerarm_qslim.pdf, id=613, 929.97034pt x 536.13097pt>
-<prism-tex/figs/heat-in-nut.pdf, id=614, 1103.3722pt x 829.10957pt>
-<prism-tex/figs/tet-knot.pdf, id=615, 417.1876pt x 204.89449pt>
- [28]
-<prism-tex/figs/birdengine.pdf, id=619, 612.60968pt x 508.60513pt>
- [29]
-<prism-tex/figs/bunny-displacement.pdf, id=623, 1068.8934pt x 777.8089pt>
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 209.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 209.
+ [46]
+<prism-tex/figs/rockerarm_qslim.pdf, id=693, 929.97034pt x 536.13097pt>
+<prism-tex/figs/heat-in-nut.pdf, id=694, 1103.3722pt x 829.10957pt>
+<prism-tex/figs/tet-knot.pdf, id=695, 417.1876pt x 204.89449pt>
+ [47]
+<prism-tex/figs/birdengine.pdf, id=700, 612.60968pt x 508.60513pt>
+ [48]
+<prism-tex/figs/bunny-displacement.pdf, id=704, 1068.8934pt x 777.8089pt>
 
 
-LaTeX Warning: Reference `app:bilinear' on page 30 undefined on input line 209.
+LaTeX Warning: Reference `app:bilinear' on page 49 undefined on input line 209.
 
 
 
-LaTeX Warning: Reference `app:bilinear' on page 30 undefined on input line 209.
+LaTeX Warning: Reference `app:bilinear' on page 49 undefined on input line 209.
 
 
 
-LaTeX Warning: Reference `app:bilinear' on page 30 undefined on input line 214.
+LaTeX Warning: Reference `app:bilinear' on page 49 undefined on input line 214.
 
 
-<prism-tex/figs/chain-lizard.pdf, id=624, 915.38588pt x 225.84375pt>
-[30]
-<prism-tex/figs/leg-intersect.pdf, id=628, 787.1287pt x 238.49802pt>
-<prism-tex/figs/armadillo_cage.pdf, id=629, 916.9728pt x 304.55682pt>
-<prism-tex/figs/camel.pdf, id=630, 854.50542pt x 624.96388pt>
- [31] [32] [33]
-<prism-tex/figs/blocks.pdf, id=641, 2796.48769pt x 832.62968pt>
- [34]) (./prism-tex/05-Concluding.tex [35]) [36]
-Chapter 4.
+<prism-tex/figs/chain-lizard.pdf, id=705, 915.38588pt x 225.84375pt>
+[49]
+<prism-tex/figs/leg-intersect.pdf, id=709, 787.1287pt x 238.49802pt>
+<prism-tex/figs/armadillo_cage.pdf, id=710, 916.9728pt x 304.55682pt>
+<prism-tex/figs/camel.pdf, id=711, 854.50542pt x 624.96388pt>
+ [50] [51] [52]
+<prism-tex/figs/blocks.pdf, id=722, 2796.48769pt x 832.62968pt>
+ [53]) (./prism-tex/05-Concluding.tex [54]) [55]
+Chapter 5.
 (./curve_meshing_in_shell_tex/01_intro.tex
-<curve_meshing_in_shell_tex/figs/teaser.pdf, id=651, 4578.62572pt x 1084.21063p
+<curve_meshing_in_shell_tex/figs/teaser.pdf, id=733, 4578.62572pt x 1084.21063p
 t>
- [37
+ [56
 
 ]
 
-Package natbib Warning: Citation `jiang2020bijective' on page 38 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 57 undefined on i
 nput line 18.
 
 ) (./curve_meshing_in_shell_tex/02_related.tex
 
-Package natbib Warning: Citation `bargteil2014animation' on page 38 undefined o
+Package natbib Warning: Citation `bargteil2014animation' on page 57 undefined o
 n input line 7.
 
 
-Package natbib Warning: Citation `MEZGER2009680' on page 38 undefined on input 
+Package natbib Warning: Citation `MEZGER2009680' on page 57 undefined on input 
 line 7.
 
 
-Package natbib Warning: Citation `Suwelack2013' on page 38 undefined on input l
+Package natbib Warning: Citation `Suwelack2013' on page 57 undefined on input l
 ine 7.
 
 
-Package natbib Warning: Citation `Jameson2002' on page 38 undefined on input li
+Package natbib Warning: Citation `Jameson2002' on page 57 undefined on input li
 ne 7.
 
 
-Package natbib Warning: Citation `Babuska1988' on page 38 undefined on input li
+Package natbib Warning: Citation `Babuska1988' on page 57 undefined on input li
 ne 7.
 
 
-Package natbib Warning: Citation `BABUSKA1992159' on page 38 undefined on input
+Package natbib Warning: Citation `BABUSKA1992159' on page 57 undefined on input
  line 7.
 
 
-Package natbib Warning: Citation `BASSI1997251' on page 38 undefined on input l
+Package natbib Warning: Citation `BASSI1997251' on page 57 undefined on input l
 ine 7.
 
 
-Package natbib Warning: Citation `luo2001influence' on page 38 undefined on inp
+Package natbib Warning: Citation `luo2001influence' on page 57 undefined on inp
 ut line 7.
 
 
-Package natbib Warning: Citation `ODEN1994309' on page 38 undefined on input li
+Package natbib Warning: Citation `ODEN1994309' on page 57 undefined on input li
 ne 7.
 
-[38]
+[57]
 
-Package natbib Warning: Citation `dey1999curvilinear' on page 39 undefined on i
+Package natbib Warning: Citation `dey1999curvilinear' on page 58 undefined on i
 nput line 9.
 
 
-Package natbib Warning: Citation `Ghasemi2016' on page 39 undefined on input li
+Package natbib Warning: Citation `Ghasemi2016' on page 58 undefined on input li
 ne 9.
 
 
-Package natbib Warning: Citation `MOXEY2015636' on page 39 undefined on input l
+Package natbib Warning: Citation `MOXEY2015636' on page 58 undefined on input l
 ine 9.
 
 
-Package natbib Warning: Citation `abgrall2012' on page 39 undefined on input li
+Package natbib Warning: Citation `abgrall2012' on page 58 undefined on input li
 ne 9.
 
 
-Package natbib Warning: Citation `sherwin2002mesh' on page 39 undefined on inpu
+Package natbib Warning: Citation `sherwin2002mesh' on page 58 undefined on inpu
 t line 9.
 
 
-Package natbib Warning: Citation `turner2017high' on page 39 undefined on input
+Package natbib Warning: Citation `turner2017high' on page 58 undefined on input
  line 9.
 
 
-Package natbib Warning: Citation `marcon2019semi' on page 39 undefined on input
+Package natbib Warning: Citation `marcon2019semi' on page 58 undefined on input
  line 9.
 
 
-Package natbib Warning: Citation `dey1999curvilinear' on page 39 undefined on i
+Package natbib Warning: Citation `dey1999curvilinear' on page 58 undefined on i
 nput line 9.
 
 
-Package natbib Warning: Citation `Peir2008' on page 39 undefined on input line 
+Package natbib Warning: Citation `Peir2008' on page 58 undefined on input line 
 9.
 
 
-Package natbib Warning: Citation `George2012' on page 39 undefined on input lin
+Package natbib Warning: Citation `George2012' on page 58 undefined on input lin
 e 9.
 
 
-Package natbib Warning: Citation `Qiukai2013' on page 39 undefined on input lin
+Package natbib Warning: Citation `Qiukai2013' on page 58 undefined on input lin
 e 9.
 
 
-Package natbib Warning: Citation `Luo2002pVersionMG' on page 39 undefined on in
+Package natbib Warning: Citation `Luo2002pVersionMG' on page 58 undefined on in
 put line 9.
 
 
-Package natbib Warning: Citation `ENGVALL2016378' on page 39 undefined on input
+Package natbib Warning: Citation `ENGVALL2016378' on page 58 undefined on input
  line 9.
 
 
-Package natbib Warning: Citation `ENGVALL201783' on page 39 undefined on input 
+Package natbib Warning: Citation `ENGVALL201783' on page 58 undefined on input 
 line 9.
 
 
-Package natbib Warning: Citation `SHEPHARD2005251' on page 39 undefined on inpu
+Package natbib Warning: Citation `SHEPHARD2005251' on page 58 undefined on inpu
 t line 9.
 
 
-Package natbib Warning: Citation `sherwin2002mesh' on page 39 undefined on inpu
+Package natbib Warning: Citation `sherwin2002mesh' on page 58 undefined on inpu
 t line 9.
 
 
-Package natbib Warning: Citation `wang2016construction' on page 39 undefined on
+Package natbib Warning: Citation `wang2016construction' on page 58 undefined on
  input line 10.
 
 
-Package natbib Warning: Citation `jiao2012reconstructing' on page 39 undefined 
+Package natbib Warning: Citation `jiao2012reconstructing' on page 58 undefined 
 on input line 10.
 
 
-Package natbib Warning: Citation `Abgrall2014' on page 39 undefined on input li
+Package natbib Warning: Citation `Abgrall2014' on page 58 undefined on input li
 ne 12.
 
 
-Package natbib Warning: Citation `abgrall2012' on page 39 undefined on input li
+Package natbib Warning: Citation `abgrall2012' on page 58 undefined on input li
 ne 12.
 
 
-Package natbib Warning: Citation `dobrzynski2017' on page 39 undefined on input
+Package natbib Warning: Citation `dobrzynski2017' on page 58 undefined on input
  line 12.
 
 
-Package natbib Warning: Citation `Xie2013' on page 39 undefined on input line 1
+Package natbib Warning: Citation `Xie2013' on page 58 undefined on input line 1
 2.
 
 
-Package natbib Warning: Citation `Persson2009' on page 39 undefined on input li
+Package natbib Warning: Citation `Persson2009' on page 58 undefined on input li
 ne 12.
 
 
-Package natbib Warning: Citation `MOXEY2016130' on page 39 undefined on input l
+Package natbib Warning: Citation `MOXEY2016130' on page 58 undefined on input l
 ine 12.
 
 
-Package natbib Warning: Citation `FORTUNATO20161' on page 39 undefined on input
+Package natbib Warning: Citation `FORTUNATO20161' on page 58 undefined on input
  line 12.
 
 
-Package natbib Warning: Citation `Poya2016' on page 39 undefined on input line 
+Package natbib Warning: Citation `Poya2016' on page 58 undefined on input line 
 12.
 
 
-Package natbib Warning: Citation `TURNER2016340' on page 39 undefined on input 
+Package natbib Warning: Citation `TURNER2016340' on page 58 undefined on input 
 line 12.
 
 
-Package natbib Warning: Citation `dobrev2019target' on page 39 undefined on inp
+Package natbib Warning: Citation `dobrev2019target' on page 58 undefined on inp
 ut line 12.
 
 
-Package natbib Warning: Citation `Knupp20002' on page 39 undefined on input lin
+Package natbib Warning: Citation `Knupp20002' on page 58 undefined on input lin
 e 16.
 
 
-Package natbib Warning: Citation `Knupp2000' on page 39 undefined on input line
+Package natbib Warning: Citation `Knupp2000' on page 58 undefined on input line
  16.
 
 
-Package natbib Warning: Citation `Luke2018' on page 39 undefined on input line 
+Package natbib Warning: Citation `Luke2018' on page 58 undefined on input line 
 16.
 
 
-Package natbib Warning: Citation `Gargallo2014' on page 39 undefined on input l
+Package natbib Warning: Citation `Gargallo2014' on page 58 undefined on input l
 ine 16.
 
 
-Package natbib Warning: Citation `Poya2016' on page 39 undefined on input line 
+Package natbib Warning: Citation `Poya2016' on page 58 undefined on input line 
 16.
 
 
-Package natbib Warning: Citation `Roca2012' on page 39 undefined on input line 
+Package natbib Warning: Citation `Roca2012' on page 58 undefined on input line 
 16.
 
 
-Package natbib Warning: Citation `Cardoze2004' on page 39 undefined on input li
+Package natbib Warning: Citation `Cardoze2004' on page 58 undefined on input li
 ne 16.
 
 
-Package natbib Warning: Citation `dey1999curvilinear' on page 39 undefined on i
+Package natbib Warning: Citation `dey1999curvilinear' on page 58 undefined on i
 nput line 16.
 
 
-Package natbib Warning: Citation `gargallo2013high' on page 39 undefined on inp
+Package natbib Warning: Citation `gargallo2013high' on page 58 undefined on inp
 ut line 16.
 
 
-Package natbib Warning: Citation `George2012' on page 39 undefined on input lin
+Package natbib Warning: Citation `George2012' on page 58 undefined on input lin
 e 16.
 
 
-Package natbib Warning: Citation `Qiukai2013' on page 39 undefined on input lin
+Package natbib Warning: Citation `Qiukai2013' on page 58 undefined on input lin
 e 16.
 
 
-Package natbib Warning: Citation `Luo2002pVersionMG' on page 39 undefined on in
+Package natbib Warning: Citation `Luo2002pVersionMG' on page 58 undefined on in
 put line 16.
 
 
-Package natbib Warning: Citation `Peir2008' on page 39 undefined on input line 
+Package natbib Warning: Citation `Peir2008' on page 58 undefined on input line 
 16.
 
 
-Package natbib Warning: Citation `SHEPHARD2005251' on page 39 undefined on inpu
+Package natbib Warning: Citation `SHEPHARD2005251' on page 58 undefined on inpu
 t line 16.
 
 
-Package natbib Warning: Citation `dobrzynski2017' on page 39 undefined on input
+Package natbib Warning: Citation `dobrzynski2017' on page 58 undefined on input
  line 16.
 
 
-Package natbib Warning: Citation `Gargallo2015' on page 39 undefined on input l
+Package natbib Warning: Citation `Gargallo2015' on page 58 undefined on input l
 ine 16.
 
 
-Package natbib Warning: Citation `Geuzaine2015' on page 39 undefined on input l
+Package natbib Warning: Citation `Geuzaine2015' on page 58 undefined on input l
 ine 16.
 
 
-Package natbib Warning: Citation `Roca2012' on page 39 undefined on input line 
+Package natbib Warning: Citation `Roca2012' on page 58 undefined on input line 
 16.
 
 
-Package natbib Warning: Citation `RUIZGIRONES2017362' on page 39 undefined on i
+Package natbib Warning: Citation `RUIZGIRONES2017362' on page 58 undefined on i
 nput line 16.
 
 
-Package natbib Warning: Citation `RUIZGIRONES201652' on page 39 undefined on in
+Package natbib Warning: Citation `RUIZGIRONES201652' on page 58 undefined on in
 put line 16.
 
 
-Package natbib Warning: Citation `RUIZGIRONES2016315' on page 39 undefined on i
+Package natbib Warning: Citation `RUIZGIRONES2016315' on page 58 undefined on i
 nput line 16.
 
 
-Package natbib Warning: Citation `STEES2017180' on page 39 undefined on input l
+Package natbib Warning: Citation `STEES2017180' on page 58 undefined on input l
 ine 16.
 
 
-Package natbib Warning: Citation `Steve2016' on page 39 undefined on input line
+Package natbib Warning: Citation `Steve2016' on page 58 undefined on input line
  16.
 
 
-Package natbib Warning: Citation `TOULORGE20138' on page 39 undefined on input 
+Package natbib Warning: Citation `TOULORGE20138' on page 58 undefined on input 
 line 16.
 
 
-Package natbib Warning: Citation `TOULORGE2016361' on page 39 undefined on inpu
+Package natbib Warning: Citation `TOULORGE2016361' on page 58 undefined on inpu
 t line 16.
 
 
-Package natbib Warning: Citation `ZIEL201791' on page 39 undefined on input lin
+Package natbib Warning: Citation `ZIEL201791' on page 58 undefined on input lin
 e 16.
 
 
-Package natbib Warning: Citation `dobrev2019target' on page 39 undefined on inp
+Package natbib Warning: Citation `dobrev2019target' on page 58 undefined on inp
 ut line 16.
 
 
-Package natbib Warning: Citation `turner2017high' on page 39 undefined on input
+Package natbib Warning: Citation `turner2017high' on page 58 undefined on input
  line 16.
 
 
-Package natbib Warning: Citation `luo2008tracking' on page 39 undefined on inpu
+Package natbib Warning: Citation `luo2008tracking' on page 58 undefined on inpu
 t line 16.
 
 
-Package natbib Warning: Citation `lu2014parallel' on page 39 undefined on input
+Package natbib Warning: Citation `lu2014parallel' on page 58 undefined on input
  line 16.
 
 
-Package natbib Warning: Citation `Persson2009' on page 39 undefined on input li
+Package natbib Warning: Citation `Persson2009' on page 58 undefined on input li
 ne 18.
 
 
-Package natbib Warning: Citation `RUIZGIRONES2017362' on page 39 undefined on i
+Package natbib Warning: Citation `RUIZGIRONES2017362' on page 58 undefined on i
 nput line 18.
 
 
-Package natbib Warning: Citation `feng2018curved' on page 39 undefined on input
+Package natbib Warning: Citation `feng2018curved' on page 58 undefined on input
  line 21.
 
-[39]
+[58]
 
-Package natbib Warning: Citation `moxeynekmesh' on page 40 undefined on input l
+Package natbib Warning: Citation `moxeynekmesh' on page 59 undefined on input l
 ine 27.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -2003,245 +2327,245 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 27.
 
-Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 40 undefined on i
+Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 59 undefined on i
 nput line 28.
 
 
-Package natbib Warning: Citation `pointwise' on page 40 undefined on input line
+Package natbib Warning: Citation `pointwise' on page 59 undefined on input line
  30.
 
 
-Package natbib Warning: Citation `Steve2016' on page 40 undefined on input line
+Package natbib Warning: Citation `Steve2016' on page 59 undefined on input line
  30.
 
 
-Package natbib Warning: Citation `mezger2007finite' on page 40 undefined on inp
+Package natbib Warning: Citation `mezger2007finite' on page 59 undefined on inp
 ut line 34.
 
 
-Package natbib Warning: Citation `Suwelack2013' on page 40 undefined on input l
+Package natbib Warning: Citation `Suwelack2013' on page 59 undefined on input l
 ine 35.
 
 
-Package natbib Warning: Citation `Sorger:2014' on page 40 undefined on input li
+Package natbib Warning: Citation `Sorger:2014' on page 59 undefined on input li
 ne 40.
 
 
-Package natbib Warning: Citation `Peir2015OnCH' on page 40 undefined on input l
+Package natbib Warning: Citation `Peir2015OnCH' on page 59 undefined on input l
 ine 40.
 
 
-Package natbib Warning: Citation `Yufei:2012' on page 40 undefined on input lin
+Package natbib Warning: Citation `Yufei:2012' on page 59 undefined on input lin
 e 40.
 
 
-Package natbib Warning: Citation `Gao:2019' on page 40 undefined on input line 
+Package natbib Warning: Citation `Gao:2019' on page 59 undefined on input line 
 40.
 
 
-Package natbib Warning: Citation `Guo2020Cut' on page 40 undefined on input lin
+Package natbib Warning: Citation `Guo2020Cut' on page 59 undefined on input lin
 e 40.
 
 
-Package natbib Warning: Citation `Palmer:2020' on page 40 undefined on input li
+Package natbib Warning: Citation `Palmer:2020' on page 59 undefined on input li
 ne 40.
 
 
-Package natbib Warning: Citation `Zhang:2020' on page 40 undefined on input lin
+Package natbib Warning: Citation `Zhang:2020' on page 59 undefined on input lin
 e 40.
 
 
-Package natbib Warning: Citation `marschner2020hexahedral' on page 40 undefined
+Package natbib Warning: Citation `marschner2020hexahedral' on page 59 undefined
  on input line 40.
 
 
-Package natbib Warning: Citation `yu2020hexgen' on page 40 undefined on input l
+Package natbib Warning: Citation `yu2020hexgen' on page 59 undefined on input l
 ine 42.
 
 
-Package natbib Warning: Citation `coreform' on page 40 undefined on input line 
+Package natbib Warning: Citation `coreform' on page 59 undefined on input line 
 42.
 
 
-Package natbib Warning: Citation `schneider2019large' on page 40 undefined on i
+Package natbib Warning: Citation `schneider2019large' on page 59 undefined on i
 nput line 44.
 
-[40]
+[59]
 
-Package natbib Warning: Citation `chew1993guaranteed' on page 41 undefined on i
+Package natbib Warning: Citation `chew1993guaranteed' on page 60 undefined on i
 nput line 52.
 
 
-Package natbib Warning: Citation `shewchuk1998tetrahedral' on page 41 undefined
+Package natbib Warning: Citation `shewchuk1998tetrahedral' on page 60 undefined
  on input line 52.
 
 
-Package natbib Warning: Citation `ruppert1995delaunay' on page 41 undefined on 
+Package natbib Warning: Citation `ruppert1995delaunay' on page 60 undefined on 
 input line 52.
 
 
-Package natbib Warning: Citation `tetgen' on page 41 undefined on input line 53
+Package natbib Warning: Citation `tetgen' on page 60 undefined on input line 53
 .
 
 
-Package natbib Warning: Citation `jamin2015cgalmesh' on page 41 undefined on in
+Package natbib Warning: Citation `jamin2015cgalmesh' on page 60 undefined on in
 put line 53.
 
 
-Package natbib Warning: Citation `cheng2000silver' on page 41 undefined on inpu
+Package natbib Warning: Citation `cheng2000silver' on page 60 undefined on inpu
 t line 55.
 
 
-Package natbib Warning: Citation `du2003tetrahedral' on page 41 undefined on in
+Package natbib Warning: Citation `du2003tetrahedral' on page 60 undefined on in
 put line 55.
 
 
-Package natbib Warning: Citation `alliez2005variational' on page 41 undefined o
+Package natbib Warning: Citation `alliez2005variational' on page 60 undefined o
 n input line 55.
 
 
-Package natbib Warning: Citation `tournois2009interleaving' on page 41 undefine
+Package natbib Warning: Citation `tournois2009interleaving' on page 60 undefine
 d on input line 55.
 
 
-Package natbib Warning: Citation `Alexa:2019' on page 41 undefined on input lin
+Package natbib Warning: Citation `Alexa:2019' on page 60 undefined on input lin
 e 55.
 
 
-Package natbib Warning: Citation `alexa2020conforming' on page 41 undefined on 
+Package natbib Warning: Citation `alexa2020conforming' on page 60 undefined on 
 input line 57.
 
 
-Package natbib Warning: Citation `murphy2001point' on page 41 undefined on inpu
+Package natbib Warning: Citation `murphy2001point' on page 60 undefined on inpu
 t line 61.
 
 
-Package natbib Warning: Citation `cohen2002conforming' on page 41 undefined on 
+Package natbib Warning: Citation `cohen2002conforming' on page 60 undefined on 
 input line 61.
 
 
-Package natbib Warning: Citation `chew1989constrained' on page 41 undefined on 
+Package natbib Warning: Citation `chew1989constrained' on page 60 undefined on 
 input line 62.
 
 
-Package natbib Warning: Citation `si2005meshing' on page 41 undefined on input 
+Package natbib Warning: Citation `si2005meshing' on page 60 undefined on input 
 line 62.
 
 
-Package natbib Warning: Citation `shewchuk2002constrained' on page 41 undefined
+Package natbib Warning: Citation `shewchuk2002constrained' on page 60 undefined
  on input line 62.
 
 
-Package natbib Warning: Citation `SiS14' on page 41 undefined on input line 62.
+Package natbib Warning: Citation `SiS14' on page 60 undefined on input line 62.
 
 
 
-Package natbib Warning: Citation `cheng2008practical' on page 41 undefined on i
+Package natbib Warning: Citation `cheng2008practical' on page 60 undefined on i
 nput line 62.
 
 
-Package natbib Warning: Citation `boissonnat2005provably' on page 41 undefined 
+Package natbib Warning: Citation `boissonnat2005provably' on page 60 undefined 
 on input line 62.
 
 
-Package natbib Warning: Citation `Engwirda16' on page 41 undefined on input lin
+Package natbib Warning: Citation `Engwirda16' on page 60 undefined on input lin
 e 62.
 
 
-Package natbib Warning: Citation `tetgen' on page 41 undefined on input line 64
+Package natbib Warning: Citation `tetgen' on page 60 undefined on input line 64
 .
 
 
-LaTeX Warning: Reference `app:tetgen' on page 41 undefined on input line 64.
+LaTeX Warning: Reference `app:tetgen' on page 60 undefined on input line 64.
 
 
-Package natbib Warning: Citation `Hu:2020:fTetWild' on page 41 undefined on inp
+Package natbib Warning: Citation `Hu:2020:fTetWild' on page 60 undefined on inp
 ut line 66.
 
 
-Package natbib Warning: Citation `Hu:2019:triwild' on page 41 undefined on inpu
+Package natbib Warning: Citation `Hu:2019:triwild' on page 60 undefined on inpu
 t line 66.
 
 
-Package natbib Warning: Citation `QUADSTAR2012' on page 41 undefined on input l
+Package natbib Warning: Citation `QUADSTAR2012' on page 60 undefined on input l
 ine 71.
 
 
-Package natbib Warning: Citation `hoppe1994piecewise' on page 41 undefined on i
+Package natbib Warning: Citation `hoppe1994piecewise' on page 60 undefined on i
 nput line 73.
 
 
-Package natbib Warning: Citation `krishnamurthy1996fitting' on page 41 undefine
+Package natbib Warning: Citation `krishnamurthy1996fitting' on page 60 undefine
 d on input line 76.
 
 
-Package natbib Warning: Citation `LIN2007adap' on page 41 undefined on input li
+Package natbib Warning: Citation `LIN2007adap' on page 60 undefined on input li
 ne 76.
 
 
-Package natbib Warning: Citation `Zhang2011multi' on page 41 undefined on input
+Package natbib Warning: Citation `Zhang2011multi' on page 60 undefined on input
  line 76.
 
-[41]
+[60]
 
-Package natbib Warning: Citation `zorin2000subdivision' on page 42 undefined on
+Package natbib Warning: Citation `zorin2000subdivision' on page 61 undefined on
  input line 78.
 
 
-Package natbib Warning: Citation `Hahmann2003' on page 42 undefined on input li
+Package natbib Warning: Citation `Hahmann2003' on page 61 undefined on input li
 ne 80.
 
 
-Package natbib Warning: Citation `yvart2005smooth' on page 42 undefined on inpu
+Package natbib Warning: Citation `yvart2005smooth' on page 61 undefined on inpu
 t line 82.
 
 
-Package natbib Warning: Citation `Yvart2005hier' on page 42 undefined on input 
+Package natbib Warning: Citation `Yvart2005hier' on page 61 undefined on input 
 line 82.
 
 
-Package natbib Warning: Citation `TONG2009' on page 42 undefined on input line 
+Package natbib Warning: Citation `TONG2009' on page 61 undefined on input line 
 84.
 
 ) (./curve_meshing_in_shell_tex/03_method.tex
 
-Package natbib Warning: Citation `jiang2020bijective' on page 42 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 61 undefined on i
 nput line 3.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 42 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 61 undefined on i
 nput line 3.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 42 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 61 undefined on i
 nput line 8.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 42 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 61 undefined on i
 nput line 10.
 
-[42]
+[61]
 
-Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 62 undefined on i
 nput line 19.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 62 undefined on i
 nput line 27.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 62 undefined on i
 nput line 30.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 62 undefined on i
 nput line 34.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 62 undefined on i
 nput line 34.
 
-<curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=671, 462.90
+<curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=753, 462.90
 341pt x 166.4629pt>
 
 Overfull \hbox (3.04782pt too wide) in paragraph at lines 51--53
@@ -2250,30 +2574,30 @@ Overfull \hbox (3.04782pt too wide) in paragraph at lines 51--53
 fold, wa-ter-tight, self-intersection-|
  []
 
-<curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=672, 520.6993
+<curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=754, 520.6993
 6pt x 98.58421pt>
-[43]
+[62]
 
-LaTeX Warning: Reference `sec:bij-proof' on page 44 undefined on input line 77.
+LaTeX Warning: Reference `sec:bij-proof' on page 63 undefined on input line 77.
 
 
-<curve_meshing_in_shell_tex/figs/bunny/0001.png, id=677, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0001.png, id=758, 1110.1475pt x 1417.295
 pt>
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.95pt on input line 82.
-<curve_meshing_in_shell_tex/figs/bunny/0004.png, id=679, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0004.png, id=760, 1110.1475pt x 1417.295
 pt>
-<curve_meshing_in_shell_tex/figs/bunny/0003.png, id=680, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0003.png, id=761, 1110.1475pt x 1417.295
 pt>
-<curve_meshing_in_shell_tex/figs/bunny/0002.png, id=681, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0002.png, id=762, 1110.1475pt x 1417.295
 pt>
 
-Package natbib Warning: Citation `bowers2010parallel' on page 44 undefined on i
+Package natbib Warning: Citation `bowers2010parallel' on page 63 undefined on i
 nput line 96.
 
-[44]
+[63]
 
-Package natbib Warning: Citation `jiang2020bijective' on page 45 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 64 undefined on i
 nput line 105.
 
 
@@ -2281,10 +2605,10 @@ nput line 105.
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/intersection-f
 ree.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
 owed
-<curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=685, 630.93015pt x 4
+<curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=766, 630.93015pt x 4
 00.62373pt>
 
-LaTeX Warning: Reference `app:local-ops' on page 45 undefined on input line 135
+LaTeX Warning: Reference `app:local-ops' on page 64 undefined on input line 135
 .
 
 
@@ -2292,97 +2616,97 @@ LaTeX Warning: Reference `app:local-ops' on page 45 undefined on input line 135
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 pipeline.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
-<curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=686, 405.29016p
+<curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=767, 405.29016p
 t x 137.00084pt>
 
-Package natbib Warning: Citation `jiang2020bijective' on page 45 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 64 undefined on i
 nput line 147.
 
-[45] [46]
+[64] [65]
 
-Package natbib Warning: Citation `jiang2020bijective' on page 47 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 66 undefined on i
 nput line 170.
 
-[47]
-<curve_meshing_in_shell_tex/figs/fish/fish002.png, id=696, 1664.2175pt x 1084.0
+[66]
+<curve_meshing_in_shell_tex/figs/fish/fish002.png, id=778, 1664.2175pt x 1084.0
 5pt>
-<curve_meshing_in_shell_tex/figs/fish/0003.png, id=697, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0003.png, id=779, 1664.2175pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/fish/0001.png, id=698, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0001.png, id=780, 1664.2175pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/fish/0004.png, id=699, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0004.png, id=781, 1664.2175pt x 1084.05pt
 >
- [48]
-<curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=703,
+ [67]
+<curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=785,
  322.10138pt x 83.1905pt>
 
 
-Package natbib Warning: Citation `tetgen' on page 49 undefined on input line 24
+Package natbib Warning: Citation `tetgen' on page 68 undefined on input line 24
 3.
 
 
-LaTeX Warning: Reference `app:tetgen' on page 49 undefined on input line 243.
+LaTeX Warning: Reference `app:tetgen' on page 68 undefined on input line 243.
 
-[49] [50]) (./curve_meshing_in_shell_tex/03.1_features.tex
+[68] [69]) (./curve_meshing_in_shell_tex/03.1_features.tex
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 input-output-feature.pdf): PDF inclusion: found PDF version <1.6>, but at most 
 version <1.5> allowed
-<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=711
+<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=792
 , 249.71594pt x 91.11229pt>
-<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=712, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=793, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=713, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=794, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=714, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=795, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=715, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=796, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=716, 253.8
+<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=797, 253.8
 6043pt x 85.87082pt>
 
-Package natbib Warning: Citation `jiang2020bijective' on page 51 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 70 undefined on i
 nput line 38.
 
-<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=717, 237.78537pt
+<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=798, 237.78537pt
  x 74.09421pt>
-<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=718, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=799, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=719, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=800, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=720, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=801, 803.0pt x 803.0pt>
 
-[51] [52]
-<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=728, 219.98888pt
+[70] [71]
+<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=809, 219.98888pt
  x 70.59705pt>
- [53]
+ [72]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 loc-op.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=732, 326.8461pt x
+<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=813, 326.8461pt x
  55.73764pt>
 ) (./curve_meshing_in_shell_tex/04_result.tex
 
-Package natbib Warning: Citation `schlomer2020nschloe' on page 54 undefined on 
+Package natbib Warning: Citation `schlomer2020nschloe' on page 73 undefined on 
 input line 4.
 
-[54]
-<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=736, 1027.84pt x 2069.732
+[73]
+<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=817, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=737, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=818, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=738, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=819, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=739, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=820, 1027.84pt x 2069.732
 5pt>
 
 
-Package natbib Warning: Citation `Gao:2019' on page 55 undefined on input line 
+Package natbib Warning: Citation `Gao:2019' on page 74 undefined on input line 
 28.
 
 
-Package natbib Warning: Citation `jiang2020bijective' on page 55 undefined on i
+Package natbib Warning: Citation `jiang2020bijective' on page 74 undefined on i
 nput line 31.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -2392,28 +2716,28 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_Thingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
 <1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=740, 602.25
+<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=821, 602.25
 pt x 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_ABC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=741, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=822, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_PolyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
 1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=742, 602.25p
+<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=823, 602.25p
 t x 602.25pt>
-<curve_meshing_in_shell_tex/figs/octa/0003.png, id=743, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0002.png, id=744, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0001.png, id=745, 931.48pt x 939.51pt>
-[55]
+<curve_meshing_in_shell_tex/figs/octa/0003.png, id=824, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0002.png, id=825, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0001.png, id=826, 931.48pt x 939.51pt>
+[74]
 
-Package natbib Warning: Citation `Hu:2020:fTetWild' on page 56 undefined on inp
+Package natbib Warning: Citation `Hu:2020:fTetWild' on page 75 undefined on inp
 ut line 73.
 
 
@@ -2421,109 +2745,109 @@ ut line 73.
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_T
 hingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=750, 602.25pt x
+<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=830, 602.25pt x
  602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_A
 BC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allo
 wed
-<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=751, 602.25pt x 602.2
+<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=831, 602.25pt x 602.2
 5pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_P
 oLyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=752, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=832, 602.25pt x 
 602.25pt>
-[56]
+[75]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Thi
 ngi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=756, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=836, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_ABC
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=757, 602.25pt x 602.25p
+<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=837, 602.25pt x 602.25p
 t>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Pol
 yCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> a
 llowed
-<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=758, 602.25pt x 60
+<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=838, 602.25pt x 60
 2.25pt>
 
-Package natbib Warning: Citation `feng2018curved' on page 57 undefined on input
+Package natbib Warning: Citation `feng2018curved' on page 76 undefined on input
  line 122.
 
 
-Package natbib Warning: Citation `feng2018curved' on page 57 undefined on input
+Package natbib Warning: Citation `feng2018curved' on page 76 undefined on input
  line 122.
 
 
-Package natbib Warning: Citation `feng2018curved' on page 57 undefined on input
+Package natbib Warning: Citation `feng2018curved' on page 76 undefined on input
  line 122.
 
-<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=759, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=839, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=760, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=840, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=761, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=841, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=762, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=842, 873.2625pt x 1049.9225
 pt>
-[57]
+[76]
 
-Package natbib Warning: Citation `alliez2005variational' on page 58 undefined o
+Package natbib Warning: Citation `alliez2005variational' on page 77 undefined o
 n input line 138.
 
 
-Package natbib Warning: Citation `feng2018curved' on page 58 undefined on input
+Package natbib Warning: Citation `feng2018curved' on page 77 undefined on input
  line 138.
 
-<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=766, 1027.84pt x 622.325p
+<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=846, 1027.84pt x 622.325p
 t>
-<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=767, 1027.84pt x 622.325pt>
-<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=768, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=847, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=848, 1027.84pt x 622.325pt>
 
-<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=769, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=849, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=770, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=850, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=771, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=851, 1180.41pt x 1184.4
 25pt>
 
-Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 58 undefined on i
+Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 77 undefined on i
 nput line 168.
 
 
-Package natbib Warning: Citation `remacle2013robust' on page 58 undefined on in
+Package natbib Warning: Citation `remacle2013robust' on page 77 undefined on in
 put line 168.
 
-[58]
-<curve_meshing_in_shell_tex/figs/micro/color.png, id=775, 803.0pt x 803.0pt>
-<curve_meshing_in_shell_tex/figs/spot.png, id=776, 803.0pt x 803.0pt>
+[77]
+<curve_meshing_in_shell_tex/figs/micro/color.png, id=856, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/spot.png, id=857, 803.0pt x 803.0pt>
 
 
-Package natbib Warning: Citation `tozoni2020low' on page 59 undefined on input 
+Package natbib Warning: Citation `tozoni2020low' on page 78 undefined on input 
 line 183.
 
 
-Package natbib Warning: Citation `crane2013conformal' on page 59 undefined on i
+Package natbib Warning: Citation `crane2013conformal' on page 78 undefined on i
 nput line 183.
 
 
-Package natbib Warning: Citation `tozoni2020low' on page 59 undefined on input 
+Package natbib Warning: Citation `tozoni2020low' on page 78 undefined on input 
 line 183.
 
 
-Package natbib Warning: Citation `crane2013conformal' on page 59 undefined on i
+Package natbib Warning: Citation `crane2013conformal' on page 78 undefined on i
 nput line 183.
 
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -2540,73 +2864,73 @@ Overfull \hbox (1.96512pt too wide) in paragraph at lines 203--203
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Th
 ingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=777, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=858, 602.25pt x 
 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_AB
 C.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=778, 602.25pt x 602.25
+<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=859, 602.25pt x 602.25
 pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Po
 lyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=779, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=860, 602.25pt x 6
 02.25pt>
 
-Package natbib Warning: Citation `SALARI:2000:CVB' on page 59 undefined on inpu
+Package natbib Warning: Citation `SALARI:2000:CVB' on page 78 undefined on inpu
 t line 218.
 
-[59] [60]
+[78] [79]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 226.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 226.
-<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=786, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=867, 1270.7475pt x 1015.795
 pt>
-<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=787, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=868, 1270.7475pt x 1015.795
 pt>
 
 
-Package natbib Warning: Citation `mezger2007finite' on page 61 undefined on inp
+Package natbib Warning: Citation `mezger2007finite' on page 80 undefined on inp
 ut line 255.
 
 
-Package natbib Warning: Citation `Suwelack2013' on page 61 undefined on input l
+Package natbib Warning: Citation `Suwelack2013' on page 80 undefined on input l
 ine 255.
 
-) (./curve_meshing_in_shell_tex/05_conclude.tex [61]
+) (./curve_meshing_in_shell_tex/05_conclude.tex [80]
 
-Package natbib Warning: Citation `lyche2015simplex' on page 62 undefined on inp
+Package natbib Warning: Citation `lyche2015simplex' on page 81 undefined on inp
 ut line 7.
 
 
-Package natbib Warning: Citation `Xia:2017:IGA' on page 62 undefined on input l
+Package natbib Warning: Citation `Xia:2017:IGA' on page 81 undefined on input l
 ine 7.
 
-) [62]
-Chapter 5.
-[63
+) [81]
+Chapter 6.
+[82
 
 ]
-Chapter 6.
-[64
+Chapter 7.
+[83
 
 ]
 Appendix A.
-[65
+[84
 
-] [66] (docs/thesis.bbl [67
+] [85] (docs/thesis.bbl [86
 
 
-] [68] [69] [70] [71] [72] [73])
+] [87] [88] [89] [90] [91] [92])
 
 Package natbib Warning: There were undefined citations.
 
-[74] (docs/thesis.aux)
+[93] (docs/thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2622,13 +2946,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36532 strings out of 478305
- 698256 string characters out of 5847251
- 993008 words of memory out of 5000000
- 53059 multiletter control sequences out of 15000+600000
- 756829 words of font info for 747 fonts, out of 8000000 for 9000
+ 37661 strings out of 478305
+ 721977 string characters out of 5847251
+ 1026615 words of memory out of 5000000
+ 54053 multiletter control sequences out of 15000+600000
+ 764237 words of font info for 801 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,17n,83p,1208b,693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,83p,1315b,693s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
 pt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{/opt/te
 xlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/opt/texlive/t
@@ -2656,10 +2980,10 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (86 pages, 62438436 bytes).
+Output written on docs/thesis.pdf (107 pages, 62494938 bytes).
 PDF statistics:
- 932 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
+ 1012 PDF objects out of 1200 (max. 8388607)
+ 386 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 153561 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 155679 words of extra memory for PDF output out of 184870 (max. 10000000)
 
