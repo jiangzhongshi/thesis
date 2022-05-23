@@ -1,0 +1,79 @@
+
+\section{Related Works}
+\label{sec:related}
+We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{sec:rel:shell}), which are closest to our work.
+
+\subsection{Attribute Transfer}
+\label{sec:rel:transfer}
+
+Transferring attributes is a common task in computer graphics to map colors, normals, or displacements on discrete geometries. 
+The problem is deeply connected with the generation of UV maps, which are piecewise maps that allow to transfer attributes from the planes to surfaces (and composition of a UV map with an inverse may allow transfer between surfaces).  We refer to \cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007} for a complete overview, and we review here only the most relevant works.
+
+\paragraph{Projection} 
+Modifying the normal field of a surface has roots in computer graphics for Phong illumination \cite{phong1975illumination}, and tessellation \cite{boubekeur2008phong}.  Orthographic, spherical, and cage based projections are commonly used to transfer attributes, even if they often leads to artifacts, due to their simplicity {\cite{blender,nguyen2007gpu}}. 
+Projections along a continuously-varying normal field has been used to define correspondences between neighbouring surfaces \cite{kobbelt1998interactive,lee2000displaced,panozzo2013weighted,Ezuz:2019}, but it is often discontinuous and non-bijective. While the discontinuities are tolerable for certain graphics applications (and they can be reduced by manually editing the cage), these approaches are not usable in cases where the procedure needs to be automated (batch processing of datasets) or when bijectivity is required (e.g., transfer of boundary conditions for finite element simulation).  These types of projection may be useful for some remeshing applications to eliminate surface details \cite{ebke2014level}, but it makes these approaches not practical for reliably transferring attributes. Our shell construction, algorithms, and associated projection operator, can be viewed as guaranteed continuous bijective  projection along a field. 
+
+\paragraph{Common Domains}
+
+A different approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
+\cite{maron2017convolutional,Aigerman:2015b,Aigerman:2014,Schuller:2013,Smith:2015,Rabinovich:2017,jiang2017simplicial,Weber:2014,Campen:2016,Muller:2015,Gotsman:2001,surazhsky2001morphing,Zhang:2005,Fu:2016,litke2005image,schmidt2019distortion}, a canonical coarse polyhedra \cite{kraevoy2004cross,praun2001consistent}, orbifolds \cite{Aigerman:2015,Aigerman:2017,Aigerman:2016}, Poincare disk \cite{Springborn:2008,stephenson2005introduction,Kharevych:2006,Jin:2008}, spectral basis \cite{Ovsjanikov:2012,Shoham:2019,Ovsjanikov:2017}, and abstract domains \cite{kraevoy2004cross,Schreiner:2004,Pietroni:2010}.
+While these approaches allow mappings between completely different surfaces, this is a hard problem to tackle in full generality fully automatically, with guarantees on the output (even some instances of the problem of global parametrization, i.e. maps from a specific type of almost everywhere flat domains to surfaces, lack a fully robust automatic solution).
+
+%
+Our approach uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
+%\ZJ{we might} 
+ We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{sec:applications})
+
+\paragraph{Attribute Tracking}
+
+In the specific context of remeshing or mesh optimization, algorithms have been proposed to explicitly track properties defined on the surface \cite{garland1997surface,cohen1997simplifying,dunyach2013adaptive} after every local operation. By following the operations in reverse order, it is possible to resample the attributes defined on the input surface. These methods are algorithm specific, and provide limited control over the distortion introduced in the mapping. Our algorithm provides a generic tool that enables any remeshing technique to obtain such a map with minimal modifications.%, and can explicitly reduce the integrated map distortion via refinement.
+
+
+\subsection{Shell Generation}
+\label{sec:rel:shell}
+The generation of shells (boundary layer meshes) around triangle meshes has been studied in graphics and scientific computing.
+
+\paragraph{Envelopes}
+Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{hu2016error} envelopes have been used to control geometric error in planar \cite{hu2019triwild}, surface {\cite{gueziec1996surface,hu2017, Cheng2019}}, and volumetric \cite{hu2018tetrahedral,Hu:2019:fTetWild} remeshing algorithms. Our shells can be similarly used to control the geometric error introduced during remeshing, but they offer the advantage of providing a bijection between the two surfaces, enabling to transfer attributes between them without explicit tracking \cite{cohen1997simplifying}. We show examples of both surface and volumetric remeshing in Section~\ref{sec:applications}.
+\revision{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
+where our optimized shells can be used for similar purposes.}
+
+\paragraph{Shell Maps}
+2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{sec:applications}.
+
+\paragraph{Boundary Layer}
+
+Boundary layers are commonly used in computational fluid dynamics simulations requiring highly anisotropic meshing close to the boundary of objects. Their generation is considered challenging \cite{aubry2015most,aubry2017boundary,garimella2000boundary}. These methods generate shells around a given surface, but do not provide a bijective map suitable for attribute transfer.
+%Our shells provide an alternative robust and simple method for solving this problem, including handling surfaces with singularities in a simple way. \DZ{why \cite{aubry2015most} cannot be used to do everything we can do? best to explain}
+%(Section \ref{sec:singularities})\ZJ{The problem is first identified in \cite{sharov2003unstructured} and \cite{aubry2017boundary} provides the provable construction. The advantage of ours is probably robust and simple, in the sense of not requiring spherical Voronoi diagram}.
+%We show preliminary results in Section \ref{sec:applications}, where our method coupled with TetGen \cite{si2015tetgen} enables to produce high-quality boundary layers. %\TS{not necessary->} We, however, postpone the integration into a CFD solver and a more complete study and comparison of our boundary layers algorithms in practical simulation settings to future work.
+
+\paragraph{Collision and Animation}
+
+Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \revision{\cite{botsch2006primo,botsch2003multiresolution}} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface. %We are not aware of any other method providing such a map.
+
+\subsection{Robust Geometry Processing}
+
+The closest works, in terms of applications, to our contribution are the recent algorithms enabling black-box geometry processing pipelines to solve PDEs on meshes \emph{in the wild}. 
+
+%\ZJ{New attempt to rewrite the paragraph. If Rewrite}
+
+\revision{\cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
+benefiting the numerical stability of some surface based geometry processing algorithms.
+These algorithms are orders of magnitude faster than our pipeline, but, since they are refinement methods, cannot coarsen dense input models.
+%\cite{yi2018delaunay} further offers an optimization procedure to simplify the meshes while keeping the Delaunay property, making it more suitable for efficient downstream computation. However, since the geometry changes, the correspondence with the input surface is nontrivial to maintain. Our method could be used in such an approach to easily compute this correspondence.
+%
+While targeting a different application, \cite{sharp2019navigating} offers an alternative solution, %with special basis constructed on the input polyhedral geometry. This construction
+which is more efficient than the extrinsic techniques \cite{liu2015efficient} since it avoids the realization of the extrinsic mesh (thus naturally maintaining the correspondence to the input, but limiting its applicability to non-volumetric problems) and it alleviates the introduction of additional degrees of freedom.}
+\revision{\cite{Sharp:2020:LNT} further generalizes \cite{sharp2019navigating} to handle non-manifold and non-orientable inputs, which our approach currently does not support.}
+
+% \ZJ{Original Else}
+% \ZJ{End}
+
+
+TetWild \cite{hu2018tetrahedral,Hu:2019:fTetWild}
+can robustly convert triangle soups into high-quality tetrahedral meshes, suitable for FEM analysis. Their approach does not provide a way to transfer boundary conditions from the input surface to the boundary of the tetrahedral mesh. Our approach, when combined with a tetrahedral mesher that does not modify the boundary, enables to remesh low-quality surface, create a tetrahedral mesh, solve a PDE, and transfer back the solution (Figure \ref{fig:teaser}). However, our method does not support triangle soups, and it is limited to manifold and orientable surfaces.
+
+\subsection{Isotopy between surfaces}
+
+\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.

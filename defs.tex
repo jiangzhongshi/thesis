@@ -152,105 +152,6 @@
 % \renewcommand{\emptyset}{\ensuremath{\varnothing}}
 % \newcommand{\ds}{\displaystyle}
 
-% Math stuff
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
-\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-\newcommand{\N}{\ensuremath{\mathbb{N}}}
-\newcommand{\T}{\ensuremath{\mathbb{T}}}
-\newcommand{\C}{\ensuremath{\mathbb{C}}}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
-%\newcommand{\acim}{\textsc{acim}\xspace}
-%\newcommand{\acims}{\textsc{acim}s\xspace}
-
-\newcommand{\Land}{\bigwedge}
-\newcommand{\Lor}{\bigvee}
-\newcommand{\es}{\emptyset}
-\newcommand{\incl}{\subseteq}
-\newcommand{\impl}{\Rightarrow}
-\renewcommand{\iff}{\Leftrightarrow}
-\newcommand{\ra}{\rightarrow}
-\newcommand{\sat}{\vDash}
-\newcommand{\notsat}{\nvDash}
-\newcommand{\proves}{\vdash}
-\newcommand{\provesIff}{\mathrel{\dashv\vdash}}
-\newcommand{\boolTrue}{\top}
-\newcommand{\boolFalse}{\bot}
-
-\newcommand{\dom}{\operatorname{\mathsf{dom}}}
-\newcommand{\range}{\operatorname{\mathsf{rng}}}
-\newcommand{\restrict}[2]{{#1}|_{#2}}
-\newcommand{\pto}{\rightharpoonup}
-
-\newcommand{\defeq}{\coloneqq}
-\newcommand{\defiff}{\vcentcolon\iff}
-
-\newcommand{\pipe}{\triangleright}
-
-%% Caligraphic
-\newcommand{\Aa}{{\mathcal{A}}}
-\newcommand{\Bb}{{\mathcal{B}}}
-\newcommand{\Cc}{{\mathcal{C}}}
-\newcommand{\Dd}{{\mathcal{D}}}
-\newcommand{\Ee}{{\mathcal{E}}}
-\newcommand{\Ff}{{\mathcal{F}}}
-\newcommand{\Gg}{{\mathcal{G}}}
-\newcommand{\Hh}{{\mathcal{H}}}
-\newcommand{\Ii}{{\mathcal{I}}}
-\newcommand{\Jj}{{\mathcal{J}}}
-\newcommand{\Kk}{{\mathcal{K}}}
-\newcommand{\Ll}{{\mathcal{L}}}
-\newcommand{\Mm}{{\mathcal{M}}}
-\newcommand{\Nn}{{\mathcal{N}}}
-\newcommand{\Oo}{{\mathcal{O}}}
-\newcommand{\Pp}{{\mathcal{P}}}
-\newcommand{\Qq}{{\mathcal{Q}}}
-\newcommand{\Rr}{{\mathcal{R}}}
-\newcommand{\Ss}{{\mathcal{S}}}
-\newcommand{\Tt}{{\mathcal{T}}}
-\newcommand{\Uu}{{\mathcal{U}}}
-\newcommand{\Vv}{{\mathcal{V}}}
-\newcommand{\Ww}{{\mathcal{W}}}
-\newcommand{\Yy}{{\mathcal{Y}}}
-\newcommand{\Zz}{{\mathcal{Z}}}
-
-% Wrappers: Parens, brackets, etc
-% \newcommand{\op}[1]{\operatorname{#1}}
-\newcommand{\paren} [1] {\ensuremath{ \left( {#1} \right) }}
-\newcommand{\bigparen} [1] {\ensuremath{ \Big( {#1} \Big) }}
-% \newcommand{\bracket}[1]{\left[#1\right]}
-\newcommand{\tuple}[1]{\ensuremath{\langle #1 \rangle}}
-\newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
-% \newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
-\newcommand{\setcomp}[2]{\ensuremath{\left\{#1\;\middle|\;#2\right\}}}
-
-% References
-\newcommand{\refCh}[1]{Chapter~\ref{#1}}
-\newcommand{\refSc}[1]{Section~\ref{#1}}
-% \newcommand{\refSc}[1]{\S\ref{#1}}
-\newcommand{\refFig}[1]{Figure~\ref{#1}}
-\newcommand{\refDef}[1]{Definition~\ref{#1}}
-\newcommand{\refLem}[1]{Lemma~\ref{#1}}
-\newcommand{\refThm}[1]{Theorem~\ref{#1}}
-\newcommand{\refAlg}[1]{Algorithm~\ref{#1}}
-\newcommand{\refEx}[1]{Example~\ref{#1}}
-\newcommand{\refCor}[1]{Corollary~\ref{#1}}
-\newcommand{\refTab}[1]{Table~\ref{#1}}
-\newcommand{\refEq}[1]{\ensuremath{(\ref{#1})}}
-\newcommand{\refRule}[1]{(\ref{#1})}
-\newcommand{\refApp}[1]{Appendix~\ref{#1}}
-
-\newcommand{\tool}[1]{\textsf{#1}}
-\newcommand{\code}[1]{\textnormal{\small\texttt{#1}}}
-% \newcommand{\code}[1]{\text{\lstinline{#1}}}
-
-% TODO have macros for \forall and \exists
-
-\newcommand{\tick}{\ensuremath{\checkmark}}
-\newcommand{\cross}{\text{\sffamily X}}
-
-
 % ----------------------------------------
 % Paper specific macros & commands
 % ----------------------------------------
@@ -263,3 +164,56 @@
 %%% mode: latex
 %%% TeX-master: "thesis"
 %%% End:
+
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{appendix}
+\usepackage{pifont}
+\usepackage{algorithm2e}
+\usepackage[normalem]{ulem}
+
+
+\renewcommand{\topfraction}{0.9}     % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}     % max fraction of floats at bottom
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{4}
+\setcounter{totalnumber}{8}     % 2 may work better
+\setcounter{dbltopnumber}{4}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.95}     % fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}     % allow minimal text w. figs
+\renewcommand{\floatpagefraction}{0.7}     % require fuller float pages
+\renewcommand{\dblfloatpagefraction}{0.7}     % require fuller float pages
+
+\usepackage{microtype}
+\usepackage{wrapfig}
+
+\newcommand{\remove}[1]{} 
+\newcommand{\revision}[1]{#1} 
+
+%%% Math Symbols
+\newcommand{\T}{\mathcal{T}}
+\renewcommand{\P}{\mathcal{P}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\Tet}{\boldsymbol{T}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Prism}{\Delta}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\J}{\boldsymbol{J}}
+
+% \newtheorem{proposition}[theorem]{Proposition}
+
+% \DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\isinside}{is\_inside}
+\DeclareMathOperator*{\issection}{is\_section}
+
+\usepackage{graphicx}
+
+\graphicspath{{prism-tex/figs/}}

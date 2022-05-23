@@ -1,0 +1,461 @@
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{pipeline}
+    \caption{Overview of our algorithm. We start from a triangle mesh, find directions of extrusion, build the shell, and optimize to simplify it.}
+    \label{fig:pipeline}
+    
+\end{figure}
+
+\section{Method}\label{sec:method}
+Our algorithm (Figure~\ref{fig:pipeline}) converts a self-intersection free, orientable, manifold triangle mesh $\T = \{V_\T,F_\T\}$, where $V_\T$ are the vertex coordinates and
+$F_\T$ the connectivity of the mesh, into a shell composed of generalized prisms $\S = \{(B_\S,M_\S,T_\S),F_\S\}$, where $B_\S$, $M_\S$, $T_\S$ are bottom, middle, and top surfaces of the shell, 
+consisting of bottom, middle, and top  triangles of the prisms,
+and $F_\S$  is the connectivity of the prisms (Figure \ref{fig:corona}).
+The algorithm initially generates a shell $\S$ whose middle surface $M_\S$ has the same geometry as the input surface $\T$ (possibly with refined connectivity),
+and then optimizes it while ensuring that $\T$ is contained inside and projects bijectively to $M_\S$. The shell induces a volumetric vector field $\V$ and a projection operator $\P$ in the interior of each of its prisms (Section \ref{sec:projection}). This output can be used directly in many geometry processing tasks, as we discuss in detail in Section~\ref{sec:applications}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{corona}
+    \caption{Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.}
+    
+    \label{fig:corona}
+\end{figure}
+
+
+We first introduce the definition of our projection operator $\P$ and the conditions required for bijectivity of its restrictions to sections of the shell (Section \ref{sec:projection}). We then define shell validity (Section \ref{sec:strong}), present our algorithm for creating an initial shell (Section\ \ref{sec:initialization}) and optimizing it to decrease the number of prisms (Section \ref{sec:optimization}).
+To simplify the exposition,
+we initially assume that our input triangle mesh does not contain \emph{singular points} (defined in Section~\ref{sec:initialization}) and boundary vertices, and we explain how to modify the algorithm to account for these cases in sections \ref{sec:singularities} and \ref{sec:boundaries}.
+
+\subsection{Shell and Projection}
+\label{sec:projection}
+
+Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab} (we refer to Appendix~\ref{app:dblayer} for an explanation on why we need two slabs).
+For brevity, we will refer to a generalized prism as a prism.
+
+% Without loss of generality, we will describe our algorithm only for the top half of the prism $\Prism$ denoted $\H$ since the other half of the construction is symmetric.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{prism_projection}
+    \caption{A prism $\Prism$ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.}
+    \label{fig:prism_decomposition}
+    
+\end{figure}
+
+ \paragraph{Decomposition in Tetrahedra} We decompose each prism $\Prism$ into 6 tetrahedra (3 in the top slab and 3 in the bottom one, Figure~\ref{fig:prism_decomposition} middle), using one of the patterns in \cite[Figure 4]{dompierre1999subdivide}. The patterns are identified by the orientation (rising/falling) of the two edges cutting the side faces of the prism. While, for a single prism, any decomposition would be sufficient for our purposes, we need a consistent tetrahedralization between neighboring prisms to avoid inconsistencies in the projection operator. To resolve this ambiguity, we use the technique proposed in \cite{garimella2000boundary}: we define a total ordering over the vertices of the middle surface of $\Prism$ (naturally, we use the vertex id) and split (for each half of the prism) the face connecting vertices $v_1$ and $v_2$ with a rising edge if $v_1 < v_2$ and a falling edge otherwise. 
+
+\paragraph{Forward and Inverse Projection}
+% \ZJ{multi-value definition comment.
+% Vector Field is defined piecewise, but the projection is unique.}
+We define a piecewise constant vector field $\V$ inside the decomposed prism,
+by assigning to each tetrahedron $\Tet_j^{\Prism}$, $j=1,\hdots,6$,
+the constant vector field defined by the only edge of $\Tet_j^{\Prism}$ which is a \emph{oriented pillar} of $\Prism$ connecting the bottom surface to the top surface passing through the middle surface). That is, for any $p\in \Tet_j^{\Prism}$
+\begin{equation}
+    \label{eq:V}
+    \V(p) = t_i - b_i,
+\end{equation}
+where $i$ is the index of the vertex corresponding to the pillar edge of $\Tet_j^{\Prism}$.
+Note that \revision{$\V$ is constant on each tetrahedron and might be discontinuous on the boundary: we formally define the value of $\V$ on the boundary as any of the values of the incident tetrahedra. This choice does not affect our construction.}
+\revision{T}here is exactly one \revision{integral (poly-)line} passing through each point of the prism if
+all the decomposed tetrahedra have positive volumes
+(Theorem~\ref{thm:projection}). This allows us to define
+the \emph{projection operator} $\P(p)$ for a point $p \in \Prism$ as the intersection of the \revision{integral line} $f_p(t)$ of the vector field $\V$ passing through $p$, with the middle surface of $\Prism$ (Figure~\ref{fig:advection}). 
+%
+\begin{figure}
+    \includegraphics[width=\linewidth]{projection}
+    \caption{A point $p$ (left) is traced through $\V$ inside the top part of the shell. A ray with $p$ as origin and $\V$ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).}
+    \label{fig:advection}
+    
+\end{figure}
+%
+% \begin{wrapfigure}{r}{width=0.3\linewidth}
+%     \includegraphics[width=\linewidth]{not-section-illustrate}
+% \caption{Example of being a section (green) and not a section (red).}
+% \end{wrapfigure}
+%
+Intuitively, we can project any mesh that does not fold in each prism (Figure~\ref{fig:not_section}) to the middle surface.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth,draft=false]{not-section-illustrate}
+    \caption{A 2D illustration for the normal dot product condition. The blue arrows agrees with the background vector field (white arrows), while the red arrows do not agree.}
+    \label{fig:not_section}
+    
+\end{figure}
+Formally, we introduce the following definition, to describe this property in terms of the triangle normals of the mesh.
+
+With a slight abuse of the notation, for meshes and collections of prisms $A$ and $B$, we use $A \cap B $ to denote the intersection of their corresponding geometry.
+
+\begin{definition}
+\label{def:section}
+A \emph{section} $\hat{\T}$ of a prism $\Prism$ is a manifold triangle mesh whose intersection with $\Prism$ is a simply connected submesh $\hat{\T} \cap \Prism$ whose single boundary loop is contained in the boundary of $\Prism$, excluding its top and bottom surface, and such that for every point $p \in \hat{\T} \cap \Prism$ the dot product
+between the face normal $n(p)$ and the vector field $\V(p)$ is strictly positive. Similarly, a triangle mesh $\hat{\T}$ is a \emph{section of a shell $\S$}, if it is a section of all the prisms of $\S$.
+\end{definition}
+Note that this definition implies that all sections are contained inside the shell.
+% that is, the union of all prisms minus the intersection region of non-adjacent prisms (light gray area in Figure~\ref{fig:pipeline)}\ZJ{Move this sentence}.
+{Additionally, the definition implies that the section does not intersect with either bottom or top surface. 
+However, our definition allows for the bottom or top surface to self-intersect. 
+The intersection of the shell does not invalidate the \emph{local} definition of projection since it is defined per prism.
+Allowing intersections is crucial to an efficient implementation of our algorithm since it allows us to take advantage of a static spatial data structure in later stages of the algorithm (Section~\ref{sec:optimization}).
+}
+
+ 
+
+\begin{theorem}
+If all  6 tetrahedra $\Tet_j^{\Prism}$ in a decomposition of a prism $\Prism$ have positive volume,
+then the projection operator $\P$ defines a bijection between any section $\hat{\T}$ of $\Prism$ and the middle triangle of the prism ($M$ in Figure~\ref{fig:projection_sections}).
+\label{thm:projection}
+\end{theorem}
+\begin{proof}
+We prove this theorem in Appendix~\ref{app:projection}.
+\end{proof}
+
+The \emph{inverse projection operator} $\P^{-1}$ is defined for a section $\hat{\T}$ as the inverse of the forward projection
+restricted to $\hat{\T}$. %, $\P: \hat{\T} \rightarrow \T$ is bijective.
+It can be similarly computed by tracing the vector field in the opposite direction, starting from a point in the middle surface of the prism. Note that, differently from the inverse Phong projection \cite{panozzo2013weighted, kobbelt1998interactive}, whose solution depends on the root-finding of a quadric surface, our shell has an explicit form for the inverse and does not require a numerical solve. The combination of forward and inverse projection operators allows to bijectively map between any pair of sections, independently of their connectivity (Figure \ref{fig:projection_sections}). An interesting property of our forward and inverse projection algorithm, which might be useful for applications requiring a provably bijective map, is that our projection could be evaluated exactly using rational arithmetic.
+
+%%%%%%%%%%
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{composition}
+    \caption{The composition $\P^{-1}_{\S_2}(\P_{\S_1}(x))$ with $x \in \S_1$, of a direct and an inverse projection operator defines a bijection between two sections $\S_1$ and $\S_2$.}
+    \label{fig:projection_sections}
+    
+\end{figure}
+
+{
+\subsection{Validity Condition}
+\label{sec:strong}
+
+Shell, projection operator, section definitions, and the bijectivity condition (Theorem~\ref{thm:projection}) are dependent on a specific tetrahedral decomposition, which depends on vertex numbering.
+
+To ensure that our shell construction is independent from the vertex and face order, we define the validity of a shell by accounting for all 6 possible tetrahedral decompositions \cite[Figure 4]{dompierre1999subdivide}}.
+
+\begin{definition}\label{def:validshell}
+% \paragraph{Validity}
+We say that a prismatic shell $\S$ is \emph{valid with respect to a mesh $\hat\T$} if it satisfies two conditions for each prism.
+\begin{enumerate}
+    \item[I1] \emph{Positivity}. The volumes of  24 tetrahedra (Appendix \ref{app:I1}) corresponding to  6 tetrahedral decompositions are positive.
+    \item[I2] \emph{Section.} $\hat\T$ is a section of $\S$ for all 6 decompositions.
+\end{enumerate}
+\end{definition}
+If a shell is valid, from I1, I2, then by Theorem \ref{thm:projection}, it follows that any map between sections induced by the projection operator $\P$ is bijective.
+
+I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition, that is, we require the dot product to be positive with respect to all \emph{three} pillars of a prism inside the convex hull. An interesting and useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Appendix \ref{app:bilinear}, Figure~\ref{fig:displacement-mapping}).
+
+\subsection{Shell Initialization}
+\label{sec:initialization}
+
+We now introduce an algorithm to compute a \emph{valid} prismatic shell $\S = \{(B_\S,M_\S,T_\S),F_\S\}$ with respect to a given triangle mesh $\T = \{V_\T,F_\T\}$ such that $\T$ is geometrically identical to the middle surface of $\S$.  We assume that the faces of the triangle mesh are consistently oriented.
+
+\paragraph{Extrusion Direction.} The first step of the algorithm is the computation of an extrusion direction for every vertex of $\T$. These directions are optimized to be pointing towards the \emph{outside} of the triangle mesh (which we assume to be orientable), that is,
+they must have a positive dot product with the normals of all incident faces. More precisely, for a vertex $v$, we are looking for a direction $d_v$ such that $d_v \cdot n_f > 0$ for each adjacent face $f$ with normal $n_f$. We can formulate this as the optimization problem
+\begin{equation}
+\label{eq:OPT}
+\begin{split}
+    \max_{d_v}& \min_{f \in N_v} n_f \cdot d_v,\\
+    \text{s.t. }&\quad n_f \cdot d_v \geq {\epsilon}, \qquad \forall f \in N_v\\
+               &\quad  \|d_v\|^2 = 1.
+\end{split}
+\end{equation}
+
+A solution, if it exists, can be found solving the following quadratic programming problem (Appendix \ref{app:qp})
+\begin{equation}
+\label{eq:QP}
+\begin{split}
+    \min&\quad \|x\|^2,  \\
+    \text{s.t.}&\quad \mathbf{C} x \geq 1,
+\end{split}
+\end{equation}
+with $d_v = x / \|x\|$ and $\mathbf{C}$ the matrix whose rows are the normals $n_f$ of the faces in the 1-ring $N_v$ of vertex $v$. Solutions not satisfying $\|x\| \leq 1/\epsilon$ needs to be discarded (Appendix \ref{app:qp}). The QP can be solved with an off-the-shelf solver\cite{osqp,cheshmi2020nasoq}, and in particular it can be solved exactly \cite{gartner2000efficient} to avoid numerical problems. Note that the Problem \eqref{eq:OPT} is studied in a similar formulation in~\cite{aubry2008most} but their solution requires tolerances in multiple stages of the algorithm to handle cospherical point configurations.
+
+The admissible set of \eqref{eq:OPT} might be empty for a vertex $v$,
+that is, no vector $d_v$ satisfies $\mathbf{C}d_v\geq\epsilon$. 
+In this case we call $v$ a \emph{singularity}. For example, Figure \ref{fig:singularity_example} shows a triangle mesh containing a singularity: there exist no direction whose dot product with the adjacent face normals is positive. To simplify the explanation, we assume for the remainder of this section that $\T$ does not contain singularities and also that it does not contain boundaries: we postpone their handling to sections \ref{sec:singularities} and \ref{sec:boundaries}.
+
+\begin{proposition}\label{thm:I1}
+Let $\T$ be a closed (without boundary) triangle mesh without singularities and $\N$ be a per-vertex displacement field satisfying $\mathbf{C} \N_i > 0$ for every vertex $v_i$ of $\T$. 
+Then there exist a strictly positive per-vertex \emph{thickness} $\delta_i$ such that vertices $t_i$ and $b_i$ obtained by displacing $v_i$ by $\delta_i$ in the direction of $\N_i$ and in the opposite direction, define a shell that satisfies invariant I1.
+\end{proposition}
+\begin{proof}
+We provide a proof in Appendix \ref{app:I1}.
+\end{proof}
+
+
+
+
+\paragraph{Initial Thickness}
+We first show that a strictly positive per-vertex thickness $\delta$ exists for a shell $\S$ with $\T$ as its middle surface, and then discuss a practical algorithm to realize it.
+
+\begin{theorem}
+\label{thm:thickness}
+Given a closed, orientable, self-intersection free triangle mesh $\T$ such that for all its vertices  Problem \eqref{eq:OPT} has a solution, a shell $\S$ exists such that $\T$ is the middle surface and there exist a strictly positive per-vertex thickness $\delta$.
+\end{theorem}
+\begin{proof}
+We provide a proof in Appendix \ref{app:thickness}.
+\end{proof}
+
+
+To find a valid per-vertex thickness $\delta_i$ to construct the top surface, we initially cast a ray in the direction of $\N$ for each vertex and measure the distance to the first collision with $\T$ (and cap it to a user-defined parameter $\delta_{max}$ if no collision is found).
+An initial top mesh is built with this extrusion thickness; then we test whether any triangle in the top surface intersects $\T$, through triangle-triangle overlap test \cite{guigue2003fast},
+and iteratively shrink $\delta_i$ in this triangle by 20\% until we find a thickness that prevents intersections between the input and the top surface. Analogously, we build the bottom shell along the opposite direction. \revision{Note that the thickness of a vertex for the top and bottom surface can be different.}
+
+\paragraph{Validity of the Initial Shell}
+Proposition~\ref{thm:I1} and Theorem~\ref{thm:thickness} ensure that the initial shell constructed using a displacement field $\N$ obtained by solving \eqref{eq:QP}, satisfies property I1. However, $\T$ might not formally satisfy the conditions for being a section of $\S$, despite being identical to the middle surface of $\S$, due to our definition of the projection operator $\P$.
+%
+The reason for this can be seen in Figure \ref{fig:closed}.
+After the initialization, the middle surface is the input mesh. Thus every prism $\Prism$ corresponds to a triangle $T_\Prism$ of $\T$. The intersection $\Prism \cap \T$, required to check if $\T$ is a section of $\Prism$ (Definition \ref{def:section}) contains points from both $T_\Prism$ and its 1-ring neighborhood.
+
+The projection operator (and thus the definition of the section) is based on all tetrahedral decompositions of $\Prism$\revision{;} it is possible that multiple tetrahedra (with different vector field values in $\V$) overlap on the boundary of $\Prism$. 
+
+
+\begin{figure}\centering
+    \includegraphics[width=0.9\linewidth]{need_to_bevel}
+    \caption{The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section.
+    After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive.
+    }
+    \label{fig:closed}
+    
+\end{figure}
+
+Depending on the dihedral angles in the mesh $\T$,
+it is possible that the dot product between one of the pillars (orange in Figure~\ref{fig:closed}) and the face normals of some of the triangles from 1-ring neighborhood (green in Figure~\ref{fig:closed}) is negative. 
+While it may seem that this  problem could be addressed
+by changing the definition so that each edge is assigned to one of the incident triangles, so that the field direction only in one incident tetrahedron needs to be considered, this problem is more significant than it may seem, as it leads to instability under small perturbations (e.g., due to floating-point rounding of coordinates). Such small perturbations can change the set of triangles intersecting a prism and thus violate the validity of the shell and, consequently, the bijectivity of $\P$.
+We propose instead to refine $\T$, without changing its geometry, so that the shell corresponding to the refined mesh satisfies I2 (i.e., its middle surface is a section).
+\paragraph{Topological Beveling.} We identify a prism $\Prism_v$ for which I2 does not hold and use a beveling pattern \cite{coxeter1973regular,conway2016symmetries,hart2018conway}
+to decompose $\Prism_v$ in a way that $\T$ becomes a section for all 6 decompositions (I2). We refer to this operation as \emph{topological beveling}, as it does not change the geometry of the mesh, only its connectivity (Figure \ref{fig:beveled_example}). 
+We use the pattern in Figure \ref{fig:patterns}a for $\Prism_v$, and we use the other two patterns (b) and (c) on the adjacent prisms to ensure valid mesh connectivity. The positions of the vertices are computed using barycentric coordinates (we used $t = 0.2$, i.e., the orange dot is at $1/5$ of the horizontal edge), and the normals of the newly inserted vertices are copied from the closest vertex (in Figure \ref{fig:patterns}, the internal vertices have the normal of the triangle corner with the same color).
+
+\begin{figure}
+    \includegraphics[width=0.9\linewidth]{bevel}
+    \caption{The beveling patterns used to decompose prisms for which $\T$ is not a section.}
+    \label{fig:patterns}
+    
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{screwdriver_bevel}
+    \caption{Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).}
+    \label{fig:beveled_example}
+    
+\end{figure}
+
+\begin{theorem}
+\label{thm:bevel}
+Suppose $\T$ is the middle surface of $\S$, and neither $T_\S$ or $B_\S$ intersects with $\T$. After topological beveling, I2 holds, that is, $\T$ is a section of the shell $\S$ for all 6 decompositions.
+\end{theorem}
+\begin{proof}
+We provide a proof in Appendix \ref{app:bevel}.
+\end{proof}
+
+
+\paragraph{Output}
+The output of this stage is a valid shell with respect to $\T$ (Section \ref{sec:strong}), that is, it satisfies I1 and I2.
+
+
+\subsection{Shell Optimization}
+\label{sec:optimization}
+
+During shell optimization, we perform local operations
+(Figure \ref{fig:local_operations})
+on a valid shell to reduce its complexity and increase the quality. Before applying every operation, we check the validity of the operation to ensure that: (1) the resulting middle surface will be manifold \cite{dey1999topology} and (2) the shell will be valid with respect to $\T$ (to ensure a bijective projection). We forbid any operation that does not pass these checks.  
+\revision{We would like to remark that, 
+while there are different choices to guide the shell modification, we
+experimentally discovered that allowing shell simplification and optimization consistently leads to thicker shells with a richer space of sections.} 
+
+\begin{theorem}\label{thm:invariants}
+Let $\S$ be a valid shell with respect to a mesh $\T$ and let $C=\{\Prism_i\}_{i\in I} \subset \S$ be a collection of prisms such that the middle surface $M_C$ of $C$ is a simply connected topological disk.
+
+Let $\mathbb{O}$ be an operation replacing $C$ with a new collection of prisms $C'=\{\Prism_i'\}_{i\in I'}$, preserving both geometry and connectivity of the sides of the prism collection $C$, and ensuring that $M_{C'}$ is a simply connected topological disk.
+
+If these three assumptions hold:
+\begin{enumerate}
+    \item property I1 holds for $C'$, %1
+    \item the top and bottom surfaces of $C'$ do not intersect $\T$ ($T_{C'} \cap \T = B_{C'}\cap \T = \varnothing$), %4
+    \item the dot product condition $n(p) \cdot \V(p)>0$ is satisfied for all points $p \in \T\cap \Prism_i'$ for all pillars of every prism $\Prism_i'$ of $C'$, %5
+\end{enumerate}
+then, $\forall i \in I'$, $\T \cap \Prism_i'$ is a simply connected topological disk.
+In other words, $\T$ is a section of the new shell $\S'$ obtained by applying the operation  $\mathbb{O}$ to $\S$.
+\end{theorem}
+\begin{proof}
+We prove this theorem in Appendix~\ref{app:invariant-checks}.
+\end{proof}
+
+
+We note that assumption (2) in Theorem~\ref{thm:invariants} prevents the input surface from crossing the bottom/top surface, thus avoiding it to move in the interior of a region covered by more than one prism. 
+
+Our local operations (satisfying the definition of $\mathbb{O}$ in Theorem \ref{thm:invariants}) are translated from surface remeshing methods \cite{dunyach2013adaptive} since our shell can be regarded as a triangle mesh (middle surface) extruded through a displacement field $\N$. All the local operations described below directly change the middle surface, and consequently affect the extruded shell. After every operation, the middle surface is recomputed by intersecting $\T$ with the edges of the prisms in $\S$.
+%\DZ{This is not clear,expand}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{local-operations}
+    % \includegraphics[0.5\linewidth]{block_singular}
+    \caption{Different local operations used to optimize the shell. Mesh editing operations translate naturally to the shell setting. For vertex smoothing, we decompose the operation into 3 intermediate steps: pan, zoom, and rotate.}
+    \label{fig:local_operations}
+    
+\end{figure}
+
+\paragraph{Shell Quality}
+We measure the quality of the shell $\S$ using the MIPS energy \cite{hormann2000mips} of its middle surface $M_\S$. For each triangle $T$ of the middle surface, we build a local reference frame, and  compute the affine map $\J_T$ transforming the triangle into an equilateral reference triangle in the same reference frame. The energy is then measured by
+\begin{equation*}
+    \sum_{T \in M_\S} \frac{\tr(\J_T^T\J_T)}{\det(\J_T)}.
+\end{equation*}
+This energy is invariant to scaling, thus allowing the local operations to coarsen the shell whenever possible while  encouraging the optimization to create well-shaped triangles. Good quality of the middle surface decreases the chances, for the subsequent operations, to violate the shell invariants.
+
+\paragraph{Shell Connectivity Modifications.} We translate three operations for triangular meshes to the shell settings (Figure~\ref{fig:local_operations} top). Edge collapse, split, and flip operations can be performed by simultaneously modifying the top and bottom surfaces
+and retrieve the positions for the middle surface through the intersection. We only accept the operations if they pass the invariant check.
+
+\paragraph{Vertex Smoothing.} Due to the additional degree of freedom on vertex-pairs (position, direction, and thickness), we decompose the smoothing operations into three \revision{components} (Figure~\ref{fig:local_operations} bottom). 
+\emph{Pan} moves the positions of the top and bottom vertex at the same time, 
+minimizing the MIPS quality of the middle surface. Neither the thickness or direction will be changed. 
+\emph{Rotate} re-aligns the local direction to be the average of the neighboring ones while keeping the position of the middle vertex fixed. 
+\emph{Zoom} keeps the direction and position of the middle vertex, and set the thickness of both top and bottom to be 1.5 times of the neighbor average, capped by the input target thickness.
+
+
+\paragraph{Invariant Check}
+% Our algorithm maintains both invariants using exact predicates \cite{shewchuk1997adaptive}. 
+We use exact orientation predicates \cite{shewchuk1997adaptive} to make sure all the prisms satisfy positivity (I1). Further, we ensure that the original surface $\T$ is not intersecting with the bottom and top surface, except at the prescribed singularities.
+The check is done using the triangle-triangle overlap test \cite{guigue2003fast}, accelerated using a static axis-aligned bounding box tree constructed from $\T$. 
+To accelerate the checks for normal condition, 
+for each prism $\Prism_i$, 
+we maintain a list triangles overlapping with its convex hull (an octahedron), 
+and check their respective normals against all the three pillars of $\Prism_i$. These three checks ensure that the three conditions in  Theorem~\ref{thm:invariants} are satisfied.
+%
+Note that the vertex smoothing operation is continuous, in the sense that any point between the current position and the optimal one improves the shell. 
+We, however, handle it as a discrete operation to check our conditions: we attempt a full step, and if I1 is not satisfied, we perform a bisection search for a displacement that does. We avoid bisection for the other two conditions since they are expensive to evaluate.
+
+% \DZ{Is smoothing included in checked operations? It is not clear how checks are applied for smoothing, is the whole smoothing operation rejected, or e.g. the positions are interpolated between smoothed and original positions and a search is performed to find a position for which the invariants are satisfied?} 
+% - pan (MIPS) bisection on cond 2, 1 is always satisfied. 3 just reject
+% - zoom bisection on 1. 2-3 just reject
+% - rotate bisection on 1. 2-3 just reject
+
+
+\paragraph{Projection Distortion} 
+An optional invariant to maintain (not \revision{necessary} for guaranteeing bijectivity, but useful for applications), 
+is a bound  on the maximal distortion $\D_\P(\Prism) $ of $\P$ for a prism $\Prism$. 
+We measure it as  the maximal angle between the normals of the set $\C$ containing the faces of $\T$ intersecting $\Prism$ and $\V$:
+\begin{equation*}
+    \D_\P(\Prism) = \max_{p \in \C} \angle (n_p, \V(p)),
+\end{equation*}
+where $\angle$ is the unsigned angle in degrees. This quantity is bounded from below by the smallest dihedral angle of $\T$, making it impossible to control exactly. However, we can prevent it from increasing by measuring it and discarding the operations that increase it. In our experiments, we use a threshold of $89.95$ degrees.
+
+\paragraph{Scheduling and Termination}
+Our optimization algorithm is composed of two nested loops. The outer loop repeats a set of local operations until the face count between two successive iteration decreases by less than 0.01\%. In the inner loop we: (1) flip every edge of $\S$ decreasing  the MIPS energy and avoiding high and low vertex valences \cite{dunyach2013adaptive}; (2) smooth all vertices which include pan, zoom, and rotate; and (3) collapse every edge of $\S$ not increasing the MIPS energy over \revision{30}. Note that for every operation, we check the invariants, the projection distortion, and manifold preservation and reject any operation violating them.
+%
+After the outer iteration terminates (i.e.  the shell cannot be coarsened anymore), we further optimize the shell with 20 additional iterations of flips and vertex smoothing.
+
+
+
+
+% \TS{new text done with Zhongshi, old text is on the bottom, probably kill it}
+
+% We separate the operations into \emph{outer passes, which contains only one of the operations (either collapse, flip or smooth), and}
+% iteratively perform \emph{outer passes} composed of one sequence of edge collapse, one of edge flip, and one of vertex smoothing. We stop these iterations when the face count between different passes decreases by less than 0.01\%. We then further optimize the shell with 20 additional passes of flips and vertex smoothing.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth,draft=false]{doublewheel_pinch}
+    % \includegraphics[0.5\linewidth]{block_singular}
+    \caption{A model with 48 singularities and a close up around one (left).
+    Our shell is pinched around each of them without affecting other regions (right).}
+    \label{fig:singularity_example}
+    
+\end{figure}
+
+
+\subsection{Singularities}\label{sec:singularities}
+
+% We introduced the algorithm assuming that problem \eqref{eq:OPT} always has a solution, and assuming that our mesh does not contains boundaries. We will now extend our construction to handle these cases, which requires minor variations to our algorithm.
+
+Singularities, i.e. vertices of $\T$ for which the constraints set of problem \eqref{eq:OPT} is empty, are surprisingly common in large datasets (Figure~\ref{fig:singularity_example} shows an example). For instance, in our subset of Thingi10k \cite{zhou2016thingi10k}, although only 0.01\% vertices are singular,  8\% of the models have at least one singular point. This has been recently observed as a limitation for the construction of nested cages \cite[Appendix A]{sacht2015nested}, and it is a well-known issue when building boundary layers \cite{aubry2015most,aubry2017boundary,garimella2000boundary}.
+%
+There are two main situations that give rise to singular points. 
+The first one naturally generates a singular point when more than two ridge-lines meet (e.g., figures~\ref{fig:singularity_example} and~\ref{fig:singularity-boolean}), thus making the point a feature point. 
+The second one is a pocket-like mesh artifact, often produced as a result of mesh simplification (Figure~\ref{fig:singularity-illustration}).
+
+While singularities might seem fixable by applying local smoothing or subdivision as a pre-process, it is not desirable in the case of a feature point, and is likely to introduce self-intersection or more serious geometric inconsistency.
+%in the presence of the meshing artifacts.
+Therefore, due to the above reasons and observing that they are very uncommon, we propose to extend our theory (Appendix~\ref{app:singularity}) and algorithm to handle isolated singularities  by \emph{pinching} the thickness of the shell. Note that in the rare case where two singular points are sharing the same edge, they are \emph{automatically} separated by our topological beveling.
+
+\paragraph{Pinching.} 
+We extend our definition of the shell by allowing it to have zero thickness on singularities, thus tessellating the degenerate prism with 4 instead of 6 tetrahedra (Figure~\ref{fig:singularity-illustration}). We further remark that these isolated points must be excluded from Definition~\ref{def:section}. In the implementation, this requires to change the intersection predicates to skip the singular vertices.
+With this change, the singularity becomes a trivial point of the projection operator $\P$,
+% \DZ{all middle surface points are fixed points of $\P$}
+and the rest of our shell can still be used in applications without further changes. Since singularities tends to be isolated (they are usually located at the juncture of multiple sharp features), this solution has minimal effects on applications: for example, when our shell is used for remeshing, pinching the shell at singularities will freeze the corresponding isolated vertices while allowing the rest of the mesh to be freely optimized.
+
+\begin{wrapfigure}{r}{0.3\linewidth}
+    \includegraphics[width=1\linewidth]{singular_bevel}
+\end{wrapfigure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{degenerate_prism_decompose}
+\caption{Left to right: examples of a singularity as a feature point and as a meshing artefact; and illustration of the degenerate prism with a singularity (red) and its tetrahedral decomposition made of only four tetrahedra.}
+\label{fig:singularity-illustration}
+
+\end{figure}
+
+The topological beveling algorithm is changed most significantly: for singularities, there is no pillar to copy from.
+In this case, we apply an additional edge split, to use the pattern in the inset (with the singularity marked by a white dot) in the one-ring neighborhood of the singularity.
+The newly inserted vertices lie either inside a triangle (uncircled red and orange dots), 
+or in the interior of an edge (circled red and orange dots).
+Therefore, we assign to the orange vertices the average normal of the two adjacent triangles, and to red the pillar of the connected orange one.
+
+
+Additionally, the edges connecting singularities will always be beveled/split after beveling. Therefore no prism will contain more than one singular point.
+We discuss the technical extensions for our proofs to shells with pinched prisms in Appendix~\ref{app:singularity}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{boundary_singular}
+    \caption{$AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.}
+    \label{fig:boundary_singularity}
+    
+\end{figure}
+
+\subsection{Boundaries.}\label{sec:boundaries}
+
+We introduced our algorithm, assuming that the input mesh does not have boundaries. We will now extend our construction to handle this case, which requires minor variations to our algorithm.
+
+For some vertices on the boundary, it might be impossible to extrude a valid shell (Figure~\ref{fig:boundary_singularity}), even if problem \eqref{eq:OPT} has a solution, as  Theorem~\ref{thm:thickness} does not apply in its original form. 
+%
+We identify such cases by connecting every edge in the 1-ring neighborhood of the boundary vertex
+to the extruded point and check if they collide with the existing 1-ring triangles (e.g., the triangle $A'AB$ intersects the existing input triangle in Figure~\ref{fig:boundary_singularity}). If it is the case, we consider this vertex as a singularity, and we pinch the shell. Note that this is an extremely rare case and, in our experiments, we detected it only for models where the loss of precision in the STL export introduces rounding noise on the boundary.% (and the problem goes away increasing precision). We could not identify any realistic case of this scenario in our model collection.
+
+Once we pinch all boundary singularities, our construction extends naturally to the boundary. The only necessary modification is in the shell optimization (Section~\ref{sec:optimization}), where we skip all operations acting on boundary vertices to maintain the bijectivity of the induced projection operator (Figure~\ref{fig:open-hand}).
+%
+We thus freeze these vertices and never allow them to move or be affected by any other modification of the shell. Note that, in certain applications, it might also be useful to freeze additional non-boundary vertices to ensure that these remain on the middle surface during optimization (e.g., to exactly represent a corner of a CAD model).
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{open-hand}
+    \caption{An example of a mesh with boundary.}
+    \label{fig:open-hand}
+    
+\end{figure}
+
+
+
+
+% \paragraph{Boundary Singularity.}
+%(0.3 \%)}
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{blocks}
+%     % \includegraphics[0.5\linewidth]{block_singular}
+%     \caption{We generate a pinched shell for a model with a singularity (left). Optionally, we can complete the shell using our Boolean construction.}
+%     \label{fig:singularity_resolve}
+% \end{figure}
+
+
+
+% \paragraph{Simpler Derivation}
+% The following was derived in the general case. For piecewise-linear case, suppose the map, keeping the base, and make the pillar orthogonal is $T$, (note, not from the current tet) and a frame on the swimming face is $\mathbf{t}_1, \mathbf{t}_2$, then the final Jacobian is $\text{Proj}_{x-y}(\mathbf{t}_1,\mathbf{t}_2)$ from the swimming plane to base.
+
+
+% \subsubsection{Track}
+% Responsible triangles require to be found. Let's try to record them. Aggressive prism to triangle map (may contain more triangle than is actually needed).
