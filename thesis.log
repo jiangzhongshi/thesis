@@ -1,0 +1,2665 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  23 MAY 2022 21:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-04-29>
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen147
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count199
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `draft' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count266
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen148
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count267
+\Field@Width=\dimen149
+\Fld@charsize=\dimen150
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip49
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 79.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen151
+\captionmargin=\dimen152
+\caption@leftmargin=\dimen153
+\caption@rightmargin=\dimen154
+\caption@width=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+Package caption Info: Standard document class detected.
+)
+Package caption Info: Option `figurewithin=chapter' requires the `newfloat' pac
+kage on input line 169.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
+Package newfloat Info: Document class `report' detected (Hy).
+)
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
+Package caption Info: hyperref package is loaded.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+(/opt/texlive/texdir/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box50
+\beforetitleunit=\skip50
+\aftertitleunit=\skip51
+\ttl@plus=\dimen159
+\ttl@minus=\dimen160
+\ttl@toksa=\toks18
+\titlewidth=\dimen161
+\titlewidthlast=\dimen162
+\titlewidthfirst=\dimen163
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-04-29 L3 programming layer (loader) 
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count275
+\l__pdf_internal_box=\box51
+))
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count276
+\l__lipsum_a_int=\count277
+\l__lipsum_b_int=\count278
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./defs.tex
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks24
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen166
+))
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen167
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count279
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count280
+\leftroot@=\count281
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count282
+\DOTSCASE@=\count283
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count284
+\c@MaxMatrixCols=\count285
+\dotsspace@=\muskip17
+\c@parentequation=\count286
+\dspbrk@lvl=\count287
+\tag@help=\toks26
+\row@=\count288
+\column@=\count289
+\maxfields@=\count290
+\andhelp@=\toks27
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
+\@envbody=\toks28
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/libertine.sty
+Package: libertine 2020/03/26 (Bob Tennent) Supports Libertine and Biolinum fon
+ts for all LaTeX engines.
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/opt/texlive/texdir/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count291
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+LaTeX Info: Redefining \oldstylenums on input line 484.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+(/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/zi4.sty
+Package: zi4 2019/05/17 v1.12
+
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+\zifour@ocount=\count292
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2022/01/16 v1.71
+
+`newtxmath' v1.71, 2022/01/16 Math macros based originally on txfonts (msharpe)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count294
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count295
+\tx@IsAlNum=\count296
+\tx@tA=\toks32
+\tx@tB=\toks33
+\tx@su=\read2
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/LinuxLibertineT-TLF/m/n on input li
+ne 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/m/n on input l
+ine 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/LinuxLibertineT-TLF/m/n --> OT1/LinuxLibertineT-TLF
+/sb/n on input line 377.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> T1/LinuxBiolinumT-TLF/m/n on input lin
+e 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> T1/LinuxBiolinumT-TLF/m/n on input li
+ne 383.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/LinuxLibertineT-TLF/m/it on input 
+line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/LinuxLibertineT-TLF/m/it on input
+ line 384.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> T1/zi4/m/n on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> T1/zi4/m/n on input line 385.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
+line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/LinuxLibertineT-TLF/sb/n on input 
+line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/LinuxLibertineT-TLF/m/it --> OT1/LinuxLibertineT-TL
+F/sb/it on input line 388.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/LinuxBiolinumT-TLF/m/n --> T1/LinuxBiolinumT-TLF/b/n
+ on input line 389.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/zi4/m/n --> T1/zi4/b/n on input line 390.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 407.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/nxlmi/m/it on input line 407.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/nxlmi/m/it on input line 407.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/nxlmi/m/it --> OML/nxlmi/b/it on input line 408.
+\symlettersA=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 547.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 549.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 569.
+\symAMSm=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 594.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 615.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 628
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 629.
+\symlargesymbolsTXA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 643.
+\tx@sbptoks=\toks34
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 866.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 867.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 874.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 878.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 879.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 950.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 951.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2020.
+LaTeX Info: Redefining \Bbbk on input line 2810.
+LaTeX Info: Redefining \not on input line 2959.
+LaTeX Info: Redefining \textsquare on input line 2989.
+LaTeX Info: Redefining \openbox on input line 2991.
+) (/opt/texlive/texdir/texmf-dist/tex/latex/mathpartir/mathpartir.sty
+Package: mathpartir 2016/02/24 version 1.3.2 Math Paragraph for Typesetting Inf
+erence Rules
+\mpr@andskip=\skip58
+\mpr@lista=\toks35
+\mpr@listb=\toks36
+\mpr@hlist=\box54
+\mpr@vlist=\box55
+\mpr@right=\box56
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup10
+\symboldletters=\mathgroup11
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen187
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count301
+\c@subtable=\count302
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineT-TLF 
+on input line 112.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd
+File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
+nuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 112.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks37
+\inpenc@posthook=\toks38
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count303
+\lst@gtempboxa=\box57
+\lst@token=\toks39
+\lst@length=\count304
+\lst@currlwidth=\dimen188
+\lst@column=\count305
+\lst@pos=\count306
+\lst@lostspace=\dimen189
+\lst@width=\dimen190
+\lst@newlines=\count307
+\lst@lineno=\count308
+\lst@maxwidth=\dimen191
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count309
+\lst@skipnumbers=\count310
+\lst@framebox=\box58
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen192
+\pgfutil@tempdimb=\dimen193
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.
+tex))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box59
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.
+tex
+\pgfkeys@tmptoks=\toks43
+))
+\pgf@x=\dimen194
+\pgf@y=\dimen195
+\pgf@xa=\dimen196
+\pgf@ya=\dimen197
+\pgf@xb=\dimen198
+\pgf@yb=\dimen199
+\pgf@xc=\dimen256
+\pgf@yc=\dimen257
+\pgf@xd=\dimen258
+\pgf@yd=\dimen259
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count315
+ (/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.d
+ef
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code
+.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code
+.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen260
+\pgfmath@count=\count318
+\pgfmath@box=\box60
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.cod
+e.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonome
+tric.code.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.co
+de.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compariso
+n.code.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code
+.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.cod
+e.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code
+.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerar
+ithmetics.code.tex)))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count319
+))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.t
+ex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen261
+\pgf@picmaxx=\dimen262
+\pgf@picminy=\dimen263
+\pgf@picmaxy=\dimen264
+\pgf@pathminx=\dimen265
+\pgf@pathmaxx=\dimen266
+\pgf@pathminy=\dimen267
+\pgf@pathmaxy=\dimen268
+\pgf@xx=\dimen269
+\pgf@xy=\dimen270
+\pgf@yx=\dimen271
+\pgf@yy=\dimen272
+\pgf@zx=\dimen273
+\pgf@zy=\dimen274
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct
+.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen275
+\pgf@path@lasty=\dimen276
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.cod
+e.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen277
+\pgf@shorten@start@additional=\dimen278
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.t
+ex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count320
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.
+code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen279
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformatio
+ns.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen280
+\pgf@pt@y=\dimen281
+\pgf@pt@temp=\dimen282
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.te
+x
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.
+tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessin
+g.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.t
+ex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen283
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.te
+x
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen284
+\pgf@sys@shading@range@num=\count321
+\pgf@shadingcount=\count322
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.te
+x
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code
+.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box64
+))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.t
+ex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.
+code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code
+.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box65
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-6
+5.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen285
+\pgf@nodesepend=\dimen286
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-1
+8.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/opt/texlive/texdir/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/opt/texlive/texdir/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen287
+\pgffor@skip=\dimen288
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
+))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.te
+x
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandler
+s.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count323
+\pgfplotmarksize=\dimen289
+)
+\tikz@lastx=\dimen290
+\tikz@lasty=\dimen291
+\tikz@lastxsaved=\dimen292
+\tikz@lastysaved=\dimen293
+\tikz@lastmovetox=\dimen294
+\tikz@lastmovetoy=\dimen295
+\tikzleveldistance=\dimen296
+\tikzsiblingdistance=\dimen297
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count324
+\tikznumberofchildren=\count325
+\tikznumberofcurrentchild=\count326
+\tikz@fig@count=\count327
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.te
+x
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count328
+\pgfmatrixcurrentcolumn=\count329
+\pgf@matrix@numberofcolumns=\count330
+)
+\tikz@expandcount=\count331
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code
+.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen298
+))
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
+kzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@layerbox@background=\box70
+\pgf@layerboxsaved@background=\box71
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip59
+\enit@outerparindent=\dimen299
+\enit@toks=\toks52
+\enit@inbox=\box72
+\enit@count@id=\count332
+\enitdp@description=\count333
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count334
+\calc@Bcount=\count335
+\calc@Adimen=\dimen300
+\calc@Bdimen=\dimen301
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count336
+\calc@Cskip=\skip62
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count337
+\l_MT_multwidth_dim=\dimen302
+\origjot=\skip63
+\l_MT_shortvdotswithinadjustabove_dim=\dimen303
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen304
+\l_MT_above_intertext_sep=\dimen305
+\l_MT_below_intertext_sep=\dimen306
+\l_MT_above_shortintertext_sep=\dimen307
+\l_MT_below_shortintertext_sep=\dimen308
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen309
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen310
+\ar@mcellbox=\box74
+\extrarowheight=\dimen311
+\NC@list=\toks53
+\extratabsurround=\skip64
+\backup@length=\skip65
+\ar@cellbox=\box75
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup12
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/dashbox/dashbox.sty
+Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
+\dashlength=\skip66
+\dashdash=\skip67
+\layersize=\skip68
+\d@shedsavebox=\box76
+\d@shedboxwidth=\skip69
+\d@shedboxtotalheight=\skip70
+\l@yersavebox=\box77
+\l@yerwidth=\skip71
+\l@yerboxwidth=\skip72
+\l@yertotalheight=\skip73
+\l@yerlineheight=\skip74
+\l@yervoffset=\skip75
+\c@l@yercount=\count338
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/scalerel/scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
+ng of objects, relative to a reference object or in absolute terms
+\thesrwidth=\skip76
+\thesrheight=\skip77
+\srblobheight=\skip78
+\srblobdepth=\skip79
+\mnxsrwidth=\skip80
+\LMex=\skip81
+\LMpt=\skip82
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip83
+\multirow@cntb=\count339
+\multirow@dima=\skip84
+\bigstrutjot=\dimen312
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/breakcites/breakcites.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip85
+\bibsep=\skip86
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count340
+)
+\c@theorem=\count341
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count342
+\c@@ppsavesec=\count343
+\c@@ppsaveapp=\count344
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/opt/texlive/texdir/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count345
+\algocf@hangindent=\skip87
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count346
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip88
+\skiplinenumber=\skip89
+\skiprule=\skip90
+\skiphlne=\skip91
+\skiptext=\skip92
+\skiplength=\skip93
+\algomargin=\skip94
+\skipalgocfslide=\skip95
+\algowidth=\dimen313
+\inoutsize=\dimen314
+\inoutindent=\dimen315
+\interspacetitleruled=\dimen316
+\interspacealgoruled=\dimen317
+\interspacetitleboxruled=\dimen318
+\algocf@ruledwidth=\skip96
+\algocf@inoutbox=\box78
+\algocf@inputbox=\box79
+\AlCapSkip=\skip97
+\AlCapHSkip=\skip98
+\algoskipindent=\skip99
+\algocf@nlbox=\box80
+\algocf@hangingbox=\box81
+\algocf@untilbox=\box82
+\algocf@skipuntil=\skip100
+\algocf@capbox=\box83
+\algocf@lcaptionbox=\skip101
+\algoheightruledefault=\skip102
+\algoheightrule=\skip103
+\algotitleheightruledefault=\skip104
+\algotitleheightrule=\skip105
+\c@algocfline=\count347
+\c@algocfproc=\count348
+\c@algocf=\count349
+\algocf@algoframe=\box84
+\algocf@algobox=\box85
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box86
+\UL@hyphenbox=\box87
+\UL@skip=\skip106
+\UL@hook=\toks54
+\UL@height=\dimen319
+\UL@pe=\count350
+\UL@pixel=\dimen320
+\ULC@box=\box88
+Package: ulem 2019/11/18
+\ULdepth=\dimen321
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+\MT@toks=\toks55
+\MT@tempbox=\box89
+\MT@count=\count351
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1195.
+\MT@outer@kern=\dimen322
+LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
+\MT@listname@count=\count352
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2022/03/14 v3.0d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 900.
+LaTeX Info: Redefining \lslig on input line 900.
+\MT@outer@space=\skip107
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
+))
+(/opt/texlive/texdir/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen323
+\WF@size=\dimen324
+\c@WF@wrappedlines=\count353
+\WF@box=\box90
+\WF@everypar=\toks56
+Package: wrapfig 2003/01/31  v 3.6
+))
+(docs/thesis.aux
+
+LaTeX Warning: Label `sec:related' multiply defined.
+
+)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 171.
+LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
+ 171.
+ (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
+)
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 171.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+171.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 171.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 171.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 171.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 171.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 171.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=620.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count354
+\scratchdimen=\dimen325
+\scratchbox=\box91
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen326
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks58
+) (/opt/texlive/texdir/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+
+Package hyperref Warning: Draft mode on.
+
+Package hyperref Info: Link coloring ON on input line 171.
+(/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/opt/texlive/texdir/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count360
+)
+LaTeX Info: Redefining \ref on input line 171.
+LaTeX Info: Redefining \pageref on input line 171.
+LaTeX Info: Redefining \nameref on input line 171.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package newfloat Info: `wrapfig' package detected.
+\c@mv@tabular=\count361
+\c@mv@boldtabular=\count362
+(/opt/texlive/texdir/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+\c@lstlisting=\count363
+LaTeX Info: Redefining \microtypecontext on input line 171.
+Package microtype Info: Applying patch `item' on input line 171.
+Package microtype Info: Applying patch `toc' on input line 171.
+Package microtype Info: Applying patch `eqnum' on input line 171.
+
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 171.
+
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 171.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 186.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 17.28pt on input line 188.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 206.
+[1
+
+{/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 221.
+LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
+ on input line 221.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
+File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
+LinuxLibertineT-TLF.
+)
+
+LaTeX Font Warning: Font shape `TS1/LinuxLibertineT-TLF/m/sc' undefined
+(Font)              using `TS1/LinuxLibertineT-TLF/m/n' instead
+(Font)              for symbol `textcopyright' on input line 221.
+
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 221.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[2]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 24.88pt on input line 245.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 24.88pt on input line 245.
+ [3
+
+] (./abstract.tex) [4
+
+] (docs/thesis.toc
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1.
+LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
+ on input line 8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
+File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
+LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 8.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.8pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+8.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 12.0pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 8.8pt on input line 8.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 6.6pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 8
+.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [5
+
+])
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+ [6]
+(docs/thesis.lof [7
+
+
+]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 22.
+ [8]
+
+LaTeX Warning: Reference `app:bilinear' on page ix undefined on input line 28.
+
+[9]
+
+Package natbib Warning: Citation `tozoni2020low' on page x undefined on input l
+ine 58.
+
+
+Package natbib Warning: Citation `crane2013conformal' on page x undefined on in
+put line 58.
+
+)
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+ [10] (docs/thesis.lot)
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
+
+ [11
+
+
+]
+Chapter 1.
+[1
+
+]
+Chapter 2.
+[2
+
+] [3]
+Chapter 3.
+(./prism-tex/01-Introduction.tex
+
+pdfTeX warning: pdflatex (file ./prism-tex/figs/teaser_edit.pdf): PDF inclusion
+: found PDF version <1.6>, but at most version <1.5> allowed
+<prism-tex/figs/teaser_edit.pdf, id=60, 557.81396pt x 508.5911pt>
+File: prism-tex/figs/teaser_edit.pdf Graphic file (type pdf)
+<use prism-tex/figs/teaser_edit.pdf>
+Package pdftex.def Info: prism-tex/figs/teaser_edit.pdf  used on input line 4.
+(pdftex.def)             Requested size: 469.75502pt x 428.30008pt.
+LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
+n input line 12.
+(/opt/texlive/texdir/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
+File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
+uxBiolinumT-TLF.
+)
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 12.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 12.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 12.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 12.
+
+[4
+
+] [5 <./prism-tex/figs/teaser_edit.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 57
+.
+
+(/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 57.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+(./prism-tex/02-Related.tex [6]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 14.4pt on input line 6.
+ [7] [8] [9]) (./prism-tex/03-Method.tex
+<prism-tex/figs/pipeline.pdf, id=129, 498.0698pt x 184.3979pt>
+<prism-tex/figs/corona.pdf, id=130, 1024.33693pt x 567.42287pt>
+
+[10]
+
+LaTeX Warning: Reference `app:dblayer' on page 11 undefined on input line 33.
+
+<prism-tex/figs/prism_projection.pdf, id=134, 754.83604pt x 349.48567pt>
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 40.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 40.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.1pt on input line 40.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 10.95pt on input line 40.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 8.0pt on input line 40.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 6.1pt on input line 40.
+[11]
+<prism-tex/figs/projection.pdf, id=138, 1347.72502pt x 329.55319pt>
+<prism-tex/figs/not-section-illustrate.pdf, id=139, 412.97488pt x 160.6pt>
+File: prism-tex/figs/not-section-illustrate.pdf Graphic file (type pdf)
+<use prism-tex/figs/not-section-illustrate.pdf>
+Package pdftex.def Info: prism-tex/figs/not-section-illustrate.pdf  used on inp
+ut line 79.
+(pdftex.def)             Requested size: 375.80544pt x 146.14621pt.
+ [12]
+
+LaTeX Warning: Reference `app:projection' on page 13 undefined on input line 10
+9.
+
+[13 <./prism-tex/figs/not-section-illustrate.pdf>]
+
+pdfTeX warning: pdflatex (file ./prism-tex/figs/composition.pdf): PDF inclusion
+: found PDF version <1.6>, but at most version <1.5> allowed
+<prism-tex/figs/composition.pdf, id=171, 1089.04866pt x 376.48154pt>
+
+LaTeX Warning: Reference `app:I1' on page 14 undefined on input line 137.
+
+
+LaTeX Warning: Reference `app:bilinear' on page 14 undefined on input line 143.
+
+
+[14]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.8pt on input line 158.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 158.
+
+
+LaTeX Warning: Reference `app:qp' on page 15 undefined on input line 161.
+
+
+LaTeX Warning: Reference `app:qp' on page 15 undefined on input line 169.
+
+
+LaTeX Warning: Reference `app:I1' on page 15 undefined on input line 180.
+
+[15]
+
+LaTeX Warning: Reference `app:thickness' on page 16 undefined on input line 194
+.
+
+<prism-tex/figs/need_to_bevel.pdf, id=181, 1265.88939pt x 454.60039pt>
+[16]
+<prism-tex/figs/bevel.pdf, id=185, 798.88464pt x 226.75415pt>
+<prism-tex/figs/screwdriver_bevel.pdf, id=186, 914.59294pt x 602.25pt>
+
+
+LaTeX Warning: Reference `app:bevel' on page 17 undefined on input line 248.
+
+[17] [18]
+
+LaTeX Warning: Reference `app:invariant-checks' on page 19 undefined on input l
+ine 281.
+
+<prism-tex/figs/local-operations.pdf, id=194, 1627.23938pt x 707.15695pt>
+[19] [20]
+<prism-tex/figs/doublewheel_pinch.pdf, id=203, 1840.28532pt x 515.21384pt>
+File: prism-tex/figs/doublewheel_pinch.pdf Graphic file (type pdf)
+<use prism-tex/figs/doublewheel_pinch.pdf>
+Package pdftex.def Info: prism-tex/figs/doublewheel_pinch.pdf  used on input li
+ne 357.
+(pdftex.def)             Requested size: 469.75502pt x 131.51537pt.
+
+
+LaTeX Warning: Reference `app:singularity' on page 21 undefined on input line 3
+78.
+
+[21 <./prism-tex/figs/doublewheel_pinch.pdf>]
+<prism-tex/figs/singular_bevel.pdf, id=523, 250.62433pt x 190.81789pt>
+<prism-tex/figs/degenerate_prism_decompose.pdf, id=524, 988.12663pt x 353.48161
+pt>
+
+
+LaTeX Warning: Reference `app:singularity' on page 22 undefined on input line 4
+06.
+
+<prism-tex/figs/boundary_singular.pdf, id=525, 320.11597pt x 108.6178pt>
+[22]
+<prism-tex/figs/open-hand.pdf, id=529, 724.0731pt x 244.50346pt>
+) (./prism-tex/04-Results.tex
+<prism-tex/figs/varying_thickness.pdf, id=530, 1933.95522pt x 652.96646pt>
+File: prism-tex/figs/varying_thickness.pdf Graphic file (type pdf)
+<use prism-tex/figs/varying_thickness.pdf>
+Package pdftex.def Info: prism-tex/figs/varying_thickness.pdf  used on input li
+ne 11.
+(pdftex.def)             Requested size: 469.75502pt x 158.59824pt.
+ [23]
+<prism-tex/figs/10k_gallery.pdf, id=534, 1020.82379pt x 864.11633pt>
+<prism-tex/figs/abc_gallery.pdf, id=535, 1493.4897pt x 695.41808pt>
+
+
+LaTeX Warning: Float too large for page by 21.08928pt on input line 38.
+
+[24 <./prism-tex/figs/varying_thickness.pdf>] [25]
+<prism-tex/figs/stats_combined.pdf, id=598, page=2, 602.25pt x 1151.512pt>
+<prism-tex/figs/stats_combined.pdf, id=599, page=1, 602.25pt x 1151.512pt>
+<prism-tex/figs/thai_comparision.pdf, id=600, 1170.30229pt x 842.09503pt>
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 76.
+ [26]
+<prism-tex/figs/shark_accuracy.pdf, id=605, 1191.29062pt x 339.5907pt>
+ [27]
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 110.
+ [28]
+<prism-tex/figs/rockerarm_qslim.pdf, id=613, 929.97034pt x 536.13097pt>
+<prism-tex/figs/heat-in-nut.pdf, id=614, 1103.3722pt x 829.10957pt>
+<prism-tex/figs/tet-knot.pdf, id=615, 417.1876pt x 204.89449pt>
+ [29]
+<prism-tex/figs/birdengine.pdf, id=619, 612.60968pt x 508.60513pt>
+ [30]
+<prism-tex/figs/bunny-displacement.pdf, id=623, 1068.8934pt x 777.8089pt>
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 209.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 209.
+
+
+LaTeX Warning: Reference `app:bilinear' on page 31 undefined on input line 209.
+
+
+
+LaTeX Warning: Reference `app:bilinear' on page 31 undefined on input line 209.
+
+
+
+LaTeX Warning: Reference `app:bilinear' on page 31 undefined on input line 214.
+
+
+<prism-tex/figs/chain-lizard.pdf, id=624, 915.38588pt x 225.84375pt>
+[31]
+<prism-tex/figs/leg-intersect.pdf, id=628, 787.1287pt x 238.49802pt>
+<prism-tex/figs/armadillo_cage.pdf, id=629, 916.9728pt x 304.55682pt>
+<prism-tex/figs/camel.pdf, id=630, 854.50542pt x 624.96388pt>
+ [32] [33] [34]
+<prism-tex/figs/blocks.pdf, id=641, 2796.48769pt x 832.62968pt>
+ [35]) (./prism-tex/05-Concluding.tex [36]) [37]
+Chapter 4.
+(./curve_meshing_in_shell_tex/01_intro.tex
+<curve_meshing_in_shell_tex/figs/teaser.pdf, id=651, 4578.62572pt x 1084.21063p
+t>
+ [38
+
+]
+
+Package natbib Warning: Citation `jiang2020bijective' on page 39 undefined on i
+nput line 18.
+
+) (./curve_meshing_in_shell_tex/02_related.tex
+
+Package natbib Warning: Citation `bargteil2014animation' on page 39 undefined o
+n input line 7.
+
+
+Package natbib Warning: Citation `MEZGER2009680' on page 39 undefined on input 
+line 7.
+
+
+Package natbib Warning: Citation `Suwelack2013' on page 39 undefined on input l
+ine 7.
+
+
+Package natbib Warning: Citation `Jameson2002' on page 39 undefined on input li
+ne 7.
+
+
+Package natbib Warning: Citation `Babuska1988' on page 39 undefined on input li
+ne 7.
+
+
+Package natbib Warning: Citation `BABUSKA1992159' on page 39 undefined on input
+ line 7.
+
+
+Package natbib Warning: Citation `BASSI1997251' on page 39 undefined on input l
+ine 7.
+
+
+Package natbib Warning: Citation `luo2001influence' on page 39 undefined on inp
+ut line 7.
+
+
+Package natbib Warning: Citation `ODEN1994309' on page 39 undefined on input li
+ne 7.
+
+[39]
+
+Package natbib Warning: Citation `dey1999curvilinear' on page 40 undefined on i
+nput line 9.
+
+
+Package natbib Warning: Citation `Ghasemi2016' on page 40 undefined on input li
+ne 9.
+
+
+Package natbib Warning: Citation `MOXEY2015636' on page 40 undefined on input l
+ine 9.
+
+
+Package natbib Warning: Citation `abgrall2012' on page 40 undefined on input li
+ne 9.
+
+
+Package natbib Warning: Citation `sherwin2002mesh' on page 40 undefined on inpu
+t line 9.
+
+
+Package natbib Warning: Citation `turner2017high' on page 40 undefined on input
+ line 9.
+
+
+Package natbib Warning: Citation `marcon2019semi' on page 40 undefined on input
+ line 9.
+
+
+Package natbib Warning: Citation `dey1999curvilinear' on page 40 undefined on i
+nput line 9.
+
+
+Package natbib Warning: Citation `Peir2008' on page 40 undefined on input line 
+9.
+
+
+Package natbib Warning: Citation `George2012' on page 40 undefined on input lin
+e 9.
+
+
+Package natbib Warning: Citation `Qiukai2013' on page 40 undefined on input lin
+e 9.
+
+
+Package natbib Warning: Citation `Luo2002pVersionMG' on page 40 undefined on in
+put line 9.
+
+
+Package natbib Warning: Citation `ENGVALL2016378' on page 40 undefined on input
+ line 9.
+
+
+Package natbib Warning: Citation `ENGVALL201783' on page 40 undefined on input 
+line 9.
+
+
+Package natbib Warning: Citation `SHEPHARD2005251' on page 40 undefined on inpu
+t line 9.
+
+
+Package natbib Warning: Citation `sherwin2002mesh' on page 40 undefined on inpu
+t line 9.
+
+
+Package natbib Warning: Citation `wang2016construction' on page 40 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `jiao2012reconstructing' on page 40 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `Abgrall2014' on page 40 undefined on input li
+ne 12.
+
+
+Package natbib Warning: Citation `abgrall2012' on page 40 undefined on input li
+ne 12.
+
+
+Package natbib Warning: Citation `dobrzynski2017' on page 40 undefined on input
+ line 12.
+
+
+Package natbib Warning: Citation `Xie2013' on page 40 undefined on input line 1
+2.
+
+
+Package natbib Warning: Citation `Persson2009' on page 40 undefined on input li
+ne 12.
+
+
+Package natbib Warning: Citation `MOXEY2016130' on page 40 undefined on input l
+ine 12.
+
+
+Package natbib Warning: Citation `FORTUNATO20161' on page 40 undefined on input
+ line 12.
+
+
+Package natbib Warning: Citation `Poya2016' on page 40 undefined on input line 
+12.
+
+
+Package natbib Warning: Citation `TURNER2016340' on page 40 undefined on input 
+line 12.
+
+
+Package natbib Warning: Citation `dobrev2019target' on page 40 undefined on inp
+ut line 12.
+
+
+Package natbib Warning: Citation `Knupp20002' on page 40 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `Knupp2000' on page 40 undefined on input line
+ 16.
+
+
+Package natbib Warning: Citation `Luke2018' on page 40 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `Gargallo2014' on page 40 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Poya2016' on page 40 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `Roca2012' on page 40 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `Cardoze2004' on page 40 undefined on input li
+ne 16.
+
+
+Package natbib Warning: Citation `dey1999curvilinear' on page 40 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `gargallo2013high' on page 40 undefined on inp
+ut line 16.
+
+
+Package natbib Warning: Citation `George2012' on page 40 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `Qiukai2013' on page 40 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `Luo2002pVersionMG' on page 40 undefined on in
+put line 16.
+
+
+Package natbib Warning: Citation `Peir2008' on page 40 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `SHEPHARD2005251' on page 40 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `dobrzynski2017' on page 40 undefined on input
+ line 16.
+
+
+Package natbib Warning: Citation `Gargallo2015' on page 40 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Geuzaine2015' on page 40 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Roca2012' on page 40 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `RUIZGIRONES2017362' on page 40 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `RUIZGIRONES201652' on page 40 undefined on in
+put line 16.
+
+
+Package natbib Warning: Citation `RUIZGIRONES2016315' on page 40 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `STEES2017180' on page 40 undefined on input l
+ine 16.
+
+
+Package natbib Warning: Citation `Steve2016' on page 40 undefined on input line
+ 16.
+
+
+Package natbib Warning: Citation `TOULORGE20138' on page 40 undefined on input 
+line 16.
+
+
+Package natbib Warning: Citation `TOULORGE2016361' on page 40 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `ZIEL201791' on page 40 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `dobrev2019target' on page 40 undefined on inp
+ut line 16.
+
+
+Package natbib Warning: Citation `turner2017high' on page 40 undefined on input
+ line 16.
+
+
+Package natbib Warning: Citation `luo2008tracking' on page 40 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `lu2014parallel' on page 40 undefined on input
+ line 16.
+
+
+Package natbib Warning: Citation `Persson2009' on page 40 undefined on input li
+ne 18.
+
+
+Package natbib Warning: Citation `RUIZGIRONES2017362' on page 40 undefined on i
+nput line 18.
+
+
+Package natbib Warning: Citation `feng2018curved' on page 40 undefined on input
+ line 21.
+
+[40]
+
+Package natbib Warning: Citation `moxeynekmesh' on page 41 undefined on input l
+ine 27.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 10.0pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 7.3pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 5.5pt on input line 27.
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 27.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 27.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 27.
+
+Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 41 undefined on i
+nput line 28.
+
+
+Package natbib Warning: Citation `pointwise' on page 41 undefined on input line
+ 30.
+
+
+Package natbib Warning: Citation `Steve2016' on page 41 undefined on input line
+ 30.
+
+
+Package natbib Warning: Citation `mezger2007finite' on page 41 undefined on inp
+ut line 34.
+
+
+Package natbib Warning: Citation `Suwelack2013' on page 41 undefined on input l
+ine 35.
+
+
+Package natbib Warning: Citation `Sorger:2014' on page 41 undefined on input li
+ne 40.
+
+
+Package natbib Warning: Citation `Peir2015OnCH' on page 41 undefined on input l
+ine 40.
+
+
+Package natbib Warning: Citation `Yufei:2012' on page 41 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `Gao:2019' on page 41 undefined on input line 
+40.
+
+
+Package natbib Warning: Citation `Guo2020Cut' on page 41 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `Palmer:2020' on page 41 undefined on input li
+ne 40.
+
+
+Package natbib Warning: Citation `Zhang:2020' on page 41 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `marschner2020hexahedral' on page 41 undefined
+ on input line 40.
+
+
+Package natbib Warning: Citation `yu2020hexgen' on page 41 undefined on input l
+ine 42.
+
+
+Package natbib Warning: Citation `coreform' on page 41 undefined on input line 
+42.
+
+
+Package natbib Warning: Citation `schneider2019large' on page 41 undefined on i
+nput line 44.
+
+[41]
+
+Package natbib Warning: Citation `chew1993guaranteed' on page 42 undefined on i
+nput line 52.
+
+
+Package natbib Warning: Citation `shewchuk1998tetrahedral' on page 42 undefined
+ on input line 52.
+
+
+Package natbib Warning: Citation `ruppert1995delaunay' on page 42 undefined on 
+input line 52.
+
+
+Package natbib Warning: Citation `tetgen' on page 42 undefined on input line 53
+.
+
+
+Package natbib Warning: Citation `jamin2015cgalmesh' on page 42 undefined on in
+put line 53.
+
+
+Package natbib Warning: Citation `cheng2000silver' on page 42 undefined on inpu
+t line 55.
+
+
+Package natbib Warning: Citation `du2003tetrahedral' on page 42 undefined on in
+put line 55.
+
+
+Package natbib Warning: Citation `alliez2005variational' on page 42 undefined o
+n input line 55.
+
+
+Package natbib Warning: Citation `tournois2009interleaving' on page 42 undefine
+d on input line 55.
+
+
+Package natbib Warning: Citation `Alexa:2019' on page 42 undefined on input lin
+e 55.
+
+
+Package natbib Warning: Citation `alexa2020conforming' on page 42 undefined on 
+input line 57.
+
+
+Package natbib Warning: Citation `murphy2001point' on page 42 undefined on inpu
+t line 61.
+
+
+Package natbib Warning: Citation `cohen2002conforming' on page 42 undefined on 
+input line 61.
+
+
+Package natbib Warning: Citation `chew1989constrained' on page 42 undefined on 
+input line 62.
+
+
+Package natbib Warning: Citation `si2005meshing' on page 42 undefined on input 
+line 62.
+
+
+Package natbib Warning: Citation `shewchuk2002constrained' on page 42 undefined
+ on input line 62.
+
+
+Package natbib Warning: Citation `SiS14' on page 42 undefined on input line 62.
+
+
+
+Package natbib Warning: Citation `cheng2008practical' on page 42 undefined on i
+nput line 62.
+
+
+Package natbib Warning: Citation `boissonnat2005provably' on page 42 undefined 
+on input line 62.
+
+
+Package natbib Warning: Citation `Engwirda16' on page 42 undefined on input lin
+e 62.
+
+
+Package natbib Warning: Citation `tetgen' on page 42 undefined on input line 64
+.
+
+
+LaTeX Warning: Reference `app:tetgen' on page 42 undefined on input line 64.
+
+
+Package natbib Warning: Citation `Hu:2020:fTetWild' on page 42 undefined on inp
+ut line 66.
+
+
+Package natbib Warning: Citation `Hu:2019:triwild' on page 42 undefined on inpu
+t line 66.
+
+
+Package natbib Warning: Citation `QUADSTAR2012' on page 42 undefined on input l
+ine 71.
+
+
+Package natbib Warning: Citation `hoppe1994piecewise' on page 42 undefined on i
+nput line 73.
+
+
+Package natbib Warning: Citation `krishnamurthy1996fitting' on page 42 undefine
+d on input line 76.
+
+
+Package natbib Warning: Citation `LIN2007adap' on page 42 undefined on input li
+ne 76.
+
+
+Package natbib Warning: Citation `Zhang2011multi' on page 42 undefined on input
+ line 76.
+
+[42]
+
+Package natbib Warning: Citation `zorin2000subdivision' on page 43 undefined on
+ input line 78.
+
+
+Package natbib Warning: Citation `Hahmann2003' on page 43 undefined on input li
+ne 80.
+
+
+Package natbib Warning: Citation `yvart2005smooth' on page 43 undefined on inpu
+t line 82.
+
+
+Package natbib Warning: Citation `Yvart2005hier' on page 43 undefined on input 
+line 82.
+
+
+Package natbib Warning: Citation `TONG2009' on page 43 undefined on input line 
+84.
+
+) (./curve_meshing_in_shell_tex/03_method.tex
+
+Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+nput line 3.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+nput line 3.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 43 undefined on i
+nput line 10.
+
+[43]
+
+Package natbib Warning: Citation `jiang2020bijective' on page 44 undefined on i
+nput line 19.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 44 undefined on i
+nput line 27.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 44 undefined on i
+nput line 30.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 44 undefined on i
+nput line 34.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 44 undefined on i
+nput line 34.
+
+<curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=671, 462.90
+341pt x 166.4629pt>
+
+Overfull \hbox (3.04782pt too wide) in paragraph at lines 51--53
+[] [] \T1/LinuxLibertineT-TLF/m/sc/12 (-20) In-put.[] \T1/LinuxLibertineT-TLF/m
+/n/12 (-20) The in-put of our al-go-rithm is a col-lec-tion of ori-ented man-i-
+fold, wa-ter-tight, self-intersection-|
+ []
+
+<curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=672, 520.6993
+6pt x 98.58421pt>
+[44]
+
+LaTeX Warning: Reference `sec:bij-proof' on page 45 undefined on input line 77.
+
+
+<curve_meshing_in_shell_tex/figs/bunny/0001.png, id=677, 1110.1475pt x 1417.295
+pt>
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.95pt on input line 82.
+<curve_meshing_in_shell_tex/figs/bunny/0004.png, id=679, 1110.1475pt x 1417.295
+pt>
+<curve_meshing_in_shell_tex/figs/bunny/0003.png, id=680, 1110.1475pt x 1417.295
+pt>
+<curve_meshing_in_shell_tex/figs/bunny/0002.png, id=681, 1110.1475pt x 1417.295
+pt>
+
+Package natbib Warning: Citation `bowers2010parallel' on page 45 undefined on i
+nput line 96.
+
+[45]
+
+Package natbib Warning: Citation `jiang2020bijective' on page 46 undefined on i
+nput line 105.
+
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/intersection-f
+ree.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
+owed
+<curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=685, 630.93015pt x 4
+00.62373pt>
+
+LaTeX Warning: Reference `app:local-ops' on page 46 undefined on input line 135
+.
+
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
+pipeline.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
+> allowed
+<curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=686, 405.29016p
+t x 137.00084pt>
+
+Package natbib Warning: Citation `jiang2020bijective' on page 46 undefined on i
+nput line 147.
+
+[46] [47]
+
+Package natbib Warning: Citation `jiang2020bijective' on page 48 undefined on i
+nput line 170.
+
+[48]
+<curve_meshing_in_shell_tex/figs/fish/fish002.png, id=696, 1664.2175pt x 1084.0
+5pt>
+<curve_meshing_in_shell_tex/figs/fish/0003.png, id=697, 1664.2175pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/fish/0001.png, id=698, 1664.2175pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/fish/0004.png, id=699, 1664.2175pt x 1084.05pt
+>
+ [49]
+<curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=703,
+ 322.10138pt x 83.1905pt>
+
+
+Package natbib Warning: Citation `tetgen' on page 50 undefined on input line 24
+3.
+
+
+LaTeX Warning: Reference `app:tetgen' on page 50 undefined on input line 243.
+
+[50] [51]) (./curve_meshing_in_shell_tex/03.1_features.tex
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
+input-output-feature.pdf): PDF inclusion: found PDF version <1.6>, but at most 
+version <1.5> allowed
+<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=711
+, 249.71594pt x 91.11229pt>
+<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=712, 1084.05pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=713, 1084.05pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=714, 1084.05pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=715, 1084.05pt x 1084.05pt
+>
+<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=716, 253.8
+6043pt x 85.87082pt>
+
+Package natbib Warning: Citation `jiang2020bijective' on page 52 undefined on i
+nput line 38.
+
+<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=717, 237.78537pt
+ x 74.09421pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=718, 803.0pt x 803.0pt>
+
+<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=719, 803.0pt x 803.0pt>
+
+<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=720, 803.0pt x 803.0pt>
+
+[52] [53]
+<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=728, 219.98888pt
+ x 70.59705pt>
+ [54]
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
+loc-op.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
+allowed
+<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=732, 326.8461pt x
+ 55.73764pt>
+) (./curve_meshing_in_shell_tex/04_result.tex
+
+Package natbib Warning: Citation `schlomer2020nschloe' on page 55 undefined on 
+input line 4.
+
+[55]
+<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=736, 1027.84pt x 2069.732
+5pt>
+<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=737, 1027.84pt x 2069.732
+5pt>
+<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=738, 1027.84pt x 2069.732
+5pt>
+<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=739, 1027.84pt x 2069.732
+5pt>
+
+
+Package natbib Warning: Citation `Gao:2019' on page 56 undefined on input line 
+28.
+
+
+Package natbib Warning: Citation `jiang2020bijective' on page 56 undefined on i
+nput line 31.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 45.
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
+th_Thingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
+<1.5> allowed
+<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=740, 602.25
+pt x 602.25pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
+th_ABC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
+allowed
+<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=741, 602.25pt x 6
+02.25pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
+th_PolyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
+1.5> allowed
+<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=742, 602.25p
+t x 602.25pt>
+<curve_meshing_in_shell_tex/figs/octa/0003.png, id=743, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0002.png, id=744, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0001.png, id=745, 931.48pt x 939.51pt>
+[56]
+
+Package natbib Warning: Citation `Hu:2020:fTetWild' on page 57 undefined on inp
+ut line 73.
+
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_T
+hingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
+> allowed
+<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=750, 602.25pt x
+ 602.25pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_A
+BC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allo
+wed
+<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=751, 602.25pt x 602.2
+5pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_P
+oLyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
+ allowed
+<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=752, 602.25pt x 
+602.25pt>
+[57]
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Thi
+ngi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
+allowed
+<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=756, 602.25pt x 6
+02.25pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_ABC
+.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
+d
+<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=757, 602.25pt x 602.25p
+t>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Pol
+yCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> a
+llowed
+<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=758, 602.25pt x 60
+2.25pt>
+
+Package natbib Warning: Citation `feng2018curved' on page 58 undefined on input
+ line 122.
+
+
+Package natbib Warning: Citation `feng2018curved' on page 58 undefined on input
+ line 122.
+
+
+Package natbib Warning: Citation `feng2018curved' on page 58 undefined on input
+ line 122.
+
+<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=759, 873.2625pt x 1049.9225
+pt>
+<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=760, 873.2625pt x 1049.9225
+pt>
+<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=761, 873.2625pt x 1049.9225
+pt>
+<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=762, 873.2625pt x 1049.9225
+pt>
+[58]
+
+Package natbib Warning: Citation `alliez2005variational' on page 59 undefined o
+n input line 138.
+
+
+Package natbib Warning: Citation `feng2018curved' on page 59 undefined on input
+ line 138.
+
+<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=766, 1027.84pt x 622.325p
+t>
+<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=767, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=768, 1027.84pt x 622.325pt>
+
+<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=769, 1180.41pt x 1184.4
+25pt>
+<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=770, 1180.41pt x 1184.4
+25pt>
+<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=771, 1180.41pt x 1184.4
+25pt>
+
+Package natbib Warning: Citation `Geuzaine:2009:gmsh' on page 59 undefined on i
+nput line 168.
+
+
+Package natbib Warning: Citation `remacle2013robust' on page 59 undefined on in
+put line 168.
+
+[59]
+<curve_meshing_in_shell_tex/figs/micro/color.png, id=775, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/spot.png, id=776, 803.0pt x 803.0pt>
+
+
+Package natbib Warning: Citation `tozoni2020low' on page 60 undefined on input 
+line 183.
+
+
+Package natbib Warning: Citation `crane2013conformal' on page 60 undefined on i
+nput line 183.
+
+
+Package natbib Warning: Citation `tozoni2020low' on page 60 undefined on input 
+line 183.
+
+
+Package natbib Warning: Citation `crane2013conformal' on page 60 undefined on i
+nput line 183.
+
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.2pt on input line 203.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 6.2pt on input line 203.
+
+Overfull \hbox (1.96512pt too wide) in paragraph at lines 203--203
+ [][] |
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Th
+ingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
+ allowed
+<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=777, 602.25pt x 
+602.25pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_AB
+C.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
+ed
+<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=778, 602.25pt x 602.25
+pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Po
+lyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
+allowed
+<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=779, 602.25pt x 6
+02.25pt>
+
+Package natbib Warning: Citation `SALARI:2000:CVB' on page 60 undefined on inpu
+t line 218.
+
+[60] [61]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.2pt on input line 226.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 226.
+<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=786, 1270.7475pt x 1015.795
+pt>
+<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=787, 1270.7475pt x 1015.795
+pt>
+
+
+Package natbib Warning: Citation `mezger2007finite' on page 62 undefined on inp
+ut line 255.
+
+
+Package natbib Warning: Citation `Suwelack2013' on page 62 undefined on input l
+ine 255.
+
+) (./curve_meshing_in_shell_tex/05_conclude.tex [62]
+
+Package natbib Warning: Citation `lyche2015simplex' on page 63 undefined on inp
+ut line 7.
+
+
+Package natbib Warning: Citation `Xia:2017:IGA' on page 63 undefined on input l
+ine 7.
+
+) [63]
+Chapter 5.
+[64
+
+]
+Chapter 6.
+[65
+
+]
+Appendix A.
+[66
+
+] [67] (docs/thesis.bbl [68
+
+
+] [69] [70] [71] [72] [73] [74])
+
+Package natbib Warning: There were undefined citations.
+
+[75] (docs/thesis.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 36532 strings out of 478305
+ 698256 string characters out of 5847251
+ 993010 words of memory out of 5000000
+ 53059 multiletter control sequences out of 15000+600000
+ 756829 words of font info for 747 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 89i,17n,83p,1208b,693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
+pt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{/opt/te
+xlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/opt/texlive/t
+exdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/opt/texlive/texdir
+/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/opt/texlive/texdir/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/opt/texlive/texdir/texmf-dis
+t/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/opt/texlive/texdir/texmf-dist/fon
+ts/enc/dvips/libertine/lbtn_76gpa5.enc}{/opt/texlive/texdir/texmf-dist/fonts/en
+c/dvips/libertine/lbtn_ncsllp.enc}</opt/texlive/texdir/texmf-dist/fonts/type1/p
+ublic/inconsolata/Inconsolata-zi4r.pfb></opt/texlive/texdir/texmf-dist/fonts/ty
+pe1/public/newtx/LibertineMathBMI.pfb></opt/texlive/texdir/texmf-dist/fonts/typ
+e1/public/newtx/LibertineMathMI.pfb></opt/texlive/texdir/texmf-dist/fonts/type1
+/public/newtx/LibertineMathMI5.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/
+public/newtx/LibertineMathMI7.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/p
+ublic/newtx/LibertineMathRM.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pub
+lic/libertine/LinBiolinumT.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publ
+ic/libertine/LinBiolinumTB.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publ
+ic/libertine/LinBiolinumTI.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publ
+ic/libertine/LinLibertineT.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publ
+ic/libertine/LinLibertineTB.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pub
+lic/libertine/LinLibertineTI.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/pu
+blic/libertine/LinLibertineTZ.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/p
+ublic/newtx/NewTXMI.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newt
+x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
+></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
+live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
+r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on docs/thesis.pdf (86 pages, 62442788 bytes).
+PDF statistics:
+ 932 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 153561 words of extra memory for PDF output out of 154059 (max. 10000000)
+

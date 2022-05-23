@@ -1,0 +1,116 @@
+\contentsline {chapter}{Acknowledgments}{iii}{chapter*.1}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.2}%
+\contentsline {chapter}{List of Figures}{vii}{section*.4}%
+\contentsline {chapter}{List of Tables}{xi}{section*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Preliminaries}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Bijective Projection in the Shell}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Related Works}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Attribute Transfer}{7}{subsection.3.2.1}%
+\contentsline {paragraph}{Projection}{7}{subsection.3.2.1}%
+\contentsline {paragraph}{Common Domains}{7}{subsection.3.2.1}%
+\contentsline {paragraph}{Attribute Tracking}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Shell Generation}{8}{subsection.3.2.2}%
+\contentsline {paragraph}{Envelopes}{8}{subsection.3.2.2}%
+\contentsline {paragraph}{Shell Maps}{9}{subsection.3.2.2}%
+\contentsline {paragraph}{Boundary Layer}{9}{subsection.3.2.2}%
+\contentsline {paragraph}{Collision and Animation}{9}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Robust Geometry Processing}{9}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Isotopy between surfaces}{10}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Method}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Shell and Projection}{11}{subsection.3.3.1}%
+\contentsline {paragraph}{Decomposition in Tetrahedra}{11}{figure.caption.11}%
+\contentsline {paragraph}{Forward and Inverse Projection}{12}{figure.caption.11}%
+\contentsline {subsection}{\numberline {3.3.2}Validity Condition}{14}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Shell Initialization}{15}{subsection.3.3.3}%
+\contentsline {paragraph}{Extrusion Direction.}{15}{subsection.3.3.3}%
+\contentsline {paragraph}{Initial Thickness}{16}{theorem.3.4}%
+\contentsline {paragraph}{Validity of the Initial Shell}{16}{theorem.3.5}%
+\contentsline {paragraph}{Topological Beveling.}{17}{figure.caption.15}%
+\contentsline {paragraph}{Output}{17}{theorem.3.6}%
+\contentsline {subsection}{\numberline {3.3.4}Shell Optimization}{18}{subsection.3.3.4}%
+\contentsline {paragraph}{Shell Quality}{19}{figure.caption.18}%
+\contentsline {paragraph}{Shell Connectivity Modifications.}{20}{figure.caption.18}%
+\contentsline {paragraph}{Vertex Smoothing.}{20}{figure.caption.18}%
+\contentsline {paragraph}{Invariant Check}{20}{figure.caption.18}%
+\contentsline {paragraph}{Projection Distortion}{20}{figure.caption.18}%
+\contentsline {paragraph}{Scheduling and Termination}{21}{figure.caption.18}%
+\contentsline {subsection}{\numberline {3.3.5}Singularities}{21}{subsection.3.3.5}%
+\contentsline {paragraph}{Pinching.}{22}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Boundaries.}{23}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Results}{23}{section.3.4}%
+\contentsline {paragraph}{Robustness}{24}{section.3.4}%
+\contentsline {paragraph}{Comparison to Simple Baselines}{26}{figure.caption.27}%
+\contentsline {paragraph}{Numerical accuracy}{28}{figure.caption.27}%
+\contentsline {section}{\numberline {3.5}Applications}{28}{section.3.5}%
+\contentsline {paragraph}{Remeshing}{29}{figure.caption.29}%
+\contentsline {paragraph}{Proxy}{29}{figure.caption.31}%
+\contentsline {paragraph}{Boolean Operations}{30}{figure.caption.32}%
+\contentsline {paragraph}{Displacement Mapping}{31}{figure.caption.33}%
+\contentsline {paragraph}{Geometric Textures.}{31}{figure.caption.34}%
+\contentsline {section}{\numberline {3.6}Variants}{31}{section.3.6}%
+\contentsline {paragraph}{Input with Self-Intersections}{31}{section.3.6}%
+\contentsline {paragraph}{Resolving Shell Self-Intersections}{34}{figure.caption.36}%
+\contentsline {paragraph}{Pinching Alternative.}{36}{figure.caption.38}%
+\contentsline {section}{\numberline {3.7}Limitations}{36}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Concluding Remarks}{37}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Bijective and Coarse High-Order Tetrahedral Meshes}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Related Works}{39}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Curved Tetrahedral Mesh Generation}{40}{subsection.4.2.1}%
+\contentsline {paragraph}{Direct methods.}{40}{subsection.4.2.1}%
+\contentsline {paragraph}{Deformation methods}{40}{subsection.4.2.1}%
+\contentsline {paragraph}{Inversions and Intersections.}{40}{subsection.4.2.1}%
+\contentsline {paragraph}{Curved Optimal Delaunay Triangulation}{40}{subsection.4.2.1}%
+\contentsline {paragraph}{Software Implementation.}{41}{subsection.4.2.1}%
+\contentsline {paragraph}{Animation}{41}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Curved Structured Mesh Generation}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Boundary Preserving Tetrahedral Meshing}{42}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Curved Surface Fitting}{42}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Shell Preliminaries}{43}{section.4.3}%
+\contentsline {paragraph}{Shell.}{43}{section.4.3}%
+\contentsline {paragraph}{Projection Operator.}{43}{section.4.3}%
+\contentsline {paragraph}{Section.}{44}{section.4.3}%
+\contentsline {paragraph}{Shell Validity.}{44}{section.4.3}%
+\contentsline {paragraph}{Singularity.}{44}{Item.14}%
+\contentsline {subsection}{\numberline {4.3.1}Variation from the Original Algorithm}{44}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Curved Tetrahedral Mesh Generation}{44}{section.4.4}%
+\contentsline {paragraph}{Input.}{44}{section.4.4}%
+\contentsline {paragraph}{Output.}{45}{figure.caption.41}%
+\contentsline {paragraph}{Overview.}{46}{Item.17}%
+\contentsline {paragraph}{Stage 1: Curved Shell Construction.}{48}{figure.caption.44}%
+\contentsline {paragraph}{Stage 2: Tetrahedral Mesh Generation.}{48}{figure.caption.44}%
+\contentsline {subsection}{\numberline {4.4.1}High-order Shells}{48}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Distance Bound}{49}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Tetrahedral Meshing}{50}{subsection.4.4.3}%
+\contentsline {paragraph}{Step 1.}{50}{figure.caption.46}%
+\contentsline {paragraph}{Step 2.}{50}{figure.caption.46}%
+\contentsline {paragraph}{Step 3.}{51}{figure.caption.46}%
+\contentsline {paragraph}{Step 4.}{51}{figure.caption.46}%
+\contentsline {paragraph}{Step 5.}{51}{figure.caption.46}%
+\contentsline {paragraph}{Curved Tetrahedral Mesh Optimization}{51}{figure.caption.46}%
+\contentsline {paragraph}{Smoothing.}{51}{figure.caption.46}%
+\contentsline {paragraph}{Collapse and Swap}{52}{figure.caption.46}%
+\contentsline {section}{\numberline {4.5}Feature Preserving Curved Shell}{52}{section.4.5}%
+\contentsline {paragraph}{Input}{52}{figure.caption.47}%
+\contentsline {paragraph}{Output}{52}{figure.caption.47}%
+\contentsline {paragraph}{Feature Grouping.}{55}{figure.caption.52}%
+\contentsline {subsection}{\numberline {4.5.1}Feature straightening.}{55}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Results}{56}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Large Scale Validation.}{56}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Comparisons}{58}{subsection.4.6.2}%
+\contentsline {paragraph}{Curved ODT}{58}{subsection.4.6.2}%
+\contentsline {paragraph}{Gmsh}{59}{figure.caption.61}%
+\contentsline {subsection}{\numberline {4.6.3}Flexibility}{60}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Applications}{60}{subsection.4.6.4}%
+\contentsline {paragraph}{Large Scale Poisson}{60}{figure.caption.63}%
+\contentsline {paragraph}{High Accuracy Fluids}{62}{figure.caption.64}%
+\contentsline {paragraph}{Fast Animation}{62}{figure.caption.64}%
+\contentsline {section}{\numberline {4.7}Limitations and Concluding Remarks}{63}{section.4.7}%
+\contentsline {paragraph}{Limitations.}{63}{section.4.7}%
+\contentsline {paragraph}{Future Work.}{63}{section.4.7}%
+\contentsline {paragraph}{Conclusions.}{63}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Declarative Specification for Unstructured Mesh Editing Algorithms }{64}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{66}{appendix.A}%
