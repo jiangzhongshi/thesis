@@ -1,0 +1,54 @@
+\section{The geometric map is bijective}\label{sec:bij-proof}
+
+Consider a connected 3-dimensional compact manifold {(curved)} tetrahedral mesh $\M = \{\sigma_i \}, i=1,\dots,n$ with
+$\sigma_i = g_i(\hat \tau)$, $\hat \tau$ a regular unit tetrahedron, $\det(J_{g_i}) > 0$ at all points including the boundary, and $\sigma_i$ and $\sigma_j$ agree on a shared face. 
+%
+Let $\M_D$ be the domain obtained by copies of  $\hat \tau$ and identifying $\hat \tau_i$ along common faces. We then define the map 
+\[
+\sigma\colon M_D \to \mathbb{R}^3,
+\]
+by setting $\sigma|_{\hat \tau_i} = \sigma_i$.
+
+\begin{proposition}
+Suppose $\sigma|_{\partial\M_D}$ is injective. Then $\sigma$ is injective on the whole domain $\M_D$. 
+%Let $g^T$ the per tetrahedra geometric map as defined in~\eqref{eq:gmap}. If $\det(J_{g^T }) > 0$ and the boundary of $\T$ does not intersect, then the union of the geometric maps $g$ is bijective.
+\end{proposition}
+\begin{proof}
+Our argument closely follow from \cite[Appendix B]{aigerman2013injective} and
+\cite[Theorem 1]{lipman2014bijective}.
+
+We consider point $y \in \mathbb{R}^3$ in general position, but not in the faces, edges, vertices, 
+or any plane spanned by a linear face of $\M$.
+For each tetrahedron $\tau$, 
+we construct the map $\hat{\Psi}$ as a composition of $\sigma|_{\partial\hat \tau_i}$ (restricted to the triangular faces of the regular tetrahedron) and the projection map $\chi$ to the unit sphere centered around $y$.
+
+We parametrize the image of $\sigma|_{\partial\hat \tau_i}$ as $x(u,v)$ {on the projective plane}
+(note that since $\det J_{g_i} > 0$, 
+the image is a non-degenerate surface homeomorphic to a sphere). 
+{Since $x(u,v)$, and its normal field $n(u,v) = \frac{\partial}{\partial u}x \times \frac{\partial}{\partial v}x$ are polynomial functions,}
+Consider the parametric curve $n(u,v)\cdot (x(u,v) - y)  = 0$, the algebraic curve partitions the surface into finite number of patches, and on each patch the orientation of  $\hat{\Psi}$ is constant. 
+We can further triangulate the partitions to create a {(abstract simplicial)} complex.
+
+Similar to \cite[Appendix B]{aigerman2013injective}, we count the number of pre-images of $y$, {which equals to the degree in general positions,}
+
+\[
+\text{deg}(\sigma)(y) = 
+\sum_{i=1}^n \text{deg}(\hat\Psi|_{\tau_i}) = 
+\text{deg}(\hat\Psi|_{\partial \M}).
+\]
+
+Since $\sigma|_{\partial \M_D}$ is injective, and furthermore
+\[
+% \text{deg}(\sigma) (y) =
+\text{deg}(\hat\Psi|_{\partial \M}) = 
+\text{deg} \chi |_{\partial \M} = \begin{cases}
+1,\quad& y\in\M\\
+0,\quad& y\notin \M.
+\end{cases}
+\]
+
+Thus we have shown the map is injective for the general positions {for $y$}, 
+and it remains to be shown that the map is an open map, 
+which follows from the same argument of {\cite[Lemma 2]{lipman2014bijective}}.
+
+\end{proof}

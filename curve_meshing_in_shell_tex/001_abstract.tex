@@ -1,0 +1,7 @@
+We introduce a robust and automatic algorithm to convert dense piece-wise linear triangle meshes with feature annotated into coarse tetrahedral meshes with curved elements. 
+Our construction guarantees that the high-order meshes are free of element inversion or self-intersection. 
+The user can specify a maximal geometrical error from the input mesh, which  controls the density of the curved approximation. The boundary of the output mesh is in bijective correspondence to the input, enabling to transfer attributes between them, such as boundary conditions for simulations, making it an ideal replacement or complement for the original input geometry. 
+
+Our construction exploits the availability of a bijective shell around the input surface to ensure robust curving, absence of self-intersections, and compute a bijective map between the linear input and curved output surface. As necessary building blocks of our algorithm, we propose an extension of the bijective shell construction to features and a novel approach for boundary-preserving linear tetrahedral meshing.
+
+We demonstrate the robustness and effectiveness of our algorithm generating high-order meshes for a large collection of complex 3D models.

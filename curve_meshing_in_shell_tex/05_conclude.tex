@@ -1,0 +1,18 @@
+\section{Limitations and Concluding Remarks}\label{sec:conclusion}
+
+We introduce an automatic algorithm to convert dense triangle meshes in coarse, curved tetrahedral meshes whose boundary is within a user-controlled distance from the input mesh. Our algorithm supports feature preservation, and generates meshes with positive Jacobians and high quality, which are directly usable for FEM simulations. 
+
+\paragraph{Limitations.} Our algorithm generates meshes with a $C^0$ geometric map. For most FEM applications, this is not an issue. However, for geometric modeling applications, where only the mesh boundary is used, the $C^0$ geometric map introduces normal discontinuities, which are undesirable.
+% We show an example of a CAD model automatically converted into a surface curved mesh (which can be edited in existing CAD software) in Figure \ref{bichon:fig:tri2cad}.
+While the surface looks smooth from  far away, plotting the reflection lines shows the discontinuity between the normals. We believe an exciting extension of our work would be to study the feasibility of using geometric maps that are $C^1$ \cite{lyche2015simplex} or $C^2$ \cite{Xia:2017:IGA}. A second limitation is that, in our implementation, the validity conditions (Definition \ref{def:curved-mesh}) are currently checked using floating point arithmetic, using numerical tolerances to account for rounding errors. While our implementation works on a large collection of models, it is possible that it will fail on others due to the inexact validity predicates. We are not aware of exact predicates for these conditions, and we believe that developing them is an interesting, and challenging, venue for future work.
+
+\paragraph{Future Work.} Our current high order mesh optimization pipeline is preliminary, as it only supports vertex smoothing, collapse, and swap. Adding additional operators, allow them to exploit the curved geometric map, and optimizing the boundary could lead to a further increase in mesh quality. While simple at a high-level, this change will require to merge the two parts of our algorithm, a major implementation effort.
+
+\paragraph{Conclusions.} We believe that our work will foster adoption of curved meshes, and open the door to a new family of geometry processing algorithms able to take advantage of this highly compact, yet accurate, shape representation.
+
+%targets the generation of 
+%Reverse Engineering to reconstruct CAD surface.
+%Extend to $G^1$ with a different set of fitting basis.
+% \DP{Not sure what you want to say} \ZJ{In Hoppe paper, among the local operations, they have a tagging operation, (tag as sharp if it improves fitting quality), used for their feature detection result.}use fitting to detect feature as in \cite{hoppe1994piecewise}.
+
+% Explore the large scale study and effectiveness. 
