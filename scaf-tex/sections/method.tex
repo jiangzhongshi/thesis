@@ -18,13 +18,13 @@ We are interested in the bijective map that minimizes a given type of geometric 
 \end{align}
 where $E_{\Mesh}$ is a user-defined geometric energy.
 
-\paragraph{Reduction to Local Orientation Preservation.}  A sufficient %\revise{and necessary} 
+\paragraph{Reduction to Local Orientation Preservation.}  A sufficient %\revision{and necessary} 
 condition for the simplicial map 
 $\Phi: M\rightarrow \Omega $ to be bijective is that the map preserves orientation and its restriction to the boundary $\Phi|_{\partial M} : \partial M \rightarrow \partial \Omega$ is bijective~\cite{Lipman:2013ArXiv}. In this light, we are able to take advantage of the following simple construction (Figure \ref{scaf:fig:construction}): the algorithm extends the axis aligned bounding box of $M$ to get a $d$-orthotope and fills the enclosed region with a scaffold simplicial complex to form a simplicial complex mesh $D$ that includes and conforms to $M \subset D$. We can now define the continuous and piecewise affine map $\Psi : D \rightarrow D'$ with $\Phi = \Psi |_{M}$ where $\Psi|_{\partial D}$ is the identity map, and denote the scaffold region as $S = D\setminus M$. Now $\Phi$ is guaranteed to be bijective if $\Psi$ preserves orientation. Using this observation, we can translate the bijectivity into a local, orientation-preserving requirement defined per simplex.
 
 \begin{figure}[h!]
 \centering
-    \includegraphics[width = \columnwidth]{figs/scaffold_illustration}
+    \includegraphics[width = \columnwidth]{scaf-tex/figs/scaffold_illustration}
 \caption{The initial mesh $\Mesh$ (in green, left), is embedded in another mesh $D$ (in gray, middle) that covers a box in the ambient space and contains the same triangles as $\Mesh$. $D$ might contain additional points (orange). We denote the triangles that are in $D$ but not in $\Mesh$ as the scaffold $S$. Our algorithm deforms $D$, inducing a corresponding deformation on $\Mesh$ (right), while keeping the boundary (blue vertices) fixed and preventing changes in the triangle orientation.}
 \label{scaf:fig:construction}
 \end{figure}
@@ -50,7 +50,7 @@ The $-2d$ term ensures that the energy is 0 when $J_f = \mathbb{I}$. The map is 
 \begin{align}
 \begin{split}\label{eq:variational}
 \min_{D} & \quad E_{\Mesh}(\Psi|_{\Mesh}) + \lambda E_{S} (\Psi|_{S}) \\
-    \text{s.t.} & \quad \Psi|_{\partial D} \revise{\text{ is Identity}} \\ 
+    \text{s.t.} & \quad \Psi|_{\partial D} \revision{\text{ is Identity}} \\ 
     & \quad \Psi \text{ preserves orientation}.
 \end{split}
 \end{align}
@@ -66,13 +66,13 @@ We experimentally observed that our algorithm is robust to different choices of 
 
 \begin{figure}[h!]
 \centering
-    \includegraphics[width = \columnwidth]{figs/hand_weight}
+    \includegraphics[width = \columnwidth]{scaf-tex/figs/hand_weight}
 \caption{Different values of $\lambda$ do not affect the result, but they change the number of iterations needed. From left to right: we used a large weight (100x ours), our weight, and a small weight (0.01x ours). The optimization took 9,7, and 8 iterations, respectively, to reach the same energy level.}
 \label{scaf:fig:different_weight}
 \end{figure}
 
 \paragraph{Solver.}
-Since our energy is rotational invariant, we can minimize the energy with the same quadratic proxy proposed in SLIM \cite{Rabinovich:2017}, enriching the approach with the equality constraint needed to fix the boundary $\partial D$. We also employ the orientation-preserving line search \cite{Smith:2015} (with exact predicates \cite{Shewchuk:1996}) to ensure that no triangles can change orientation. Alternatively, other methods such as AQP \cite{Kovalsky:2016} could be used to minimize this energy. Since our approach changes the mesh connectivity at every iteration, AQP loses much of its advantages as the approximate \revise{H}essian must be recomputed at each iteration and not prefactored.  Therefore, our approach is an ideal fit for \cite{Rabinovich:2017}, which takes large steps at every iteration without relying on a constant, prefactored matrix at each iteration. For practical applications, SLIM iterations are sufficient to minimize the energy to acceptable levels. For two  stress tests (figures \ref{scaf:fig:recovering} and \ref{scaf:fig:smith}) we used the result of SLIM as a warm start for a Newton optimization (as suggested by \cite{Rabinovich:2017}), which quickly converges to a numerical minimum.
+Since our energy is rotational invariant, we can minimize the energy with the same quadratic proxy proposed in SLIM \cite{Rabinovich:2017}, enriching the approach with the equality constraint needed to fix the boundary $\partial D$. We also employ the orientation-preserving line search \cite{Smith:2015} (with exact predicates \cite{Shewchuk:1996}) to ensure that no triangles can change orientation. Alternatively, other methods such as AQP \cite{Kovalsky:2016} could be used to minimize this energy. Since our approach changes the mesh connectivity at every iteration, AQP loses much of its advantages as the approximate \revision{H}essian must be recomputed at each iteration and not prefactored.  Therefore, our approach is an ideal fit for \cite{Rabinovich:2017}, which takes large steps at every iteration without relying on a constant, prefactored matrix at each iteration. For practical applications, SLIM iterations are sufficient to minimize the energy to acceptable levels. For two  stress tests (figures \ref{scaf:fig:recovering} and \ref{scaf:fig:smith}) we used the result of SLIM as a warm start for a Newton optimization (as suggested by \cite{Rabinovich:2017}), which quickly converges to a numerical minimum.
 
 \subsection{Surface Parametrization}
 Our framework can be used for many applications, one of which is computing a bijective surface parametrization from a 3D surface into the UV  plane. We follow \cite{Liu:2008} and assume that each 3D triangle $f^{3D}$ is equipped with a rigid transformation $R_f$ such that applying $R_f$ to $f^{3D}$ maps $f^{3D}$ to the plane. Given this transformed triangle $f$, we can now measure the distortion of the map using the Jacobian of the affine transformation (a $2\times2$ matrix) from $R_f(f^{3D})$ to $f$, the location of the triangle in the parametrization.
@@ -91,22 +91,22 @@ We resort to Triangle \cite{Shewchuk:1996} to create the initial scaffold and to
 We demonstrate the effectiveness of the remeshing strategy in Figure \ref{scaf:fig:recovering} where our method recovers from a large rotation --- note that the scaffold is updated during the iterations and always leaves space for the map to move freely.
 
 \begin{figure}[h]
-\includegraphics[width=\columnwidth]{figs/coil-remeshing}
+\includegraphics[width=\columnwidth]{scaf-tex/figs/coil-remeshing}
 \caption{
 \label{scaf:fig:recovering}
 A bijective map from a circle (left) to a spiral (right) is computed without (top) and with (bottom) the iterative remeshing step. The slivers in the triangulation locks the optimization (top), preventing it from reaching the target shape.
 % Recovering from a large rotation (up is remeshing: init, 30SLIM, 30 Newton; down is w/o reeshing 30 SLIM, 270 Newton) 
 }
 \end{figure}
-\paragraph{Sliding \revise{\& Degeneracy Prevention}}
-As the optimization proceeds and some of the boundary elements get closer, some of the scaffold triangles might (and often will) get smaller and smaller, restricting the amount of sliding that is allowed in one iteration as well as introducing numerical difficulties in computing the corresponding Jacobian $J_f$ \revise{whose singular values will approach infinity.}
+\paragraph{Sliding \revision{\& Degeneracy Prevention}}
+As the optimization proceeds and some of the boundary elements get closer, some of the scaffold triangles might (and often will) get smaller and smaller, restricting the amount of sliding that is allowed in one iteration as well as introducing numerical difficulties in computing the corresponding Jacobian $J_f$ \revision{whose singular values will approach infinity.}
 % (Figure \ref{scaf:fig:slide}).  
 
-To avoid this issue, we replace the degenerating target \revise{when computing its} Jacobian. For the triangles with an area smaller th\revise{an $\epsilon$, we use an equilateral triangle with area $\epsilon$ to compute the local Jacobian.} \revise{In our experiment,} we traverse through the boundary of the interior of the uv domain at the current iteration to find the minimum edge length $l$ \revise{and set} $\epsilon = \frac{l^2}{4}$.
+To avoid this issue, we replace the degenerating target \revision{when computing its} Jacobian. For the triangles with an area smaller th\revision{an $\epsilon$, we use an equilateral triangle with area $\epsilon$ to compute the local Jacobian.} \revision{In our experiment,} we traverse through the boundary of the interior of the uv domain at the current iteration to find the minimum edge length $l$ \revision{and set} $\epsilon = \frac{l^2}{4}$.
 
-A theoretical downside of this modification \revise{is that} it affects the distortion energy. We experimentally observed that the changes are negligible, and we thus used it for all our experiments. \revise{However, on the practical side}, it discourages fully degenerate elements --- this change, coupled with the orientation preserving line search \cite{Smith:2015}, makes our algorithm robust \revise{enough for the challenging stress tests shown in} Figure \ref{scaf:fig:miq_database}.
+A theoretical downside of this modification \revision{is that} it affects the distortion energy. We experimentally observed that the changes are negligible, and we thus used it for all our experiments. \revision{However, on the practical side}, it discourages fully degenerate elements --- this change, coupled with the orientation preserving line search \cite{Smith:2015}, makes our algorithm robust \revision{enough for the challenging stress tests shown in} Figure \ref{scaf:fig:miq_database}.
 % \begin{figure}{h}
-% \includegraphics[width=8cm,height=4cm]{figs/hilbert_area_threshold}
+% \includegraphics[width=8cm,height=4cm]{scaf-tex/figs/hilbert_area_threshold}
 % \caption{
 % Sliding example, one gets stuck the other one does not. \DP{TODO}}
 % \label{scaf:fig:slide}
@@ -114,14 +114,14 @@ A theoretical downside of this modification \revise{is that} it affects the dist
 
 \subsection{Extension to 3D}
 
-\revise{Our formulation naturally unifies bijective geometric optimization problems in 2D and 3D, so the} algorithm readily extends to the 3D case with only one major difference: the scaffold becomes a tetrahedral mesh, which is computationally more challenging to create and update.
-\paragraph{\revise{Mesh Improvement}}
+\revision{Our formulation naturally unifies bijective geometric optimization problems in 2D and 3D, so the} algorithm readily extends to the 3D case with only one major difference: the scaffold becomes a tetrahedral mesh, which is computationally more challenging to create and update.
+\paragraph{\revision{Mesh Improvement}}
 We use TetGen \cite{Si:2015} to generate the initial scaffold and the local operations proposed in \cite{Klingner:2009} to optimize the scaffold's quality in the subsequent iterations. 
 %We describe our mesh improvement algorithm in details in Appendix \ref{appendix:improvement} \DP{TODO}.
 %
 It is unfortunately not possible to directly use TetGen at every iteration as we did with Triangle in the 2D case, since TetGen fails when boundaries get too close, which is common in our experiments.
 
-\revise{
+\revision{
 \paragraph{Guarantee} Similarly to the 2D case, we are guaranteed that no flipping or self-intersecting tetrahedra will occur since we are following an interior point strategy. Notice the contrast with Air Mesh \cite{Muller:2015} where only if penetration happens can the constraints be of effect. However, as pointed out in \cite{Dougherty2004}, the local operations we are performing may not be sufficient to explore the entire space of possible tetrahedralizations. %effective enough to explore the whole space of tessellation. 
 Therefore, we cannot guarantee that the algorithm achieves the globally optimal solution.
 }
