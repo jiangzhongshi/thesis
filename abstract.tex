@@ -1,8 +1,15 @@
-% Replace this with your abstract:
-\lipsum[3-4]
-
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "thesis"
 %%% End:
+
+The numerical solution of partial differential equations (PDEs) portrays how a craft would behave even before it is created. In practice, a typical product begins its lifecycle from a digital specification of the shape and material. Computer simulation would then test the behavior to match the intent: the car hood's deformation under pressure or a pan's temperature when heated. In this case, a robust and accurate simulation could lift many iterations of manufacturing to the digital platform. In addition, as it is safer to conduct more stress experiments in a virtual environment, a reliable simulation also promotes safety, especially in designing biomechanical equipment. 
+
+There are various approaches to specify a shape, depending on the different geometry characteristics. Shape modeling evolves beyond smooth and regular objects like sculpture or furniture. Algorithm deduced structures have gained popularity since they deliver the promise of maximal durability with limited material. Downstream, computer simulation requires a discrete tessellation of the object. A notable example is a mesh: it contains a list of vertices for the spatial locations and a list of simple polygons or polyhedra. However, it is rarely the case where one mesh fits all. More degrees of freedom give a more accurate description of the desired shape, but it inevitably means more computational resources are needed to handle the computation.
+
+Different representations between design methods and within various adaptations of simulations, even for the same shape, are not reliably correlated. In the general case, the material, attribute, or experiment setting cannot be robustly re-used on another representation without laborious manually fixing. Such a pipeline demands the engineer or designer to understand precisely the properties of the specific numerical methods of choice. It also prohibits an automatic and robust pipeline to compute optimal structure for the desired physical behavior.
+
+My Ph.D. research's central thesis is to develop algorithms that reliably associate different representations of discrete geometry entities at diverse design and simulation stages. Instead of re-assigning properties at various phases of the design-simulation pipeline, or whenever the required budget is different, a good association between geometry at different stages gives more freedom to the design and development of automatic and adaptive solvers. The adaptation can be bi-directional: on the one hand, with coarse and concise tessellation, the algorithm utilizes the information associated with the original design to obtain more faithful simulations. On the other hand, in early-stage prototyping, and automatic data generation for deep learning, the principles I established allows for simplifying the shape and retaining the settings, providing a fast answer. In addition, I use the same principle to design the first large-scale and robust approach for curved mesh representation, which provides accurate representation as well as efficient physical simulations.
+
+Besides the algorithm design, I also explore the underpinning theory to provide guarantees. Theoretical inquiry not only gives us a better understanding of digital geometry and shapes but also lays the foundation for suitable applications. On the other hand, we perform extensive numerical validations with the implemented software, involving tens of thousands of complex different geometry shapes. Finally, I also release the program implementation and detailed specifications to be open source and accessible.
