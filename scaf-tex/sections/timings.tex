@@ -1,0 +1,50 @@
+\begin{table}[t]
+	\centering
+	\begin{adjustbox}{width=\columnwidth,totalheight=\textheight,keepaspectratio}
+	\begin{tabular}{llrrrrrrr}
+%		\hline
+\textbf{\revise{Type}} &\textbf{Model} & $\mathbf{\#V}$	& $\mathbf{\#F}$ & $\mathbf{\#V_S}$	& $\mathbf{\#F_S}$ & \textbf{It.} & \textbf{\revise{Total Time (s)}} & \textbf{\revise{It. Time (s)}}\\
+\hline
+\multirow{2}{*}{Atlas}&Nefertiti (Fig.~\ref{scaf:fig:teaser})
+&1697	&2823	&983/	247&	1945	/728&	50&	0.71&0.01\\
+&Maneki-Neko (Fig.~\ref{scaf:fig:packing2D})
+&23025	&43648	&2427	/725&	7174/	3770&	50&	16.81&0.34\\
+\hline
+\multirow{12}{*}{2D}
+&Hand (Fig.~\ref{scaf:fig:different_weight})
+&2239&4046&347/280&1104/970&7&0.14&0.02\\
+&Spiral (Fig.~\ref{scaf:fig:recovering})
+&54&52&78/36&190/106&50(50)&0.04(0.21)&0.01\\
+&Thai Statue (Fig.~\ref{scaf:fig:miq_database}, left)
+&42405&79970    &   3665/1593&12148/8004&50&28.28&0.56\\
+&Filigree (Fig.~\ref{scaf:fig:miq_database}, right)
+&56062&100000&9160/2627&30422/17356&100&75.99&0.76\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	501105&	1000000&	1856/	3470&	5900/	5674&	100&	2524.22&25.24\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	1001375&	1999999&	2284/	4400&	7297/	7133&	100&	7251.00&72.51\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	2002031&	3999999&	3587/	6930&	11215/	10985&	100&	22500.07&225.00\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	3002899&	5999999&	5135/	9859&	16047/	15601&	100&	52235.31&522.35\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	4002816&	8000000&	5140/	10288&	15890/	15918&	100&	59413.14&594.13\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&	5003408&	10000000&	6194/	12231&	19182/	19040&	100&	95247.59&952.47\\
+&Lucy (Fig.~\ref{scaf:fig:scalability})&6004111&12000000 & 7357/6418 & 2291/21036 &50 & 78726.05 &1574.52\\
+&Animal (Fig.~\ref{scaf:fig:manuallycut})
+&19937&39040&747/593&2306/1998&50&15.36&0.31\\
+&Space Filling (Fig.~\ref{scaf:fig:smith})
+&79545&146832&90815/88237&181608/176452&200(250)&547.13(1836.58)&5.30\\
+&Horse (Fig.~\ref{scaf:fig:smith-all}) & 20636 & 39698 & 1343/984 & 4238/3520 & 30(10) & 8.26(12.03) & 0.28(1.20) \\
+&Camel (Fig.~\ref{scaf:fig:smith-all}) & 2032 & 3576 & 384/272 & 1234/1010 & 30(10) & 0.52(1.13) & 0.02(0.11) \\
+&Cow (Fig.~\ref{scaf:fig:smith-all}) & 3195 & 5804 & 491/277 & 1546/1118 & 30(10) & 0.81(1.74) & 0.03(0.17) \\
+&Tricera (Fig.~\ref{scaf:fig:smith-all}) & 3163 & 5660 & 544/329 & 1732/1302 & 30(10) & 0.83(1.77) & 0.03(0.18) \\
+\hline
+
+\multirow{2}{*}{3D}&Leg (Fig.~\ref{scaf:fig:flow})
+&6617&13230&5016/5021&68521/68544&500&3251.17&6.50\\
+&Bunny (Fig.~\ref{scaf:fig:rabbit})
+&568&1132&683/706&6209/6289&50&7.16&0.14\\
+
+\hline
+	\end{tabular}
+	\end{adjustbox}
+			\caption{Timings and statistics for the models shown in the paper. From left to right: number of input vertices and simplices, number of initial/final scaffold vertices and simplices, number of iterations, running time in seconds. The numbers in parenthesis refer to the Newton optimization. Note that our timings are considerably higher than those reported in the SLIM paper for the Lucy model since we used the reference implementation in \protect\cite{libigl}, which \revise{does not use} a multi-threaded solver.}
+	\label{tab:timings}
+	\vspace{-0.2cm}
+\end{table}

@@ -1,0 +1,116 @@
+\section{Results}
+We implemented our algorithm in C++ using Eigen for linear algebra routines. We \revise{ran} our experiments on a desktop with a 4-core Intel i7  processor clocked at 4 GHz and 32 GB of memory \revise{but using only one thread on a single core}. For all experiments, the scaffold bounding box is computed by uniformly scaling by three times the bounding box of the image of the current map. 
+
+\begin{figure}[t]
+\includegraphics[width=8cm]{figs/database_demo}
+\caption{Two models are cut using \cite{Bommes:2009} and bijectively parametrized using our algorithm. See the additional material for more examples.}
+\label{scaf:fig:miq_database}
+\vspace{-0.2cm}
+\end{figure}
+
+\paragraph{Robustness.} To demonstrate the robustness of our algorithm, we computed  bijective maps for all the 102 meshes parametrized by the MIQ algorithm \cite{Bommes:2009} \revise{and for the 17 meshes parametrized by  \cite{Myles:2014}} in the dataset proposed by \cite{Myles:2014}. The cuts in these meshes have been designed for locally injective parametrization that usually have major self-overlap. We use them as a stress test for the effectiveness and robustness of our method:  the cuts introduce a massive distortion in the Tutte initialization and lead to boundaries that are prone to overlap in hundreds of locations. Our method successfully creates bijective parametrizations for all these models with default parameters. We attach all the parametrized models in the additional material and show two examples in Figure \ref{scaf:fig:miq_database}. 
+
+
+% To demonstrate robustness in 3D, we deform \DP{XX} surfaces simultaneosly, by prescribing positional constraints that are  We simulate the deformation of a material made of hundreds of elastic layers. We run the simulation both on a 2D slice and on the full 3D model in Figure \ref{scaf:fig:stresstestlayers}. For this example, we compare the result obtained with the SLIM solver proposed in this paper and with the AQP algorithm \cite{}. \DP{TODO after we will know how it looks.}
+
+% \begin{figure}[h]
+% \includegraphics[width=8cm]{figs/placeholder.png}
+% \caption{Mille-feiulle, both in 2D and 3D \DP{TODO}}
+% \label{scaf:fig:stresstestlayers}
+% \end{figure}
+
+\paragraph{Scalability.} Our methods scales gracefully to large datasets, similarly to \cite{Rabinovich:2017}. We repeat their scalability experiment, but producing bijective maps instead of just locally injective maps (Figure \ref{scaf:fig:scalability}). The behaviour is remarkably similar --- the density of the model (and consequently of the scaffold) does not affect the number of required iterations. 
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/lucy-scalability}
+\caption{We compare the distortion energy with respect to the number of iterations on a set of Lucy's meshes with different resolutions (from 1 to 12 million faces). In the center of the plot, we show the 1M Lucy model parametrized by our algorithm.
+}
+\label{scaf:fig:scalability}
+\end{figure}
+
+\paragraph{Texture Atlas Generation} 
+
+UV mapping is a time consuming procedure required in most geometric modeling pipelines. Existing commercial tools provide the ability to flatten single patches and arrange them in UV layouts where multiple patches are tightly packed inside a rectangular domain, which is then loaded in the texture memory of a GPU. 
+
+Our algorithm can bijectively parameterize a single patch (Figure \ref{scaf:fig:manuallycut}), avoiding the typical manual UV postprocessing required with traditional tools.  Our algorithm can also be used to create automatic UV charts of models with multiple connected components (or predefined cut edges). We show an example in Figure \ref{scaf:fig:packing2D} where we detected the connected components, bijectively map the patches into a set of circles (using a grid layout), and reduce their distortion using our algorithm. The result is a tight and automatic packing without resorting to any user-interaction. Additional interactive tools can further improve the atlas by dragging\&dropping regions or translating islands while ensuring that no overlaps are introduced (Figure \ref{scaf:fig:teaser}). We show interactive sessions using our packing tool in the additional material.
+
+\begin{figure}[t]
+\includegraphics[width=8cm]{figs/the_animal}
+\caption{A mesh is cut by an artist into a single chart and parametrized using SLIM \protect\cite{Rabinovich:2017} (left) and with our algorithm (right). Note that local-injectivity is not sufficient for this model, since the global overlaps in the highlighted region prevent this parametrization from being a UV texture map. Our result (right) is guaranteed to be bijective.}
+\label{scaf:fig:manuallycut}
+\vspace{-0.2cm}
+\end{figure}
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/maneki_neko_colorful}
+\caption{A model with multiple chart (left) is automatically parametrized in a texture atlas (bottom-right) by first mapping each component to a circle (top-right) and then minimizing the distortion.}
+\label{scaf:fig:packing2D}
+\end{figure}
+
+\paragraph{Preventing Self-Intersections}
+Our algorithm can be generalized to handle mixed dimension problems, such as the deformation of 2D surface in 3D space, while preventing self-intersections. In Figure \ref{scaf:fig:flow}, we demonstrate the use of our method to resolve self-intersections of surfaces. First we perform a conformalized flow \cite{Kazhdan:2012} using the algorithm proposed in \cite{Sacht:2013} to resolve any self-intersections.  While \cite{Sacht:2013} will resolve the intersections, the resulting surface may be geometrically far from the initial shape (see Figure \ref{scaf:fig:flow}).  Next we tetrahedralize the ambient space while conforming to the deformed surface mesh and minimize Equation \ref{eq:variational} with an additional energy term that strives to restore the rest pose geometry of the surface, using the surface ARAP energy proposed in \cite{Sorkine:2007}. The result is a surface similar to the original mesh, but without self-intersections. In this example, it is possible to observe that even dramatic changes of scale (on the foot) can be robustly handled by our parametrization algorithm.
+
+A more challenging stress test is shown in Figure \ref{scaf:fig:rabbit}, where the bunny model is scaled up inside a box, to 30 times its original size. No self-intersections are introduced, despite the extreme, constrained deformation.
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/leg-flow}
+\caption{We remove the self-intersections from a genus 0 model using the conformalized flow \protect\cite{Kazhdan:2012,Sacht:2013}. The flow is inverted, while using our algorithm to compute a bijective volumetric map, to recover a self-intersection free version of the original surface. The final model can now be meshed using TetGen, since it is free from self-intersections.}
+\vspace{-0.2cm}
+\label{scaf:fig:flow}
+\end{figure}
+
+\begin{figure}[t]
+\includegraphics[width=0.8\columnwidth]{figs/rabbit_grow}
+\caption{We grow a bunny inside a box, while preventing  self-intersections. We show the result after 0,10,20,30,40, and 50 iterations.}
+\label{scaf:fig:rabbit}
+\end{figure}
+
+
+\paragraph{Comparison with \cite{Smith:2015}}
+The algorithm closest to ours is \cite{Smith:2015}, which tackles a similar problem (restricted to the 2D case). We replicated the space filling curve experiment and obtained remarkably similar results, where our running time is 96s, compared with 8,472s for \cite{Smith:2015} (88 times faster). We show in Figure \ref{scaf:fig:smith} a more challenging experiment with a subdivided version of the space filling curve to emphasize the performance difference: our algorithm converges in 39 minutes, while \cite{Smith:2015} did not converge after 5 days and 21 hours. For this example, we used the procedure suggested in \cite{Rabinovich:2017}: we performed a few iterations minimizing the quadratic proxy and then switch to a traditional newton method until numerical convergence. A video of the optimization is provided in the additional material.
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/dense_hilbert}
+\caption{\revise{We repeat the challenging test in \cite{Smith:2015} with a subdivided version of their Hilbert curve to increase the triangle count. Our method starts from a disc (upper left), gracefully extends (upper right), and reaches the same minimum (lower left) in 39 minutes whereas \cite{Smith:2015} didn't terminate more than 5 days (lower right), highlighting our performance boost of over 200 times.
+}}
+\label{scaf:fig:smith}
+\vspace{-0.2cm}
+\end{figure}
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/compare_smith}
+\caption{\revise{We apply our algorithm on 4 models used in \cite{Smith:2015} (using the same stopping criteria) obtaining visually identical results. Distortion errors produced by our algorithm (outer) and theirs (inner) are shown in black.
+}}
+\label{scaf:fig:smith-all}
+\vspace{-0.2cm}
+\end{figure}
+
+\revise{Our method produces results that are visually identical to \cite{Smith:2015}. In Figure  \ref{scaf:fig:smith-all} we repeat the experiments shown in \cite{Smith:2015}, stopping our optimization at the same energy value.}
+
+\paragraph{Local vs Global Optimization} 
+
+Both \cite{Zhang:2005} and \cite{Misztal:2012} use a construction similar to ours to generate bijective maps (Section \ref{sec:related}). Both methods explicitly prevent changes of orientation using a local approach: they optimize the map using coordinate descent iterations \cite{SolomonBook} allowing only one vertex at a time to move in its 1-ring and thus ensuring that no triangle flip. This strategy severely limits the maximal displacement per iteration and restricts the step to the size of the 1-rings. Such a restriction makes these methods impractical for parametrization applications since the difference in scale between the Tutte's embedding and the final result is extreme (the ratio of min and max triangle area is $10^{-6}$ in Figure \ref{scaf:fig:largestep}). We show an example of one of our iterations in Figure \ref{scaf:fig:largestep}, where the highlighted vertex traversed a distance of ~150 times the size of the average edge length of its 1-ring in one single step. Using coordinate descent would have required hundreds of iterations to achieve the same effect. 
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/camel_step.pdf}
+\caption{A single iteration of our algorithm (from left to right) drastically reduces the distortion. The black vector in the center is ~150 times longer than the average edge length of its 1-ring. Iterative methods would need thousands of iterations to achieve a similar progress.}
+\vspace{-0.3cm}
+\label{scaf:fig:largestep}
+\end{figure}
+
+\revise{
+% what about... the original is convoluting the metric on the scaffold with the independence to orientation
+Despite the orientation-dependent box used as scaffold boundary, our optimization produces results that are, in practice, independent of orientation.  We show this effect in Figure~\ref{scaf:fig:random-rotate} where we initialize the optimization with 1000 randomly rotated Tutte's mappings of the same camel model and run our optimization.  The isometric distortion of the model after 50 iterations is quite similar in all trials (the minimum, maximum, average, standard deviation of distortion errors in all 1000 runs are 0.1086, 0.1107, 0.1095, 3.2698e-4 resp.) indicating very little change based on the initial orientation.
+%Since we enforce an isometric energy to the scaffold, translation and rotation is encouraged to make space for the evolving interior boundary. We are able to observe this effect by performing the experiment in Fig. \ref{scaf:fig:random-rotate}. Our algorithm is initialized with 1000 randomly rotated Tutte's mappings of the same camel model, then the isometric distortion of the model after 50 iterations is similar enough (the minimum, maximum, average, standard deviation of distortion errors in all 1000 runs are 0.1086, 0.1107, 0.1095, 3.2698e-4 resp.), indicating very little change based on the initial orientation.
+}
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{figs/random-rotate.pdf}
+\caption{
+\revise{Our algorithm is independent to the initial orientation. We rotate the initializing Tutte's mapping of the camel model and obtain results with similar isometric distortion.}}
+\vspace{-0.2cm}
+\label{scaf:fig:random-rotate}
+\end{figure}
+
+
+\paragraph{Timings} The timings for all the results in the paper are reported in Table \ref{tab:timings}.
+\input{sections/timings.tex}

@@ -1,25 +1,25 @@
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{pipeline}
+    \includegraphics[width=\linewidth]{prism-tex/figs/pipeline}
     \caption{Overview of our algorithm. We start from a triangle mesh, find directions of extrusion, build the shell, and optimize to simplify it.}
-    \label{fig:pipeline}
+    \label{prism:fig:pipeline}
     
 \end{figure}
 
 \section{Method}\label{sec:method}
-Our algorithm (Figure~\ref{fig:pipeline}) converts a self-intersection free, orientable, manifold triangle mesh $\T = \{V_\T,F_\T\}$, where $V_\T$ are the vertex coordinates and
+Our algorithm (Figure~\ref{prism:fig:pipeline}) converts a self-intersection free, orientable, manifold triangle mesh $\T = \{V_\T,F_\T\}$, where $V_\T$ are the vertex coordinates and
 $F_\T$ the connectivity of the mesh, into a shell composed of generalized prisms $\S = \{(B_\S,M_\S,T_\S),F_\S\}$, where $B_\S$, $M_\S$, $T_\S$ are bottom, middle, and top surfaces of the shell, 
 consisting of bottom, middle, and top  triangles of the prisms,
-and $F_\S$  is the connectivity of the prisms (Figure \ref{fig:corona}).
+and $F_\S$  is the connectivity of the prisms (Figure \ref{prism:fig:corona}).
 The algorithm initially generates a shell $\S$ whose middle surface $M_\S$ has the same geometry as the input surface $\T$ (possibly with refined connectivity),
 and then optimizes it while ensuring that $\T$ is contained inside and projects bijectively to $M_\S$. The shell induces a volumetric vector field $\V$ and a projection operator $\P$ in the interior of each of its prisms (Section \ref{sec:projection}). This output can be used directly in many geometry processing tasks, as we discuss in detail in Section~\ref{sec:applications}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{corona}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/corona}
     \caption{Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.}
     
-    \label{fig:corona}
+    \label{prism:fig:corona}
 \end{figure}
 
 
@@ -30,19 +30,19 @@ we initially assume that our input triangle mesh does not contain \emph{singular
 \subsection{Shell and Projection}
 \label{sec:projection}
 
-Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab} (we refer to Appendix~\ref{app:dblayer} for an explanation on why we need two slabs).
+Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{prism:fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab} (we refer to Appendix~\ref{app:dblayer} for an explanation on why we need two slabs).
 For brevity, we will refer to a generalized prism as a prism.
 
 % Without loss of generality, we will describe our algorithm only for the top half of the prism $\Prism$ denoted $\H$ since the other half of the construction is symmetric.
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{prism_projection}
+    \includegraphics[width=\linewidth]{prism-tex/figs/prism_projection}
     \caption{A prism $\Prism$ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.}
-    \label{fig:prism_decomposition}
+    \label{prism:fig:prism_decomposition}
     
 \end{figure}
 
- \paragraph{Decomposition in Tetrahedra} We decompose each prism $\Prism$ into 6 tetrahedra (3 in the top slab and 3 in the bottom one, Figure~\ref{fig:prism_decomposition} middle), using one of the patterns in \cite[Figure 4]{dompierre1999subdivide}. The patterns are identified by the orientation (rising/falling) of the two edges cutting the side faces of the prism. While, for a single prism, any decomposition would be sufficient for our purposes, we need a consistent tetrahedralization between neighboring prisms to avoid inconsistencies in the projection operator. To resolve this ambiguity, we use the technique proposed in \cite{garimella2000boundary}: we define a total ordering over the vertices of the middle surface of $\Prism$ (naturally, we use the vertex id) and split (for each half of the prism) the face connecting vertices $v_1$ and $v_2$ with a rising edge if $v_1 < v_2$ and a falling edge otherwise. 
+ \paragraph{Decomposition in Tetrahedra} We decompose each prism $\Prism$ into 6 tetrahedra (3 in the top slab and 3 in the bottom one, Figure~\ref{prism:fig:prism_decomposition} middle), using one of the patterns in \cite[Figure 4]{dompierre1999subdivide}. The patterns are identified by the orientation (rising/falling) of the two edges cutting the side faces of the prism. While, for a single prism, any decomposition would be sufficient for our purposes, we need a consistent tetrahedralization between neighboring prisms to avoid inconsistencies in the projection operator. To resolve this ambiguity, we use the technique proposed in \cite{garimella2000boundary}: we define a total ordering over the vertices of the middle surface of $\Prism$ (naturally, we use the vertex id) and split (for each half of the prism) the face connecting vertices $v_1$ and $v_2$ with a rising edge if $v_1 < v_2$ and a falling edge otherwise. 
 
 \paragraph{Forward and Inverse Projection}
 % \ZJ{multi-value definition comment.
@@ -59,26 +59,26 @@ Note that \revision{$\V$ is constant on each tetrahedron and might be discontinu
 \revision{T}here is exactly one \revision{integral (poly-)line} passing through each point of the prism if
 all the decomposed tetrahedra have positive volumes
 (Theorem~\ref{thm:projection}). This allows us to define
-the \emph{projection operator} $\P(p)$ for a point $p \in \Prism$ as the intersection of the \revision{integral line} $f_p(t)$ of the vector field $\V$ passing through $p$, with the middle surface of $\Prism$ (Figure~\ref{fig:advection}). 
+the \emph{projection operator} $\P(p)$ for a point $p \in \Prism$ as the intersection of the \revision{integral line} $f_p(t)$ of the vector field $\V$ passing through $p$, with the middle surface of $\Prism$ (Figure~\ref{prism:fig:advection}). 
 %
 \begin{figure}
-    \includegraphics[width=\linewidth]{projection}
+    \includegraphics[width=\linewidth]{prism-tex/figs/projection}
     \caption{A point $p$ (left) is traced through $\V$ inside the top part of the shell. A ray with $p$ as origin and $\V$ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).}
-    \label{fig:advection}
+    \label{prism:fig:advection}
     
 \end{figure}
 %
 % \begin{wrapfigure}{r}{width=0.3\linewidth}
-%     \includegraphics[width=\linewidth]{not-section-illustrate}
+%     \includegraphics[width=\linewidth]{prism-tex/figs/not-section-illustrate}
 % \caption{Example of being a section (green) and not a section (red).}
 % \end{wrapfigure}
 %
-Intuitively, we can project any mesh that does not fold in each prism (Figure~\ref{fig:not_section}) to the middle surface.
+Intuitively, we can project any mesh that does not fold in each prism (Figure~\ref{prism:fig:not_section}) to the middle surface.
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth,draft=false]{not-section-illustrate}
+    \includegraphics[width=0.8\linewidth,draft=false]{prism-tex/figs/not-section-illustrate}
     \caption{A 2D illustration for the normal dot product condition. The blue arrows agrees with the background vector field (white arrows), while the red arrows do not agree.}
-    \label{fig:not_section}
+    \label{prism:fig:not_section}
     
 \end{figure}
 Formally, we introduce the following definition, to describe this property in terms of the triangle normals of the mesh.
@@ -91,7 +91,7 @@ A \emph{section} $\hat{\T}$ of a prism $\Prism$ is a manifold triangle mesh whos
 between the face normal $n(p)$ and the vector field $\V(p)$ is strictly positive. Similarly, a triangle mesh $\hat{\T}$ is a \emph{section of a shell $\S$}, if it is a section of all the prisms of $\S$.
 \end{definition}
 Note that this definition implies that all sections are contained inside the shell.
-% that is, the union of all prisms minus the intersection region of non-adjacent prisms (light gray area in Figure~\ref{fig:pipeline)}\ZJ{Move this sentence}.
+% that is, the union of all prisms minus the intersection region of non-adjacent prisms (light gray area in Figure~\ref{prism:fig:pipeline)}\ZJ{Move this sentence}.
 {Additionally, the definition implies that the section does not intersect with either bottom or top surface. 
 However, our definition allows for the bottom or top surface to self-intersect. 
 The intersection of the shell does not invalidate the \emph{local} definition of projection since it is defined per prism.
@@ -102,7 +102,7 @@ Allowing intersections is crucial to an efficient implementation of our algorith
 
 \begin{theorem}
 If all  6 tetrahedra $\Tet_j^{\Prism}$ in a decomposition of a prism $\Prism$ have positive volume,
-then the projection operator $\P$ defines a bijection between any section $\hat{\T}$ of $\Prism$ and the middle triangle of the prism ($M$ in Figure~\ref{fig:projection_sections}).
+then the projection operator $\P$ defines a bijection between any section $\hat{\T}$ of $\Prism$ and the middle triangle of the prism ($M$ in Figure~\ref{prism:fig:projection_sections}).
 \label{thm:projection}
 \end{theorem}
 \begin{proof}
@@ -111,14 +111,14 @@ We prove this theorem in Appendix~\ref{app:projection}.
 
 The \emph{inverse projection operator} $\P^{-1}$ is defined for a section $\hat{\T}$ as the inverse of the forward projection
 restricted to $\hat{\T}$. %, $\P: \hat{\T} \rightarrow \T$ is bijective.
-It can be similarly computed by tracing the vector field in the opposite direction, starting from a point in the middle surface of the prism. Note that, differently from the inverse Phong projection \cite{panozzo2013weighted, kobbelt1998interactive}, whose solution depends on the root-finding of a quadric surface, our shell has an explicit form for the inverse and does not require a numerical solve. The combination of forward and inverse projection operators allows to bijectively map between any pair of sections, independently of their connectivity (Figure \ref{fig:projection_sections}). An interesting property of our forward and inverse projection algorithm, which might be useful for applications requiring a provably bijective map, is that our projection could be evaluated exactly using rational arithmetic.
+It can be similarly computed by tracing the vector field in the opposite direction, starting from a point in the middle surface of the prism. Note that, differently from the inverse Phong projection \cite{panozzo2013weighted, kobbelt1998interactive}, whose solution depends on the root-finding of a quadric surface, our shell has an explicit form for the inverse and does not require a numerical solve. The combination of forward and inverse projection operators allows to bijectively map between any pair of sections, independently of their connectivity (Figure \ref{prism:fig:projection_sections}). An interesting property of our forward and inverse projection algorithm, which might be useful for applications requiring a provably bijective map, is that our projection could be evaluated exactly using rational arithmetic.
 
 %%%%%%%%%%
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{composition}
+    \includegraphics[width=\linewidth]{prism-tex/figs/composition}
     \caption{The composition $\P^{-1}_{\S_2}(\P_{\S_1}(x))$ with $x \in \S_1$, of a direct and an inverse projection operator defines a bijection between two sections $\S_1$ and $\S_2$.}
-    \label{fig:projection_sections}
+    \label{prism:fig:projection_sections}
     
 \end{figure}
 
@@ -140,7 +140,7 @@ We say that a prismatic shell $\S$ is \emph{valid with respect to a mesh $\hat\T
 \end{definition}
 If a shell is valid, from I1, I2, then by Theorem \ref{thm:projection}, it follows that any map between sections induced by the projection operator $\P$ is bijective.
 
-I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition, that is, we require the dot product to be positive with respect to all \emph{three} pillars of a prism inside the convex hull. An interesting and useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Appendix \ref{app:bilinear}, Figure~\ref{fig:displacement-mapping}).
+I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition, that is, we require the dot product to be positive with respect to all \emph{three} pillars of a prism inside the convex hull. An interesting and useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Appendix \ref{app:bilinear}, Figure~\ref{prism:fig:displacement-mapping}).
 
 \subsection{Shell Initialization}
 \label{sec:initialization}
@@ -170,7 +170,7 @@ with $d_v = x / \|x\|$ and $\mathbf{C}$ the matrix whose rows are the normals $n
 
 The admissible set of \eqref{eq:OPT} might be empty for a vertex $v$,
 that is, no vector $d_v$ satisfies $\mathbf{C}d_v\geq\epsilon$. 
-In this case we call $v$ a \emph{singularity}. For example, Figure \ref{fig:singularity_example} shows a triangle mesh containing a singularity: there exist no direction whose dot product with the adjacent face normals is positive. To simplify the explanation, we assume for the remainder of this section that $\T$ does not contain singularities and also that it does not contain boundaries: we postpone their handling to sections \ref{sec:singularities} and \ref{sec:boundaries}.
+In this case we call $v$ a \emph{singularity}. For example, Figure \ref{prism:fig:singularity_example} shows a triangle mesh containing a singularity: there exist no direction whose dot product with the adjacent face normals is positive. To simplify the explanation, we assume for the remainder of this section that $\T$ does not contain singularities and also that it does not contain boundaries: we postpone their handling to sections \ref{sec:singularities} and \ref{sec:boundaries}.
 
 \begin{proposition}\label{thm:I1}
 Let $\T$ be a closed (without boundary) triangle mesh without singularities and $\N$ be a per-vertex displacement field satisfying $\mathbf{C} \N_i > 0$ for every vertex $v_i$ of $\T$. 
@@ -202,41 +202,41 @@ and iteratively shrink $\delta_i$ in this triangle by 20\% until we find a thick
 \paragraph{Validity of the Initial Shell}
 Proposition~\ref{thm:I1} and Theorem~\ref{thm:thickness} ensure that the initial shell constructed using a displacement field $\N$ obtained by solving \eqref{eq:QP}, satisfies property I1. However, $\T$ might not formally satisfy the conditions for being a section of $\S$, despite being identical to the middle surface of $\S$, due to our definition of the projection operator $\P$.
 %
-The reason for this can be seen in Figure \ref{fig:closed}.
+The reason for this can be seen in Figure \ref{prism:fig:closed}.
 After the initialization, the middle surface is the input mesh. Thus every prism $\Prism$ corresponds to a triangle $T_\Prism$ of $\T$. The intersection $\Prism \cap \T$, required to check if $\T$ is a section of $\Prism$ (Definition \ref{def:section}) contains points from both $T_\Prism$ and its 1-ring neighborhood.
 
 The projection operator (and thus the definition of the section) is based on all tetrahedral decompositions of $\Prism$\revision{;} it is possible that multiple tetrahedra (with different vector field values in $\V$) overlap on the boundary of $\Prism$. 
 
 
 \begin{figure}\centering
-    \includegraphics[width=0.9\linewidth]{need_to_bevel}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/need_to_bevel}
     \caption{The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section.
     After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive.
     }
-    \label{fig:closed}
+    \label{prism:fig:closed}
     
 \end{figure}
 
 Depending on the dihedral angles in the mesh $\T$,
-it is possible that the dot product between one of the pillars (orange in Figure~\ref{fig:closed}) and the face normals of some of the triangles from 1-ring neighborhood (green in Figure~\ref{fig:closed}) is negative. 
+it is possible that the dot product between one of the pillars (orange in Figure~\ref{prism:fig:closed}) and the face normals of some of the triangles from 1-ring neighborhood (green in Figure~\ref{prism:fig:closed}) is negative. 
 While it may seem that this  problem could be addressed
 by changing the definition so that each edge is assigned to one of the incident triangles, so that the field direction only in one incident tetrahedron needs to be considered, this problem is more significant than it may seem, as it leads to instability under small perturbations (e.g., due to floating-point rounding of coordinates). Such small perturbations can change the set of triangles intersecting a prism and thus violate the validity of the shell and, consequently, the bijectivity of $\P$.
 We propose instead to refine $\T$, without changing its geometry, so that the shell corresponding to the refined mesh satisfies I2 (i.e., its middle surface is a section).
 \paragraph{Topological Beveling.} We identify a prism $\Prism_v$ for which I2 does not hold and use a beveling pattern \cite{coxeter1973regular,conway2016symmetries,hart2018conway}
-to decompose $\Prism_v$ in a way that $\T$ becomes a section for all 6 decompositions (I2). We refer to this operation as \emph{topological beveling}, as it does not change the geometry of the mesh, only its connectivity (Figure \ref{fig:beveled_example}). 
-We use the pattern in Figure \ref{fig:patterns}a for $\Prism_v$, and we use the other two patterns (b) and (c) on the adjacent prisms to ensure valid mesh connectivity. The positions of the vertices are computed using barycentric coordinates (we used $t = 0.2$, i.e., the orange dot is at $1/5$ of the horizontal edge), and the normals of the newly inserted vertices are copied from the closest vertex (in Figure \ref{fig:patterns}, the internal vertices have the normal of the triangle corner with the same color).
+to decompose $\Prism_v$ in a way that $\T$ becomes a section for all 6 decompositions (I2). We refer to this operation as \emph{topological beveling}, as it does not change the geometry of the mesh, only its connectivity (Figure \ref{prism:fig:beveled_example}). 
+We use the pattern in Figure \ref{prism:fig:patterns}a for $\Prism_v$, and we use the other two patterns (b) and (c) on the adjacent prisms to ensure valid mesh connectivity. The positions of the vertices are computed using barycentric coordinates (we used $t = 0.2$, i.e., the orange dot is at $1/5$ of the horizontal edge), and the normals of the newly inserted vertices are copied from the closest vertex (in Figure \ref{prism:fig:patterns}, the internal vertices have the normal of the triangle corner with the same color).
 
 \begin{figure}
-    \includegraphics[width=0.9\linewidth]{bevel}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/bevel}
     \caption{The beveling patterns used to decompose prisms for which $\T$ is not a section.}
-    \label{fig:patterns}
+    \label{prism:fig:patterns}
     
 \end{figure}
 
 \begin{figure}
-    \includegraphics[width=\linewidth]{screwdriver_bevel}
+    \includegraphics[width=\linewidth]{prism-tex/figs/screwdriver_bevel}
     \caption{Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).}
-    \label{fig:beveled_example}
+    \label{prism:fig:beveled_example}
     
 \end{figure}
 
@@ -257,7 +257,7 @@ The output of this stage is a valid shell with respect to $\T$ (Section \ref{sec
 \label{sec:optimization}
 
 During shell optimization, we perform local operations
-(Figure \ref{fig:local_operations})
+(Figure \ref{prism:fig:local_operations})
 on a valid shell to reduce its complexity and increase the quality. Before applying every operation, we check the validity of the operation to ensure that: (1) the resulting middle surface will be manifold \cite{dey1999topology} and (2) the shell will be valid with respect to $\T$ (to ensure a bijective projection). We forbid any operation that does not pass these checks.  
 \revision{We would like to remark that, 
 while there are different choices to guide the shell modification, we
@@ -288,10 +288,10 @@ Our local operations (satisfying the definition of $\mathbb{O}$ in Theorem \ref{
 %\DZ{This is not clear,expand}
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{local-operations}
-    % \includegraphics[0.5\linewidth]{block_singular}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/local-operations}
+    % \includegraphics[0.5\linewidth]{prism-tex/figs/block_singular}
     \caption{Different local operations used to optimize the shell. Mesh editing operations translate naturally to the shell setting. For vertex smoothing, we decompose the operation into 3 intermediate steps: pan, zoom, and rotate.}
-    \label{fig:local_operations}
+    \label{prism:fig:local_operations}
     
 \end{figure}
 
@@ -302,10 +302,10 @@ We measure the quality of the shell $\S$ using the MIPS energy \cite{hormann2000
 \end{equation*}
 This energy is invariant to scaling, thus allowing the local operations to coarsen the shell whenever possible while  encouraging the optimization to create well-shaped triangles. Good quality of the middle surface decreases the chances, for the subsequent operations, to violate the shell invariants.
 
-\paragraph{Shell Connectivity Modifications.} We translate three operations for triangular meshes to the shell settings (Figure~\ref{fig:local_operations} top). Edge collapse, split, and flip operations can be performed by simultaneously modifying the top and bottom surfaces
+\paragraph{Shell Connectivity Modifications.} We translate three operations for triangular meshes to the shell settings (Figure~\ref{prism:fig:local_operations} top). Edge collapse, split, and flip operations can be performed by simultaneously modifying the top and bottom surfaces
 and retrieve the positions for the middle surface through the intersection. We only accept the operations if they pass the invariant check.
 
-\paragraph{Vertex Smoothing.} Due to the additional degree of freedom on vertex-pairs (position, direction, and thickness), we decompose the smoothing operations into three \revision{components} (Figure~\ref{fig:local_operations} bottom). 
+\paragraph{Vertex Smoothing.} Due to the additional degree of freedom on vertex-pairs (position, direction, and thickness), we decompose the smoothing operations into three \revision{components} (Figure~\ref{prism:fig:local_operations} bottom). 
 \emph{Pan} moves the positions of the top and bottom vertex at the same time, 
 minimizing the MIPS quality of the middle surface. Neither the thickness or direction will be changed. 
 \emph{Rotate} re-aligns the local direction to be the average of the neighboring ones while keeping the position of the middle vertex fixed. 
@@ -354,11 +354,11 @@ After the outer iteration terminates (i.e.  the shell cannot be coarsened anymor
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth,draft=false]{doublewheel_pinch}
-    % \includegraphics[0.5\linewidth]{block_singular}
+    \includegraphics[width=\linewidth,draft=false]{prism-tex/figs/doublewheel_pinch}
+    % \includegraphics[0.5\linewidth]{prism-tex/figs/block_singular}
     \caption{A model with 48 singularities and a close up around one (left).
     Our shell is pinched around each of them without affecting other regions (right).}
-    \label{fig:singularity_example}
+    \label{prism:fig:singularity_example}
     
 \end{figure}
 
@@ -367,31 +367,31 @@ After the outer iteration terminates (i.e.  the shell cannot be coarsened anymor
 
 % We introduced the algorithm assuming that problem \eqref{eq:OPT} always has a solution, and assuming that our mesh does not contains boundaries. We will now extend our construction to handle these cases, which requires minor variations to our algorithm.
 
-Singularities, i.e. vertices of $\T$ for which the constraints set of problem \eqref{eq:OPT} is empty, are surprisingly common in large datasets (Figure~\ref{fig:singularity_example} shows an example). For instance, in our subset of Thingi10k \cite{zhou2016thingi10k}, although only 0.01\% vertices are singular,  8\% of the models have at least one singular point. This has been recently observed as a limitation for the construction of nested cages \cite[Appendix A]{sacht2015nested}, and it is a well-known issue when building boundary layers \cite{aubry2015most,aubry2017boundary,garimella2000boundary}.
+Singularities, i.e. vertices of $\T$ for which the constraints set of problem \eqref{eq:OPT} is empty, are surprisingly common in large datasets (Figure~\ref{prism:fig:singularity_example} shows an example). For instance, in our subset of Thingi10k \cite{zhou2016thingi10k}, although only 0.01\% vertices are singular,  8\% of the models have at least one singular point. This has been recently observed as a limitation for the construction of nested cages \cite[Appendix A]{sacht2015nested}, and it is a well-known issue when building boundary layers \cite{aubry2015most,aubry2017boundary,garimella2000boundary}.
 %
 There are two main situations that give rise to singular points. 
-The first one naturally generates a singular point when more than two ridge-lines meet (e.g., figures~\ref{fig:singularity_example} and~\ref{fig:singularity-boolean}), thus making the point a feature point. 
-The second one is a pocket-like mesh artifact, often produced as a result of mesh simplification (Figure~\ref{fig:singularity-illustration}).
+The first one naturally generates a singular point when more than two ridge-lines meet (e.g., figures~\ref{prism:fig:singularity_example} and~\ref{prism:fig:singularity-boolean}), thus making the point a feature point. 
+The second one is a pocket-like mesh artifact, often produced as a result of mesh simplification (Figure~\ref{prism:fig:singularity-illustration}).
 
 While singularities might seem fixable by applying local smoothing or subdivision as a pre-process, it is not desirable in the case of a feature point, and is likely to introduce self-intersection or more serious geometric inconsistency.
 %in the presence of the meshing artifacts.
 Therefore, due to the above reasons and observing that they are very uncommon, we propose to extend our theory (Appendix~\ref{app:singularity}) and algorithm to handle isolated singularities  by \emph{pinching} the thickness of the shell. Note that in the rare case where two singular points are sharing the same edge, they are \emph{automatically} separated by our topological beveling.
 
 \paragraph{Pinching.} 
-We extend our definition of the shell by allowing it to have zero thickness on singularities, thus tessellating the degenerate prism with 4 instead of 6 tetrahedra (Figure~\ref{fig:singularity-illustration}). We further remark that these isolated points must be excluded from Definition~\ref{def:section}. In the implementation, this requires to change the intersection predicates to skip the singular vertices.
+We extend our definition of the shell by allowing it to have zero thickness on singularities, thus tessellating the degenerate prism with 4 instead of 6 tetrahedra (Figure~\ref{prism:fig:singularity-illustration}). We further remark that these isolated points must be excluded from Definition~\ref{def:section}. In the implementation, this requires to change the intersection predicates to skip the singular vertices.
 With this change, the singularity becomes a trivial point of the projection operator $\P$,
 % \DZ{all middle surface points are fixed points of $\P$}
 and the rest of our shell can still be used in applications without further changes. Since singularities tends to be isolated (they are usually located at the juncture of multiple sharp features), this solution has minimal effects on applications: for example, when our shell is used for remeshing, pinching the shell at singularities will freeze the corresponding isolated vertices while allowing the rest of the mesh to be freely optimized.
 
 \begin{wrapfigure}{r}{0.3\linewidth}
-    \includegraphics[width=1\linewidth]{singular_bevel}
+    \includegraphics[width=1\linewidth]{prism-tex/figs/singular_bevel}
 \end{wrapfigure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{degenerate_prism_decompose}
+\includegraphics[width=\linewidth]{prism-tex/figs/degenerate_prism_decompose}
 \caption{Left to right: examples of a singularity as a feature point and as a meshing artefact; and illustration of the degenerate prism with a singularity (red) and its tetrahedral decomposition made of only four tetrahedra.}
-\label{fig:singularity-illustration}
+\label{prism:fig:singularity-illustration}
 
 \end{figure}
 
@@ -408,9 +408,9 @@ We discuss the technical extensions for our proofs to shells with pinched prisms
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{boundary_singular}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/boundary_singular}
     \caption{$AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.}
-    \label{fig:boundary_singularity}
+    \label{prism:fig:boundary_singularity}
     
 \end{figure}
 
@@ -418,21 +418,21 @@ We discuss the technical extensions for our proofs to shells with pinched prisms
 
 We introduced our algorithm, assuming that the input mesh does not have boundaries. We will now extend our construction to handle this case, which requires minor variations to our algorithm.
 
-For some vertices on the boundary, it might be impossible to extrude a valid shell (Figure~\ref{fig:boundary_singularity}), even if problem \eqref{eq:OPT} has a solution, as  Theorem~\ref{thm:thickness} does not apply in its original form. 
+For some vertices on the boundary, it might be impossible to extrude a valid shell (Figure~\ref{prism:fig:boundary_singularity}), even if problem \eqref{eq:OPT} has a solution, as  Theorem~\ref{thm:thickness} does not apply in its original form. 
 %
 We identify such cases by connecting every edge in the 1-ring neighborhood of the boundary vertex
-to the extruded point and check if they collide with the existing 1-ring triangles (e.g., the triangle $A'AB$ intersects the existing input triangle in Figure~\ref{fig:boundary_singularity}). If it is the case, we consider this vertex as a singularity, and we pinch the shell. Note that this is an extremely rare case and, in our experiments, we detected it only for models where the loss of precision in the STL export introduces rounding noise on the boundary.% (and the problem goes away increasing precision). We could not identify any realistic case of this scenario in our model collection.
+to the extruded point and check if they collide with the existing 1-ring triangles (e.g., the triangle $A'AB$ intersects the existing input triangle in Figure~\ref{prism:fig:boundary_singularity}). If it is the case, we consider this vertex as a singularity, and we pinch the shell. Note that this is an extremely rare case and, in our experiments, we detected it only for models where the loss of precision in the STL export introduces rounding noise on the boundary.% (and the problem goes away increasing precision). We could not identify any realistic case of this scenario in our model collection.
 
-Once we pinch all boundary singularities, our construction extends naturally to the boundary. The only necessary modification is in the shell optimization (Section~\ref{sec:optimization}), where we skip all operations acting on boundary vertices to maintain the bijectivity of the induced projection operator (Figure~\ref{fig:open-hand}).
+Once we pinch all boundary singularities, our construction extends naturally to the boundary. The only necessary modification is in the shell optimization (Section~\ref{sec:optimization}), where we skip all operations acting on boundary vertices to maintain the bijectivity of the induced projection operator (Figure~\ref{prism:fig:open-hand}).
 %
 We thus freeze these vertices and never allow them to move or be affected by any other modification of the shell. Note that, in certain applications, it might also be useful to freeze additional non-boundary vertices to ensure that these remain on the middle surface during optimization (e.g., to exactly represent a corner of a CAD model).
 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\linewidth]{open-hand}
+    \includegraphics[width=0.9\linewidth]{prism-tex/figs/open-hand}
     \caption{An example of a mesh with boundary.}
-    \label{fig:open-hand}
+    \label{prism:fig:open-hand}
     
 \end{figure}
 
@@ -445,10 +445,10 @@ We thus freeze these vertices and never allow them to move or be affected by any
 
 % \begin{figure}
 %     \centering
-%     \includegraphics[width=\linewidth]{blocks}
-%     % \includegraphics[0.5\linewidth]{block_singular}
+%     \includegraphics[width=\linewidth]{prism-tex/figs/blocks}
+%     % \includegraphics[0.5\linewidth]{prism-tex/figs/block_singular}
 %     \caption{We generate a pinched shell for a model with a singularity (left). Optionally, we can complete the shell using our Boolean construction.}
-%     \label{fig:singularity_resolve}
+%     \label{prism:fig:singularity_resolve}
 % \end{figure}
 
 

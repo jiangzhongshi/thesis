@@ -19,7 +19,7 @@
 % ----------------------------------------
 
 % Use or comment this to enable/disable draft version
-% \def\draftversion{}
+\def\draftversion{}
 \newcommand{\draftfinal}[2]{\ifdefined\draftversion#1\else#2\fi}
 \newcommand{\draftonly}[1]{\draftfinal{#1}{}}
 \newcommand{\finalonly}[1]{\draftfinal{}{#1}}
@@ -311,7 +311,6 @@
 \chapter{Bijective Projection in the Shell}
 \label{chp-proof}
 
-
 \input{prism-tex/01-Introduction.tex}
 \input{prism-tex/02-Related.tex}
 \input{prism-tex/03-Method.tex}
@@ -319,6 +318,13 @@
 \input{prism-tex/05-Concluding.tex}
 
 \chapter{Bijective and Coarse High-Order Tetrahedral Meshes}
+
+\input{curve_meshing_in_shell_tex/01_intro.tex}
+\input{curve_meshing_in_shell_tex/02_related.tex}
+\input{curve_meshing_in_shell_tex/03_method.tex}
+\input{curve_meshing_in_shell_tex/03.1_features}
+\input{curve_meshing_in_shell_tex/04_result.tex}
+\input{curve_meshing_in_shell_tex/05_conclude.tex}
 
 
 \chapter{Conclusion}
@@ -363,9 +369,6 @@
 \bibliographystyle{apalike}
 
 \bibliography{prism-tex/references.bib}
-
-% The following is just for the sample template,
-% I'd recommend deleting this and using the \bibliography command above
 
 
 \end{document}

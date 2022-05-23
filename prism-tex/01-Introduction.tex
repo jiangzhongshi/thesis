@@ -1,7 +1,7 @@
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth,draft=false]{teaser_edit.pdf}
+	\includegraphics[width=\linewidth,draft=false]{prism-tex/figs/teaser_edit.pdf}
     \caption{A low-quality mesh with boundary conditions (a)
     is remeshed using our shell (b)
     to maintain a bijection between the input and the remeshed output.
@@ -12,7 +12,7 @@
     Note that in this application setting both surface and volumetric meshing \revision{can be hidden from} the user, \revision{who} directly specifies boundary conditions and analyses the result on the input geometry.}
     
     % \vspace{-1em}
-    \label{fig:teaser}
+    \label{prism:fig:teaser}
 \end{figure}
 
 \section{Introduction}
@@ -22,7 +22,7 @@ Triangular meshes are the most popular representation for discrete surfaces, due
 %
 For this reason, the adaptation of a triangle mesh to a specific set of criteria (surface remeshing) is a core building block in geometry processing, graphics, physical simulation, and scientific computing.
 
-In most applications, the triangular mesh is equipped with attributes, such as textures, displacements, physical properties, and boundary conditions (Figure~\ref{fig:teaser}). Whenever remeshing is needed, these properties must be transferred on the new mesh, a task which has been extensively studied in the literature and for which robust and generic solutions are still lacking (Section \ref{sec:related}). 
+In most applications, the triangular mesh is equipped with attributes, such as textures, displacements, physical properties, and boundary conditions (Figure~\ref{prism:fig:teaser}). Whenever remeshing is needed, these properties must be transferred on the new mesh, a task which has been extensively studied in the literature and for which robust and generic solutions are still lacking (Section \ref{sec:related}). 
 Defining a \revision{continuous} bijective map, \revision{more precisely, a homeomorphism where the inverse is also continuous,} between two \revision{geometrically close}  piecewise-linear meshes of the same topology is a difficult problem, even in its basic form, when one of these meshes is obtained by adapting the other in some way (e.g., coarsening, refining, or improving triangle shape).a
 Common approaches to this problem are Euclidean projection
 \cite{jiao2004overlaying}, parametrization on a common domain \cite{praun2001consistent,kraevoy2004cross,lee1998maps}, functional maps \cite{Ovsjanikov:2012}, and generalized barycentric coordinates \cite{Hormann:2017:GBC}.  However, the problem is not fully solved, as all existing methods, as we discuss in greater detail in Section~\ref{sec:related},

@@ -1,0 +1,27 @@
+%\newpage
+\section{Limitations and Concluding Remarks}
+
+We proposed a simple and robust algorithm to generate bijective maps, both in 2D and 3D. We demonstrated the practical value of the algorithm in UV mapping and deformation applications, and its robustness with extensive stress tests.
+
+One major venue for future work is the support of hard positional constraints, which are favored over soft constraints in many practical applications. Our current algorithm only supports soft constraints as geometric energy \cite{Schuller:2013}. To support hard constraints we would need to generate a bijective starting point that guarantees those constraints, and then preserve them in our optimization. While bijecive maps with hard constraints can be constructed for a 2D patch homeomorphic to a disk \cite{Weber:2014} and for a 3D volume homeomorphic to a ball \cite{Campen:2016}, the generic solution is still elusive.
+
+In 3D cases, the generation of the initial scaffold is not as robust as in 2D, since TetGen fails for geometries with self-intersections and other imperfections. Our algorithm is also slower in 3D due to larger and denser linear systems, as well as the need for local mesh refinement operations instead of regenerating the entire tetrahedralization. We believe a more optimized and parallel implementation could reduce this overhead, and plan to explore this in the future.
+%\vspace{-0.5em}
+
+%slow in 3D\\
+%no robust tetrahedralization\\
+%no robust initialization\\
+%satisfy user-constraints exactly\\
+%floating point accuracy locking\\ % we address this with exact predicates, right?
+%restricting to rotation-invariant energies\\
+%some effect of the scaffold on the map\\  % we kind of already talk about this wrt sliding, mention again?
+%minimal separation\\
+
+
+
+ \begin{acks}
+ The authors would like to thank
+ Michael Rabinovich and Roi Poranne for providing the source code and Lucy models for \cite{Rabinovich:2017},
+ Leonardo Sacht for providing the source code and Leg model for \cite{Sacht:2013},
+ and the anonymous reviewers for their insightful comments and suggestions.
+\end{acks}
