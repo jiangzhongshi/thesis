@@ -1,0 +1,52 @@
+\documentclass[acmtog,anonymous,review]{acmart}
+\acmSubmissionID{497}
+\usepackage[utf8]{inputenc}
+\usepackage{appendix}
+\usepackage{minted}
+\usepackage{algorithm}
+
+\citestyle{acmauthoryear}
+% \usepackage[hashEnumerators,smartEllipses]{markdown}
+\usepackage{natbib}
+\usepackage{mathrsfs}
+
+\usepackage{graphicx}
+
+\acmJournal{TOG}
+% \documentclass{article}
+% \usepackage[utf8]{inputenc}
+% \usepackage{geometry}
+% \geometry{letterpaper,scale=0.8}
+
+\title{Declarative Specification for Unstructured Mesh Editing Algorithms}
+\keywords{}
+
+\input{98-pre}
+
+\begin{document}
+
+\begin{abstract}
+\input{01-abstract}
+\end{abstract}
+
+\begin{teaserfigure}
+    \centering\footnotesize
+    \includegraphics[width=\linewidth]{wmtk-tex/figs/teaser2.pdf}
+    \caption{\revision{Example of four different mesh editing algorithms implemented with our library. With our framework, users can implement different flavor of mesh editing with built in robustness, and readily available parallelism. From left to right: harmonic triangulation, QSlim, the input, isotropic remeshing, and robust tetrahedral mesh generation. }}
+    \label{fig:teaser}
+\end{teaserfigure}
+
+\maketitle
+
+\input{02-introduction}
+\input{03-related}
+\input{04-method}
+\input{05-results}
+\input{06-concluding}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{99-bib}
+% \appendix
+% \input{10_appendix}
+
+\end{document}

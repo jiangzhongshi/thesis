@@ -1,0 +1,74 @@
+\usepackage{xcolor}
+\usepackage{ifthen}
+
+\definecolor{Violet}{rgb}{.6, .35, .7}
+\newcommand{\revision}[1]{\textcolor{Violet}{#1}}
+\newcommand{\revision}[1]{\textcolor{Violet}{#1}}
+% define colors
+\definecolor{DenisColor}{rgb}{0.15, 0.38, 0.68}
+\definecolor{TeseoColor}{rgb}{0.15, 0.68, 0.38}
+\definecolor{DanieleColor}{rgb}{1, 0, 0}
+\definecolor{ZhongshiColor}{rgb}{0.11, 0.50, 0.38}%rgb(52, 152, 219)
+% \definecolor{JamesColor}{rgb}{0.16, 0.58, 0.94}
+\newcommand{\ZJ}[1]{{\leavevmode\color{ZhongshiColor} /** ZJ: #1 */}}
+\definecolor{Red}{rgb}{1, 0, 0}
+\definecolor{Pink}{rgb}{1, 0, 1}
+% define user comments
+
+\newcommand{\DZ}[1]{{\leavevmode\color{DenisColor} DZ: #1}}
+\newcommand{\TS}[1]{{\leavevmode\color{TeseoColor} TS: #1}}
+\newcommand{\DP}[1]{{\leavevmode\color{DanieleColor} DP: #1}}
+\newcommand{\QZ}[1]{{\leavevmode\color{JamesColor} James: #1}}
+
+% % miscellaneous
+\newcommand{\toref}[1]{\textcolor{Red}{[ref:#1]}}
+\newcommand{\tocite}[1]{\textcolor{Pink}{[cite:#1]}}
+\newcommand{\todo}[1]{\textcolor{Red}{TODO: #1}}
+% \newcommand{\TODO}[1]{\todo{#1}}
+\newcommand{\warning}[1]{{\itshape\color{Red} #1}}
+\newcommand{\note}[1]{{\itshape\color{blue} #1}}
+\newcommand{\nothing}[1]{}
+
+% silence comments in final
+\providecommand{\finalversion}{1} % <-- change to 1 to disable comments
+\ifthenelse{\equal{\finalversion}{1}}
+{
+	\renewcommand{\DZ}[1]{}
+	\renewcommand{\TS}[1]{}
+	\renewcommand{\DP}[1]{}
+	\renewcommand{\ZJ}[1]{}
+	\renewcommand{\QZ}[1]{}
+	\renewcommand{\toref}[1]{}
+	\renewcommand{\tocite}[1]{}
+	\renewcommand{\todo}[1]{}
+}
+{}
+
+
+\providecommand{\norevision}{1} % <-- change to 1 to disable comments
+\ifthenelse{\equal{\norevision}{1}}
+{
+\renewcommand{\revision}[1]{#1}
+\renewcommand{\revision}[1]{#1}
+}
+{}
+
+%------------------------------------------------------------------------
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}     % max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}     % max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{4}
+    \setcounter{bottomnumber}{4}
+    \setcounter{totalnumber}{8}     % 2 may work better
+    \setcounter{dbltopnumber}{4}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.95}     % fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}     % allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}     % require fuller float pages
+     % N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}     % require fuller float pages
+%------------------------------------------------------------------------

@@ -1,0 +1,10 @@
+\section{Concluding Remarks}
+
+This paper introduces a new declarative specification for mesh algorithms to allow an easier implementation, while at the same time obtaining competitive performances and exploiting parallel hardware. 
+
+Using this specification, we implement \revision{five} popular mesh editing algorithms covering mesh generation and optimization on surfaces and volumes, which can be easily adapted for other use cases: we demonstrated that integrating an envelope check \revision{requires} only a few lines of code.
+
+The library we implemented supports shared memory parallelism, which leads to a good scaling on the machines we tested it on. We believe an exciting venue for future work would be the implementation of a library \revision{for} our specification targeting  MPI to distribute the computation over an HPC cluster. Having access to such a library would allow our five mesh editing applications to run on a distributed environment with minimal or no changes.
+
+
+%\ZJ{An important limitation (need a positive spin) is that some operations depend on ordering to have optimal performance, and parallelism cannot guarantee that. Like QSLIM, even edge splitting.}
