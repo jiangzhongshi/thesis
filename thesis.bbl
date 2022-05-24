@@ -19,6 +19,35 @@ Babuska, I. and Guo, B.~Q. (1988).
   boundaries.
 \newblock {\em SIAM Journal on Numerical Analysis}, 25(4):837--861.
 
+\bibitem[Baumgart, 1972]{Baumgart1972}
+Baumgart, B.~G. (1972).
+\newblock Winged edge polyhedron representation.
+\newblock Technical report, Stanford, CA, USA.
+
+\bibitem[Bern et~al., 1994]{BERN1994}
+Bern, M., Eppstein, D., and Gilbert, J. (1994).
+\newblock Provably good mesh generation.
+\newblock {\em Journal of Computer and System Sciences}, 48(3):384 -- 409.
+
+\bibitem[Bishop, 2016]{Bishop2016}
+Bishop, C.~J. (2016).
+\newblock Nonobtuse triangulations of pslgs.
+\newblock {\em Discrete {\&} Computational Geometry}, 56(1):43--92.
+
+\bibitem[Brisson, 1989]{Brisson1989}
+Brisson, E. (1989).
+\newblock Representing geometric structures in $d$ dimensions: Topology and
+  order.
+\newblock In {\em Proceedings of the Fifth Annual Symposium on Computational
+  Geometry}, SCG '89, page 218–227, New York, NY, USA. Association for
+  Computing Machinery.
+
+\bibitem[Canann et~al., 1996]{Canann1996}
+Canann, S.~A., Muthukrishnan, S.~N., and Phillips, R.~K. (1996).
+\newblock Topological refinement procedures for triangular finite element
+  meshes.
+\newblock {\em Engineering with Computers}, 12(3):243--255.
+
 \bibitem[Cardoze et~al., 2004]{Cardoze2004}
 Cardoze, D., Cunha, A., Miller, G.~L., Phillips, T., and Walkington, N. (2004).
 \newblock A b{\'e}zier-based approach to unstructured moving meshes.
@@ -29,6 +58,12 @@ Cardoze, D., Cunha, A., Miller, G.~L., Phillips, T., and Walkington, N. (2004).
 Cheng, X.-X., Fu, X.-M., Zhang, C., and Chai, S. (2019).
 \newblock Practical error-bounded remeshing by adaptive refinement.
 \newblock {\em Computers \& Graphics}, 82:163 -- 173.
+
+\bibitem[DiCarlo et~al., 2014]{Dicarlo2014}
+DiCarlo, A., Paoluzzi, A., and Shapiro, V. (2014).
+\newblock Linear algebraic representation for topological structures.
+\newblock {\em Computer-Aided Design}, 46:269--274.
+\newblock 2013 SIAM Conference on Geometric and Physical Modeling.
 
 \bibitem[Dobrzynski and El~Jannoun, 2017]{dobrzynski2017}
 Dobrzynski, C. and El~Jannoun, G. (2017).
@@ -58,6 +93,12 @@ Ghasemi, A., Taylor, L.~K., and Newman, III, J.~C. (2016).
   industrial cad geometries in two and three dimensions.
 \newblock {\em Fluids Engineering Division Summer Meeting}, (50299).
 
+\bibitem[Guibas and Stolfi, 1985]{Guibas1985}
+Guibas, L. and Stolfi, J. (1985).
+\newblock Primitives for the manipulation of general subdivisions and the
+  computation of voronoi.
+\newblock {\em ACM Trans. Graph.}, 4(2):74–123.
+
 \bibitem[{Hahmann} and {Bonneau}, 2003]{Hahmann2003}
 {Hahmann}, S. and {Bonneau}, G.~. (2003).
 \newblock Polynomial surfaces interpolating arbitrary triangulations.
@@ -78,6 +119,11 @@ Knupp, P.~M. (2000).
 \newblock {\em International Journal for Numerical Methods in Engineering},
   48(3):401--420.
 
+\bibitem[Mahmoud et~al., 2021]{Mahmoud2021}
+Mahmoud, A.~H., Porumbescu, S.~D., and Owens, J.~D. (2021).
+\newblock Rxmesh: A gpu mesh data structure.
+\newblock {\em ACM Trans. Graph.}, 40(4).
+
 \bibitem[Persson and Peraire, 2009]{Persson2009}
 Persson, P.-O. and Peraire, J. (2009).
 \newblock Curved mesh generation and mesh refinement using lagrangian solid
@@ -91,6 +137,11 @@ Poya, R., Sevilla, R., and Gil, A.~J. (2016).
   using solid mechanics.
 \newblock {\em Computational Mechanics}, 58(3):457--490.
 
+\bibitem[Requicha, 1980]{Requicha1980}
+Requicha, A.~G. (1980).
+\newblock Representations for rigid solids: Theory, methods, and systems.
+\newblock {\em ACM Comput. Surv.}, 12(4):437–464.
+
 \bibitem[Roca et~al., 2012]{Roca2012}
 Roca, X., Gargallo-Peir{\'o}, A., and Sarrate, J. (2012).
 \newblock Defining quality measures for high-order planar triangles and curved
@@ -98,6 +149,12 @@ Roca, X., Gargallo-Peir{\'o}, A., and Sarrate, J. (2012).
 \newblock In Quadros, W.~R., editor, {\em Proceedings of the 20th International
   Meshing Roundtable}, pages 365--383, Berlin, Heidelberg. Springer Berlin
   Heidelberg.
+
+\bibitem[Sadek, 1980]{Sadek1980}
+Sadek, E.~A. (1980).
+\newblock A scheme for the automatic generation of triangular finite elements.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  15(12):1813--1822.
 
 \bibitem[Suwelack et~al., 2013]{Suwelack2013}
 Suwelack, S., Lukarski, D., Heuveline, V., Dillmann, R., and Speidel, S.
@@ -117,5 +174,15 @@ Xie, Z.~Q., Sevilla, R., Hassan, O., and Morgan, K. (2013).
 \newblock The generation of arbitrary order curved meshes for 3d finite element
   analysis.
 \newblock {\em Computational Mechanics}, 51(3):361--374.
+
+\bibitem[Yerry and Shephard, 1983]{Yerry1983}
+Yerry, M.~A. and Shephard, M.~S. (1983).
+\newblock A modified quadtree approach to finite element mesh generation.
+\newblock {\em IEEE Computer Graphics and Applications}, 3(1):39--46.
+
+\bibitem[Zayer et~al., 2017]{Zayer2017}
+Zayer, R., Steinberger, M., and Seidel, H.-P. (2017).
+\newblock A gpu-adapted structure for unstructured grids.
+\newblock {\em Comput. Graph. Forum}, 36(2):495–507.
 
 \end{thebibliography}

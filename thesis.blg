@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 10808 items from 5000.
+Reallocated field_info (elt_size=4) to 13514 items from 5000.
 Database file #1: thesis.bib
 Warning--I didn't find a database entry for "Bommes:2009"
 Warning--I didn't find a database entry for "Rabinovich:2017"
@@ -17,6 +17,7 @@ Warning--I didn't find a database entry for "mitchell1987discrete"
 Warning--I didn't find a database entry for "kobbelt1998interactive"
 Warning--I didn't find a database entry for "tozoni2020low"
 Warning--I didn't find a database entry for "crane2013conformal"
+Warning--I didn't find a database entry for "mobius2010openflipper"
 Warning--I didn't find a database entry for "libigl"
 Warning--I didn't find a database entry for "Lipman:2012"
 Warning--I didn't find a database entry for "Kovalsky:2016"
@@ -243,6 +244,116 @@ Warning--I didn't find a database entry for "remacle2013robust"
 Warning--I didn't find a database entry for "SALARI:2000:CVB"
 Warning--I didn't find a database entry for "lyche2015simplex"
 Warning--I didn't find a database entry for "Xia:2017:IGA"
+Warning--I didn't find a database entry for "vcg"
+Warning--I didn't find a database entry for "botsch2002openmesh"
+Warning--I didn't find a database entry for "pmp-library"
+Warning--I didn't find a database entry for "kremer2013openvolumemesh"
+Warning--I didn't find a database entry for "hoppe1996progressive"
+Warning--I didn't find a database entry for "botsch2004remeshing"
+Warning--I didn't find a database entry for "Mantyla1987"
+Warning--I didn't find a database entry for "lienhardt1994n"
+Warning--I didn't find a database entry for "dufourd1991obj3"
+Warning--I didn't find a database entry for "kraemer2014cgogn"
+Warning--I didn't find a database entry for "ragan2013halide"
+Warning--I didn't find a database entry for "kjolstad2016simit"
+Warning--I didn't find a database entry for "kjolstad2017taco"
+Warning--I didn't find a database entry for "hu2019taichi"
+Warning--I didn't find a database entry for "ye2020penrose"
+Warning--I didn't find a database entry for "loseille2017unique"
+Warning--I didn't find a database entry for "lo2012parallel"
+Warning--I didn't find a database entry for "marot2019one"
+Warning--I didn't find a database entry for "borrell2018parallel"
+Warning--I didn't find a database entry for "karypis1998fast"
+Warning--I didn't find a database entry for "chrisochoides2006parallel"
+Warning--I didn't find a database entry for "aluru1997parallel"
+Warning--I didn't find a database entry for "okusanya1996parallel"
+Warning--I didn't find a database entry for "chrisochoides2003parallel"
+Warning--I didn't find a database entry for "https://doi.org/10.1111/1467-8659.1230129"
+Warning--I didn't find a database entry for "chen2010merge"
+Warning--I didn't find a database entry for "funke2017parallel"
+Warning--I didn't find a database entry for "blelloch1999design"
+Warning--I didn't find a database entry for "lachat2014parallel"
+Warning--I didn't find a database entry for "okusanya19973"
+Warning--I didn't find a database entry for "chew1997parallel"
+Warning--I didn't find a database entry for "blandford2006engineering"
+Warning--I didn't find a database entry for "batista2010parallel"
+Warning--I didn't find a database entry for "foteinos2011dynamic"
+Warning--I didn't find a database entry for "marot2020quality"
+Warning--I didn't find a database entry for "galtier1996prepartitioning"
+Warning--I didn't find a database entry for "linardakis2006delaunay"
+Warning--I didn't find a database entry for "zhou2012tools"
+Warning--I didn't find a database entry for "Shewchuk:1998:TMG"
+Warning--I didn't find a database entry for "Ruppert:1995:ADR"
+Warning--I didn't find a database entry for "Remacle:2017:ATL"
+Warning--I didn't find a database entry for "Du:2003:TMG"
+Warning--I didn't find a database entry for "Alliez:2005:VTM"
+Warning--I didn't find a database entry for "Tournois:2009:IDR"
+Warning--I didn't find a database entry for "MURPHY:2001:APP"
+Warning--I didn't find a database entry for "CohenSteiner:2002:CDT"
+Warning--I didn't find a database entry for "Chew:1987:CDT"
+Warning--I didn't find a database entry for "Si:2005:MPL"
+Warning--I didn't find a database entry for "Shewchuk:2002:CDT"
+Warning--I didn't find a database entry for "Si:2014:ICA"
+Warning--I didn't find a database entry for "Cheng:2008:APD"
+Warning--I didn't find a database entry for "Boissonnat:2005:PGS"
+Warning--I didn't find a database entry for "Jamin:2015:CAG"
+Warning--I didn't find a database entry for "Dey:2008:DAD"
+Warning--I didn't find a database entry for "Chen:2004:ODT"
+Warning--I didn't find a database entry for "SHEWCHUK-triangle1"
+Warning--I didn't find a database entry for "Cheng:2012:DMG"
+Warning--I didn't find a database entry for "Busaryev:RMI:2009"
+Warning--I didn't find a database entry for "triangulation_in_cgal"
+Warning--I didn't find a database entry for "Molino:2003:TMG"
+Warning--I didn't find a database entry for "Bronson:2013:LCC"
+Warning--I didn't find a database entry for "Labelle:2007:ISF"
+Warning--I didn't find a database entry for "Doran:2013:ISI"
+Warning--I didn't find a database entry for "code:quartet"
+Warning--I didn't find a database entry for "Cuilliere:2013:ADM"
+Warning--I didn't find a database entry for "Alauzet:2014:ACA"
+Warning--I didn't find a database entry for "Haimes:2014:MMO"
+Warning--I didn't find a database entry for "Mandad:2015"
+Warning--I didn't find a database entry for "Wang:2021"
+Warning--I didn't find a database entry for "Brochu:2012"
+Warning--I didn't find a database entry for "gumhold2003intersection"
+Warning--I didn't find a database entry for "Garland:1999"
+Warning--I didn't find a database entry for "Popovic:1997"
+Warning--I didn't find a database entry for "CANANN1993185"
+Warning--I didn't find a database entry for "Lori1998"
+Warning--I didn't find a database entry for "Lipman:2012:BDM"
+Warning--I didn't find a database entry for "Alliez:2005"
+Warning--I didn't find a database entry for "Feng:2018:COD"
+Warning--I didn't find a database entry for "Klingner07aggressive"
+Warning--I didn't find a database entry for "Hutchinson:1996"
+Warning--I didn't find a database entry for "Bargteil:2007"
+Warning--I didn't find a database entry for "Wicke:2010"
+Warning--I didn't find a database entry for "Wojtan:2008"
+Warning--I didn't find a database entry for "Klingner:2006"
+Warning--I didn't find a database entry for "Ando:2013"
+Warning--I didn't find a database entry for "Chentanez:2007"
+Warning--I didn't find a database entry for "clausen:2013"
+Warning--I didn't find a database entry for "Villard:2002"
+Warning--I didn't find a database entry for "Bender:2013"
+Warning--I didn't find a database entry for "Li:2005"
+Warning--I didn't find a database entry for "Narain:2012"
+Warning--I didn't find a database entry for "Narain:2013"
+Warning--I didn't find a database entry for "Pfaff:2014"
+Warning--I didn't find a database entry for "Simnett:2009"
+Warning--I didn't find a database entry for "Busaryev:2013"
+Warning--I didn't find a database entry for "Grinspun:2002"
+Warning--I didn't find a database entry for "Li2020IPC"
+Warning--I didn't find a database entry for "luo2004combinatorial"
+Warning--I didn't find a database entry for "Campen:2017:SimilarityMaps"
+Warning--I didn't find a database entry for "Campen:2017:OnSimilarityMaps"
+Warning--I didn't find a database entry for "campen2018seamless"
+Warning--I didn't find a database entry for "gu2018discrete"
+Warning--I didn't find a database entry for "gu2018discrete2"
+Warning--I didn't find a database entry for "springborn2019ideal"
+Warning--I didn't find a database entry for "sun2015discrete"
+Warning--I didn't find a database entry for "Gillespie:2021:DCE"
+Warning--I didn't find a database entry for "Campen:2021"
+Warning--I didn't find a database entry for "Jacobson:2013"
+Warning--I didn't find a database entry for "karras2012maximizing"
+Warning--I didn't find a database entry for "Wang:2020:FE"
 Warning--I didn't find a database entry for "lipman2014bijective"
 Warning--I didn't find a database entry for "floater2003one"
 Warning--I didn't find a database entry for "ciarlet1991basic"
@@ -250,48 +361,49 @@ Warning--I didn't find a database entry for "knabner2001invertibility"
 Warning--I didn't find a database entry for "aigerman2013injective"
 Warning--I didn't find a database entry for "teschner2003optimized"
 Warning--empty institution in abgrall2012
+Warning--empty institution in Baumgart1972
 Warning--empty institution in dobrzynski2017
 Warning--can't use both author and editor fields in Geuzaine2015
 Warning--there's a number but no volume in Ghasemi2016
-You've used 19 entries,
+You've used 31 entries,
             1935 wiz_defined-function locations,
-            968 strings with 12853 characters,
-and the built_in function-call counts, 8303 in all, are:
-= -- 818
-> -- 345
-< -- 13
-+ -- 127
-- -- 115
-* -- 719
-:= -- 1407
-add.period$ -- 60
-call.type$ -- 19
-change.case$ -- 151
-chr.to.int$ -- 19
-cite$ -- 23
-duplicate$ -- 316
-empty$ -- 581
-format.name$ -- 146
-if$ -- 1650
+            1225 strings with 17283 characters,
+and the built_in function-call counts, 13030 in all, are:
+= -- 1291
+> -- 496
+< -- 21
++ -- 181
+- -- 163
+* -- 1119
+:= -- 2212
+add.period$ -- 98
+call.type$ -- 31
+change.case$ -- 236
+chr.to.int$ -- 31
+cite$ -- 36
+duplicate$ -- 503
+empty$ -- 933
+format.name$ -- 210
+if$ -- 2594
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 98
-num.names$ -- 59
-pop$ -- 139
+missing$ -- 29
+newline$ -- 159
+num.names$ -- 95
+pop$ -- 195
 preamble$ -- 1
-purify$ -- 152
+purify$ -- 236
 quote$ -- 0
-skip$ -- 231
+skip$ -- 383
 stack$ -- 0
-substring$ -- 599
-swap$ -- 54
-text.length$ -- 6
+substring$ -- 979
+swap$ -- 84
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
-warning$ -- 4
-while$ -- 66
+type$ -- 184
+warning$ -- 5
+while$ -- 102
 width$ -- 0
-write$ -- 254
-(There were 249 warnings)
+write$ -- 415
+(There were 361 warnings)
