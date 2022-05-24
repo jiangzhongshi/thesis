@@ -20,17 +20,9 @@ Our outputs are guaranteed to have a self-intersection free boundary and the geo
 
 The key ingredient of our algorithm is the separation of the curved volumetric meshing problem into a near-surface, surface curving problem, followed by a restricted type of linear volumetric meshing. 
 
-% This is repetitive
-%For the former, we use prismatic elements to create a valid parametrization close to the surface, and use it to ensure validity during mesh coarsening and curving.
-
-% \TS{i dont think we should state this here}
-% An important subproblem, of independent interest, that we tackle in this paper is constrained linear volumetric meshing (i.e. fill the interior of closed, non self-intersecting triangle mesh without refining it), for which we propose a simple and robust algorithm that is inspired by the TetWild algorithm \cite{hu2018tetrahedral}.
 
 We believe that our curved meshing algorithm will enable wider adoption of curved meshes, as it will provide a way to automatically convert geometric data in multiple formats into a coarse tetrahedral mesh readily usable in finite element applications. To showcase the benefits of our approach we study 2 settings: (1) we show that a coarse proxy mesh can be used to compute non-linear deformations efficiently and transfer them onto a high-resolution geometry, targeting real-time simulation (Figure~\ref{bichon:fig:teaser}), and (2) 
 we show that our meshes are ready to use in downstream FEM simulations.
-
-% Additionally, we show that the boundary of our tetrahedral mesh, which is a curved (yet only $C^0$) surface mesh is useful for automatically generating assets for real-time rendering pipelines, despite the lack of normal continuity across patches.
-% \DP{Or maybe not? Let's see.}
 
 We validate the reference implementation of our approach on a large collection of more than 8000 geometrical models, which will be released as an open-source project to foster the adoption of curved meshes in academia and industry.
 

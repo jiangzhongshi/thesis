@@ -11,14 +11,6 @@ We implemented our algorithm in C++ using Eigen for linear algebra routines. We 
 \paragraph{Robustness.} To demonstrate the robustness of our algorithm, we computed  bijective maps for all the 102 meshes parametrized by the MIQ algorithm \cite{Bommes:2009} \revision{and for the 17 meshes parametrized by  \cite{Myles:2014}} in the dataset proposed by \cite{Myles:2014}. The cuts in these meshes have been designed for locally injective parametrization that usually have major self-overlap. We use them as a stress test for the effectiveness and robustness of our method:  the cuts introduce a massive distortion in the Tutte initialization and lead to boundaries that are prone to overlap in hundreds of locations. Our method successfully creates bijective parametrizations for all these models with default parameters. We attach all the parametrized models in the additional material and show two examples in Figure \ref{scaf:fig:miq_database}. 
 
 
-% To demonstrate robustness in 3D, we deform \DP{XX} surfaces simultaneosly, by prescribing positional constraints that are  We simulate the deformation of a material made of hundreds of elastic layers. We run the simulation both on a 2D slice and on the full 3D model in Figure \ref{scaf:fig:stresstestlayers}. For this example, we compare the result obtained with the SLIM solver proposed in this paper and with the AQP algorithm \cite{}. \DP{TODO after we will know how it looks.}
-
-% \begin{figure}[h]
-% \includegraphics[width=8cm]{scaf-tex/figs/placeholder.png}
-% \caption{Mille-feiulle, both in 2D and 3D \DP{TODO}}
-% \label{scaf:fig:stresstestlayers}
-% \end{figure}
-
 \paragraph{Scalability.} Our methods scales gracefully to large datasets, similarly to \cite{Rabinovich:2017}. We repeat their scalability experiment, but producing bijective maps instead of just locally injective maps (Figure \ref{scaf:fig:scalability}). The behaviour is remarkably similar --- the density of the model (and consequently of the scaffold) does not affect the number of required iterations. 
 
 \begin{figure}[t]
