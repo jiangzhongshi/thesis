@@ -254,7 +254,7 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-\input{abstract}
+\input{front-matter/abstract}
 
 \newpage
 
@@ -296,12 +296,8 @@
 \chapter{Introduction}
 \label{chp-introduction}
 
-% \input{introduction}
-
-
-
-\section{Preliminaries}
-\label{chp-preliminaries}
+\input{front-matter/introduction}
+\input{front-matter/prelim}
 
 
 \chapter{Bijective Maps with Triangulation Augmentation}
@@ -343,18 +339,8 @@
 \chapter{Conclusion}
 \label{chp-conclusion}
 
-% \input{conclusion}
+\input{fromt-matter/conclusion}
 
-
-%% If your thesis has different "Parts", use commands such as the following:
-%\part{First Part\label{part:one}}%
-% \input{chap1}
-%\input{chap2} % further chapters -- change file names to meaningful things...
-%\input{chap3}
-%\part{Second Part\label{part:two}}%
-%\input{chap4}
-%\input{chap5}
-%\input{chap6}
 
 
 %%%%% Appendices start %%%%%%%%%%%%%%%%
@@ -362,10 +348,10 @@
 
 \appendix
 
-\chapter{Appendix}
 
 % \input{appendix}
 \input{prism-tex/11-Appendix.tex}
+\chapter{Curve Meshing related}
 \input{curve_meshing_in_shell_tex/90-bij-proof.tex}
 \input{curve_meshing_in_shell_tex/91-app-local-ops.tex}
 \input{curve_meshing_in_shell_tex/92-app-tetgen.tex}
