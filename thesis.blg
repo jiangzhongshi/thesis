@@ -250,7 +250,6 @@ Warning--I didn't find a database entry for "pmp-library"
 Warning--I didn't find a database entry for "kremer2013openvolumemesh"
 Warning--I didn't find a database entry for "hoppe1996progressive"
 Warning--I didn't find a database entry for "botsch2004remeshing"
-Warning--I didn't find a database entry for "Mantyla1987"
 Warning--I didn't find a database entry for "lienhardt1994n"
 Warning--I didn't find a database entry for "dufourd1991obj3"
 Warning--I didn't find a database entry for "kraemer2014cgogn"
@@ -365,45 +364,45 @@ Warning--empty institution in Baumgart1972
 Warning--empty institution in dobrzynski2017
 Warning--can't use both author and editor fields in Geuzaine2015
 Warning--there's a number but no volume in Ghasemi2016
-You've used 31 entries,
+You've used 32 entries,
             1935 wiz_defined-function locations,
-            1225 strings with 17283 characters,
-and the built_in function-call counts, 13030 in all, are:
-= -- 1291
-> -- 496
-< -- 21
-+ -- 181
-- -- 163
-* -- 1119
-:= -- 2212
-add.period$ -- 98
-call.type$ -- 31
-change.case$ -- 236
-chr.to.int$ -- 31
-cite$ -- 36
-duplicate$ -- 503
-empty$ -- 933
-format.name$ -- 210
-if$ -- 2594
+            1229 strings with 17375 characters,
+and the built_in function-call counts, 13309 in all, are:
+= -- 1316
+> -- 503
+< -- 22
++ -- 185
+- -- 165
+* -- 1136
+:= -- 2263
+add.period$ -- 101
+call.type$ -- 32
+change.case$ -- 241
+chr.to.int$ -- 32
+cite$ -- 37
+duplicate$ -- 517
+empty$ -- 956
+format.name$ -- 213
+if$ -- 2648
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 159
-num.names$ -- 95
-pop$ -- 195
+missing$ -- 31
+newline$ -- 164
+num.names$ -- 98
+pop$ -- 203
 preamble$ -- 1
-purify$ -- 236
+purify$ -- 242
 quote$ -- 0
-skip$ -- 383
+skip$ -- 393
 stack$ -- 0
-substring$ -- 979
-swap$ -- 84
+substring$ -- 993
+swap$ -- 85
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
+type$ -- 188
 warning$ -- 5
-while$ -- 102
+while$ -- 104
 width$ -- 0
-write$ -- 415
-(There were 361 warnings)
+write$ -- 427
+(There were 360 warnings)

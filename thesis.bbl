@@ -124,6 +124,11 @@ Mahmoud, A.~H., Porumbescu, S.~D., and Owens, J.~D. (2021).
 \newblock Rxmesh: A gpu mesh data structure.
 \newblock {\em ACM Trans. Graph.}, 40(4).
 
+\bibitem[M{\"a}ntyl{\"a}, 1987]{Maentylae1987}
+M{\"a}ntyl{\"a}, M. (1987).
+\newblock {\em An introduction to solid modeling}.
+\newblock Computer Science Press, Inc.
+
 \bibitem[Persson and Peraire, 2009]{Persson2009}
 Persson, P.-O. and Peraire, J. (2009).
 \newblock Curved mesh generation and mesh refinement using lagrangian solid

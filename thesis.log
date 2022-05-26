@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  24 MAY 2022 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  26 MAY 2022 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1311,20 +1311,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen352
 \@vwid@roff=\dimen353
 ))
-(docs/thesis.aux
-
-LaTeX Warning: Label `sec:related' multiply defined.
-
-
-LaTeX Warning: Label `sec:related' multiply defined.
-
-
-LaTeX Warning: Label `sec:related' multiply defined.
-
-
-LaTeX Warning: Label `sec:applications' multiply defined.
-
-)
+(docs/thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 171.
@@ -3980,10 +3967,6 @@ ut line 42.
 
 [82]) (./wmtk-tex/03-related.tex
 
-Package natbib Warning: Citation `Mantyla1987' on page 83 undefined on input li
-ne 13.
-
-
 Package natbib Warning: Citation `garland1997surface' on page 83 undefined on i
 nput line 18.
 
@@ -4735,15 +4718,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 40477 strings out of 478305
- 787548 string characters out of 5847251
- 1134894 words of memory out of 5000000
- 56601 multiletter control sequences out of 15000+600000
+ 40484 strings out of 478305
+ 787840 string characters out of 5847251
+ 1135050 words of memory out of 5000000
+ 56608 multiletter control sequences out of 15000+600000
  782791 words of font info for 918 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1353b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4774,7 +4754,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (132 pages, 62575025 bytes).
+Output written on docs/thesis.pdf (132 pages, 62575269 bytes).
 PDF statistics:
  1110 PDF objects out of 1200 (max. 8388607)
  441 compressed objects within 5 object streams
