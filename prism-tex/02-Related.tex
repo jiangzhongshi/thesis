@@ -1,10 +1,10 @@
 
 \section{Related Works}
-\label{sec:related}
-We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{sec:rel:shell}), which are closest to our work.
+\label{prism:sec:related}
+We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{prism:sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{prism:sec:rel:shell}), which are closest to our work.
 
 \subsection{Attribute Transfer}
-\label{sec:rel:transfer}
+\label{prism:sec:rel:transfer}
 
 Transferring attributes is a common task in computer graphics to map colors, normals, or displacements on discrete geometries. 
 The problem is deeply connected with the generation of UV maps, which are piecewise maps that allow to transfer attributes from the planes to surfaces (and composition of a UV map with an inverse may allow transfer between surfaces).  We refer to \cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007} for a complete overview, and we review here only the most relevant works.
@@ -22,7 +22,7 @@ While these approaches allow mappings between completely different surfaces, thi
 %
 Our approach uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
 %\ZJ{we might} 
- We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{sec:applications})
+ We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
 
 \paragraph{Attribute Tracking}
 
@@ -30,23 +30,23 @@ In the specific context of remeshing or mesh optimization, algorithms have been 
 
 
 \subsection{Shell Generation}
-\label{sec:rel:shell}
+\label{prism:sec:rel:shell}
 The generation of shells (boundary layer meshes) around triangle meshes has been studied in graphics and scientific computing.
 
 \paragraph{Envelopes}
-Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{hu2016error} envelopes have been used to control geometric error in planar \cite{hu2019triwild}, surface {\cite{gueziec1996surface,hu2017, Cheng2019}}, and volumetric \cite{hu2018tetrahedral,Hu:2019:fTetWild} remeshing algorithms. Our shells can be similarly used to control the geometric error introduced during remeshing, but they offer the advantage of providing a bijection between the two surfaces, enabling to transfer attributes between them without explicit tracking \cite{cohen1997simplifying}. We show examples of both surface and volumetric remeshing in Section~\ref{sec:applications}.
+Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{hu2016error} envelopes have been used to control geometric error in planar \cite{hu2019triwild}, surface {\cite{gueziec1996surface,hu2017, Cheng2019}}, and volumetric \cite{hu2018tetrahedral,Hu:2019:fTetWild} remeshing algorithms. Our shells can be similarly used to control the geometric error introduced during remeshing, but they offer the advantage of providing a bijection between the two surfaces, enabling to transfer attributes between them without explicit tracking \cite{cohen1997simplifying}. We show examples of both surface and volumetric remeshing in Section~\ref{prism:sec:applications}.
 \revision{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
 where our optimized shells can be used for similar purposes.}
 
 \paragraph{Shell Maps}
-2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{sec:applications}.
+2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{prism:sec:applications}.
 
 \paragraph{Boundary Layer}
 
 Boundary layers are commonly used in computational fluid dynamics simulations requiring highly anisotropic meshing close to the boundary of objects. Their generation is considered challenging \cite{aubry2015most,aubry2017boundary,garimella2000boundary}. These methods generate shells around a given surface, but do not provide a bijective map suitable for attribute transfer.
 %Our shells provide an alternative robust and simple method for solving this problem, including handling surfaces with singularities in a simple way. \DZ{why \cite{aubry2015most} cannot be used to do everything we can do? best to explain}
-%(Section \ref{sec:singularities})\ZJ{The problem is first identified in \cite{sharov2003unstructured} and \cite{aubry2017boundary} provides the provable construction. The advantage of ours is probably robust and simple, in the sense of not requiring spherical Voronoi diagram}.
-%We show preliminary results in Section \ref{sec:applications}, where our method coupled with TetGen \cite{si2015tetgen} enables to produce high-quality boundary layers. %\TS{not necessary->} We, however, postpone the integration into a CFD solver and a more complete study and comparison of our boundary layers algorithms in practical simulation settings to future work.
+%(Section \ref{prism:sec:singularities})\ZJ{The problem is first identified in \cite{sharov2003unstructured} and \cite{aubry2017boundary} provides the provable construction. The advantage of ours is probably robust and simple, in the sense of not requiring spherical Voronoi diagram}.
+%We show preliminary results in Section \ref{prism:sec:applications}, where our method coupled with TetGen \cite{si2015tetgen} enables to produce high-quality boundary layers. %\TS{not necessary->} We, however, postpone the integration into a CFD solver and a more complete study and comparison of our boundary layers algorithms in practical simulation settings to future work.
 
 \paragraph{Collision and Animation}
 

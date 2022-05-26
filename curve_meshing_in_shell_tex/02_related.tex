@@ -1,10 +1,10 @@
-\section{Related Works}\label{sec:related}
+\section{Related Works}\label{cumin:sec:related}
 
 We review the literature on the generation of unstructured and structured curved meshes. We also review the literature on boundary-preserving linear meshing, as it is an intermediate step of our algorithm.
 
 \subsection{Curved Tetrahedral Mesh Generation}
 
-High-order meshes are used in applications in graphics \cite{bargteil2014animation,MEZGER2009680,Suwelack2013} and engineering analysis \cite{Jameson2002} where it is important to reduce the geometric discretization error \cite{Babuska1988,BABUSKA1992159,BASSI1997251,luo2001influence,ODEN1994309}, while using a low number of degrees of freedom. The creation of high-order meshes is typically divided into three steps: (1) linear meshing of the smooth input surface, (2) curving of the linear elements to fit the surface, and (3) optimization to heal the elements inverted during curving. We first cover steps 2 and 3, and postpone the overview of linear tetrahedral algorithms to Section \ref{sec:rel:linear}.
+High-order meshes are used in applications in graphics \cite{bargteil2014animation,MEZGER2009680,Suwelack2013} and engineering analysis \cite{Jameson2002} where it is important to reduce the geometric discretization error \cite{Babuska1988,BABUSKA1992159,BASSI1997251,luo2001influence,ODEN1994309}, while using a low number of degrees of freedom. The creation of high-order meshes is typically divided into three steps: (1) linear meshing of the smooth input surface, (2) curving of the linear elements to fit the surface, and (3) optimization to heal the elements inverted during curving. We first cover steps 2 and 3, and postpone the overview of linear tetrahedral algorithms to Section \ref{cumin:sec:rel:linear}.
 
 \paragraph{Direct methods.} Direct methods are the simplest family of curving algorithms, as they explicitly interpolate a few points of the target curved surface or project the high-order nodes on the curved boundary  \cite{dey1999curvilinear,Ghasemi2016,MOXEY2015636,abgrall2012,sherwin2002mesh,turner2017high,marcon2019semi}. The curved elements are represented using Lagrange polynomials, \cite{dey1999curvilinear,Peir2008}, quadratic or cubic B{\'e}zier polynomials \cite{George2012,Qiukai2013,Luo2002pVersionMG}, or NURBS \cite{ENGVALL2016378,ENGVALL201783}. \cite{SHEPHARD2005251,sherwin2002mesh} further optimizes the high-order node distribution according to geometric quantities of interest, such as length, geodesic distance, and curvature. 
 In the case where no CAD information is available, \cite{wang2016construction}, \cite{jiao2012reconstructing} use smooth reconstruction to compute high-order nodes and perform curving.
@@ -25,7 +25,7 @@ Their algorithm starts with a point cloud sampled from triangle meshes. However,
 Despite the large literature on curve{d} meshing generation, there are very few implementations available. 
 
 Nektar~\cite{moxeynekmesh} is a finite element software with a meshing component, which can generate high-order elements. We do not explicitly compare as their documentation (Section 4.5.1.5 Mesh Correction\footnote{\url{https://doc.nektar.info/userguide/5.0.0/user-guidese17.html}}) states that the algorithm is not fully automatic and not designed to process robustly large collections of models.
-Gmsh~\cite{Geuzaine:2009:gmsh} is an open source software that supports the curved meshing of CAD models, but it does not support dense linear meshes as input. Despite the difference in the input type, we provide a comparison with Gmsh in Section \ref{sec:comparison}, as it is the only method that we could run on a large collection of shapes.
+Gmsh~\cite{Geuzaine:2009:gmsh} is an open source software that supports the curved meshing of CAD models, but it does not support dense linear meshes as input. Despite the difference in the input type, we provide a comparison with Gmsh in Section \ref{cumin:sec:comparison}, as it is the only method that we could run on a large collection of shapes.
 
 To the best of our knowledge, the commercial software that support curved meshing (Pointwise \cite{pointwise,Steve2016}) are also requiring a CAD model as input.
 
@@ -44,7 +44,7 @@ The current state of the art for IGA meshing is a combination of manual decompos
 In contrast, our approach is automatic, i.e. can automatically process thousands of models without any manual intervention, while providing explicit guarantees on both the validity of the elements and the maximal geometric error. Its downside is the $C^0$ continuity of the basis on the elements' interfaces. However, it is unclear to us if this is a real limitation: in many common settings in computer graphics and mechanical engineering (Poisson problems, linear and non-linear elasticity) the higher smoothness offered by spline functions does not make noticeable difference experimentally \cite{schneider2019large} (and it actually leads to much worse conditioning of the system matrix, which is problematic for iterative solvers), and we thus believe that curved tetrahedral meshing is a very exciting alternative as it dramatically simplifies both the meshing and fitting of high-order elements.
 
 \subsection{Boundary Preserving Tetrahedral Meshing}
-\label{sec:rel:linear}
+\label{cumin:sec:rel:linear}
 
 We refer to \cite{hu2018tetrahedral} for a detailed overview of linear tetrahedral meshing, and we focus here only on the techniques that target boundary preserving tetrahedral meshing. 
 

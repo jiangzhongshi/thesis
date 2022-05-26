@@ -42,9 +42,9 @@ As for the non-feature preserving case we always aim to maintain a valid feature
     \label{bichon:fig:stage-1}
 \end{figure}
 
-To account for features we propose to change the prismatic map $\Pi$, that is we only need to change the first stage. This is done in two phases (Figure \ref{bichon:fig:stage-1}): input features snapping (Section~\ref{sec:snapping}) and prism grouping (Section~\ref{sec:macro}). The first phase modifies $\M$ to ``straighten'' the feature to ensure that the coarse prismatic projection preserves them and construct a mapping $b$ between the straighten mesh $\bar\M$ and $\M$. The second phase groups prisms into \emph{macro} prisms to further coarsen the shell.
+To account for features we propose to change the prismatic map $\Pi$, that is we only need to change the first stage. This is done in two phases (Figure \ref{bichon:fig:stage-1}): input features snapping (Section~\ref{cumin:sec:snapping}) and prism grouping (Section~\ref{cumin:sec:macro}). The first phase modifies $\M$ to ``straighten'' the feature to ensure that the coarse prismatic projection preserves them and construct a mapping $b$ between the straighten mesh $\bar\M$ and $\M$. The second phase groups prisms into \emph{macro} prisms to further coarsen the shell.
 
-The outcome of is a \emph{valid} shell $\PS$ with respect to the straighten surface $\bar\M$ (i.e., $\bar\M$ is a section $\PS$) that preserve features, the prismatic projection $\Pi$, and the bijective map $b$ that can be directly used in the curved pipeline (Section~\ref{sec:curved-pipeline}). That is the mapping  $\phi^k$ will be defined as $\phi^k = b \circ \Pi \circ \xi^k$.
+The outcome of is a \emph{valid} shell $\PS$ with respect to the straighten surface $\bar\M$ (i.e., $\bar\M$ is a section $\PS$) that preserve features, the prismatic projection $\Pi$, and the bijective map $b$ that can be directly used in the curved pipeline (Section~\ref{cumin:sec:curved-pipeline}). That is the mapping  $\phi^k$ will be defined as $\phi^k = b \circ \Pi \circ \xi^k$.
 
 
 \begin{figure}
@@ -60,7 +60,7 @@ The first step of our pipeline consists of grouping successive edges $f_i\in\F$ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Feature straightening.}\label{sec:snapping}
+\subsection{Feature straightening.}\label{cumin:sec:snapping}
 To allow feature coarsening we propose to straighten $\M$ to ensure that all features are collinear. In other words, we build, together with the shell $\PS$, a mesh $\bar\M = (\bar V,F)$ (i.e., a mesh with the same connectivity $F$ of $\M$) and features $\bar \F$ such that every triangle of $\bar \M$ has a positive area, $\bar \M$ is a section of $\PS$, and the features in $\bar\F$ are collinear. In such a way the mapping $b$ is trivially defined as piecewise affine ($\bar\M$ and $\M$ share the same connectivity) and it locally injective as long as all the triangles on $\bar\M$ have positive area. Global bijectivity of $b$ follows from the fact that the shell prevents self-intersections of $\bar\M$ \TS{check me}.
 
 
@@ -87,7 +87,7 @@ Note that not all feature can be straighten (Figure~\ref{bichon:fig:snapping-fai
     \caption{Illustration of a macro prism.}
     \label{bichon:fig:zig}
 \end{figure}
-\subsection{Macro Projection Operator.}\label{sec:macro}
+\subsection{Macro Projection Operator.}\label{cumin:sec:macro}
 To allow for more coarsening where snapping is not possible we propose to ``group'' prism next to a feature into one big macro-prism.
 Let $P$ a prism adjacent to a feature poly-line $f\in\bar\F$ (possibly straightened) defined as a chain of $n$ oriented vertices $\bar f_i, i=1,\dots,n$. The macro-prism $P$ is defined as the union of the $n-1$ \emph{sub-prisms} $P_i$ (Figure~\ref{bichon:fig:zig}) with middle surface $(v_1, \bar f_i, \bar f_{i+1})$. The macro projection operator for $P$ is simply defined as the union of the of the sub prismatic maps over each sub-prism $P_i$. We note that this definition does not ensure that the top and bottom surface of the macro-prism are flat.\DP{why is this important?}
 

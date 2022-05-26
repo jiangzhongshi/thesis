@@ -84,17 +84,17 @@ It then performs local operation to improve $\M^k$ (i.e., coarsen it and improve
     \label{bichon:fig:stage-1}
 \end{figure}
 \paragraph{Stage 1: Shell Construction.}
-In the first stage (Section~\ref{sec:surface}) we extend the shell construction of \cite{jiang2020bijective} by preserving feature in $\F$ and $\V$; that is we construct a \emph{valid} shell $\PS$ with respect to the input surface $\M$ (i.e., $\M$ is a section $\PS$) that preserve features; to simplify the explanation we call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\xi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:stage-1}). Note that we do not require $\M$ to be a section of $\prS$.
+In the first stage (Section~\ref{cumin:sec:surface}) we extend the shell construction of \cite{jiang2020bijective} by preserving feature in $\F$ and $\V$; that is we construct a \emph{valid} shell $\PS$ with respect to the input surface $\M$ (i.e., $\M$ is a section $\PS$) that preserve features; to simplify the explanation we call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\xi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:stage-1}). Note that we do not require $\M$ to be a section of $\prS$.
 
 To facilitate the second stage, we restrict the top and bottom surface of $\prS$ to be linear independently from the order of $\xi^k$. The output of this first stage is a high-order volumetric shell (linear on its boundary, curved on the interior), a feature preserving bijective mapping $\phi^k = \Pi \circ \xi^k$, and a trivial \emph{positive} tetrahedralization of $\prS$ with flat boundary. In other words, the tetrahedralization of $\prS$ satisfies all invariants.
 
 \paragraph{Stage 2: Tetrahedral Mesh Generation.}
-In the second stage (Section~\ref{sec:tets}) we use boundary-conforming tetrahedralization to connect the top and bottom surface of $\prS$ with a background tetrahedral mesh, thus generating a \emph{positive} order $k$ tetrahedralization $\M^k$ of a bounding box around the input, which we can further optimize with local operations to improve its quality. % Note that this pipeline  decouples the surface generation and feature preservation problem from the conforming volumetric tassellation, enabling us to tackle these two challenges independently.
+In the second stage (Section~\ref{cumin:sec:tets}) we use boundary-conforming tetrahedralization to connect the top and bottom surface of $\prS$ with a background tetrahedral mesh, thus generating a \emph{positive} order $k$ tetrahedralization $\M^k$ of a bounding box around the input, which we can further optimize with local operations to improve its quality. % Note that this pipeline  decouples the surface generation and feature preservation problem from the conforming volumetric tassellation, enabling us to tackle these two challenges independently.
 
 
 
-\subsection{Feature-Preserving, Curved Shell Construction}\label{sec:surface}
-To simplify the explanation, we first focus on the case where $k=1$ and $\varepsilon = \infty$, that is, we aim at generating a as-coarse-as-possible linear mesh and the feature preserving bijective mapping $\phi^1 = \Pi \circ \xi^1$. We then extend this construction to ensure a user-controlled distance bound $\varepsilon$ from the input (Section \ref{sec:distance}), and finally generalize to high-order geometric maps (Section \ref{sec:high-order}).
+\subsection{Feature-Preserving, Curved Shell Construction}\label{cumin:sec:surface}
+To simplify the explanation, we first focus on the case where $k=1$ and $\varepsilon = \infty$, that is, we aim at generating a as-coarse-as-possible linear mesh and the feature preserving bijective mapping $\phi^1 = \Pi \circ \xi^1$. We then extend this construction to ensure a user-controlled distance bound $\varepsilon$ from the input (Section \ref{cumin:sec:distance}), and finally generalize to high-order geometric maps (Section \ref{cumin:sec:high-order}).
 
 \begin{figure}
     \centering
@@ -177,7 +177,7 @@ Boundary coarsening + feature coarsening.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Distance Bound}\label{sec:distance}
+\subsubsection{Distance Bound}\label{cumin:sec:distance}
 
 In the previous section we explained how to generate a feature preserving coarse linear shell. The output will be a coarse shell $\prS$ whose middle surface can be bijectively mapped to the input triangle mesh $\M$ and whose coarse feature edges are mapped to the input features. To ensure that the middle surface is both coarse and has a controlled distance from the points in $\P$, we interleave a distance check in the construction of $\bar\xi^1$ after each local operation. Formally, after every local operation we use the mapping $\phi^1$ to map every point $p_i\in\P$ to $\bar p_i = \phi^1(p_i)$ a point on the coarse middle surface of $\prS$ and, if $\|p_i-\bar p_i\| \geq \varepsilon$ we reject the operation. The initial shell is trivially a valid initialization as $\phi^1$ is identity and thus the distance is zero. Note that, $\bar p_i$ is not necessarily the closest point to $p_i$ on $\partial\M$, thus $\|p_i-\bar p_i\|$ is an upper bound on the actual pointwise distance.  \TS{normals?} \ZJ{Same procedure, still on my todo list.}
 
@@ -186,7 +186,7 @@ In the previous section we explained how to generate a feature preserving coarse
 single model, many different distance values.
 
 
-\subsubsection{High-order}\label{sec:high-order}
+\subsubsection{High-order}\label{cumin:sec:high-order}
 In the previous section we explained how to generate a feature preserving distance bound coarse linear shell, that is an output that satisfies all invariants. The output will be a coarse shell $\prS$ with piecewise linear middle surface; to facilitate the coarsening of the middle surface we curve it, which accounts for changing the mapping $\xi^k = \zeta\circ (\bar\xi^k)^{-1}$ ($k > 1$), in particular the mapping $\bar\xi^k$. We note that, to decouple the following tetrahedral mesh generation and the curved shell generation, we ensure that $\bar\xi^k$ maps the top and bottom face of $\bar P$ to a linear triangle.
 
 After each local operation, we generate samples $\hat s_i, i=1,\dots,m$ on the parametric base of the prism $\hat P$ and use $\Pi^{-1}\circ \zeta$ to map $s_i$ back to $\M$ and $\bar \xi^k$ to map them to $\partial\M$. Using the mapped point we solve
@@ -206,7 +206,7 @@ We note that the control points of the top and bottom surface are fixed to ensur
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boundary Conforming Tetrahedral Meshing}\label{sec:tets}
+\subsection{Boundary Conforming Tetrahedral Meshing}\label{cumin:sec:tets}
 
 \TODO{not done yet}
 Then we need to fill in the space defined by bottom surfaces.

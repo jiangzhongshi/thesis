@@ -1,5 +1,5 @@
 \section{Results}
-\label{sec:results}
+\label{prism:sec:results}
 Our algorithm is implemented in C++ and uses Eigen \cite{eigenweb} for the linear algebra routines, CGAL \revision{\cite{cgal2008computational}} and Geogram \cite{levy2015geogram} for predicates and spatial searching, and libigl \cite{jacobson2016libigl} for basic geometry processing routines.
 We run our experiments on cluster nodes with a Xeon E5-2690 v2 @ 3.00GHz.
 The reference implementation used to generate the results is attached to the submission and will be released as an open-source project.
@@ -104,7 +104,7 @@ We compare the same experiment with the Phong projection \cite{kobbelt1998intera
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Applications}
-\label{sec:applications}
+\label{prism:sec:applications}
 Using our shell $\S$, we implement the following predicates and functions:
 \begin{itemize}
     \item $\isinside(p)$: returns true if the point $p \in \mathbb{R}^3$ is inside $\S$. %\TS{and there is only one prism containing $p$}
@@ -117,7 +117,7 @@ Using our shell $\S$, we implement the following predicates and functions:
     \item \revision{$\P_\T^{-1}(\text{pid},\alpha,\beta)$ is the inverse of $\P_\T$.}
 \end{itemize}
 
-As explained in Section~\ref{sec:method}, our shell may self-intersect and 
+As explained in Section~\ref{prism:sec:method}, our shell may self-intersect and 
 %to avoid keeping track of the correspondences, 
 we opted to simply exclude the overlapping regions. In practice this affects only the function $\isinside(p)$ which needs to check if $p$ is contained in two or more non-adjacent prisms. 
 
@@ -233,7 +233,7 @@ even on challenging geometry configurations, and our shell can thus be used to a
 \paragraph{Geometric Textures.}
 The inverse projection operator provides a 2.5D parametrization around a given mesh and can be used to apply a volumetric texture (Figure \ref{prism:fig:volumetric-textures}).
 Note that we build the volumetric texture on the simplified shell, while still being able to bijectively transfer the texture coordinates.
-%We also believe our discussion on the valid shells (Section~\ref{sec:singularities}) will be the building block for a robust shell map algorithm.}
+%We also believe our discussion on the valid shells (Section~\ref{prism:sec:singularities}) will be the building block for a robust shell map algorithm.}
 
 
 
@@ -243,7 +243,7 @@ Note that we build the volumetric texture on the simplified shell, while still b
 
 
 
-\section{Variants}\label{sec:variants}
+\section{Variants}\label{prism:sec:variants}
 
 
 \paragraph{Input with Self-Intersections}
@@ -251,7 +251,7 @@ Up to this point, we assumed that our input meshes are without self-intersection
 
 However, our method can be easily extended to meshes containing self-intersections, broadening the class of meshes it can be applied to, at the cost of making the resulting shell usable in fewer application scenarios: for example, if it is used for remeshing, it will likely generate a new surface that still contains self-intersections.
 
-If $\T$ contains self-intersections, our algorithm can be trivially extended to generate a shell which will be \emph{locally injective}, and the bijectivity of the mapping between sections still holds but with respect to the immersion. The only change required is to modify the invariance checks (Section \ref{sec:optimization}): we have to replace the global intersection check with checking whether local triangles overlap with the current prisms. Figure~\ref{prism:fig:intersect-leg} shows an example of a mesh $\T$ with self-intersections, the generated shell, and the isolines of geodesic transferred on the coarser middle surface.
+If $\T$ contains self-intersections, our algorithm can be trivially extended to generate a shell which will be \emph{locally injective}, and the bijectivity of the mapping between sections still holds but with respect to the immersion. The only change required is to modify the invariance checks (Section \ref{prism:sec:optimization}): we have to replace the global intersection check with checking whether local triangles overlap with the current prisms. Figure~\ref{prism:fig:intersect-leg} shows an example of a mesh $\T$ with self-intersections, the generated shell, and the isolines of geodesic transferred on the coarser middle surface.
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{prism-tex/figs/leg-intersect}
@@ -270,7 +270,7 @@ If $\T$ contains self-intersections, our algorithm can be trivially extended to 
 \end{figure}
 
 \paragraph{Resolving Shell Self-Intersections}
-\label{sec:postprocessing}
+\label{prism:sec:postprocessing}
 % During initialization and optimization, we forbid the top and bottom surfaces to intersect with $\T$. However, the optimized shell $\S$ might have self-intersections, i.e. there can be a point in ambient space contained in more than one prism.  While this is not an issue for our shell construction and optimization (which is defined inside every prism), this is not desirable for specific applications 
 % where the offset surface we created for geometry processing tasks. 
 For certain applications it might be preferable to have a shell whose  \revision{top and bottom surfaces do} not self-intersect:
@@ -286,7 +286,7 @@ does not provide guarantees on the success (e.g., the reference implementation o
 \end{figure}
 
 To resolve the self-intersections of the top (bottom) surface, we identify the regions covered by more than one prism by explicitly testing intersections between the tetrahedralized prisms, accelerated using \cite{zomorodian2000fast}. For every detected prism, we reduce the thickness by 20\%, and iterate until no more intersections are found. 
-Differently from the procedure in Section \ref{sec:initialization}, where reducing the thickness of the shell always maintains the validity of the shell, at this stage, the shrinking of the shell may make the shell invalid, since $\T$ may not be contained anymore in $\S$. 
+Differently from the procedure in Section \ref{prism:sec:initialization}, where reducing the thickness of the shell always maintains the validity of the shell, at this stage, the shrinking of the shell may make the shell invalid, since $\T$ may not be contained anymore in $\S$. 
 Whenever this happens, we perform one step of red-green refinement \cite{bank1983some} on the regions we wish to thin, and we iterate until we succeed. This procedure is guaranteed to terminate since, on the limit of the refinement, the middle surface will be geometrically identical to $\T$, and thus Theorem \ref{thm:thickness} holds.
 In the worst case, the procedure terminates when the size of triangles on the middle surface is comparable to the input; then no refinement is required to shrink below the minimum separation of the input.
 Figure~\ref{prism:fig:shell_shrinking-cages} shows how the intersecting shell between the legs of the camel can be shrunk to generate an intersection-free shell. 
@@ -306,7 +306,7 @@ Figure~\ref{prism:fig:shell_shrinking-cages} shows how the intersecting shell be
 \paragraph{Pinching Alternative.} For certain applications, such as boundary layer meshing, it is necessary to have a shell with non-zero thickness everywhere, including at singularities, and it is tolerable to lose bijectivity at the vicinity of a singularity. For these cases, we propose a Boolean construction to \emph{fill} the shell around singularities, and to extend the projection operator $\P$ inside these regions. That is, every point in the filled region will project to the singularity. 
 % An unavoidable (with our definition of projection) side effect of this construction is that $\P$ loses local injectivity.
 
-Without loss of generality, let us assume that $\T$ has a single singularity (Figure \ref{prism:fig:singularity-boolean}). We initially construct a pinched shell, with zero thickness at the singularity, construct a valid shell (Section~\ref{sec:method}), and then perform a corefinement~\cite{corefinement} between a tetrahedron (centered at the singularity and whose size is smaller than the minimal thickness of the neighboring vertices) and the shell. The result of the corefinement operation (Figure \ref{prism:fig:singularity-boolean} middle) consists of triangles belong to the tetrahedron, or the shell surface. The remaining part of the tetrahedron is a star-shaped polyhedron with the singularity in its kernel, and sharing a part of its boundary with the shell. This polyhedron can be easily tetrahedralized by connecting its triangulated boundary faces (one of them is highlighted in red in Figure \ref{prism:fig:singularity-boolean} middle) with the singularity. For every point $p$ in these tetrahedra, the projection operator $\P$ projects $p$ to the singularity. The remaining triangles are divided into two groups: 
+Without loss of generality, let us assume that $\T$ has a single singularity (Figure \ref{prism:fig:singularity-boolean}). We initially construct a pinched shell, with zero thickness at the singularity, construct a valid shell (Section~\ref{prism:sec:method}), and then perform a corefinement~\cite{corefinement} between a tetrahedron (centered at the singularity and whose size is smaller than the minimal thickness of the neighboring vertices) and the shell. The result of the corefinement operation (Figure \ref{prism:fig:singularity-boolean} middle) consists of triangles belong to the tetrahedron, or the shell surface. The remaining part of the tetrahedron is a star-shaped polyhedron with the singularity in its kernel, and sharing a part of its boundary with the shell. This polyhedron can be easily tetrahedralized by connecting its triangulated boundary faces (one of them is highlighted in red in Figure \ref{prism:fig:singularity-boolean} middle) with the singularity. For every point $p$ in these tetrahedra, the projection operator $\P$ projects $p$ to the singularity. The remaining triangles are divided into two groups: 
 the triangles with only one new vertex complete the degenerate prisms (one of them is highlighted in blue in Figure \ref{prism:fig:singularity-boolean} middle), 
 while the others map to the edges they are attached to.
 

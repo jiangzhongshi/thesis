@@ -90,7 +90,7 @@ Figure~\ref{bichon:fig:us-vs-ftetwild} shows how our method successfully {captur
     \label{bichon:fig:quality}
 \end{figure}
 
-The output of our algorithm can be directly used in {the} simulation (Section~\ref{sec:application}) since we guarantee that the geometric mapping $g$ is positive. To ensure good conditioning and performance of the numerical solver, we measure the MIPS energy~\cite{hormann2000mips,fu2015computing} of our output meshes (Figure~\ref{bichon:fig:quality}). 
+The output of our algorithm can be directly used in {the} simulation (Section~\ref{cumin:sec:application}) since we guarantee that the geometric mapping $g$ is positive. To ensure good conditioning and performance of the numerical solver, we measure the MIPS energy~\cite{hormann2000mips,fu2015computing} of our output meshes (Figure~\ref{bichon:fig:quality}). 
 
 \begin{figure}
     \centering
@@ -114,7 +114,7 @@ Figure~\ref{bichon:fig:timings} shows the running time of our method with respec
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Comparisons}\label{sec:comparison}
+\subsection{Comparisons}\label{cumin:sec:comparison}
 
 
 
@@ -137,7 +137,7 @@ Figure~\ref{bichon:fig:timings} shows the running time of our method with respec
 
 From our discussions with the authors, we observed that curved ODT generates a \emph{valid} output when we provide (1) a sufficiently large number of vertices and (2) a good local feature size sizing field (LFS)~\cite{alliez2005variational} to efficiently spend the vertex budget in the regions with more geometrical details.  Figure~\ref{bichon:fig:cdt} shows an example of a model for which \cite{feng2018curved} fails to converge when using a uniform sizing field, while it succeeds when the sizing field is used.
 
-In contrast, our algorithm can be run automatically on {a} large collection of geometrical models, it is guaranteed to have positive Jacobian (up to the use of floating-point predicates, Section~\ref{sec:conclusion}), it preserves features, it automatically controls the density of the output depending on the desired user-provided distance threshold, and it provides a bijective map between the input mesh the boundary of the curved surface. For the model in Figure \ref{bichon:fig:cdt}, our result contains 2037 elements, 18 times less than the curved ODT algorithm. %We note that the LFSSF is brittle and the authors were unable to generate it for complex models with features (see additional material), thus their algorithm fails.
+In contrast, our algorithm can be run automatically on {a} large collection of geometrical models, it is guaranteed to have positive Jacobian (up to the use of floating-point predicates, Section~\ref{cumin:sec:conclusion}), it preserves features, it automatically controls the density of the output depending on the desired user-provided distance threshold, and it provides a bijective map between the input mesh the boundary of the curved surface. For the model in Figure \ref{bichon:fig:cdt}, our result contains 2037 elements, 18 times less than the curved ODT algorithm. %We note that the LFSSF is brittle and the authors were unable to generate it for complex models with features (see additional material), thus their algorithm fails.
 
 
 \begin{figure}
@@ -189,7 +189,7 @@ Since the input to our method is a triangle mesh, our method naturally supports 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Applications}\label{sec:application}
+\subsection{Applications}\label{cumin:sec:application}
 
 
 \begin{figure}

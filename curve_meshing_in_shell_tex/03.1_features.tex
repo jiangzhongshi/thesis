@@ -1,4 +1,4 @@
-\section{Feature Preserving Curved Shell}\label{sec:features-pres}
+\section{Feature Preserving Curved Shell}\label{cumin:sec:features-pres}
 
 
 \begin{figure}
@@ -64,9 +64,9 @@ As for the non-feature preserving case, we always aim to maintain a valid featur
     \label{bichon:fig:ex-snapping}
 \end{figure}
 
-To account for features, we propose to change the prismatic map $\Pi$, that is, we only need to change the first stage. This is done by snapping the input features  (Section~\ref{sec:snapping}). That is, we modify $\M$ to ``straighten'' the feature to ensure that the coarse prismatic projection preserves them and construct a mapping $\beta$ between the {straight} mesh $\overline\M$ and $\M$ (Figure~\ref{bichon:fig:ex-snapping}). 
+To account for features, we propose to change the prismatic map $\Pi$, that is, we only need to change the first stage. This is done by snapping the input features  (Section~\ref{cumin:sec:snapping}). That is, we modify $\M$ to ``straighten'' the feature to ensure that the coarse prismatic projection preserves them and construct a mapping $\beta$ between the {straight} mesh $\overline\M$ and $\M$ (Figure~\ref{bichon:fig:ex-snapping}). 
 
-The outcome {is} a \emph{valid} shell $\PS$ with respect to the {straight} surface $\overline\M$ (i.e., $\overline\M$ is a section $\PS$) that preserve features, the prismatic projection $\Pi$, and the bijective map $\beta$ that can be directly used in the curved pipeline (Section~\ref{sec:curved-pipeline}). That is, the mapping  $\phi^k$ will be defined as $\phi^k = \beta \circ \Pi \circ \psi^k$.
+The outcome {is} a \emph{valid} shell $\PS$ with respect to the {straight} surface $\overline\M$ (i.e., $\overline\M$ is a section $\PS$) that preserve features, the prismatic projection $\Pi$, and the bijective map $\beta$ that can be directly used in the curved pipeline (Section~\ref{cumin:sec:curved-pipeline}). That is, the mapping  $\phi^k$ will be defined as $\phi^k = \beta \circ \Pi \circ \psi^k$.
 
 As for the non-preserving feature pipeline we ensure that our conditions are always met, starting {from} a trivial input and rejecting operations violating them. Our goal is to modify the input mesh $\M$ and create $\overline\M$ by moving its vertices. In such a way, the mapping $\beta$ is simply barycentric. To guarantee bijectivity of $\phi^k$ we need to ensure that all {mappings} composing it are bijective, in particular $\beta$. To ensure that $\beta$ is bijective it is enough that $\overline\M$ is self-intersection free (guaranteed by the shell construction) and that all its triangles have positive area. By straightening the features of $\M$ we ensure that the edges of the prism will map to the feature. Thus, $\phi^k$ will be feature preserving.
 
@@ -85,7 +85,7 @@ The first step of our pipeline consists of grouping successive edges $f_i\in\F$ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Feature straightening.}\label{sec:snapping}
+\subsection{Feature straightening.}\label{cumin:sec:snapping}
 To allow feature coarsening, we propose to straighten $\M$ to ensure that all features are collinear. In other words, we build, together with the shell $\PS$, a mesh $\overline\M = (\overline V,F)$ (i.e., a mesh with the same connectivity $F$ of $\M$) and features $\overline \F$ such that every triangle of $\overline \M$ has a positive area, $\overline \M$ is a section of $\PS$, and the features in $\overline\F$ are collinear. 
 In such a way, the mapping $\beta$ is trivially defined as piecewise affine ($\overline\M$ and $\M$ share the same connectivity) and is locally injective as long as all the triangles on $\overline\M$ have positive {areas}. Note that the bijectivity of $\beta$ follows from the fact that the shell prevents self-intersections of $\overline\M$.
 

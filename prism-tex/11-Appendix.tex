@@ -169,7 +169,7 @@ thus $\Prism_i'\cap \T $ is a simply connected topological disk.
 
 
 \section{Extension to meshes with Singularities}\label{app:singularity}
-Most of the proofs and definition in Section~\ref{sec:method} easily extends to meshes with singularity or pinched shells. For instance,
+Most of the proofs and definition in Section~\ref{prism:sec:method} easily extends to meshes with singularity or pinched shells. For instance,
 \revision{both} Theorem~\ref{thm:projection} and Definition~\ref{def:validshell} apply to pinched shells by just considering a prism made of 4 (2 for the top and 2 for the bottom slab) instead of 6. Propositions~\ref{thm:I1} and~\ref{thm:thickness} both rely on per-vertex properties; by just excluding singular vertices (and neighboring prism) from the statements the proofs (and our algorithm) still holds.
 
 
@@ -184,7 +184,7 @@ Finally Proposition~\ref{thm:bevel} requires a new proof since the beveling patt
 \begin{proof}
 In  Figure~\ref{prism:fig:bevel-explain} right, we highlight in red and orange the triangles not covered by the discussion in Appendix~\ref{app:bevel}. 
 The prism corresponding to an orange middle triangle intersects the edge-adjacent triangle. And since the new pillars are computed as the average of the normals of the two adjacent triangles with dihedral angle strictly less than $360^\circ$ 
- (Section~\ref{sec:singularities} inset), each dot product is positive. 
+ (Section~\ref{prism:sec:singularities} inset), each dot product is positive. 
 The prism \revision{for} a pink middle triangle intersects only the interior of the original triangle, and the dot product between the pillars and the triangle normal are positive by construction. %\DZ{compatible?}
 \end{proof}
 
@@ -244,7 +244,7 @@ it is easy to verify \revision{that the following are positive},
 
 
 \section{Double Slab}\label{app:dblayer}
-In Section~\ref{sec:projection}, we explain that we want to ensure that our shell validity is independent from the enumeration of the faces; for this reason, we require that the conditions I1 and I2 are satisfied for all possible decompositions. Without using the double slab, different decompositions of the prism will result in  different intersections with the middle surface. In other words, the projection operator will project the input mesh to a different set of triangles on the middle surface. 
+In Section~\ref{prism:sec:projection}, we explain that we want to ensure that our shell validity is independent from the enumeration of the faces; for this reason, we require that the conditions I1 and I2 are satisfied for all possible decompositions. Without using the double slab, different decompositions of the prism will result in  different intersections with the middle surface. In other words, the projection operator will project the input mesh to a different set of triangles on the middle surface. 
 The double slab makes the middle surface independent of the decomposition by construction. 
 We note that Theorem~\ref{thm:bevel} is valid only for double-slab prisms since the statement requires that one prism contains only one triangle.
 

@@ -31,7 +31,7 @@ The algorithm to build the shell creates an initial valid extrusion, potentially
 
 
 \subsection{Variation from the Original Algorithm}
-To extend the shell formulation in~\cite{jiang2020bijective} to accommodate for feature preservation (Section \ref{sec:features-pres}), we modify the definition of a valid section~\cite[Definition 3.1]{jiang2020bijective}, by relaxing the intersection between a triangle and a prism in the discrete case. That is, we do not consider the prism to be intersecting a triangle if they share only one vertex of the triangle; we also ignore the intersection if they intersect on a feature edge on opposite sides. The bijectivity and validity condition of the shell projection trivially holds.
+To extend the shell formulation in~\cite{jiang2020bijective} to accommodate for feature preservation (Section \ref{cumin:sec:features-pres}), we modify the definition of a valid section~\cite[Definition 3.1]{jiang2020bijective}, by relaxing the intersection between a triangle and a prism in the discrete case. That is, we do not consider the prism to be intersecting a triangle if they share only one vertex of the triangle; we also ignore the intersection if they intersect on a feature edge on opposite sides. The bijectivity and validity condition of the shell projection trivially holds.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,13 +43,13 @@ To extend the shell formulation in~\cite{jiang2020bijective} to accommodate for 
     \label{bichon:fig:input-output}
 \end{figure}
 
-\section{Curved Tetrahedral Mesh Generation}\label{sec:curved-pipeline}
+\section{Curved Tetrahedral Mesh Generation}\label{cumin:sec:curved-pipeline}
 
 
 
 \paragraph{Input.}
 The input of our algorithm is a collection of oriented manifold, watertight, self-intersection-free triangle mesh $\M=(V,F)$, and a set of points $p_i\in\P$ (possibly empty) on the surface of $\M$ (Figure~\ref{bichon:fig:input-output}, left) where the distance bound $\varepsilon$ is prescribed. The collection $\M$ must be consistently oriented such that it is the boundary of an oriented 3-manifold.
-A set of edges can also be optionally provided as annotated features (Section~\ref{sec:features-pres}).
+A set of edges can also be optionally provided as annotated features (Section~\ref{cumin:sec:features-pres}).
 
 \begin{figure}
     \centering
@@ -74,7 +74,7 @@ Figure~\ref{bichon:fig:high-order} shows the position of the control points $c_j
 In particular, for $k=1$, since $g$ is affine, $J_{g^\tau}$ is constant and the positivity reduces to the positive orientation of the vertices \cite{shewchuk1997adaptive}.
 
 Note that, while bijectivity of the geometric map $g^\tau$ implies positivity, the reverse is not true. 
-Therefore, our algorithm not only checks for $\det(J_{g^\tau}) > 0$, but also ensures that the boundary $\partial\T^k$ does not intersect; we show in Appendix~\ref{sec:bij-proof} that these two conditions guarantee the bijectivity of $g^\tau$.
+Therefore, our algorithm not only checks for $\det(J_{g^\tau}) > 0$, but also ensures that the boundary $\partial\T^k$ does not intersect; we show in Appendix~\ref{cumin:sec:bij-proof} that these two conditions guarantee the bijectivity of $g^\tau$.
 Furthermore, our algorithm ensures that the distance from any point in $\P$ to $\partial\T^k$ (the surface of $\T^k$) is smaller than an user-controlled parameter $\varepsilon$.
 
 \begin{figure}
@@ -144,18 +144,18 @@ To achieve this goal, our algorithm uses two stages: (1) curved shell generation
 \end{figure}
 
 \paragraph{Stage 1: Curved Shell Construction.}
-In the first stage (Section~\ref{sec:high-order}) we extend the shell construction of~\cite{jiang2020bijective} by combining the shell projection $\Pi$ with {a} high-order mapping 
+In the first stage (Section~\ref{cumin:sec:high-order}) we extend the shell construction of~\cite{jiang2020bijective} by combining the shell projection $\Pi$ with {a} high-order mapping 
 \[
 \psi^k \colon \prS \to \PS.
 \]
-We start form the \emph{valid} shell $\PS$ constructed from the input mesh $\M$ (i.e., $\M$ is a section $\PS$). We call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{curved prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\psi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:pipeline}, first three figures) that ensures that the distance between $\M$ and $\partial\T^k$ is smaller than $\varepsilon$ (Section~\ref{sec:distance}). That is, $\phi^k(p) < \varepsilon$ for any $p\in\P$. (Note that we do not require $\M$ to be a section of $\prS$.)
+We start form the \emph{valid} shell $\PS$ constructed from the input mesh $\M$ (i.e., $\M$ is a section $\PS$). We call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{curved prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\psi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:pipeline}, first three figures) that ensures that the distance between $\M$ and $\partial\T^k$ is smaller than $\varepsilon$ (Section~\ref{cumin:sec:distance}). That is, $\phi^k(p) < \varepsilon$ for any $p\in\P$. (Note that we do not require $\M$ to be a section of $\prS$.)
 
-To facilitate the volumetric meshing in the next stage (Section~\ref{sec:tets}), we restrict the top and bottom surface of $\prS$ to be linear (independently from the order of $\psi^k$). The final output of this first stage is a high-order volumetric shell,
+To facilitate the volumetric meshing in the next stage (Section~\ref{cumin:sec:tets}), we restrict the top and bottom surface of $\prS$ to be linear (independently from the order of $\psi^k$). The final output of this first stage is a high-order volumetric shell,
 a bijective mapping $\phi^k = \Pi \circ \psi^k$,
 and a \emph{positive} tetrahedralization of $\prS$ with flat boundary. In other words, the tetrahedralization of $\prS$ satisfies~\ref{def:curved-mesh}.
 
 \paragraph{Stage 2: Tetrahedral Mesh Generation.}
-In the second stage (Section~\ref{sec:tets}) we use boundary-conforming tetrahedralization to connect the top and bottom surface of $\prS$ with a background tetrahedral mesh, thus generating a \emph{positive} order $k$ tetrahedralization $\T^k$ of a bounding box around the input, which we can further optimize with local operations to improve its quality  (Figure~\ref{bichon:fig:pipeline}, last two figures). % Note that this pipeline  decouples the surface generation and feature preservation problem from the conforming volumetric tassellation, enabling us to tackle these two challenges independently.
+In the second stage (Section~\ref{cumin:sec:tets}) we use boundary-conforming tetrahedralization to connect the top and bottom surface of $\prS$ with a background tetrahedral mesh, thus generating a \emph{positive} order $k$ tetrahedralization $\T^k$ of a bounding box around the input, which we can further optimize with local operations to improve its quality  (Figure~\ref{bichon:fig:pipeline}, last two figures). % Note that this pipeline  decouples the surface generation and feature preservation problem from the conforming volumetric tassellation, enabling us to tackle these two challenges independently.
 
 
 To ensure that our first condition is satisfied{,} we define the mapping $\phi^k$ as a composition of several mappings{,} which we ensure are bijective. 
@@ -164,7 +164,7 @@ After every operation, we recompute the distance and ``undo'' the operation if t
 Ensuring the condition while coarsening $\M$ {allows} us to generate a coarse \emph{curved} tetrahedral mesh $\T^k$ and the \emph{bijective} map $\phi^k$ to the input mesh $\M$.
 
 
-\subsection{High-order Shells}\label{sec:high-order}
+\subsection{High-order Shells}\label{cumin:sec:high-order}
 To simplify the explanation, we first focus on the case where $\varepsilon = \infty$, that is, we aim at generating {an} as-coarse-as-possible curved mesh. Note that, the trivial solution (i.e., a single tetrahedron) is not necessary a valid $\T^k$ since it would be impossible to build the bijective mapping $\phi^k$.
 
 The output of~\cite{jiang2020bijective} is a coarse shell $\PS$ with {a} piecewise linear middle surface. To curve it, we construct a shell $\prS$ and the bijective map $\psi^k$ while constructing $\PS$. 
@@ -216,7 +216,7 @@ $\widetilde\omega^k$ by checking positivity of the determinant~\cite{johnen2013g
     \label{bichon:fig:distance}
 \end{figure}
 
-\subsection{Distance Bound}\label{sec:distance}
+\subsection{Distance Bound}\label{cumin:sec:distance}
 
 In the previous section, we explained how to generate a curved shell $\prS$ that satisfies~\ref{def:curved-mesh}. To ensure that the middle surface of $\prS$ has a controlled distance from the points in $\P$, we interleave a distance check in the construction of $\widetilde\omega^k$ after each local operation. Formally, after every local operation we use the mapping $\phi^k$ to map every point $p_i\in\P$ to $\widetilde p_i = \phi^k(p_i)$ a point on the coarse curved middle surface of $\prS$ and, if $\|p_i-\widetilde p_i\| \geq \varepsilon$ we reject the operation. The initial shell is trivially a valid initialization as $\phi^k$ is identity and thus, the distance is zero. Note that, $\widetilde p_i$ is not necessarily the closest point to $p_i$ on $\partial\T$, thus $\|p_i-\widetilde p_i\|$ is an upper bound on the actual pointwise distance. Figure~\ref{bichon:fig:distance} shows the effect of the distance bound on the surface; a small distance will lead to a denser mesh with more details, while a {large} one will allow for more coarsening.
 
@@ -224,7 +224,7 @@ In the previous section, we explained how to generate a curved shell $\prS$ that
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Tetrahedral Meshing}\label{sec:tets}
+\subsection{Tetrahedral Meshing}\label{cumin:sec:tets}
 
 The outcome of the previous stage is a curved tetrahedralization of $\prS$ that closely approximates $\M$ with linear (``flat'') boundaries. We now consider the problem of filling its interior (and optionally its exterior) with a tetrahedral mesh, a problem known as  \emph{conforming boundary preserving} tetrahedralization. 
 
@@ -240,7 +240,7 @@ The outcome of the previous stage is a curved tetrahedralization of $\prS$ that 
     \label{bichon:fig:conforming-overview}
 \end{figure}
 
-Several solution exists for this problem (Section~\ref{sec:rel:linear}) and the most common implementation is TetGen~\cite{tetgen}. Most algorithms refine the boundary, which allows {deriving} bounds on the quality of the tetrahedral mesh. However, in our setting, this is problematic, as any change will have to be propagated to the curved shell. To avoid coupling the volumetric meshing problem with the curved shell coarsening, while technically possible it is very challenging to implement robustly, we opt for using a tetrahedral meshing algorithm that preserves the boundary exactly. Not many algorithms support this additional constraint, the only one with a public implementation is the widely used TetGen algorithm. However, we discovered that, when this option is used, it suffers from robustness issues, which we detail in Appendix \ref{app:tetgen}.
+Several solution exists for this problem (Section~\ref{cumin:sec:rel:linear}) and the most common implementation is TetGen~\cite{tetgen}. Most algorithms refine the boundary, which allows {deriving} bounds on the quality of the tetrahedral mesh. However, in our setting, this is problematic, as any change will have to be propagated to the curved shell. To avoid coupling the volumetric meshing problem with the curved shell coarsening, while technically possible it is very challenging to implement robustly, we opt for using a tetrahedral meshing algorithm that preserves the boundary exactly. Not many algorithms support this additional constraint, the only one with a public implementation is the widely used TetGen algorithm. However, we discovered that, when this option is used, it suffers from robustness issues, which we detail in Appendix \ref{app:tetgen}.
 %
 To solve this problem in our specific setting, we propose in the following five step algorithm (Figure~\ref{bichon:fig:conforming-overview}) taking advantage of the availability of a shell, based on the  TetWild~\cite{hu2018tetrahedral} algorithm. %\DP{Can we avoid it?} We refer to Appendix~\ref{app:tetwild} for a brief overview of the TetWild algorithm.
 % Without loss of generality we focus the explanation to the bottom surface, as for the top surface it is equivalent.

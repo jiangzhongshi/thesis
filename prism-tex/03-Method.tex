@@ -6,13 +6,13 @@
     
 \end{figure}
 
-\section{Method}\label{sec:method}
+\section{Method}\label{prism:sec:method}
 Our algorithm (Figure~\ref{prism:fig:pipeline}) converts a self-intersection free, orientable, manifold triangle mesh $\T = \{V_\T,F_\T\}$, where $V_\T$ are the vertex coordinates and
 $F_\T$ the connectivity of the mesh, into a shell composed of generalized prisms $\S = \{(B_\S,M_\S,T_\S),F_\S\}$, where $B_\S$, $M_\S$, $T_\S$ are bottom, middle, and top surfaces of the shell, 
 consisting of bottom, middle, and top  triangles of the prisms,
 and $F_\S$  is the connectivity of the prisms (Figure \ref{prism:fig:corona}).
 The algorithm initially generates a shell $\S$ whose middle surface $M_\S$ has the same geometry as the input surface $\T$ (possibly with refined connectivity),
-and then optimizes it while ensuring that $\T$ is contained inside and projects bijectively to $M_\S$. The shell induces a volumetric vector field $\V$ and a projection operator $\P$ in the interior of each of its prisms (Section \ref{sec:projection}). This output can be used directly in many geometry processing tasks, as we discuss in detail in Section~\ref{sec:applications}.
+and then optimizes it while ensuring that $\T$ is contained inside and projects bijectively to $M_\S$. The shell induces a volumetric vector field $\V$ and a projection operator $\P$ in the interior of each of its prisms (Section \ref{prism:sec:projection}). This output can be used directly in many geometry processing tasks, as we discuss in detail in Section~\ref{prism:sec:applications}.
 
 \begin{figure}
     \centering
@@ -23,12 +23,12 @@ and then optimizes it while ensuring that $\T$ is contained inside and projects 
 \end{figure}
 
 
-We first introduce the definition of our projection operator $\P$ and the conditions required for bijectivity of its restrictions to sections of the shell (Section \ref{sec:projection}). We then define shell validity (Section \ref{sec:strong}), present our algorithm for creating an initial shell (Section\ \ref{sec:initialization}) and optimizing it to decrease the number of prisms (Section \ref{sec:optimization}).
+We first introduce the definition of our projection operator $\P$ and the conditions required for bijectivity of its restrictions to sections of the shell (Section \ref{prism:sec:projection}). We then define shell validity (Section \ref{prism:sec:strong}), present our algorithm for creating an initial shell (Section\ \ref{prism:sec:initialization}) and optimizing it to decrease the number of prisms (Section \ref{prism:sec:optimization}).
 To simplify the exposition,
-we initially assume that our input triangle mesh does not contain \emph{singular points} (defined in Section~\ref{sec:initialization}) and boundary vertices, and we explain how to modify the algorithm to account for these cases in sections \ref{sec:singularities} and \ref{sec:boundaries}.
+we initially assume that our input triangle mesh does not contain \emph{singular points} (defined in Section~\ref{prism:sec:initialization}) and boundary vertices, and we explain how to modify the algorithm to account for these cases in sections \ref{prism:sec:singularities} and \ref{prism:sec:boundaries}.
 
 \subsection{Shell and Projection}
-\label{sec:projection}
+\label{prism:sec:projection}
 
 Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{prism:fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab} (we refer to Appendix~\ref{app:dblayer} for an explanation on why we need two slabs).
 For brevity, we will refer to a generalized prism as a prism.
@@ -95,7 +95,7 @@ Note that this definition implies that all sections are contained inside the she
 {Additionally, the definition implies that the section does not intersect with either bottom or top surface. 
 However, our definition allows for the bottom or top surface to self-intersect. 
 The intersection of the shell does not invalidate the \emph{local} definition of projection since it is defined per prism.
-Allowing intersections is crucial to an efficient implementation of our algorithm since it allows us to take advantage of a static spatial data structure in later stages of the algorithm (Section~\ref{sec:optimization}).
+Allowing intersections is crucial to an efficient implementation of our algorithm since it allows us to take advantage of a static spatial data structure in later stages of the algorithm (Section~\ref{prism:sec:optimization}).
 }
 
  
@@ -124,7 +124,7 @@ It can be similarly computed by tracing the vector field in the opposite directi
 
 {
 \subsection{Validity Condition}
-\label{sec:strong}
+\label{prism:sec:strong}
 
 Shell, projection operator, section definitions, and the bijectivity condition (Theorem~\ref{thm:projection}) are dependent on a specific tetrahedral decomposition, which depends on vertex numbering.
 
@@ -143,7 +143,7 @@ If a shell is valid, from I1, I2, then by Theorem \ref{thm:projection}, it follo
 I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition, that is, we require the dot product to be positive with respect to all \emph{three} pillars of a prism inside the convex hull. An interesting and useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Appendix \ref{app:bilinear}, Figure~\ref{prism:fig:displacement-mapping}).
 
 \subsection{Shell Initialization}
-\label{sec:initialization}
+\label{prism:sec:initialization}
 
 We now introduce an algorithm to compute a \emph{valid} prismatic shell $\S = \{(B_\S,M_\S,T_\S),F_\S\}$ with respect to a given triangle mesh $\T = \{V_\T,F_\T\}$ such that $\T$ is geometrically identical to the middle surface of $\S$.  We assume that the faces of the triangle mesh are consistently oriented.
 
@@ -170,7 +170,7 @@ with $d_v = x / \|x\|$ and $\mathbf{C}$ the matrix whose rows are the normals $n
 
 The admissible set of \eqref{eq:OPT} might be empty for a vertex $v$,
 that is, no vector $d_v$ satisfies $\mathbf{C}d_v\geq\epsilon$. 
-In this case we call $v$ a \emph{singularity}. For example, Figure \ref{prism:fig:singularity_example} shows a triangle mesh containing a singularity: there exist no direction whose dot product with the adjacent face normals is positive. To simplify the explanation, we assume for the remainder of this section that $\T$ does not contain singularities and also that it does not contain boundaries: we postpone their handling to sections \ref{sec:singularities} and \ref{sec:boundaries}.
+In this case we call $v$ a \emph{singularity}. For example, Figure \ref{prism:fig:singularity_example} shows a triangle mesh containing a singularity: there exist no direction whose dot product with the adjacent face normals is positive. To simplify the explanation, we assume for the remainder of this section that $\T$ does not contain singularities and also that it does not contain boundaries: we postpone their handling to sections \ref{prism:sec:singularities} and \ref{prism:sec:boundaries}.
 
 \begin{proposition}\label{thm:I1}
 Let $\T$ be a closed (without boundary) triangle mesh without singularities and $\N$ be a per-vertex displacement field satisfying $\mathbf{C} \N_i > 0$ for every vertex $v_i$ of $\T$. 
@@ -250,11 +250,11 @@ We provide a proof in Appendix \ref{app:bevel}.
 
 
 \paragraph{Output}
-The output of this stage is a valid shell with respect to $\T$ (Section \ref{sec:strong}), that is, it satisfies I1 and I2.
+The output of this stage is a valid shell with respect to $\T$ (Section \ref{prism:sec:strong}), that is, it satisfies I1 and I2.
 
 
 \subsection{Shell Optimization}
-\label{sec:optimization}
+\label{prism:sec:optimization}
 
 During shell optimization, we perform local operations
 (Figure \ref{prism:fig:local_operations})
@@ -363,7 +363,7 @@ After the outer iteration terminates (i.e.  the shell cannot be coarsened anymor
 \end{figure}
 
 
-\subsection{Singularities}\label{sec:singularities}
+\subsection{Singularities}\label{prism:sec:singularities}
 
 % We introduced the algorithm assuming that problem \eqref{eq:OPT} always has a solution, and assuming that our mesh does not contains boundaries. We will now extend our construction to handle these cases, which requires minor variations to our algorithm.
 
@@ -414,7 +414,7 @@ We discuss the technical extensions for our proofs to shells with pinched prisms
     
 \end{figure}
 
-\subsection{Boundaries.}\label{sec:boundaries}
+\subsection{Boundaries.}\label{prism:sec:boundaries}
 
 We introduced our algorithm, assuming that the input mesh does not have boundaries. We will now extend our construction to handle this case, which requires minor variations to our algorithm.
 
@@ -423,7 +423,7 @@ For some vertices on the boundary, it might be impossible to extrude a valid she
 We identify such cases by connecting every edge in the 1-ring neighborhood of the boundary vertex
 to the extruded point and check if they collide with the existing 1-ring triangles (e.g., the triangle $A'AB$ intersects the existing input triangle in Figure~\ref{prism:fig:boundary_singularity}). If it is the case, we consider this vertex as a singularity, and we pinch the shell. Note that this is an extremely rare case and, in our experiments, we detected it only for models where the loss of precision in the STL export introduces rounding noise on the boundary.% (and the problem goes away increasing precision). We could not identify any realistic case of this scenario in our model collection.
 
-Once we pinch all boundary singularities, our construction extends naturally to the boundary. The only necessary modification is in the shell optimization (Section~\ref{sec:optimization}), where we skip all operations acting on boundary vertices to maintain the bijectivity of the induced projection operator (Figure~\ref{prism:fig:open-hand}).
+Once we pinch all boundary singularities, our construction extends naturally to the boundary. The only necessary modification is in the shell optimization (Section~\ref{prism:sec:optimization}), where we skip all operations acting on boundary vertices to maintain the bijectivity of the induced projection operator (Figure~\ref{prism:fig:open-hand}).
 %
 We thus freeze these vertices and never allow them to move or be affected by any other modification of the shell. Note that, in certain applications, it might also be useful to freeze additional non-boundary vertices to ensure that these remain on the middle surface during optimization (e.g., to exactly represent a corner of a CAD model).
 

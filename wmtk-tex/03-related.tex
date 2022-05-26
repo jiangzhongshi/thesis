@@ -1,5 +1,5 @@
 \section{Related Work}
-\label{sec:related}
+\label{wmtk:sec:related}
 
 \subsection{Mesh Data Structures}
 
@@ -10,7 +10,7 @@ are each optimized for different usage scenarios. Index-array-based mesh data
 structure encodes each element as a list of vertex indices on its
 boundary.  It is simple and memory efficient, but neighborhood query and local
 operations are not directly supported.
-Graph-based mesh data structures, including half-edge \cite{Mantyla1987},
+Graph-based mesh data structures, including half-edge \cite{Maentylae1987},
 winged-edge \cite{Baumgart1972}, quad-edge \cite{Guibas1985}, cell-tuple
 \cite{Brisson1989}, etc., view meshes as graphs, where each element contains
 links to its adjacent elements. This design allows for efficient local query
@@ -35,7 +35,7 @@ Different designs differ vastly in API and implementation details, making it har
 %Efficient data structure for representing solid geometry as piecewise linear
 %cell complex has been an intriguing research topic since the early days of
 %computer graphics \cite{Requicha1980}. The widely used half-edge data structure
-%\cite{Mantyla1987} and its close siblings, winged-edge \cite{Baumgart1972} and
+%\cite{Maentylae1987} and its close siblings, winged-edge \cite{Baumgart1972} and
 %quad-edge \cite{Guibas1985}, took an edge-centric view of 2-manifold surfaces,
 %where each edge is represented as 2 oppositely oriented half-edges with links to
 %their incident vertices and face.  The half-edge data structure is commonly used
@@ -90,7 +90,7 @@ Different designs differ vastly in API and implementation details, making it har
 %
 %\begin{itemize}
 %\item \cite{Requicha1980}: Early solid representations.
-%\item \cite{Mantyla1987}: Book containing half-edge data structure.
+%\item \cite{Maentylae1987}: Book containing half-edge data structure.
 %\item \cite{Baumgart1972}: Winged edge.
 %\item \cite{Guibas1985}: Quad edge.
 %\item \cite{Brisson1989}: Cell-tuple.
@@ -208,20 +208,20 @@ In this work, we are targeting only shared-memory parallelism, thus making the p
 
 Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005:VTM,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,Si:2015}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
 
-These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
+These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
 
 \paragraph{Constrained Meshing.}
 
 Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{Mandad:2015} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
 
-These criteria are explicitly modeled as invariants in our framework, and they can be easily swapped in and out existing implementations, as we demonstrate in Section \ref{sec:applications}.
+These criteria are explicitly modeled as invariants in our framework, and they can be easily swapped in and out existing implementations, as we demonstrate in Section \ref{wmtk:sec:applications}.
 
 \paragraph{Mesh Improvement.} 
 
 Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012:BDM,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
 %
 %
-We show in Section \ref{sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
+We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
 
 \paragraph{Dynamic Remeshing and Adaptive Mesh Refinement (AMR)} 
 
@@ -231,7 +231,7 @@ These two challenges are tackled in elastoplastic and viscoplastic simulations \
 
 A different approach is discussed in \cite{Grinspun:2002}, where the refinement is performed on the basis to avoid the difficulties with explicit remeshing. However, this approach cannot coarsen a dense input, and also cannot increase the quality of elements, making it usable only for specific scenarios \cite{Grinspun:2002}. Our approach aims at lowering the barrier for integrating explicit remeshing algorithms in simulation applications, thus allowing to directly use standard simulation methods on adaptive meshes without having to pay the high implementation cost for the mesh generation.
 
-When remeshing is paired with algorithms simulating contacts that do not tolerate interpenetrations (for example \cite{Li2020IPC}), it is necessary to ensure that adaptive remeshing does not break this invariant. This can be achieved adding non-penetration constraints to each local mesh editing operations, as proposed in \cite{Brochu:2012}. Our framework is ideal for developing such methods, as additional constraints can be added to existing mesh editing algorithms with minimal modifications, as we demonstrate in Section \ref{sec:applications}.
+When remeshing is paired with algorithms simulating contacts that do not tolerate interpenetrations (for example \cite{Li2020IPC}), it is necessary to ensure that adaptive remeshing does not break this invariant. This can be achieved adding non-penetration constraints to each local mesh editing operations, as proposed in \cite{Brochu:2012}. Our framework is ideal for developing such methods, as additional constraints can be added to existing mesh editing algorithms with minimal modifications, as we demonstrate in Section \ref{wmtk:sec:applications}.
 
 
 % \paragraph{Adaptive Rendering} Nanite, LOD, terrain modeling and representation, other approaches, \DP{Jeremie or Yixin?}
@@ -263,4 +263,4 @@ All these methods require changing the mesh connectivity of a triangle mesh, and
 
 \paragraph{Mesh Arrangements/Boolean Operations} 
 
-Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{sec:applications}) can be extended for a similar purpose.
+Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{wmtk:sec:applications}) can be extended for a similar purpose.
