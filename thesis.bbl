@@ -69,17 +69,17 @@ Alexa, M. (2019).
 \bibitem[Alexa, 2020]{alexa2020conforming}
 Alexa, M. (2020).
 \newblock Conforming weighted delaunay triangulations.
-\newblock {\em ACM Transactions on Graphics (TOG)}, 39(6):1--16.
+\newblock {\em ACM Transactions on Graphics (TOG)}, (6):1--16.
 
 \bibitem[Alliez et~al., 2005a]{alliez2005variational}
 Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005a).
 \newblock Variational tetrahedral meshing.
-\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~24. ACM.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, number~3. ACM.
 
 \bibitem[Alliez et~al., 2005b]{Alliez:2005}
 Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005b).
 \newblock Variational tetrahedral meshing.
-\newblock {\em ACM Transactions on Graphics}, 24(3):617.
+\newblock {\em ACM Transactions on Graphics}, (3):617.
 
 \bibitem[Alliez et~al., 2003]{alliez2003isotropic}
 Alliez, P., De~Verdire, E.~C., Devillers, O., and Isenburg, M. (2003).
@@ -345,6 +345,11 @@ Canann, S.~A., Muthukrishnan, S.~N., and Phillips, R.~K. (1996).
   meshes.
 \newblock {\em Engineering with Computers}, 12(3):243--255.
 
+\bibitem[Canann et~al., 1993]{CANANN1993185}
+Canann, S.~A., Stephenson, M.~B., and Blacker, T. (1993).
+\newblock Optismoothing: An optimization-driven approach to mesh smoothing.
+\newblock {\em Finite Elements in Analysis and Design}, 13(2):185 -- 190.
+
 \bibitem[Cardoze et~al., 2004]{Cardoze2004}
 Cardoze, D., Cunha, A., Miller, G.~L., Phillips, T., and Walkington, N. (2004).
 \newblock A b{\'e}zier-based approach to unstructured moving meshes.
@@ -366,6 +371,13 @@ Chazal, F., Lieutier, A., Rossignac, J., and Whited, B. (2010).
 Chen, L. and Xu, J.-c. (2004).
 \newblock Optimal delaunay triangulations.
 \newblock {\em Journal of Computational Mathematics}, 22(2):299--308.
+
+\bibitem[Chen, 2010]{chen2010merge}
+Chen, M.-B. (2010).
+\newblock The merge phase of parallel divide-and-conquer scheme for 3d delaunay
+  triangulation.
+\newblock In {\em International Symposium on Parallel and Distributed
+  Processing with Applications}, pages 224--230. IEEE.
 
 \bibitem[Chen et~al., 2004]{chen2004shell}
 Chen, Y., Tong, X., Wang, J., Wang, J., Lin, S., Guo, B., Shum, H.-Y., and
@@ -1262,15 +1274,10 @@ Linardakis, L. and Chrisochoides, N. (2006).
   mesh refinement.
 \newblock {\em SIAM Journal on Scientific Computing}, 27(4):1394--1423.
 
-\bibitem[Lipman, 2012a]{Lipman:2012}
-Lipman, Y. (2012a).
+\bibitem[Lipman, 2012]{Lipman:2012}
+Lipman, Y. (2012).
 \newblock Bounded distortion mapping spaces for triangular meshes.
 \newblock {\em ACM Trans. Graph.}, 31(4):108:1--108:13.
-
-\bibitem[Lipman, 2012b]{Lipman:2012:BDM}
-Lipman, Y. (2012b).
-\newblock Bounded distortion mapping spaces for triangular meshes.
-\newblock {\em ACM Trans. Graph.}, 31(4):108.
 
 \bibitem[Lipman, 2013]{Lipman:2013ArXiv}
 Lipman, Y. (2013).
@@ -1843,10 +1850,10 @@ Shoham, M., Vaxman, A., and Ben-Chen, M. (2019).
 \newblock Hierarchical functional maps between subdivision surfaces.
 \newblock {\em Computer Graphics Forum}, 38(5):55--73.
 
-\bibitem[Si, 2015a]{Si:2015}
+\bibitem[Si, 2015a]{si2015tetgen}
 Si, H. (2015a).
 \newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
-\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
+\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(2):1--36.
 
 \bibitem[Si, 2015b]{tetgen}
 Si, H. (2015b).

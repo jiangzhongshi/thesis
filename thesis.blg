@@ -2,13 +2,12 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 13492 items from 5000.
+Reallocated field_info (elt_size=4) to 13448 items from 5000.
 Database file #1: thesis.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "chen2010"
-Warning--I didn't find a database entry for "Canann1993"
-Warning--I didn't find a database entry for "Campen:2017:OnSimilarityMaps"
-Warning--can't use both volume and number fields in alliez2005variational
+Warning--there's a number but no volume in alexa2020conforming
+Warning--there's a number but no series in alliez2005variational
+Warning--there's a number but no volume in Alliez:2005
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
 Warning--can't use both volume and number fields in botsch2003multiresolution
@@ -20,7 +19,6 @@ Warning--there's a number but no series in CohenSteiner:2002:CDT
 Warning--empty booktitle in dunyach2013adaptive
 Warning--empty journal in dyer2007delaunay
 Warning--empty school in Garland:1999
-Warning--can't use both author and editor fields in Geuzaine2015
 Warning--there's a number but no volume in Ghasemi2016
 Warning--can't use both volume and number fields in hass2020approximating
 Warning--empty publisher in Hormann:2000
@@ -34,45 +32,45 @@ Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
-You've used 383 entries,
+You've used 384 entries,
             1935 wiz_defined-function locations,
-            2439 strings with 66206 characters,
-and the built_in function-call counts, 167324 in all, are:
-= -- 16591
-> -- 7109
-< -- 268
-+ -- 2523
-- -- 2403
-* -- 14183
-:= -- 28296
-add.period$ -- 1221
-call.type$ -- 383
-change.case$ -- 3095
-chr.to.int$ -- 355
-cite$ -- 409
-duplicate$ -- 6526
-empty$ -- 11551
-format.name$ -- 2972
-if$ -- 33417
-int.to.chr$ -- 29
+            2441 strings with 66408 characters,
+and the built_in function-call counts, 167885 in all, are:
+= -- 16653
+> -- 7127
+< -- 269
++ -- 2530
+- -- 2409
+* -- 14220
+:= -- 28379
+add.period$ -- 1225
+call.type$ -- 384
+change.case$ -- 3103
+chr.to.int$ -- 357
+cite$ -- 411
+duplicate$ -- 6553
+empty$ -- 11593
+format.name$ -- 2979
+if$ -- 33543
+int.to.chr$ -- 28
 int.to.str$ -- 0
-missing$ -- 373
-newline$ -- 1918
-num.names$ -- 1160
-pop$ -- 2819
+missing$ -- 374
+newline$ -- 1923
+num.names$ -- 1163
+pop$ -- 2833
 preamble$ -- 1
-purify$ -- 3107
+purify$ -- 3115
 quote$ -- 0
-skip$ -- 4998
+skip$ -- 5015
 stack$ -- 0
-substring$ -- 11578
-swap$ -- 1246
-text.length$ -- 113
+substring$ -- 11624
+swap$ -- 1254
+text.length$ -- 114
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2274
-warning$ -- 26
-while$ -- 1319
+type$ -- 2280
+warning$ -- 27
+while$ -- 1324
 width$ -- 0
-write$ -- 5061
-(There were 29 warnings)
+write$ -- 5075
+(There were 27 warnings)

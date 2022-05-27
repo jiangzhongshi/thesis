@@ -2576,8 +2576,6 @@ INPUT ./wmtk-tex/figs/2d-sec-statue.pdf
 INPUT wmtk-tex/figs/2d-sec-statue.pdf
 INPUT ./wmtk-tex/figs/2d-sec-statue.pdf
 INPUT ./wmtk-tex/figs/2d-sec-statue.pdf
-INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
-INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT ./wmtk-tex/figs/2d-qslim.pdf
 INPUT ./wmtk-tex/figs/2d-qslim.pdf
 INPUT wmtk-tex/figs/2d-qslim.pdf
@@ -2588,6 +2586,8 @@ INPUT ./wmtk-tex/figs/2d-remeshing-lucy.pdf
 INPUT wmtk-tex/figs/2d-remeshing-lucy.pdf
 INPUT ./wmtk-tex/figs/2d-remeshing-lucy.pdf
 INPUT ./wmtk-tex/figs/2d-remeshing-lucy.pdf
+INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT ./wmtk-tex/figs/3d-harmonic-gauss.pdf
 INPUT ./wmtk-tex/figs/3d-harmonic-gauss.pdf
 INPUT wmtk-tex/figs/3d-harmonic-gauss.pdf

@@ -142,62 +142,62 @@
 \contentsline {paragraph}{Conclusions.}{80}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Declarative Specification for Unstructured Mesh Editing Algorithms }{81}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Related Work}{84}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Mesh Data Structures}{84}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Domain specific languages in graphics}{85}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Parallel Meshing}{85}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Scope of Mesh Editing}{87}{subsection.5.2.4}%
-\contentsline {paragraph}{Mesh Generation}{87}{subsection.5.2.4}%
-\contentsline {paragraph}{Constrained Meshing.}{87}{subsection.5.2.4}%
-\contentsline {paragraph}{Mesh Improvement.}{87}{subsection.5.2.4}%
-\contentsline {paragraph}{Dynamic Remeshing and Adaptive Mesh Refinement (AMR)}{87}{subsection.5.2.4}%
-\contentsline {paragraph}{Parametrization}{88}{subsection.5.2.4}%
-\contentsline {paragraph}{Mesh Arrangements/Boolean Operations}{88}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Method}{89}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Mesh editing components}{89}{subsection.5.3.1}%
-\contentsline {paragraph}{Operation Rollback.}{89}{subsection.5.3.1}%
-\contentsline {paragraph}{Explicit Invariants.}{90}{subsection.5.3.1}%
-\contentsline {paragraph}{Explicit Attribute Update.}{90}{subsection.5.3.1}%
-\contentsline {paragraph}{Parallel Scheduling.}{90}{subsection.5.3.1}%
-\contentsline {paragraph}{Abstract Mesh Navigation.}{90}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Declarative Specification}{91}{subsection.5.3.2}%
-\contentsline {paragraph}{Mesh Classes}{91}{algocf.2}%
-\contentsline {paragraph}{Scheduler}{91}{algocf.2}%
-\contentsline {subsection}{\numberline {5.3.3}Implementation.}{94}{subsection.5.3.3}%
-\contentsline {paragraph}{Data Structure.}{94}{subsection.5.3.3}%
-\contentsline {paragraph}{Parallelization.}{94}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Example: Shortest Edge Collapse}{95}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Applications}{97}{section.5.4}%
-\contentsline {paragraph}{Shortest Edge Collapsing}{97}{section.5.4}%
-\contentsline {paragraph}{QSlim}{97}{figure.caption.86}%
-\contentsline {paragraph}{Isotropic Remeshing}{98}{figure.caption.87}%
-\contentsline {paragraph}{Harmonic Triangulations}{99}{figure.caption.88}%
-\contentsline {paragraph}{Tetrahedral Meshing}{99}{figure.caption.89}%
-\contentsline {subsection}{\numberline {5.4.1}Parallelization}{100}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Algorithm Modifications}{101}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Large-scale dataset validation}{101}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Concluding Remarks}{104}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{105}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Overview}{105}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Directions}{105}{section.6.2}%
-\contentsline {chapter}{\numberline {A}Shell Specifics}{106}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proofs}{106}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Theorem \ref {thm:projection}}{106}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Proposition \ref {thm:I1}}{106}{subsection.A.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Theorem \ref {thm:thickness}}{107}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Theorem \ref {thm:bevel}}{107}{subsection.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Theorem \ref {thm:invariants}}{108}{subsection.A.1.5}%
-\contentsline {section}{\numberline {A.2}Extension to meshes with Singularities}{109}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Reduction to a Standard QP}{109}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Bijectivity of the Nonlinear Prismatic Transformation}{110}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Double Slab}{110}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Unpublished Material}{110}{section.A.6}%
-\contentsline {subsection}{\numberline {A.6.1}Pointless Variant}{111}{subsection.A.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Dynamic Intersection Check}{111}{subsection.A.6.2}%
-\contentsline {subsection}{\numberline {A.6.3}Feature Snapping Shell}{111}{subsection.A.6.3}%
-\contentsline {subsection}{\numberline {A.6.4}Positive Detereminant for Natural Prism Map}{111}{subsection.A.6.4}%
-\contentsline {chapter}{\numberline {B}Curve Meshing related}{112}{appendix.B}%
-\contentsline {section}{\numberline {B.1}The geometric map is bijective}{112}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Local Operations}{113}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Boundary preserving TetGen comparison}{114}{section.B.3}%
-\contentsline {section}{\numberline {B.4}TetWild Overview}{114}{section.B.4}%
+\contentsline {section}{\numberline {5.2}Related Work}{83}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Mesh Data Structures}{83}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Domain specific languages in graphics}{84}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Parallel Meshing}{84}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Scope of Mesh Editing}{85}{subsection.5.2.4}%
+\contentsline {paragraph}{Mesh Generation}{85}{subsection.5.2.4}%
+\contentsline {paragraph}{Constrained Meshing.}{86}{subsection.5.2.4}%
+\contentsline {paragraph}{Mesh Improvement.}{86}{subsection.5.2.4}%
+\contentsline {paragraph}{Dynamic Remeshing and Adaptive Mesh Refinement (AMR)}{86}{subsection.5.2.4}%
+\contentsline {paragraph}{Parametrization}{87}{subsection.5.2.4}%
+\contentsline {paragraph}{Mesh Arrangements/Boolean Operations}{87}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Method}{87}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Mesh editing components}{87}{subsection.5.3.1}%
+\contentsline {paragraph}{Operation Rollback.}{87}{subsection.5.3.1}%
+\contentsline {paragraph}{Explicit Invariants.}{88}{subsection.5.3.1}%
+\contentsline {paragraph}{Explicit Attribute Update.}{89}{subsection.5.3.1}%
+\contentsline {paragraph}{Parallel Scheduling.}{89}{subsection.5.3.1}%
+\contentsline {paragraph}{Abstract Mesh Navigation.}{89}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Declarative Specification}{89}{subsection.5.3.2}%
+\contentsline {paragraph}{Mesh Classes}{89}{algocf.2}%
+\contentsline {paragraph}{Scheduler}{92}{algocf.2}%
+\contentsline {subsection}{\numberline {5.3.3}Implementation.}{92}{subsection.5.3.3}%
+\contentsline {paragraph}{Data Structure.}{92}{subsection.5.3.3}%
+\contentsline {paragraph}{Parallelization.}{93}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Example: Shortest Edge Collapse}{93}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Applications}{94}{section.5.4}%
+\contentsline {paragraph}{Shortest Edge Collapsing}{94}{section.5.4}%
+\contentsline {paragraph}{QSlim}{96}{figure.caption.86}%
+\contentsline {paragraph}{Isotropic Remeshing}{96}{figure.caption.87}%
+\contentsline {paragraph}{Harmonic Triangulations}{98}{figure.caption.88}%
+\contentsline {paragraph}{Tetrahedral Meshing}{98}{figure.caption.89}%
+\contentsline {subsection}{\numberline {5.4.1}Parallelization}{99}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Algorithm Modifications}{100}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Large-scale dataset validation}{100}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Concluding Remarks}{103}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{104}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Overview}{104}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Directions}{104}{section.6.2}%
+\contentsline {chapter}{\numberline {A}Shell Specifics}{105}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Proofs}{105}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Theorem \ref {thm:projection}}{105}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Proposition \ref {thm:I1}}{105}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Theorem \ref {thm:thickness}}{106}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Theorem \ref {thm:bevel}}{106}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Theorem \ref {thm:invariants}}{107}{subsection.A.1.5}%
+\contentsline {section}{\numberline {A.2}Extension to meshes with Singularities}{108}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Reduction to a Standard QP}{108}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Bijectivity of the Nonlinear Prismatic Transformation}{109}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Double Slab}{109}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Unpublished Material}{109}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Pointless Variant}{110}{subsection.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Dynamic Intersection Check}{110}{subsection.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}Feature Snapping Shell}{110}{subsection.A.6.3}%
+\contentsline {subsection}{\numberline {A.6.4}Positive Detereminant for Natural Prism Map}{110}{subsection.A.6.4}%
+\contentsline {chapter}{\numberline {B}Curve Meshing related}{111}{appendix.B}%
+\contentsline {section}{\numberline {B.1}The geometric map is bijective}{111}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Local Operations}{112}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Boundary preserving TetGen comparison}{113}{section.B.3}%
+\contentsline {section}{\numberline {B.4}TetWild Overview}{113}{section.B.4}%
