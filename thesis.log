@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  27 MAY 2022 04:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  27 MAY 2022 04:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2041,7 +2041,7 @@ Chapter 5.
 ] [82]
 
 LaTeX Warning: Reference `wmtk:fig:teaser' on page 83 undefined on input line 2
-7.
+5.
 
 ) (./wmtk-tex/03-related.tex [83] [84] [85] [86]) (./wmtk-tex/04-method.tex
 
