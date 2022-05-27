@@ -41,14 +41,15 @@
 \citation{mobius2010openflipper}
 \citation{Rabinovich:2017}
 \citation{libigl}
-\@writefile{toc}{\contentsline {chapter}{List of Tables}{xvi}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{xvii}{section*.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chp-introduction}{{1}{1}{Introduction}{chapter.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Preliminaries}{1}{section.1.1}\protected@file@percent }
-\newlabel{chp-preliminaries}{{1.1}{1}{Preliminaries}{section.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}bijective maps}{1}{subsection.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}mathematical optimization}{1}{subsection.1.1.2}\protected@file@percent }
 \citation{Lipman:2012,Kovalsky:2016,Rabinovich:2017}
 \citation{Bommes:2013}
 \citation{Poranne:2014}
@@ -69,8 +70,6 @@
 \citation{Kazhdan:2012,Sacht:2013}
 \citation{FloaterSurvey:2005,Sheffer:2006,Hormann:2007}
 \@writefile{toc}{\contentsline {paragraph}{Overview.}{3}{section.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Previous Work}{3}{section.2.2}\protected@file@percent }
-\newlabel{sec:related}{{2.2}{3}{Previous Work}{section.2.2}{}}
 \citation{Hormann:2000,Degener:2003}
 \citation{Sander:2001,Sorkine:2002,Aigerman:2014,Poranne:2014,Smith:2015}
 \citation{Schuller:2013}
@@ -84,6 +83,8 @@
 \citation{Weber:2014,Campen:2016}
 \citation{Gotsman:2001,surazhsky2001morphing}
 \citation{Zhang:2005}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Previous Work}{4}{section.2.2}\protected@file@percent }
+\newlabel{sec:related}{{2.2}{4}{Previous Work}{section.2.2}{}}
 \citation{Misztal:2012}
 \citation{Zhang:2005}
 \citation{Muller:2015}
@@ -96,45 +97,44 @@
 \citation{Levy:2002}
 \citation{Zhou:2004}
 \citation{Sorkine:2002}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Method}{5}{section.2.3}\protected@file@percent }
 \citation{Lipman:2013ArXiv}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Method}{6}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}General Formulation}{6}{subsection.2.3.1}\protected@file@percent }
 \newlabel{sec:general_form}{{2.3.1}{6}{General Formulation}{subsection.2.3.1}{}}
 \newlabel{eq:bijective_energy}{{2.1}{6}{General Formulation}{equation.2.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Reduction to Local Orientation Preservation.}{6}{equation.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Variational Formulation}{6}{figure.caption.9}\protected@file@percent }
 \citation{Smith:2015}
+\@writefile{toc}{\contentsline {paragraph}{Reduction to Local Orientation Preservation.}{7}{equation.2.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces The initial mesh $\Mesh  $ (in green, left), is embedded in another mesh $D$ (in gray, middle) that covers a box in the ambient space and contains the same triangles as $\Mesh  $. $D$ might contain additional points (orange). We denote the triangles that are in $D$ but not in $\Mesh  $ as the scaffold $S$. Our algorithm deforms $D$, inducing a corresponding deformation on $\Mesh  $ (right), while keeping the boundary (blue vertices) fixed and preventing changes in the triangle orientation.\relax }}{7}{figure.caption.9}\protected@file@percent }
 \newlabel{scaf:fig:construction}{{2.2}{7}{The initial mesh $\Mesh $ (in green, left), is embedded in another mesh $D$ (in gray, middle) that covers a box in the ambient space and contains the same triangles as $\Mesh $. $D$ might contain additional points (orange). We denote the triangles that are in $D$ but not in $\Mesh $ as the scaffold $S$. Our algorithm deforms $D$, inducing a corresponding deformation on $\Mesh $ (right), while keeping the boundary (blue vertices) fixed and preventing changes in the triangle orientation.\relax }{figure.caption.9}{}}
-\newlabel{eq:variational}{{2.4}{7}{Variational Formulation}{equation.2.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Variational Formulation}{7}{figure.caption.9}\protected@file@percent }
 \citation{Rabinovich:2017}
 \citation{Smith:2015}
 \citation{Shewchuk:1996}
 \citation{Kovalsky:2016}
 \citation{Rabinovich:2017}
 \citation{Rabinovich:2017}
+\citation{Liu:2008}
+\newlabel{eq:variational}{{2.4}{8}{Variational Formulation}{equation.2.3.4}{}}
 \@writefile{toc}{\contentsline {paragraph}{Iterative Regularization}{8}{equation.2.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Interpolation Coefficient.}{8}{equation.2.3.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Different values of $\lambda $ do not affect the result, but they change the number of iterations needed. From left to right: we used a large weight (100x ours), our weight, and a small weight (0.01x ours). The optimization took 9,7, and 8 iterations, respectively, to reach the same energy level.\relax }}{8}{figure.caption.10}\protected@file@percent }
-\newlabel{scaf:fig:different_weight}{{2.3}{8}{Different values of $\lambda $ do not affect the result, but they change the number of iterations needed. From left to right: we used a large weight (100x ours), our weight, and a small weight (0.01x ours). The optimization took 9,7, and 8 iterations, respectively, to reach the same energy level.\relax }{figure.caption.10}{}}
 \@writefile{toc}{\contentsline {paragraph}{Solver.}{8}{figure.caption.10}\protected@file@percent }
-\citation{Liu:2008}
 \citation{Tutte:1963}
 \citation{Shewchuk:1996}
 \citation{Zhang:2005,Muller:2015}
 \citation{Rabinovich:2017}
-\citation{Shewchuk:1996}
-\citation{Muller:2015}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Different values of $\lambda $ do not affect the result, but they change the number of iterations needed. From left to right: we used a large weight (100x ours), our weight, and a small weight (0.01x ours). The optimization took 9,7, and 8 iterations, respectively, to reach the same energy level.\relax }}{9}{figure.caption.10}\protected@file@percent }
+\newlabel{scaf:fig:different_weight}{{2.3}{9}{Different values of $\lambda $ do not affect the result, but they change the number of iterations needed. From left to right: we used a large weight (100x ours), our weight, and a small weight (0.01x ours). The optimization took 9,7, and 8 iterations, respectively, to reach the same energy level.\relax }{figure.caption.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Surface Parametrization}{9}{subsection.2.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Initialization}{9}{subsection.2.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesh Improvement}{9}{subsection.2.3.2}\protected@file@percent }
-\citation{Smith:2015}
-\citation{Si:2015}
-\citation{Klingner:2009}
+\citation{Shewchuk:1996}
+\citation{Muller:2015}
+\@writefile{toc}{\contentsline {paragraph}{Mesh Improvement}{10}{subsection.2.3.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces   A bijective map from a circle (left) to a spiral (right) is computed without (top) and with (bottom) the iterative remeshing step. The slivers in the triangulation locks the optimization (top), preventing it from reaching the target shape. \relax }}{10}{figure.caption.11}\protected@file@percent }
 \newlabel{scaf:fig:recovering}{{2.4}{10}{A bijective map from a circle (left) to a spiral (right) is computed without (top) and with (bottom) the iterative remeshing step. The slivers in the triangulation locks the optimization (top), preventing it from reaching the target shape. \relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {paragraph}{Sliding \& Degeneracy Prevention}{10}{figure.caption.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Extension to 3D}{10}{subsection.2.3.3}\protected@file@percent }
+\citation{Smith:2015}
+\citation{Si:2015}
+\citation{Klingner:2009}
 \citation{Muller:2015}
 \citation{Dougherty2004}
 \citation{Bommes:2009}
@@ -142,24 +142,27 @@
 \citation{Bommes:2009}
 \citation{Myles:2014}
 \citation{Myles:2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Two models are cut using \citep  {Bommes:2009} and bijectively parametrized using our algorithm. See the additional material for more examples.\relax }}{11}{figure.caption.12}\protected@file@percent }
-\newlabel{scaf:fig:miq_database}{{2.5}{11}{Two models are cut using \cite {Bommes:2009} and bijectively parametrized using our algorithm. See the additional material for more examples.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Extension to 3D}{11}{subsection.2.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Mesh Improvement}{11}{subsection.2.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Guarantee}{11}{subsection.2.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Results}{11}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Robustness.}{11}{figure.caption.12}\protected@file@percent }
 \citation{Rabinovich:2017}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Two models are cut using \citep  {Bommes:2009} and bijectively parametrized using our algorithm. See the additional material for more examples.\relax }}{12}{figure.caption.12}\protected@file@percent }
+\newlabel{scaf:fig:miq_database}{{2.5}{12}{Two models are cut using \cite {Bommes:2009} and bijectively parametrized using our algorithm. See the additional material for more examples.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scalability.}{12}{figure.caption.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Texture Atlas Generation}{12}{figure.caption.13}\protected@file@percent }
 \citation{Rabinovich:2017}
 \citation{Rabinovich:2017}
 \citation{Kazhdan:2012}
 \citation{Sacht:2013}
 \citation{Sacht:2013}
 \citation{Sorkine:2007}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces We compare the distortion energy with respect to the number of iterations on a set of Lucy's meshes with different resolutions (from 1 to 12 million faces). In the center of the plot, we show the 1M Lucy model parametrized by our algorithm. \relax }}{13}{figure.caption.13}\protected@file@percent }
+\newlabel{scaf:fig:scalability}{{2.6}{13}{We compare the distortion energy with respect to the number of iterations on a set of Lucy's meshes with different resolutions (from 1 to 12 million faces). In the center of the plot, we show the 1M Lucy model parametrized by our algorithm. \relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Preventing Self-Intersections}{13}{figure.caption.15}\protected@file@percent }
 \citation{Kazhdan:2012,Sacht:2013}
 \citation{Kazhdan:2012,Sacht:2013}
-\@writefile{toc}{\contentsline {paragraph}{Robustness.}{12}{figure.caption.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Scalability.}{12}{figure.caption.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Texture Atlas Generation}{12}{figure.caption.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Preventing Self-Intersections}{12}{figure.caption.15}\protected@file@percent }
 \citation{Smith:2015}
 \citation{Smith:2015}
 \citation{Smith:2015}
@@ -173,28 +176,26 @@
 \citation{Smith:2015}
 \citation{Smith:2015}
 \citation{Smith:2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces We compare the distortion energy with respect to the number of iterations on a set of Lucy's meshes with different resolutions (from 1 to 12 million faces). In the center of the plot, we show the 1M Lucy model parametrized by our algorithm. \relax }}{13}{figure.caption.13}\protected@file@percent }
-\newlabel{scaf:fig:scalability}{{2.6}{13}{We compare the distortion energy with respect to the number of iterations on a set of Lucy's meshes with different resolutions (from 1 to 12 million faces). In the center of the plot, we show the 1M Lucy model parametrized by our algorithm. \relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {paragraph}{Comparison with \citep  {Smith:2015}}{13}{figure.caption.17}\protected@file@percent }
 \citation{Zhang:2005}
 \citation{Misztal:2012}
 \citation{SolomonBook}
-\citation{libigl}
-\citation{libigl}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces A mesh is cut by an artist into a single chart and parametrized using SLIM \cite {Rabinovich:2017} (left) and with our algorithm (right). Note that local-injectivity is not sufficient for this model, since the global overlaps in the highlighted region prevent this parametrization from being a UV texture map. Our result (right) is guaranteed to be bijective.\relax }}{14}{figure.caption.14}\protected@file@percent }
 \newlabel{scaf:fig:manuallycut}{{2.7}{14}{A mesh is cut by an artist into a single chart and parametrized using SLIM \protect \cite {Rabinovich:2017} (left) and with our algorithm (right). Note that local-injectivity is not sufficient for this model, since the global overlaps in the highlighted region prevent this parametrization from being a UV texture map. Our result (right) is guaranteed to be bijective.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Comparison with \citep  {Smith:2015}}{14}{figure.caption.17}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Local vs Global Optimization}{14}{figure.caption.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Timings}{14}{figure.caption.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Limitations and Concluding Remarks}{14}{section.2.5}\protected@file@percent }
+\citation{libigl}
+\citation{libigl}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A model with multiple chart (left) is automatically parametrized in a texture atlas (bottom-right) by first mapping each component to a circle (top-right) and then minimizing the distortion.\relax }}{15}{figure.caption.15}\protected@file@percent }
+\newlabel{scaf:fig:packing2D}{{2.8}{15}{A model with multiple chart (left) is automatically parametrized in a texture atlas (bottom-right) by first mapping each component to a circle (top-right) and then minimizing the distortion.\relax }{figure.caption.15}{}}
 \citation{Schuller:2013}
 \citation{Weber:2014}
 \citation{Campen:2016}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A model with multiple chart (left) is automatically parametrized in a texture atlas (bottom-right) by first mapping each component to a circle (top-right) and then minimizing the distortion.\relax }}{15}{figure.caption.15}\protected@file@percent }
-\newlabel{scaf:fig:packing2D}{{2.8}{15}{A model with multiple chart (left) is automatically parametrized in a texture atlas (bottom-right) by first mapping each component to a circle (top-right) and then minimizing the distortion.\relax }{figure.caption.15}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces We remove the self-intersections from a genus 0 model using the conformalized flow \cite {Kazhdan:2012,Sacht:2013}. The flow is inverted, while using our algorithm to compute a bijective volumetric map, to recover a self-intersection free version of the original surface. The final model can now be meshed using TetGen, since it is free from self-intersections.\relax }}{16}{figure.caption.16}\protected@file@percent }
 \newlabel{scaf:fig:flow}{{2.9}{16}{We remove the self-intersections from a genus 0 model using the conformalized flow \protect \cite {Kazhdan:2012,Sacht:2013}. The flow is inverted, while using our algorithm to compute a bijective volumetric map, to recover a self-intersection free version of the original surface. The final model can now be meshed using TetGen, since it is free from self-intersections.\relax }{figure.caption.16}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces We grow a bunny inside a box, while preventing self-intersections. We show the result after 0,10,20,30,40, and 50 iterations.\relax }}{16}{figure.caption.17}\protected@file@percent }
 \newlabel{scaf:fig:rabbit}{{2.10}{16}{We grow a bunny inside a box, while preventing self-intersections. We show the result after 0,10,20,30,40, and 50 iterations.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{Timings}{16}{figure.caption.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Limitations and Concluding Remarks}{16}{section.2.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces We repeat the challenging test in \citep  {Smith:2015} with a subdivided version of their Hilbert curve to increase the triangle count. Our method starts from a disc (upper left), gracefully extends (upper right), and reaches the same minimum (lower left) in 39 minutes whereas \citep  {Smith:2015} didn't terminate more than 5 days (lower right), highlighting our performance boost of over 200 times. \relax }}{17}{figure.caption.18}\protected@file@percent }
 \newlabel{scaf:fig:smith}{{2.11}{17}{\revision {We repeat the challenging test in \cite {Smith:2015} with a subdivided version of their Hilbert curve to increase the triangle count. Our method starts from a disc (upper left), gracefully extends (upper right), and reaches the same minimum (lower left) in 39 minutes whereas \cite {Smith:2015} didn't terminate more than 5 days (lower right), highlighting our performance boost of over 200 times. }\relax }{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces We apply our algorithm on 4 models used in \citep  {Smith:2015} (using the same stopping criteria) obtaining visually identical results. Distortion errors produced by our algorithm (outer) and theirs (inner) are shown in black. \relax }}{18}{figure.caption.19}\protected@file@percent }
@@ -248,125 +249,129 @@
 \citation{cohen1997simplifying}
 \citation{barnhill_opitz_pottmann_1992,bajaj2002hierarchical}
 \citation{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}
+\@writefile{toc}{\contentsline {paragraph}{Attribute Tracking}{25}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Shell Generation}{25}{subsection.3.2.2}\protected@file@percent }
+\newlabel{prism:sec:rel:shell}{{3.2.2}{25}{Shell Generation}{subsection.3.2.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Envelopes}{25}{subsection.3.2.2}\protected@file@percent }
 \citation{aubry2015most,aubry2017boundary,garimella2000boundary}
 \citation{sacht2015nested}
 \citation{Calderon:2017}
 \citation{Thiery:2012}
 \citation{botsch2006primo,botsch2003multiresolution}
-\@writefile{toc}{\contentsline {paragraph}{Attribute Tracking}{25}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Shell Generation}{25}{subsection.3.2.2}\protected@file@percent }
-\newlabel{prism:sec:rel:shell}{{3.2.2}{25}{Shell Generation}{subsection.3.2.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Envelopes}{25}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Shell Maps}{25}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Boundary Layer}{25}{subsection.3.2.2}\protected@file@percent }
 \citation{dyer2007delaunay,liu2015efficient}
 \citation{sharp2019navigating}
 \citation{liu2015efficient}
 \citation{Sharp:2020:LNT}
 \citation{sharp2019navigating}
 \citation{hu2018tetrahedral,Hu:2019:fTetWild}
-\citation{chazal2005condition,chazal2010ball}
-\citation{mandad2015isotopic}
+\@writefile{toc}{\contentsline {paragraph}{Shell Maps}{26}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Boundary Layer}{26}{subsection.3.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Collision and Animation}{26}{subsection.3.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Robust Geometry Processing}{26}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Isotopy between surfaces}{26}{subsection.3.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Method}{26}{section.3.3}\protected@file@percent }
-\newlabel{prism:sec:method}{{3.3}{26}{Method}{section.3.3}{}}
+\citation{chazal2005condition,chazal2010ball}
+\citation{mandad2015isotopic}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of our algorithm. We start from a triangle mesh, find directions of extrusion, build the shell, and optimize to simplify it.\relax }}{27}{figure.caption.24}\protected@file@percent }
 \newlabel{prism:fig:pipeline}{{3.2}{27}{Overview of our algorithm. We start from a triangle mesh, find directions of extrusion, build the shell, and optimize to simplify it.\relax }{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.\relax }}{27}{figure.caption.25}\protected@file@percent }
-\newlabel{prism:fig:corona}{{3.3}{27}{Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Isotopy between surfaces}{27}{subsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Method}{27}{section.3.3}\protected@file@percent }
+\newlabel{prism:sec:method}{{3.3}{27}{Method}{section.3.3}{}}
 \citation{dompierre1999subdivide}
 \citation{garimella2000boundary}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A prism $\Delta $ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.\relax }}{28}{figure.caption.26}\protected@file@percent }
-\newlabel{prism:fig:prism_decomposition}{{3.4}{28}{A prism $\Prism $ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.\relax }}{28}{figure.caption.25}\protected@file@percent }
+\newlabel{prism:fig:corona}{{3.3}{28}{Example of the top (left, outer) and bottom (right, inner) surface of the prismatic shell.\relax }{figure.caption.25}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Shell and Projection}{28}{subsection.3.3.1}\protected@file@percent }
 \newlabel{prism:sec:projection}{{3.3.1}{28}{Shell and Projection}{subsection.3.3.1}{}}
 \@writefile{toc}{\contentsline {paragraph}{Decomposition in Tetrahedra}{28}{figure.caption.26}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A point $p$ (left) is traced through $\mathcal  {V}$ inside the top part of the shell. A ray with $p$ as origin and $\mathcal  {V}$ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).\relax }}{29}{figure.caption.27}\protected@file@percent }
-\newlabel{prism:fig:advection}{{3.5}{29}{A point $p$ (left) is traced through $\V $ inside the top part of the shell. A ray with $p$ as origin and $\V $ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A prism $\Delta $ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.\relax }}{29}{figure.caption.26}\protected@file@percent }
+\newlabel{prism:fig:prism_decomposition}{{3.4}{29}{A prism $\Prism $ (left) is decomposed into 6 tetrahedra (middle, for clarity, we only draw the 3 tetrahedra of the top slab). Each tetrahedron has a constant vector field in its interior (pointing toward the top surface), which is parallel to the only pillar of the prism that contains the point.\relax }{figure.caption.26}{}}
 \@writefile{toc}{\contentsline {paragraph}{Forward and Inverse Projection}{29}{figure.caption.26}\protected@file@percent }
 \newlabel{eq:V}{{3.1}{29}{Forward and Inverse Projection}{equation.3.3.1}{}}
 \newlabel{def:section}{{3.1}{29}{}{theorem.3.1}{}}
 \citation{panozzo2013weighted,kobbelt1998interactive}
-\citation{dompierre1999subdivide}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A point $p$ (left) is traced through $\mathcal  {V}$ inside the top part of the shell. A ray with $p$ as origin and $\mathcal  {V}$ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).\relax }}{30}{figure.caption.27}\protected@file@percent }
+\newlabel{prism:fig:advection}{{3.5}{30}{A point $p$ (left) is traced through $\V $ inside the top part of the shell. A ray with $p$ as origin and $\V $ as direction is cast inside the orange tetrahedron (middle). The procedure is repeated (on the blue tetrahedron) until the ray hits a point in the middle surface (right).\relax }{figure.caption.27}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces A 2D illustration for the normal dot product condition. The blue arrows agrees with the background vector field (white arrows), while the red arrows do not agree.\relax }}{30}{figure.caption.28}\protected@file@percent }
 \newlabel{prism:fig:not_section}{{3.6}{30}{A 2D illustration for the normal dot product condition. The blue arrows agrees with the background vector field (white arrows), while the red arrows do not agree.\relax }{figure.caption.28}{}}
 \newlabel{thm:projection}{{3.2}{30}{}{theorem.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Validity Condition}{30}{subsection.3.3.2}\protected@file@percent }
-\newlabel{prism:sec:strong}{{3.3.2}{30}{Validity Condition}{subsection.3.3.2}{}}
-\newlabel{def:validshell}{{3.3}{30}{}{theorem.3.3}{}}
+\citation{dompierre1999subdivide}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The composition $\mathcal  {P}^{-1}_{\mathcal  {S}_2}(\mathcal  {P}_{\mathcal  {S}_1}(x))$ with $x \in \mathcal  {S}_1$, of a direct and an inverse projection operator defines a bijection between two sections $\mathcal  {S}_1$ and $\mathcal  {S}_2$.\relax }}{31}{figure.caption.29}\protected@file@percent }
 \newlabel{prism:fig:projection_sections}{{3.7}{31}{The composition $\P ^{-1}_{\S _2}(\P _{\S _1}(x))$ with $x \in \S _1$, of a direct and an inverse projection operator defines a bijection between two sections $\S _1$ and $\S _2$.\relax }{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Shell Initialization}{31}{subsection.3.3.3}\protected@file@percent }
-\newlabel{prism:sec:initialization}{{3.3.3}{31}{Shell Initialization}{subsection.3.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Extrusion Direction.}{31}{subsection.3.3.3}\protected@file@percent }
-\newlabel{eq:OPT}{{3.2}{31}{Extrusion Direction}{equation.3.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Validity Condition}{31}{subsection.3.3.2}\protected@file@percent }
+\newlabel{prism:sec:strong}{{3.3.2}{31}{Validity Condition}{subsection.3.3.2}{}}
+\newlabel{def:validshell}{{3.3}{31}{}{theorem.3.3}{}}
 \citation{osqp,cheshmi2020nasoq}
 \citation{gartner2000efficient}
 \citation{aubry2008most}
-\citation{guigue2003fast}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Shell Initialization}{32}{subsection.3.3.3}\protected@file@percent }
+\newlabel{prism:sec:initialization}{{3.3.3}{32}{Shell Initialization}{subsection.3.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Extrusion Direction.}{32}{subsection.3.3.3}\protected@file@percent }
+\newlabel{eq:OPT}{{3.2}{32}{Extrusion Direction}{equation.3.3.2}{}}
 \newlabel{eq:QP}{{3.3}{32}{Extrusion Direction}{equation.3.3.3}{}}
 \newlabel{thm:I1}{{3.4}{32}{}{theorem.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Initial Thickness}{32}{theorem.3.4}\protected@file@percent }
-\newlabel{thm:thickness}{{3.5}{32}{}{theorem.3.5}{}}
+\citation{guigue2003fast}
 \citation{coxeter1973regular,conway2016symmetries,hart2018conway}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section. After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive. \relax }}{33}{figure.caption.30}\protected@file@percent }
-\newlabel{prism:fig:closed}{{3.8}{33}{The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section. After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive. \relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {paragraph}{Initial Thickness}{33}{theorem.3.4}\protected@file@percent }
+\newlabel{thm:thickness}{{3.5}{33}{}{theorem.3.5}{}}
 \@writefile{toc}{\contentsline {paragraph}{Validity of the Initial Shell}{33}{theorem.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Topological Beveling.}{33}{figure.caption.30}\protected@file@percent }
+\citation{dey1999topology}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section. After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive. \relax }}{34}{figure.caption.30}\protected@file@percent }
+\newlabel{prism:fig:closed}{{3.8}{34}{The vector field aligned with the pillar edge (orange) has a negative dot product with the green triangle normal; the tetrahedron with this field direction meets the green triangle at the red vertex. As a consequence, the mid-surface is not a section. After topological beveling, the shell becomes valid since the dot product between the green normal and the new pillar (purple) is positive. \relax }{figure.caption.30}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces The beveling patterns used to decompose prisms for which $\mathcal  {T}$ is not a section.\relax }}{34}{figure.caption.31}\protected@file@percent }
 \newlabel{prism:fig:patterns}{{3.9}{34}{The beveling patterns used to decompose prisms for which $\T $ is not a section.\relax }{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).\relax }}{34}{figure.caption.32}\protected@file@percent }
-\newlabel{prism:fig:beveled_example}{{3.10}{34}{Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).\relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {paragraph}{Topological Beveling.}{34}{figure.caption.30}\protected@file@percent }
 \newlabel{thm:bevel}{{3.6}{34}{}{theorem.3.6}{}}
-\citation{dey1999topology}
-\citation{dunyach2013adaptive}
-\citation{hormann2000mips}
-\@writefile{toc}{\contentsline {paragraph}{Output}{35}{theorem.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Output}{34}{theorem.3.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).\relax }}{35}{figure.caption.32}\protected@file@percent }
+\newlabel{prism:fig:beveled_example}{{3.10}{35}{Our algorithm refines the input model (left) with beveling patterns (middle) to ensure the generation of a valid shell. The subsequent shell optimizations gracefully remove the unnecessary vertices (right).\relax }{figure.caption.32}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Shell Optimization}{35}{subsection.3.3.4}\protected@file@percent }
 \newlabel{prism:sec:optimization}{{3.3.4}{35}{Shell Optimization}{subsection.3.3.4}{}}
 \newlabel{thm:invariants}{{3.7}{35}{}{theorem.3.7}{}}
-\citation{shewchuk1997adaptive}
-\citation{guigue2003fast}
+\citation{dunyach2013adaptive}
+\citation{hormann2000mips}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Different local operations used to optimize the shell. Mesh editing operations translate naturally to the shell setting. For vertex smoothing, we decompose the operation into 3 intermediate steps: pan, zoom, and rotate.\relax }}{36}{figure.caption.33}\protected@file@percent }
 \newlabel{prism:fig:local_operations}{{3.11}{36}{Different local operations used to optimize the shell. Mesh editing operations translate naturally to the shell setting. For vertex smoothing, we decompose the operation into 3 intermediate steps: pan, zoom, and rotate.\relax }{figure.caption.33}{}}
 \@writefile{toc}{\contentsline {paragraph}{Shell Quality}{36}{figure.caption.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Shell Connectivity Modifications.}{36}{figure.caption.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Vertex Smoothing.}{36}{figure.caption.33}\protected@file@percent }
+\citation{shewchuk1997adaptive}
+\citation{guigue2003fast}
 \citation{dunyach2013adaptive}
+\@writefile{toc}{\contentsline {paragraph}{Shell Connectivity Modifications.}{37}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Vertex Smoothing.}{37}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Invariant Check}{37}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Projection Distortion}{37}{figure.caption.33}\protected@file@percent }
 \citation{zhou2016thingi10k}
 \citation{sacht2015nested}
 \citation{aubry2015most,aubry2017boundary,garimella2000boundary}
-\@writefile{toc}{\contentsline {paragraph}{Invariant Check}{37}{figure.caption.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Projection Distortion}{37}{figure.caption.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Scheduling and Termination}{37}{figure.caption.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Singularities}{37}{subsection.3.3.5}\protected@file@percent }
-\newlabel{prism:sec:singularities}{{3.3.5}{37}{Singularities}{subsection.3.3.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces A model with 48 singularities and a close up around one (left). Our shell is pinched around each of them without affecting other regions (right).\relax }}{38}{figure.caption.34}\protected@file@percent }
 \newlabel{prism:fig:singularity_example}{{3.12}{38}{A model with 48 singularities and a close up around one (left). Our shell is pinched around each of them without affecting other regions (right).\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pinching.}{38}{subsection.3.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Scheduling and Termination}{38}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Singularities}{38}{subsection.3.3.5}\protected@file@percent }
+\newlabel{prism:sec:singularities}{{3.3.5}{38}{Singularities}{subsection.3.3.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Left to right: examples of a singularity as a feature point and as a meshing artefact; and illustration of the degenerate prism with a singularity (red) and its tetrahedral decomposition made of only four tetrahedra.\relax }}{39}{figure.caption.36}\protected@file@percent }
 \newlabel{prism:fig:singularity-illustration}{{3.13}{39}{Left to right: examples of a singularity as a feature point and as a meshing artefact; and illustration of the degenerate prism with a singularity (red) and its tetrahedral decomposition made of only four tetrahedra.\relax }{figure.caption.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces $AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.\relax }}{39}{figure.caption.37}\protected@file@percent }
-\newlabel{prism:fig:boundary_singularity}{{3.14}{39}{$AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.\relax }{figure.caption.37}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Boundaries.}{39}{subsection.3.3.6}\protected@file@percent }
-\newlabel{prism:sec:boundaries}{{3.3.6}{39}{Boundaries}{subsection.3.3.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pinching.}{39}{subsection.3.3.5}\protected@file@percent }
 \citation{eigenweb}
 \citation{cgal2008computational}
 \citation{levy2015geogram}
 \citation{jacobson2016libigl}
-\citation{zhou2016thingi10k}
-\citation{Koch_2019_CVPR}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces An example of a mesh with boundary.\relax }}{40}{figure.caption.38}\protected@file@percent }
-\newlabel{prism:fig:open-hand}{{3.15}{40}{An example of a mesh with boundary.\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces $AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.\relax }}{40}{figure.caption.37}\protected@file@percent }
+\newlabel{prism:fig:boundary_singularity}{{3.14}{40}{$AA'$ is a direction with positive dot product with respect to all its neighboring faces. However, no valid shell can be built following that direction.\relax }{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Boundaries.}{40}{subsection.3.3.6}\protected@file@percent }
+\newlabel{prism:sec:boundaries}{{3.3.6}{40}{Boundaries}{subsection.3.3.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Results}{40}{section.3.4}\protected@file@percent }
 \newlabel{prism:sec:results}{{3.4}{40}{Results}{section.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Robustness}{40}{section.3.4}\protected@file@percent }
 \citation{zhou2016thingi10k}
 \citation{Koch_2019_CVPR}
 \citation{zhou2016thingi10k}
 \citation{Koch_2019_CVPR}
+\citation{zhou2016thingi10k}
+\citation{Koch_2019_CVPR}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces An example of a mesh with boundary.\relax }}{41}{figure.caption.38}\protected@file@percent }
+\newlabel{prism:fig:open-hand}{{3.15}{41}{An example of a mesh with boundary.\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces The effect of different target thickness on the number of prisms |F| of the final shell, and distribution of final thickness (shown as the box plots on the top).\relax }}{41}{figure.caption.39}\protected@file@percent }
+\newlabel{prism:fig:vary_thick}{{3.16}{41}{The effect of different target thickness on the number of prisms |F| of the final shell, and distribution of final thickness (\revision {shown as the box plots on the} top).\relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {paragraph}{Robustness}{41}{section.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Gallery of shells built around models from Thingi10k \cite {zhou2016thingi10k} and ABC\nobreakspace  {}\cite {Koch_2019_CVPR}.\relax }}{42}{figure.caption.40}\protected@file@percent }
+\newlabel{prism:fig:gallery}{{3.17}{42}{Gallery of shells built around models from Thingi10k \protect \cite {zhou2016thingi10k} and ABC~\protect \cite {Koch_2019_CVPR}.\relax }{figure.caption.40}{}}
 \citation{zhou2016thingi10k}
 \citation{Koch_2019_CVPR}
 \citation{zhou2016thingi10k}
@@ -374,21 +379,19 @@
 \citation{garland1998simplifying}
 \citation{li2018optcuts,jiang2017simplicial}
 \citation{liu2017seamless}
-\citation{garland1998simplifying}
-\citation{kobbelt1998interactive,panozzo2013weighted}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces The effect of different target thickness on the number of prisms |F| of the final shell, and distribution of final thickness (shown as the box plots on the top).\relax }}{41}{figure.caption.39}\protected@file@percent }
-\newlabel{prism:fig:vary_thick}{{3.16}{41}{The effect of different target thickness on the number of prisms |F| of the final shell, and distribution of final thickness (\revision {shown as the box plots on the} top).\relax }{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {paragraph}{Comparison to Simple Baselines}{41}{figure.caption.42}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Gallery of shells built around models from Thingi10k \cite {zhou2016thingi10k} and ABC\nobreakspace  {}\cite {Koch_2019_CVPR}.\relax }}{42}{figure.caption.40}\protected@file@percent }
-\newlabel{prism:fig:gallery}{{3.17}{42}{Gallery of shells built around models from Thingi10k \protect \cite {zhou2016thingi10k} and ABC~\protect \cite {Koch_2019_CVPR}.\relax }{figure.caption.40}{}}
-\citation{kobbelt1998interactive}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Statistics of 5018 shells in Thingi10k dataset \citep  {zhou2016thingi10k} (left) and 5545 in ABC Dataset \citep  {Koch_2019_CVPR} (right).\relax }}{43}{figure.caption.41}\protected@file@percent }
 \newlabel{prism:fig:large-dataset}{{3.18}{43}{Statistics of 5018 shells in Thingi10k dataset \cite {zhou2016thingi10k} (left) and 5545 in ABC Dataset \cite {Koch_2019_CVPR} (right).\relax }{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {paragraph}{Numerical accuracy}{43}{figure.caption.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Comparison to Simple Baselines}{43}{figure.caption.42}\protected@file@percent }
+\citation{garland1998simplifying}
+\citation{kobbelt1998interactive,panozzo2013weighted}
+\citation{kobbelt1998interactive}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces The \emph  {UV based method} cannot simplify the prescribed seams, and introduces self-intersections. The projection induced by the \emph  {Naive Cage} method is not continuous and not bijective; it leads to visible spikes in the reconstructed geometry.\relax }}{44}{figure.caption.42}\protected@file@percent }
 \newlabel{prism:fig:qslim_naive}{{3.19}{44}{The \emph {UV based method} cannot simplify the prescribed seams, and introduces self-intersections. The projection induced by the \emph {Naive Cage} method is not continuous and not bijective; it leads to visible spikes in the reconstructed geometry.\relax }{figure.caption.42}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Our projection is three orders of magnitude more accurate than the baseline method, and bijectively reconstructs the input vertex coordinates.\relax }}{44}{figure.caption.43}\protected@file@percent }
-\newlabel{prism:fig:shark_accuracy}{{3.20}{44}{Our projection is three orders of magnitude more accurate than the baseline method, and bijectively reconstructs the input vertex coordinates.\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Our projection is three orders of magnitude more accurate than the baseline method, and bijectively reconstructs the input vertex coordinates.\relax }}{45}{figure.caption.43}\protected@file@percent }
+\newlabel{prism:fig:shark_accuracy}{{3.20}{45}{Our projection is three orders of magnitude more accurate than the baseline method, and bijectively reconstructs the input vertex coordinates.\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {paragraph}{Numerical accuracy}{45}{figure.caption.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Applications}{45}{section.3.5}\protected@file@percent }
+\newlabel{prism:sec:applications}{{3.5}{45}{Applications}{section.3.5}{}}
 \citation{garland1998simplifying}
 \citation{garland1998simplifying}
 \citation{garland1998simplifying}
@@ -398,69 +401,67 @@
 \citation{mitchell1987discrete}
 \citation{crane2013geodesics}
 \citation{mitchell1987discrete}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces We attempt to simplify \emph {rockerarm} (top left) from 20088 triangles to 100. QSlim\nobreakspace  {}\citep  {garland1998simplifying} succeeds in reaching the target triangle count (top right) but generates an output with a self-intersection (red) and flipped triangles (purple). With our shell constraints (bottom left), the simplification stagnates at 136 triangles, but the output is free from undesirable geometric configurations. Note that both examples use the same quadratic error metric based sceduling\nobreakspace  {}\citep  {garland1998simplifying}. \relax }}{46}{figure.caption.44}\protected@file@percent }
+\newlabel{prism:fig:qslim100}{{3.21}{46}{We attempt to simplify \protect \emph {rockerarm} (top left) from 20088 triangles to 100. QSlim~\cite {garland1998simplifying} succeeds in reaching the target triangle count (top right) but generates an output with a self-intersection (red) and flipped triangles (purple). With our shell constraints (bottom left), the simplification stagnates at 136 triangles, but the output is free from undesirable geometric configurations. \revision {Note that both examples use the same quadratic error metric based sceduling~\cite {garland1998simplifying}.} \relax }{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {paragraph}{Remeshing}{46}{figure.caption.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Proxy}{46}{figure.caption.46}\protected@file@percent }
 \citation{zhou2016mesh}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Applications}{45}{section.3.5}\protected@file@percent }
-\newlabel{prism:sec:applications}{{3.5}{45}{Applications}{section.3.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Remeshing}{45}{figure.caption.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Proxy}{45}{figure.caption.46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces The heat method (right top) produces inaccurate results due to a poor triangulation (left top). We remesh the input with our method (left bottom), compute the solution of the heat method\nobreakspace  {}\citep  {crane2013geodesics} on the high-quality mesh (middle bottom) and transfer the solution back to the input mesh using the bijective projection (bottom right). This process produces a result closer to the exact discrete geodesic distance \citep  {mitchell1987discrete} (top middle, error shown in the histograms).\relax }}{47}{figure.caption.45}\protected@file@percent }
+\newlabel{prism:fig:proxy-heat}{{3.22}{47}{The heat method (right top) produces inaccurate results due to a poor triangulation (left top). We remesh the input with our method (left bottom), compute the \revision {solution of the heat method~\cite {crane2013geodesics}} on the high-quality mesh (middle bottom) and transfer the solution back to the input mesh using the bijective projection (bottom right). This process produces a result closer to the exact discrete geodesic distance \cite {mitchell1987discrete} (top middle, \revision {error shown in the histograms}).\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {paragraph}{Boolean Operations}{47}{figure.caption.47}\protected@file@percent }
 \citation{kobbelt1998interactive}
 \citation{kobbelt1998interactive}
 \citation{kobbelt1998interactive,collins2002mesh}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces We attempt to simplify \emph {rockerarm} (top left) from 20088 triangles to 100. QSlim\nobreakspace  {}\citep  {garland1998simplifying} succeeds in reaching the target triangle count (top right) but generates an output with a self-intersection (red) and flipped triangles (purple). With our shell constraints (bottom left), the simplification stagnates at 136 triangles, but the output is free from undesirable geometric configurations. Note that both examples use the same quadratic error metric based sceduling\nobreakspace  {}\citep  {garland1998simplifying}. \relax }}{46}{figure.caption.44}\protected@file@percent }
-\newlabel{prism:fig:qslim100}{{3.21}{46}{We attempt to simplify \protect \emph {rockerarm} (top left) from 20088 triangles to 100. QSlim~\cite {garland1998simplifying} succeeds in reaching the target triangle count (top right) but generates an output with a self-intersection (red) and flipped triangles (purple). With our shell constraints (bottom left), the simplification stagnates at 136 triangles, but the output is free from undesirable geometric configurations. \revision {Note that both examples use the same quadratic error metric based sceduling~\cite {garland1998simplifying}.} \relax }{figure.caption.44}{}}
-\@writefile{toc}{\contentsline {paragraph}{Boolean Operations}{46}{figure.caption.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Displacement Mapping}{46}{figure.caption.48}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces The heat method (right top) produces inaccurate results due to a poor triangulation (left top). We remesh the input with our method (left bottom), compute the solution of the heat method\nobreakspace  {}\citep  {crane2013geodesics} on the high-quality mesh (middle bottom) and transfer the solution back to the input mesh using the bijective projection (bottom right). This process produces a result closer to the exact discrete geodesic distance \citep  {mitchell1987discrete} (top middle, error shown in the histograms).\relax }}{47}{figure.caption.45}\protected@file@percent }
-\newlabel{prism:fig:proxy-heat}{{3.22}{47}{The heat method (right top) produces inaccurate results due to a poor triangulation (left top). We remesh the input with our method (left bottom), compute the \revision {solution of the heat method~\cite {crane2013geodesics}} on the high-quality mesh (middle bottom) and transfer the solution back to the input mesh using the bijective projection (bottom right). This process produces a result closer to the exact discrete geodesic distance \cite {mitchell1987discrete} (top middle, \revision {error shown in the histograms}).\relax }{figure.caption.45}{}}
-\@writefile{toc}{\contentsline {paragraph}{Geometric Textures.}{47}{figure.caption.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Variants}{47}{section.3.6}\protected@file@percent }
-\newlabel{prism:sec:variants}{{3.6}{47}{Variants}{section.3.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Input with Self-Intersections}{47}{section.3.6}\protected@file@percent }
-\citation{sacht2015nested}
-\citation{sacht2015nested}
-\citation{sacht2015nested}
-\citation{zomorodian2000fast}
-\citation{bank1983some}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces \emph  {Knot} simplified with our method and tetrahedralized with TetGen. The original model is converted to 1,503,428 tetrahedra (left) while the simplified surface is converted to only 176,190 tetrahedra (right).\relax }}{48}{figure.caption.46}\protected@file@percent }
 \newlabel{prism:fig:proxy-tetgen}{{3.23}{48}{\emph {Knot} simplified with our method and tetrahedralized with TetGen. The original model is converted to 1,503,428 tetrahedra (left) while the simplified surface is converted to only 176,190 tetrahedra (right).\relax }{figure.caption.46}{}}
-\@writefile{toc}{\contentsline {paragraph}{Resolving Shell Self-Intersections}{48}{figure.caption.51}\protected@file@percent }
-\newlabel{prism:sec:postprocessing}{{3.6}{48}{Resolving Shell Self-Intersections}{figure.caption.51}{}}
+\@writefile{toc}{\contentsline {paragraph}{Displacement Mapping}{48}{figure.caption.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Geometric Textures.}{48}{figure.caption.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Variants}{48}{section.3.6}\protected@file@percent }
+\newlabel{prism:sec:variants}{{3.6}{48}{Variants}{section.3.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Input with Self-Intersections}{48}{section.3.6}\protected@file@percent }
+\citation{sacht2015nested}
+\citation{sacht2015nested}
+\citation{sacht2015nested}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces The union of two meshes is coarsened through our algorithm, while preserving the exact correspondence, as shown through color transfer.\relax }}{49}{figure.caption.47}\protected@file@percent }
 \newlabel{prism:fig:birdengine}{{3.24}{49}{The union of two meshes is coarsened through our algorithm, while preserving the exact correspondence, as shown through color transfer.\relax }{figure.caption.47}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pinching Alternative.}{49}{figure.caption.53}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces Top: an input mesh decimated to create a coarse base mesh, and the details are encoded in a displacement map (along the normal) with correspondences computed with Phong projection \citep  {kobbelt1998interactive}. Bottom: the decimation is done within our shell while using the same projection as above. With our construction, this projection becomes bijective (Appendix \ref  {app:bilinear}), avoiding the artifacts visible on the ears of the bunny in the top row.\relax }}{50}{figure.caption.48}\protected@file@percent }
 \newlabel{prism:fig:displacement-mapping}{{3.25}{50}{Top: an input mesh decimated to create a coarse base mesh, and the details are encoded in a displacement map (along the normal) with correspondences computed with Phong projection \cite {kobbelt1998interactive}. Bottom: the decimation is done within our shell while using the same projection as above. With our construction, this projection becomes bijective (Appendix \ref {app:bilinear}), avoiding the artifacts visible on the ears of the bunny in the top row.\relax }{figure.caption.48}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Two volumetric chainmail textures (right) are applied to a shell (bottom left) constructed from the \emph  {Animal} mesh (top left). The original UV coordinates are transferred using our projection operator.\relax }}{50}{figure.caption.49}\protected@file@percent }
 \newlabel{prism:fig:volumetric-textures}{{3.26}{50}{Two volumetric chainmail textures (right) are applied to a shell (bottom left) constructed from the \emph {Animal} mesh (top left). The original UV coordinates are transferred using our projection operator.\relax }{figure.caption.49}{}}
-\citation{corefinement}
+\citation{zomorodian2000fast}
+\citation{bank1983some}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.27}{\ignorespaces An example of a shell built around a self-intersecting mesh.\relax }}{51}{figure.caption.50}\protected@file@percent }
 \newlabel{prism:fig:intersect-leg}{{3.27}{51}{An example of a shell built around a self-intersecting mesh.\relax }{figure.caption.50}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.28}{\ignorespaces The \emph {Armadillo} model with four nested cages. We create a shell from the original mesh, and then rerun our algorithm on the outer shell to create the other three layers. Note that all layers are free of self-intersections, and we have an explicit bijective map between them.\relax }}{51}{figure.caption.51}\protected@file@percent }
 \newlabel{prism:fig:nested-cages}{{3.28}{51}{The \protect \emph {Armadillo} model with four nested cages. We create a shell from the original mesh, and then rerun our algorithm on the outer shell to create the other three layers. Note that all layers are free of self-intersections, and we have an explicit bijective map between them.\relax }{figure.caption.51}{}}
+\@writefile{toc}{\contentsline {paragraph}{Resolving Shell Self-Intersections}{51}{figure.caption.51}\protected@file@percent }
+\newlabel{prism:sec:postprocessing}{{3.6}{51}{Resolving Shell Self-Intersections}{figure.caption.51}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.29}{\ignorespaces After optimization, the shell may self-intersect (left). Our postprocessing can be used to extract a non-selfintersecting shell, which is easier to use in downstream applications (right).\relax }}{52}{figure.caption.52}\protected@file@percent }
 \newlabel{prism:fig:shell_shrinking-cages}{{3.29}{52}{After optimization, the shell may self-intersect (left). Our postprocessing can be used to extract a non-selfintersecting shell, which is easier to use in downstream applications (right).\relax }{figure.caption.52}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces We generate a pinched shell for a model with a singularity (left). Optionally, we can complete the shell using our Boolean construction.\relax }}{52}{figure.caption.53}\protected@file@percent }
 \newlabel{prism:fig:singularity-boolean}{{3.30}{52}{We generate a pinched shell for a model with a singularity (left). Optionally, we can complete the shell using our Boolean construction.\relax }{figure.caption.53}{}}
+\citation{corefinement}
 \citation{hu2018tetrahedral,Hu:2019:fTetWild}
 \citation{garland1997surface}
 \citation{dey2010polygonal}
 \citation{hass2020approximating}
 \citation{kraevoy2004cross,Schreiner:2004,alliez2003isotropic,bommes2013quad}
+\@writefile{toc}{\contentsline {paragraph}{Pinching Alternative.}{53}{figure.caption.53}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.7}Limitations}{53}{section.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.8}Concluding Remarks}{53}{section.3.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Bijective and Coarse High-Order Tetrahedral Meshes}{54}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Concluding Remarks}{54}{section.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Bijective and Coarse High-Order Tetrahedral Meshes}{55}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{54}{section.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Our pipeline starts from a dense \emph  {linear} mesh with annotated features (green), which is converted in a curved shell filled with a high-order mesh. The region bounded by the shell is then tetrahedralized with linear elements, which are then optimized. Our output is a coarse, yet accurate, curved tetrahedral mesh ready to be used in FEM based simulation. Our construction provides a bijective map between the input surface and the boundary of the output tetrahedral mesh, which can be used to transfer attributes and boundary conditions.\relax }}{54}{figure.caption.54}\protected@file@percent }
-\newlabel{bichon:fig:teaser}{{4.1}{54}{Our pipeline starts from a dense \emph {linear} mesh with annotated features (green), which is converted in a curved shell filled with a high-order mesh. The region bounded by the shell is then tetrahedralized with linear elements, which are then optimized. Our output is a coarse, yet accurate, curved tetrahedral mesh ready to be used in FEM based simulation. Our construction provides a bijective map between the input surface and the boundary of the output tetrahedral mesh, which can be used to transfer attributes and boundary conditions.\relax }{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{55}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Our pipeline starts from a dense \emph  {linear} mesh with annotated features (green), which is converted in a curved shell filled with a high-order mesh. The region bounded by the shell is then tetrahedralized with linear elements, which are then optimized. Our output is a coarse, yet accurate, curved tetrahedral mesh ready to be used in FEM based simulation. Our construction provides a bijective map between the input surface and the boundary of the output tetrahedral mesh, which can be used to transfer attributes and boundary conditions.\relax }}{55}{figure.caption.54}\protected@file@percent }
+\newlabel{bichon:fig:teaser}{{4.1}{55}{Our pipeline starts from a dense \emph {linear} mesh with annotated features (green), which is converted in a curved shell filled with a high-order mesh. The region bounded by the shell is then tetrahedralized with linear elements, which are then optimized. Our output is a coarse, yet accurate, curved tetrahedral mesh ready to be used in FEM based simulation. Our construction provides a bijective map between the input surface and the boundary of the output tetrahedral mesh, which can be used to transfer attributes and boundary conditions.\relax }{figure.caption.54}{}}
 \citation{jiang2020bijective}
 \citation{bargteil2014animation,MEZGER2009680,Suwelack2013}
 \citation{Jameson2002}
 \citation{Babuska1988,BABUSKA1992159,BASSI1997251,luo2001influence,ODEN1994309}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Related Works}{55}{section.4.2}\protected@file@percent }
-\newlabel{cumin:sec:related}{{4.2}{55}{Related Works}{section.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Related Works}{56}{section.4.2}\protected@file@percent }
+\newlabel{cumin:sec:related}{{4.2}{56}{Related Works}{section.4.2}{}}
 \citation{dey1999curvilinear,Ghasemi2016,MOXEY2015636,abgrall2012,sherwin2002mesh,turner2017high,marcon2019semi}
 \citation{dey1999curvilinear,Peir2008}
 \citation{George2012,Qiukai2013,Luo2002pVersionMG}
@@ -474,12 +475,12 @@
 \citation{Knupp20002,Knupp2000}
 \citation{Luke2018,Gargallo2014,johnen2013geometrical,Poya2016,Roca2012}
 \citation{Cardoze2004,dey1999curvilinear,gargallo2013high,George2012,Qiukai2013,Luo2002pVersionMG,Peir2008,SHEPHARD2005251,dobrzynski2017,Gargallo2015,Geuzaine2015,Roca2012,RUIZGIRONES2017362,RUIZGIRONES201652,RUIZGIRONES2016315,STEES2017180,Steve2016,TOULORGE20138,TOULORGE2016361,ZIEL201791,dobrev2019target,turner2017high,luo2008tracking,lu2014parallel}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Curved Tetrahedral Mesh Generation}{57}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Direct methods.}{57}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Deformation methods}{57}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Inversions and Intersections.}{57}{subsection.4.2.1}\protected@file@percent }
 \citation{Persson2009,RUIZGIRONES2017362}
 \citation{feng2018curved}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Curved Tetrahedral Mesh Generation}{56}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Direct methods.}{56}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Deformation methods}{56}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Inversions and Intersections.}{56}{subsection.4.2.1}\protected@file@percent }
 \citation{moxeynekmesh}
 \citation{Geuzaine:2009:gmsh}
 \citation{pointwise,Steve2016}
@@ -488,11 +489,11 @@
 \citation{Sorger:2014,Peir2015OnCH}
 \citation{Yufei:2012,Gao:2019,Guo2020Cut,Palmer:2020,Zhang:2020,marschner2020hexahedral}
 \citation{yu2020hexgen,coreform}
+\@writefile{toc}{\contentsline {paragraph}{Curved Optimal Delaunay Triangulation}{58}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Software Implementation.}{58}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Animation}{58}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Curved Structured Mesh Generation}{58}{subsection.4.2.2}\protected@file@percent }
 \citation{schneider2019large}
-\@writefile{toc}{\contentsline {paragraph}{Curved Optimal Delaunay Triangulation}{57}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Software Implementation.}{57}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Animation}{57}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Curved Structured Mesh Generation}{57}{subsection.4.2.2}\protected@file@percent }
 \citation{hu2018tetrahedral}
 \citation{chew1993guaranteed,shewchuk1998tetrahedral,ruppert1995delaunay}
 \citation{tetgen,jamin2015cgalmesh}
@@ -505,12 +506,11 @@
 \citation{tetgen}
 \citation{hu2018tetrahedral}
 \citation{Hu:2020:fTetWild,Hu:2019:triwild}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Boundary Preserving Tetrahedral Meshing}{59}{subsection.4.2.3}\protected@file@percent }
+\newlabel{cumin:sec:rel:linear}{{4.2.3}{59}{Boundary Preserving Tetrahedral Meshing}{subsection.4.2.3}{}}
 \citation{QUADSTAR2012}
 \citation{hoppe1994piecewise}
 \citation{krishnamurthy1996fitting}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Boundary Preserving Tetrahedral Meshing}{58}{subsection.4.2.3}\protected@file@percent }
-\newlabel{cumin:sec:rel:linear}{{4.2.3}{58}{Boundary Preserving Tetrahedral Meshing}{subsection.4.2.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Curved Surface Fitting}{58}{subsection.4.2.4}\protected@file@percent }
 \citation{LIN2007adap}
 \citation{Zhang2011multi}
 \citation{zorin2000subdivision}
@@ -520,170 +520,171 @@
 \citation{TONG2009}
 \citation{jiang2020bijective}
 \citation{jiang2020bijective}
-\citation{jiang2020bijective}
-\citation{jiang2020bijective}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Shell Preliminaries}{59}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Shell.}{59}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Projection Operator.}{59}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Curved Surface Fitting}{60}{subsection.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Shell Preliminaries}{60}{section.4.3}\protected@file@percent }
 \citation{jiang2020bijective}
 \citation{jiang2020bijective}
 \citation{jiang2020bijective}
 \citation{jiang2020bijective}
 \citation{jiang2020bijective}
-\@writefile{toc}{\contentsline {paragraph}{Section.}{60}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Shell Validity.}{60}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Singularity.}{60}{Item.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Variation from the Original Algorithm}{60}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Curved Tetrahedral Mesh Generation}{60}{section.4.4}\protected@file@percent }
-\newlabel{cumin:sec:curved-pipeline}{{4.4}{60}{Curved Tetrahedral Mesh Generation}{section.4.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Input.}{60}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Shell.}{61}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Projection Operator.}{61}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Section.}{61}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Shell Validity.}{61}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Singularity.}{61}{Item.14}\protected@file@percent }
+\citation{jiang2020bijective}
+\citation{jiang2020bijective}
 \citation{shewchuk1997adaptive}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Input triangle mesh $\mathcal  {M}$ and points $\mathcal  {P}$. Output curved tetrahedral mesh $\mathcal  {T}^k$ and bijective map $\phi ^k$.\relax }}{62}{figure.caption.55}\protected@file@percent }
+\newlabel{bichon:fig:input-output}{{4.2}{62}{Input triangle mesh $\M $ and points $\P $. Output curved tetrahedral mesh $\T ^k$ and bijective map $\phi ^k$.\relax }{figure.caption.55}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Variation from the Original Algorithm}{62}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Curved Tetrahedral Mesh Generation}{62}{section.4.4}\protected@file@percent }
+\newlabel{cumin:sec:curved-pipeline}{{4.4}{62}{Curved Tetrahedral Mesh Generation}{section.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Input.}{62}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Output.}{62}{figure.caption.56}\protected@file@percent }
+\newlabel{eq:gmap}{{4.1}{62}{Output}{equation.4.4.1}{}}
 \citation{bowers2010parallel}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Input triangle mesh $\mathcal  {M}$ and points $\mathcal  {P}$. Output curved tetrahedral mesh $\mathcal  {T}^k$ and bijective map $\phi ^k$.\relax }}{61}{figure.caption.55}\protected@file@percent }
-\newlabel{bichon:fig:input-output}{{4.2}{61}{Input triangle mesh $\M $ and points $\P $. Output curved tetrahedral mesh $\T ^k$ and bijective map $\phi ^k$.\relax }{figure.caption.55}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Lagrange nodes on the reference element $\hat  \tau $ for different $k=1,2,3$ and example of geometric mapping $g$.\relax }}{61}{figure.caption.56}\protected@file@percent }
-\newlabel{bichon:fig:high-order}{{4.3}{61}{Lagrange nodes on the reference element $\hat \tau $ for different $k=1,2,3$ and example of geometric mapping $g$.\relax }{figure.caption.56}{}}
-\@writefile{toc}{\contentsline {paragraph}{Output.}{61}{figure.caption.56}\protected@file@percent }
-\newlabel{eq:gmap}{{4.1}{61}{Output}{equation.4.4.1}{}}
 \citation{jiang2020bijective}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Lagrange nodes on the reference element $\hat  \tau $ for different $k=1,2,3$ and example of geometric mapping $g$.\relax }}{63}{figure.caption.56}\protected@file@percent }
+\newlabel{bichon:fig:high-order}{{4.3}{63}{Lagrange nodes on the reference element $\hat \tau $ for different $k=1,2,3$ and example of geometric mapping $g$.\relax }{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Effect of the choice of the set $\mathcal  {P}$ on the output.\relax }}{63}{figure.caption.57}\protected@file@percent }
+\newlabel{bichon:fig:points-effect}{{4.4}{63}{Effect of the choice of the set $\P $ on the output.\relax }{figure.caption.57}{}}
 \citation{jiang2020bijective}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Effect of the choice of the set $\mathcal  {P}$ on the output.\relax }}{62}{figure.caption.57}\protected@file@percent }
-\newlabel{bichon:fig:points-effect}{{4.4}{62}{Effect of the choice of the set $\P $ on the output.\relax }{figure.caption.57}{}}
-\newlabel{def:curved-mesh}{{4.1}{62}{}{theorem.4.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Overview.}{62}{Item.17}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Our algorithm maintains {free of} intersection even on challenging models, without the need of setting adaptive threshold.\relax }}{63}{figure.caption.58}\protected@file@percent }
-\newlabel{bichon:fig:intersection}{{4.5}{63}{Our algorithm maintains {free of} intersection even on challenging models, without the need of setting adaptive threshold.\relax }{figure.caption.58}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Overview of curved mesh generation pipeline.\relax }}{63}{figure.caption.59}\protected@file@percent }
-\newlabel{bichon:fig:pipeline}{{4.6}{63}{Overview of curved mesh generation pipeline.\relax }{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Our algorithm maintains {free of} intersection even on challenging models, without the need of setting adaptive threshold.\relax }}{64}{figure.caption.58}\protected@file@percent }
+\newlabel{bichon:fig:intersection}{{4.5}{64}{Our algorithm maintains {free of} intersection even on challenging models, without the need of setting adaptive threshold.\relax }{figure.caption.58}{}}
+\newlabel{def:curved-mesh}{{4.1}{64}{}{theorem.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overview.}{64}{Item.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Overview of curved mesh generation pipeline.\relax }}{65}{figure.caption.59}\protected@file@percent }
+\newlabel{bichon:fig:pipeline}{{4.6}{65}{Overview of curved mesh generation pipeline.\relax }{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Stage 1: Curved Shell Construction.}{65}{figure.caption.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 2: Tetrahedral Mesh Generation.}{65}{figure.caption.59}\protected@file@percent }
 \citation{jiang2020bijective}
-\@writefile{toc}{\contentsline {paragraph}{Stage 1: Curved Shell Construction.}{64}{figure.caption.59}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Stage 2: Tetrahedral Mesh Generation.}{64}{figure.caption.59}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}High-order Shells}{64}{subsection.4.4.1}\protected@file@percent }
-\newlabel{cumin:sec:high-order}{{4.4.1}{64}{High-order Shells}{subsection.4.4.1}{}}
 \citation{johnen2013geometrical}
 \citation{guigue2003fast}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces A model simplified with different distances.\relax }}{65}{figure.caption.60}\protected@file@percent }
-\newlabel{bichon:fig:distance}{{4.7}{65}{A model simplified with different distances.\relax }{figure.caption.60}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Distance Bound}{65}{subsection.4.4.2}\protected@file@percent }
-\newlabel{cumin:sec:distance}{{4.4.2}{65}{Distance Bound}{subsection.4.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}High-order Shells}{66}{subsection.4.4.1}\protected@file@percent }
+\newlabel{cumin:sec:high-order}{{4.4.1}{66}{High-order Shells}{subsection.4.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Distance Bound}{66}{subsection.4.4.2}\protected@file@percent }
+\newlabel{cumin:sec:distance}{{4.4.2}{66}{Distance Bound}{subsection.4.4.2}{}}
 \citation{tetgen}
 \citation{hu2018tetrahedral}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces A model simplified with different distances.\relax }}{67}{figure.caption.60}\protected@file@percent }
+\newlabel{bichon:fig:distance}{{4.7}{67}{A model simplified with different distances.\relax }{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Two dimensional overview of the five steps of our boundary preserving tetrahedral meshing algorithm.\relax }}{67}{figure.caption.61}\protected@file@percent }
+\newlabel{bichon:fig:conforming-overview}{{4.8}{67}{Two dimensional overview of the five steps of our boundary preserving tetrahedral meshing algorithm.\relax }{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Tetrahedral Meshing}{67}{subsection.4.4.3}\protected@file@percent }
+\newlabel{cumin:sec:tets}{{4.4.3}{67}{Tetrahedral Meshing}{subsection.4.4.3}{}}
 \citation{hu2018tetrahedral}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Two dimensional overview of the five steps of our boundary preserving tetrahedral meshing algorithm.\relax }}{66}{figure.caption.61}\protected@file@percent }
-\newlabel{bichon:fig:conforming-overview}{{4.8}{66}{Two dimensional overview of the five steps of our boundary preserving tetrahedral meshing algorithm.\relax }{figure.caption.61}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Tetrahedral Meshing}{66}{subsection.4.4.3}\protected@file@percent }
-\newlabel{cumin:sec:tets}{{4.4.3}{66}{Tetrahedral Meshing}{subsection.4.4.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 1.}{66}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 2.}{66}{figure.caption.61}\protected@file@percent }
 \citation{hu2018tetrahedral}
 \citation{johnen2013geometrical}
-\@writefile{toc}{\contentsline {paragraph}{Step 3.}{67}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 4.}{67}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 5.}{67}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Curved Tetrahedral Mesh Optimization}{67}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Smoothing.}{67}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 1.}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 2.}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 3.}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 4.}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 5.}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Curved Tetrahedral Mesh Optimization}{68}{figure.caption.61}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Input triangle mesh with features and output curved mesh with feature preserved equipped with bijective map $\phi ^k$.\relax }}{69}{figure.caption.62}\protected@file@percent }
+\newlabel{bichon:fig:input-output-feature}{{4.9}{69}{Input triangle mesh with features and output curved mesh with feature preserved equipped with bijective map $\phi ^k$.\relax }{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {paragraph}{Smoothing.}{69}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Collapse and Swap}{69}{figure.caption.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Feature Preserving Curved Shell}{69}{section.4.5}\protected@file@percent }
+\newlabel{cumin:sec:features-pres}{{4.5}{69}{Feature Preserving Curved Shell}{section.4.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Input}{69}{figure.caption.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Output}{69}{figure.caption.62}\protected@file@percent }
 \citation{jiang2020bijective}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Input triangle mesh with features and output curved mesh with feature preserved equipped with bijective map $\phi ^k$.\relax }}{68}{figure.caption.62}\protected@file@percent }
-\newlabel{bichon:fig:input-output-feature}{{4.9}{68}{Input triangle mesh with features and output curved mesh with feature preserved equipped with bijective map $\phi ^k$.\relax }{figure.caption.62}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collapse and Swap}{68}{figure.caption.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Feature Preserving Curved Shell}{68}{section.4.5}\protected@file@percent }
-\newlabel{cumin:sec:features-pres}{{4.5}{68}{Feature Preserving Curved Shell}{section.4.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Input}{68}{figure.caption.62}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Output}{68}{figure.caption.62}\protected@file@percent }
-\newlabel{def:curved-features}{{4.2}{68}{}{theorem.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces A sphere with different marked features (green). As we increase the number of features our algorithm will preserve them all but the quality of the surface suffers.\relax }}{69}{figure.caption.63}\protected@file@percent }
-\newlabel{bichon:fig:bad-features}{{4.10}{69}{A sphere with different marked features (green). As we increase the number of features our algorithm will preserve them all but the quality of the surface suffers.\relax }{figure.caption.63}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Input feature (green) is not preserved after traditional shell simplification.\relax }}{69}{figure.caption.64}\protected@file@percent }
-\newlabel{bichon:fig:not-feat-pres}{{4.11}{69}{Input feature (green) is not preserved after traditional shell simplification.\relax }{figure.caption.64}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Overview of the construction of the first stage of our pipeline.\relax }}{69}{figure.caption.65}\protected@file@percent }
-\newlabel{bichon:fig:stage-1}{{4.12}{69}{Overview of the construction of the first stage of our pipeline.\relax }{figure.caption.65}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces The input mesh has feature edges snapped, to create a valid shell, as well as the curved mesh.\relax }}{70}{figure.caption.66}\protected@file@percent }
-\newlabel{bichon:fig:ex-snapping}{{4.13}{70}{The input mesh has feature edges snapped, to create a valid shell, as well as the curved mesh.\relax }{figure.caption.66}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces The input edges feature (green) are grouped together in poly-lines and categorized in graph (left) and loops (right). For every graph we add the nodes (blue) to the set of feature vertices.\relax }}{70}{figure.caption.67}\protected@file@percent }
-\newlabel{bichon:fig:feat-gr}{{4.14}{70}{The input edges feature (green) are grouped together in poly-lines and categorized in graph (left) and loops (right). For every graph we add the nodes (blue) to the set of feature vertices.\relax }{figure.caption.67}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces A sphere with different marked features (green). As we increase the number of features our algorithm will preserve them all but the quality of the surface suffers.\relax }}{70}{figure.caption.63}\protected@file@percent }
+\newlabel{bichon:fig:bad-features}{{4.10}{70}{A sphere with different marked features (green). As we increase the number of features our algorithm will preserve them all but the quality of the surface suffers.\relax }{figure.caption.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Input feature (green) is not preserved after traditional shell simplification.\relax }}{70}{figure.caption.64}\protected@file@percent }
+\newlabel{bichon:fig:not-feat-pres}{{4.11}{70}{Input feature (green) is not preserved after traditional shell simplification.\relax }{figure.caption.64}{}}
+\newlabel{def:curved-features}{{4.2}{70}{}{theorem.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Overview of the construction of the first stage of our pipeline.\relax }}{71}{figure.caption.65}\protected@file@percent }
+\newlabel{bichon:fig:stage-1}{{4.12}{71}{Overview of the construction of the first stage of our pipeline.\relax }{figure.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces The input mesh has feature edges snapped, to create a valid shell, as well as the curved mesh.\relax }}{71}{figure.caption.66}\protected@file@percent }
+\newlabel{bichon:fig:ex-snapping}{{4.13}{71}{The input mesh has feature edges snapped, to create a valid shell, as well as the curved mesh.\relax }{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {paragraph}{Feature Grouping.}{71}{figure.caption.67}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces The input edges feature (green) are grouped together in poly-lines and categorized in graph (left) and loops (right). For every graph we add the nodes (blue) to the set of feature vertices.\relax }}{72}{figure.caption.67}\protected@file@percent }
+\newlabel{bichon:fig:feat-gr}{{4.14}{72}{The input edges feature (green) are grouped together in poly-lines and categorized in graph (left) and loops (right). For every graph we add the nodes (blue) to the set of feature vertices.\relax }{figure.caption.67}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Illustration of smoothing on a feature.\relax }}{72}{figure.caption.68}\protected@file@percent }
+\newlabel{bichon:fig:loc-op}{{4.15}{72}{Illustration of smoothing on a feature.\relax }{figure.caption.68}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Feature straightening.}{72}{subsection.4.5.1}\protected@file@percent }
+\newlabel{cumin:sec:snapping}{{4.5.1}{72}{Feature straightening}{subsection.4.5.1}{}}
 \citation{eigenweb}
 \citation{cgal2008computational}
 \citation{levy2015geogram}
 \citation{jacobson2016libigl}
 \citation{schlomer2020nschloe}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Illustration of smoothing on a feature.\relax }}{71}{figure.caption.68}\protected@file@percent }
-\newlabel{bichon:fig:loc-op}{{4.15}{71}{Illustration of smoothing on a feature.\relax }{figure.caption.68}{}}
-\@writefile{toc}{\contentsline {paragraph}{Feature Grouping.}{71}{figure.caption.67}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Feature straightening.}{71}{subsection.4.5.1}\protected@file@percent }
-\newlabel{cumin:sec:snapping}{{4.5.1}{71}{Feature straightening}{subsection.4.5.1}{}}
 \citation{zhou2016thingi10k}
 \citation{Koch_2019_CVPR}
 \citation{Gao:2019}
 \citation{jiang2020bijective}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Curved meshes of different order. The additional degrees of freedom allows for more coarsening.\relax }}{72}{figure.caption.69}\protected@file@percent }
-\newlabel{bichon:fig:diff-k}{{4.16}{72}{Curved meshes of different order. The additional degrees of freedom allows for more coarsening.\relax }{figure.caption.69}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Results}{72}{section.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Large Scale Validation.}{72}{subsection.4.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Curved meshes of different order. The additional degrees of freedom allows for more coarsening.\relax }}{73}{figure.caption.69}\protected@file@percent }
+\newlabel{bichon:fig:diff-k}{{4.16}{73}{Curved meshes of different order. The additional degrees of freedom allows for more coarsening.\relax }{figure.caption.69}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Results}{73}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Large Scale Validation.}{73}{subsection.4.6.1}\protected@file@percent }
 \citation{Hu:2020:fTetWild}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Relative average edge length (with respect to longest bounding box edge of each model) of our curved meshes versus number of input vertices.\relax }}{74}{figure.caption.70}\protected@file@percent }
+\newlabel{bichon:fig:tet-count}{{4.17}{74}{Relative average edge length (with respect to longest bounding box edge of each model) of our curved meshes versus number of input vertices.\relax }{figure.caption.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Within the same distance bound ($10^{-3}$ of the longest bounding box side), our method generates a coarser high order mesh, compared to the linear counterpart generated by fTetWild.\relax }}{74}{figure.caption.71}\protected@file@percent }
+\newlabel{bichon:fig:us-vs-ftetwild}{{4.18}{74}{Within the same distance bound ($10^{-3}$ of the longest bounding box side), our method generates a coarser high order mesh, compared to the linear counterpart generated by fTetWild.\relax }{figure.caption.71}{}}
 \citation{hormann2000mips,fu2015computing}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Relative average edge length (with respect to longest bounding box edge of each model) of our curved meshes versus number of input vertices.\relax }}{73}{figure.caption.70}\protected@file@percent }
-\newlabel{bichon:fig:tet-count}{{4.17}{73}{Relative average edge length (with respect to longest bounding box edge of each model) of our curved meshes versus number of input vertices.\relax }{figure.caption.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Within the same distance bound ($10^{-3}$ of the longest bounding box side), our method generates a coarser high order mesh, compared to the linear counterpart generated by fTetWild.\relax }}{73}{figure.caption.71}\protected@file@percent }
-\newlabel{bichon:fig:us-vs-ftetwild}{{4.18}{73}{Within the same distance bound ($10^{-3}$ of the longest bounding box side), our method generates a coarser high order mesh, compared to the linear counterpart generated by fTetWild.\relax }{figure.caption.71}{}}
 \citation{feng2018curved}
 \citation{feng2018curved}
 \citation{feng2018curved}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Surface and volume average MIPS energy of the output of our method (the CAD volume energy is truncated at 100, excluding 6 models).\relax }}{74}{figure.caption.72}\protected@file@percent }
-\newlabel{bichon:fig:quality}{{4.19}{74}{Surface and volume average MIPS energy of the output of our method (the CAD volume energy is truncated at 100, excluding 6 models).\relax }{figure.caption.72}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Timing of our algorithm versus the input number of vertices.\relax }}{74}{figure.caption.73}\protected@file@percent }
-\newlabel{bichon:fig:timings}{{4.20}{74}{Timing of our algorithm versus the input number of vertices.\relax }{figure.caption.73}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Comparisons}{74}{subsection.4.6.2}\protected@file@percent }
-\newlabel{cumin:sec:comparison}{{4.6.2}{74}{Comparisons}{subsection.4.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Curved ODT}{74}{subsection.4.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Surface and volume average MIPS energy of the output of our method (the CAD volume energy is truncated at 100, excluding 6 models).\relax }}{75}{figure.caption.72}\protected@file@percent }
+\newlabel{bichon:fig:quality}{{4.19}{75}{Surface and volume average MIPS energy of the output of our method (the CAD volume energy is truncated at 100, excluding 6 models).\relax }{figure.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Timing of our algorithm versus the input number of vertices.\relax }}{75}{figure.caption.73}\protected@file@percent }
+\newlabel{bichon:fig:timings}{{4.20}{75}{Timing of our algorithm versus the input number of vertices.\relax }{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Comparisons}{75}{subsection.4.6.2}\protected@file@percent }
+\newlabel{cumin:sec:comparison}{{4.6.2}{75}{Comparisons}{subsection.4.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Curved ODT}{75}{subsection.4.6.2}\protected@file@percent }
 \citation{alliez2005variational}
 \citation{feng2018curved}
 \citation{Geuzaine:2009:gmsh}
 \citation{remacle2013robust}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Compared with Curved ODT, our method does not rely on setting vertex number and sizing field, and can generate coarse valid results.\relax }}{75}{figure.caption.74}\protected@file@percent }
-\newlabel{bichon:fig:cdt}{{4.21}{75}{Compared with Curved ODT, our method does not rely on setting vertex number and sizing field, and can generate coarse valid results.\relax }{figure.caption.74}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces Example of a BRep meshed with Gmsh where the optimization fails to untangle elements when fixing the surface. By allowing the surface to be modified, the mesh becomes ``wiggly''. Our method successfully generate a positive curved mesh.\relax }}{75}{figure.caption.75}\protected@file@percent }
-\newlabel{bichon:fig:gmsh-flipped}{{4.22}{75}{Example of a BRep meshed with Gmsh where the optimization fails to untangle elements when fixing the surface. By allowing the surface to be modified, the mesh becomes ``wiggly''. Our method successfully generate a positive curved mesh.\relax }{figure.caption.75}{}}
-\citation{tozoni2020low}
-\citation{crane2013conformal}
-\citation{mitchell1987discrete}
-\citation{tozoni2020low}
-\citation{crane2013conformal}
-\citation{mitchell1987discrete}
-\citation{SALARI:2000:CVB}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces Example of a STEP file meshed with Gmsh where, due to the low mesh density, the tetrahedralization is not positive. Gmsh manages to generate a positive mesh by using a denser initial tessellation. Since our method starts from a dense mesh and coarsen it, it can successfully resolve the geometry.\relax }}{76}{figure.caption.76}\protected@file@percent }
-\newlabel{bichon:fig:closed-holes}{{4.23}{76}{Example of a STEP file meshed with Gmsh where, due to the low mesh density, the tetrahedralization is not positive. Gmsh manages to generate a positive mesh by using a denser initial tessellation. Since our method starts from a dense mesh and coarsen it, it can successfully resolve the geometry.\relax }{figure.caption.76}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Compared with Curved ODT, our method does not rely on setting vertex number and sizing field, and can generate coarse valid results.\relax }}{76}{figure.caption.74}\protected@file@percent }
+\newlabel{bichon:fig:cdt}{{4.21}{76}{Compared with Curved ODT, our method does not rely on setting vertex number and sizing field, and can generate coarse valid results.\relax }{figure.caption.74}{}}
 \@writefile{toc}{\contentsline {paragraph}{Gmsh}{76}{figure.caption.76}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Flexibility}{76}{subsection.4.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Applications}{76}{subsection.4.6.4}\protected@file@percent }
-\newlabel{cumin:sec:application}{{4.6.4}{76}{Applications}{subsection.4.6.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Large Scale Poisson}{76}{figure.caption.78}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Our algorithm processes triangle meshes that can be extracted from different formats: an implicit microstructure geometry from \citep  {tozoni2020low} or a subdivision surface from \citep  {crane2013conformal}. The bijective map preserved on the surface allows taking advantage of the plethora of surface algorithms including polyhedral geodesic computation \citep  {mitchell1987discrete} and texture mapping.\relax }}{77}{figure.caption.77}\protected@file@percent }
-\newlabel{bichon:fig:flex}{{4.24}{77}{Our algorithm processes triangle meshes that can be extracted from different formats: an implicit microstructure geometry from \cite {tozoni2020low} or a subdivision surface from \cite {crane2013conformal}. The bijective map preserved on the surface allows taking advantage of the plethora of surface algorithms including polyhedral geodesic computation \cite {mitchell1987discrete} and texture mapping.\relax }{figure.caption.77}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.25}{\ignorespaces $L^2$ error of the solution of the Poisson equation with respect to model size on our three datasets.\relax }}{77}{figure.caption.78}\protected@file@percent }
-\newlabel{bichon:fig:large-scale-poisson}{{4.25}{77}{$L^2$ error of the solution of the Poisson equation with respect to model size on our three datasets.\relax }{figure.caption.78}{}}
+\citation{tozoni2020low}
+\citation{crane2013conformal}
+\citation{mitchell1987discrete}
+\citation{tozoni2020low}
+\citation{crane2013conformal}
+\citation{mitchell1987discrete}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces Example of a BRep meshed with Gmsh where the optimization fails to untangle elements when fixing the surface. By allowing the surface to be modified, the mesh becomes ``wiggly''. Our method successfully generate a positive curved mesh.\relax }}{77}{figure.caption.75}\protected@file@percent }
+\newlabel{bichon:fig:gmsh-flipped}{{4.22}{77}{Example of a BRep meshed with Gmsh where the optimization fails to untangle elements when fixing the surface. By allowing the surface to be modified, the mesh becomes ``wiggly''. Our method successfully generate a positive curved mesh.\relax }{figure.caption.75}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces Example of a STEP file meshed with Gmsh where, due to the low mesh density, the tetrahedralization is not positive. Gmsh manages to generate a positive mesh by using a denser initial tessellation. Since our method starts from a dense mesh and coarsen it, it can successfully resolve the geometry.\relax }}{77}{figure.caption.76}\protected@file@percent }
+\newlabel{bichon:fig:closed-holes}{{4.23}{77}{Example of a STEP file meshed with Gmsh where, due to the low mesh density, the tetrahedralization is not positive. Gmsh manages to generate a positive mesh by using a denser initial tessellation. Since our method starts from a dense mesh and coarsen it, it can successfully resolve the geometry.\relax }{figure.caption.76}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Flexibility}{77}{subsection.4.6.3}\protected@file@percent }
+\citation{SALARI:2000:CVB}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Our algorithm processes triangle meshes that can be extracted from different formats: an implicit microstructure geometry from \citep  {tozoni2020low} or a subdivision surface from \citep  {crane2013conformal}. The bijective map preserved on the surface allows taking advantage of the plethora of surface algorithms including polyhedral geodesic computation \citep  {mitchell1987discrete} and texture mapping.\relax }}{78}{figure.caption.77}\protected@file@percent }
+\newlabel{bichon:fig:flex}{{4.24}{78}{Our algorithm processes triangle meshes that can be extracted from different formats: an implicit microstructure geometry from \cite {tozoni2020low} or a subdivision surface from \cite {crane2013conformal}. The bijective map preserved on the surface allows taking advantage of the plethora of surface algorithms including polyhedral geodesic computation \cite {mitchell1987discrete} and texture mapping.\relax }{figure.caption.77}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.25}{\ignorespaces $L^2$ error of the solution of the Poisson equation with respect to model size on our three datasets.\relax }}{78}{figure.caption.78}\protected@file@percent }
+\newlabel{bichon:fig:large-scale-poisson}{{4.25}{78}{$L^2$ error of the solution of the Poisson equation with respect to model size on our three datasets.\relax }{figure.caption.78}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Applications}{78}{subsection.4.6.4}\protected@file@percent }
+\newlabel{cumin:sec:application}{{4.6.4}{78}{Applications}{subsection.4.6.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Large Scale Poisson}{78}{figure.caption.78}\protected@file@percent }
 \citation{mezger2007finite,Suwelack2013}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.26}{\ignorespaces By meshing the region between a box and a complicated obstacle, we are able to perform non-linear fluid simulation on our curved mesh.\relax }}{78}{figure.caption.79}\protected@file@percent }
-\newlabel{bichon:fig:ns}{{4.26}{78}{By meshing the region between a box and a complicated obstacle, we are able to perform non-linear fluid simulation on our curved mesh.\relax }{figure.caption.79}{}}
-\@writefile{toc}{\contentsline {paragraph}{High Accuracy Fluids}{78}{figure.caption.79}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Fast Animation}{78}{figure.caption.79}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.26}{\ignorespaces By meshing the region between a box and a complicated obstacle, we are able to perform non-linear fluid simulation on our curved mesh.\relax }}{79}{figure.caption.79}\protected@file@percent }
+\newlabel{bichon:fig:ns}{{4.26}{79}{By meshing the region between a box and a complicated obstacle, we are able to perform non-linear fluid simulation on our curved mesh.\relax }{figure.caption.79}{}}
+\@writefile{toc}{\contentsline {paragraph}{High Accuracy Fluids}{79}{figure.caption.79}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Fast Animation}{79}{figure.caption.79}\protected@file@percent }
 \citation{lyche2015simplex}
 \citation{Xia:2017:IGA}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Limitations and Concluding Remarks}{79}{section.4.7}\protected@file@percent }
-\newlabel{cumin:sec:conclusion}{{4.7}{79}{Limitations and Concluding Remarks}{section.4.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{Limitations.}{79}{section.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Future Work.}{79}{section.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conclusions.}{79}{section.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Limitations and Concluding Remarks}{80}{section.4.7}\protected@file@percent }
+\newlabel{cumin:sec:conclusion}{{4.7}{80}{Limitations and Concluding Remarks}{section.4.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{80}{section.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Future Work.}{80}{section.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conclusions.}{80}{section.4.7}\protected@file@percent }
 \citation{cgal2008computational}
 \citation{vcg}
 \citation{botsch2002openmesh}
 \citation{jacobson2016libigl}
 \citation{pmp-library}
 \citation{kremer2013openvolumemesh}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Declarative Specification for Unstructured Mesh Editing Algorithms }{80}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Declarative Specification for Unstructured Mesh Editing Algorithms }{81}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{80}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{81}{section.5.1}\protected@file@percent }
 \citation{Brisson1989}
 \citation{hoppe1996progressive}
 \citation{garland1997surface}
@@ -699,9 +700,9 @@
 \citation{Dicarlo2014,Zayer2017,Mahmoud2021}
 \citation{lienhardt1994n,dufourd1991obj3}
 \citation{kraemer2014cgogn}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Related Work}{83}{section.5.2}\protected@file@percent }
-\newlabel{wmtk:sec:related}{{5.2}{83}{Related Work}{section.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Mesh Data Structures}{83}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Related Work}{84}{section.5.2}\protected@file@percent }
+\newlabel{wmtk:sec:related}{{5.2}{84}{Related Work}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Mesh Data Structures}{84}{subsection.5.2.1}\protected@file@percent }
 \citation{ragan2013halide}
 \citation{kjolstad2016simit}
 \citation{kjolstad2017taco}
@@ -713,13 +714,13 @@
 \citation{karypis1998fast}
 \citation{chrisochoides2006parallel,aluru1997parallel}
 \citation{okusanya1996parallel,chrisochoides2003parallel,chrisochoides2006parallel}
-\citation{https://doi.org/10.1111/1467-8659.1230129,chen2010merge,funke2017parallel,blelloch1999design}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Domain specific languages in graphics}{85}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Parallel Meshing}{85}{subsection.5.2.3}\protected@file@percent }
+\citation{Cignoni1993,chen2010,funke2017parallel,blelloch1999design}
 \citation{lachat2014parallel}
 \citation{okusanya19973,chrisochoides2003parallel}
 \citation{chew1997parallel}
 \citation{blandford2006engineering,batista2010parallel,foteinos2011dynamic}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Domain specific languages in graphics}{84}{subsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Parallel Meshing}{84}{subsection.5.2.3}\protected@file@percent }
 \citation{marot2020quality}
 \citation{chrisochoides2006parallel,aluru1997parallel}
 \citation{galtier1996prepartitioning,linardakis2006delaunay}
@@ -727,208 +728,565 @@
 \citation{zhou2012tools}
 \citation{marot2019one}
 \citation{karypis1998fast}
-\citation{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005:VTM,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,Si:2015}
+\citation{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,Si:2015}
 \citation{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}
 \citation{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}
 \citation{hu2018tetrahedral,Hu:2019:fTetWild}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Scope of Mesh Editing}{85}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesh Generation}{85}{subsection.5.2.4}\protected@file@percent }
 \citation{Mandad:2015}
 \citation{hu2018tetrahedral,Hu:2019:fTetWild}
 \citation{Wang:2021}
 \citation{Brochu:2012}
 \citation{gumhold2003intersection}
 \citation{Garland:1999,Popovic:1997}
-\citation{Canann1996,CANANN1993185,Lori1998,Lipman:2012:BDM,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}
+\citation{Canann1996,Canann1993,Lori1998,Lipman:2012:BDM,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}
 \citation{Alexa:2019}
 \citation{Hutchinson:1996,Bargteil:2007,Wicke:2010,Wojtan:2008}
 \citation{Misztal:2012,Klingner:2006,Ando:2013,Chentanez:2007,clausen:2013}
 \citation{Villard:2002,Bender:2013,Li:2005,Narain:2012,Narain:2013,Pfaff:2014,Simnett:2009}
 \citation{Busaryev:2013}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Scope of Mesh Editing}{87}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesh Generation}{87}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Constrained Meshing.}{87}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesh Improvement.}{87}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dynamic Remeshing and Adaptive Mesh Refinement (AMR)}{87}{subsection.5.2.4}\protected@file@percent }
 \citation{Grinspun:2002}
 \citation{Grinspun:2002}
 \citation{Li2020IPC}
 \citation{Brochu:2012}
 \citation{luo2004combinatorial,Campen:2017:SimilarityMaps,Campen:2017:OnSimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}
 \citation{Gillespie:2021:DCE,Campen:2021}
-\@writefile{toc}{\contentsline {paragraph}{Constrained Meshing.}{86}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesh Improvement.}{86}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Dynamic Remeshing and Adaptive Mesh Refinement (AMR)}{86}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Parametrization}{86}{subsection.5.2.4}\protected@file@percent }
 \citation{zhou2016mesh}
 \citation{Jacobson:2013}
 \citation{Hu:2019:fTetWild}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph  {automatically} rollback the operation and restore the mesh to its previous \emph  {valid} state.\relax }}{87}{figure.caption.80}\protected@file@percent }
-\newlabel{fig:pipeline}{{5.1}{87}{\revision {Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph {automatically} rollback the operation and restore the mesh to its previous \emph {valid} state.}\relax }{figure.caption.80}{}}
-\@writefile{toc}{\contentsline {paragraph}{Mesh Arrangements/Boolean Operations}{87}{subsection.5.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Method}{87}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Mesh editing components}{88}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Operation Rollback.}{88}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Explicit Invariants.}{88}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Explicit Attribute Update.}{88}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Parallel Scheduling.}{88}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parametrization}{88}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesh Arrangements/Boolean Operations}{88}{subsection.5.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph  {automatically} rollback the operation and restore the mesh to its previous \emph  {valid} state.\relax }}{89}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:pipeline}{{5.1}{89}{\revision {Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph {automatically} rollback the operation and restore the mesh to its previous \emph {valid} state.}\relax }{figure.caption.80}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Method}{89}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Mesh editing components}{89}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Operation Rollback.}{89}{subsection.5.3.1}\protected@file@percent }
 \citation{Brisson1989}
+\@writefile{toc}{\contentsline {paragraph}{Explicit Invariants.}{90}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Explicit Attribute Update.}{90}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parallel Scheduling.}{90}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Abstract Mesh Navigation.}{90}{subsection.5.3.1}\protected@file@percent }
 \citation{Hu:2019:fTetWild}
 \citation{Hu:2019:fTetWild}
-\@writefile{toc}{\contentsline {paragraph}{Abstract Mesh Navigation.}{89}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Declarative Specification}{89}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mesh Classes}{89}{algocf.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces API of our \texttt  {TetMesh} class.\relax }}{90}{algocf.1}\protected@file@percent }
-\newlabel{algo:tetmesh}{{1}{90}{Declarative Specification}{algocf.1}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces API of our \texttt  {Scheduler}.\relax }}{91}{algocf.2}\protected@file@percent }
-\newlabel{algo:scheduler}{{2}{91}{Declarative Specification}{algocf.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scheduler}{92}{algocf.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Implementation.}{92}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Data Structure.}{92}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Parallelization.}{92}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Declarative Specification}{91}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mesh Classes}{91}{algocf.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Scheduler}{91}{algocf.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces API of our \texttt  {TetMesh} class.\relax }}{92}{algocf.1}\protected@file@percent }
+\newlabel{algo:tetmesh}{{1}{92}{Declarative Specification}{algocf.1}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces API of our \texttt  {Scheduler}.\relax }}{93}{algocf.2}\protected@file@percent }
+\newlabel{algo:scheduler}{{2}{93}{Declarative Specification}{algocf.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g., for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.\relax }}{94}{figure.caption.83}\protected@file@percent }
+\newlabel{fig:lock-example}{{5.2}{94}{\revision {Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g., for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.}\relax }{figure.caption.83}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Implementation.}{94}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data Structure.}{94}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parallelization.}{94}{subsection.5.3.3}\protected@file@percent }
 \citation{karras2012maximizing}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g., for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.\relax }}{93}{figure.caption.83}\protected@file@percent }
-\newlabel{fig:lock-example}{{5.2}{93}{\revision {Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g., for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.}\relax }{figure.caption.83}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Example: Shortest Edge Collapse}{93}{subsection.5.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Applications}{93}{section.5.4}\protected@file@percent }
-\newlabel{wmtk:sec:applications}{{5.4}{93}{Applications}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Example: Shortest Edge Collapse}{95}{subsection.5.3.4}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Overridden methods in \texttt  {TriMesh} sub-class to implement shortest edge collapse.\relax }}{95}{algocf.3}\protected@file@percent }
+\newlabel{algo:shortest}{{3}{95}{\revision {Example: Shortest Edge Collapse}}{algocf.3}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Scheduler setup for the schedule shortest edge collapse.\relax }}{96}{algocf.4}\protected@file@percent }
+\newlabel{algo:shortest-sced}{{4}{96}{\revision {Example: Shortest Edge Collapse}}{algocf.4}{}}
 \citation{hoppe1996progressive}
 \citation{jacobson2016libigl}
 \citation{garland1997surface}
 \citation{jacobson2016libigl}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces  Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times $), while libigl runs in 2.74s.\relax }}{97}{figure.caption.86}\protected@file@percent }
+\newlabel{fig:decimate}{{5.3}{97}{Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. \revision {Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times $), while libigl runs in 2.74s.}\relax }{figure.caption.86}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Applications}{97}{section.5.4}\protected@file@percent }
+\newlabel{wmtk:sec:applications}{{5.4}{97}{Applications}{section.5.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Shortest Edge Collapsing}{97}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{QSlim}{97}{figure.caption.86}\protected@file@percent }
 \citation{botsch2004remeshing}
 \citation{botsch2004remeshing}
 \citation{botsch2004remeshing}
 \citation{mobius2010openflipper}
-\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Overridden methods in \texttt  {TriMesh} sub-class to implement shortest edge collapse.\relax }}{94}{algocf.3}\protected@file@percent }
-\newlabel{algo:shortest}{{3}{94}{\revision {Example: Shortest Edge Collapse}}{algocf.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Shortest Edge Collapsing}{94}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{QSlim}{94}{figure.caption.86}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Isotropic Remeshing}{94}{figure.caption.87}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Scheduler setup for the schedule shortest edge collapse.\relax }}{95}{algocf.4}\protected@file@percent }
-\newlabel{algo:shortest-sced}{{4}{95}{\revision {Example: Shortest Edge Collapse}}{algocf.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s. Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times $ speedup). \relax }}{98}{figure.caption.87}\protected@file@percent }
+\newlabel{fig:qslim}{{5.4}{98}{\revision {Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s. Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times $ speedup).} \relax }{figure.caption.87}{}}
+\@writefile{toc}{\contentsline {paragraph}{Isotropic Remeshing}{98}{figure.caption.87}\protected@file@percent }
 \citation{mobius2010openflipper}
 \citation{mobius2010openflipper}
 \citation{Alexa:2019}
 \citation{hu2018tetrahedral,Hu:2019:fTetWild}
 \citation{Hu:2019:fTetWild}
 \citation{Wang:2020:FE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces  Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times $), while libigl runs in 2.74s.\relax }}{96}{figure.caption.86}\protected@file@percent }
-\newlabel{fig:decimate}{{5.3}{96}{Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. \revision {Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times $), while libigl runs in 2.74s.}\relax }{figure.caption.86}{}}
-\@writefile{toc}{\contentsline {paragraph}{Harmonic Triangulations}{96}{figure.caption.88}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Tetrahedral Meshing}{96}{figure.caption.89}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s. Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times $ speedup). \relax }}{97}{figure.caption.87}\protected@file@percent }
-\newlabel{fig:qslim}{{5.4}{97}{\revision {Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s. Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times $ speedup).} \relax }{figure.caption.87}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of uniform remeshing a model with $2,529,744$ triangles (left) with the same target edge length. Middle, \citep  {mobius2010openflipper} remeshes it to $78,322$ faces in 31.96 seconds. On the right is our 32-thread implementation, which generates $71,640$ triangles in 8.2 seconds (78.34s serial, 95.0s for a single thread, leading to a speedup of 11$\times $). The difference in density of the meshes is due to differences in the detail of the implementation, which makes the two methods reach an average vertex valence of 5.999, and a similar target edge length (differ 0.01\% of the bounding box diagonal length) with a different element budget.\relax }}{98}{figure.caption.88}\protected@file@percent }
-\newlabel{fig:uniform}{{5.5}{98}{Example of uniform remeshing a model with $2,529,744$ triangles (left) with the same target edge length. Middle, \cite {mobius2010openflipper} remeshes it to $78,322$ faces in 31.96 seconds. On the right is our 32-thread implementation, which generates $71,640$ triangles in 8.2 seconds (78.34s serial, 95.0s for a single thread, leading to a speedup of 11$\times $). The difference in density of the meshes is due to differences in the detail of the implementation, which makes the two methods reach an average vertex valence of 5.999, and a similar target edge length (differ 0.01\% of the bounding box diagonal length) with a different element budget.\relax }{figure.caption.88}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of \emph  {Harmonic Triangulations} starting with one million Gaussian distributed random points. Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times $), while the reference serial implementation takes 6.37s.\relax }}{98}{figure.caption.89}\protected@file@percent }
-\newlabel{fig:harmonic}{{5.6}{98}{Example of \emph {Harmonic Triangulations} starting with one million Gaussian distributed random points. \revision {Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times $), while the reference serial implementation takes 6.37s.}\relax }{figure.caption.89}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Tetrahedralize a surface with $856,294$ faces. Original TetWild (top right) generates a mesh with $56,761$ tetrahedra in 287.58s; our reimplementation (bottom left) generates a mesh with $44,866$ tetrahedra in 153.33s with 8 threads (452.42s serial, 521.47s on a single thread, speedup of $3.4\times $). The difference in number of tetrahedra is likely due to the different order of scheduling of operations due to the partitioning.\relax }}{99}{figure.caption.90}\protected@file@percent }
-\newlabel{fig:tetwild}{{5.7}{99}{Tetrahedralize a surface with $856,294$ faces. Original TetWild (top right) generates a mesh with $56,761$ tetrahedra in 287.58s; our reimplementation (bottom left) generates a mesh with $44,866$ tetrahedra in 153.33s with 8 threads (452.42s serial, 521.47s on a single thread, speedup of $3.4\times $). The difference in number of tetrahedra is likely due to the different order of scheduling of operations due to the partitioning.\relax }{figure.caption.90}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Parallelization}{99}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of uniform remeshing a model with $2,529,744$ triangles (left) with the same target edge length. Middle, \citep  {mobius2010openflipper} remeshes it to $78,322$ faces in 31.96 seconds. On the right is our 32-thread implementation, which generates $71,640$ triangles in 8.2 seconds (78.34s serial, 95.0s for a single thread, leading to a speedup of 11$\times $). The difference in density of the meshes is due to differences in the detail of the implementation, which makes the two methods reach an average vertex valence of 5.999, and a similar target edge length (differ 0.01\% of the bounding box diagonal length) with a different element budget.\relax }}{99}{figure.caption.88}\protected@file@percent }
+\newlabel{fig:uniform}{{5.5}{99}{Example of uniform remeshing a model with $2,529,744$ triangles (left) with the same target edge length. Middle, \cite {mobius2010openflipper} remeshes it to $78,322$ faces in 31.96 seconds. On the right is our 32-thread implementation, which generates $71,640$ triangles in 8.2 seconds (78.34s serial, 95.0s for a single thread, leading to a speedup of 11$\times $). The difference in density of the meshes is due to differences in the detail of the implementation, which makes the two methods reach an average vertex valence of 5.999, and a similar target edge length (differ 0.01\% of the bounding box diagonal length) with a different element budget.\relax }{figure.caption.88}{}}
+\@writefile{toc}{\contentsline {paragraph}{Harmonic Triangulations}{99}{figure.caption.88}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Tetrahedral Meshing}{99}{figure.caption.89}\protected@file@percent }
 \citation{Wang:2020:FE}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of \emph  {Harmonic Triangulations} starting with one million Gaussian distributed random points. Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times $), while the reference serial implementation takes 6.37s.\relax }}{100}{figure.caption.89}\protected@file@percent }
+\newlabel{fig:harmonic}{{5.6}{100}{Example of \emph {Harmonic Triangulations} starting with one million Gaussian distributed random points. \revision {Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times $), while the reference serial implementation takes 6.37s.}\relax }{figure.caption.89}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Parallelization}{100}{subsection.5.4.1}\protected@file@percent }
 \citation{zhou2016thingi10k}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.\relax }}{100}{figure.caption.91}\protected@file@percent }
-\newlabel{fig:limitation}{{5.8}{100}{\revision {Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.}\relax }{figure.caption.91}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Algorithm Modifications}{100}{subsection.5.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Large-scale dataset validation}{100}{subsection.5.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Shortest edge collapse with envelope containment of a model with $857,976$ faces. Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times $).\relax }}{101}{figure.caption.92}\protected@file@percent }
-\newlabel{fig:decimate_envelope}{{5.9}{101}{Shortest edge collapse with envelope containment of a model with $857,976$ faces. \revision {Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times $).}\relax }{figure.caption.92}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Uniform remeshing with envelope containment check of a model with $198,918$ faces. Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times $.\relax }}{101}{figure.caption.93}\protected@file@percent }
-\newlabel{fig:uniform_envelope}{{5.10}{101}{Uniform remeshing with envelope containment check of a model with $198,918$ faces. \revision {Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times $.}\relax }{figure.caption.93}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.\relax }}{102}{figure.caption.94}\protected@file@percent }
-\newlabel{fig:2d-datasaet}{{5.11}{102}{\revision {Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.}\relax }{figure.caption.94}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.\relax }}{102}{figure.caption.95}\protected@file@percent }
-\newlabel{fig:3d-datasaet}{{5.12}{102}{\revision {Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.}\relax }{figure.caption.95}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Concluding Remarks}{102}{section.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{104}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Tetrahedralize a surface with $856,294$ faces. Original TetWild (top right) generates a mesh with $56,761$ tetrahedra in 287.58s; our reimplementation (bottom left) generates a mesh with $44,866$ tetrahedra in 153.33s with 8 threads (452.42s serial, 521.47s on a single thread, speedup of $3.4\times $). The difference in number of tetrahedra is likely due to the different order of scheduling of operations due to the partitioning.\relax }}{101}{figure.caption.90}\protected@file@percent }
+\newlabel{fig:tetwild}{{5.7}{101}{Tetrahedralize a surface with $856,294$ faces. Original TetWild (top right) generates a mesh with $56,761$ tetrahedra in 287.58s; our reimplementation (bottom left) generates a mesh with $44,866$ tetrahedra in 153.33s with 8 threads (452.42s serial, 521.47s on a single thread, speedup of $3.4\times $). The difference in number of tetrahedra is likely due to the different order of scheduling of operations due to the partitioning.\relax }{figure.caption.90}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Algorithm Modifications}{101}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Large-scale dataset validation}{101}{subsection.5.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.\relax }}{102}{figure.caption.91}\protected@file@percent }
+\newlabel{fig:limitation}{{5.8}{102}{\revision {Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.}\relax }{figure.caption.91}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Shortest edge collapse with envelope containment of a model with $857,976$ faces. Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times $).\relax }}{102}{figure.caption.92}\protected@file@percent }
+\newlabel{fig:decimate_envelope}{{5.9}{102}{Shortest edge collapse with envelope containment of a model with $857,976$ faces. \revision {Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times $).}\relax }{figure.caption.92}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Uniform remeshing with envelope containment check of a model with $198,918$ faces. Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times $.\relax }}{103}{figure.caption.93}\protected@file@percent }
+\newlabel{fig:uniform_envelope}{{5.10}{103}{Uniform remeshing with envelope containment check of a model with $198,918$ faces. \revision {Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times $.}\relax }{figure.caption.93}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.\relax }}{103}{figure.caption.94}\protected@file@percent }
+\newlabel{fig:2d-datasaet}{{5.11}{103}{\revision {Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.}\relax }{figure.caption.94}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.\relax }}{104}{figure.caption.95}\protected@file@percent }
+\newlabel{fig:3d-datasaet}{{5.12}{104}{\revision {Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.}\relax }{figure.caption.95}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Concluding Remarks}{104}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{105}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp-conclusion}{{6}{104}{Conclusion}{chapter.6}{}}
+\newlabel{chp-conclusion}{{6}{105}{Conclusion}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Overview}{105}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Future Directions}{105}{section.6.2}\protected@file@percent }
 \citation{lipman2014bijective}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix}{105}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Shell Specifics}{106}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Proofs}{105}{section.A.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Theorem \ref  {thm:projection}}{105}{subsection.A.1.1}\protected@file@percent }
-\newlabel{app:projection}{{A.1.1}{105}{Theorem \ref {thm:projection}}{subsection.A.1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Proposition \ref  {thm:I1}}{105}{subsection.A.1.2}\protected@file@percent }
-\newlabel{app:I1}{{A.1.2}{105}{Proposition \ref {thm:I1}}{subsection.A.1.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.3}Theorem \ref  {thm:thickness}}{106}{subsection.A.1.3}\protected@file@percent }
-\newlabel{app:thickness}{{A.1.3}{106}{Theorem \ref {thm:thickness}}{subsection.A.1.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.4}Theorem \ref  {thm:bevel}}{106}{subsection.A.1.4}\protected@file@percent }
-\newlabel{app:bevel}{{A.1.4}{106}{Theorem \ref {thm:bevel}}{subsection.A.1.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Proofs}{106}{section.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Theorem \ref  {thm:projection}}{106}{subsection.A.1.1}\protected@file@percent }
+\newlabel{app:projection}{{A.1.1}{106}{Theorem \ref {thm:projection}}{subsection.A.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Proposition \ref  {thm:I1}}{106}{subsection.A.1.2}\protected@file@percent }
+\newlabel{app:I1}{{A.1.2}{106}{Proposition \ref {thm:I1}}{subsection.A.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.3}Theorem \ref  {thm:thickness}}{107}{subsection.A.1.3}\protected@file@percent }
+\newlabel{app:thickness}{{A.1.3}{107}{Theorem \ref {thm:thickness}}{subsection.A.1.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.4}Theorem \ref  {thm:bevel}}{107}{subsection.A.1.4}\protected@file@percent }
+\newlabel{app:bevel}{{A.1.4}{107}{Theorem \ref {thm:bevel}}{subsection.A.1.4}{}}
 \citation{floater2003one}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Bevel patterns used in the proofs in Appendix\nobreakspace  {}\ref  {app:bevel} and Appendix\nobreakspace  {}\ref  {app:singularity}\relax }}{107}{figure.caption.96}\protected@file@percent }
-\newlabel{prism:fig:bevel-explain}{{A.1}{107}{Bevel patterns used in the proofs in Appendix~\ref {app:bevel} and Appendix~\ref {app:singularity}\relax }{figure.caption.96}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.5}Theorem \ref  {thm:invariants}}{107}{subsection.A.1.5}\protected@file@percent }
-\newlabel{app:invariant-checks}{{A.1.5}{107}{Theorem \ref {thm:invariants}}{subsection.A.1.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Bevel patterns used in the proofs in Appendix\nobreakspace  {}\ref  {app:bevel} and Appendix\nobreakspace  {}\ref  {app:singularity}\relax }}{108}{figure.caption.96}\protected@file@percent }
+\newlabel{prism:fig:bevel-explain}{{A.1}{108}{Bevel patterns used in the proofs in Appendix~\ref {app:bevel} and Appendix~\ref {app:singularity}\relax }{figure.caption.96}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.5}Theorem \ref  {thm:invariants}}{108}{subsection.A.1.5}\protected@file@percent }
+\newlabel{app:invariant-checks}{{A.1.5}{108}{Theorem \ref {thm:invariants}}{subsection.A.1.5}{}}
 \citation{ciarlet1991basic}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Extension to meshes with Singularities}{108}{section.A.2}\protected@file@percent }
-\newlabel{app:singularity}{{A.2}{108}{Extension to meshes with Singularities}{section.A.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Reduction to a Standard QP}{108}{section.A.3}\protected@file@percent }
-\newlabel{app:qp}{{A.3}{108}{Reduction to a Standard QP}{section.A.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Extension to meshes with Singularities}{109}{section.A.2}\protected@file@percent }
+\newlabel{app:singularity}{{A.2}{109}{Extension to meshes with Singularities}{section.A.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Reduction to a Standard QP}{109}{section.A.3}\protected@file@percent }
+\newlabel{app:qp}{{A.3}{109}{Reduction to a Standard QP}{section.A.3}{}}
 \citation{knabner2001invertibility}
-\@writefile{toc}{\contentsline {section}{\numberline {A.4}Bijectivity of the Nonlinear Prismatic Transformation}{109}{section.A.4}\protected@file@percent }
-\newlabel{app:bilinear}{{A.4}{109}{Bijectivity of the Nonlinear Prismatic Transformation}{section.A.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.5}Double Slab}{109}{section.A.5}\protected@file@percent }
-\newlabel{app:dblayer}{{A.5}{109}{Double Slab}{section.A.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.6}Unpublished Material}{109}{section.A.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.1}Pointless Variant}{110}{subsection.A.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.2}Dynamic Intersection Check}{110}{subsection.A.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.3}Feature Snapping Shell}{110}{subsection.A.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.4}Positive Detereminant for Natural Prism Map}{110}{subsection.A.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.7}The geometric map is bijective}{110}{section.A.7}\protected@file@percent }
-\newlabel{cumin:sec:bij-proof}{{A.7}{110}{The geometric map is bijective}{section.A.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.4}Bijectivity of the Nonlinear Prismatic Transformation}{110}{section.A.4}\protected@file@percent }
+\newlabel{app:bilinear}{{A.4}{110}{Bijectivity of the Nonlinear Prismatic Transformation}{section.A.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.5}Double Slab}{110}{section.A.5}\protected@file@percent }
+\newlabel{app:dblayer}{{A.5}{110}{Double Slab}{section.A.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.6}Unpublished Material}{110}{section.A.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.1}Pointless Variant}{111}{subsection.A.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.2}Dynamic Intersection Check}{111}{subsection.A.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.3}Feature Snapping Shell}{111}{subsection.A.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6.4}Positive Detereminant for Natural Prism Map}{111}{subsection.A.6.4}\protected@file@percent }
 \citation{aigerman2013injective}
 \citation{lipman2014bijective}
 \citation{aigerman2013injective}
 \citation{lipman2014bijective}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Curve Meshing related}{112}{appendix.B}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}The geometric map is bijective}{112}{section.B.1}\protected@file@percent }
+\newlabel{cumin:sec:bij-proof}{{B.1}{112}{The geometric map is bijective}{section.B.1}{}}
 \citation{jiang2020bijective}
 \citation{dunyach2013adaptive}
 \citation{jiang2020bijective}
 \citation{teschner2003optimized}
-\@writefile{toc}{\contentsline {section}{\numberline {A.8}Local Operations}{111}{section.A.8}\protected@file@percent }
-\newlabel{app:local-ops}{{A.8}{111}{Local Operations}{section.A.8}{}}
 \citation{Rabinovich:2017}
 \citation{Rabinovich:2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Histogram of mean and maximum conformal AMIPS energy\nobreakspace  {}\citep  {Rabinovich:2017} of the output of our method and TetGen.\relax }}{112}{figure.caption.97}\protected@file@percent }
-\newlabel{bichon:fig:energy-max-avg}{{A.2}{112}{Histogram of mean and maximum conformal AMIPS energy~\cite {Rabinovich:2017} of the output of our method and TetGen.\relax }{figure.caption.97}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Histogram of output tetrahedra number for TetGen and {our} method. \relax }}{112}{figure.caption.98}\protected@file@percent }
-\newlabel{bichon:fig:numt}{{A.3}{112}{Histogram of output tetrahedra number for TetGen and {our} method. \relax }{figure.caption.98}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.9}Boundary preserving TetGen comparison}{113}{section.A.9}\protected@file@percent }
-\newlabel{app:tetgen}{{A.9}{113}{Boundary preserving TetGen comparison}{section.A.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.10}TetWild Overview}{113}{section.A.10}\protected@file@percent }
-\newlabel{app:tetwild}{{A.10}{113}{TetWild Overview}{section.A.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Histogram of mean and maximum conformal AMIPS energy\nobreakspace  {}\citep  {Rabinovich:2017} of the output of our method and TetGen.\relax }}{113}{figure.caption.97}\protected@file@percent }
+\newlabel{bichon:fig:energy-max-avg}{{B.1}{113}{Histogram of mean and maximum conformal AMIPS energy~\cite {Rabinovich:2017} of the output of our method and TetGen.\relax }{figure.caption.97}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Local Operations}{113}{section.B.2}\protected@file@percent }
+\newlabel{app:local-ops}{{B.2}{113}{Local Operations}{section.B.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Histogram of output tetrahedra number for TetGen and {our} method. \relax }}{114}{figure.caption.98}\protected@file@percent }
+\newlabel{bichon:fig:numt}{{B.2}{114}{Histogram of output tetrahedra number for TetGen and {our} method. \relax }{figure.caption.98}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.3}Boundary preserving TetGen comparison}{114}{section.B.3}\protected@file@percent }
+\newlabel{app:tetgen}{{B.3}{114}{Boundary preserving TetGen comparison}{section.B.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.4}TetWild Overview}{114}{section.B.4}\protected@file@percent }
+\newlabel{app:tetwild}{{B.4}{114}{TetWild Overview}{section.B.4}{}}
 \bibstyle{apalike}
 \bibdata{thesis.bib}
-\bibcite{abgrall2012}{{1}{2012}{{Abgrall et~al.}}{{}}}
-\bibcite{Abgrall2014}{{2}{2014}{{Abgrall et~al.}}{{}}}
-\bibcite{Babuska1988}{{3}{1988}{{Babuska and Guo}}{{}}}
-\bibcite{Baumgart1972}{{4}{1972}{{Baumgart}}{{}}}
-\bibcite{BERN1994}{{5}{1994}{{Bern et~al.}}{{}}}
-\bibcite{Bishop2016}{{6}{2016}{{Bishop}}{{}}}
-\bibcite{Brisson1989}{{7}{1989}{{Brisson}}{{}}}
-\bibcite{Canann1996}{{8}{1996}{{Canann et~al.}}{{}}}
-\bibcite{Cardoze2004}{{9}{2004}{{Cardoze et~al.}}{{}}}
-\bibcite{Cheng2019}{{10}{2019}{{Cheng et~al.}}{{}}}
-\bibcite{Dicarlo2014}{{11}{2014}{{DiCarlo et~al.}}{{}}}
-\bibcite{dobrzynski2017}{{12}{2017}{{Dobrzynski and El~Jannoun}}{{}}}
-\bibcite{Dougherty2004}{{13}{2004}{{Dougherty et~al.}}{{}}}
-\bibcite{George2012}{{14}{2012}{{George and Borouchaki}}{{}}}
-\bibcite{Geuzaine2015}{{15}{2015}{{Geuzaine et~al.}}{{}}}
-\bibcite{Ghasemi2016}{{16}{2016}{{Ghasemi et~al.}}{{}}}
-\bibcite{Guibas1985}{{17}{1985}{{Guibas and Stolfi}}{{}}}
-\bibcite{Hahmann2003}{{18}{2003}{{{Hahmann} and {Bonneau}}}{{}}}
-\bibcite{Jameson2002}{{19}{2002}{{Jameson et~al.}}{{}}}
-\bibcite{Knupp2000}{{20}{2000}{{Knupp}}{{}}}
-\bibcite{Mahmoud2021}{{21}{2021}{{Mahmoud et~al.}}{{}}}
-\bibcite{Maentylae1987}{{22}{1987}{{M{\"a}ntyl{\"a}}}{{}}}
-\bibcite{Persson2009}{{23}{2009}{{Persson and Peraire}}{{}}}
-\bibcite{Poya2016}{{24}{2016}{{Poya et~al.}}{{}}}
-\bibcite{Requicha1980}{{25}{1980}{{Requicha}}{{}}}
-\bibcite{Roca2012}{{26}{2012}{{Roca et~al.}}{{}}}
-\bibcite{Sadek1980}{{27}{1980}{{Sadek}}{{}}}
-\bibcite{Suwelack2013}{{28}{2013}{{Suwelack et~al.}}{{}}}
-\bibcite{TONG2009}{{29}{2009}{{Tong and Kim}}{{}}}
-\bibcite{Xie2013}{{30}{2013}{{Xie et~al.}}{{}}}
-\bibcite{Yerry1983}{{31}{1983}{{Yerry and Shephard}}{{}}}
-\bibcite{Zayer2017}{{32}{2017}{{Zayer et~al.}}{{}}}
-\gdef \@abspage@last{132}
+\bibcite{Lori1998}{{1}{1998}{{A.~Freitag and Ollivier-Gooch}}{{}}}
+\bibcite{abgrall2012}{{2}{2012}{{Abgrall et~al.}}{{}}}
+\bibcite{Abgrall2014}{{3}{2014}{{Abgrall et~al.}}{{}}}
+\bibcite{Aigerman:2017}{{4}{2017}{{Aigerman et~al.}}{{}}}
+\bibcite{aigerman2013injective}{{5}{2013}{{Aigerman and Lipman}}{{}}}
+\bibcite{Aigerman:2015}{{6}{2015}{{Aigerman and Lipman}}{{}}}
+\bibcite{Aigerman:2016}{{7}{2016}{{Aigerman and Lipman}}{{}}}
+\bibcite{Aigerman:2014}{{8}{2014}{{Aigerman et~al.}}{{}}}
+\bibcite{Aigerman:2015b}{{9}{2015}{{Aigerman et~al.}}{{}}}
+\bibcite{Ainsley:2012}{{10}{2012}{{Ainsley et~al.}}{{}}}
+\bibcite{Alauzet:2014:ACA}{{11}{2014}{{Alauzet and Marcum}}{{}}}
+\bibcite{Alexa:2019}{{12}{2019}{{Alexa}}{{}}}
+\bibcite{alexa2020conforming}{{13}{2020}{{Alexa}}{{}}}
+\bibcite{alliez2005variational}{{14}{2005a}{{Alliez et~al.}}{{}}}
+\bibcite{Alliez:2005}{{15}{2005b}{{Alliez et~al.}}{{}}}
+\bibcite{alliez2003isotropic}{{16}{2003}{{Alliez et~al.}}{{}}}
+\bibcite{aluru1997parallel}{{17}{1997}{{Aluru and Sevilgen}}{{}}}
+\bibcite{Ando:2013}{{18}{2013}{{Ando et~al.}}{{}}}
+\bibcite{aubry2017boundary}{{19}{2017}{{Aubry et~al.}}{{}}}
+\bibcite{aubry2008most}{{20}{2008}{{Aubry and L{\"o}hner}}{{}}}
+\bibcite{aubry2015most}{{21}{2015}{{Aubry et~al.}}{{}}}
+\bibcite{Babuska1988}{{22}{1988}{{Babuska and Guo}}{{}}}
+\bibcite{BABUSKA1992159}{{23}{1992}{{Babuška and Guo}}{{}}}
+\bibcite{bajaj2002hierarchical}{{24}{2002}{{Bajaj et~al.}}{{}}}
+\bibcite{bank1983some}{{25}{1983}{{Bank et~al.}}{{}}}
+\bibcite{bargteil2014animation}{{26}{2014}{{Bargteil and Cohen}}{{}}}
+\bibcite{Bargteil:2007}{{27}{2007}{{Bargteil et~al.}}{{}}}
+\bibcite{barnhill_opitz_pottmann_1992}{{28}{1992}{{Barnhill et~al.}}{{}}}
+\bibcite{BASSI1997251}{{29}{1997}{{Bassi and Rebay}}{{}}}
+\bibcite{batista2010parallel}{{30}{2010}{{Batista et~al.}}{{}}}
+\bibcite{Baumgart1972}{{31}{1972}{{Baumgart}}{{}}}
+\bibcite{Bender:2013}{{32}{2013}{{Bender and Deul}}{{}}}
+\bibcite{BERN1994}{{33}{1994}{{Bern et~al.}}{{}}}
+\bibcite{Bishop2016}{{34}{2016}{{Bishop}}{{}}}
+\bibcite{blandford2006engineering}{{35}{2006}{{Blandford et~al.}}{{}}}
+\bibcite{blelloch1999design}{{36}{1999}{{Blelloch et~al.}}{{}}}
+\bibcite{triangulation_in_cgal}{{37}{2002}{{Boissonnat et~al.}}{{}}}
+\bibcite{boissonnat2005provably}{{38}{2005a}{{Boissonnat and Oudot}}{{}}}
+\bibcite{Boissonnat:2005:PGS}{{39}{2005b}{{Boissonnat and Oudot}}{{}}}
+\bibcite{Bommes:2013}{{40}{2013a}{{Bommes et~al.}}{{}}}
+\bibcite{bommes2013quad}{{41}{2013b}{{Bommes et~al.}}{{}}}
+\bibcite{QUADSTAR2012}{{42}{2012}{{Bommes et~al.}}{{}}}
+\bibcite{Bommes:2009}{{43}{2009}{{Bommes et~al.}}{{}}}
+\bibcite{borrell2018parallel}{{44}{2018}{{Borrell et~al.}}{{}}}
+\bibcite{botsch2003multiresolution}{{45}{2003}{{Botsch and Kobbelt}}{{}}}
+\bibcite{botsch2004remeshing}{{46}{2004}{{Botsch and Kobbelt}}{{}}}
+\bibcite{botsch2006primo}{{47}{2006}{{Botsch et~al.}}{{}}}
+\bibcite{botsch2002openmesh}{{48}{2002}{{Botsch et~al.}}{{}}}
+\bibcite{boubekeur2008phong}{{49}{2008}{{Boubekeur and Alexa}}{{}}}
+\bibcite{bowers2010parallel}{{50}{2010}{{Bowers et~al.}}{{}}}
+\bibcite{code:quartet}{{51}{2014}{{Bridson and Doran}}{{}}}
+\bibcite{Brisson1989}{{52}{1989}{{Brisson}}{{}}}
+\bibcite{Brochu:2012}{{53}{2012}{{Brochu et~al.}}{{}}}
+\bibcite{Bronson:2013:LCC}{{54}{2013}{{Bronson et~al.}}{{}}}
+\bibcite{Busaryev:RMI:2009}{{55}{2009}{{Busaryev et~al.}}{{}}}
+\bibcite{Busaryev:2013}{{56}{2013}{{Busaryev et~al.}}{{}}}
+\bibcite{Calderon:2017}{{57}{2017}{{Calderon and Boubekeur}}{{}}}
+\bibcite{Campen:2021}{{58}{2021}{{Campen et~al.}}{{}}}
+\bibcite{campen2018seamless}{{59}{2019}{{Campen et~al.}}{{}}}
+\bibcite{Campen:2016}{{60}{2016}{{Campen et~al.}}{{}}}
+\bibcite{Campen:2017:SimilarityMaps}{{61}{2017}{{Campen and Zorin}}{{}}}
+\bibcite{Canann1996}{{62}{1996}{{Canann et~al.}}{{}}}
+\bibcite{Cardoze2004}{{63}{2004}{{Cardoze et~al.}}{{}}}
+\bibcite{chazal2005condition}{{64}{2005}{{Chazal and Cohen-Steiner}}{{}}}
+\bibcite{chazal2010ball}{{65}{2010}{{Chazal et~al.}}{{}}}
+\bibcite{Chen:2004:ODT}{{66}{2004}{{Chen and Xu}}{{}}}
+\bibcite{chen2004shell}{{67}{2004}{{Chen et~al.}}{{}}}
+\bibcite{cheng2000silver}{{68}{2000}{{Cheng et~al.}}{{}}}
+\bibcite{cheng2008practical}{{69}{2008a}{{Cheng et~al.}}{{}}}
+\bibcite{Cheng:2008:APD}{{70}{2008b}{{Cheng et~al.}}{{}}}
+\bibcite{Cheng:2012:DMG}{{71}{2012}{{Cheng et~al.}}{{}}}
+\bibcite{Cheng2019}{{72}{2019}{{Cheng et~al.}}{{}}}
+\bibcite{Chentanez:2007}{{73}{2007}{{Chentanez et~al.}}{{}}}
+\bibcite{cheshmi2020nasoq}{{74}{2020}{{Cheshmi et~al.}}{{}}}
+\bibcite{chew1989constrained}{{75}{1989a}{{Chew}}{{}}}
+\bibcite{Chew:1987:CDT}{{76}{1989b}{{Chew}}{{}}}
+\bibcite{chew1993guaranteed}{{77}{1993}{{Chew}}{{}}}
+\bibcite{chew1997parallel}{{78}{1997}{{Chew et~al.}}{{}}}
+\bibcite{chrisochoides2006parallel}{{79}{2006}{{Chrisochoides}}{{}}}
+\bibcite{chrisochoides2003parallel}{{80}{2003}{{Chrisochoides and Nave}}{{}}}
+\bibcite{ciarlet1991basic}{{81}{1991}{{Ciarlet}}{{}}}
+\bibcite{vcg}{{82}{2021}{{Cignoni et~al.}}{{}}}
+\bibcite{Cignoni1993}{{83}{1993}{{Cignoni et~al.}}{{}}}
+\bibcite{clausen:2013}{{84}{2013}{{Clausen et~al.}}{{}}}
+\bibcite{cohen1997simplifying}{{85}{1997}{{Cohen et~al.}}{{}}}
+\bibcite{cohen1996simplification}{{86}{1996}{{Cohen et~al.}}{{}}}
+\bibcite{cohen2002conforming}{{87}{2002a}{{Cohen-Steiner et~al.}}{{}}}
+\bibcite{CohenSteiner:2002:CDT}{{88}{2002b}{{Cohen-Steiner et~al.}}{{}}}
+\bibcite{collins2002mesh}{{89}{2002}{{Collins and Hilton}}{{}}}
+\bibcite{blender}{{90}{2018}{{Community}}{{}}}
+\bibcite{conway2016symmetries}{{91}{2016}{{Conway et~al.}}{{}}}
+\bibcite{coreform}{{92}{2020}{{Coreform}}{{}}}
+\bibcite{coxeter1973regular}{{93}{1973}{{Coxeter}}{{}}}
+\bibcite{crane2013conformal}{{94}{2013}{{Crane}}{{}}}
+\bibcite{crane2013geodesics}{{95}{2013}{{Crane et~al.}}{{}}}
+\bibcite{Cuilliere:2013:ADM}{{96}{2013}{{Cuilliere et~al.}}{{}}}
+\bibcite{Degener:2003}{{97}{2003}{{Degener et~al.}}{{}}}
+\bibcite{dey1999curvilinear}{{98}{1999a}{{Dey et~al.}}{{}}}
+\bibcite{dey1999topology}{{99}{1999b}{{Dey et~al.}}{{}}}
+\bibcite{Dey:2008:DAD}{{100}{2008}{{Dey and Levine}}{{}}}
+\bibcite{dey2010polygonal}{{101}{2010}{{Dey and Ray}}{{}}}
+\bibcite{Dicarlo2014}{{102}{2014}{{DiCarlo et~al.}}{{}}}
+\bibcite{dobrev2019target}{{103}{2019}{{Dobrev et~al.}}{{}}}
+\bibcite{dobrzynski2017}{{104}{2017}{{Dobrzynski and El~Jannoun}}{{}}}
+\bibcite{dompierre1999subdivide}{{105}{1999}{{Dompierre et~al.}}{{}}}
+\bibcite{Doran:2013:ISI}{{106}{2013}{{Doran et~al.}}{{}}}
+\bibcite{Dougherty2004}{{107}{2004}{{Dougherty et~al.}}{{}}}
+\bibcite{du2003tetrahedral}{{108}{2003a}{{Du and Wang}}{{}}}
+\bibcite{Du:2003:TMG}{{109}{2003b}{{Du and Wang}}{{}}}
+\bibcite{dufourd1991obj3}{{110}{1991}{{Dufourd}}{{}}}
+\bibcite{dunyach2013adaptive}{{111}{2013}{{Dunyach et~al.}}{{}}}
+\bibcite{dyer2007delaunay}{{112}{2007}{{Dyer et~al.}}{{}}}
+\bibcite{ebke2014level}{{113}{2014}{{Ebke et~al.}}{{}}}
+\bibcite{ENGVALL2016378}{{114}{2016}{{Engvall and Evans}}{{}}}
+\bibcite{ENGVALL201783}{{115}{2017}{{Engvall and Evans}}{{}}}
+\bibcite{Luke2018}{{116}{2018}{{Engvall and Evans}}{{}}}
+\bibcite{Engwirda16}{{117}{2016}{{Engwirda}}{{}}}
+\bibcite{Ezuz:2019}{{118}{2019}{{Ezuz et~al.}}{{}}}
+\bibcite{feng2018curved}{{119}{2018a}{{Feng et~al.}}{{}}}
+\bibcite{Feng:2018:COD}{{120}{2018b}{{Feng et~al.}}{{}}}
+\bibcite{floater2003one}{{121}{2003}{{Floater}}{{}}}
+\bibcite{Floater:97}{{122}{1997}{{Floater}}{{}}}
+\bibcite{FloaterSurvey:2005}{{123}{2005}{{Floater and Hormann}}{{}}}
+\bibcite{FORTUNATO20161}{{124}{2016}{{Fortunato and Persson}}{{}}}
+\bibcite{foteinos2011dynamic}{{125}{2011}{{Foteinos and Chrisochoides}}{{}}}
+\bibcite{Fu:2016}{{126}{2016}{{Fu and Liu}}{{}}}
+\bibcite{Fu:2015}{{127}{2015a}{{Fu et~al.}}{{}}}
+\bibcite{fu2015computing}{{128}{2015b}{{Fu et~al.}}{{}}}
+\bibcite{funke2017parallel}{{129}{2017}{{Funke and Sanders}}{{}}}
+\bibcite{galtier1996prepartitioning}{{130}{1996}{{Galtier and George}}{{}}}
+\bibcite{Gao:2019}{{131}{2019}{{Gao et~al.}}{{}}}
+\bibcite{Gargallo2015}{{132}{2015}{{Gargallo-Peir\'{o} et~al.}}{{}}}
+\bibcite{gargallo2013high}{{133}{2013}{{Gargallo~Peir{\'o} et~al.}}{{}}}
+\bibcite{garimella2000boundary}{{134}{2000}{{Garimella and Shephard}}{{}}}
+\bibcite{Garland:1999}{{135}{1999}{{Garland and Heckbert}}{{}}}
+\bibcite{garland1997surface}{{136}{1997}{{Garland and Heckbert}}{{}}}
+\bibcite{garland1998simplifying}{{137}{1998}{{Garland and Heckbert}}{{}}}
+\bibcite{gartner2000efficient}{{138}{2000}{{G{\"a}rtner and Sch{\"o}nherr}}{{}}}
+\bibcite{George2012}{{139}{2012}{{George and Borouchaki}}{{}}}
+\bibcite{Geuzaine2015}{{140}{2015}{{Geuzaine et~al.}}{{}}}
+\bibcite{Geuzaine:2009:gmsh}{{141}{2009}{{Geuzaine and Remacle}}{{}}}
+\bibcite{Ghasemi2016}{{142}{2016}{{Ghasemi et~al.}}{{}}}
+\bibcite{Gillespie:2021:DCE}{{143}{2021}{{Gillespie et~al.}}{{}}}
+\bibcite{Gotsman:2001}{{144}{2001}{{Gotsman and Surazhsky}}{{}}}
+\bibcite{Grinspun:2002}{{145}{2002}{{Grinspun et~al.}}{{}}}
+\bibcite{gu2018discrete2}{{146}{2018a}{{Gu et~al.}}{{}}}
+\bibcite{gu2018discrete}{{147}{2018b}{{Gu et~al.}}{{}}}
+\bibcite{eigenweb}{{148}{2010}{{Guennebaud et~al.}}{{}}}
+\bibcite{gueziec1996surface}{{149}{1996}{{Gu{\'e}ziec}}{{}}}
+\bibcite{Guibas1985}{{150}{1985}{{Guibas and Stolfi}}{{}}}
+\bibcite{guigue2003fast}{{151}{2003}{{Guigue and Devillers}}{{}}}
+\bibcite{gumhold2003intersection}{{152}{2003}{{Gumhold et~al.}}{{}}}
+\bibcite{Guo2020Cut}{{153}{2020}{{Guo et~al.}}{{}}}
+\bibcite{Hahmann2003}{{154}{2003}{{{Hahmann} and {Bonneau}}}{{}}}
+\bibcite{Haimes:2014:MMO}{{155}{2014}{{Haimes}}{{}}}
+\bibcite{harmon2010robust}{{156}{2010}{{Harmon}}{{}}}
+\bibcite{Harmon:2011}{{157}{2011}{{Harmon et~al.}}{{}}}
+\bibcite{Harmon:2009}{{158}{2009}{{Harmon et~al.}}{{}}}
+\bibcite{hart2018conway}{{159}{2018}{{Hart}}{{}}}
+\bibcite{hass2020approximating}{{160}{2020}{{Hass and Trnkova}}{{}}}
+\bibcite{hoppe1996progressive}{{161}{1996}{{Hoppe}}{{}}}
+\bibcite{hoppe1994piecewise}{{162}{1994}{{Hoppe et~al.}}{{}}}
+\bibcite{Hormann:2000}{{163}{2000a}{{Hormann and Greiner}}{{}}}
+\bibcite{hormann2000mips}{{164}{2000b}{{Hormann and Greiner}}{{}}}
+\bibcite{Hormann:2007}{{165}{2007}{{Hormann et~al.}}{{}}}
+\bibcite{Hormann:2017:GBC}{{166}{2017}{{Hormann and Sukumar}}{{}}}
+\bibcite{hu2017}{{167}{2017}{{{Hu} et~al.}}{{}}}
+\bibcite{hu2016error}{{168}{2016}{{Hu et~al.}}{{}}}
+\bibcite{hu2019taichi}{{169}{2019a}{{Hu et~al.}}{{}}}
+\bibcite{hu2019triwild}{{170}{2019b}{{Hu et~al.}}{{}}}
+\bibcite{Hu:2019:triwild}{{171}{2019c}{{Hu et~al.}}{{}}}
+\bibcite{Hu:2019:fTetWild}{{172}{2019d}{{Hu et~al.}}{{}}}
+\bibcite{Hu:2020:fTetWild}{{173}{2020}{{Hu et~al.}}{{}}}
+\bibcite{hu2018tetrahedral}{{174}{2018}{{Hu et~al.}}{{}}}
+\bibcite{huang2007gradient}{{175}{2007}{{Huang et~al.}}{{}}}
+\bibcite{Hutchinson:1996}{{176}{1996}{{Hutchinson et~al.}}{{}}}
+\bibcite{Jacobson:2013}{{177}{2013}{{Jacobson et~al.}}{{}}}
+\bibcite{libigl}{{178}{2014}{{Jacobson et~al.}}{{}}}
+\bibcite{jacobson2016libigl}{{179}{2016}{{Jacobson et~al.}}{{}}}
+\bibcite{Jameson2002}{{180}{2002}{{Jameson et~al.}}{{}}}
+\bibcite{jamin2015cgalmesh}{{181}{2015a}{{Jamin et~al.}}{{}}}
+\bibcite{Jamin:2015:CAG}{{182}{2015b}{{Jamin et~al.}}{{}}}
+\bibcite{jiang2017simplicial}{{183}{2017}{{Jiang et~al.}}{{}}}
+\bibcite{jiang2020bijective}{{184}{2020}{{Jiang et~al.}}{{}}}
+\bibcite{jiao2004overlaying}{{185}{2004}{{Jiao and Heath}}{{}}}
+\bibcite{jiao2012reconstructing}{{186}{2012}{{Jiao and Wang}}{{}}}
+\bibcite{jimenez:2001}{{187}{2001}{{Jimenez et~al.}}{{}}}
+\bibcite{Jin:2008}{{188}{2008}{{{Jin} et~al.}}{{}}}
+\bibcite{jin2019shell}{{189}{2019}{{Jin et~al.}}{{}}}
+\bibcite{johnen2013geometrical}{{190}{2013}{{Johnen et~al.}}{{}}}
+\bibcite{karras2012maximizing}{{191}{2012}{{Karras}}{{}}}
+\bibcite{karypis1998fast}{{192}{1998}{{Karypis and Kumar}}{{}}}
+\bibcite{Kazhdan:2012}{{193}{2012}{{Kazhdan et~al.}}{{}}}
+\bibcite{Kharevych:2006}{{194}{2006}{{Kharevych et~al.}}{{}}}
+\bibcite{kjolstad2017taco}{{195}{2017}{{Kjolstad et~al.}}{{}}}
+\bibcite{kjolstad2016simit}{{196}{2016}{{Kjolstad et~al.}}{{}}}
+\bibcite{Klingner07aggressive}{{197}{2007}{{Klingner and Shewchuk}}{{}}}
+\bibcite{Klingner:2009}{{198}{2009}{{Klingner}}{{}}}
+\bibcite{Klingner:2006}{{199}{2006}{{Klingner et~al.}}{{}}}
+\bibcite{knabner2001invertibility}{{200}{2001}{{Knabner and Summ}}{{}}}
+\bibcite{Knupp2000}{{201}{2000}{{Knupp}}{{}}}
+\bibcite{Knupp20002}{{202}{2002}{{Knupp}}{{}}}
+\bibcite{kobbelt1998interactive}{{203}{1998}{{Kobbelt et~al.}}{{}}}
+\bibcite{Koch_2019_CVPR}{{204}{2019}{{Koch et~al.}}{{}}}
+\bibcite{Kovalsky:2016}{{205}{2016}{{Kovalsky et~al.}}{{}}}
+\bibcite{kraemer2014cgogn}{{206}{2014}{{Kraemer et~al.}}{{}}}
+\bibcite{kraevoy2004cross}{{207}{2004}{{Kraevoy and Sheffer}}{{}}}
+\bibcite{kremer2013openvolumemesh}{{208}{2013}{{Kremer et~al.}}{{}}}
+\bibcite{krishnamurthy1996fitting}{{209}{1996}{{Krishnamurthy and Levoy}}{{}}}
+\bibcite{Labelle:2007:ISF}{{210}{2007}{{Labelle and Shewchuk}}{{}}}
+\bibcite{lachat2014parallel}{{211}{2014}{{Lachat et~al.}}{{}}}
+\bibcite{lee2000displaced}{{212}{2000}{{Lee et~al.}}{{}}}
+\bibcite{lee1998maps}{{213}{1998}{{Lee et~al.}}{{}}}
+\bibcite{lengyel2001real}{{214}{2001}{{Lengyel et~al.}}{{}}}
+\bibcite{levy2015geogram}{{215}{2015}{{L{\'e}vy}}{{}}}
+\bibcite{Levy:2002}{{216}{2002}{{L{\'e}vy et~al.}}{{}}}
+\bibcite{Li:2005}{{217}{2005}{{Li and Volkov}}{{}}}
+\bibcite{Li2020IPC}{{218}{2020}{{Li et~al.}}{{}}}
+\bibcite{li2018optcuts}{{219}{2018}{{Li et~al.}}{{}}}
+\bibcite{Yufei:2012}{{220}{2012}{{Li et~al.}}{{}}}
+\bibcite{lienhardt1994n}{{221}{1994}{{Lienhardt}}{{}}}
+\bibcite{LIN2007adap}{{222}{2007}{{Lin et~al.}}{{}}}
+\bibcite{linardakis2006delaunay}{{223}{2006}{{Linardakis and Chrisochoides}}{{}}}
+\bibcite{Lipman:2012}{{224}{2012a}{{Lipman}}{{}}}
+\bibcite{Lipman:2012:BDM}{{225}{2012b}{{Lipman}}{{}}}
+\bibcite{Lipman:2013ArXiv}{{226}{2013}{{Lipman}}{{}}}
+\bibcite{lipman2014bijective}{{227}{2014}{{Lipman}}{{}}}
+\bibcite{litke2005image}{{228}{2005}{{Litke et~al.}}{{}}}
+\bibcite{Liu:2008}{{229}{2008}{{Liu et~al.}}{{}}}
+\bibcite{liu2017seamless}{{230}{2017}{{Liu et~al.}}{{}}}
+\bibcite{liu2015efficient}{{231}{2015}{{Liu et~al.}}{{}}}
+\bibcite{lo2012parallel}{{232}{2012}{{Lo}}{{}}}
+\bibcite{corefinement}{{233}{2020}{{Loriot et~al.}}{{}}}
+\bibcite{loseille2017unique}{{234}{2017}{{Loseille et~al.}}{{}}}
+\bibcite{Qiukai2013}{{235}{2013}{{Lu et~al.}}{{}}}
+\bibcite{lu2014parallel}{{236}{2014}{{Lu et~al.}}{{}}}
+\bibcite{luo2004combinatorial}{{237}{2004}{{Luo}}{{}}}
+\bibcite{luo2008tracking}{{238}{2008}{{Luo et~al.}}{{}}}
+\bibcite{luo2001influence}{{239}{2001}{{Luo et~al.}}{{}}}
+\bibcite{Luo2002pVersionMG}{{240}{2002}{{Luo et~al.}}{{}}}
+\bibcite{lyche2015simplex}{{241}{2015}{{Lyche and Muntingh}}{{}}}
+\bibcite{Mahmoud2021}{{242}{2021}{{Mahmoud et~al.}}{{}}}
+\bibcite{mandad2015isotopic}{{243}{2015a}{{Mandad et~al.}}{{}}}
+\bibcite{Mandad:2015}{{244}{2015b}{{Mandad et~al.}}{{}}}
+\bibcite{Maentylae1987}{{245}{1987}{{M{\"a}ntyl{\"a}}}{{}}}
+\bibcite{marcon2019semi}{{246}{2019}{{Marcon et~al.}}{{}}}
+\bibcite{maron2017convolutional}{{247}{2017}{{Maron et~al.}}{{}}}
+\bibcite{marot2019one}{{248}{2019}{{Marot et~al.}}{{}}}
+\bibcite{marot2020quality}{{249}{2020}{{Marot and Remacle}}{{}}}
+\bibcite{marschner2020hexahedral}{{250}{2020}{{Marschner et~al.}}{{}}}
+\bibcite{mezger2007finite}{{251}{2007}{{Mezger et~al.}}{{}}}
+\bibcite{MEZGER2009680}{{252}{2009}{{Mezger et~al.}}{{}}}
+\bibcite{Misztal:2012}{{253}{2012}{{Misztal and B\ae {}rentzen}}{{}}}
+\bibcite{mitchell1987discrete}{{254}{1987}{{Mitchell et~al.}}{{}}}
+\bibcite{mobius2010openflipper}{{255}{2010}{{M{\"o}bius and Kobbelt}}{{}}}
+\bibcite{Molino:2003:TMG}{{256}{2003}{{Molino et~al.}}{{}}}
+\bibcite{MOXEY2016130}{{257}{2016}{{Moxey et~al.}}{{}}}
+\bibcite{MOXEY2015636}{{258}{2015}{{Moxey et~al.}}{{}}}
+\bibcite{moxeynekmesh}{{259}{2018}{{Moxey et~al.}}{{}}}
+\bibcite{Muller:2015}{{260}{2015}{{M\"{u}ller et~al.}}{{}}}
+\bibcite{murphy2001point}{{261}{2001a}{{Murphy et~al.}}{{}}}
+\bibcite{MURPHY:2001:APP}{{262}{2001b}{{Murphy et~al.}}{{}}}
+\bibcite{Myles:2014}{{263}{2014}{{Myles et~al.}}{{}}}
+\bibcite{Narain:2013}{{264}{2013}{{Narain et~al.}}{{}}}
+\bibcite{Narain:2012}{{265}{2012}{{Narain et~al.}}{{}}}
+\bibcite{nguyen2007gpu}{{266}{2007}{{Nguyen}}{{}}}
+\bibcite{ODEN1994309}{{267}{1994}{{Oden}}{{}}}
+\bibcite{okusanya1996parallel}{{268}{1996}{{Okusanya and Peraire}}{{}}}
+\bibcite{okusanya19973}{{269}{1997}{{Okusanya and Peraire}}{{}}}
+\bibcite{Ovsjanikov:2012}{{270}{2012}{{Ovsjanikov et~al.}}{{}}}
+\bibcite{Ovsjanikov:2017}{{271}{2017}{{Ovsjanikov et~al.}}{{}}}
+\bibcite{Pal:2014}{{272}{2014}{{Pal et~al.}}{{}}}
+\bibcite{Palmer:2020}{{273}{2020}{{Palmer et~al.}}{{}}}
+\bibcite{panozzo2013weighted}{{274}{2013}{{Panozzo et~al.}}{{}}}
+\bibcite{Peir2015OnCH}{{275}{2015}{{Peir{\'o} et~al.}}{{}}}
+\bibcite{Gargallo2014}{{276}{2014}{{Peir{\'o} et~al.}}{{}}}
+\bibcite{Peir2008}{{277}{2008}{{Peir{\'o} et~al.}}{{}}}
+\bibcite{peng2004interactive}{{278}{2004}{{Peng et~al.}}{{}}}
+\bibcite{Persson2009}{{279}{2009}{{Persson and Peraire}}{{}}}
+\bibcite{Pfaff:2014}{{280}{2014}{{Pfaff et~al.}}{{}}}
+\bibcite{phong1975illumination}{{281}{1975}{{Phong}}{{}}}
+\bibcite{Pietroni:2010}{{282}{2010}{{Pietroni et~al.}}{{}}}
+\bibcite{pointwise}{{283}{2018}{{Pointwise}}{{}}}
+\bibcite{Popovic:1997}{{284}{1997}{{Popovi\'{c} and Hoppe}}{{}}}
+\bibcite{Poranne:2014}{{285}{2014}{{Poranne and Lipman}}{{}}}
+\bibcite{porumbescu2005shell}{{286}{2005}{{Porumbescu et~al.}}{{}}}
+\bibcite{Poya2016}{{287}{2016}{{Poya et~al.}}{{}}}
+\bibcite{praun2001consistent}{{288}{2001}{{Praun et~al.}}{{}}}
+\bibcite{Rabinovich:2017}{{289}{2017}{{Rabinovich et~al.}}{{}}}
+\bibcite{ragan2013halide}{{290}{2013}{{Ragan-Kelley et~al.}}{{}}}
+\bibcite{Remacle:2017:ATL}{{291}{2017}{{Remacle}}{{}}}
+\bibcite{remacle2013robust}{{292}{2013}{{Remacle et~al.}}{{}}}
+\bibcite{Requicha1980}{{293}{1980}{{Requicha}}{{}}}
+\bibcite{Roca2012}{{294}{2012}{{Roca et~al.}}{{}}}
+\bibcite{RUIZGIRONES2017362}{{295}{2017}{{Ruiz-Giron\'{e}s et~al.}}{{}}}
+\bibcite{RUIZGIRONES201652}{{296}{2016a}{{Ruiz-Giron\'{e}s et~al.}}{{}}}
+\bibcite{RUIZGIRONES2016315}{{297}{2016b}{{Ruiz-Giron\'{e}s et~al.}}{{}}}
+\bibcite{ruppert1995delaunay}{{298}{1995a}{{Ruppert}}{{}}}
+\bibcite{Ruppert:1995:ADR}{{299}{1995b}{{Ruppert}}{{}}}
+\bibcite{Sacht:2013}{{300}{2013}{{Sacht et~al.}}{{}}}
+\bibcite{sacht2015nested}{{301}{2015}{{Sacht et~al.}}{{}}}
+\bibcite{Sadek1980}{{302}{1980}{{Sadek}}{{}}}
+\bibcite{SALARI:2000:CVB}{{303}{2000}{{Salari and Knupp}}{{}}}
+\bibcite{Sander:2001}{{304}{2001}{{Sander et~al.}}{{}}}
+\bibcite{schlomer2020nschloe}{{305}{2020}{{Schl{\"o}mer}}{{}}}
+\bibcite{schmidt2019distortion}{{306}{2019}{{Schmidt et~al.}}{{}}}
+\bibcite{schneider2019large}{{307}{2019}{{Schneider et~al.}}{{}}}
+\bibcite{Schreiner:2004}{{308}{2004}{{Schreiner et~al.}}{{}}}
+\bibcite{Schuller:2013}{{309}{2013}{{Sch\"{u}ller et~al.}}{{}}}
+\bibcite{Sharp:2020:LNT}{{310}{2020}{{Sharp and Crane}}{{}}}
+\bibcite{sharp2019navigating}{{311}{2019}{{Sharp et~al.}}{{}}}
+\bibcite{Sheffer:2006}{{312}{2006}{{Sheffer et~al.}}{{}}}
+\bibcite{SHEPHARD2005251}{{313}{2005}{{Shephard et~al.}}{{}}}
+\bibcite{sherwin2002mesh}{{314}{2002}{{Sherwin and Peir{\'o}}}{{}}}
+\bibcite{Shewchuk:1996}{{315}{1996a}{{Shewchuk}}{{}}}
+\bibcite{SHEWCHUK-triangle1}{{316}{1996b}{{Shewchuk}}{{}}}
+\bibcite{shewchuk1997adaptive}{{317}{1997}{{Shewchuk}}{{}}}
+\bibcite{shewchuk1998tetrahedral}{{318}{1998a}{{Shewchuk}}{{}}}
+\bibcite{Shewchuk:1998:TMG}{{319}{1998b}{{Shewchuk}}{{}}}
+\bibcite{shewchuk2002constrained}{{320}{2002a}{{Shewchuk}}{{}}}
+\bibcite{Shewchuk:2002:CDT}{{321}{2002b}{{Shewchuk}}{{}}}
+\bibcite{Shoham:2019}{{322}{2019}{{Shoham et~al.}}{{}}}
+\bibcite{Si:2015}{{323}{2015a}{{Si}}{{}}}
+\bibcite{tetgen}{{324}{2015b}{{Si}}{{}}}
+\bibcite{si2005meshing}{{325}{2005}{{Si and G{\"a}rtner}}{{}}}
+\bibcite{Si:2005:MPL}{{326}{2005}{{Si and Gartner}}{{}}}
+\bibcite{SiS14}{{327}{2014a}{{Si and Shewchuk}}{{}}}
+\bibcite{Si:2014:ICA}{{328}{2014b}{{Si and Shewchuk}}{{}}}
+\bibcite{pmp-library}{{329}{2019}{{Sieger and Botsch}}{{}}}
+\bibcite{Simnett:2009}{{330}{2009}{{Simnett et~al.}}{{}}}
+\bibcite{Smith:2015}{{331}{2015}{{Smith and Schaefer}}{{}}}
+\bibcite{SolomonBook}{{332}{2015}{{Solomon}}{{}}}
+\bibcite{Sorger:2014}{{333}{2014}{{Sorger et~al.}}{{}}}
+\bibcite{Sorkine:2007}{{334}{2007}{{Sorkine and Alexa}}{{}}}
+\bibcite{Sorkine:2002}{{335}{2002}{{Sorkine et~al.}}{{}}}
+\bibcite{springborn2019ideal}{{336}{2020}{{Springborn}}{{}}}
+\bibcite{Springborn:2008}{{337}{2008}{{Springborn et~al.}}{{}}}
+\bibcite{STEES2017180}{{338}{2017}{{Stees and Shontz}}{{}}}
+\bibcite{osqp}{{339}{2017}{{Stellato et~al.}}{{}}}
+\bibcite{stephenson2005introduction}{{340}{2005}{{Stephenson}}{{}}}
+\bibcite{Steve2016}{{341}{2016}{{Steve L.~Karman and Stefanski}}{{}}}
+\bibcite{sun2015discrete}{{342}{2015}{{Sun et~al.}}{{}}}
+\bibcite{surazhsky2001morphing}{{343}{2001}{{Surazhsky and Gotsman}}{{}}}
+\bibcite{Suwelack2013}{{344}{2013}{{Suwelack et~al.}}{{}}}
+\bibcite{teschner2003optimized}{{345}{2003}{{Teschner et~al.}}{{}}}
+\bibcite{cgal2008computational}{{346}{2020}{{The CGAL Project}}{{}}}
+\bibcite{Thiery:2012}{{347}{2012}{{Thiery et~al.}}{{}}}
+\bibcite{TONG2009}{{348}{2009}{{Tong and Kim}}{{}}}
+\bibcite{TOULORGE20138}{{349}{2013}{{Toulorge et~al.}}{{}}}
+\bibcite{TOULORGE2016361}{{350}{2016}{{Toulorge et~al.}}{{}}}
+\bibcite{tournois2009interleaving}{{351}{2009a}{{Tournois et~al.}}{{}}}
+\bibcite{Tournois:2009:IDR}{{352}{2009b}{{Tournois et~al.}}{{}}}
+\bibcite{tozoni2020low}{{353}{2020}{{Tozoni et~al.}}{{}}}
+\bibcite{turner2017high}{{354}{2017}{{Turner}}{{}}}
+\bibcite{TURNER2016340}{{355}{2016}{{Turner et~al.}}{{}}}
+\bibcite{Tutte:1963}{{356}{1963}{{Tutte}}{{}}}
+\bibcite{Villard:2002}{{357}{2002}{{Villard and Borouchaki}}{{}}}
+\bibcite{Wang:2021}{{358}{2021}{{Wang et~al.}}{{}}}
+\bibcite{Wang:2020:FE}{{359}{2020}{{Wang et~al.}}{{}}}
+\bibcite{wang2003view}{{360}{2003}{{Wang et~al.}}{{}}}
+\bibcite{wang2016construction}{{361}{2016}{{Wang et~al.}}{{}}}
+\bibcite{wang2004generalized}{{362}{2004}{{Wang et~al.}}{{}}}
+\bibcite{Weber:2014}{{363}{2014}{{Weber and Zorin}}{{}}}
+\bibcite{Wicke:2010}{{364}{2010}{{Wicke et~al.}}{{}}}
+\bibcite{Wojtan:2008}{{365}{2008}{{Wojtan and Turk}}{{}}}
+\bibcite{Xia:2017:IGA}{{366}{2017}{{Xia and Qian}}{{}}}
+\bibcite{Xie2013}{{367}{2013}{{Xie et~al.}}{{}}}
+\bibcite{ye2020penrose}{{368}{2020}{{Ye et~al.}}{{}}}
+\bibcite{Yerry1983}{{369}{1983}{{Yerry and Shephard}}{{}}}
+\bibcite{yu2020hexgen}{{370}{2020}{{Yu et~al.}}{{}}}
+\bibcite{Yvart2005hier}{{371}{2005a}{{Yvart et~al.}}{{}}}
+\bibcite{yvart2005smooth}{{372}{2005b}{{Yvart et~al.}}{{}}}
+\bibcite{Zayer2017}{{373}{2017}{{Zayer et~al.}}{{}}}
+\bibcite{Zhang:2005}{{374}{2005}{{Zhang et~al.}}{{}}}
+\bibcite{Zhang:2020}{{375}{2020}{{Zhang et~al.}}{{}}}
+\bibcite{Zhang2011multi}{{376}{2011}{{{Zhang} et~al.}}{{}}}
+\bibcite{Zhou:2004}{{377}{2004}{{Zhou et~al.}}{{}}}
+\bibcite{zhou2012tools}{{378}{2012}{{Zhou et~al.}}{{}}}
+\bibcite{zhou2016mesh}{{379}{2016}{{Zhou et~al.}}{{}}}
+\bibcite{zhou2016thingi10k}{{380}{2016}{{Zhou and Jacobson}}{{}}}
+\bibcite{ZIEL201791}{{381}{2017}{{Ziel et~al.}}{{}}}
+\bibcite{zomorodian2000fast}{{382}{2000}{{Zomorodian and Edelsbrunner}}{{}}}
+\bibcite{zorin2000subdivision}{{383}{2000}{{Zorin}}{{}}}
+\gdef \@abspage@last{158}

@@ -1,10 +1,15 @@
 \begin{thebibliography}{}
 
+\bibitem[A.~Freitag and Ollivier-Gooch, 1998]{Lori1998}
+A.~Freitag, L. and Ollivier-Gooch, C. (1998).
+\newblock Tetrahedral mesh improvement using swapping and smoothing.
+\newblock {\em International Journal for Numerical Methods in Engineering}, 40.
+
 \bibitem[Abgrall et~al., 2012]{abgrall2012}
 Abgrall, R., Dobrzynski, C., and Froehly, A. (2012).
 \newblock {A method for computing curved 2D and 3D meshes via the linear
   elasticity analogy: preliminary results}.
-\newblock Research Report RR-8061.
+\newblock Research Report RR-8061, {INRIA}.
 
 \bibitem[Abgrall et~al., 2014]{Abgrall2014}
 Abgrall, R., Dobrzynski, C., and Froehly, A. (2014).
@@ -13,16 +18,165 @@ Abgrall, R., Dobrzynski, C., and Froehly, A. (2014).
 \newblock {\em International Journal for Numerical Methods in Fluids},
   76(4):246--266.
 
+\bibitem[Aigerman et~al., 2017]{Aigerman:2017}
+Aigerman, N., Kovalsky, S.~Z., and Lipman, Y. (2017).
+\newblock Spherical orbifold tutte embeddings.
+\newblock {\em ACM Trans. Graph.}, 36(4).
+
+\bibitem[Aigerman and Lipman, 2013]{aigerman2013injective}
+Aigerman, N. and Lipman, Y. (2013).
+\newblock Injective and bounded distortion mappings in 3d.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 32(4):1--14.
+
+\bibitem[Aigerman and Lipman, 2015]{Aigerman:2015}
+Aigerman, N. and Lipman, Y. (2015).
+\newblock Orbifold tutte embeddings.
+\newblock {\em ACM Trans. Graph.}, 34(6).
+
+\bibitem[Aigerman and Lipman, 2016]{Aigerman:2016}
+Aigerman, N. and Lipman, Y. (2016).
+\newblock Hyperbolic orbifold tutte embeddings.
+\newblock {\em ACM Trans. Graph.}, 35(6).
+
+\bibitem[Aigerman et~al., 2014]{Aigerman:2014}
+Aigerman, N., Poranne, R., and Lipman, Y. (2014).
+\newblock Lifted bijections for low distortion surface mappings.
+\newblock {\em ACM Trans. Graph.}, 33(4).
+
+\bibitem[Aigerman et~al., 2015]{Aigerman:2015b}
+Aigerman, N., Poranne, R., and Lipman, Y. (2015).
+\newblock Seamless surface mappings.
+\newblock {\em ACM Trans. Graph.}, 34(4).
+
+\bibitem[Ainsley et~al., 2012]{Ainsley:2012}
+Ainsley, S., Vouga, E., Grinspun, E., and Tamstorf, R. (2012).
+\newblock Speculative parallel asynchronous contact mechanics.
+\newblock {\em ACM Trans. Graph.}, 31(6):151:1--151:8.
+
+\bibitem[Alauzet and Marcum, 2014]{Alauzet:2014:ACA}
+Alauzet, F. and Marcum, D. (2014).
+\newblock A closed advancing-layer method with changing topology mesh movement
+  for viscous mesh generation.
+\newblock In {\em Proceedings of the 22nd International Meshing Roundtable},
+  pages 241--261. Springer International Publishing, Cham.
+
+\bibitem[Alexa, 2019]{Alexa:2019}
+Alexa, M. (2019).
+\newblock Harmonic triangulations.
+\newblock {\em ACM Transactions on Graphics (Proceedings of SIGGRAPH)},
+  38(4):54.
+
+\bibitem[Alexa, 2020]{alexa2020conforming}
+Alexa, M. (2020).
+\newblock Conforming weighted delaunay triangulations.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 39(6):1--16.
+
+\bibitem[Alliez et~al., 2005a]{alliez2005variational}
+Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005a).
+\newblock Variational tetrahedral meshing.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~24. ACM.
+
+\bibitem[Alliez et~al., 2005b]{Alliez:2005}
+Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005b).
+\newblock Variational tetrahedral meshing.
+\newblock {\em ACM Transactions on Graphics}, 24(3):617.
+
+\bibitem[Alliez et~al., 2003]{alliez2003isotropic}
+Alliez, P., De~Verdire, E.~C., Devillers, O., and Isenburg, M. (2003).
+\newblock Isotropic surface remeshing.
+\newblock In {\em 2003 Shape Modeling International.}, pages 49--58. IEEE.
+
+\bibitem[Aluru and Sevilgen, 1997]{aluru1997parallel}
+Aluru, S. and Sevilgen, F.~E. (1997).
+\newblock Parallel domain decomposition and load balancing using space-filling
+  curves.
+\newblock In {\em Proceedings fourth international conference on
+  high-performance computing}, pages 230--235. IEEE.
+
+\bibitem[Ando et~al., 2013]{Ando:2013}
+Ando, R., Th\"urey, N., and Wojtan, C. (2013).
+\newblock Highly adaptive liquid simulations on tetrahedral meshes.
+\newblock {\em ACM Trans. Graph. (Proc. SIGGRAPH 2013)}.
+
+\bibitem[Aubry et~al., 2017]{aubry2017boundary}
+Aubry, R., Dey, S., Mestreau, E., and Karamete, B. (2017).
+\newblock Boundary layer mesh generation on arbitrary geometries.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  112(2):157--173.
+
+\bibitem[Aubry and L{\"o}hner, 2008]{aubry2008most}
+Aubry, R. and L{\"o}hner, R. (2008).
+\newblock On the ‘most normal’normal.
+\newblock {\em Communications in Numerical Methods in Engineering},
+  24(12):1641--1652.
+
+\bibitem[Aubry et~al., 2015]{aubry2015most}
+Aubry, R., Mestreau, E., Dey, S., Karamete, B., and Gayman, D. (2015).
+\newblock On the ‘most normal’normal—part 2.
+\newblock {\em Finite Elements in Analysis and Design}, 97:54--63.
+
 \bibitem[Babuska and Guo, 1988]{Babuska1988}
 Babuska, I. and Guo, B.~Q. (1988).
 \newblock The h-p version of the finite element method for domains with curved
   boundaries.
 \newblock {\em SIAM Journal on Numerical Analysis}, 25(4):837--861.
 
+\bibitem[Babuška and Guo, 1992]{BABUSKA1992159}
+Babuška, I. and Guo, B. (1992).
+\newblock The h, p and h-p version of the finite element method; basis theory
+  and applications.
+\newblock {\em Advances in Engineering Software}, 15(3):159 -- 174.
+
+\bibitem[Bajaj et~al., 2002]{bajaj2002hierarchical}
+Bajaj, C.~L., Xu, G., Holt, R.~J., and Netravali, A.~N. (2002).
+\newblock Hierarchical multiresolution reconstruction of shell surfaces.
+\newblock {\em Computer Aided Geometric Design}, 19(2):89--112.
+
+\bibitem[Bank et~al., 1983]{bank1983some}
+Bank, R.~E., Sherman, A.~H., and Weiser, A. (1983).
+\newblock Some refinement algorithms and data structures for regular local mesh
+  refinement.
+\newblock {\em Scientific Computing, Applications of Mathematics and Computing
+  to the Physical Sciences}, 1:3--17.
+
+\bibitem[Bargteil and Cohen, 2014]{bargteil2014animation}
+Bargteil, A.~W. and Cohen, E. (2014).
+\newblock Animation of deformable bodies with quadratic b{\'e}zier finite
+  elements.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 33(3):27.
+
+\bibitem[Bargteil et~al., 2007]{Bargteil:2007}
+Bargteil, A.~W., Wojtan, C., Hodgins, J.~K., and Turk, G. (2007).
+\newblock A finite element method for animating large viscoplastic flow.
+\newblock In {\em ACM SIGGRAPH 2007 Papers}, SIGGRAPH '07, page 16–es, New
+  York, NY, USA. Association for Computing Machinery.
+
+\bibitem[Barnhill et~al., 1992]{barnhill_opitz_pottmann_1992}
+Barnhill, R.~E., Opitz, K., and Pottmann, H. (1992).
+\newblock Fat surfaces: a trivariate approach to triangle-based interpolation
+  on surfaces.
+\newblock {\em Computer Aided Geometric Design}, 9(5):365–378.
+
+\bibitem[Bassi and Rebay, 1997]{BASSI1997251}
+Bassi, F. and Rebay, S. (1997).
+\newblock High-order accurate discontinuous finite element solution of the 2d
+  euler equations.
+\newblock {\em Journal of Computational Physics}, 138(2):251 -- 285.
+
+\bibitem[Batista et~al., 2010]{batista2010parallel}
+Batista, V.~H., Millman, D.~L., Pion, S., and Singler, J. (2010).
+\newblock Parallel geometric algorithms for multi-core computers.
+\newblock {\em Computational Geometry}, 43(8):663--677.
+
 \bibitem[Baumgart, 1972]{Baumgart1972}
 Baumgart, B.~G. (1972).
 \newblock Winged edge polyhedron representation.
 \newblock Technical report, Stanford, CA, USA.
+
+\bibitem[Bender and Deul, 2013]{Bender:2013}
+Bender, J. and Deul, C. (2013).
+\newblock Adaptive cloth simulation using corotational finite elements.
+\newblock {\em Computers \& Graphics}, 37(7):820--829.
 
 \bibitem[Bern et~al., 1994]{BERN1994}
 Bern, M., Eppstein, D., and Gilbert, J. (1994).
@@ -34,6 +188,100 @@ Bishop, C.~J. (2016).
 \newblock Nonobtuse triangulations of pslgs.
 \newblock {\em Discrete {\&} Computational Geometry}, 56(1):43--92.
 
+\bibitem[Blandford et~al., 2006]{blandford2006engineering}
+Blandford, D.~K., Blelloch, G.~E., and Kadow, C. (2006).
+\newblock Engineering a compact parallel delaunay algorithm in 3d.
+\newblock In {\em Proceedings of the twenty-second Annual Symposium on
+  Computational Geometry}, pages 292--300.
+
+\bibitem[Blelloch et~al., 1999]{blelloch1999design}
+Blelloch, G.~E., Miller, G.~L., Hardwick, J.~C., and Talmor, D. (1999).
+\newblock Design and implementation of a practical parallel delaunay algorithm.
+\newblock {\em Algorithmica}, 24(3):243--269.
+
+\bibitem[Boissonnat et~al., 2002]{triangulation_in_cgal}
+Boissonnat, J.-D., Devillers, O., Pion, S., Teillaud, M., and Yvinec, M.
+  (2002).
+\newblock Triangulations in cgal.
+\newblock {\em Computational Geometry}, 22:5--19.
+
+\bibitem[Boissonnat and Oudot, 2005a]{boissonnat2005provably}
+Boissonnat, J.-D. and Oudot, S. (2005a).
+\newblock Provably good sampling and meshing of surfaces.
+\newblock {\em Graphical Models}, 67(5):405--451.
+
+\bibitem[Boissonnat and Oudot, 2005b]{Boissonnat:2005:PGS}
+Boissonnat, J.-D. and Oudot, S. (2005b).
+\newblock Provably good sampling and meshing of surfaces.
+\newblock {\em Graphical Models}, 67(5):405--451.
+
+\bibitem[Bommes et~al., 2013a]{Bommes:2013}
+Bommes, D., Campen, M., Ebke, H.-C., Alliez, P., and Kobbelt, L. (2013a).
+\newblock Integer-grid maps for reliable quad meshing.
+\newblock {\em ACM Trans. Graph.}, 32(4):98:1--98:12.
+
+\bibitem[Bommes et~al., 2013b]{bommes2013quad}
+Bommes, D., L{\'e}vy, B., Pietroni, N., Puppo, E., Silva, C., Tarini, M., and
+  Zorin, D. (2013b).
+\newblock Quad-mesh generation and processing: A survey.
+\newblock In {\em Computer Graphics Forum}, volume~32, pages 51--76. Wiley
+  Online Library.
+
+\bibitem[Bommes et~al., 2012]{QUADSTAR2012}
+Bommes, D., Lévy, B., Pietroni, N., Puppo, E., a, C.~S., Tarini, M., and
+  Zorin, D. (2012).
+\newblock State of the art in quad meshing.
+\newblock In {\em Eurographics STARS}.
+
+\bibitem[Bommes et~al., 2009]{Bommes:2009}
+Bommes, D., Zimmer, H., and Kobbelt, L. (2009).
+\newblock Mixed-integer quadrangulation.
+\newblock {\em ACM Trans. Graph.}, 28(3):77:1--77:10.
+
+\bibitem[Borrell et~al., 2018]{borrell2018parallel}
+Borrell, R., Cajas, J.~C., Mira, D., Taha, A., Koric, S., V{\'a}zquez, M., and
+  Houzeaux, G. (2018).
+\newblock Parallel mesh partitioning based on space filling curves.
+\newblock {\em Computers \& Fluids}, 173:264--272.
+
+\bibitem[Botsch and Kobbelt, 2003]{botsch2003multiresolution}
+Botsch, M. and Kobbelt, L. (2003).
+\newblock Multiresolution surface representation based on displacement volumes.
+\newblock In {\em Computer Graphics Forum}, volume~22, pages 483--491. Wiley
+  Online Library.
+
+\bibitem[Botsch and Kobbelt, 2004]{botsch2004remeshing}
+Botsch, M. and Kobbelt, L. (2004).
+\newblock A remeshing approach to multiresolution modeling.
+\newblock In {\em Proceedings of the 2004 Eurographics/ACM SIGGRAPH symposium
+  on Geometry processing}, pages 185--192.
+
+\bibitem[Botsch et~al., 2006]{botsch2006primo}
+Botsch, M., Pauly, M., Gross, M.~H., and Kobbelt, L. (2006).
+\newblock Primo: coupled prisms for intuitive surface modeling.
+\newblock In {\em Symposium on Geometry Processing}, number CONF, pages 11--20.
+
+\bibitem[Botsch et~al., 2002]{botsch2002openmesh}
+Botsch, M., Steinberg, S., Bischoff, S., and Kobbelt, L. (2002).
+\newblock Openmesh-a generic and efficient polygon mesh data structure.
+
+\bibitem[Boubekeur and Alexa, 2008]{boubekeur2008phong}
+Boubekeur, T. and Alexa, M. (2008).
+\newblock Phong tessellation.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~27, page 141.
+  ACM.
+
+\bibitem[Bowers et~al., 2010]{bowers2010parallel}
+Bowers, J., Wang, R., Wei, L.-Y., and Maletz, D. (2010).
+\newblock Parallel poisson disk sampling with spectrum analysis on surfaces.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 29(6):1--10.
+
+\bibitem[Bridson and Doran, 2014]{code:quartet}
+Bridson, R. and Doran, C. (2014).
+\newblock Quartet: A tetrahedral mesh generator that does isosurface stuffing
+  with an acute tetrahedral tile.
+\newblock \url{https://github.com/crawforddoran/quartet}.
+
 \bibitem[Brisson, 1989]{Brisson1989}
 Brisson, E. (1989).
 \newblock Representing geometric structures in $d$ dimensions: Topology and
@@ -41,6 +289,55 @@ Brisson, E. (1989).
 \newblock In {\em Proceedings of the Fifth Annual Symposium on Computational
   Geometry}, SCG '89, page 218–227, New York, NY, USA. Association for
   Computing Machinery.
+
+\bibitem[Brochu et~al., 2012]{Brochu:2012}
+Brochu, T., Edwards, E., and Bridson, R. (2012).
+\newblock Efficient geometrically exact continuous collision detection.
+\newblock {\em ACM Trans. Graph.}, 31(4).
+
+\bibitem[Bronson et~al., 2013]{Bronson:2013:LCC}
+Bronson, J.~R., Levine, J.~A., and Whitaker, R.~T. (2013).
+\newblock Lattice cleaving: Conforming tetrahedral meshes of multimaterial
+  domains with bounded quality.
+\newblock In {\em Proceedings of the 21st International Meshing Roundtable},
+  pages 191--209. Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Busaryev et~al., 2009]{Busaryev:RMI:2009}
+Busaryev, O., Dey, T.~K., and Levine, J.~A. (2009).
+\newblock Repairing and meshing imperfect shapes with delaunay refinement.
+\newblock In {\em 2009 SIAM/ACM Joint Conference on Geometric and Physical
+  Modeling}, SPM '09, pages 25--33. ACM.
+
+\bibitem[Busaryev et~al., 2013]{Busaryev:2013}
+Busaryev, O., Dey, T.~K., and Wang, H. (2013).
+\newblock Adaptive fracture simulation of multi-layered thin plates.
+\newblock {\em ACM Trans. Graph.}, 32(4).
+
+\bibitem[Calderon and Boubekeur, 2017]{Calderon:2017}
+Calderon, S. and Boubekeur, T. (2017).
+\newblock Bounding proxies for shape approximation.
+\newblock {\em ACM Trans. Graph.}, 36(4).
+
+\bibitem[Campen et~al., 2021]{Campen:2021}
+Campen, M., Capouellez, R., Shen, H., Zhu, L., Panozzo, D., and Zorin, D.
+  (2021).
+\newblock Efficient and robust discrete conformal equivalence with boundary.
+\newblock {\em ACM Trans. Graph.}, 40(6).
+
+\bibitem[Campen et~al., 2019]{campen2018seamless}
+Campen, M., Shen, H., Zhou, J., and Zorin, D. (2019).
+\newblock Seamless parametrization with arbitrary cones for arbitrary genus.
+\newblock {\em ACM Trans. Graph.}, 39(1).
+
+\bibitem[Campen et~al., 2016]{Campen:2016}
+Campen, M., Silva, C.~T., and Zorin, D. (2016).
+\newblock Bijective maps from simplicial foliations.
+\newblock {\em ACM Trans. Graph.}, 35(4):74:1--74:15.
+
+\bibitem[Campen and Zorin, 2017]{Campen:2017:SimilarityMaps}
+Campen, M. and Zorin, D. (2017).
+\newblock Similarity maps and field-guided t-splines: a perfect couple.
+\newblock {\em ACM Trans. Graph.}, 36(4).
 
 \bibitem[Canann et~al., 1996]{Canann1996}
 Canann, S.~A., Muthukrishnan, S.~N., and Phillips, R.~K. (1996).
@@ -54,10 +351,217 @@ Cardoze, D., Cunha, A., Miller, G.~L., Phillips, T., and Walkington, N. (2004).
 \newblock In {\em Proceedings of the Twentieth Annual Symposium on
   Computational Geometry}, SCG '04, pages 310--319, New York, NY, USA. ACM.
 
+\bibitem[Chazal and Cohen-Steiner, 2005]{chazal2005condition}
+Chazal, F. and Cohen-Steiner, D. (2005).
+\newblock A condition for isotopic approximation.
+\newblock {\em Graphical Models}, 67(5):390--404.
+
+\bibitem[Chazal et~al., 2010]{chazal2010ball}
+Chazal, F., Lieutier, A., Rossignac, J., and Whited, B. (2010).
+\newblock Ball-map: Homeomorphism between compatible surfaces.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 20(03):285--306.
+
+\bibitem[Chen and Xu, 2004]{Chen:2004:ODT}
+Chen, L. and Xu, J.-c. (2004).
+\newblock Optimal delaunay triangulations.
+\newblock {\em Journal of Computational Mathematics}, 22(2):299--308.
+
+\bibitem[Chen et~al., 2004]{chen2004shell}
+Chen, Y., Tong, X., Wang, J., Wang, J., Lin, S., Guo, B., Shum, H.-Y., and
+  Shum, H.-Y. (2004).
+\newblock Shell texture functions.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~23, pages
+  343--353. ACM.
+
+\bibitem[Cheng et~al., 2000]{cheng2000silver}
+Cheng, S.-W., Dey, T.~K., Edelsbrunner, H., Facello, M.~A., and Teng, S.-H.
+  (2000).
+\newblock Silver exudation.
+\newblock {\em Journal of the ACM (JACM)}, 47(5):883--904.
+
+\bibitem[Cheng et~al., 2008a]{cheng2008practical}
+Cheng, S.-W., Dey, T.~K., and Levine, J.~A. (2008a).
+\newblock A practical delaunay meshing algorithm for a large class of domains.
+\newblock In {\em Proceedings of the 16th International Meshing Roundtable},
+  pages 477--494. Springer.
+
+\bibitem[Cheng et~al., 2008b]{Cheng:2008:APD}
+Cheng, S.-W., Dey, T.~K., and Levine, J.~A. (2008b).
+\newblock A practical delaunay meshing algorithm for a large class of domains.
+\newblock In {\em Proceedings of the 16th International Meshing Roundtable},
+  pages 477--494, Berlin, Heidelberg. Springer, Springer Berlin Heidelberg.
+
+\bibitem[Cheng et~al., 2012]{Cheng:2012:DMG}
+Cheng, S.-W., Dey, T.~K., and Shewchuk, J. (2012).
+\newblock {\em Delaunay Mesh Generation}.
+\newblock Chapman and Hall/CRC, Boca Raton, Florida.
+
 \bibitem[Cheng et~al., 2019]{Cheng2019}
 Cheng, X.-X., Fu, X.-M., Zhang, C., and Chai, S. (2019).
 \newblock Practical error-bounded remeshing by adaptive refinement.
 \newblock {\em Computers \& Graphics}, 82:163 -- 173.
+
+\bibitem[Chentanez et~al., 2007]{Chentanez:2007}
+Chentanez, N., Feldman, B.~E., Labelle, F., O'Brien, J.~F., and Shewchuk, J.~R.
+  (2007).
+\newblock Liquid simulation on lattice-based tetrahedral meshes.
+\newblock In {\em Proceedings of the 2007 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation}, SCA '07, page 219–228, Goslar, DEU. Eurographics
+  Association.
+
+\bibitem[Cheshmi et~al., 2020]{cheshmi2020nasoq}
+Cheshmi, K., Kaufman, D.~M., Kamil, S., and Dehnavi, M.~M. (2020).
+\newblock Nasoq: Numerically accurate sparsity-oriented qp solver.
+\newblock {\em ACM Transactions on Graphics}, 39(4).
+
+\bibitem[Chew, 1989a]{chew1989constrained}
+Chew, L.~P. (1989a).
+\newblock Constrained delaunay triangulations.
+\newblock {\em Algorithmica}, 4(1-4):97--108.
+
+\bibitem[Chew, 1989b]{Chew:1987:CDT}
+Chew, L.~P. (1989b).
+\newblock Constrained delaunay triangulations.
+\newblock {\em Algorithmica}, 4(1):97--108.
+
+\bibitem[Chew, 1993]{chew1993guaranteed}
+Chew, L.~P. (1993).
+\newblock Guaranteed-quality mesh generation for curved surfaces.
+\newblock In {\em Proceedings of the ninth annual symposium on Computational
+  geometry}, pages 274--280. ACM.
+
+\bibitem[Chew et~al., 1997]{chew1997parallel}
+Chew, L.~P., Chrisochoides, N., and Sukup, F. (1997).
+\newblock Parallel constrained delaunay meshing.
+\newblock {\em ASME APPLIED MECHANICS DIVISION-PUBLICATIONS-AMD}, 220:89--96.
+
+\bibitem[Chrisochoides, 2006]{chrisochoides2006parallel}
+Chrisochoides, N. (2006).
+\newblock Parallel mesh generation.
+\newblock In {\em Numerical solution of partial differential equations on
+  parallel computers}, pages 237--264. Springer.
+
+\bibitem[Chrisochoides and Nave, 2003]{chrisochoides2003parallel}
+Chrisochoides, N. and Nave, D. (2003).
+\newblock Parallel delaunay mesh generation kernel.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  58(2):161--176.
+
+\bibitem[Ciarlet, 1991]{ciarlet1991basic}
+Ciarlet, P.~G. (1991).
+\newblock Basic error estimates for elliptic problems.
+\newblock {\em Finite Element Methods (Part 1)}.
+
+\bibitem[Cignoni et~al., 2021]{vcg}
+Cignoni, P., Ganovelli, F., et~al. (2021).
+\newblock Vcg library.
+
+\bibitem[Cignoni et~al., 1993]{Cignoni1993}
+Cignoni, P., Montani, C., Perego, R., and Scopigno, R. (1993).
+\newblock Parallel 3d delaunay triangulation.
+\newblock {\em Computer Graphics Forum}, 12(3):129--142.
+
+\bibitem[Clausen et~al., 2013]{clausen:2013}
+Clausen, P., Wicke, M., Shewchuk, J.~R., and O'Brien, J.~F. (2013).
+\newblock Simulating liquids and solid-liquid interactions with lagrangian
+  meshes.
+\newblock {\em ACM Trans. Graph.}, 32(2).
+
+\bibitem[Cohen et~al., 1997]{cohen1997simplifying}
+Cohen, J., Manocha, D., and Olano, M. (1997).
+\newblock Simplifying polygonal models using successive mappings.
+\newblock In {\em Proceedings. Visualization'97 (Cat. No. 97CB36155)}, pages
+  395--402. IEEE.
+
+\bibitem[Cohen et~al., 1996]{cohen1996simplification}
+Cohen, J., Varshney, A., Manocha, D., Turk, G., Weber, H., Agarwal, P., Brooks,
+  F., and Wright, W. (1996).
+\newblock Simplification envelopes.
+\newblock In {\em Siggraph}, volume~96, pages 119--128.
+
+\bibitem[Cohen-Steiner et~al., 2002a]{cohen2002conforming}
+Cohen-Steiner, D., De~Verdiere, E.~C., and Yvinec, M. (2002a).
+\newblock Conforming delaunay triangulations in 3d.
+\newblock In {\em Proceedings of the eighteenth annual symposium on
+  Computational geometry}, pages 199--208. ACM.
+
+\bibitem[Cohen-Steiner et~al., 2002b]{CohenSteiner:2002:CDT}
+Cohen-Steiner, D., de~Verdi\`{e}re, E.~C., and Yvinec, M. (2002b).
+\newblock Conforming delaunay triangulations in {3D}.
+\newblock In {\em Proceedings of the eighteenth annual symposium on
+  Computational geometry - SCG '02}, number~2, pages 217 -- 233. ACM Press.
+
+\bibitem[Collins and Hilton, 2002]{collins2002mesh}
+Collins, G. and Hilton, A. (2002).
+\newblock Mesh decimation for displacement mapping.
+\newblock In {\em Eurographics (Short Papers)}.
+
+\bibitem[Community, 2018]{blender}
+Community, B.~O. (2018).
+\newblock {\em Blender - a 3D modelling and rendering package}.
+\newblock Blender Foundation, Stichting Blender Foundation, Amsterdam.
+
+\bibitem[Conway et~al., 2016]{conway2016symmetries}
+Conway, J.~H., Burgiel, H., and Goodman-Strauss, C. (2016).
+\newblock {\em The symmetries of things}.
+\newblock CRC Press.
+
+\bibitem[Coreform, 2020]{coreform}
+Coreform (2020).
+\newblock Cubit.
+\newblock \url{https://coreform.com/products/coreform-cubit/}.
+
+\bibitem[Coxeter, 1973]{coxeter1973regular}
+Coxeter, H. S.~M. (1973).
+\newblock {\em Regular polytopes}.
+\newblock Courier Corporation.
+
+\bibitem[Crane, 2013]{crane2013conformal}
+Crane, K. (2013).
+\newblock {\em Conformal geometry processing}.
+\newblock California Institute of Technology.
+
+\bibitem[Crane et~al., 2013]{crane2013geodesics}
+Crane, K., Weischedel, C., and Wardetzky, M. (2013).
+\newblock Geodesics in heat: A new approach to computing distance based on heat
+  flow.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 32(5).
+
+\bibitem[Cuilliere et~al., 2013]{Cuilliere:2013:ADM}
+Cuilliere, J.-C., Francois, V., and Drouet, J.-M. (2013).
+\newblock Automatic {3D} mesh generation of multiple domains for topology
+  optimization methods.
+\newblock In {\em Proceedings of the 21st International Meshing Roundtable},
+  pages 243--259. Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Degener et~al., 2003]{Degener:2003}
+Degener, P., Meseth, J., and Klein, R. (2003).
+\newblock An adaptable surface parameterization method.
+\newblock In {\em Proceedings of the 12th International Meshing Roundtable},
+  pages 201--213.
+
+\bibitem[Dey et~al., 1999a]{dey1999curvilinear}
+Dey, S., O’bara, R.~M., and Shephard, M.~S. (1999a).
+\newblock Curvilinear mesh generation in 3d.
+\newblock In {\em IMR}, pages 407--417. IMR.
+
+\bibitem[Dey et~al., 1999b]{dey1999topology}
+Dey, T.~K., Edelsbrunner, H., Guha, S., and Nekhayev, D.~V. (1999b).
+\newblock Topology preserving edge contraction.
+\newblock {\em Publ. Inst. Math.(Beograd)(NS)}, 66(80):23--45.
+
+\bibitem[Dey and Levine, 2008]{Dey:2008:DAD}
+Dey, T.~K. and Levine, J.~A. (2008).
+\newblock Delpsc: A delaunay mesher for piecewise smooth complexes.
+\newblock In {\em Proceedings of the twenty-fourth annual symposium on
+  Computational geometry - SCG '08}, pages 220--221, New York, NY, USA. ACM
+  Press.
+
+\bibitem[Dey and Ray, 2010]{dey2010polygonal}
+Dey, T.~K. and Ray, T. (2010).
+\newblock Polygonal surface remeshing with delaunay refinement.
+\newblock {\em Engineering with computers}, 26(3):289--301.
 
 \bibitem[DiCarlo et~al., 2014]{Dicarlo2014}
 DiCarlo, A., Paoluzzi, A., and Shapiro, V. (2014).
@@ -65,15 +569,212 @@ DiCarlo, A., Paoluzzi, A., and Shapiro, V. (2014).
 \newblock {\em Computer-Aided Design}, 46:269--274.
 \newblock 2013 SIAM Conference on Geometric and Physical Modeling.
 
+\bibitem[Dobrev et~al., 2019]{dobrev2019target}
+Dobrev, V., Knupp, P., Kolev, T., Mittal, K., and Tomov, V. (2019).
+\newblock The target-matrix optimization paradigm for high-order meshes.
+\newblock {\em SIAM Journal on Scientific Computing}, 41(1):B50--B68.
+
 \bibitem[Dobrzynski and El~Jannoun, 2017]{dobrzynski2017}
 Dobrzynski, C. and El~Jannoun, G. (2017).
 \newblock {High order mesh untangling for complex curved geometries}.
-\newblock Research Report RR-9120.
+\newblock Research Report RR-9120, {INRIA Bordeaux, {\'e}quipe CARDAMOM}.
+
+\bibitem[Dompierre et~al., 1999]{dompierre1999subdivide}
+Dompierre, J., Labb{\'e}, P., Vallet, M.-G., and Camarero, R. (1999).
+\newblock How to subdivide pyramids, prisms, and hexahedra into tetrahedra.
+\newblock {\em IMR}, 99:195.
+
+\bibitem[Doran et~al., 2013]{Doran:2013:ISI}
+Doran, C., Chang, A., and Bridson, R. (2013).
+\newblock Isosurface stuffing improved: Acute lattices and feature matching.
+\newblock In {\em ACM SIGGRAPH 2013 Talks on - SIGGRAPH '13}, pages 38:1--38:1,
+  New York, NY, USA. ACM Press.
 
 \bibitem[Dougherty et~al., 2004]{Dougherty2004}
 Dougherty, R., Faber, V., and Murphy, M. (2004).
 \newblock Unflippable tetrahedral complexes.
 \newblock {\em Discrete {\&} Computational Geometry}, 32(3):309--315.
+
+\bibitem[Du and Wang, 2003a]{du2003tetrahedral}
+Du, Q. and Wang, D. (2003a).
+\newblock Tetrahedral mesh generation and optimization based on centroidal
+  voronoi tessellations.
+\newblock {\em International journal for numerical methods in engineering},
+  56(9):1355--1373.
+
+\bibitem[Du and Wang, 2003b]{Du:2003:TMG}
+Du, Q. and Wang, D. (2003b).
+\newblock Tetrahedral mesh generation and optimization based on centroidal
+  voronoi tessellations.
+\newblock {\em International journal for numerical methods in engineering},
+  56(9):1355--1373.
+
+\bibitem[Dufourd, 1991]{dufourd1991obj3}
+Dufourd, J.-F. (1991).
+\newblock An obj3 functional specification for boundary representation.
+\newblock In {\em Proceedings of the first ACM symposium on Solid modeling
+  foundations and CAD/CAM applications}, pages 61--72.
+
+\bibitem[Dunyach et~al., 2013]{dunyach2013adaptive}
+Dunyach, M., Vanderhaeghe, D., Barthe, L., and Botsch, M. (2013).
+\newblock Adaptive remeshing for real-time mesh deformation.
+
+\bibitem[Dyer et~al., 2007]{dyer2007delaunay}
+Dyer, R., Zhang, H., and M{\"o}ller, T. (2007).
+\newblock Delaunay mesh construction.
+
+\bibitem[Ebke et~al., 2014]{ebke2014level}
+Ebke, H.-C., Campen, M., Bommes, D., and Kobbelt, L. (2014).
+\newblock Level-of-detail quad meshing.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 33(6):184.
+
+\bibitem[Engvall and Evans, 2016]{ENGVALL2016378}
+Engvall, L. and Evans, J.~A. (2016).
+\newblock Isogeometric triangular bernstein–b{\'e}zier discretizations:
+  Automatic mesh generation and geometrically exact finite element analysis.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering}, 304:378
+  -- 407.
+
+\bibitem[Engvall and Evans, 2017]{ENGVALL201783}
+Engvall, L. and Evans, J.~A. (2017).
+\newblock Isogeometric unstructured tetrahedral and mixed-element
+  bernstein–b\'{e}zier discretizations.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering}, 319:83
+  -- 123.
+
+\bibitem[Engvall and Evans, 2018]{Luke2018}
+Engvall, L. and Evans, J.~A. (2018).
+\newblock Mesh quality metrics for isogeometric bernstein-b\'{e}zier
+  discretizations.
+\newblock {\em arXiv:1810.06975}.
+
+\bibitem[Engwirda, 2016]{Engwirda16}
+Engwirda, D. (2016).
+\newblock Conforming restricted delaunay mesh generation for piecewise smooth
+  complexes.
+\newblock {\em CoRR}.
+
+\bibitem[Ezuz et~al., 2019]{Ezuz:2019}
+Ezuz, D., Solomon, J., and Ben-Chen, M. (2019).
+\newblock Reversible harmonic maps between discrete surfaces.
+\newblock {\em ACM Trans. Graph.}, 38(2).
+
+\bibitem[Feng et~al., 2018a]{feng2018curved}
+Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018a).
+\newblock Curved optimal delaunay triangulation.
+\newblock {\em ACM Transactions on Graphics (TOG)}.
+
+\bibitem[Feng et~al., 2018b]{Feng:2018:COD}
+Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018b).
+\newblock Curved optimal delaunay triangulation.
+\newblock {\em ACM Trans. Graph.}, 37(4):61:1--61:16.
+
+\bibitem[Floater, 2003]{floater2003one}
+Floater, M. (2003).
+\newblock One-to-one piecewise linear mappings over triangulations.
+\newblock {\em Mathematics of Computation}, 72(242):685--696.
+
+\bibitem[Floater, 1997]{Floater:97}
+Floater, M.~S. (1997).
+\newblock Parametrization and smooth approximation of surface triangulations.
+\newblock {\em Computer Aided Geometric Design}, 14:231--250.
+
+\bibitem[Floater and Hormann, 2005]{FloaterSurvey:2005}
+Floater, M.~S. and Hormann, K. (2005).
+\newblock Surface parameterization: a tutorial and survey.
+\newblock In {\em In Advances in Multiresolution for Geometric Modelling,
+  Mathematics and Visualization}, pages 157--186. Springer Verlag.
+
+\bibitem[Fortunato and Persson, 2016]{FORTUNATO20161}
+Fortunato, M. and Persson, P.-O. (2016).
+\newblock High-order unstructured curved mesh generation using the winslow
+  equations.
+\newblock {\em Journal of Computational Physics}, 307:1 -- 14.
+
+\bibitem[Foteinos and Chrisochoides, 2011]{foteinos2011dynamic}
+Foteinos, P. and Chrisochoides, N. (2011).
+\newblock Dynamic parallel 3d delaunay triangulation.
+\newblock In {\em Proceedings of the 20th International Meshing Roundtable},
+  pages 3--20. Springer.
+
+\bibitem[Fu and Liu, 2016]{Fu:2016}
+Fu, X.-M. and Liu, Y. (2016).
+\newblock Computing inversion-free mappings by simplex assembly.
+\newblock {\em ACM Trans. Graph.}, 35(6):216:1--216:12.
+
+\bibitem[Fu et~al., 2015a]{Fu:2015}
+Fu, X.-M., Liu, Y., and Guo, B. (2015a).
+\newblock Computing locally injective mappings by advanced mips.
+\newblock {\em ACM Trans. Graph.}, 34(4):71:1--71:12.
+
+\bibitem[Fu et~al., 2015b]{fu2015computing}
+Fu, X.-M., Liu, Y., and Guo, B. (2015b).
+\newblock Computing locally injective mappings by advanced mips.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 34(4):71.
+
+\bibitem[Funke and Sanders, 2017]{funke2017parallel}
+Funke, D. and Sanders, P. (2017).
+\newblock Parallel d-d delaunay triangulations in shared and distributed
+  memory.
+\newblock In {\em 2017 Proceedings of the Ninteenth Workshop on Algorithm
+  Engineering and Experiments (ALENEX)}, pages 207--217. SIAM.
+
+\bibitem[Galtier and George, 1996]{galtier1996prepartitioning}
+Galtier, J. and George, P.~L. (1996).
+\newblock Prepartitioning as a way to mesh subdomains in parallel.
+\newblock In {\em in 5th International Meshing Roundtable}. Citeseer.
+
+\bibitem[Gao et~al., 2019]{Gao:2019}
+Gao, X., Shen, H., and Panozzo, D. (2019).
+\newblock Feature preserving octree-based hexahedral meshing.
+\newblock {\em Computer Graphics Forum}, 38(5):135--149.
+
+\bibitem[Gargallo-Peir\'{o} et~al., 2015]{Gargallo2015}
+Gargallo-Peir\'{o}, A., Roca, X., Peraire, J., and Sarrate, J. (2015).
+\newblock Optimization of a regularized distortion measure to generate curved
+  high-order unstructured tetrahedral meshes.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  103(5):342--363.
+
+\bibitem[Gargallo~Peir{\'o} et~al., 2013]{gargallo2013high}
+Gargallo~Peir{\'o}, A., Roca~Navarro, F.~J., Peraire~Guitart, J., and
+  Sarrate~Ramos, J. (2013).
+\newblock High-order mesh generation on cad geometries.
+\newblock In {\em Adaptive Modeling and Simulation 2013}, pages 301--312.
+  Centre Internacional de M{\`e}todes Num{\`e}rics en Enginyeria (CIMNE).
+
+\bibitem[Garimella and Shephard, 2000]{garimella2000boundary}
+Garimella, R.~V. and Shephard, M.~S. (2000).
+\newblock Boundary layer mesh generation for viscous flow simulations.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  49(1-2):193--218.
+
+\bibitem[Garland and Heckbert, 1999]{Garland:1999}
+Garland, M. and Heckbert, P. (1999).
+\newblock {\em Quadric-Based Polygonal Surface Simplification}.
+\newblock PhD thesis, USA.
+\newblock AAI9950005.
+
+\bibitem[Garland and Heckbert, 1997]{garland1997surface}
+Garland, M. and Heckbert, P.~S. (1997).
+\newblock Surface simplification using quadric error metrics.
+\newblock In {\em Proceedings of the 24th annual conference on Computer
+  graphics and interactive techniques}, pages 209--216. ACM
+  Press/Addison-Wesley Publishing Co.
+
+\bibitem[Garland and Heckbert, 1998]{garland1998simplifying}
+Garland, M. and Heckbert, P.~S. (1998).
+\newblock Simplifying surfaces with color and texture using quadric error
+  metrics.
+\newblock In {\em Proceedings Visualization'98 (Cat. No. 98CB36276)}, pages
+  263--269. IEEE.
+
+\bibitem[G{\"a}rtner and Sch{\"o}nherr, 2000]{gartner2000efficient}
+G{\"a}rtner, B. and Sch{\"o}nherr, S. (2000).
+\newblock An efficient, exact, and generic quadratic programming solver for
+  geometric optimization.
+\newblock In {\em Proceedings of the sixteenth annual symposium on
+  Computational geometry}, pages 110--118.
 
 \bibitem[George and Borouchaki, 2012]{George2012}
 George, P. and Borouchaki, H. (2012).
@@ -87,11 +788,52 @@ Geuzaine, C., Johnen, A., Lambrechts, J., Remacle, J.-F., and Toulorge, T.
 \newblock {\em The Generation of Valid Curvilinear Meshes}, pages 15--39.
 \newblock Springer International Publishing, Cham.
 
+\bibitem[Geuzaine and Remacle, 2009]{Geuzaine:2009:gmsh}
+Geuzaine, C. and Remacle, J.-F. (2009).
+\newblock Gmsh: A 3-d finite element mesh generator with built-in pre- and
+  post-processing facilities.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  79(11):1309--1331.
+
 \bibitem[Ghasemi et~al., 2016]{Ghasemi2016}
 Ghasemi, A., Taylor, L.~K., and Newman, III, J.~C. (2016).
 \newblock Massively parallel curved spectral/finite element mesh generation of
   industrial cad geometries in two and three dimensions.
 \newblock {\em Fluids Engineering Division Summer Meeting}, (50299).
+
+\bibitem[Gillespie et~al., 2021]{Gillespie:2021:DCE}
+Gillespie, M., Springborn, B., and Crane, K. (2021).
+\newblock Discrete conformal equivalence of polyhedral surfaces.
+\newblock {\em ACM Trans. Graph.}, 40(4).
+
+\bibitem[Gotsman and Surazhsky, 2001]{Gotsman:2001}
+Gotsman, C. and Surazhsky, V. (2001).
+\newblock Guaranteed intersection-free polygon morphing.
+\newblock {\em Computers \& Graphics}, 25(1):67--75.
+
+\bibitem[Grinspun et~al., 2002]{Grinspun:2002}
+Grinspun, E., Krysl, P., and Schr\"{o}der, P. (2002).
+\newblock Charms: A simple framework for adaptive simulation.
+\newblock {\em ACM Trans. Graph.}, 21(3):281–290.
+
+\bibitem[Gu et~al., 2018a]{gu2018discrete2}
+Gu, X., Guo, R., Luo, F., Sun, J., and Wu, T. (2018a).
+\newblock A discrete uniformization theorem for polyhedral surfaces ii.
+\newblock {\em Journal of Differential Geometry}, 109(3):431--466.
+
+\bibitem[Gu et~al., 2018b]{gu2018discrete}
+Gu, X., Luo, F., Sun, J., and Wu, T. (2018b).
+\newblock A discrete uniformization theorem for polyhedral surfaces.
+\newblock {\em Journal of Differential Geometry}, 109(2):223--256.
+
+\bibitem[Guennebaud et~al., 2010]{eigenweb}
+Guennebaud, G., Jacob, B., et~al. (2010).
+\newblock Eigen v3.
+
+\bibitem[Gu{\'e}ziec, 1996]{gueziec1996surface}
+Gu{\'e}ziec, A. (1996).
+\newblock {\em Surface simplification inside a tolerance volume}.
+\newblock IBM TJ Watson Research Center.
 
 \bibitem[Guibas and Stolfi, 1985]{Guibas1985}
 Guibas, L. and Stolfi, J. (1985).
@@ -99,17 +841,286 @@ Guibas, L. and Stolfi, J. (1985).
   computation of voronoi.
 \newblock {\em ACM Trans. Graph.}, 4(2):74–123.
 
+\bibitem[Guigue and Devillers, 2003]{guigue2003fast}
+Guigue, P. and Devillers, O. (2003).
+\newblock Fast and robust triangle-triangle overlap test using orientation
+  predicates.
+\newblock {\em Journal of graphics tools}, 8(1):25--32.
+
+\bibitem[Gumhold et~al., 2003]{gumhold2003intersection}
+Gumhold, S., Borodin, P., and Klein, R. (2003).
+\newblock Intersection free simplification.
+\newblock {\em International Journal of Shape Modeling}, 9(02):155--176.
+
+\bibitem[Guo et~al., 2020]{Guo2020Cut}
+Guo, H.-X., Liu, X., Yan, D.-M., and Yang, L. (2020).
+\newblock Cut-enhanced polycube-maps for feature-aware all-hex meshing.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 39(4):106:1--106:14.
+
 \bibitem[{Hahmann} and {Bonneau}, 2003]{Hahmann2003}
 {Hahmann}, S. and {Bonneau}, G.~. (2003).
 \newblock Polynomial surfaces interpolating arbitrary triangulations.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics},
   9(1):99--109.
 
+\bibitem[Haimes, 2014]{Haimes:2014:MMO}
+Haimes, R. (2014).
+\newblock Moss: Multiple orthogonal strand system.
+\newblock In {\em Proceedings of the 22nd International Meshing Roundtable},
+  pages 75--91. Springer International Publishing, Cham.
+
+\bibitem[Harmon, 2010]{harmon2010robust}
+Harmon, D. (2010).
+\newblock {\em Robust, efficient, and accurate contact algorithms}.
+\newblock PhD thesis, Columbia University.
+
+\bibitem[Harmon et~al., 2011]{Harmon:2011}
+Harmon, D., Panozzo, D., Sorkine, O., and Zorin, D. (2011).
+\newblock Interference-aware geometric modeling.
+\newblock {\em ACM Trans. Graph.}, 30(6):137:1--137:10.
+
+\bibitem[Harmon et~al., 2009]{Harmon:2009}
+Harmon, D., Vouga, E., Smith, B., Tamstorf, R., and Grinspun, E. (2009).
+\newblock Asynchronous contact mechanics.
+\newblock {\em ACM Trans. Graph.}, 28(3):87:1--87:12.
+
+\bibitem[Hart, 2018]{hart2018conway}
+Hart, G.~W. (2018).
+\newblock Conway notation for polyhedra.
+\newblock {\em URL: http://www. gergehart.
+  co/virtual-polyhedra/conway\_notation. html}.
+
+\bibitem[Hass and Trnkova, 2020]{hass2020approximating}
+Hass, J. and Trnkova, M. (2020).
+\newblock Approximating isosurfaces by guaranteed-quality triangular meshes.
+\newblock In {\em Computer Graphics Forum}, volume~39, pages 29--40. Wiley
+  Online Library.
+
+\bibitem[Hoppe, 1996]{hoppe1996progressive}
+Hoppe, H. (1996).
+\newblock Progressive meshes.
+\newblock In {\em Proceedings of the 23rd annual conference on Computer
+  graphics and interactive techniques}, pages 99--108. ACM.
+
+\bibitem[Hoppe et~al., 1994]{hoppe1994piecewise}
+Hoppe, H., DeRose, T., Duchamp, T., Halstead, M., Jin, H., McDonald, J.,
+  Schweitzer, J., and Stuetzle, W. (1994).
+\newblock Piecewise smooth surface reconstruction.
+\newblock In {\em Proceedings of the 21st annual conference on Computer
+  graphics and interactive techniques}, pages 295--302.
+
+\bibitem[Hormann and Greiner, 2000a]{Hormann:2000}
+Hormann, K. and Greiner, G. (2000a).
+\newblock {MIPS}: An efficient global parametrization method.
+\newblock In {\em Curve and Surface Design: Saint-Malo 1999}, pages 153--162.
+
+\bibitem[Hormann and Greiner, 2000b]{hormann2000mips}
+Hormann, K. and Greiner, G. (2000b).
+\newblock Mips: An efficient global parametrization method.
+\newblock Technical report, ERLANGEN-NUERNBERG UNIV (GERMANY) COMPUTER GRAPHICS
+  GROUP.
+
+\bibitem[Hormann et~al., 2007]{Hormann:2007}
+Hormann, K., L{\'e}vy, B., and Sheffer, A. (2007).
+\newblock Mesh parameterization: Theory and practice.
+\newblock In {\em ACM SIGGRAPH 2007 Courses}, SIGGRAPH '07, New York, NY, USA.
+  ACM.
+
+\bibitem[Hormann and Sukumar, 2017]{Hormann:2017:GBC}
+Hormann, K. and Sukumar, N., editors (2017).
+\newblock {\em Generalized Barycentric Coordinates in Computer Graphics and
+  Computational Mechanics}.
+\newblock CRC Press, Boca Raton, FL.
+
+\bibitem[{Hu} et~al., 2017]{hu2017}
+{Hu}, K., {Yan}, D., {Bommes}, D., {Alliez}, P., and {Benes}, B. (2017).
+\newblock Error-bounded and feature preserving surface remeshing with minimal
+  angle improvement.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(12):2560--2573.
+
+\bibitem[Hu et~al., 2016]{hu2016error}
+Hu, K., Yan, D.-M., Bommes, D., Alliez, P., and Benes, B. (2016).
+\newblock Error-bounded and feature preserving surface remeshing with minimal
+  angle improvement.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  23(12):2560--2573.
+
+\bibitem[Hu et~al., 2019a]{hu2019taichi}
+Hu, Y., Li, T.-M., Anderson, L., Ragan-Kelley, J., and Durand, F. (2019a).
+\newblock Taichi: a language for high-performance computation on spatially
+  sparse data structures.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(6):1--16.
+
+\bibitem[Hu et~al., 2019b]{hu2019triwild}
+Hu, Y., Schneider, T., Gao, X., Zhou, Q., Jacobson, A., Zorin, D., and Panozzo,
+  D. (2019b).
+\newblock Triwild: robust triangulation with curve constraints.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(4):52.
+
+\bibitem[Hu et~al., 2019c]{Hu:2019:triwild}
+Hu, Y., Schneider, T., Gao, X., Zhou, Q., Jacobson, A., Zorin, D., and Panozzo,
+  D. (2019c).
+\newblock Triwild: Robust triangulation with curve constraints.
+\newblock {\em ACM Trans. Graph.}, 38(4):52:1--52:15.
+
+\bibitem[Hu et~al., 2019d]{Hu:2019:fTetWild}
+Hu, Y., Schneider, T., Wang, B., Zorin, D., and Panozzo, D. (2019d).
+\newblock Fast tetrahedral meshing in the wild.
+\newblock {\em arXiv preprint arXiv:1908.03581}.
+
+\bibitem[Hu et~al., 2020]{Hu:2020:fTetWild}
+Hu, Y., Schneider, T., Wang, B., Zorin, D., and Panozzo, D. (2020).
+\newblock Fast tetrahedral meshing in the wild.
+\newblock {\em ACM Trans. Graph.}, 39(4).
+
+\bibitem[Hu et~al., 2018]{hu2018tetrahedral}
+Hu, Y., Zhou, Q., Gao, X., Jacobson, A., Zorin, D., and Panozzo, D. (2018).
+\newblock Tetrahedral meshing in the wild.
+\newblock {\em ACM Trans. Graph.}, 37(4):60--1.
+
+\bibitem[Huang et~al., 2007]{huang2007gradient}
+Huang, J., Liu, X., Jiang, H., Wang, Q., and Bao, H. (2007).
+\newblock Gradient-based shell generation and deformation.
+\newblock {\em Computer Animation and Virtual Worlds}, 18(4-5):301--309.
+
+\bibitem[Hutchinson et~al., 1996]{Hutchinson:1996}
+Hutchinson, D., Preston, M., and Hewitt, T. (1996).
+\newblock Adaptive refinement for mass/spring simulations.
+\newblock In {\em Proceedings of the Eurographics Workshop on Computer
+  Animation and Simulation '96}, page 31–45, Berlin, Heidelberg.
+  Springer-Verlag.
+
+\bibitem[Jacobson et~al., 2013]{Jacobson:2013}
+Jacobson, A., Kavan, L., and Sorkine-Hornung, O. (2013).
+\newblock Robust inside-outside segmentation using generalized winding numbers.
+\newblock {\em ACM Trans. Graph.}, 32(4).
+
+\bibitem[Jacobson et~al., 2014]{libigl}
+Jacobson, A., Panozzo, D., et~al. (2014).
+\newblock {libigl}: A simple {C++} geometry processing library.
+\newblock http://igl.ethz.ch/projects/libigl/.
+
+\bibitem[Jacobson et~al., 2016]{jacobson2016libigl}
+Jacobson, A., Panozzo, D., Sch{\"u}ller, C., Diamanti, O., Zhou, Q., Pietroni,
+  N., et~al. (2016).
+\newblock libigl: A simple c++ geometry processing library, 2016.
+
 \bibitem[Jameson et~al., 2002]{Jameson2002}
 Jameson, A., Alonso, J., and McMullen, M. (2002).
 \newblock Application of a non-linear frequency domain solver to the euler and
   navier-stokes equations.
 \newblock In {\em 40th AIAA Aerospace Sciences Meeting \& Exhibit}.
+
+\bibitem[Jamin et~al., 2015a]{jamin2015cgalmesh}
+Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015a).
+\newblock Cgalmesh: a generic framework for delaunay mesh generation.
+\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(4):23.
+
+\bibitem[Jamin et~al., 2015b]{Jamin:2015:CAG}
+Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015b).
+\newblock {CGALmesh}: A generic framework for delaunay mesh generation.
+\newblock {\em ACM Transactions on Mathematical Software}, 41(4):1--24.
+
+\bibitem[Jiang et~al., 2017]{jiang2017simplicial}
+Jiang, Z., Schaefer, S., and Panozzo, D. (2017).
+\newblock Simplicial complex augmentation framework for bijective maps.
+\newblock {\em ACM Transactions on Graphics}, 36(6).
+
+\bibitem[Jiang et~al., 2020]{jiang2020bijective}
+Jiang, Z., Schneider, T., Zorin, D., and Panozzo, D. (2020).
+\newblock Bijective projection in a shell.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 39(6):1--18.
+
+\bibitem[Jiao and Heath, 2004]{jiao2004overlaying}
+Jiao, X. and Heath, M.~T. (2004).
+\newblock Overlaying surface meshes, part i: Algorithms.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 14(06):379--402.
+
+\bibitem[Jiao and Wang, 2012]{jiao2012reconstructing}
+Jiao, X. and Wang, D. (2012).
+\newblock Reconstructing high-order surfaces for meshing.
+\newblock {\em Engineering with Computers}, 28(4):361--373.
+
+\bibitem[Jimenez et~al., 2001]{jimenez:2001}
+Jimenez, P., Thomas, F., and Torras, C. (2001).
+\newblock 3d collision detection: a survey.
+\newblock {\em Computers \& Graphics}, 25(2):269 -- 285.
+
+\bibitem[{Jin} et~al., 2008]{Jin:2008}
+{Jin}, M., {Kim}, J., {Luo}, F., and {Gu}, X. (2008).
+\newblock Discrete surface ricci flow.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  14(5):1030--1043.
+
+\bibitem[Jin et~al., 2019]{jin2019shell}
+Jin, Y., Song, D., Wang, T., Huang, J., Song, Y., and He, L. (2019).
+\newblock A shell space constrained approach for curve design on surface
+  meshes.
+\newblock {\em Computer-Aided Design}, 113:24--34.
+
+\bibitem[Johnen et~al., 2013]{johnen2013geometrical}
+Johnen, A., Remacle, J.-F., and Geuzaine, C. (2013).
+\newblock Geometrical validity of curvilinear finite elements.
+\newblock {\em Journal of Computational Physics}, 233:359--372.
+
+\bibitem[Karras, 2012]{karras2012maximizing}
+Karras, T. (2012).
+\newblock Maximizing parallelism in the construction of bvhs, octrees, and k-d
+  trees.
+\newblock In {\em Proceedings of the Fourth ACM SIGGRAPH/Eurographics
+  conference on High-Performance Graphics}, pages 33--37.
+
+\bibitem[Karypis and Kumar, 1998]{karypis1998fast}
+Karypis, G. and Kumar, V. (1998).
+\newblock A fast and high quality multilevel scheme for partitioning irregular
+  graphs.
+\newblock {\em SIAM Journal on scientific Computing}, 20(1):359--392.
+
+\bibitem[Kazhdan et~al., 2012]{Kazhdan:2012}
+Kazhdan, M., Solomon, J., and Ben-Chen, M. (2012).
+\newblock Can mean-curvature flow be modified to be non-singular?
+\newblock {\em Comput. Graph. Forum}, 31(5):1745--1754.
+
+\bibitem[Kharevych et~al., 2006]{Kharevych:2006}
+Kharevych, L., Springborn, B., and Schr\"{o}der, P. (2006).
+\newblock Discrete conformal mappings via circle patterns.
+\newblock {\em ACM Trans. Graph.}, 25(2):412–438.
+
+\bibitem[Kjolstad et~al., 2017]{kjolstad2017taco}
+Kjolstad, F., Chou, S., Lugato, D., Kamil, S., and Amarasinghe, S. (2017).
+\newblock Taco: A tool to generate tensor algebra kernels.
+\newblock In {\em 2017 32nd IEEE/ACM International Conference on Automated
+  Software Engineering (ASE)}, pages 943--948. IEEE.
+
+\bibitem[Kjolstad et~al., 2016]{kjolstad2016simit}
+Kjolstad, F., Kamil, S., Ragan-Kelley, J., Levin, D.~I., Sueda, S., Chen, D.,
+  Vouga, E., Kaufman, D.~M., Kanwar, G., Matusik, W., et~al. (2016).
+\newblock Simit: A language for physical simulation.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 35(2):1--21.
+
+\bibitem[Klingner and Shewchuk, 2007]{Klingner07aggressive}
+Klingner, B. and Shewchuk, J. (2007).
+\newblock Aggressive tetrahedral mesh improvement.
+\newblock pages 3--23.
+
+\bibitem[Klingner, 2009]{Klingner:2009}
+Klingner, B.~M. (2009).
+\newblock {\em Tetrahedral mesh improvement}.
+\newblock PhD thesis, University of California at Berkeley.
+
+\bibitem[Klingner et~al., 2006]{Klingner:2006}
+Klingner, B.~M., Feldman, B.~E., Chentanez, N., and O'Brien, J.~F. (2006).
+\newblock Fluid animation with dynamic meshes.
+\newblock In {\em ACM SIGGRAPH 2006 Papers}, SIGGRAPH '06, page 820–825, New
+  York, NY, USA. Association for Computing Machinery.
+
+\bibitem[Knabner and Summ, 2001]{knabner2001invertibility}
+Knabner, P. and Summ, G. (2001).
+\newblock The invertibility of the isoparametric mapping for pyramidal and
+  prismatic finite elements.
+\newblock {\em Numerische Mathematik}, 88(4):661--681.
 
 \bibitem[Knupp, 2000]{Knupp2000}
 Knupp, P.~M. (2000).
@@ -119,15 +1130,452 @@ Knupp, P.~M. (2000).
 \newblock {\em International Journal for Numerical Methods in Engineering},
   48(3):401--420.
 
+\bibitem[Knupp, 2002]{Knupp20002}
+Knupp, P.~M. (2002).
+\newblock Achieving finite element mesh quality via optimization of the
+  jacobian matrix norm and associated quantities. part ii, a framework for
+  volume mesh optimization and the condition number of the jacobian matrix.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  48(8):1165--1185.
+
+\bibitem[Kobbelt et~al., 1998]{kobbelt1998interactive}
+Kobbelt, L., Campagna, S., Vorsatz, J., and Seidel, H.-P. (1998).
+\newblock Interactive multi-resolution modeling on arbitrary meshes.
+\newblock In {\em Siggraph}, volume~98, pages 105--114.
+
+\bibitem[Koch et~al., 2019]{Koch_2019_CVPR}
+Koch, S., Matveev, A., Jiang, Z., Williams, F., Artemov, A., Burnaev, E.,
+  Alexa, M., Zorin, D., and Panozzo, D. (2019).
+\newblock Abc: A big cad model dataset for geometric deep learning.
+\newblock In {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}.
+
+\bibitem[Kovalsky et~al., 2016]{Kovalsky:2016}
+Kovalsky, S.~Z., Galun, M., and Lipman, Y. (2016).
+\newblock Accelerated quadratic proxy for geometric optimization.
+\newblock {\em ACM Trans. Graph.}, 35(4):134:1--134:11.
+
+\bibitem[Kraemer et~al., 2014]{kraemer2014cgogn}
+Kraemer, P., Untereiner, L., Jund, T., Thery, S., and Cazier, D. (2014).
+\newblock Cgogn: N-dimensional meshes with combinatorial maps.
+\newblock In {\em Proceedings of the 22nd International Meshing Roundtable},
+  pages 485--503. Springer.
+
+\bibitem[Kraevoy and Sheffer, 2004]{kraevoy2004cross}
+Kraevoy, V. and Sheffer, A. (2004).
+\newblock Cross-parameterization and compatible remeshing of 3d models.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 23(3):861--869.
+
+\bibitem[Kremer et~al., 2013]{kremer2013openvolumemesh}
+Kremer, M., Bommes, D., and Kobbelt, L. (2013).
+\newblock Openvolumemesh--a versatile index-based data structure for 3d
+  polytopal complexes.
+\newblock In {\em Proceedings of the 21st International Meshing Roundtable},
+  pages 531--548. Springer.
+
+\bibitem[Krishnamurthy and Levoy, 1996]{krishnamurthy1996fitting}
+Krishnamurthy, V. and Levoy, M. (1996).
+\newblock Fitting smooth surfaces to dense polygon meshes.
+\newblock In {\em Proceedings of the 23rd annual conference on Computer
+  graphics and interactive techniques}, pages 313--324.
+
+\bibitem[Labelle and Shewchuk, 2007]{Labelle:2007:ISF}
+Labelle, F. and Shewchuk, J.~R. (2007).
+\newblock Isosurface stuffing: Fast tetrahedral meshes with good dihedral
+  angles.
+\newblock In {\em ACM SIGGRAPH 2007 papers on - SIGGRAPH '07}, page~57, New
+  York, NY, USA. ACM Press.
+
+\bibitem[Lachat et~al., 2014]{lachat2014parallel}
+Lachat, C., Dobrzynski, C., and Pellegrini, F. (2014).
+\newblock Parallel mesh adaptation using parallel graph partitioning.
+\newblock In {\em 5th European conference on computational mechanics (ECCM V)},
+  volume~3, pages 2612--2623. CIMNE-International Center for Numerical Methods
+  in Engineering.
+
+\bibitem[Lee et~al., 2000]{lee2000displaced}
+Lee, A., Moreton, H., and Hoppe, H. (2000).
+\newblock Displaced subdivision surfaces.
+\newblock In {\em Proceedings of the 27th annual conference on Computer
+  graphics and interactive techniques}, pages 85--94.
+
+\bibitem[Lee et~al., 1998]{lee1998maps}
+Lee, A.~W., Sweldens, W., Schr{\"o}der, P., Cowsar, L.~C., and Dobkin, D.~P.
+  (1998).
+\newblock Maps: Multiresolution adaptive parameterization of surfaces.
+\newblock In {\em Siggraph}, volume~98, pages 95--104.
+
+\bibitem[Lengyel et~al., 2001]{lengyel2001real}
+Lengyel, J., Praun, E., Finkelstein, A., and Hoppe, H. (2001).
+\newblock Real-time fur over arbitrary surfaces.
+\newblock In {\em Proceedings of the 2001 symposium on Interactive 3D
+  graphics}, pages 227--232. ACM.
+
+\bibitem[L{\'e}vy, 2015]{levy2015geogram}
+L{\'e}vy, B. (2015).
+\newblock Geogram.
+
+\bibitem[L{\'e}vy et~al., 2002]{Levy:2002}
+L{\'e}vy, B., Petitjean, S., Ray, N., and Maillot, J. (2002).
+\newblock Least squares conformal maps for automatic texture atlas generation.
+\newblock {\em ACM Trans. Graph.}, 21(3):362--371.
+
+\bibitem[Li and Volkov, 2005]{Li:2005}
+Li, L. and Volkov, V. (2005).
+\newblock Cloth animation with adaptively refined meshes.
+\newblock In {\em Proceedings of the Twenty-Eighth Australasian Conference on
+  Computer Science - Volume 38}, ACSC '05, page 107–113, AUS. Australian
+  Computer Society, Inc.
+
+\bibitem[Li et~al., 2020]{Li2020IPC}
+Li, M., Ferguson, Z., Schneider, T., Langlois, T., Zorin, D., Panozzo, D.,
+  Jiang, C., and Kaufman, D.~M. (2020).
+\newblock Incremental potential contact: Intersection- and inversion-free large
+  deformation dynamics.
+\newblock {\em ACM Trans. Graph. (SIGGRAPH)}, 39(4).
+
+\bibitem[Li et~al., 2018]{li2018optcuts}
+Li, M., Kaufman, D.~M., Kim, V.~G., Solomon, J., and Sheffer, A. (2018).
+\newblock Optcuts: joint optimization of surface cuts and parameterization.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 37(6):1--13.
+
+\bibitem[Li et~al., 2012]{Yufei:2012}
+Li, Y., Liu, Y., Xu, W., Wang, W., and Guo, B. (2012).
+\newblock All-hex meshing using singularity-restricted field.
+\newblock {\em ACM Trans. Graph.}, 31(6).
+
+\bibitem[Lienhardt, 1994]{lienhardt1994n}
+Lienhardt, P. (1994).
+\newblock N-dimensional generalized combinatorial maps and cellular
+  quasi-manifolds.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 4(03):275--324.
+
+\bibitem[Lin et~al., 2007]{LIN2007adap}
+Lin, H., Chen, W., and Bao, H. (2007).
+\newblock Adaptive patch-based mesh fitting for reverse engineering.
+\newblock {\em Computer-Aided Design}, 39(12):1134 -- 1142.
+
+\bibitem[Linardakis and Chrisochoides, 2006]{linardakis2006delaunay}
+Linardakis, L. and Chrisochoides, N. (2006).
+\newblock Delaunay decoupling method for parallel guaranteed quality planar
+  mesh refinement.
+\newblock {\em SIAM Journal on Scientific Computing}, 27(4):1394--1423.
+
+\bibitem[Lipman, 2012a]{Lipman:2012}
+Lipman, Y. (2012a).
+\newblock Bounded distortion mapping spaces for triangular meshes.
+\newblock {\em ACM Trans. Graph.}, 31(4):108:1--108:13.
+
+\bibitem[Lipman, 2012b]{Lipman:2012:BDM}
+Lipman, Y. (2012b).
+\newblock Bounded distortion mapping spaces for triangular meshes.
+\newblock {\em ACM Trans. Graph.}, 31(4):108.
+
+\bibitem[Lipman, 2013]{Lipman:2013ArXiv}
+Lipman, Y. (2013).
+\newblock Construction of injective mappings of meshes.
+\newblock {\em CoRR}, abs/1310.0955.
+
+\bibitem[Lipman, 2014]{lipman2014bijective}
+Lipman, Y. (2014).
+\newblock Bijective mappings of meshes with boundary and the degree in mesh
+  processing.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(2):1263--1283.
+
+\bibitem[Litke et~al., 2005]{litke2005image}
+Litke, N., Droske, M., Rumpf, M., and Schr{\"o}der, P. (2005).
+\newblock An image processing approach to surface matching.
+\newblock In {\em Symposium on Geometry Processing}, volume 255.
+
+\bibitem[Liu et~al., 2008]{Liu:2008}
+Liu, L., Zhang, L., Xu, Y., Gotsman, C., and Gortler, S.~J. (2008).
+\newblock A local/global approach to mesh parameterization.
+\newblock In {\em Proceedings of the Symposium on Geometry Processing}, SGP
+  '08, pages 1495--1504, Aire-la-Ville, Switzerland, Switzerland. Eurographics
+  Association.
+
+\bibitem[Liu et~al., 2017]{liu2017seamless}
+Liu, S., Ferguson, Z., Jacobson, A., and Gingold, Y.~I. (2017).
+\newblock Seamless: seam erasure and seam-aware decoupling of shape from mesh
+  resolution.
+\newblock {\em ACM Trans. Graph.}, 36(6).
+
+\bibitem[Liu et~al., 2015]{liu2015efficient}
+Liu, Y.-J., Xu, C.-X., Fan, D., and He, Y. (2015).
+\newblock Efficient construction and simplification of delaunay meshes.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 34(6).
+
+\bibitem[Lo, 2012]{lo2012parallel}
+Lo, S. (2012).
+\newblock Parallel delaunay triangulation in three dimensions.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  237:88--106.
+
+\bibitem[Loriot et~al., 2020]{corefinement}
+Loriot, S., Rouxel-Labb{\'e}, M., Tournois, J., and Yaz, I.~O. (2020).
+\newblock Polygon mesh processing.
+\newblock In {\em {CGAL} User and Reference Manual}. {CGAL Editorial Board},
+  {5.0.3} edition.
+
+\bibitem[Loseille et~al., 2017]{loseille2017unique}
+Loseille, A., Alauzet, F., and Menier, V. (2017).
+\newblock Unique cavity-based operator and hierarchical domain partitioning for
+  fast parallel generation of anisotropic meshes.
+\newblock {\em Computer-Aided Design}, 85:53--67.
+
+\bibitem[Lu et~al., 2013]{Qiukai2013}
+Lu, Q., Shephard, M.~S., Tendulkar, S., and Beall, M.~W. (2013).
+\newblock Parallel curved mesh adaptation for large scale high-order finite
+  element simulations.
+\newblock In Jiao, X. and Weill, J.-C., editors, {\em Proceedings of the 21st
+  International Meshing Roundtable}, pages 419--436, Berlin, Heidelberg.
+  Springer Berlin Heidelberg.
+
+\bibitem[Lu et~al., 2014]{lu2014parallel}
+Lu, Q., Shephard, M.~S., Tendulkar, S., and Beall, M.~W. (2014).
+\newblock Parallel mesh adaptation for high-order finite element methods with
+  curved element geometry.
+\newblock {\em Engineering with Computers}, 30(2):271--286.
+
+\bibitem[Luo, 2004]{luo2004combinatorial}
+Luo, F. (2004).
+\newblock Combinatorial yamabe flow on surfaces.
+\newblock {\em Communications in Contemporary Mathematics}, 6(05):765--780.
+
+\bibitem[Luo et~al., 2008]{luo2008tracking}
+Luo, X., Shephard, M.~S., Lee, L.-Q., Ng, C., and Ge, L. (2008).
+\newblock Tracking adaptive moving mesh refinements in 3d curved domains for
+  large-scale higher order finite element simulations.
+\newblock In {\em Proceedings of the 17th International Meshing Roundtable},
+  pages 585--601. Springer.
+
+\bibitem[Luo et~al., 2001]{luo2001influence}
+Luo, X., Shephard, M.~S., and Remacle, J.-F. (2001).
+\newblock The influence of geometric approximation on the accuracy of high
+  order methods.
+\newblock {\em Rensselaer SCOREC report}, 1.
+
+\bibitem[Luo et~al., 2002]{Luo2002pVersionMG}
+Luo, X., Shephard, M.~S., Remacle, J.-F., O'Bara, R.~M., Beall, M.~W.,
+  Szab{\'o}, B.~A., and Actis, R. (2002).
+\newblock p-version mesh generation issues.
+\newblock In {\em IMR}.
+
+\bibitem[Lyche and Muntingh, 2015]{lyche2015simplex}
+Lyche, T. and Muntingh, G. (2015).
+\newblock Simplex spline bases on the powell-sabin 12-split: Part i.
+\newblock {\em arXiv preprint arXiv:1505.01798}.
+
 \bibitem[Mahmoud et~al., 2021]{Mahmoud2021}
 Mahmoud, A.~H., Porumbescu, S.~D., and Owens, J.~D. (2021).
 \newblock Rxmesh: A gpu mesh data structure.
 \newblock {\em ACM Trans. Graph.}, 40(4).
 
+\bibitem[Mandad et~al., 2015a]{mandad2015isotopic}
+Mandad, M., Cohen-Steiner, D., and Alliez, P. (2015a).
+\newblock Isotopic approximation within a tolerance volume.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 34(4):64.
+
+\bibitem[Mandad et~al., 2015b]{Mandad:2015}
+Mandad, M., Cohen-Steiner, D., and Alliez, P. (2015b).
+\newblock Isotopic approximation within a tolerance volume.
+\newblock {\em ACM Trans. Graph.}, 34(4):64:1--64:12.
+
 \bibitem[M{\"a}ntyl{\"a}, 1987]{Maentylae1987}
 M{\"a}ntyl{\"a}, M. (1987).
 \newblock {\em An introduction to solid modeling}.
 \newblock Computer Science Press, Inc.
+
+\bibitem[Marcon et~al., 2019]{marcon2019semi}
+Marcon, J., Peir{\'o}, J., Moxey, D., Bergemann, N., Bucklow, H., and Gammon,
+  M.~R. (2019).
+\newblock A semi-structured approach to curvilinear mesh generation around
+  streamlined bodies.
+\newblock In {\em AIAA Scitech 2019 Forum}, page 1725.
+
+\bibitem[Maron et~al., 2017]{maron2017convolutional}
+Maron, H., Galun, M., Aigerman, N., Trope, M., Dym, N., Yumer, E., Kim, V.~G.,
+  and Lipman, Y. (2017).
+\newblock Convolutional neural networks on surfaces via seamless toric covers.
+\newblock {\em ACM Trans. Graph.}, 36(4):71--1.
+
+\bibitem[Marot et~al., 2019]{marot2019one}
+Marot, C., Pellerin, J., and Remacle, J.-F. (2019).
+\newblock One machine, one minute, three billion tetrahedra.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  117(9):967--990.
+
+\bibitem[Marot and Remacle, 2020]{marot2020quality}
+Marot, C. and Remacle, J.-F. (2020).
+\newblock Quality tetrahedral mesh generation with hxt.
+\newblock {\em arXiv preprint arXiv:2008.08508}.
+
+\bibitem[Marschner et~al., 2020]{marschner2020hexahedral}
+Marschner, Z., Palmer, D., Zhang, P., and Solomon, J. (2020).
+\newblock Hexahedral mesh repair via sum-of-squares relaxation.
+\newblock In {\em Computer Graphics Forum}, volume~39, pages 133--147. Wiley
+  Online Library.
+
+\bibitem[Mezger et~al., 2007]{mezger2007finite}
+Mezger, J., Thomaszewski, B., Pabst, S., and Stra{\ss}er, W. (2007).
+\newblock A finite element method for interactive physically based shape
+  modelling with quadratic tetrahedra.
+
+\bibitem[Mezger et~al., 2009]{MEZGER2009680}
+Mezger, J., Thomaszewski, B., Pabst, S., and Stra\'{ss}er, W. (2009).
+\newblock Interactive physically-based shape editing.
+\newblock {\em Computer Aided Geometric Design}, 26(6):680 -- 694.
+\newblock Solid and Physical Modeling 2008.
+
+\bibitem[Misztal and B\ae{}rentzen, 2012]{Misztal:2012}
+Misztal, M.~K. and B\ae{}rentzen, J.~A. (2012).
+\newblock Topology-adaptive interface tracking using the deformable simplicial
+  complex.
+\newblock {\em ACM Trans. Graph.}, 31(3).
+
+\bibitem[Mitchell et~al., 1987]{mitchell1987discrete}
+Mitchell, J.~S., Mount, D.~M., and Papadimitriou, C.~H. (1987).
+\newblock The discrete geodesic problem.
+\newblock {\em SIAM Journal on Computing}, 16(4):647--668.
+
+\bibitem[M{\"o}bius and Kobbelt, 2010]{mobius2010openflipper}
+M{\"o}bius, J. and Kobbelt, L. (2010).
+\newblock Openflipper: An open source geometry processing and rendering
+  framework.
+\newblock In {\em International Conference on Curves and Surfaces}, pages
+  488--500. Springer.
+
+\bibitem[Molino et~al., 2003]{Molino:2003:TMG}
+Molino, N., Bridson, R., and Fedkiw, R. (2003).
+\newblock Tetrahedral mesh generation for deformable bodies.
+\newblock In {\em Proc. Symposium on Computer Animation}.
+
+\bibitem[Moxey et~al., 2016]{MOXEY2016130}
+Moxey, D., Ekelschot, D., Keskin, U., Sherwin, S., and Peiro, J. (2016).
+\newblock High-order curvilinear meshing using a thermo-elastic analogy.
+\newblock {\em Computer-Aided Design}, 72:130 -- 139.
+\newblock 23rd International Meshing Roundtable Special Issue: Advances in Mesh
+  Generation.
+
+\bibitem[Moxey et~al., 2015]{MOXEY2015636}
+Moxey, D., Green, M., Sherwin, S., and Peir{\'o}, J. (2015).
+\newblock An isoparametric approach to high-order curvilinear boundary-layer
+  meshing.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering}, 283:636
+  -- 650.
+
+\bibitem[Moxey et~al., 2018]{moxeynekmesh}
+Moxey, D., Turner, M., Marcon, J., and Peiro, J. (2018).
+\newblock Nekmesh: An open-source high-order mesh generator.
+
+\bibitem[M\"{u}ller et~al., 2015]{Muller:2015}
+M\"{u}ller, M., Chentanez, N., Kim, T.-Y., and Macklin, M. (2015).
+\newblock Air meshes for robust collision handling.
+\newblock {\em ACM Trans. Graph.}, 34(4).
+
+\bibitem[Murphy et~al., 2001a]{murphy2001point}
+Murphy, M., Mount, D.~M., and Gable, C.~W. (2001a).
+\newblock A point-placement strategy for conforming delaunay
+  tetrahedralization.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 11(06):669--682.
+
+\bibitem[Murphy et~al., 2001b]{MURPHY:2001:APP}
+Murphy, M., Mount, D.~M., and Gable, C.~W. (2001b).
+\newblock A point-placement strategy for conforming delaunay
+  tetrahedralization.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 11(06):669--682.
+
+\bibitem[Myles et~al., 2014]{Myles:2014}
+Myles, A., Pietroni, N., and Zorin, D. (2014).
+\newblock Robust field-aligned global parametrization.
+\newblock {\em ACM Trans. Graph.}, 33(4):135:1--135:14.
+
+\bibitem[Narain et~al., 2013]{Narain:2013}
+Narain, R., Pfaff, T., and O'Brien, J.~F. (2013).
+\newblock Folding and crumpling adaptive sheets.
+\newblock {\em ACM Trans. Graph.}, 32(4).
+
+\bibitem[Narain et~al., 2012]{Narain:2012}
+Narain, R., Samii, A., and O'Brien, J.~F. (2012).
+\newblock Adaptive anisotropic remeshing for cloth simulation.
+\newblock {\em ACM Trans. Graph.}, 31(6).
+
+\bibitem[Nguyen, 2007]{nguyen2007gpu}
+Nguyen, H. (2007).
+\newblock {\em Gpu gems 3}.
+\newblock Addison-Wesley Professional.
+
+\bibitem[Oden, 1994]{ODEN1994309}
+Oden, J. (1994).
+\newblock Optimal h-p finite element methods.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  112(1):309 -- 331.
+
+\bibitem[Okusanya and Peraire, 1996]{okusanya1996parallel}
+Okusanya, T. and Peraire, J. (1996).
+\newblock Parallel unstructured mesh generation.
+
+\bibitem[Okusanya and Peraire, 1997]{okusanya19973}
+Okusanya, T. and Peraire, J. (1997).
+\newblock 3-d parallel unstructured mesh generation.
+\newblock In {\em Proc. Joint ASME/ASCE/SES Summer Meeting}. Citeseer.
+
+\bibitem[Ovsjanikov et~al., 2012]{Ovsjanikov:2012}
+Ovsjanikov, M., Ben-Chen, M., Solomon, J., Butscher, A., and Guibas, L. (2012).
+\newblock Functional maps: A flexible representation of maps between shapes.
+\newblock {\em ACM Trans. Graph.}, 31(4).
+
+\bibitem[Ovsjanikov et~al., 2017]{Ovsjanikov:2017}
+Ovsjanikov, M., Corman, E., Bronstein, M., Rodol\`{a}, E., Ben-Chen, M.,
+  Guibas, L., Chazal, F., and Bronstein, A. (2017).
+\newblock Computing and processing correspondences with functional maps.
+\newblock In {\em ACM SIGGRAPH 2017 Courses}, SIGGRAPH ’17.
+
+\bibitem[Pal et~al., 2014]{Pal:2014}
+Pal, K., Sch{\"u}ller, C., Panozzo, D., Sorkine-Hornung, O., and Weyrich, T.
+  (2014).
+\newblock Content-aware surface parameterization for interactive restoration of
+  historical documents.
+\newblock {\em Computer Graphics Forum (proceedings of EUROGRAPHICS issue)},
+  33(2).
+
+\bibitem[Palmer et~al., 2020]{Palmer:2020}
+Palmer, D., Bommes, D., and Solomon, J. (2020).
+\newblock Algebraic representations for volumetric frame fields.
+\newblock {\em ACM Trans. Graph.}, 39(2).
+
+\bibitem[Panozzo et~al., 2013]{panozzo2013weighted}
+Panozzo, D., Baran, I., Diamanti, O., and Sorkine-Hornung, O. (2013).
+\newblock Weighted averages on surfaces.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 32(4):60.
+
+\bibitem[Peir{\'o} et~al., 2015]{Peir2015OnCH}
+Peir{\'o}, A.~G., Giron{\'e}s, E.~R., Navarro, F.~J., and Ramos, J.~S. (2015).
+\newblock On curving high-order hexahedral meshes.
+
+\bibitem[Peir{\'o} et~al., 2014]{Gargallo2014}
+Peir{\'o}, A.~G., Roca, X., Peraire, J., and Sarrate, J. (2014).
+\newblock Defining quality measures for validation and generation of high-order
+  tetrahedral meshes.
+\newblock In Sarrate, J. and Staten, M., editors, {\em Proceedings of the 22nd
+  International Meshing Roundtable}, pages 109--126, Cham. Springer
+  International Publishing.
+
+\bibitem[Peir{\'o} et~al., 2008]{Peir2008}
+Peir{\'o}, J., Sherwin, S.~J., and Giordana, S. (2008).
+\newblock Automatic reconstruction of a patient-specific high-order surface
+  representation and its application to mesh generation for cfd calculations.
+\newblock {\em Medical {\&} Biological Engineering {\&} Computing},
+  46(11):1069--1083.
+
+\bibitem[Peng et~al., 2004]{peng2004interactive}
+Peng, J., Kristjansson, D., and Zorin, D. (2004).
+\newblock Interactive modeling of topologically complex geometric detail.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~23, pages
+  635--643. ACM.
 
 \bibitem[Persson and Peraire, 2009]{Persson2009}
 Persson, P.-O. and Peraire, J. (2009).
@@ -136,11 +1584,81 @@ Persson, P.-O. and Peraire, J. (2009).
 \newblock In {\em 47th AIAA Aerospace Sciences Meeting including The New
   Horizons Forum and Aerospace Exposition}.
 
+\bibitem[Pfaff et~al., 2014]{Pfaff:2014}
+Pfaff, T., Narain, R., de~Joya, J.~M., and O'Brien, J.~F. (2014).
+\newblock Adaptive tearing and cracking of thin sheets.
+\newblock {\em ACM Trans. Graph.}, 33(4).
+
+\bibitem[Phong, 1975]{phong1975illumination}
+Phong, B.~T. (1975).
+\newblock Illumination for computer generated pictures.
+\newblock {\em Communications of the ACM}, 18(6):311--317.
+
+\bibitem[Pietroni et~al., 2010]{Pietroni:2010}
+Pietroni, N., Tarini, M., and Cignoni, P. (2010).
+\newblock Almost isometric mesh parameterization through abstract domains.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  16(4):621–635.
+
+\bibitem[Pointwise, 2018]{pointwise}
+Pointwise (2018).
+\newblock High order mesh generation at pointwise.
+\newblock
+  \url{https://www.pointwise.com/theconnector/2016-Q3/High-Order-Mesh-Generation-at-Pointwise.html}.
+\newblock Accessed: 2018-11-14.
+
+\bibitem[Popovi\'{c} and Hoppe, 1997]{Popovic:1997}
+Popovi\'{c}, J. and Hoppe, H. (1997).
+\newblock Progressive simplicial complexes.
+\newblock In {\em Proceedings of the 24th Annual Conference on Computer
+  Graphics and Interactive Techniques}, SIGGRAPH '97, page 217–224, USA. ACM
+  Press/Addison-Wesley Publishing Co.
+
+\bibitem[Poranne and Lipman, 2014]{Poranne:2014}
+Poranne, R. and Lipman, Y. (2014).
+\newblock Provably good planar mappings.
+\newblock {\em ACM Trans. Graph.}, 33(4):76:1--76:11.
+
+\bibitem[Porumbescu et~al., 2005]{porumbescu2005shell}
+Porumbescu, S.~D., Budge, B., Feng, L., and Joy, K.~I. (2005).
+\newblock Shell maps.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~24, pages
+  626--633. ACM.
+
 \bibitem[Poya et~al., 2016]{Poya2016}
 Poya, R., Sevilla, R., and Gil, A.~J. (2016).
 \newblock A unified approach for a posteriori high-order curved mesh generation
   using solid mechanics.
 \newblock {\em Computational Mechanics}, 58(3):457--490.
+
+\bibitem[Praun et~al., 2001]{praun2001consistent}
+Praun, E., Sweldens, W., and Schr{\"o}der, P. (2001).
+\newblock Consistent mesh parameterizations.
+\newblock In {\em Proceedings of the 28th annual conference on Computer
+  graphics and interactive techniques}, pages 179--184.
+
+\bibitem[Rabinovich et~al., 2017]{Rabinovich:2017}
+Rabinovich, M., Poranne, R., Panozzo, D., and Sorkine-Hornung, O. (2017).
+\newblock Scalable locally injective mappings.
+\newblock {\em ACM Trans. Graph.}, 36(2):16:1--16:16.
+
+\bibitem[Ragan-Kelley et~al., 2013]{ragan2013halide}
+Ragan-Kelley, J., Barnes, C., Adams, A., Paris, S., Durand, F., and
+  Amarasinghe, S. (2013).
+\newblock Halide: a language and compiler for optimizing parallelism, locality,
+  and recomputation in image processing pipelines.
+\newblock {\em Acm Sigplan Notices}, 48(6):519--530.
+
+\bibitem[Remacle, 2017]{Remacle:2017:ATL}
+Remacle, J.-F. (2017).
+\newblock A two-level multithreaded delaunay kernel.
+\newblock {\em Computer-Aided Design}, 85:2--9.
+
+\bibitem[Remacle et~al., 2013]{remacle2013robust}
+Remacle, J.-F., Toulorge, T., and Lambrechts, J. (2013).
+\newblock Robust untangling of curvilinear meshes.
+\newblock In {\em Proceedings of the 21st International meshing roundtable},
+  pages 71--83. Springer.
 
 \bibitem[Requicha, 1980]{Requicha1980}
 Requicha, A.~G. (1980).
@@ -155,11 +1673,296 @@ Roca, X., Gargallo-Peir{\'o}, A., and Sarrate, J. (2012).
   Meshing Roundtable}, pages 365--383, Berlin, Heidelberg. Springer Berlin
   Heidelberg.
 
+\bibitem[Ruiz-Giron\'{e}s et~al., 2017]{RUIZGIRONES2017362}
+Ruiz-Giron\'{e}s, E., Gargallo-Peir\'{o}, A., Sarrate, J., and Roca, X. (2017).
+\newblock An augmented lagrangian formulation to impose boundary conditions for
+  distortion based mesh moving and curving.
+\newblock {\em Procedia Engineering}, 203:362 -- 374.
+\newblock 26th International Meshing Roundtable, IMR26, 18-21 September 2017,
+  Barcelona, Spain.
+
+\bibitem[Ruiz-Giron\'{e}s et~al., 2016a]{RUIZGIRONES201652}
+Ruiz-Giron\'{e}s, E., Roca, X., and Sarrate, J. (2016a).
+\newblock High-order mesh curving by distortion minimization with boundary
+  nodes free to slide on a 3d cad representation.
+\newblock {\em Computer-Aided Design}, 72:52 -- 64.
+\newblock 23rd International Meshing Roundtable Special Issue: Advances in Mesh
+  Generation.
+
+\bibitem[Ruiz-Giron\'{e}s et~al., 2016b]{RUIZGIRONES2016315}
+Ruiz-Giron\'{e}s, E., Sarrate, J., and Roca, X. (2016b).
+\newblock Generation of curved high-order meshes with optimal quality and
+  geometric accuracy.
+\newblock {\em Procedia Engineering}, 163:315 -- 327.
+\newblock 25th International Meshing Roundtable.
+
+\bibitem[Ruppert, 1995a]{ruppert1995delaunay}
+Ruppert, J. (1995a).
+\newblock A delaunay refinement algorithm for quality 2-dimensional mesh
+  generation.
+\newblock {\em Journal of algorithms}, 18(3):548--585.
+
+\bibitem[Ruppert, 1995b]{Ruppert:1995:ADR}
+Ruppert, J. (1995b).
+\newblock A delaunay refinement algorithm for quality 2-dimensional mesh
+  generation.
+\newblock {\em Journal of Algorithms}, 18(3):548--585.
+
+\bibitem[Sacht et~al., 2013]{Sacht:2013}
+Sacht, L., Jacobson, A., Panozzo, D., Sch{\"u}ller, C., and Sorkine-Hornung, O.
+  (2013).
+\newblock Consistent volumetric discretizations inside self-intersecting
+  surfaces.
+\newblock {\em Computer Graphics Forum (proceedings of EUROGRAPHICS/ACM
+  SIGGRAPH Symposium on Geometry Processing)}, 32(5):147--156.
+
+\bibitem[Sacht et~al., 2015]{sacht2015nested}
+Sacht, L., Vouga, E., and Jacobson, A. (2015).
+\newblock Nested cages.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 34(6):170.
+
 \bibitem[Sadek, 1980]{Sadek1980}
 Sadek, E.~A. (1980).
 \newblock A scheme for the automatic generation of triangular finite elements.
 \newblock {\em International Journal for Numerical Methods in Engineering},
   15(12):1813--1822.
+
+\bibitem[Salari and Knupp, 2000]{SALARI:2000:CVB}
+Salari, K. and Knupp, P. (2000).
+\newblock Code verification by the method of manufactured solutions.
+\newblock Technical report.
+
+\bibitem[Sander et~al., 2001]{Sander:2001}
+Sander, P.~V., Snyder, J., Gortler, S.~J., and Hoppe, H. (2001).
+\newblock Texture mapping progressive meshes.
+\newblock In {\em ACM SIGGRAPH}, pages 409--416.
+
+\bibitem[Schl{\"o}mer, 2020]{schlomer2020nschloe}
+Schl{\"o}mer, N. (2020).
+\newblock nschloe/meshio: Input/output for many mesh formats.
+\newblock {\em Zenodo. doi}, 10.
+
+\bibitem[Schmidt et~al., 2019]{schmidt2019distortion}
+Schmidt, P., Born, J., Campen, M., and Kobbelt, L. (2019).
+\newblock Distortion-minimizing injective maps between surfaces.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38.
+
+\bibitem[Schneider et~al., 2019]{schneider2019large}
+Schneider, T., Hu, Y., Gao, X., Dumas, J., Zorin, D., and Panozzo, D. (2019).
+\newblock A large scale comparison of tetrahedral and hexahedral elements for
+  finite element analysis.
+
+\bibitem[Schreiner et~al., 2004]{Schreiner:2004}
+Schreiner, J., Asirvatham, A., Praun, E., and Hoppe, H. (2004).
+\newblock Inter-surface mapping.
+\newblock {\em ACM Trans. Graph.}, 23(3):870–877.
+
+\bibitem[Sch\"{u}ller et~al., 2013]{Schuller:2013}
+Sch\"{u}ller, C., Kavan, L., Panozzo, D., and Sorkine-Hornung, O. (2013).
+\newblock Locally injective mappings.
+\newblock In {\em Symposium on Geometry Processing}, pages 125--135.
+
+\bibitem[Sharp and Crane, 2020]{Sharp:2020:LNT}
+Sharp, N. and Crane, K. (2020).
+\newblock {A Laplacian for Nonmanifold Triangle Meshes}.
+\newblock {\em Computer Graphics Forum (SGP)}, 39(5).
+
+\bibitem[Sharp et~al., 2019]{sharp2019navigating}
+Sharp, N., Soliman, Y., and Crane, K. (2019).
+\newblock Navigating intrinsic triangulations.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(4):55.
+
+\bibitem[Sheffer et~al., 2006]{Sheffer:2006}
+Sheffer, A., Praun, E., and Rose, K. (2006).
+\newblock Mesh parameterization methods and their applications.
+\newblock {\em Found. Trends. Comput. Graph. Vis.}, 2(2):105--171.
+
+\bibitem[Shephard et~al., 2005]{SHEPHARD2005251}
+Shephard, M.~S., Flaherty, J.~E., Jansen, K.~E., Li, X., Luo, X., Chevaugeon,
+  N., Remacle, J.-F., Beall, M.~W., and O'Bara, R.~M. (2005).
+\newblock Adaptive mesh generation for curved domains.
+\newblock {\em Applied Numerical Mathematics}, 52(2):251 -- 271.
+\newblock ADAPT '03: Conference on Adaptive Methods for Partial Differential
+  Equations and Large-Scale Computation.
+
+\bibitem[Sherwin and Peir{\'o}, 2002]{sherwin2002mesh}
+Sherwin, S. and Peir{\'o}, J. (2002).
+\newblock Mesh generation in curvilinear domains using high-order elements.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  53(1):207--223.
+
+\bibitem[Shewchuk, 1996a]{Shewchuk:1996}
+Shewchuk, J. (1996a).
+\newblock Triangle: Engineering a 2d quality mesh generator and delaunay
+  triangulator.
+\newblock {\em Applied computational geometry towards geometric engineering},
+  pages 203--222.
+
+\bibitem[Shewchuk, 1996b]{SHEWCHUK-triangle1}
+Shewchuk, J.~R. (1996b).
+\newblock Triangle: Engineering a 2d quality mesh generator and delaunay
+  triangulator.
+\newblock In Lin, M.~C. and Manocha, D., editors, {\em Applied Computational
+  Geometry Towards Geometric Engineering}, pages 203--222, Berlin, Heidelberg.
+  Springer Berlin Heidelberg.
+
+\bibitem[Shewchuk, 1997]{shewchuk1997adaptive}
+Shewchuk, J.~R. (1997).
+\newblock Adaptive precision floating-point arithmetic and fast robust
+  geometric predicates.
+\newblock {\em Discrete \& Computational Geometry}, 18(3).
+
+\bibitem[Shewchuk, 1998a]{shewchuk1998tetrahedral}
+Shewchuk, J.~R. (1998a).
+\newblock Tetrahedral mesh generation by delaunay refinement.
+\newblock In {\em Proceedings of the fourteenth annual symposium on
+  Computational geometry}, pages 86--95. ACM.
+
+\bibitem[Shewchuk, 1998b]{Shewchuk:1998:TMG}
+Shewchuk, J.~R. (1998b).
+\newblock Tetrahedral mesh generation by delaunay refinement.
+\newblock In {\em Proceedings of the fourteenth annual symposium on
+  Computational geometry - SCG '98}, pages 86--95, New York, NY, USA. ACM
+  Press.
+
+\bibitem[Shewchuk, 2002a]{shewchuk2002constrained}
+Shewchuk, J.~R. (2002a).
+\newblock Constrained delaunay tetrahedralizations and provably good boundary
+  recovery.
+\newblock In {\em IMR}, pages 193--204.
+
+\bibitem[Shewchuk, 2002b]{Shewchuk:2002:CDT}
+Shewchuk, J.~R. (2002b).
+\newblock Constrained delaunay tetrahedralizations and provably good boundary
+  recovery.
+\newblock In {\em Eleventh International Meshing Roundtable}, pages 193--204.
+  Sandia National Laboratories.
+
+\bibitem[Shoham et~al., 2019]{Shoham:2019}
+Shoham, M., Vaxman, A., and Ben-Chen, M. (2019).
+\newblock Hierarchical functional maps between subdivision surfaces.
+\newblock {\em Computer Graphics Forum}, 38(5):55--73.
+
+\bibitem[Si, 2015a]{Si:2015}
+Si, H. (2015a).
+\newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
+\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
+
+\bibitem[Si, 2015b]{tetgen}
+Si, H. (2015b).
+\newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
+\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
+
+\bibitem[Si and G{\"a}rtner, 2005]{si2005meshing}
+Si, H. and G{\"a}rtner, K. (2005).
+\newblock Meshing piecewise linear complexes by constrained delaunay
+  tetrahedralizations.
+\newblock In {\em IMR}, pages 147--163. Springer.
+
+\bibitem[Si and Gartner, 2005]{Si:2005:MPL}
+Si, H. and Gartner, K. (2005).
+\newblock Meshing piecewise linear complexes by constrained delaunay
+  tetrahedralizations.
+\newblock In {\em Proceedings of the 14th international meshing roundtable},
+  pages 147--163, Berlin, Heidelberg. Springer, Springer Berlin Heidelberg.
+
+\bibitem[Si and Shewchuk, 2014a]{SiS14}
+Si, H. and Shewchuk, J.~R. (2014a).
+\newblock Incrementally constructing and updating constrained delaunay
+  tetrahedralizations with finite-precision coordinates.
+\newblock {\em Eng. Comput. (Lond.)}, 30(2):253--269.
+
+\bibitem[Si and Shewchuk, 2014b]{Si:2014:ICA}
+Si, H. and Shewchuk, J.~R. (2014b).
+\newblock Incrementally constructing and updating constrained delaunay
+  tetrahedralizations with finite-precision coordinates.
+\newblock {\em Engineering with Computers}, 30(2):253--269.
+
+\bibitem[Sieger and Botsch, 2019]{pmp-library}
+Sieger, D. and Botsch, M. (2019).
+\newblock The polygon mesh processing library.
+\newblock http://www.pmp-library.org.
+
+\bibitem[Simnett et~al., 2009]{Simnett:2009}
+Simnett, T. J.~R., Laycock, S.~D., and Day, A.~M. (2009).
+\newblock {An Edge-based Approach to Adaptively Refining a Mesh for Cloth
+  Deformation}.
+\newblock In Tang, W. and Collomosse, J., editors, {\em Theory and Practice of
+  Computer Graphics}. The Eurographics Association.
+
+\bibitem[Smith and Schaefer, 2015]{Smith:2015}
+Smith, J. and Schaefer, S. (2015).
+\newblock Bijective parameterization with free boundaries.
+\newblock {\em ACM Trans. Graph.}, 34(4):70:1--70:9.
+
+\bibitem[Solomon, 2015]{SolomonBook}
+Solomon, J. (2015).
+\newblock {\em Numerical Algorithms: Methods for Computer Vision, Machine
+  Learning, and Graphics}.
+\newblock A. K. Peters, Ltd., Natick, MA, USA.
+
+\bibitem[Sorger et~al., 2014]{Sorger:2014}
+Sorger, C., Frischmann, F., Kollmannsberger, S., and Rank, E. (2014).
+\newblock Tum.geoframe: automated high-order hexahedral mesh generation for
+  shell-like structures.
+\newblock {\em Eng. Comput.}, 30(1):41--56.
+
+\bibitem[Sorkine and Alexa, 2007]{Sorkine:2007}
+Sorkine, O. and Alexa, M. (2007).
+\newblock As-rigid-as-possible surface modeling.
+\newblock In {\em Proceedings of the Fifth Eurographics Symposium on Geometry
+  Processing}, SGP '07, pages 109--116, Aire-la-Ville, Switzerland,
+  Switzerland. Eurographics Association.
+
+\bibitem[Sorkine et~al., 2002]{Sorkine:2002}
+Sorkine, O., Cohen-Or, D., Goldenthal, R., and Lischinski, D. (2002).
+\newblock Bounded-distortion piecewise mesh parameterization.
+\newblock In {\em Proceedings of the Conference on Visualization}, pages
+  355--362.
+
+\bibitem[Springborn, 2020]{springborn2019ideal}
+Springborn, B. (2020).
+\newblock Ideal hyperbolic polyhedra and discrete uniformization.
+\newblock {\em Discrete \& Computational Geometry}, 64(1):63--108.
+
+\bibitem[Springborn et~al., 2008]{Springborn:2008}
+Springborn, B., Schr\"{o}der, P., and Pinkall, U. (2008).
+\newblock Conformal equivalence of triangle meshes.
+\newblock {\em ACM Trans. Graph.}, 27(3):1–11.
+
+\bibitem[Stees and Shontz, 2017]{STEES2017180}
+Stees, M. and Shontz, S.~M. (2017).
+\newblock A high-order log barrier-based mesh generation and warping method.
+\newblock {\em Procedia Engineering}, 203:180 -- 192.
+\newblock 26th International Meshing Roundtable, IMR26, 18-21 September 2017,
+  Barcelona, Spain.
+
+\bibitem[Stellato et~al., 2017]{osqp}
+Stellato, B., Banjac, G., Goulart, P., Bemporad, A., and Boyd, S. (2017).
+\newblock {OSQP}: An operator splitting solver for quadratic programs.
+\newblock {\em ArXiv e-prints}.
+
+\bibitem[Stephenson, 2005]{stephenson2005introduction}
+Stephenson, K. (2005).
+\newblock {\em Introduction to circle packing: The theory of discrete analytic
+  functions}.
+\newblock Cambridge University Press.
+
+\bibitem[Steve L.~Karman and Stefanski, 2016]{Steve2016}
+Steve L.~Karman, J T.~Erwin, R. S.~G. and Stefanski, D. (2016).
+\newblock High-order mesh curving using wcn mesh optimization.
+\newblock In {\em 46th AIAA Fluid Dynamics Conference, AIAA AVIATION Forum}.
+
+\bibitem[Sun et~al., 2015]{sun2015discrete}
+Sun, J., Wu, T., Gu, X., and Luo, F. (2015).
+\newblock Discrete conformal deformation: algorithm and experiments.
+\newblock {\em SIAM Journal on Imaging Sciences}, 8(3):1421--1456.
+
+\bibitem[Surazhsky and Gotsman, 2001]{surazhsky2001morphing}
+Surazhsky, V. and Gotsman, C. (2001).
+\newblock Morphing stick figures using optimized compatible triangulations.
+\newblock In {\em Computer Graphics and Applications, 2001. Proceedings. Ninth
+  Pacific Conference on}, pages 40--49. IEEE.
 
 \bibitem[Suwelack et~al., 2013]{Suwelack2013}
 Suwelack, S., Lukarski, D., Heuveline, V., Dillmann, R., and Speidel, S.
@@ -168,11 +1971,131 @@ Suwelack, S., Lukarski, D., Heuveline, V., Dillmann, R., and Speidel, S.
 \newblock In {\em Proceedings of the 12th ACM SIGGRAPH/Eurographics Symposium
   on Computer Animation}, SCA'13, pages 187--192, New York, NY, USA. ACM.
 
+\bibitem[Teschner et~al., 2003]{teschner2003optimized}
+Teschner, M., Heidelberger, B., M{\"u}ller, M., Pomerantes, D., and Gross,
+  M.~H. (2003).
+\newblock Optimized spatial hashing for collision detection of deformable
+  objects.
+\newblock In {\em Vmv}, volume~3, pages 47--54.
+
+\bibitem[{The CGAL Project}, 2020]{cgal2008computational}
+{The CGAL Project} (2020).
+\newblock {\em {CGAL} User and Reference Manual}.
+\newblock {CGAL Editorial Board}, {5.0.3} edition.
+
+\bibitem[Thiery et~al., 2012]{Thiery:2012}
+Thiery, J.-M., Tierny, J., and Boubekeur, T. (2012).
+\newblock Cager: Cage-based reverse engineering of animated 3d shapes.
+\newblock {\em Comput. Graph. Forum}, 31(8):2303–2316.
+
 \bibitem[Tong and Kim, 2009]{TONG2009}
 Tong, W.-h. and Kim, T.-w. (2009).
 \newblock High-order approximation of implicit surfaces by g1 triangular spline
   surfaces.
 \newblock {\em Computer-Aided Design}, 41(6):441--455.
+
+\bibitem[Toulorge et~al., 2013]{TOULORGE20138}
+Toulorge, T., Geuzaine, C., Remacle, J.-F., and Lambrechts, J. (2013).
+\newblock Robust untangling of curvilinear meshes.
+\newblock {\em Journal of Computational Physics}, 254:8 -- 26.
+
+\bibitem[Toulorge et~al., 2016]{TOULORGE2016361}
+Toulorge, T., Lambrechts, J., and Remacle, J.-F. (2016).
+\newblock Optimizing the geometrical accuracy of curvilinear meshes.
+\newblock {\em Journal of Computational Physics}, 310:361 -- 380.
+
+\bibitem[Tournois et~al., 2009a]{tournois2009interleaving}
+Tournois, J., Wormser, C., Alliez, P., and Desbrun, M. (2009a).
+\newblock Interleaving delaunay refinement and optimization for practical
+  isotropic tetrahedron mesh generation.
+\newblock {\em ACM Transactions on Graphics}, 28(3):Art--No.
+
+\bibitem[Tournois et~al., 2009b]{Tournois:2009:IDR}
+Tournois, J., Wormser, C., Alliez, P., and Desbrun, M. (2009b).
+\newblock Interleaving delaunay refinement and optimization for practical
+  isotropic tetrahedron mesh generation.
+\newblock {\em ACM Transactions on Graphics}, 28(3):1.
+
+\bibitem[Tozoni et~al., 2020]{tozoni2020low}
+Tozoni, D.~C., Dumas, J., Jiang, Z., Panetta, J., Panozzo, D., and Zorin, D.
+  (2020).
+\newblock A low-parametric rhombic microstructure family for irregular
+  lattices.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 39(4):101--1.
+
+\bibitem[Turner, 2017]{turner2017high}
+Turner, M. (2017).
+\newblock {\em High-order mesh generation for CFD solvers}.
+\newblock PhD thesis, Imperial College London.
+
+\bibitem[Turner et~al., 2016]{TURNER2016340}
+Turner, M., Peir\'{o}, J., and Moxey, D. (2016).
+\newblock A variational framework for high-order mesh generation.
+\newblock {\em Procedia Engineering}, 163:340 -- 352.
+\newblock 25th International Meshing Roundtable.
+
+\bibitem[Tutte, 1963]{Tutte:1963}
+Tutte, W.~T. (1963).
+\newblock How to draw a graph.
+\newblock {\em Proceedings of the London Mathematical Society}, 13(3):743--768.
+
+\bibitem[Villard and Borouchaki, 2002]{Villard:2002}
+Villard, J. and Borouchaki, H. (2002).
+\newblock Adaptive meshing for cloth animation.
+\newblock In {\em In Proceedings of the 11th International Meshing Roundtable
+  (IMR 2002}, pages 243--252.
+
+\bibitem[Wang et~al., 2021]{Wang:2021}
+Wang, B., Ferguson, Z., Schneider, T., Jiang, X., Attene, M., and Panozzo, D.
+  (2021).
+\newblock A large-scale benchmark and an inclusion-based algorithm for
+  continuous collision detection.
+\newblock {\em ACM Trans. Graph.}, 40(5).
+
+\bibitem[Wang et~al., 2020]{Wang:2020:FE}
+Wang, B., Schneider, T., Hu, Y., Attene, M., and Panozzo, D. (2020).
+\newblock Exact and efficient polyhedral envelope containment check.
+\newblock {\em ACM Trans. Graph.}, 39(4).
+
+\bibitem[Wang et~al., 2003]{wang2003view}
+Wang, L., Wang, X., Tong, X., Lin, S., Hu, S., Guo, B., and Shum, H.-Y. (2003).
+\newblock View-dependent displacement mapping.
+\newblock In {\em ACM Transactions on graphics (TOG)}, volume~22, pages
+  334--339. ACM.
+
+\bibitem[Wang et~al., 2016]{wang2016construction}
+Wang, R., Liu, L., Yang, Z., Wang, K., Shan, W., Deng, J., and Chen, F. (2016).
+\newblock Construction of manifolds via compatible sparse representations.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 35(2):1--10.
+
+\bibitem[Wang et~al., 2004]{wang2004generalized}
+Wang, X., Tong, X., Lin, S., Hu, S., Guo, B., and Shum, H.-Y. (2004).
+\newblock Generalized displacement maps.
+\newblock In {\em Proceedings of the Fifteenth Eurographics conference on
+  Rendering Techniques}, pages 227--233. Eurographics Association.
+
+\bibitem[Weber and Zorin, 2014]{Weber:2014}
+Weber, O. and Zorin, D. (2014).
+\newblock Locally injective parametrization with arbitrary fixed boundaries.
+\newblock {\em ACM Trans. Graph.}, 33(4):75:1--75:12.
+
+\bibitem[Wicke et~al., 2010]{Wicke:2010}
+Wicke, M., Ritchie, D., Klingner, B.~M., Burke, S., Shewchuk, J.~R., and
+  O'Brien, J.~F. (2010).
+\newblock Dynamic local remeshing for elastoplastic simulation.
+\newblock {\em ACM Trans. Graph.}, 29(4).
+
+\bibitem[Wojtan and Turk, 2008]{Wojtan:2008}
+Wojtan, C. and Turk, G. (2008).
+\newblock Fast viscoelastic behavior with thin features.
+\newblock {\em ACM Trans. Graph.}, 27(3):1--8.
+
+\bibitem[Xia and Qian, 2017]{Xia:2017:IGA}
+Xia, S. and Qian, X. (2017).
+\newblock Isogeometric analysis with bézier tetrahedra.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering}, 316:782
+  -- 816.
+\newblock Special Issue on Isogeometric Analysis: Progress and Challenges.
 
 \bibitem[Xie et~al., 2013]{Xie2013}
 Xie, Z.~Q., Sevilla, R., Hassan, O., and Morgan, K. (2013).
@@ -180,14 +2103,97 @@ Xie, Z.~Q., Sevilla, R., Hassan, O., and Morgan, K. (2013).
   analysis.
 \newblock {\em Computational Mechanics}, 51(3):361--374.
 
+\bibitem[Ye et~al., 2020]{ye2020penrose}
+Ye, K., Ni, W., Krieger, M., Ma'ayan, D., Wise, J., Aldrich, J., Sunshine, J.,
+  and Crane, K. (2020).
+\newblock Penrose: from mathematical notation to beautiful diagrams.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 39(4):144--1.
+
 \bibitem[Yerry and Shephard, 1983]{Yerry1983}
 Yerry, M.~A. and Shephard, M.~S. (1983).
 \newblock A modified quadtree approach to finite element mesh generation.
 \newblock {\em IEEE Computer Graphics and Applications}, 3(1):39--46.
 
+\bibitem[Yu et~al., 2020]{yu2020hexgen}
+Yu, Y., Wei, X., Li, A., Liu, J.~G., He, J., and Zhang, Y.~J. (2020).
+\newblock Hexgen and hex2spline: Polycube-based hexahedral mesh generation and
+  spline modeling for isogeometric analysis applications in ls-dyna.
+
+\bibitem[Yvart et~al., 2005a]{Yvart2005hier}
+Yvart, A., Hahmann, S., and Bonneau, G.-P. (2005a).
+\newblock Hierarchical triangular splines.
+\newblock {\em ACM Trans. Graph.}, 24(4):1374–1391.
+
+\bibitem[Yvart et~al., 2005b]{yvart2005smooth}
+Yvart, A., Hahmann, S., and Bonneau, G.-P. (2005b).
+\newblock Smooth adaptive fitting of 3d models using hierarchical triangular
+  splines.
+\newblock In {\em International Conference on Shape Modeling and Applications
+  2005 (SMI'05)}, pages 13--22. IEEE.
+
 \bibitem[Zayer et~al., 2017]{Zayer2017}
 Zayer, R., Steinberger, M., and Seidel, H.-P. (2017).
 \newblock A gpu-adapted structure for unstructured grids.
 \newblock {\em Comput. Graph. Forum}, 36(2):495–507.
+
+\bibitem[Zhang et~al., 2005]{Zhang:2005}
+Zhang, E., Mischaikow, K., and Turk, G. (2005).
+\newblock Feature-based surface parameterization and texture mapping.
+\newblock {\em ACM Trans. Graph.}, 24(1):1--27.
+
+\bibitem[Zhang et~al., 2020]{Zhang:2020}
+Zhang, P., Vekhter, J., Chien, E., Bommes, D., Vouga, E., and Solomon, J.
+  (2020).
+\newblock Octahedral frames for feature-aligned cross fields.
+\newblock {\em ACM Trans. Graph.}, 39(3).
+
+\bibitem[{Zhang} et~al., 2011]{Zhang2011multi}
+{Zhang}, S., {Li}, Z., {Zhang}, H., and {Yong}, J. (2011).
+\newblock Multi-resolution mesh fitting by b-spline surfaces for reverse
+  engineering.
+\newblock In {\em 2011 12th International Conference on Computer-Aided Design
+  and Computer Graphics}, pages 251--257.
+
+\bibitem[Zhou et~al., 2004]{Zhou:2004}
+Zhou, K., Synder, J., Guo, B., and Shum, H.-Y. (2004).
+\newblock Iso-charts: Stretch-driven mesh parameterization using spectral
+  analysis.
+\newblock In {\em Proceedings of the 2004 Eurographics/ACM SIGGRAPH Symposium
+  on Geometry Processing}, SGP '04, pages 45--54, New York, NY, USA. ACM.
+
+\bibitem[Zhou et~al., 2012]{zhou2012tools}
+Zhou, M., Xie, T., Seol, S., Shephard, M.~S., Sahni, O., and Jansen, K.~E.
+  (2012).
+\newblock Tools to support mesh adaptation on massively parallel computers.
+\newblock {\em Engineering with Computers}, 28(3):287--301.
+
+\bibitem[Zhou et~al., 2016]{zhou2016mesh}
+Zhou, Q., Grinspun, E., Zorin, D., and Jacobson, A. (2016).
+\newblock Mesh arrangements for solid geometry.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 35(4):1--15.
+
+\bibitem[Zhou and Jacobson, 2016]{zhou2016thingi10k}
+Zhou, Q. and Jacobson, A. (2016).
+\newblock Thingi10k: A dataset of 10,000 3d-printing models.
+\newblock {\em arXiv preprint arXiv:1605.04797}.
+
+\bibitem[Ziel et~al., 2017]{ZIEL201791}
+Ziel, V., B\'{e}riot, H., Atak, O., and Gabard, G. (2017).
+\newblock Comparison of 2d boundary curving methods with modal shape functions
+  and a piecewise linear target mesh.
+\newblock {\em Procedia Engineering}, 203:91 -- 101.
+\newblock 26th International Meshing Roundtable, IMR26, 18-21 September 2017,
+  Barcelona, Spain.
+
+\bibitem[Zomorodian and Edelsbrunner, 2000]{zomorodian2000fast}
+Zomorodian, A. and Edelsbrunner, H. (2000).
+\newblock Fast software for box intersections.
+\newblock In {\em Proceedings of the sixteenth annual symposium on
+  Computational geometry}, pages 129--138.
+
+\bibitem[Zorin, 2000]{zorin2000subdivision}
+Zorin, D. (2000).
+\newblock Subdivision for modeling and animation.
+\newblock {\em SIGGRAPH2000 course notes}.
 
 \end{thebibliography}

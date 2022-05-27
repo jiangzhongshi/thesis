@@ -2,407 +2,77 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 13514 items from 5000.
+Reallocated field_info (elt_size=4) to 13492 items from 5000.
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "Bommes:2009"
-Warning--I didn't find a database entry for "Rabinovich:2017"
-Warning--I didn't find a database entry for "Kazhdan:2012"
-Warning--I didn't find a database entry for "Sacht:2013"
-Warning--I didn't find a database entry for "Smith:2015"
-Warning--I didn't find a database entry for "zhou2016thingi10k"
-Warning--I didn't find a database entry for "Koch_2019_CVPR"
-Warning--I didn't find a database entry for "garland1998simplifying"
-Warning--I didn't find a database entry for "crane2013geodesics"
-Warning--I didn't find a database entry for "mitchell1987discrete"
-Warning--I didn't find a database entry for "kobbelt1998interactive"
-Warning--I didn't find a database entry for "tozoni2020low"
-Warning--I didn't find a database entry for "crane2013conformal"
-Warning--I didn't find a database entry for "mobius2010openflipper"
-Warning--I didn't find a database entry for "libigl"
-Warning--I didn't find a database entry for "Lipman:2012"
-Warning--I didn't find a database entry for "Kovalsky:2016"
-Warning--I didn't find a database entry for "Bommes:2013"
-Warning--I didn't find a database entry for "Poranne:2014"
-Warning--I didn't find a database entry for "Pal:2014"
-Warning--I didn't find a database entry for "Harmon:2011"
-Warning--I didn't find a database entry for "harmon2010robust"
-Warning--I didn't find a database entry for "Zhang:2005"
-Warning--I didn't find a database entry for "Lipman:2013ArXiv"
-Warning--I didn't find a database entry for "Muller:2015"
-Warning--I didn't find a database entry for "Misztal:2012"
-Warning--I didn't find a database entry for "FloaterSurvey:2005"
-Warning--I didn't find a database entry for "Sheffer:2006"
-Warning--I didn't find a database entry for "Hormann:2007"
-Warning--I didn't find a database entry for "Hormann:2000"
-Warning--I didn't find a database entry for "Degener:2003"
-Warning--I didn't find a database entry for "Sander:2001"
-Warning--I didn't find a database entry for "Sorkine:2002"
-Warning--I didn't find a database entry for "Aigerman:2014"
-Warning--I didn't find a database entry for "Schuller:2013"
-Warning--I didn't find a database entry for "Fu:2015"
-Warning--I didn't find a database entry for "Fu:2016"
-Warning--I didn't find a database entry for "Tutte:1963"
-Warning--I didn't find a database entry for "Floater:97"
-Warning--I didn't find a database entry for "Weber:2014"
-Warning--I didn't find a database entry for "Campen:2016"
-Warning--I didn't find a database entry for "Gotsman:2001"
-Warning--I didn't find a database entry for "surazhsky2001morphing"
-Warning--I didn't find a database entry for "jimenez:2001"
-Warning--I didn't find a database entry for "Harmon:2009"
-Warning--I didn't find a database entry for "Ainsley:2012"
-Warning--I didn't find a database entry for "Levy:2002"
-Warning--I didn't find a database entry for "Zhou:2004"
-Warning--I didn't find a database entry for "Shewchuk:1996"
-Warning--I didn't find a database entry for "Liu:2008"
-Warning--I didn't find a database entry for "Si:2015"
-Warning--I didn't find a database entry for "Klingner:2009"
-Warning--I didn't find a database entry for "Myles:2014"
-Warning--I didn't find a database entry for "Sorkine:2007"
-Warning--I didn't find a database entry for "SolomonBook"
-Warning--I didn't find a database entry for "jiao2004overlaying"
-Warning--I didn't find a database entry for "praun2001consistent"
-Warning--I didn't find a database entry for "kraevoy2004cross"
-Warning--I didn't find a database entry for "lee1998maps"
-Warning--I didn't find a database entry for "Ovsjanikov:2012"
-Warning--I didn't find a database entry for "Hormann:2017:GBC"
-Warning--I didn't find a database entry for "phong1975illumination"
-Warning--I didn't find a database entry for "boubekeur2008phong"
-Warning--I didn't find a database entry for "blender"
-Warning--I didn't find a database entry for "nguyen2007gpu"
-Warning--I didn't find a database entry for "lee2000displaced"
-Warning--I didn't find a database entry for "panozzo2013weighted"
-Warning--I didn't find a database entry for "Ezuz:2019"
-Warning--I didn't find a database entry for "ebke2014level"
-Warning--I didn't find a database entry for "maron2017convolutional"
-Warning--I didn't find a database entry for "Aigerman:2015b"
-Warning--I didn't find a database entry for "jiang2017simplicial"
-Warning--I didn't find a database entry for "litke2005image"
-Warning--I didn't find a database entry for "schmidt2019distortion"
-Warning--I didn't find a database entry for "Aigerman:2015"
-Warning--I didn't find a database entry for "Aigerman:2017"
-Warning--I didn't find a database entry for "Aigerman:2016"
-Warning--I didn't find a database entry for "Springborn:2008"
-Warning--I didn't find a database entry for "stephenson2005introduction"
-Warning--I didn't find a database entry for "Kharevych:2006"
-Warning--I didn't find a database entry for "Jin:2008"
-Warning--I didn't find a database entry for "Shoham:2019"
-Warning--I didn't find a database entry for "Ovsjanikov:2017"
-Warning--I didn't find a database entry for "Schreiner:2004"
-Warning--I didn't find a database entry for "Pietroni:2010"
-Warning--I didn't find a database entry for "garland1997surface"
-Warning--I didn't find a database entry for "cohen1997simplifying"
-Warning--I didn't find a database entry for "dunyach2013adaptive"
-Warning--I didn't find a database entry for "cohen1996simplification"
-Warning--I didn't find a database entry for "hu2016error"
-Warning--I didn't find a database entry for "hu2019triwild"
-Warning--I didn't find a database entry for "gueziec1996surface"
-Warning--I didn't find a database entry for "hu2017"
-Warning--I didn't find a database entry for "hu2018tetrahedral"
-Warning--I didn't find a database entry for "Hu:2019:fTetWild"
-Warning--I didn't find a database entry for "barnhill_opitz_pottmann_1992"
-Warning--I didn't find a database entry for "bajaj2002hierarchical"
-Warning--I didn't find a database entry for "wang2003view"
-Warning--I didn't find a database entry for "wang2004generalized"
-Warning--I didn't find a database entry for "porumbescu2005shell"
-Warning--I didn't find a database entry for "peng2004interactive"
-Warning--I didn't find a database entry for "lengyel2001real"
-Warning--I didn't find a database entry for "chen2004shell"
-Warning--I didn't find a database entry for "huang2007gradient"
-Warning--I didn't find a database entry for "jin2019shell"
-Warning--I didn't find a database entry for "aubry2015most"
-Warning--I didn't find a database entry for "aubry2017boundary"
-Warning--I didn't find a database entry for "garimella2000boundary"
-Warning--I didn't find a database entry for "sacht2015nested"
-Warning--I didn't find a database entry for "Calderon:2017"
-Warning--I didn't find a database entry for "Thiery:2012"
-Warning--I didn't find a database entry for "botsch2006primo"
-Warning--I didn't find a database entry for "botsch2003multiresolution"
-Warning--I didn't find a database entry for "dyer2007delaunay"
-Warning--I didn't find a database entry for "liu2015efficient"
-Warning--I didn't find a database entry for "sharp2019navigating"
-Warning--I didn't find a database entry for "Sharp:2020:LNT"
-Warning--I didn't find a database entry for "chazal2005condition"
-Warning--I didn't find a database entry for "chazal2010ball"
-Warning--I didn't find a database entry for "mandad2015isotopic"
-Warning--I didn't find a database entry for "dompierre1999subdivide"
-Warning--I didn't find a database entry for "osqp"
-Warning--I didn't find a database entry for "cheshmi2020nasoq"
-Warning--I didn't find a database entry for "gartner2000efficient"
-Warning--I didn't find a database entry for "aubry2008most"
-Warning--I didn't find a database entry for "guigue2003fast"
-Warning--I didn't find a database entry for "coxeter1973regular"
-Warning--I didn't find a database entry for "conway2016symmetries"
-Warning--I didn't find a database entry for "hart2018conway"
-Warning--I didn't find a database entry for "dey1999topology"
-Warning--I didn't find a database entry for "hormann2000mips"
-Warning--I didn't find a database entry for "shewchuk1997adaptive"
-Warning--I didn't find a database entry for "eigenweb"
-Warning--I didn't find a database entry for "cgal2008computational"
-Warning--I didn't find a database entry for "levy2015geogram"
-Warning--I didn't find a database entry for "jacobson2016libigl"
-Warning--I didn't find a database entry for "li2018optcuts"
-Warning--I didn't find a database entry for "liu2017seamless"
-Warning--I didn't find a database entry for "zhou2016mesh"
-Warning--I didn't find a database entry for "collins2002mesh"
-Warning--I didn't find a database entry for "zomorodian2000fast"
-Warning--I didn't find a database entry for "bank1983some"
-Warning--I didn't find a database entry for "corefinement"
-Warning--I didn't find a database entry for "dey2010polygonal"
-Warning--I didn't find a database entry for "hass2020approximating"
-Warning--I didn't find a database entry for "alliez2003isotropic"
-Warning--I didn't find a database entry for "bommes2013quad"
-Warning--I didn't find a database entry for "jiang2020bijective"
-Warning--I didn't find a database entry for "bargteil2014animation"
-Warning--I didn't find a database entry for "MEZGER2009680"
-Warning--I didn't find a database entry for "BABUSKA1992159"
-Warning--I didn't find a database entry for "BASSI1997251"
-Warning--I didn't find a database entry for "luo2001influence"
-Warning--I didn't find a database entry for "ODEN1994309"
-Warning--I didn't find a database entry for "dey1999curvilinear"
-Warning--I didn't find a database entry for "MOXEY2015636"
-Warning--I didn't find a database entry for "sherwin2002mesh"
-Warning--I didn't find a database entry for "turner2017high"
-Warning--I didn't find a database entry for "marcon2019semi"
-Warning--I didn't find a database entry for "Peir2008"
-Warning--I didn't find a database entry for "Qiukai2013"
-Warning--I didn't find a database entry for "Luo2002pVersionMG"
-Warning--I didn't find a database entry for "ENGVALL2016378"
-Warning--I didn't find a database entry for "ENGVALL201783"
-Warning--I didn't find a database entry for "SHEPHARD2005251"
-Warning--I didn't find a database entry for "wang2016construction"
-Warning--I didn't find a database entry for "jiao2012reconstructing"
-Warning--I didn't find a database entry for "MOXEY2016130"
-Warning--I didn't find a database entry for "FORTUNATO20161"
-Warning--I didn't find a database entry for "TURNER2016340"
-Warning--I didn't find a database entry for "dobrev2019target"
-Warning--I didn't find a database entry for "Knupp20002"
-Warning--I didn't find a database entry for "Luke2018"
-Warning--I didn't find a database entry for "Gargallo2014"
-Warning--I didn't find a database entry for "johnen2013geometrical"
-Warning--I didn't find a database entry for "gargallo2013high"
-Warning--I didn't find a database entry for "Gargallo2015"
-Warning--I didn't find a database entry for "RUIZGIRONES2017362"
-Warning--I didn't find a database entry for "RUIZGIRONES201652"
-Warning--I didn't find a database entry for "RUIZGIRONES2016315"
-Warning--I didn't find a database entry for "STEES2017180"
-Warning--I didn't find a database entry for "Steve2016"
-Warning--I didn't find a database entry for "TOULORGE20138"
-Warning--I didn't find a database entry for "TOULORGE2016361"
-Warning--I didn't find a database entry for "ZIEL201791"
-Warning--I didn't find a database entry for "luo2008tracking"
-Warning--I didn't find a database entry for "lu2014parallel"
-Warning--I didn't find a database entry for "feng2018curved"
-Warning--I didn't find a database entry for "moxeynekmesh"
-Warning--I didn't find a database entry for "Geuzaine:2009:gmsh"
-Warning--I didn't find a database entry for "pointwise"
-Warning--I didn't find a database entry for "mezger2007finite"
-Warning--I didn't find a database entry for "Sorger:2014"
-Warning--I didn't find a database entry for "Peir2015OnCH"
-Warning--I didn't find a database entry for "Yufei:2012"
-Warning--I didn't find a database entry for "Gao:2019"
-Warning--I didn't find a database entry for "Guo2020Cut"
-Warning--I didn't find a database entry for "Palmer:2020"
-Warning--I didn't find a database entry for "Zhang:2020"
-Warning--I didn't find a database entry for "marschner2020hexahedral"
-Warning--I didn't find a database entry for "yu2020hexgen"
-Warning--I didn't find a database entry for "coreform"
-Warning--I didn't find a database entry for "schneider2019large"
-Warning--I didn't find a database entry for "chew1993guaranteed"
-Warning--I didn't find a database entry for "shewchuk1998tetrahedral"
-Warning--I didn't find a database entry for "ruppert1995delaunay"
-Warning--I didn't find a database entry for "tetgen"
-Warning--I didn't find a database entry for "jamin2015cgalmesh"
-Warning--I didn't find a database entry for "cheng2000silver"
-Warning--I didn't find a database entry for "du2003tetrahedral"
-Warning--I didn't find a database entry for "alliez2005variational"
-Warning--I didn't find a database entry for "tournois2009interleaving"
-Warning--I didn't find a database entry for "Alexa:2019"
-Warning--I didn't find a database entry for "alexa2020conforming"
-Warning--I didn't find a database entry for "murphy2001point"
-Warning--I didn't find a database entry for "cohen2002conforming"
-Warning--I didn't find a database entry for "chew1989constrained"
-Warning--I didn't find a database entry for "si2005meshing"
-Warning--I didn't find a database entry for "shewchuk2002constrained"
-Warning--I didn't find a database entry for "SiS14"
-Warning--I didn't find a database entry for "cheng2008practical"
-Warning--I didn't find a database entry for "boissonnat2005provably"
-Warning--I didn't find a database entry for "Engwirda16"
-Warning--I didn't find a database entry for "Hu:2020:fTetWild"
-Warning--I didn't find a database entry for "Hu:2019:triwild"
-Warning--I didn't find a database entry for "QUADSTAR2012"
-Warning--I didn't find a database entry for "hoppe1994piecewise"
-Warning--I didn't find a database entry for "krishnamurthy1996fitting"
-Warning--I didn't find a database entry for "LIN2007adap"
-Warning--I didn't find a database entry for "Zhang2011multi"
-Warning--I didn't find a database entry for "zorin2000subdivision"
-Warning--I didn't find a database entry for "yvart2005smooth"
-Warning--I didn't find a database entry for "Yvart2005hier"
-Warning--I didn't find a database entry for "bowers2010parallel"
-Warning--I didn't find a database entry for "schlomer2020nschloe"
-Warning--I didn't find a database entry for "fu2015computing"
-Warning--I didn't find a database entry for "remacle2013robust"
-Warning--I didn't find a database entry for "SALARI:2000:CVB"
-Warning--I didn't find a database entry for "lyche2015simplex"
-Warning--I didn't find a database entry for "Xia:2017:IGA"
-Warning--I didn't find a database entry for "vcg"
-Warning--I didn't find a database entry for "botsch2002openmesh"
-Warning--I didn't find a database entry for "pmp-library"
-Warning--I didn't find a database entry for "kremer2013openvolumemesh"
-Warning--I didn't find a database entry for "hoppe1996progressive"
-Warning--I didn't find a database entry for "botsch2004remeshing"
-Warning--I didn't find a database entry for "lienhardt1994n"
-Warning--I didn't find a database entry for "dufourd1991obj3"
-Warning--I didn't find a database entry for "kraemer2014cgogn"
-Warning--I didn't find a database entry for "ragan2013halide"
-Warning--I didn't find a database entry for "kjolstad2016simit"
-Warning--I didn't find a database entry for "kjolstad2017taco"
-Warning--I didn't find a database entry for "hu2019taichi"
-Warning--I didn't find a database entry for "ye2020penrose"
-Warning--I didn't find a database entry for "loseille2017unique"
-Warning--I didn't find a database entry for "lo2012parallel"
-Warning--I didn't find a database entry for "marot2019one"
-Warning--I didn't find a database entry for "borrell2018parallel"
-Warning--I didn't find a database entry for "karypis1998fast"
-Warning--I didn't find a database entry for "chrisochoides2006parallel"
-Warning--I didn't find a database entry for "aluru1997parallel"
-Warning--I didn't find a database entry for "okusanya1996parallel"
-Warning--I didn't find a database entry for "chrisochoides2003parallel"
-Warning--I didn't find a database entry for "https://doi.org/10.1111/1467-8659.1230129"
-Warning--I didn't find a database entry for "chen2010merge"
-Warning--I didn't find a database entry for "funke2017parallel"
-Warning--I didn't find a database entry for "blelloch1999design"
-Warning--I didn't find a database entry for "lachat2014parallel"
-Warning--I didn't find a database entry for "okusanya19973"
-Warning--I didn't find a database entry for "chew1997parallel"
-Warning--I didn't find a database entry for "blandford2006engineering"
-Warning--I didn't find a database entry for "batista2010parallel"
-Warning--I didn't find a database entry for "foteinos2011dynamic"
-Warning--I didn't find a database entry for "marot2020quality"
-Warning--I didn't find a database entry for "galtier1996prepartitioning"
-Warning--I didn't find a database entry for "linardakis2006delaunay"
-Warning--I didn't find a database entry for "zhou2012tools"
-Warning--I didn't find a database entry for "Shewchuk:1998:TMG"
-Warning--I didn't find a database entry for "Ruppert:1995:ADR"
-Warning--I didn't find a database entry for "Remacle:2017:ATL"
-Warning--I didn't find a database entry for "Du:2003:TMG"
-Warning--I didn't find a database entry for "Alliez:2005:VTM"
-Warning--I didn't find a database entry for "Tournois:2009:IDR"
-Warning--I didn't find a database entry for "MURPHY:2001:APP"
-Warning--I didn't find a database entry for "CohenSteiner:2002:CDT"
-Warning--I didn't find a database entry for "Chew:1987:CDT"
-Warning--I didn't find a database entry for "Si:2005:MPL"
-Warning--I didn't find a database entry for "Shewchuk:2002:CDT"
-Warning--I didn't find a database entry for "Si:2014:ICA"
-Warning--I didn't find a database entry for "Cheng:2008:APD"
-Warning--I didn't find a database entry for "Boissonnat:2005:PGS"
-Warning--I didn't find a database entry for "Jamin:2015:CAG"
-Warning--I didn't find a database entry for "Dey:2008:DAD"
-Warning--I didn't find a database entry for "Chen:2004:ODT"
-Warning--I didn't find a database entry for "SHEWCHUK-triangle1"
-Warning--I didn't find a database entry for "Cheng:2012:DMG"
-Warning--I didn't find a database entry for "Busaryev:RMI:2009"
-Warning--I didn't find a database entry for "triangulation_in_cgal"
-Warning--I didn't find a database entry for "Molino:2003:TMG"
-Warning--I didn't find a database entry for "Bronson:2013:LCC"
-Warning--I didn't find a database entry for "Labelle:2007:ISF"
-Warning--I didn't find a database entry for "Doran:2013:ISI"
-Warning--I didn't find a database entry for "code:quartet"
-Warning--I didn't find a database entry for "Cuilliere:2013:ADM"
-Warning--I didn't find a database entry for "Alauzet:2014:ACA"
-Warning--I didn't find a database entry for "Haimes:2014:MMO"
-Warning--I didn't find a database entry for "Mandad:2015"
-Warning--I didn't find a database entry for "Wang:2021"
-Warning--I didn't find a database entry for "Brochu:2012"
-Warning--I didn't find a database entry for "gumhold2003intersection"
-Warning--I didn't find a database entry for "Garland:1999"
-Warning--I didn't find a database entry for "Popovic:1997"
-Warning--I didn't find a database entry for "CANANN1993185"
-Warning--I didn't find a database entry for "Lori1998"
-Warning--I didn't find a database entry for "Lipman:2012:BDM"
-Warning--I didn't find a database entry for "Alliez:2005"
-Warning--I didn't find a database entry for "Feng:2018:COD"
-Warning--I didn't find a database entry for "Klingner07aggressive"
-Warning--I didn't find a database entry for "Hutchinson:1996"
-Warning--I didn't find a database entry for "Bargteil:2007"
-Warning--I didn't find a database entry for "Wicke:2010"
-Warning--I didn't find a database entry for "Wojtan:2008"
-Warning--I didn't find a database entry for "Klingner:2006"
-Warning--I didn't find a database entry for "Ando:2013"
-Warning--I didn't find a database entry for "Chentanez:2007"
-Warning--I didn't find a database entry for "clausen:2013"
-Warning--I didn't find a database entry for "Villard:2002"
-Warning--I didn't find a database entry for "Bender:2013"
-Warning--I didn't find a database entry for "Li:2005"
-Warning--I didn't find a database entry for "Narain:2012"
-Warning--I didn't find a database entry for "Narain:2013"
-Warning--I didn't find a database entry for "Pfaff:2014"
-Warning--I didn't find a database entry for "Simnett:2009"
-Warning--I didn't find a database entry for "Busaryev:2013"
-Warning--I didn't find a database entry for "Grinspun:2002"
-Warning--I didn't find a database entry for "Li2020IPC"
-Warning--I didn't find a database entry for "luo2004combinatorial"
-Warning--I didn't find a database entry for "Campen:2017:SimilarityMaps"
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "chen2010"
+Warning--I didn't find a database entry for "Canann1993"
 Warning--I didn't find a database entry for "Campen:2017:OnSimilarityMaps"
-Warning--I didn't find a database entry for "campen2018seamless"
-Warning--I didn't find a database entry for "gu2018discrete"
-Warning--I didn't find a database entry for "gu2018discrete2"
-Warning--I didn't find a database entry for "springborn2019ideal"
-Warning--I didn't find a database entry for "sun2015discrete"
-Warning--I didn't find a database entry for "Gillespie:2021:DCE"
-Warning--I didn't find a database entry for "Campen:2021"
-Warning--I didn't find a database entry for "Jacobson:2013"
-Warning--I didn't find a database entry for "karras2012maximizing"
-Warning--I didn't find a database entry for "Wang:2020:FE"
-Warning--I didn't find a database entry for "lipman2014bijective"
-Warning--I didn't find a database entry for "floater2003one"
-Warning--I didn't find a database entry for "ciarlet1991basic"
-Warning--I didn't find a database entry for "knabner2001invertibility"
-Warning--I didn't find a database entry for "aigerman2013injective"
-Warning--I didn't find a database entry for "teschner2003optimized"
-Warning--empty institution in abgrall2012
+Warning--can't use both volume and number fields in alliez2005variational
 Warning--empty institution in Baumgart1972
-Warning--empty institution in dobrzynski2017
+Warning--can't use both volume and number fields in bommes2013quad
+Warning--can't use both volume and number fields in botsch2003multiresolution
+Warning--there's a number but no series in botsch2006primo
+Warning--empty journal in botsch2002openmesh
+Warning--can't use both volume and number fields in boubekeur2008phong
+Warning--can't use both volume and number fields in chen2004shell
+Warning--there's a number but no series in CohenSteiner:2002:CDT
+Warning--empty booktitle in dunyach2013adaptive
+Warning--empty journal in dyer2007delaunay
+Warning--empty school in Garland:1999
 Warning--can't use both author and editor fields in Geuzaine2015
 Warning--there's a number but no volume in Ghasemi2016
-You've used 32 entries,
+Warning--can't use both volume and number fields in hass2020approximating
+Warning--empty publisher in Hormann:2000
+Warning--empty booktitle in Klingner07aggressive
+Warning--can't use both volume and number fields in marschner2020hexahedral
+Warning--empty journal in mezger2007finite
+Warning--empty journal in moxeynekmesh
+Warning--empty journal in okusanya1996parallel
+Warning--empty booktitle in Peir2015OnCH
+Warning--can't use both volume and number fields in peng2004interactive
+Warning--can't use both volume and number fields in porumbescu2005shell
+Warning--empty institution in SALARI:2000:CVB
+Warning--can't use both volume and number fields in wang2003view
+You've used 383 entries,
             1935 wiz_defined-function locations,
-            1229 strings with 17375 characters,
-and the built_in function-call counts, 13309 in all, are:
-= -- 1316
-> -- 503
-< -- 22
-+ -- 185
-- -- 165
-* -- 1136
-:= -- 2263
-add.period$ -- 101
-call.type$ -- 32
-change.case$ -- 241
-chr.to.int$ -- 32
-cite$ -- 37
-duplicate$ -- 517
-empty$ -- 956
-format.name$ -- 213
-if$ -- 2648
-int.to.chr$ -- 1
+            2439 strings with 66206 characters,
+and the built_in function-call counts, 167324 in all, are:
+= -- 16591
+> -- 7109
+< -- 268
++ -- 2523
+- -- 2403
+* -- 14183
+:= -- 28296
+add.period$ -- 1221
+call.type$ -- 383
+change.case$ -- 3095
+chr.to.int$ -- 355
+cite$ -- 409
+duplicate$ -- 6526
+empty$ -- 11551
+format.name$ -- 2972
+if$ -- 33417
+int.to.chr$ -- 29
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 164
-num.names$ -- 98
-pop$ -- 203
+missing$ -- 373
+newline$ -- 1918
+num.names$ -- 1160
+pop$ -- 2819
 preamble$ -- 1
-purify$ -- 242
+purify$ -- 3107
 quote$ -- 0
-skip$ -- 393
+skip$ -- 4998
 stack$ -- 0
-substring$ -- 993
-swap$ -- 85
-text.length$ -- 7
+substring$ -- 11578
+swap$ -- 1246
+text.length$ -- 113
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 188
-warning$ -- 5
-while$ -- 104
+type$ -- 2274
+warning$ -- 26
+while$ -- 1319
 width$ -- 0
-write$ -- 427
-(There were 360 warnings)
+write$ -- 5061
+(There were 29 warnings)
