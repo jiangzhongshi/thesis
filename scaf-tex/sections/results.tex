@@ -42,8 +42,6 @@ Our algorithm can bijectively parameterize a single patch (Figure \ref{scaf:fig:
 \paragraph{Preventing Self-Intersections}
 Our algorithm can be generalized to handle mixed dimension problems, such as the deformation of 2D surface in 3D space, while preventing self-intersections. In Figure \ref{scaf:fig:flow}, we demonstrate the use of our method to resolve self-intersections of surfaces. First we perform a conformalized flow \cite{Kazhdan:2012} using the algorithm proposed in \cite{Sacht:2013} to resolve any self-intersections.  While \cite{Sacht:2013} will resolve the intersections, the resulting surface may be geometrically far from the initial shape (see Figure \ref{scaf:fig:flow}).  Next we tetrahedralize the ambient space while conforming to the deformed surface mesh and minimize Equation \ref{eq:variational} with an additional energy term that strives to restore the rest pose geometry of the surface, using the surface ARAP energy proposed in \cite{Sorkine:2007}. The result is a surface similar to the original mesh, but without self-intersections. In this example, it is possible to observe that even dramatic changes of scale (on the foot) can be robustly handled by our parametrization algorithm.
 
-A more challenging stress test is shown in Figure \ref{scaf:fig:rabbit}, where the bunny model is scaled up inside a box, to 30 times its original size. No self-intersections are introduced, despite the extreme, constrained deformation.
-
 \begin{figure}[t]
 \includegraphics[width=\columnwidth]{scaf-tex/figs/leg-flow}
 \caption{We remove the self-intersections from a genus 0 model using the conformalized flow \protect\cite{Kazhdan:2012,Sacht:2013}. The flow is inverted, while using our algorithm to compute a bijective volumetric map, to recover a self-intersection free version of the original surface. The final model can now be meshed using TetGen, since it is free from self-intersections.}
@@ -57,6 +55,8 @@ A more challenging stress test is shown in Figure \ref{scaf:fig:rabbit}, where t
 \label{scaf:fig:rabbit}
 \end{figure}
 
+
+A more challenging stress test is shown in Figure \ref{scaf:fig:rabbit}, where the bunny model is scaled up inside a box, to 30 times its original size. No self-intersections are introduced, despite the extreme, constrained deformation.
 
 \paragraph{Comparison with \cite{Smith:2015}}
 The algorithm closest to ours is \cite{Smith:2015}, which tackles a similar problem (restricted to the 2D case). We replicated the space filling curve experiment and obtained remarkably similar results, where our running time is 96s, compared with 8,472s for \cite{Smith:2015} (88 times faster). We show in Figure \ref{scaf:fig:smith} a more challenging experiment with a subdivided version of the space filling curve to emphasize the performance difference: our algorithm converges in 39 minutes, while \cite{Smith:2015} did not converge after 5 days and 21 hours. For this example, we used the procedure suggested in \cite{Rabinovich:2017}: we performed a few iterations minimizing the quadratic proxy and then switch to a traditional newton method until numerical convergence. A video of the optimization is provided in the additional material.

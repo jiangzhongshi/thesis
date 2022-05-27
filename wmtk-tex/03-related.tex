@@ -162,7 +162,7 @@ various synchronization strategies have been proposed
 communication.
 %
 
-After generating the submeshes, some methods allow each compute node to work on them independently without synchronization. Once all threads are done, the meshes are merged \cite{Cignoni1993, chen2010, funke2017parallel, blelloch1999design}. However these methods require complicated merge steps since the tetrahedra in the intermediate boundaries may not align. There are some techniques that compromise the Delaunay condition in some cases, so that the merging operation can be simpler \cite{lachat2014parallel}. 
+After generating the submeshes, some methods allow each compute node to work on them independently without synchronization. Once all threads are done, the meshes are merged \cite{Cignoni1993, chen2010merge, funke2017parallel, blelloch1999design}. However these methods require complicated merge steps since the tetrahedra in the intermediate boundaries may not align. There are some techniques that compromise the Delaunay condition in some cases, so that the merging operation can be simpler \cite{lachat2014parallel}. 
 %
 To avoid the tricky merge operations, other parallel strategies maintain a single complete Delaunay tetrahedralization and use synchronization techniques to avoid race conditions when working on a partition boundary \cite{okusanya19973, chrisochoides2003parallel}. The parallel constrained Delaunay meshing algorithm \cite{chew1997parallel} cleverly defines the boundary and edge constrains to reduce the variable and unpredictable communication patterns. Some other techniques use locks for handling conflicts and data races \cite{blandford2006engineering, batista2010parallel, foteinos2011dynamic}. 
 %
@@ -206,7 +206,7 @@ In this work, we are targeting only shared-memory parallelism, thus making the p
 
 \paragraph{Mesh Generation}
 
-Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,Si:2015}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
+Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,si2015tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
 
 These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
 
@@ -218,7 +218,7 @@ These criteria are explicitly modeled as invariants in our framework, and they c
 
 \paragraph{Mesh Improvement.} 
 
-Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,Canann1993,Lori1998,Lipman:2012:BDM,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
+Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
 %
 %
 We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
@@ -257,7 +257,7 @@ When remeshing is paired with algorithms simulating contacts that do not tolerat
 
 \paragraph{Parametrization} 
 
-Conformal mesh parametrization algorithms adapt the mesh during optimization, as a a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,Campen:2017:OnSimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric.
+Conformal mesh parametrization algorithms adapt the mesh during optimization, as a a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric.
 
 All these methods require changing the mesh connectivity of a triangle mesh, and could thus benefit from our framework to simplify their implementation and parallelize the mesh editing operations. 
 
