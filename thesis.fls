@@ -2396,8 +2396,6 @@ INPUT ./curve_meshing_in_shell_tex/figs/octa/0001.png
 INPUT curve_meshing_in_shell_tex/figs/octa/0001.png
 INPUT ./curve_meshing_in_shell_tex/figs/octa/0001.png
 INPUT ./curve_meshing_in_shell_tex/figs/octa/0001.png
-INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
-INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT ./curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf
 INPUT curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf
 INPUT ./curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf
@@ -2410,6 +2408,8 @@ INPUT ./curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf
 INPUT curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf
 INPUT ./curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf
 INPUT ./curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf
+INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT ./curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf
 INPUT curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf
 INPUT ./curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf
@@ -2507,10 +2507,6 @@ INPUT ./curve_meshing_in_shell_tex/figs/fluid/0002.png
 INPUT curve_meshing_in_shell_tex/figs/fluid/0002.png
 INPUT ./curve_meshing_in_shell_tex/figs/fluid/0002.png
 INPUT ./curve_meshing_in_shell_tex/figs/fluid/0002.png
-INPUT ./curve_meshing_in_shell_tex/05_conclude.tex
-INPUT curve_meshing_in_shell_tex/05_conclude.tex
-INPUT ./curve_meshing_in_shell_tex/05_conclude.tex
-INPUT curve_meshing_in_shell_tex/05_conclude.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/newtx/nxlmia.vf
@@ -2526,6 +2522,10 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/newtx/NewTXMI5.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-ot1.vf
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1--base.tfm
+INPUT ./curve_meshing_in_shell_tex/05_conclude.tex
+INPUT curve_meshing_in_shell_tex/05_conclude.tex
+INPUT ./curve_meshing_in_shell_tex/05_conclude.tex
+INPUT curve_meshing_in_shell_tex/05_conclude.tex
 INPUT ./wmtk-tex/02-introduction.tex
 INPUT ./wmtk-tex/02-introduction.tex
 INPUT ./wmtk-tex/02-introduction.tex

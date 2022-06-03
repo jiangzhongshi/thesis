@@ -1039,11 +1039,6 @@ Jiang, Z., Schaefer, S., and Panozzo, D. (2017).
 \newblock Simplicial complex augmentation framework for bijective maps.
 \newblock {\em ACM Transactions on Graphics}, 36(6).
 
-\bibitem[Jiang et~al., 2020]{jiang2020bijective}
-Jiang, Z., Schneider, T., Zorin, D., and Panozzo, D. (2020).
-\newblock Bijective projection in a shell.
-\newblock {\em ACM Transactions on Graphics (TOG)}, 39(6):1--18.
-
 \bibitem[Jiao and Heath, 2004]{jiao2004overlaying}
 Jiao, X. and Heath, M.~T. (2004).
 \newblock Overlaying surface meshes, part i: Algorithms.
