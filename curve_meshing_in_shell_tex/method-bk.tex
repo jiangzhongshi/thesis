@@ -1,10 +1,10 @@
 
 \section{Shell Preliminaries}
 
-As our work extends and use~\cite{jiang2020bijective}, we briefly overview the main definition and notation therein. %We refer to their paper for a complete description and for the algorithm to construct it.
-\cite{jiang2020bijective} introduces an algorithm to construct a shell around a given triangle mesh. 
+As our work extends and use~\ref{chp:shell}, we briefly overview the main definition and notation therein. %We refer to their paper for a complete description and for the algorithm to construct it.
+\ref{chp:shell} introduces an algorithm to construct a shell around a given triangle mesh. 
 
-\paragraph{Shell.} The shell is defined by three triangle surface meshes $\PS = \{(B_s,V_s,T_s),F_s\}$ sharing the same mesh connectivity $F_s$, where $B_s, V_s,$ and $T_s$ are the vertices of the bottom, middle, and top surface respectively. Every triangle in $F_s$ corresponds to a generalized prism, defined connecting the corresponding triangle in the three surfaces with straight edges, called \emph{pillars}. Every prism $P$ has three vertices $v_i\in V_s, t_i\in T_s, b_i\in B_s, i=1,2,3$ on the middle, top, and bottom surface, respectively. Each pillar decomposes into a top $h_i^T = t_i - v_i, i=1,2,3$ and bottom $h_i^B = b_i - v_i, i=1,2,3$ part, and each part can be canonically decomposed into 3 tetrahedra, and each tetrahedra is assigned with a constant vector field aligned with the pillars it is connected with ~\cite[Figure 5]{jiang2020bijective}, which is used to define a projection operator $\Pi$ within the shell. 
+\paragraph{Shell.} The shell is defined by three triangle surface meshes $\PS = \{(B_s,V_s,T_s),F_s\}$ sharing the same mesh connectivity $F_s$, where $B_s, V_s,$ and $T_s$ are the vertices of the bottom, middle, and top surface respectively. Every triangle in $F_s$ corresponds to a generalized prism, defined connecting the corresponding triangle in the three surfaces with straight edges, called \emph{pillars}. Every prism $P$ has three vertices $v_i\in V_s, t_i\in T_s, b_i\in B_s, i=1,2,3$ on the middle, top, and bottom surface, respectively. Each pillar decomposes into a top $h_i^T = t_i - v_i, i=1,2,3$ and bottom $h_i^B = b_i - v_i, i=1,2,3$ part, and each part can be canonically decomposed into 3 tetrahedra, and each tetrahedra is assigned with a constant vector field aligned with the pillars it is connected with ~\ref[Figure 5]{chp:shell}, which is used to define a projection operator $\Pi$ within the shell. 
 
 \paragraph{Projection Operator.} For every prism $P$, the projection operator $\Pi_P$ is defined as the piecewise constant vector field $V$ inside the decomposed prism, by assigning to each tetrahedron $T^P_j, j = 1, \dots, 6$, the constant vector field defined by the only edge of $T^P_j$ which one of the oriented pillars $h_i^T, h_i^B, i=1,2,3$. That is, $\forall p \in T^P_j$
 \[
@@ -15,7 +15,7 @@ where $i$ is the index of the vertex corresponding to the pillar edge of $T^P_j$
 \paragraph{Section.} A triangle mesh  is a section if it is contained within the shell, and if the dot product of the normal of each of its triangles with the vector field in the overlapping tetrahedra is positive. The projection operator $\Pi$ defines a bijective map between any pair of sections if the shell is valid.
 
 \paragraph{Shell Validity.}
-\cite{jiang2020bijective} defines a shell $\PS$ to be \emph{valid} with respect to an input mesh $\M$ if it satisfies two invariants:
+\ref{chp:shell} defines a shell $\PS$ to be \emph{valid} with respect to an input mesh $\M$ if it satisfies two invariants:
 \begin{enumerate}
     \item The volumes of all possible tetrahedral decomposition of a prism (24 of them) are positive.
     \item $\M$ is a section for all possible tetrahedral decomposition. That is, the input mesh is contained within the shell, and the dot product between the mesh's normals and the shell's pillar is positive. 
@@ -23,7 +23,7 @@ where $i$ is the index of the vertex corresponding to the pillar edge of $T^P_j$
 
 \DP{Figure for shell and projection}
 
-The algorithm to build the shell creates an initial valid shell, potentially thin and dense, and then uses local operations to improve its quality while preserving the validity \cite{jiang2020bijective}.
+The algorithm to build the shell creates an initial valid shell, potentially thin and dense, and then uses local operations to improve its quality while preserving the validity \ref{chp:shell}.
 
 \DP{No intro to curved meshing? I though it was a good idea. Otherwise we need to be more precise when we describe the output.}
 
@@ -84,7 +84,7 @@ It then performs local operation to improve $\M^k$ (i.e., coarsen it and improve
     \label{bichon:fig:stage-1}
 \end{figure}
 \paragraph{Stage 1: Shell Construction.}
-In the first stage (Section~\ref{cumin:sec:surface}) we extend the shell construction of \cite{jiang2020bijective} by preserving feature in $\F$ and $\V$; that is we construct a \emph{valid} shell $\PS$ with respect to the input surface $\M$ (i.e., $\M$ is a section $\PS$) that preserve features; to simplify the explanation we call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\xi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:stage-1}). Note that we do not require $\M$ to be a section of $\prS$.
+In the first stage (Section~\ref{cumin:sec:surface}) we extend the shell construction of \ref{chp:shell} by preserving feature in $\F$ and $\V$; that is we construct a \emph{valid} shell $\PS$ with respect to the input surface $\M$ (i.e., $\M$ is a section $\PS$) that preserve features; to simplify the explanation we call $\PS$ a \emph{\ps{}} and call the prismatic projection $\Pi$. Together with the construction of $\PS$, we build an order $k$ \emph{prismatic shell} $\prS$ that defines a curved layer around $\M$ and a \emph{bijective} map $\xi^k$ between $\prS$ and $\PS$ (Figure~\ref{bichon:fig:stage-1}). Note that we do not require $\M$ to be a section of $\prS$.
 
 To facilitate the second stage, we restrict the top and bottom surface of $\prS$ to be linear independently from the order of $\xi^k$. The output of this first stage is a high-order volumetric shell (linear on its boundary, curved on the interior), a feature preserving bijective mapping $\phi^k = \Pi \circ \xi^k$, and a trivial \emph{positive} tetrahedralization of $\prS$ with flat boundary. In other words, the tetrahedralization of $\prS$ satisfies all invariants.
 
@@ -115,7 +115,7 @@ The first step of our pipeline consists of grouping successive edges $f_i\in\F$ 
 %     \label{bichon:fig:not-feat-pres}
 % \end{figure}
 
-% \paragraph{Limitation of the projection Operator of \cite{jiang2020bijective}.}
+% \paragraph{Limitation of the projection Operator of \ref{chp:shell}.}
 % \TS{change me}
 
 \begin{figure}
@@ -126,7 +126,7 @@ The first step of our pipeline consists of grouping successive edges $f_i\in\F$ 
 \end{figure}
 
 \paragraph{Macro Projection Operator.} 
-The shell construction introduced in \cite{jiang2020bijective} cannot preserve features or open boundaries. The authors \TS{us :D} suggested to freeze these vertices to ensure they are maintained in the projection. This comes with the disadvantage that the shell cannot be coarsened or improved next to features. To overcome this limitation we propose to ``group'' prism next to a feature into one big macro-prism.
+The shell construction introduced in \ref{chp:shell} cannot preserve features or open boundaries. The authors \TS{us :D} suggested to freeze these vertices to ensure they are maintained in the projection. This comes with the disadvantage that the shell cannot be coarsened or improved next to features. To overcome this limitation we propose to ``group'' prism next to a feature into one big macro-prism.
 % for instance, when performing an edge collapse on the feature  the new coarse edge (orange) will not map to the poly-line (green) anymore (Figure~\ref{bichon:fig:not-feat-pres}). To overcome this limitation we propose to change the \ps{} $\PS$ to guarantee that is contains the feature while building $\prS$ and the mapping $\xi^1$. 
 
 Let $P$ a prism adjacent to a feature poly-line $f\in\mathcal{F}$ defined as a chain of $n$ oriented vertices $f_i, i=1,\dots,n$. The macro-prism $P$ is defined as the union of the $n-1$ \emph{sub-prisms} $P_i$ (Figure~\ref{bichon:fig:zig}) with middle surface $(v_1, f_i, f_{i+1})$. The macro projection operator for $P$ is simply defined as the union of the of the sub prismatic maps over each sub-prism $P_i$. We note that this definition does not ensure that the top and bottom surface of the macro-prism are flat.
@@ -139,9 +139,9 @@ Let $P$ a prism adjacent to a feature poly-line $f\in\mathcal{F}$ defined as a c
 % \end{proof}
 
 To ensure the \ps{} with macro-prisms is valid we need ensure that $\Pi$ is bijective and that the normal condition holds for every prism and sub-prism; which is equivalent to ensure that for every prism (including sub-prsims) the shell is valid.
-% As in~\cite{jiang2020bijective}, for every prism (including sub-prsims)  we check for positivity of the volume of the by ensuring that the tetrahedral decomposition has positive volume, use collision detection to check if the top and bottom are intersection free, and ensure that normal condition holds. This stage ensure that $\Pi$ satisfies the first two invariants.
+% As in~\ref{chp:shell}, for every prism (including sub-prsims)  we check for positivity of the volume of the by ensuring that the tetrahedral decomposition has positive volume, use collision detection to check if the top and bottom are intersection free, and ensure that normal condition holds. This stage ensure that $\Pi$ satisfies the first two invariants.
 
-We note that the initial shell in \cite{jiang2020bijective} is a valid feature preserving shell, as all feature poly-lines $f_i$ are composed by only two vertices. We extend the local operation to account for the poly-line: a collapse of a feature, requires to take the union of the poly-lines; while a split (or a smoothing) only requires splitting (or sliding a vertex) a poly-line (Appendix~\ref{app:local-ops}).
+We note that the initial shell in \ref{chp:shell} is a valid feature preserving shell, as all feature poly-lines $f_i$ are composed by only two vertices. We extend the local operation to account for the poly-line: a collapse of a feature, requires to take the union of the poly-lines; while a split (or a smoothing) only requires splitting (or sliding a vertex) a poly-line (Appendix~\ref{app:local-ops}).
 
 
 \begin{figure}

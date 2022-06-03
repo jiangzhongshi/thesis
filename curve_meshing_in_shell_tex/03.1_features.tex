@@ -35,7 +35,7 @@ Since the input has features, the output curved mesh $\T^k$ will also have curve
     \label{bichon:fig:not-feat-pres}
 \end{figure}
 
-The previous construction generates valid curved tetrahedral meshes and the bijective map $\phi^k$ based on the construction of~\cite{jiang2020bijective}. However, the shell construction cannot coarsen features{:} the authors suggest {freezing} them. For instance, when performing an edge collapse on the feature, the new coarse edge (orange) will not map to the feature (green) anymore (Figure~\ref{bichon:fig:not-feat-pres}). 
+The previous construction generates valid curved tetrahedral meshes and the bijective map $\phi^k$ based on the construction of~\ref{chp:shell}. However, the shell construction cannot coarsen features{:} the authors suggest {freezing} them. For instance, when performing an edge collapse on the feature, the new coarse edge (orange) will not map to the feature (green) anymore (Figure~\ref{bichon:fig:not-feat-pres}). 
 To ensure feature preservation we extend Definition~\ref{def:curved-mesh}.
 \begin{definition}\label{def:curved-features}
 We call a curved mesh $\T^K$ and its mapping $\phi^k$ from $\M$ \emph{valid and feature preserving} if they are valid (Definition~\ref{def:curved-mesh}) and $\phi^k$ bijectively maps $\F$ to $\F^k$ and $\V$ to $\V^k$

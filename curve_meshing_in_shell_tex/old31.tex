@@ -27,7 +27,7 @@ We are now ready to extend the previous construction to features. We modify the 
     \label{bichon:fig:not-feat-pres}
 \end{figure}
 
-The previous construction generates valid curved tetrahedral meshes and the bijective map $\phi^k$ based on the construction of~\cite{jiang2020bijective}. However the shell construction cannot coarsen features or open boundaries; the authors suggest to freeze them. For instance, when performing an edge collapse on the feature the new coarse edge (orange) will not map to the feature (green) anymore (Figure~\ref{bichon:fig:not-feat-pres}). 
+The previous construction generates valid curved tetrahedral meshes and the bijective map $\phi^k$ based on the construction of~\ref{chp:shell}. However the shell construction cannot coarsen features or open boundaries; the authors suggest to freeze them. For instance, when performing an edge collapse on the feature the new coarse edge (orange) will not map to the feature (green) anymore (Figure~\ref{bichon:fig:not-feat-pres}). 
 To ensure feature preservation we extend Definition~\ref{def:curved-mesh}.
 \begin{definition}\label{def:curved-features}
 We call a curved mesh $\M^K$ and its mapping $\phi^k$ from $\M$ \emph{valid and feature preserving} if they are valid (Definition~\ref{def:curved-mesh}) and $\phi^k$ bijectively maps $\F$ to $\F^k$ and $\V$ to $\V^k$
@@ -99,10 +99,10 @@ Let $P$ a prism adjacent to a feature poly-line $f\in\bar\F$ (possibly straighte
 % \end{proof}
 
 To ensure the \ps{} with macro-prisms is valid we need ensure that $\Pi$ is bijective and that the normal condition holds for every prism and sub-prism; which is equivalent to ensure that for every prism (including sub-prisms) the shell is valid.
-% As in~\cite{jiang2020bijective}, for every prism (including sub-prsims)  we check for positivity of the volume of the by ensuring that the tetrahedral decomposition has positive volume, use collision detection to check if the top and bottom are intersection free, and ensure that normal condition holds. This stage ensure that $\Pi$ satisfies the first two invariants.
+% As in~\ref{chp:shell}, for every prism (including sub-prsims)  we check for positivity of the volume of the by ensuring that the tetrahedral decomposition has positive volume, use collision detection to check if the top and bottom are intersection free, and ensure that normal condition holds. This stage ensure that $\Pi$ satisfies the first two invariants.
 
 \DP{This is cryptic.}\TS{better?}
-The initial shell in \cite{jiang2020bijective} is a valid feature preserving shell, as all feature poly-lines $\bar f_i$ are composed by only two vertices (i.e., the macro-prisms are made of only one prism). We extend the local operation to account macro-prism construction: a collapse of a feature, requires to take the union of the prisms; while a split (or a smoothing) only requires splitting (or sliding a vertex) a macro-prism (Appendix~\ref{app:local-ops}).
+The initial shell in \ref{chp:shell} is a valid feature preserving shell, as all feature poly-lines $\bar f_i$ are composed by only two vertices (i.e., the macro-prisms are made of only one prism). We extend the local operation to account macro-prism construction: a collapse of a feature, requires to take the union of the prisms; while a split (or a smoothing) only requires splitting (or sliding a vertex) a macro-prism (Appendix~\ref{app:local-ops}).
 
 
 \begin{figure}

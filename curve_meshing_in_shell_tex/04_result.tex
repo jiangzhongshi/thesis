@@ -28,7 +28,7 @@ To simplify the exposition, all meshes presented in this section are quartic mes
 We tested the robustness and quality of the result produced by our algorithm on three datasets: (1) Thingi10k dataset \cite{zhou2016thingi10k} containing 3574 models without features; (2) the first chunk {of} the ABC dataset~\cite{Koch_2019_CVPR} with 5328 models with features marked from the STEP file and (3) the CAD dataset~\cite{Gao:2019} containing 106 models with semi-manual features.
 %\ZJ{47 Thingi, 60 ABC out-of-time 12 hours}
 
-Note that the original datasets contain more models since, for each of them, we selected meshes satisfying our assumptions: intersection-free (using the same strategy as in~\cite{jiang2020bijective} with a distance tolerance of $10^{-6}$ and dihedral angle of $2^\circ$) oriented, manifold triangle meshes, smallest triangle area larger than $10^{-8}$. 
+Note that the original datasets contain more models since, for each of them, we selected meshes satisfying our assumptions: intersection-free (using the same strategy as in~\ref{chp:shell} with a distance tolerance of $10^{-6}$ and dihedral angle of $2^\circ$) oriented, manifold triangle meshes, smallest triangle area larger than $10^{-8}$. 
 
 
 
@@ -255,6 +255,8 @@ Our curved meshes can be directly used to solve different partial differential e
 Our coarse curved meshes can be {used} as animation proxies as in~\cite{mezger2007finite,Suwelack2013}. We first compute an as-coarse-as-possible curved mesh (i.e., we set $\varepsilon$ to infinity). Then we apply the boundary condition to simulate an elastic distortion of the curved mesh using linear elements. Finally, we use our bijective map $\varphi^4$ to map the displacement back to the input high-detailed surface mesh (Figure~\ref{bichon:fig:teaser}). The results are almost indistinguishable {to} a classical pipeline (i.e., mesh the input mesh), but the runtime is 400 times faster (8s versus over 50 minutes). 
 
 
+
+\paragraph{Reverse Engineering}
 
 
 

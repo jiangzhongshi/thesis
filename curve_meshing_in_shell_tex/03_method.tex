@@ -1,37 +1,6 @@
-\section{Shell Preliminaries}
-
-We briefly overview \cite{jiang2020bijective} as our work uses and extends it. \cite{jiang2020bijective} introduces bijective projection shells (which we will abbreviate as shells in the rest of the paper), a new geometry processing tool to perform mesh editing while preserving a close-by bijective map to the input surface. 
-
-\paragraph{Shell.} The shell is defined by three trianglulated surface meshes $\PS = \{(B_s,V_s,T_s),F_s\}$ sharing the same mesh connectivity $F_s$, where $B_s, V_s,$ and $T_s$ are the vertices of the bottom, middle, and top surface respectively. 
-Each triangle in $F_s$ corresponds to a \emph{generalized prism}, defined by connecting the corresponding triangles in the three surfaces with straight edges, called \emph{pillars}. 
-Each prism $P$ has three vertices $v_i\in V_s, t_i\in T_s, b_i\in B_s, i=1,2,3$ on the middle, top, and bottom surface, respectively. 
-Each pillar decomposes into a top $h_i^T = t_i - v_i, i=1,2,3$ and bottom $h_i^B = b_i - v_i, i=1,2,3$ {slab}, and each {slab} can be canonically decomposed into 3 tetrahedra, and each tetrahedron contains a constant vector field aligned with the pillars it is connected with{~\cite[Figure 4]{jiang2020bijective}}. The vector field is used to define a \emph{projection operator} $\Pi$ within the shell. 
-
-\paragraph{Projection Operator.} For every prism $P$, the projection operator $\Pi_P$ is defined as the tracing of the piece-wise constant vector field $V$ inside the decomposed prism, by assigning to each tetrahedron $T^P_j, j = 1, \dots, 6$, the constant vector field defined by the only edge of $T^P_j$ which {is} one of the oriented pillars $h_i^T, h_i^B, i=1,2,3$ ({\cite[Figure 4]{jiang2020bijective}}). That is, $\forall p \in T^P_j$
-\[
-\Pi_P(p)=h_i^k, 
-\]
-where $i$ is the index of the vertex corresponding to the pillar edge of $T^P_j$, and $k$ is either the top or bottom surface. The shell projection operator $\Pi$ is defined as the operator whose restriction to $P$, $\Pi|_P$ is $\Pi_P$, and it defines a bijective map between every pair of specific triangle meshes contained in the shell, called \emph{sections}.
-
-\paragraph{Section.} A triangle mesh is a section if it is contained within the shell, and if the dot product of the normal of each of its triangles with the vector field in each of the overlapping tetrahedra is positive. The projection operator $\Pi$ defines a bijective map between any pair of sections if the shell is \emph{valid}.
-
-\paragraph{Shell Validity.}
-\cite{jiang2020bijective} defines a shell $\PS$ to be \emph{valid} with respect to an input mesh $\M$ if it satisfies two conditions:
-\begin{enumerate}
-    \item The volumes of all possible tetrahedral decomposition of a prism (24 of them) are positive.
-    \item $\M$ is a section for all possible tetrahedral decompositions. That is, the input mesh is contained within the shell, and the dot product between the mesh's normals and the shell's pillar is positive. 
-\end{enumerate}
-
-\paragraph{Singularity.}
-Singular vertices are a special geometric configuration, where the neighboring triangles of a specific {vertice} admits {a} conflicting set of normals. 
-\cite{jiang2020bijective} extends the shell construction to allow such cases. Around the (isolated) singular vertices, the prisms are pinched to become generalized pyramids, composed of two tetrahedra instead of three.
-
-
-The algorithm to build the shell creates an initial valid extrusion, potentially thin and dense, and then iteratively uses the shell local operations (i.e., vertex smoothing, edge collapse, edge split, and edge flip)~\cite[Section 3.4]{jiang2020bijective} to improve its quality while preserving the validity.
-
 
 \subsection{Variation from the Original Algorithm}
-To extend the shell formulation in~\cite{jiang2020bijective} to accommodate for feature preservation (Section \ref{cumin:sec:features-pres}), we modify the definition of a valid section~\cite[Definition 3.1]{jiang2020bijective}, by relaxing the intersection between a triangle and a prism in the discrete case. That is, we do not consider the prism to be intersecting a triangle if they share only one vertex of the triangle; we also ignore the intersection if they intersect on a feature edge on opposite sides. The bijectivity and validity condition of the shell projection trivially holds.
+To extend the shell formulation in~\ref{chp:shell} to accommodate for feature preservation (Section \ref{cumin:sec:features-pres}), we modify the definition of a valid section~\ref[Definition 3.1]{chp:shell}, by relaxing the intersection between a triangle and a prism in the discrete case. That is, we do not consider the prism to be intersecting a triangle if they share only one vertex of the triangle; we also ignore the intersection if they intersect on a feature edge on opposite sides. The bijectivity and validity condition of the shell projection trivially holds.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -102,7 +71,7 @@ To reliable fit $\partial \T^k$ to $\M$ we require a bijective map
 \[
 \phi^k \colon \M \to \partial \T^k
 \]
-from the input $\M$ to the surface of $\T^k$ (Figure~\ref{bichon:fig:input-output} right). Our algorithm also generates this map and exposes it as an output for additional uses, such as attribute transfer. Note that, since we build upon the shell construction in~\cite{jiang2020bijective}, we also {guarantee} $\partial\T^k$ is homeomorphic and topology-preserving with respect to $\M$ (Figure~\ref{bichon:fig:intersection}).
+from the input $\M$ to the surface of $\T^k$ (Figure~\ref{bichon:fig:input-output} right). Our algorithm also generates this map and exposes it as an output for additional uses, such as attribute transfer. Note that, since we build upon the shell construction in~\ref{chp:shell}, we also {guarantee} $\partial\T^k$ is homeomorphic and topology-preserving with respect to $\M$ (Figure~\ref{bichon:fig:intersection}).
 
 
 \begin{figure}
@@ -144,7 +113,7 @@ To achieve this goal, our algorithm uses two stages: (1) curved shell generation
 \end{figure}
 
 \paragraph{Stage 1: Curved Shell Construction.}
-In the first stage (Section~\ref{cumin:sec:high-order}) we extend the shell construction of~\cite{jiang2020bijective} by combining the shell projection $\Pi$ with {a} high-order mapping 
+In the first stage (Section~\ref{cumin:sec:high-order}) we extend the shell construction of~\ref{chp:shell} by combining the shell projection $\Pi$ with {a} high-order mapping 
 \[
 \psi^k \colon \prS \to \PS.
 \]
@@ -167,7 +136,7 @@ Ensuring the condition while coarsening $\M$ {allows} us to generate a coarse \e
 \subsection{High-order Shells}\label{cumin:sec:high-order}
 To simplify the explanation, we first focus on the case where $\varepsilon = \infty$, that is, we aim at generating {an} as-coarse-as-possible curved mesh. Note that, the trivial solution (i.e., a single tetrahedron) is not necessary a valid $\T^k$ since it would be impossible to build the bijective mapping $\phi^k$.
 
-The output of~\cite{jiang2020bijective} is a coarse shell $\PS$ with {a} piecewise linear middle surface. To curve it, we construct a shell $\prS$ and the bijective map $\psi^k$ while constructing $\PS$. 
+The output of~\ref{chp:shell} is a coarse shell $\PS$ with {a} piecewise linear middle surface. To curve it, we construct a shell $\prS$ and the bijective map $\psi^k$ while constructing $\PS$. 
 The shell $\prS$ is constructed warping every prism $\widetilde P$ of $\prS$ with $\psi^k$. Since we define $\phi^k$ as  $\Pi \circ \psi^k$, and $\Pi$ satisfies the first two conditions~\ref{def:curved-mesh}, we only need to ensure that $\psi^k$ is bijective, for $\phi^k$ to be bijective.  We define the mapping $\psi^k = \overline\omega\circ(\widetilde\omega^k)^{-1}$ {through} two {cross-parametrization} maps from the reference prism $\hat P$: 
 \[
 % \text{(1) } 
