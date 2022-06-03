@@ -1,13 +1,40 @@
-Large scale processing: ABC -- Robust tetwild -- 
+% background, modeling and simulation are connected through complex shape
+% 
 
-Mathematical Contributions:
+% We make our objects with manufacture pipeline, starting from a digital engineering design.
+% advanced manufacturing and design techniques more and more complex shapes (engineering design).
+Most of the everyday objects that we invent and interact in the physical world, ranging from electronic devices to transportation vehicles, are manufactured through a digital aided production pipeline.
+First, given a desirable functionality, the designer compose a shape, then prototype and test the object under specified physical conditions. e.g. stress, or heat, or fluidic. 
+Therefore, automatic computer algorithms for the design and fabrication would ensure the reliability and accessibility of medical devices. To do so requires a clear understanding of physical simulation and geometry design.
 
-Algorithmic contributions:
-Robust algorithms through experimental and theory.
+% On the other hand
+On the other hand, composition of digital assets are through the similar pipeline, including human avatars, or objects that we are growing essential for the  virtual environment, thanks for 3D scanning techniques to obtain a digital shape, and then perform editing, fairing, modifications and other modeling operations. larger and larger quantites, and versatile of organic shapes beyond bunny. (scanning) and we want the dynamic deformation/collision response, in the information rich virtual environment, for interaction and physics based deformation.
 
-Educational:
-auxiliary line or helping line is a useful tool in elementry geometry proofs. It is usually overlooked in more advanced textbooks. However, as I have showcased in several applications, educations with such tools would make sense computationally.
+% In both sides of these processes, there is the problem of robustness. And the need to connect modeling with simulation. and to process the information back and forth.
+Researchers usually examine the computational design and physical simulation separately, leading to different computational tools for the discretized geometry. Different representations between design methods and various adaptations of simulations, even for the same shape, are not reliably correlated. In the general case, the material, attribute, or experiment setting cannot be robustly re-used on another representation without laborious manually fixing. Such a pipeline demands the engineer or designer to understand precisely the properties of the specific numerical methods of choice. It also prohibits an automatic and robust pipeline from optimizing the desired physical durability or permeability structure. In my Ph.D. studies, I have proposed a computational principle to relate information across digital design and simulation pipelines reliably. I showcased reliable, efficient, and robust simulations from an arbitrarily complex design setup using the principle. After establishing such connections, we are now ready to systematically evaluate and improve the computational bottlenecks on the entire engineering pipeline.
 
+% This dissertation is primarily concerned with the problem of how to effectively dealing with attributes, in various scenarios
+% Ranging from  
+My central thesis is to develop geometric computing tools that reliably associate different representations of discrete geometry entities at diverse design and simulation stages. Instead of re-assigning properties at various phases of the design-simulation pipeline, or whenever the required budget is different, a good association between geometry at different stages gives more freedom to the design and development of automatic and adaptive solvers. The adaptation can be bi-directional: on the one hand, with coarse and concise tessellation, the algorithm utilizes the information associated with the original design to obtain more faithful simulations. On the other hand, in early-stage prototyping and automatic data generation for deep learning, the principles established to simplify the shape and retain the settings provide a fast answer. The method is published in “Bijective Projection in a Shell,” Jiang et al., ACM Transaction on Graphics, 2020.
+
+%
+Next, the reliable transfer between different representations allows for the encapsulation of the simulation process and promotes the adoption of advanced finite element methods from the scientific computing community. As a notable example, high order tetrahedral meshes accurately approximate a given computation domain, with much fewer degrees of freedom. These meshes enjoy orders of magnitude speed-up with a similar simulation setup compared to their more commonly used linear counterparts in a range of physical simulations, including solid mechanics and fluid dynamics. Is proposed the first robust algorithm that can reliably convert extensive complex geometry models (as surface triangle mesh) to valid and coarse high order tetrahedral meshes within specified geometry tolerance. The method is validated on various complex geometry, including mechanical parts, biological reconstructions, and microstructures. Additionally, the results are reliably associated with their input, making it an ideal substitute for simulation workload, with all the information kept intact. The method is published in “Bijective and Coarse High-Order Tetrahedral Meshes,” Jiang et al., ACM Transaction on Graphics, 2021:
+Finally, the availability of data is essential to algorithm verification and data-driven algorithm development. In collaboration with OnShape Inc. and colleagues at NYU, we collected and curated large-scale computed-aided design (CAD) models created by mechanical engineers. The dataset contains one million geometry shapes with rich information. The dataset is publicly online, and the result is presented in “A Big CAD Model Dataset For Geometric Deep Learning,” Koch et al., CVPR, 2019. Physical simulation on a large scale of datasets allows for machine learning techniques to take advantage, in order to assist the generative design or practical simulations.
+
+% Contributions goes with related works.
+% Mathematical Contributions:
+% we extend the computational fronts of bijective maps across surfaces, and computational vector fields
+
+% Algorithmic contributions:
+% Robust algorithms through experimental and theory.
+
+% Educational:
+% auxiliary line or helping line is a useful tool in elementry geometry proofs. It is usually overlooked in more advanced textbooks. However, as I have showcased in several applications, educations with such tools would make sense computationally.
+% 
 Outreach and impact:
 
+% 
+The rest of the thesis is organized as follows,
+chapter 2 
+chapter 3 
 

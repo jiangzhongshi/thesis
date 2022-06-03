@@ -12,6 +12,8 @@
 %% line for the final version.
 %\documentclass[12pt,draft,letterpaper]{report}
 \documentclass[12pt,oneside,letterpaper, draft]{report}
+% \usepackage[UTF8]{ctex}
+
 
 
 % ----------------------------------------
@@ -31,7 +33,7 @@
 
 %% Replace the title, name, advisor name, graduation date and dedication below
 %% with your own. Graduation months must be January, May or September.
-\newcommand{\thesistitle}{Synergistic Geometry Processing:\\ from Robust Geometric Modeling to Efficient Physical Simulations}
+\newcommand{\thesistitle}{Synergistic Geometry Processing:\\ from Robust Geometric Modeling to Scalable Physical Simulations}
 \newcommand{\thesisauthor}{Zhongshi Jiang}
 \newcommand{\thesisadvisor}{Professor Daniele Panozzo}
 \newcommand{\thesisdept}{Computer Science}
@@ -245,7 +247,7 @@
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgments}
 
-% \input{acknowledge}
+\input{front-matter/acknowledge}
 
 \newpage
 
@@ -297,6 +299,7 @@
 \label{chp-introduction}
 
 \input{front-matter/introduction}
+\input{front-matter/combine_related.tex}
 \input{front-matter/prelim}
 
 
@@ -304,7 +307,6 @@
 
 
 \input{scaf-tex/sections/introduction}
-\input{scaf-tex/sections/previous-work}
 \input{scaf-tex/sections/method}
 \input{scaf-tex/sections/results}
 \input{scaf-tex/sections/conclusions}
@@ -314,7 +316,7 @@
 \label{chp-proof}
 
 \input{prism-tex/01-Introduction.tex}
-\input{prism-tex/02-Related.tex}
+% \input{prism-tex/02-Related.tex}
 \input{prism-tex/03-Method.tex}
 \input{prism-tex/04-Results.tex}
 \input{prism-tex/05-Concluding.tex}
@@ -322,7 +324,7 @@
 \chapter{Bijective and Coarse High-Order Tetrahedral Meshes}
 
 \input{curve_meshing_in_shell_tex/01_intro.tex}
-\input{curve_meshing_in_shell_tex/02_related.tex}
+% \input{curve_meshing_in_shell_tex/02_related.tex}
 \input{curve_meshing_in_shell_tex/03_method.tex}
 \input{curve_meshing_in_shell_tex/03.1_features}
 \input{curve_meshing_in_shell_tex/04_result.tex}
@@ -331,7 +333,7 @@
 \chapter{Declarative Specification for Unstructured Mesh Editing Algorithms }
 
 \input{wmtk-tex/02-introduction}
-\input{wmtk-tex/03-related}
+% \input{wmtk-tex/03-related}
 \input{wmtk-tex/04-method}
 \input{wmtk-tex/05-results}
 \input{wmtk-tex/06-concluding}
