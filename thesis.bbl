@@ -69,12 +69,12 @@ Alexa, M. (2019).
 \bibitem[Alexa, 2020]{alexa2020conforming}
 Alexa, M. (2020).
 \newblock Conforming weighted delaunay triangulations.
-\newblock {\em ACM Transactions on Graphics (TOG)}, (6):1--16.
+\newblock {\em ACM Transactions on Graphics (TOG)}, pages 1--16.
 
 \bibitem[Alliez et~al., 2005a]{alliez2005variational}
 Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005a).
 \newblock Variational tetrahedral meshing.
-\newblock In {\em ACM Transactions on Graphics (TOG)}, number~3. ACM.
+\newblock In {\em ACM Transactions on Graphics (TOG)}. ACM.
 
 \bibitem[Alliez et~al., 2005b]{Alliez:2005}
 Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005b).
@@ -811,7 +811,7 @@ Geuzaine, C. and Remacle, J.-F. (2009).
 Ghasemi, A., Taylor, L.~K., and Newman, III, J.~C. (2016).
 \newblock Massively parallel curved spectral/finite element mesh generation of
   industrial cad geometries in two and three dimensions.
-\newblock {\em Fluids Engineering Division Summer Meeting}, (50299).
+\newblock {\em Fluids Engineering Division Summer Meeting}.
 
 \bibitem[Gillespie et~al., 2021]{Gillespie:2021:DCE}
 Gillespie, M., Springborn, B., and Crane, K. (2021).
@@ -1421,8 +1421,8 @@ Marot, C. and Remacle, J.-F. (2020).
 \bibitem[Marschner et~al., 2020]{marschner2020hexahedral}
 Marschner, Z., Palmer, D., Zhang, P., and Solomon, J. (2020).
 \newblock Hexahedral mesh repair via sum-of-squares relaxation.
-\newblock In {\em Computer Graphics Forum}, volume~39, pages 133--147. Wiley
-  Online Library.
+\newblock In {\em Computer Graphics Forum}, pages 133--147. Wiley Online
+  Library.
 
 \bibitem[Mezger et~al., 2007]{mezger2007finite}
 Mezger, J., Thomaszewski, B., Pabst, S., and Stra{\ss}er, W. (2007).
@@ -1850,15 +1850,15 @@ Shoham, M., Vaxman, A., and Ben-Chen, M. (2019).
 \newblock Hierarchical functional maps between subdivision surfaces.
 \newblock {\em Computer Graphics Forum}, 38(5):55--73.
 
-\bibitem[Si, 2015a]{si2015tetgen}
+\bibitem[Si, 2015a]{tetgen}
 Si, H. (2015a).
 \newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
-\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(2):1--36.
+\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
 
-\bibitem[Si, 2015b]{tetgen}
+\bibitem[Si, 2015b]{si2015tetgen}
 Si, H. (2015b).
 \newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
-\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
+\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(2):1--36.
 
 \bibitem[Si and G{\"a}rtner, 2005]{si2005meshing}
 Si, H. and G{\"a}rtner, K. (2005).

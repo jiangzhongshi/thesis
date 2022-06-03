@@ -5,8 +5,6 @@ The style file: apalike.bst
 Reallocated field_info (elt_size=4) to 13448 items from 5000.
 Database file #1: thesis.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--there's a number but no volume in alexa2020conforming
-Warning--there's a number but no series in alliez2005variational
 Warning--there's a number but no volume in Alliez:2005
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
@@ -19,11 +17,9 @@ Warning--there's a number but no series in CohenSteiner:2002:CDT
 Warning--empty booktitle in dunyach2013adaptive
 Warning--empty journal in dyer2007delaunay
 Warning--empty school in Garland:1999
-Warning--there's a number but no volume in Ghasemi2016
 Warning--can't use both volume and number fields in hass2020approximating
 Warning--empty publisher in Hormann:2000
 Warning--empty booktitle in Klingner07aggressive
-Warning--can't use both volume and number fields in marschner2020hexahedral
 Warning--empty journal in mezger2007finite
 Warning--empty journal in moxeynekmesh
 Warning--empty journal in okusanya1996parallel
@@ -34,43 +30,43 @@ Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
 You've used 384 entries,
             1935 wiz_defined-function locations,
-            2441 strings with 66408 characters,
-and the built_in function-call counts, 167885 in all, are:
-= -- 16653
+            2440 strings with 66403 characters,
+and the built_in function-call counts, 167893 in all, are:
+= -- 16655
 > -- 7127
-< -- 269
+< -- 268
 + -- 2530
 - -- 2409
-* -- 14220
-:= -- 28379
+* -- 14201
+:= -- 28380
 add.period$ -- 1225
 call.type$ -- 384
 change.case$ -- 3103
 chr.to.int$ -- 357
-cite$ -- 411
-duplicate$ -- 6553
-empty$ -- 11593
+cite$ -- 407
+duplicate$ -- 6558
+empty$ -- 11595
 format.name$ -- 2979
-if$ -- 33543
+if$ -- 33553
 int.to.chr$ -- 28
 int.to.str$ -- 0
 missing$ -- 374
 newline$ -- 1923
 num.names$ -- 1163
-pop$ -- 2833
+pop$ -- 2839
 preamble$ -- 1
 purify$ -- 3115
 quote$ -- 0
-skip$ -- 5015
+skip$ -- 5023
 stack$ -- 0
-substring$ -- 11624
-swap$ -- 1254
-text.length$ -- 114
+substring$ -- 11627
+swap$ -- 1256
+text.length$ -- 113
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 2280
-warning$ -- 27
-while$ -- 1324
+warning$ -- 23
+while$ -- 1325
 width$ -- 0
-write$ -- 5075
-(There were 27 warnings)
+write$ -- 5072
+(There were 23 warnings)
