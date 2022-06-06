@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  3 JUN 2022 19:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  6 JUN 2022 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1600,52 +1600,52 @@ Chapter 1.
 (./front-matter/introduction.tex [1
 
 ] [2]) (./front-matter/combine_related.tex
-[3]
+[3] [4]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 5.
-[4
+(Font)              scaled to size 14.4pt on input line 6.
+[5
 
-] [5] [6] [7] [8] [9] [10]
+] [6] [7] [8] [9] [10] [11]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 136.
+(Font)              scaled to size 8.8pt on input line 165.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 136.
+(Font)              scaled to size 10.0pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 136.
+(Font)              scaled to size 10.0pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 136.
+(Font)              scaled to size 7.3pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 136.
+(Font)              scaled to size 5.5pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.0pt on input line 136.
+(Font)              scaled to size 10.0pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 7.3pt on input line 136.
+(Font)              scaled to size 7.3pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 5.5pt on input line 136.
+(Font)              scaled to size 5.5pt on input line 165.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 136.
+(Font)              size <5> substituted on input line 165.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 136.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 13
-6.
+(Font)              scaled to size 7.3pt on input line 165.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 16
+5.
 (/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 136.
+(Font)              scaled to size 10.0pt on input line 165.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11] [12]
-[13] [14] [15] [16]) (./front-matter/prelim.tex) [17] [18]
+ [12] [13]
+[14] [15] [16] [17]) (./front-matter/prelim.tex [18]) [19]
 Chapter 3.
 (./scaf-tex/sections/introduction.tex
-<scaf-tex/figs/teaser.pdf, id=127, 4500.74492pt x 1191.82263pt>
+<scaf-tex/figs/teaser.pdf, id=130, 4500.74492pt x 1191.82263pt>
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 3.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
@@ -1668,12 +1668,12 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 5.
 
-[19
+[20
 
-]) (./scaf-tex/sections/method.tex [20]
+]) (./scaf-tex/sections/method.tex [21]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.6pt on input line 18.
-<scaf-tex/figs/scaffold_illustration.pdf, id=137, 724.7075pt x 250.9375pt>
+<scaf-tex/figs/scaffold_illustration.pdf, id=140, 724.7075pt x 250.9375pt>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -1690,135 +1690,135 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] [22]
-<scaf-tex/figs/hand_weight.pdf, id=146, 724.7075pt x 403.5075pt>
+[22] [23]
+<scaf-tex/figs/hand_weight.pdf, id=149, 724.7075pt x 403.5075pt>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23] [24]
-<scaf-tex/figs/coil-remeshing.pdf, id=154, 813.0375pt x 391.4625pt>
- [25]) (./scaf-tex/sections/results.tex
-<scaf-tex/figs/database_demo.pdf, id=158, 682.55pt x 782.925pt>
- [26]
-<scaf-tex/figs/lucy-scalability.pdf, id=163, 808.01875pt x 642.4pt>
-<scaf-tex/figs/the_animal.pdf, id=164, 2961.0625pt x 1756.5625pt>
-<scaf-tex/figs/maneki_neko_colorful.pdf, id=165, 923.45pt x 772.8875pt>
+[24] [25]
+<scaf-tex/figs/coil-remeshing.pdf, id=157, 813.0375pt x 391.4625pt>
+ [26]) (./scaf-tex/sections/results.tex
+<scaf-tex/figs/database_demo.pdf, id=162, 682.55pt x 782.925pt>
  [27]
-<scaf-tex/figs/leg-flow.pdf, id=169, 3578.36874pt x 893.3375pt>
-<scaf-tex/figs/rabbit_grow.pdf, id=170, 1789.68625pt x 1104.125pt>
+<scaf-tex/figs/lucy-scalability.pdf, id=166, 808.01875pt x 642.4pt>
+<scaf-tex/figs/the_animal.pdf, id=167, 2961.0625pt x 1756.5625pt>
+<scaf-tex/figs/maneki_neko_colorful.pdf, id=168, 923.45pt x 772.8875pt>
  [28]
-<scaf-tex/figs/dense_hilbert.pdf, id=174, 3462.9375pt x 1982.90813pt>
-<scaf-tex/figs/compare_smith.pdf, id=175, 1063.47313pt x 1065.50072pt>
-<scaf-tex/figs/camel_step.pdf, id=176, 1294.8375pt x 361.35pt>
-<scaf-tex/figs/random-rotate.pdf, id=177, 1047.46336pt x 1041.35043pt>
+<scaf-tex/figs/leg-flow.pdf, id=172, 3578.36874pt x 893.3375pt>
+<scaf-tex/figs/rabbit_grow.pdf, id=173, 1789.68625pt x 1104.125pt>
  [29]
+<scaf-tex/figs/dense_hilbert.pdf, id=177, 3462.9375pt x 1982.90813pt>
+<scaf-tex/figs/compare_smith.pdf, id=178, 1063.47313pt x 1065.50072pt>
+<scaf-tex/figs/camel_step.pdf, id=179, 1294.8375pt x 361.35pt>
+<scaf-tex/figs/random-rotate.pdf, id=180, 1047.46336pt x 1041.35043pt>
+ [30]
 (./scaf-tex/sections/timings.tex)) (./scaf-tex/sections/conclusions.tex
-[30] [31]) [32] [33] [34] [35]
+[31] [32]) [33] [34] [35] [36]
 Chapter 4.
 (./prism-tex/01-Introduction.tex
 
 pdfTeX warning: pdflatex (file ./prism-tex/figs/teaser_edit.pdf): PDF inclusion
 : found PDF version <1.6>, but at most version <1.5> allowed
-<prism-tex/figs/teaser_edit.pdf, id=202, 557.81396pt x 508.5911pt>
+<prism-tex/figs/teaser_edit.pdf, id=205, 557.81396pt x 508.5911pt>
 File: prism-tex/figs/teaser_edit.pdf Graphic file (type pdf)
 <use prism-tex/figs/teaser_edit.pdf>
 Package pdftex.def Info: prism-tex/figs/teaser_edit.pdf  used on input line 4.
 (pdftex.def)             Requested size: 469.75502pt x 428.30008pt.
-[36
+[37
 
-] [37 <./prism-tex/figs/teaser_edit.pdf>]) (./prism-tex/03-Method.tex
-<prism-tex/figs/pipeline.pdf, id=255, 498.0698pt x 184.3979pt>
+] [38 <./prism-tex/figs/teaser_edit.pdf>]) (./prism-tex/03-Method.tex
+<prism-tex/figs/pipeline.pdf, id=259, 498.0698pt x 184.3979pt>
 
-[38]
-<prism-tex/figs/corona.pdf, id=260, 1024.33693pt x 567.42287pt>
- [39]
-<prism-tex/figs/prism_projection.pdf, id=264, 754.83604pt x 349.48567pt>
+[39]
+<prism-tex/figs/corona.pdf, id=263, 1024.33693pt x 567.42287pt>
  [40]
-<prism-tex/figs/projection.pdf, id=269, 1347.72502pt x 329.55319pt>
-<prism-tex/figs/not-section-illustrate.pdf, id=270, 412.97488pt x 160.6pt>
+<prism-tex/figs/prism_projection.pdf, id=267, 754.83604pt x 349.48567pt>
+ [41]
+<prism-tex/figs/projection.pdf, id=272, 1347.72502pt x 329.55319pt>
+<prism-tex/figs/not-section-illustrate.pdf, id=273, 412.97488pt x 160.6pt>
 File: prism-tex/figs/not-section-illustrate.pdf Graphic file (type pdf)
 <use prism-tex/figs/not-section-illustrate.pdf>
 Package pdftex.def Info: prism-tex/figs/not-section-illustrate.pdf  used on inp
 ut line 79.
 (pdftex.def)             Requested size: 375.80544pt x 146.14621pt.
- [41] [42 <./prism-tex/figs/not-section-illustrate.pdf>]
+ [42] [43 <./prism-tex/figs/not-section-illustrate.pdf>]
 
 pdfTeX warning: pdflatex (file ./prism-tex/figs/composition.pdf): PDF inclusion
 : found PDF version <1.6>, but at most version <1.5> allowed
-<prism-tex/figs/composition.pdf, id=300, 1089.04866pt x 376.48154pt>
-[43] [44]
-<prism-tex/figs/need_to_bevel.pdf, id=309, 1265.88939pt x 454.60039pt>
- [45]
-<prism-tex/figs/bevel.pdf, id=313, 798.88464pt x 226.75415pt>
-<prism-tex/figs/screwdriver_bevel.pdf, id=314, 914.59294pt x 602.25pt>
- [46] [47]
-<prism-tex/figs/local-operations.pdf, id=321, 1627.23938pt x 707.15695pt>
- [48] [49]
-<prism-tex/figs/doublewheel_pinch.pdf, id=328, 1840.28532pt x 515.21384pt>
+<prism-tex/figs/composition.pdf, id=303, 1089.04866pt x 376.48154pt>
+[44] [45]
+<prism-tex/figs/need_to_bevel.pdf, id=312, 1265.88939pt x 454.60039pt>
+ [46]
+<prism-tex/figs/bevel.pdf, id=316, 798.88464pt x 226.75415pt>
+<prism-tex/figs/screwdriver_bevel.pdf, id=317, 914.59294pt x 602.25pt>
+ [47] [48]
+<prism-tex/figs/local-operations.pdf, id=324, 1627.23938pt x 707.15695pt>
+ [49] [50]
+<prism-tex/figs/doublewheel_pinch.pdf, id=332, 1840.28532pt x 515.21384pt>
 File: prism-tex/figs/doublewheel_pinch.pdf Graphic file (type pdf)
 <use prism-tex/figs/doublewheel_pinch.pdf>
 Package pdftex.def Info: prism-tex/figs/doublewheel_pinch.pdf  used on input li
 ne 357.
 (pdftex.def)             Requested size: 469.75502pt x 131.51537pt.
- [50 <./prism-tex/figs/doublewheel_pinch.pdf>]
-<prism-tex/figs/singular_bevel.pdf, id=648, 250.62433pt x 190.81789pt>
-<prism-tex/figs/degenerate_prism_decompose.pdf, id=649, 988.12663pt x 353.48161
+ [51 <./prism-tex/figs/doublewheel_pinch.pdf>]
+<prism-tex/figs/singular_bevel.pdf, id=651, 250.62433pt x 190.81789pt>
+<prism-tex/figs/degenerate_prism_decompose.pdf, id=652, 988.12663pt x 353.48161
 pt>
-<prism-tex/figs/boundary_singular.pdf, id=650, 320.11597pt x 108.6178pt>
- [51]
-<prism-tex/figs/open-hand.pdf, id=654, 724.0731pt x 244.50346pt>
+<prism-tex/figs/boundary_singular.pdf, id=653, 320.11597pt x 108.6178pt>
+ [52]
+<prism-tex/figs/open-hand.pdf, id=657, 724.0731pt x 244.50346pt>
 ) (./prism-tex/04-Results.tex
-<prism-tex/figs/varying_thickness.pdf, id=655, 1933.95522pt x 652.96646pt>
+<prism-tex/figs/varying_thickness.pdf, id=658, 1933.95522pt x 652.96646pt>
 File: prism-tex/figs/varying_thickness.pdf Graphic file (type pdf)
 <use prism-tex/figs/varying_thickness.pdf>
 Package pdftex.def Info: prism-tex/figs/varying_thickness.pdf  used on input li
 ne 11.
 (pdftex.def)             Requested size: 469.75502pt x 158.59824pt.
- [52]
-<prism-tex/figs/10k_gallery.pdf, id=659, 1020.82379pt x 864.11633pt>
-<prism-tex/figs/abc_gallery.pdf, id=660, 1493.4897pt x 695.41808pt>
+ [53]
+<prism-tex/figs/10k_gallery.pdf, id=662, 1020.82379pt x 864.11633pt>
+<prism-tex/figs/abc_gallery.pdf, id=663, 1493.4897pt x 695.41808pt>
 
 
 LaTeX Warning: Float too large for page by 21.08928pt on input line 38.
 
-[53 <./prism-tex/figs/varying_thickness.pdf>] [54]
-<prism-tex/figs/stats_combined.pdf, id=724, page=2, 602.25pt x 1151.512pt>
-<prism-tex/figs/stats_combined.pdf, id=725, page=1, 602.25pt x 1151.512pt>
-<prism-tex/figs/thai_comparision.pdf, id=726, 1170.30229pt x 842.09503pt>
+[54 <./prism-tex/figs/varying_thickness.pdf>] [55]
+<prism-tex/figs/stats_combined.pdf, id=727, page=2, 602.25pt x 1151.512pt>
+<prism-tex/figs/stats_combined.pdf, id=728, page=1, 602.25pt x 1151.512pt>
+<prism-tex/figs/thai_comparision.pdf, id=729, 1170.30229pt x 842.09503pt>
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 76.
- [55]
-<prism-tex/figs/shark_accuracy.pdf, id=730, 1191.29062pt x 339.5907pt>
- [56] [57]
-<prism-tex/figs/rockerarm_qslim.pdf, id=739, 929.97034pt x 536.13097pt>
-<prism-tex/figs/heat-in-nut.pdf, id=740, 1103.3722pt x 829.10957pt>
-<prism-tex/figs/tet-knot.pdf, id=741, 417.1876pt x 204.89449pt>
- [58]
-<prism-tex/figs/birdengine.pdf, id=745, 612.60968pt x 508.60513pt>
+ [56]
+<prism-tex/figs/shark_accuracy.pdf, id=734, 1191.29062pt x 339.5907pt>
+ [57] [58]
+<prism-tex/figs/rockerarm_qslim.pdf, id=742, 929.97034pt x 536.13097pt>
+<prism-tex/figs/heat-in-nut.pdf, id=743, 1103.3722pt x 829.10957pt>
+<prism-tex/figs/tet-knot.pdf, id=744, 417.1876pt x 204.89449pt>
  [59]
-<prism-tex/figs/bunny-displacement.pdf, id=749, 1068.8934pt x 777.8089pt>
-<prism-tex/figs/chain-lizard.pdf, id=750, 915.38588pt x 225.84375pt>
+<prism-tex/figs/birdengine.pdf, id=748, 612.60968pt x 508.60513pt>
+ [60]
+<prism-tex/figs/bunny-displacement.pdf, id=752, 1068.8934pt x 777.8089pt>
+<prism-tex/figs/chain-lizard.pdf, id=753, 915.38588pt x 225.84375pt>
 
-[60]
-<prism-tex/figs/leg-intersect.pdf, id=754, 787.1287pt x 238.49802pt>
-<prism-tex/figs/armadillo_cage.pdf, id=755, 916.9728pt x 304.55682pt>
-<prism-tex/figs/camel.pdf, id=756, 854.50542pt x 624.96388pt>
- [61] [62] [63]
-<prism-tex/figs/blocks.pdf, id=767, 2796.48769pt x 832.62968pt>
- [64]) (./prism-tex/05-Concluding.tex [65]) [66]
+[61]
+<prism-tex/figs/leg-intersect.pdf, id=757, 787.1287pt x 238.49802pt>
+<prism-tex/figs/armadillo_cage.pdf, id=758, 916.9728pt x 304.55682pt>
+<prism-tex/figs/camel.pdf, id=759, 854.50542pt x 624.96388pt>
+ [62] [63] [64]
+<prism-tex/figs/blocks.pdf, id=770, 2796.48769pt x 832.62968pt>
+ [65]) (./prism-tex/05-Concluding.tex [66]) [67]
 Chapter 5.
 (./curve_meshing_in_shell_tex/01_intro.tex
-<curve_meshing_in_shell_tex/figs/teaser.pdf, id=777, 4578.62572pt x 1084.21063p
+<curve_meshing_in_shell_tex/figs/teaser.pdf, id=780, 4578.62572pt x 1084.21063p
 t>
- [67
+ [68
 
 ])
 (./curve_meshing_in_shell_tex/03_method.tex
 
-LaTeX Warning: Reference `[' on page 68 undefined on input line 3.
+LaTeX Warning: Reference `[' on page 69 undefined on input line 3.
 
-<curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=781, 462.90
+<curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=785, 462.90
 341pt x 166.4629pt>
 
 Overfull \hbox (3.04782pt too wide) in paragraph at lines 20--22
@@ -1827,95 +1827,95 @@ Overfull \hbox (3.04782pt too wide) in paragraph at lines 20--22
 fold, wa-ter-tight, self-intersection-|
  []
 
-[68]
-<curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=786, 520.6993
+[69]
+<curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=789, 520.6993
 6pt x 98.58421pt>
- [69]
+ [70]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 50.
-<curve_meshing_in_shell_tex/figs/bunny/0001.png, id=790, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0001.png, id=793, 1110.1475pt x 1417.295
 pt>
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.95pt on input line 51.
-<curve_meshing_in_shell_tex/figs/bunny/0004.png, id=792, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0004.png, id=795, 1110.1475pt x 1417.295
 pt>
-<curve_meshing_in_shell_tex/figs/bunny/0003.png, id=793, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0003.png, id=796, 1110.1475pt x 1417.295
 pt>
-<curve_meshing_in_shell_tex/figs/bunny/0002.png, id=794, 1110.1475pt x 1417.295
+<curve_meshing_in_shell_tex/figs/bunny/0002.png, id=797, 1110.1475pt x 1417.295
 pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/intersection-f
 ree.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
 owed
-<curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=795, 630.93015pt x 4
+<curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=798, 630.93015pt x 4
 00.62373pt>
 
-LaTeX Warning: Reference `app:local-ops' on page 70 undefined on input line 104
+LaTeX Warning: Reference `app:local-ops' on page 71 undefined on input line 104
 .
 
-[70]
+[71]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 pipeline.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
-<curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=799, 405.29016p
+<curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=802, 405.29016p
 t x 137.00084pt>
-[71] [72]
-<curve_meshing_in_shell_tex/figs/fish/fish002.png, id=806, 1664.2175pt x 1084.0
+[72] [73]
+<curve_meshing_in_shell_tex/figs/fish/fish002.png, id=809, 1664.2175pt x 1084.0
 5pt>
-<curve_meshing_in_shell_tex/figs/fish/0003.png, id=807, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0003.png, id=810, 1664.2175pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/fish/0001.png, id=808, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0001.png, id=811, 1664.2175pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/fish/0004.png, id=809, 1664.2175pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/fish/0004.png, id=812, 1664.2175pt x 1084.05pt
 >
- [73]
-<curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=813,
+ [74]
+<curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=817,
  322.10138pt x 83.1905pt>
- [74] [75]) (./curve_meshing_in_shell_tex/03.1_features.tex
+ [75] [76]) (./curve_meshing_in_shell_tex/03.1_features.tex
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 input-output-feature.pdf): PDF inclusion: found PDF version <1.6>, but at most 
 version <1.5> allowed
-<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=821
+<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=824
 , 249.71594pt x 91.11229pt>
-<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=822, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=825, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=823, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=826, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=824, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=827, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=825, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=828, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=826, 253.8
+<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=829, 253.8
 6043pt x 85.87082pt>
-<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=827, 237.78537pt
+<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=830, 237.78537pt
  x 74.09421pt>
-<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=828, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=831, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=829, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=832, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=830, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=833, 803.0pt x 803.0pt>
 
-[76] [77]
-<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=837, 219.98888pt
+[77] [78]
+<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=840, 219.98888pt
  x 70.59705pt>
- [78]
+ [79]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 loc-op.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=841, 326.8461pt x
+<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=844, 326.8461pt x
  55.73764pt>
-) (./curve_meshing_in_shell_tex/04_result.tex [79]
-<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=845, 1027.84pt x 2069.732
+) (./curve_meshing_in_shell_tex/04_result.tex [80]
+<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=849, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=846, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=850, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=847, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=851, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=848, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=852, 1027.84pt x 2069.732
 5pt>
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 45.
@@ -1924,90 +1924,90 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_Thingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
 <1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=849, 602.25
+<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=853, 602.25
 pt x 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_ABC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=850, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=854, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_PolyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
 1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=851, 602.25p
+<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=855, 602.25p
 t x 602.25pt>
-<curve_meshing_in_shell_tex/figs/octa/0003.png, id=852, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0002.png, id=853, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0001.png, id=854, 931.48pt x 939.51pt>
-[80]
+<curve_meshing_in_shell_tex/figs/octa/0003.png, id=856, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0002.png, id=857, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0001.png, id=858, 931.48pt x 939.51pt>
+[81]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_T
 hingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=859, 602.25pt x
+<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=862, 602.25pt x
  602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_A
 BC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allo
 wed
-<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=860, 602.25pt x 602.2
+<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=863, 602.25pt x 602.2
 5pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_P
 oLyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=861, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=864, 602.25pt x 
 602.25pt>
-[81]
+[82]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Thi
 ngi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=865, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=868, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_ABC
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=866, 602.25pt x 602.25p
+<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=869, 602.25pt x 602.25p
 t>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Pol
 yCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> a
 llowed
-<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=867, 602.25pt x 60
+<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=870, 602.25pt x 60
 2.25pt>
-<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=868, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=871, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=869, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=872, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=870, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=873, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=871, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=874, 873.2625pt x 1049.9225
 pt>
-[82]
-<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=875, 1027.84pt x 622.325p
+[83]
+<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=878, 1027.84pt x 622.325p
 t>
-<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=876, 1027.84pt x 622.325pt>
-<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=877, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=879, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=880, 1027.84pt x 622.325pt>
 
-<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=878, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=881, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=879, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=882, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=880, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=883, 1180.41pt x 1184.4
 25pt>
- [83]
-<curve_meshing_in_shell_tex/figs/micro/color.png, id=884, 803.0pt x 803.0pt>
-<curve_meshing_in_shell_tex/figs/spot.png, id=885, 803.0pt x 803.0pt>
+ [84]
+<curve_meshing_in_shell_tex/figs/micro/color.png, id=887, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/spot.png, id=888, 803.0pt x 803.0pt>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 203.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
@@ -2022,163 +2022,167 @@ Overfull \hbox (1.96512pt too wide) in paragraph at lines 203--203
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Th
 ingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=886, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=889, 602.25pt x 
 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_AB
 C.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=887, 602.25pt x 602.25
+<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=890, 602.25pt x 602.25
 pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Po
 lyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=888, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=891, 602.25pt x 6
 02.25pt>
-[84] [85]
+[85] [86]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 226.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 226.
-<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=895, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=899, 1270.7475pt x 1015.795
 pt>
-<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=896, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=900, 1270.7475pt x 1015.795
 pt>
- [86]) (./curve_meshing_in_shell_tex/05_conclude.tex) [87]
+ [87]) (./curve_meshing_in_shell_tex/05_conclude.tex) [88]
 Chapter 6.
 (./wmtk-tex/02-introduction.tex
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/teaser2.pdf): PDF inclusion: fou
 nd PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/teaser2.pdf, id=905, 5017.46541pt x 1663.96657pt>
-[88
+<wmtk-tex/figs/teaser2.pdf, id=908, 5017.46541pt x 1663.96657pt>
 
-] [89]) (./wmtk-tex/04-method.tex
+LaTeX Warning: Reference `wmtk:sec:related' on page 89 undefined on input line 
+13.
+
+[89
+
+] [90]) (./wmtk-tex/04-method.tex
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/pipeline_illustration.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/pipeline_illustration.pdf, id=912, 1245.15187pt x 599.30902pt>
-[90] [91]
+<wmtk-tex/figs/pipeline_illustration.pdf, id=915, 1245.15187pt x 599.30902pt>
+[91] [92]
 
 LaTeX Warning: Float too large for page by 29.89696pt on input line 49.
 
-[92] [93] [94] [95]
+[93] [94] [95] [96]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/lock_illustration.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/lock_illustration.pdf, id=932, 2276.8863pt x 571.27025pt>
-[96]
+<wmtk-tex/figs/lock_illustration.pdf, id=935, 2276.8863pt x 571.27025pt>
+[97]
 
 LaTeX Warning: Float too large for page by 131.29497pt on input line 129.
 
-) (./wmtk-tex/05-results.tex [97] [98]
+) (./wmtk-tex/05-results.tex [98] [99]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-sec-statue.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-sec-statue.pdf, id=944, 2975.65706pt x 1291.09354pt>
-[99]
+<wmtk-tex/figs/2d-sec-statue.pdf, id=947, 2975.65706pt x 1291.09354pt>
+[100]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-qslim.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-qslim.pdf, id=948, 1845.62521pt x 1511.3163pt>
-[100]
+<wmtk-tex/figs/2d-qslim.pdf, id=951, 1845.62521pt x 1511.3163pt>
+[101]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-remeshing-lucy.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-remeshing-lucy.pdf, id=952, 3889.19994pt x 1764.76318pt>
+<wmtk-tex/figs/2d-remeshing-lucy.pdf, id=955, 3889.19994pt x 1764.76318pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-harmonic-gauss.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/3d-harmonic-gauss.pdf, id=953, 2809.00443pt x 1027.84pt>
-[101]
+<wmtk-tex/figs/3d-harmonic-gauss.pdf, id=956, 2809.00443pt x 1027.84pt>
+[102]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-tetwild-dragon.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/3d-tetwild-dragon.pdf, id=957, 1793.64096pt x 1307.58508pt>
+<wmtk-tex/figs/3d-tetwild-dragon.pdf, id=960, 1793.64096pt x 1307.58508pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/limitation-of-para.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/limitation-of-para.pdf, id=958, 1030.74084pt x 320.63187pt>
-[102]
-<wmtk-tex/figs/2d-sec-envelope.pdf, id=962, 3406.56699pt x 1640.46873pt>
-<wmtk-tex/figs/2d-remeshing-headport-env.pdf, id=963, 3305.138pt x 1474.67943pt
+<wmtk-tex/figs/limitation-of-para.pdf, id=961, 1030.74084pt x 320.63187pt>
+[103]
+<wmtk-tex/figs/2d-sec-envelope.pdf, id=965, 3406.56699pt x 1640.46873pt>
+<wmtk-tex/figs/2d-remeshing-headport-env.pdf, id=966, 3305.138pt x 1474.67943pt
 >
- [103] [104]
+ [104] [105]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tri2d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/tri2d-stats.pdf, id=971, 1928.5249pt x 422.97923pt>
+<wmtk-tex/figs/tri2d-stats.pdf, id=974, 1928.5249pt x 422.97923pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tet3d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/tet3d-stats.pdf, id=972, 1846.97021pt x 413.89632pt>
-) (./wmtk-tex/06-concluding.tex [105]) [106]
+<wmtk-tex/figs/tet3d-stats.pdf, id=975, 1846.97021pt x 413.89632pt>
+) (./wmtk-tex/06-concluding.tex [106]) [107]
 Chapter 7.
-(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [107
+(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [108
 
 ]
 Appendix A.
-[108
+[109
 
 ]
-<prism-tex/figs/bevel_colors.pdf, id=985, 333.19179pt x 206.48442pt>
-<prism-tex/figs/singularity-bevel-explained.pdf, id=986, 281.87608pt x 236.2205
+<prism-tex/figs/bevel_colors.pdf, id=988, 333.19179pt x 206.48442pt>
+<prism-tex/figs/singularity-bevel-explained.pdf, id=989, 281.87608pt x 236.2205
 2pt>
- [109] [110] [111] [112]) [113]
+ [110] [111] [112] [113]) [114]
 Appendix B.
-(./curve_meshing_in_shell_tex/90-bij-proof.tex [114
+(./curve_meshing_in_shell_tex/90-bij-proof.tex [115
 
 ])
 (./curve_meshing_in_shell_tex/91-app-local-ops.tex
 
-LaTeX Warning: Reference `app:local-ops' on page 115 undefined on input line 1.
+LaTeX Warning: Reference `app:local-ops' on page 116 undefined on input line 1.
 
 
 
-Package natbib Warning: Citation `chp:shell' on page 115 undefined on input lin
+Package natbib Warning: Citation `chp:shell' on page 116 undefined on input lin
 e 2.
 
 
-LaTeX Warning: Reference `[' on page 115 undefined on input line 5.
+LaTeX Warning: Reference `[' on page 116 undefined on input line 5.
 
 ) (./curve_meshing_in_shell_tex/92-app-tetgen.tex
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
 eanE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> al
 lowed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_meanE.pdf, id=1006, 602.25pt x 30
+<curve_meshing_in_shell_tex/figs/stats/tetgen_meanE.pdf, id=1009, 602.25pt x 30
 1.125pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
 axE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
 owed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_maxE.pdf, id=1007, 602.25pt x 301
+<curve_meshing_in_shell_tex/figs/stats/tetgen_maxE.pdf, id=1010, 602.25pt x 301
 .125pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_T
 O.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_TO.pdf, id=1008, 602.25pt x 301.1
+<curve_meshing_in_shell_tex/figs/stats/tetgen_TO.pdf, id=1011, 602.25pt x 301.1
 25pt>
-[115]) (./curve_meshing_in_shell_tex/93-app-tetwild.tex) [116] (docs/thesis.bbl
-[117
+[116]) (./curve_meshing_in_shell_tex/93-app-tetwild.tex) [117] (docs/thesis.bbl
+[118
 
 
-] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]
-[129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
-[141] [142])
+] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
+[130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
+[142] [143])
 
 Package natbib Warning: There were undefined citations.
 
-[143] (docs/thesis.aux)
+[144] (docs/thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2192,10 +2196,10 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  41440 strings out of 478305
- 809489 string characters out of 5847251
- 1145351 words of memory out of 5000000
- 57667 multiletter control sequences out of 15000+600000
- 768744 words of font info for 846 fonts, out of 8000000 for 9000
+ 809436 string characters out of 5847251
+ 1145553 words of memory out of 5000000
+ 57670 multiletter control sequences out of 15000+600000
+ 768490 words of font info for 844 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1334b,1261s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
@@ -2225,10 +2229,10 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (160 pages, 62656412 bytes).
+Output written on docs/thesis.pdf (161 pages, 62659437 bytes).
 PDF statistics:
- 1202 PDF objects out of 1440 (max. 8388607)
- 503 compressed objects within 6 object streams
+ 1205 PDF objects out of 1440 (max. 8388607)
+ 505 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  157817 words of extra memory for PDF output out of 184870 (max. 10000000)
 
