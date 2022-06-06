@@ -1,5 +1,48 @@
 \chapter{Related Works}
 \label{sec:related}
+
+
+\section{Meshes in Computer Graphics}
+\subsection{Mesh Data Structures}
+
+Efficient data structures for representing solid geometry have been an intriguing
+research topic since the early days of computer graphics \cite{Requicha1980}. As
+a result, there is a large variety of mesh data structure designs, where they
+are each optimized for different usage scenarios. Index-array-based mesh data
+structure encodes each element as a list of vertex indices on its
+boundary.  It is simple and memory efficient, but neighborhood query and local
+operations are not directly supported.
+Graph-based mesh data structures, including half-edge \cite{Maentylae1987},
+winged-edge \cite{Baumgart1972}, quad-edge \cite{Guibas1985}, cell-tuple
+\cite{Brisson1989}, etc., view meshes as graphs, where each element contains
+links to its adjacent elements. This design allows for efficient local query
+and update, making it ideal for algorithms like mesh simplification
+\cite{garland1997surface}. Linear-algebra-based mesh data structures, such as
+\cite{Dicarlo2014,Zayer2017,Mahmoud2021}, encode adjacency information as sparse
+matrices.  This design elegantly reduces neighborhood query and local operations
+to sparse matrix computations, which are highly optimized for modern parallel
+computing architecture. \revision{Closely related, is the concept of generalized combinatorial maps \cite{lienhardt1994n, dufourd1991obj3}, and the CGoGN library \cite{kraemer2014cgogn} provide an efficient implementation which provide parallel traversal of the mesh.}
+%
+By design, mesh data structures provide a low-level interface to
+manipulate vertices, edges, faces, and tetrahedra.
+Different designs differ vastly in API and implementation details, making it hard to port algorithm from one data structure to another. In contrast, our framework decouples mesh data structure choice from algorithm specification, providing the flexibility of switching the underlying data structure in a seamless manner.
+
+
+\subsection{Domain specific languages in graphics}
+
+Our abstraction model of mesh processing algorithms draw inspiration from domain
+specific languages (DSL) in graphics.  For dense regularly structured data such
+as images, Halide \cite{ragan2013halide} popularized the idea of decoupling image
+processing operations from low level scheduling tasks. Similar abstraction that
+separates algorithm description from low level data structure and/or parallel
+architecture can also be found in other DSLs such as Simit
+\cite{kjolstad2016simit} for simulation over triangle meshes, Taco
+\cite{kjolstad2017taco} for dense and sparse tensor algebra, Taichi
+\cite{hu2019taichi} for simulation over sparse volumetric data, and Penrose
+\cite{ye2020penrose} for generating diagrams from math notation.
+
+
+\section{Maps and Parameterizations}
 Bijective maps find a host of applications in a variety of fields including physical simulation, surface deformation, and parametrization.  We review only the most relevant prior works here and refer to the following surveys for more details~\cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007}.
 
 \subsection*{Locally Injective Maps.}
@@ -8,9 +51,11 @@ Bijective maps find a host of applications in a variety of fields including phys
 Many methods have also been developed to optimize these distortion energies including moving one vertex at a time~\cite{Hormann:2000}, parallel gradient descent~\cite{Fu:2015}, as well as other quasi-newton approaches~\cite{Smith:2015,Kovalsky:2016,Rabinovich:2017}.  Other approaches construct such maps by performing a change of basis, projecting to an inversion free space, and then constructing a parametrization from the result~\cite{Fu:2016}. While our method could potentially use any of these optimization methods, we use \cite{Rabinovich:2017} for its large step sizes. We elaborate on this choice in Section~\ref{sec:general_form}.
 
 \subsection*{Bijective Maps.}
-In addition to injective constraints, bijective maps have the additional requirement that the boundary does not intersect.  One simple method for creating a bijective map in 2D involves constraining the boundary to a convex shape such as a circle~\cite{Tutte:1963,Floater:97}.  Such parametrizations guarantee a bijective map in 2D but create significant distortion.  Even so, these methods are commonly used to create a valid starting point for further optimization \cite{Schuller:2013,Smith:2015,Rabinovich:2017}.  While methods that produce bijective maps with fixed boundaries exist~\cite{Weber:2014,Campen:2016}, we aim to produce maps where the boundary is free to move to reduce the distortion of the map.  
+In addition to injective constraints, bijective maps have the additional requirement that the boundary does not intersect.  One simple method for creating a bijective map in 2D involves constraining the boundary to a convex shape such as a circle~\cite{Tutte:1963,Floater:97}.  
+Such parametrizations guarantee a bijective map in 2D but create significant distortion.  Even so, these methods are commonly used to create a valid starting point for further optimization \cite{Schuller:2013,Smith:2015,Rabinovich:2017}. 
+While methods that produce bijective maps with fixed boundaries exist~\cite{Weber:2014,Campen:2016}, we aim to produce maps where the boundary is free to move to reduce the distortion of the map.
 
-\revision{\cite{Gotsman:2001, surazhsky2001morphing} introduced the concept of scaffolding where the free space is triangulated for the purpose of morphing without self-intersection.} \revision{In \cite{Zhang:2005}, t}he scaffold triangles are given a step function for their error: zero \revision{if not flipped, otherwise} infinity. Hence, the bijective condition becomes local in that the shape can evolve until a scaffold triangle flips, in which case the free space is retriangulated and the optimization continues. The main limitation of this work is the lack of an evolving triangulation during the line search and the absence of a rotationally invariant metric for the scaffold triangles, which lead to very small steps and an inefficient optimization.
+\cite{Gotsman:2001, surazhsky2001morphing} introduced the concept of scaffolding where the free space is triangulated for the purpose of morphing without self-intersection. In \cite{Zhang:2005}, the scaffold triangles are given a step function for their error: zero if not flipped, otherwise infinity. Hence, the bijective condition becomes local in that the shape can evolve until a scaffold triangle flips, in which case the free space is retriangulated and the optimization continues. The main limitation of this work is the lack of an evolving triangulation during the line search and the absence of a rotationally invariant metric for the scaffold triangles, which lead to very small steps and an inefficient optimization.
 
 The Deformable Simplicial Complex (DSC) method~\cite{Misztal:2012} utilize a triangulation of both the free space and the interior of an object to track the interface between the two volumes.  Similar to \cite{Zhang:2005}, the DSC retriangulates at degeneracies but also performs operations to improve the shape of the triangles.  This method changes the triangulation of the interface that it tracks, which works well for simulation, but it is not allowed in many other applications such as UV mapping.
 
@@ -18,16 +63,38 @@ Air meshes~\cite{Muller:2015} extends the technique of Zhang et al.~\cite{Zhang:
 
 \citep{Smith:2015} take a different approach: instead of using a scaffold triangulation, the authors introduce a locally supported barrier function for the boundary to prevent intersection and explicitly limit the line search by computing the singularities of both the distortion energy and the boundary barrier function. Such an approach is inspired by traditional collision detection and response methods that are discussed below. Given a  bijective starting point, this approach never leaves the space of bijective maps during optimization.  Its main limitation is that it is computationally expensive, especially for large models. Our method is two order of magnitude faster (Figure \ref{scaf:fig:smith}).
 
-\subsection*{Collision Detection and Response.}
-While not directly related to our approach, bijective maps inherently  involve some form of collision detection and response to avoid overlaps.  The field on collision detection is vast, and we refer the reader to a survey~\cite{jimenez:2001}. In terms of simulations, methods such as asynchronous contact mechanics~\cite{Harmon:2009,harmon2010robust,Ainsley:2012} ensure the bijective property but are very expensive and designed to operate as part of a simulation. Differently, our approach is specialized for geometric optimization, where we are interested in a  quasi-static solution (i.e. we do not want to explicitly simulate a dynamic system, but only find an equilibrium solution).
+\paragraph{Global Parametrization} 
 
-The work that is closer to ours in term of application (but very different in term of formulation) is \cite{Harmon:2011}, where collision detection and response is used to interactively deform shapes while avoiding self-intersections. Similarly to the previous methods, the explicit detection and iterative response is expensive when many collisions happen at the same time.  Our work avoids these expensive computations, and can robustly handle hundreds of simultaneous collisions while still making large steps in the optimization.
+Conformal mesh parametrization algorithms adapt the mesh during optimization, as a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric.
 
-\subsection*{Seam Creation.}
+All these methods require changing the mesh connectivity of a triangle mesh, and could thus benefit from our framework in Chapter~\ref{chp:wmtk} to simplify their implementation and parallelize the mesh editing operations. 
+
+\subsection*{Texture Seam Creation.}
 In the context of parametrization, some approaches optimize the connectivity of the charts of the surface during parametrization to obtain a bijective map.  \cite{Levy:2002,Zhou:2004} parameterize the surface and then split charts based on whether they intersect~\cite{Levy:2002} or based on a level of distortion~\cite{Zhou:2004}.  Sorkine et al.~\cite{Sorkine:2002} employ a bottom-up approach and add triangles to a parametrization chart until bijectivity would be violated. The problem we are solving is more general (seams are only useful for texture mapping applications) and constrained (we preserve the prescribed seams). Our algorithm could be used by these algorithms to parametrize single charts, which could reduce the number of additional seams.
 
 
-\section{Prism: Related Works}
+\subsection{Isotopy between surfaces}
+
+\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.
+
+
+\paragraph{Shell Maps}
+2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{prism:sec:applications}.
+
+\section{Attribute Association and Transfer}
+\paragraph{Common Domains}
+Or cross parameterizations?
+
+A different approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
+\cite{maron2017convolutional,Aigerman:2015b,Aigerman:2014,Schuller:2013,Smith:2015,Rabinovich:2017,jiang2017simplicial,Weber:2014,Campen:2016,Muller:2015,Gotsman:2001,surazhsky2001morphing,Zhang:2005,Fu:2016,litke2005image,schmidt2019distortion}, a canonical coarse polyhedra \cite{kraevoy2004cross,praun2001consistent}, orbifolds \cite{Aigerman:2015,Aigerman:2017,Aigerman:2016}, Poincare disk \cite{Springborn:2008,stephenson2005introduction,Kharevych:2006,Jin:2008}, spectral basis \cite{Ovsjanikov:2012,Shoham:2019,Ovsjanikov:2017}, and abstract domains \cite{kraevoy2004cross,Schreiner:2004,Pietroni:2010}.
+While these approaches allow mappings between completely different surfaces, this is a hard problem to tackle in full generality fully automatically, with guarantees on the output (even some instances of the problem of global parametrization, i.e. maps from a specific type of almost everywhere flat domains to surfaces, lack a fully robust automatic solution).
+
+%
+Our approach uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
+
+ We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
+
+\subsection{Shell Overview}
 \label{prism:sec:related}
 We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{prism:sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{prism:sec:rel:shell}), which are closest to our work.
 
@@ -41,23 +108,12 @@ The problem is deeply connected with the generation of UV maps, which are piecew
 Modifying the normal field of a surface has roots in computer graphics for Phong illumination \cite{phong1975illumination}, and tessellation \cite{boubekeur2008phong}.  Orthographic, spherical, and cage based projections are commonly used to transfer attributes, even if they often leads to artifacts, due to their simplicity {\cite{blender,nguyen2007gpu}}. 
 Projections along a continuously-varying normal field has been used to define correspondences between neighbouring surfaces \cite{kobbelt1998interactive,lee2000displaced,panozzo2013weighted,Ezuz:2019}, but it is often discontinuous and non-bijective. While the discontinuities are tolerable for certain graphics applications (and they can be reduced by manually editing the cage), these approaches are not usable in cases where the procedure needs to be automated (batch processing of datasets) or when bijectivity is required (e.g., transfer of boundary conditions for finite element simulation).  These types of projection may be useful for some remeshing applications to eliminate surface details \cite{ebke2014level}, but it makes these approaches not practical for reliably transferring attributes. Our shell construction, algorithms, and associated projection operator, can be viewed as guaranteed continuous bijective  projection along a field. 
 
-\paragraph{Common Domains}
-
-A different approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
-\cite{maron2017convolutional,Aigerman:2015b,Aigerman:2014,Schuller:2013,Smith:2015,Rabinovich:2017,jiang2017simplicial,Weber:2014,Campen:2016,Muller:2015,Gotsman:2001,surazhsky2001morphing,Zhang:2005,Fu:2016,litke2005image,schmidt2019distortion}, a canonical coarse polyhedra \cite{kraevoy2004cross,praun2001consistent}, orbifolds \cite{Aigerman:2015,Aigerman:2017,Aigerman:2016}, Poincare disk \cite{Springborn:2008,stephenson2005introduction,Kharevych:2006,Jin:2008}, spectral basis \cite{Ovsjanikov:2012,Shoham:2019,Ovsjanikov:2017}, and abstract domains \cite{kraevoy2004cross,Schreiner:2004,Pietroni:2010}.
-While these approaches allow mappings between completely different surfaces, this is a hard problem to tackle in full generality fully automatically, with guarantees on the output (even some instances of the problem of global parametrization, i.e. maps from a specific type of almost everywhere flat domains to surfaces, lack a fully robust automatic solution).
-
-%
-Our approach uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
-%\ZJ{we might} 
- We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
-
 \paragraph{Attribute Tracking}
 
 In the specific context of remeshing or mesh optimization, algorithms have been proposed to explicitly track properties defined on the surface \cite{garland1997surface,cohen1997simplifying,dunyach2013adaptive} after every local operation. By following the operations in reverse order, it is possible to resample the attributes defined on the input surface. These methods are algorithm specific, and provide limited control over the distortion introduced in the mapping. Our algorithm provides a generic tool that enables any remeshing technique to obtain such a map with minimal modifications.%, and can explicitly reduce the integrated map distortion via refinement.
 
 
-\subsection{Shell Generation}
+\subsection{Mesh Generation}
 \label{prism:sec:rel:shell}
 The generation of shells (boundary layer meshes) around triangle meshes has been studied in graphics and scientific computing.
 
@@ -66,48 +122,21 @@ Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{h
 \revision{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
 where our optimized shells can be used for similar purposes.}
 
-\paragraph{Shell Maps}
-2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{prism:sec:applications}.
+\paragraph{Mesh Arrangements/Boolean Operations} 
 
-\paragraph{Boundary Layer}
-
-Boundary layers are commonly used in computational fluid dynamics simulations requiring highly anisotropic meshing close to the boundary of objects. Their generation is considered challenging \cite{aubry2015most,aubry2017boundary,garimella2000boundary}. These methods generate shells around a given surface, but do not provide a bijective map suitable for attribute transfer.
-%Our shells provide an alternative robust and simple method for solving this problem, including handling surfaces with singularities in a simple way. \DZ{why \cite{aubry2015most} cannot be used to do everything we can do? best to explain}
-%(Section \ref{prism:sec:singularities})\ZJ{The problem is first identified in \cite{sharov2003unstructured} and \cite{aubry2017boundary} provides the provable construction. The advantage of ours is probably robust and simple, in the sense of not requiring spherical Voronoi diagram}.
-%We show preliminary results in Section \ref{prism:sec:applications}, where our method coupled with TetGen \cite{si2015tetgen} enables to produce high-quality boundary layers. %\TS{not necessary->} We, however, postpone the integration into a CFD solver and a more complete study and comparison of our boundary layers algorithms in practical simulation settings to future work.
+Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{wmtk:sec:applications}) can be extended for a similar purpose.
 
 \paragraph{Collision and Animation}
+While not directly related to our approach, bijective maps inherently  involve some form of collision detection and response to avoid overlaps.  The field on collision detection is vast, and we refer the reader to a survey~\cite{jimenez:2001}. 
+In terms of simulations, methods such as asynchronous contact mechanics~\cite{Harmon:2009,harmon2010robust,Ainsley:2012} ensure the bijective property but are very expensive and designed to operate as part of a simulation. Our approach in Chapter~\ref{chp:scaf} is specialized for geometric optimization, where we are interested in a  quasi-static solution (i.e. we do not want to explicitly simulate a dynamic system, but only find an equilibrium solution).
 
-Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \revision{\cite{botsch2006primo,botsch2003multiresolution}} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface. %We are not aware of any other method providing such a map.
+The work that is closer to Chapter~\ref{chp:scaf} in term of application (but very different in term of formulation) is \cite{Harmon:2011}, where collision detection and response is used to interactively deform shapes while avoiding self-intersections. Similarly to the previous methods, the explicit detection and iterative response is expensive when many collisions happen at the same time.  Our work avoids these expensive computations, and can robustly handle hundreds of simultaneous collisions while still making large steps in the optimization.
 
-\subsection{Robust Geometry Processing}
-
-The closest works, in terms of applications, to our contribution are the recent algorithms enabling black-box geometry processing pipelines to solve PDEs on meshes \emph{in the wild}. 
-
-%\ZJ{New attempt to rewrite the paragraph. If Rewrite}
-
-\revision{\cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
-benefiting the numerical stability of some surface based geometry processing algorithms.
-These algorithms are orders of magnitude faster than our pipeline, but, since they are refinement methods, cannot coarsen dense input models.
-%\cite{yi2018delaunay} further offers an optimization procedure to simplify the meshes while keeping the Delaunay property, making it more suitable for efficient downstream computation. However, since the geometry changes, the correspondence with the input surface is nontrivial to maintain. Our method could be used in such an approach to easily compute this correspondence.
-%
-While targeting a different application, \cite{sharp2019navigating} offers an alternative solution, %with special basis constructed on the input polyhedral geometry. This construction
-which is more efficient than the extrinsic techniques \cite{liu2015efficient} since it avoids the realization of the extrinsic mesh (thus naturally maintaining the correspondence to the input, but limiting its applicability to non-volumetric problems) and it alleviates the introduction of additional degrees of freedom.}
-\revision{\cite{Sharp:2020:LNT} further generalizes \cite{sharp2019navigating} to handle non-manifold and non-orientable inputs, which our approach currently does not support.}
-
-% \ZJ{Original Else}
-% \ZJ{End}
+In Chapter~\ref{chp:shell} and ~\ref{chp:curve}
+Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \cite{botsch2006primo,botsch2003multiresolution} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface.
 
 
-TetWild \cite{hu2018tetrahedral,Hu:2019:fTetWild}
-can robustly convert triangle soups into high-quality tetrahedral meshes, suitable for FEM analysis. Their approach does not provide a way to transfer boundary conditions from the input surface to the boundary of the tetrahedral mesh. Our approach, when combined with a tetrahedral mesher that does not modify the boundary, enables to remesh low-quality surface, create a tetrahedral mesh, solve a PDE, and transfer back the solution (Figure \ref{prism:fig:teaser}). However, our method does not support triangle soups, and it is limited to manifold and orientable surfaces.
-
-\subsection{Isotopy between surfaces}
-
-\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.
-
-
-\section{Cumin}\label{cumin:sec:related}
+\section{Mesh Generation}\label{cumin:sec:related}
 
 We review the literature on the generation of unstructured and structured curved meshes. We also review the literature on boundary-preserving linear meshing, as it is an intermediate step of our algorithm.
 
@@ -176,7 +205,7 @@ A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrah
 
 Due to these issues, we propose a novel boundary-preserving tetrahedral meshing algorithm specifically tailored for the shell mesh generated by our curved meshing algorithm.
 
-\subsection{Curved Surface Fitting}
+\subsection{Curved Surface Meshes}
 There are many algorithms for fitting curved \emph{surfaces} to dense 3D triangle meshes. The most popular approaches fit spline patches, usually on top of a quadrangular grid. Since generating quadrilateral meshes is a challenging problem for which robust solutions do not exist yet, we refer to \cite{QUADSTAR2012} for an overview, and only review in this section algorithms for unstructured curve{d} mesh generation, which are more similar to our algorithm. We note that the focus of our paper is volumetric meshing: while we generate an intermediate curved surface mesh, this is not the goal of our algorithm, especially since the generated surface is only $C^0$ on edges.
 
 \cite{hoppe1994piecewise} fits a smooth surface represented by a point cloud to a curved triangle mesh based on a subdivision surface scheme and an interleaving mesh simplification and fitting pipeline that preserves sharp features. 
@@ -194,220 +223,7 @@ More recent work \cite{TONG2009} approximates the triangulation of an implicit s
 %
 These schemes are usually designed to interpolate existing meshes rather than simplifying a dense linear mesh into a coarse curved mesh and are thus orthogonal to our contribution.
 
-% \cite{losasso2003smooth} Smooth geometry images. quad mesh?
-
-% \url{https://www.graphics.rwth-aachen.de/media/papers/campen_siggraph2017_Similarity-T-Splines.pdf}
-
-% \TODO{better to change gmsh paper to: The Generation of Valid Curvilinear Meshes}
-
-
-\section{wmtk: Related Work}
-\label{wmtk:sec:related}
-
-\subsection{Mesh Data Structures}
-
-Efficient data structures for representing solid geometry have been an intriguing
-research topic since the early days of computer graphics \cite{Requicha1980}. As
-a result, there is a large variety of mesh data structure designs, where they
-are each optimized for different usage scenarios. Index-array-based mesh data
-structure encodes each element as a list of vertex indices on its
-boundary.  It is simple and memory efficient, but neighborhood query and local
-operations are not directly supported.
-Graph-based mesh data structures, including half-edge \cite{Maentylae1987},
-winged-edge \cite{Baumgart1972}, quad-edge \cite{Guibas1985}, cell-tuple
-\cite{Brisson1989}, etc., view meshes as graphs, where each element contains
-links to its adjacent elements. This design allows for efficient local query
-and update, making it ideal for algorithms like mesh simplification
-\cite{garland1997surface}. Linear-algebra-based mesh data structures, such as
-\cite{Dicarlo2014,Zayer2017,Mahmoud2021}, encode adjacency information as sparse
-matrices.  This design elegantly reduces neighborhood query and local operations
-to sparse matrix computations, which are highly optimized for modern parallel
-computing architecture. \revision{Closely related, is the concept of generalized combinatorial maps \cite{lienhardt1994n, dufourd1991obj3}, and the CGoGN library \cite{kraemer2014cgogn} provide an efficient implementation which provide parallel traversal of the mesh.}
-%
-By design, mesh data structures provide a low-level interface to
-manipulate vertices, edges, faces, and tetrahedra.
-Different designs differ vastly in API and implementation details, making it hard to port algorithm from one data structure to another. In contrast, our framework decouples mesh data structure choice from algorithm specification, providing the flexibility of switching the underlying data structure in a seamless manner.
-
-
-
-
-
-
-
-%% Classic mesh data structure.
-%Efficient data structure for representing solid geometry as piecewise linear
-%cell complex has been an intriguing research topic since the early days of
-%computer graphics \cite{Requicha1980}. The widely used half-edge data structure
-%\cite{Maentylae1987} and its close siblings, winged-edge \cite{Baumgart1972} and
-%quad-edge \cite{Guibas1985}, took an edge-centric view of 2-manifold surfaces,
-%where each edge is represented as 2 oppositely oriented half-edges with links to
-%their incident vertices and face.  The half-edge data structure is commonly used
-%in geometry processing library
-%(such as \cite{cgal2008computational,botsch2002openmesh})
-%for its constant-time local adjacency queries and
-%efficient local operations like edge collapse and split.
-%Recent half-edge-inspired data structures such OpenVolumeMesh
-%\cite{kremer2013openvolumemesh} 
-%and
-%Array-Based Half-Facet \cite{Dyedov2015} removes the limitation of 2-manifold
-%surface and are capable of representing non-manifold and 3D cell
-%complexes.
-%The Cell-tuple structure \cite{Brisson1989} generalizes half-edge to provide a
-%unified representation of subdivided manifolds of arbitrary dimension.
-%\QZ{Mabye add a brief statement on why we pick cell-tuple  over others.}
-%
-%% Linear-algebra-based data structure.
-%With the rapid advancement in high performance computing, a number of recent
-%work aims to design efficient mesh data structure that leverages modern computer
-%hardware such as GPU. Linear Algebra Representation \cite{Dicarlo2014} proposes
-%to use sparse matrix to encode adjacency information between $k$ and
-%$(k-1)$-cells.  In this setting, local adjacency queries reduce to sparse matrix
-%manipulations, which have been well studied by the high performance computing
-%community.  Similarly, Mesh Matrix representation \cite{Zayer2017} directly uses
-%a sparse matrix to store face-vertex adjacency information while tracking the
-%vertex ordering.  Common mesh operations such vertex normal computation are
-%cast as linear algebra operations enabled by their customized action maps.
-%More recently, \cite{Mahmoud2021} combines the mesh-as-sparse-matrix design with 
-%surface partitioning to form Ribbon-matriX Mesh (aka RXMesh) that captures
-%geometric locality with modern GPU's memory.
-%\QZ{Maybe add some drawbacks of these approaches.}
-%
-%% Other mesh data structure.
-%All of the aforementioned data structures store topological information about a
-%mesh, the corresponding geometric information is often stored separately as an
-%array of vertex coordinates. In contrast, Signpost data structure
-%\cite{Sharp2019} proposes to store the direction and distance to adjacent
-%vertices from a given vertex, which is sufficient to encode intrinsic
-%triangulation of 2-manifold. Both vertex coordinates and SignPost data can be
-%captured as per-element attributes in our IDSA data structure.
-
-%\DP{https://dl.acm.org/doi/abs/10.1145/1071866.1071882}
-
-%\url{https://www.ece.ucdavis.edu/~ahdhn/files/RXMesh_SIGGRAPH2021.pdf}
-%\ZJ{Don't forget the original tuple 1999 paper.}
-
-%OpenVolumeMesh, IntrisicTriangulation, 
-
-%\QZ{
-%Classic mesh data structure:
-%
-%\begin{itemize}
-%\item \cite{Requicha1980}: Early solid representations.
-%\item \cite{Maentylae1987}: Book containing half-edge data structure.
-%\item \cite{Baumgart1972}: Winged edge.
-%\item \cite{Guibas1985}: Quad edge.
-%\item \cite{Brisson1989}: Cell-tuple.
-%\item \cite{kremer2013openvolumemesh}: OpenVolumeMesh.  Extends half edge to half face.  Store
-%top-down and optionally bottom-up incidence relations.  Handles non-manifold 2d
-%and 3d cell complexes.  Only handle up to 3 dimensional cell complex.
-%\item \cite{Dyedov2015}: Array-based half-facet data structure. Use structure of
-%arrays for storage.  Only store $d$, $d-1$ and 1-dimensional entities (i.e.
-%edges are not explicitly stored).  Works with non-manifold and mixed dimensional
-%mesh.
-%\end{itemize}
-%
-%Mesh as sparse matrix representations:
-%
-%\begin{itemize}
-%\item \cite{Dicarlo2014}: LAR: Linear Algebra Representation.
-%\item \cite{Zayer2017}: Mesh Matrix.
-%\item \cite{Mahmoud2021}: RXMesh.
-%\end{itemize}
-%
-%Other data structures:
-%\begin{itemize}
-%\item \cite{Sharp2019}: Signpost data structure for intrinsic Delaunay.
-%\end{itemize}
-%}
-
-\subsection{Domain specific languages in graphics}
-%Other PL: halide (published in POPL) assembles for regular structure, Simit for fixed unstructured mesh.
-%Taichi [Hu 2020] sparse volume data.
-%Penrose [Ye 2020] \ZJ{good writing example}.
-%Taco
-Our abstraction model of mesh processing algorithms draw inspiration from domain
-specific languages (DSL) in graphics.  For dense regularly structured data such
-as images, Halide \cite{ragan2013halide} popularized the idea of decoupling image
-processing operations from low level scheduling tasks. Similar abstraction that
-separates algorithm description from low level data structure and/or parallel
-architecture can also be found in other DSLs such as Simit
-\cite{kjolstad2016simit} for simulation over triangle meshes, Taco
-\cite{kjolstad2017taco} for dense and sparse tensor algebra, Taichi
-\cite{hu2019taichi} for simulation over sparse volumetric data, and Penrose
-\cite{ye2020penrose} for generating diagrams from math notation.
-
-\subsection{Parallel Meshing}
-%\cite{zhou2012tools} and others from M. Shephard group: mostly on how to partition the mesh, and communicate between processors.
-%
-%\ZJ{Also, a lot work on partition the mesh. MPI (distributed memory) vs TBB with shared memory, we are claiming speed-up and ease-of-use only.} 
-%
-%\DP{Review the works, and the ones cited by \url{https://scholar.google.com/citations?user=i0zT6P4AAAAJ&hl=en} }
-
-% \DP{This is for Gurki and Teseo}
-
-To meet the demand of generating large meshes,
-a number of popular mesh generation algorithms have been redesigned to
-leverage modern parallel computing hardware, both in a shared memory and distributed memory setting. Typically a divide-and-conquer strategy is adopted where a mesh is partitioned to run local processing operations
-on each subdomain in parallel.  There are two key challenges involved: (1) how to
-handle operations involving elements shared by multiple partitions; (2) how to
-ensure load stay balanced across different processors as the mesh evolves.
-
-One way to mitigate both challenges is to ensure mesh is partitioned into
-similar sized patches with high area to boundary ratio.
-A large number of partitioning strategies are available, including
-clustering-based approaches \cite{Mahmoud2021}, spacial-hierarchy-based approach
-\cite{loseille2017unique,lo2012parallel}, space-filling-curve-based approach
-\cite{marot2019one,borrell2018parallel}, and general purpose graph partitioning \cite{karypis1998fast}. Many variations of space-filling curves have also been used to construct mesh partitions \cite{chrisochoides2006parallel, aluru1997parallel}.
-%
-To handle potential conflicts that may arise at partition boundaries,
-various synchronization strategies have been proposed
-\cite{okusanya1996parallel,chrisochoides2003parallel,chrisochoides2006parallel} to minimize the amount of
-communication.
-%
-
-After generating the submeshes, some methods allow each compute node to work on them independently without synchronization. Once all threads are done, the meshes are merged \cite{Cignoni1993, chen2010merge, funke2017parallel, blelloch1999design}. However these methods require complicated merge steps since the tetrahedra in the intermediate boundaries may not align. There are some techniques that compromise the Delaunay condition in some cases, so that the merging operation can be simpler \cite{lachat2014parallel}. 
-%
-To avoid the tricky merge operations, other parallel strategies maintain a single complete Delaunay tetrahedralization and use synchronization techniques to avoid race conditions when working on a partition boundary \cite{okusanya19973, chrisochoides2003parallel}. The parallel constrained Delaunay meshing algorithm \cite{chew1997parallel} cleverly defines the boundary and edge constrains to reduce the variable and unpredictable communication patterns. Some other techniques use locks for handling conflicts and data races \cite{blandford2006engineering, batista2010parallel, foteinos2011dynamic}. 
-%
-
-Another set of methods use recursive divide-and-conquer techniques for parallel implementation on shared memory machines \cite{marot2020quality}. All threads independently work on the internal parts of the mesh and skip the operations at the boundary. After this phase, processing of only the boundary elements becomes the new problem. This technique is then recursively used until all the mesh elements are processed. A similar set of techniques use clever space-filling curves for re-partitioning the mesh boundaries after each recursive phase \cite{chrisochoides2006parallel, aluru1997parallel}. %Using any of these approaches in distributed scenarios will be highly inefficient as they require numerous mesh repartitionings, which will have a large communication overhead.
-%
-
-Since the submesh boundaries are the main areas of concern, some methods entirely avoid any operations on these boundaries while ensuring the correctness of the result \cite{galtier1996prepartitioning, linardakis2006delaunay}. These methods precompute the domain separators such that their facets are Delaunay admissible. This  completely eliminates synchronization overheads, but only applies for Delaunay meshing.
-%
-
-Another conflict handling strategy is to simply reject the offending operations
-and try executing them later with a new domain partitioning \cite{marot2019one}.
-This reject-and-repartition strategy may not guarantee algorithm termination,
-thus special care is needed to handle this case.
-%
-
-As the domain mesh evolves, keeping load balanced across processors becomes
-critical. Typically, this is done by periodically repartitioning the updated mesh.
-\citet{zhou2012tools} proposes a predictive load balancing method to keep
-partitions balanced. \citet{marot2019one} uses simple rescaling of the
-space-filling curve to repartition the domain.
-
-In this work, we are targeting only shared-memory parallelism, thus making the problem of reducing communications between processors less relevant. We use a graph-based space partitioning technique \cite{karypis1998fast} due to its simplicity and availability as open-source code (METIS), but we use it only to reduce the risk of conflicts. To avoid conflicts, we use a shared memory locking mechanism. This approach is only possible for shared-memory parallelism but has the major advantage of not requiring rebalancing and to respect, to a certain degree, the execution order prescribed by the user-code. This approach is possible thanks to the availability of efficient parallel atomic instructions, and parallel libraries based on them (oneTBB).
-
-
-%\textbf{Gurki first draft:}
-
-%Parallel delaunay triangulation is a well studied problem and while the exact strategies may not work, it is very relevant for parallel FtetWild. FtetWild begins with Delaunay tetrahedralization which is followed by some custom mesh optimization operations which affect the mesh at a small neighbourhood in each iteration. Delaunay techniques which use point insertion on an initial mesh follow similar properties and various strategies have been developed to parallelize the operation \cite{chrisochoides2006parallel}.
-
-%A triangulated mesh can be partitioned into multiple submeshes for use in both distributed and shared memory scenarios. Some generic graph/mesh partitioning libraries like METIS \cite{karypis1998fast} can be used for this purpose. Many variations of space-filling curves have also been used to construct mesh partitions \cite{chrisochoides2006parallel, aluru1997parallel} for use in parallel delaunay algorithms. METIS was used in this project since it is easy to use and can be extended to distributed memory versions.
-
-% After generating the submeshes, some collection of methods allow each compute node to work on them independently without any synchronization. Once all threads are done, all delaunay meshes are merged into a single larger mesh \cite{https://doi.org/10.1111/1467-8659.1230129, chen2010merge, funke2017parallel, blelloch1999design}. Each partition can be stored on a node of a distributed cluster, if the algorithm needs to be extended for distributed scenarios. However these methods require complicated merge steps since the tets in the intermediate boundaries may not align. It is especially difficult to use this approach for FtetWild since the mesh optimization operations may lead to wildly different intermediate boundaries (both in tets and vertices). There are some techniques that compromise the Delaunay condition in some cases, so that the merging operation can be simpler \cite{lachat2014parallel}. But this category of methods are not relevant for FtetWild.
-
-% To avoid the tricky merge operations, other parallel strategies maintain a single complete Delaunay tetrahedralization and use synchronization techniques to avoid race conditions when working on a partition boundary \cite{okusanya19973, chrisochoides2003parallel}. Parallel Constrained Delaunay Meshing algorithm \cite{chew1997parallel} cleverly defines the boundary and edge constrains to reduce the variable and unpredictable communication patterns. Some other techniques use locks for handling conflicts and data races \cite{blandford2006engineering, batista2010parallel, foteinos2011dynamic}. Since these approaches are very specific to Delaunay, none of these can be directly used in FtetWild. But since this category of methods are easier to extend to distributed memory scenarios, the lock based approach is used in this paper.
-
-% Another set of methods use recursive divide-and-conquer techniques for parallel implementation on shared memory machines \cite{marot2020quality}. All threads independently work on the internal parts of the mesh and skip the operations at the boundary. After this phase, processing of only the boundary elements becomes the new problem. This technique is then recursively used until all the mesh elements are processed. A similar set of techniques use clever space-filling curves for re-partitioning the mesh boundaries after each recursive phase \cite{chrisochoides2006parallel, aluru1997parallel}. Using any of these approaches in distributed scenarios will be highly inefficient as they require numerous mesh repartitionings , which will have a huge communication overhead.
-
-% Since the submesh boundaries are the main areas of concern, some methods entirely avoid any operations on these boundaries while ensuring the correctness of the result \cite{galtier1996prepartitioning, linardakis2006delaunay}. These Decoupled methods precompute the domain separators such that their facets are Delaunay admissible. This leads to 100\% code reuse and completely eliminates synchronization overheads. They are however difficult to extend for 3D meshes and can't directly be extended for the different kinds of operations in FtetWild.
-
-\subsection{Scope of Mesh Editing}
-
-\paragraph{Mesh Generation}
+\subsection{Mesh Generation}
 
 Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,si2015tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
 
@@ -437,33 +253,70 @@ A different approach is discussed in \cite{Grinspun:2002}, where the refinement 
 When remeshing is paired with algorithms simulating contacts that do not tolerate interpenetrations (for example \cite{Li2020IPC}), it is necessary to ensure that adaptive remeshing does not break this invariant. This can be achieved adding non-penetration constraints to each local mesh editing operations, as proposed in \cite{Brochu:2012}. Our framework is ideal for developing such methods, as additional constraints can be added to existing mesh editing algorithms with minimal modifications, as we demonstrate in Section \ref{wmtk:sec:applications}.
 
 
-% \paragraph{Adaptive Rendering} Nanite, LOD, terrain modeling and representation, other approaches, \DP{Jeremie or Yixin?}
-% \TODO{Daniele}
-% some random citations to start from
+\subsection{Parallel Meshing}
 
-% C-BDAM - Compressed Batched Dynamic Adaptive Meshes for Terrain Rendering   eg2006-cbdam.pdf
-% Enrico Gobbetti, Fabio Marton, Paolo Cignoni, Marco Di Benedetto, Fabio Ganovelli
-% Computer Graphics Forum, Volume 25, Number 3 - sep 2006
+To meet the demand of generating large meshes,
+a number of popular mesh generation algorithms have been redesigned to
+leverage modern parallel computing hardware, both in a shared memory and distributed memory setting. Typically a divide-and-conquer strategy is adopted where a mesh is partitioned to run local processing operations
+on each subdomain in parallel.  There are two key challenges involved: (1) how to
+handle operations involving elements shared by multiple partitions; (2) how to
+ensure load stay balanced across different processors as the mesh evolves.
 
-% Adaptive TetraPuzzles: Efficient Out-of-Core Construction and Visualization of Gigantic Multiresolution Polygonal Models   vbdam\_sig04.pdf
-% Paolo Cignoni, Fabio Ganovelli, Enrico Gobbetti, Fabio Marton, Federico Ponchio, Roberto Scopigno
-% ACM Trans. on Graphics, Volume 23, Number 3, page 796-803 - 2004
+One way to mitigate both challenges is to ensure mesh is partitioned into
+similar sized patches with high area to boundary ratio.
+A large number of partitioning strategies are available, including
+clustering-based approaches \cite{Mahmoud2021}, spacial-hierarchy-based approach
+\cite{loseille2017unique,lo2012parallel}, space-filling-curve-based approach
+\cite{marot2019one,borrell2018parallel}, and general purpose graph partitioning \cite{karypis1998fast}. Many variations of space-filling curves have also been used to construct mesh partitions \cite{chrisochoides2006parallel, aluru1997parallel}.
+%
+To handle potential conflicts that may arise at partition boundaries,
+various synchronization strategies have been proposed
+\cite{okusanya1996parallel,chrisochoides2003parallel,chrisochoides2006parallel} to minimize the amount of
+communication.
+%
 
-% Planet-sized batched dynamic adaptive meshes (P-BDAM)  
-% Paolo Cignoni, Fabio Ganovelli, Enrico Gobbetti, Fabio Marton, Federico Ponchio, Roberto Scopigno
-% Proc. of IEEE Visualization 2003, page 147-155 - 2003
+After generating the submeshes, some methods allow each compute node to work on them independently without synchronization. Once all threads are done, the meshes are merged \cite{Cignoni1993, chen2010merge, funke2017parallel, blelloch1999design}. However these methods require complicated merge steps since the tetrahedra in the intermediate boundaries may not align. There are some techniques that compromise the Delaunay condition in some cases, so that the merging operation can be simpler \cite{lachat2014parallel}. 
+%
+To avoid the tricky merge operations, other parallel strategies maintain a single complete Delaunay tetrahedralization and use synchronization techniques to avoid race conditions when working on a partition boundary \cite{okusanya19973, chrisochoides2003parallel}. The parallel constrained Delaunay meshing algorithm \cite{chew1997parallel} cleverly defines the boundary and edge constrains to reduce the variable and unpredictable communication patterns. Some other techniques use locks for handling conflicts and data races \cite{blandford2006engineering, batista2010parallel, foteinos2011dynamic}. 
+%
 
-% Selective Refinement Queries for Volume Visualization of Unstructured Tetrahedral Meshes  
-% Paolo Cignoni, Paola Magillo, Leila De Floriani, Enrico Puppo, Roberto Scopigno
-% IEEE Transaction on Visualization and Computer Graphics, Volume 10, Number 1, page 29-45 - Feb 2004
+Another set of methods use recursive divide-and-conquer techniques for parallel implementation on shared memory machines \cite{marot2020quality}. All threads independently work on the internal parts of the mesh and skip the operations at the boundary. After this phase, processing of only the boundary elements becomes the new problem. This technique is then recursively used until all the mesh elements are processed. A similar set of techniques use clever space-filling curves for re-partitioning the mesh boundaries after each recursive phase \cite{chrisochoides2006parallel, aluru1997parallel}.
+%
+
+Since the submesh boundaries are the main areas of concern, some methods entirely avoid any operations on these boundaries while ensuring the correctness of the result \cite{galtier1996prepartitioning, linardakis2006delaunay}. These methods precompute the domain separators such that their facets are Delaunay admissible. This  completely eliminates synchronization overheads, but only applies for Delaunay meshing.
+%
+
+Another conflict handling strategy is to simply reject the offending operations
+and try executing them later with a new domain partitioning \cite{marot2019one}.
+This reject-and-repartition strategy may not guarantee algorithm termination,
+thus special care is needed to handle this case.
+%
+
+As the domain mesh evolves, keeping load balanced across processors becomes
+critical. Typically, this is done by periodically repartitioning the updated mesh.
+\citet{zhou2012tools} proposes a predictive load balancing method to keep
+partitions balanced. \citet{marot2019one} uses simple rescaling of the
+space-filling curve to repartition the domain.
+
+In this work, we are targeting only shared-memory parallelism, thus making the problem of reducing communications between processors less relevant. We use a graph-based space partitioning technique \cite{karypis1998fast} due to its simplicity and availability as open-source code (METIS), but we use it only to reduce the risk of conflicts. To avoid conflicts, we use a shared memory locking mechanism. This approach is only possible for shared-memory parallelism but has the major advantage of not requiring rebalancing and to respect, to a certain degree, the execution order prescribed by the user-code. This approach is possible thanks to the availability of efficient parallel atomic instructions, and parallel libraries based on them (oneTBB).
 
 
-\paragraph{Parametrization} 
+\paragraph{Boundary Layer}
 
-Conformal mesh parametrization algorithms adapt the mesh during optimization, as a a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric.
+Boundary layers are commonly used in computational fluid dynamics simulations requiring highly anisotropic meshing close to the boundary of objects. Their generation is considered challenging \cite{aubry2015most,aubry2017boundary,garimella2000boundary}. These methods generate shells around a given surface, but do not provide a bijective map suitable for attribute transfer.
 
-All these methods require changing the mesh connectivity of a triangle mesh, and could thus benefit from our framework to simplify their implementation and parallelize the mesh editing operations. 
+\section{Robust Geometry Processing}
 
-\paragraph{Mesh Arrangements/Boolean Operations} 
+The closest works, in terms of applications, to our contribution are the recent algorithms enabling black-box geometry processing pipelines to solve PDEs on meshes \emph{in the wild}. 
 
-Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{wmtk:sec:applications}) can be extended for a similar purpose.
+\cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
+benefiting the numerical stability of some surface based geometry processing algorithms.
+These algorithms are orders of magnitude faster than our pipeline, but, since they are refinement methods, cannot coarsen dense input models.
+%
+While targeting a different application, \cite{sharp2019navigating} offers an alternative solution, 
+which is more efficient than the extrinsic techniques \cite{liu2015efficient} since it avoids the realization of the extrinsic mesh (thus naturally maintaining the correspondence to the input, but limiting its applicability to non-volumetric problems) and it alleviates the introduction of additional degrees of freedom.
+\cite{Sharp:2020:LNT} further generalizes \cite{sharp2019navigating} to handle non-manifold and non-orientable inputs, which our approach currently does not support.
+
+
+TetWild \cite{hu2018tetrahedral,Hu:2019:fTetWild}
+can robustly convert triangle soups into high-quality tetrahedral meshes, suitable for FEM analysis. Their approach does not provide a way to transfer boundary conditions from the input surface to the boundary of the tetrahedral mesh. Our approach, when combined with a tetrahedral mesher that does not modify the boundary, enables to remesh low-quality surface, create a tetrahedral mesh, solve a PDE, and transfer back the solution (Figure \ref{prism:fig:teaser}). However, our method does not support triangle soups, and it is limited to manifold and orientable surfaces.
