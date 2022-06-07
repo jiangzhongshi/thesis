@@ -939,7 +939,7 @@ Hormann, K., L{\'e}vy, B., and Sheffer, A. (2007).
   ACM.
 
 \bibitem[Hormann and Sukumar, 2017]{Hormann:2017:GBC}
-Hormann, K. and Sukumar, N., editors (2017).
+Hormann, K. and Sukumar, N. (2017).
 \newblock {\em Generalized Barycentric Coordinates in Computer Graphics and
   Computational Mechanics}.
 \newblock CRC Press, Boca Raton, FL.
@@ -1845,8 +1845,13 @@ Shoham, M., Vaxman, A., and Ben-Chen, M. (2019).
 \newblock Hierarchical functional maps between subdivision surfaces.
 \newblock {\em Computer Graphics Forum}, 38(5):55--73.
 
-\bibitem[Si, 2015]{si2015tetgen}
-Si, H. (2015).
+\bibitem[Si, 2015a]{tetgen}
+Si, H. (2015a).
+\newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
+\newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
+
+\bibitem[Si, 2015b]{si2015tetgen}
+Si, H. (2015b).
 \newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
 \newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(2):1--36.
 
