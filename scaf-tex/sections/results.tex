@@ -11,7 +11,7 @@ We implemented our algorithm in C++ using Eigen for linear algebra routines. We 
 \paragraph{Robustness.} To demonstrate the robustness of our algorithm, we computed  bijective maps for all the 102 meshes parametrized by the MIQ algorithm \cite{Bommes:2009} \revision{and for the 17 meshes parametrized by  \cite{Myles:2014}} in the dataset proposed by \cite{Myles:2014}. The cuts in these meshes have been designed for locally injective parametrization that usually have major self-overlap. We use them as a stress test for the effectiveness and robustness of our method:  the cuts introduce a massive distortion in the Tutte initialization and lead to boundaries that are prone to overlap in hundreds of locations. Our method successfully creates bijective parametrizations for all these models with default parameters. We attach all the parametrized models in the additional material and show two examples in Figure \ref{scaf:fig:miq_database}. 
 
 
-\paragraph{Scalability.} Our methods scales gracefully to large datasets, similarly to \cite{Rabinovich:2017}. We repeat their scalability experiment, but producing bijective maps instead of just locally injective maps (Figure \ref{scaf:fig:scalability}). The behaviour is remarkably similar --- the density of the model (and consequently of the scaffold) does not affect the number of required iterations. 
+\paragraph{Scalability.} Our methods scales gracefully to large datasets, similarly to \cite{rabinovich2017scalable}. We repeat their scalability experiment, but producing bijective maps instead of just locally injective maps (Figure \ref{scaf:fig:scalability}). The behaviour is remarkably similar --- the density of the model (and consequently of the scaffold) does not affect the number of required iterations. 
 
 \begin{figure}[t]
 \includegraphics[width=\columnwidth]{scaf-tex/figs/lucy-scalability}
@@ -28,7 +28,7 @@ Our algorithm can bijectively parameterize a single patch (Figure \ref{scaf:fig:
 
 \begin{figure}[t]
 \includegraphics[width=8cm]{scaf-tex/figs/the_animal}
-\caption{A mesh is cut by an artist into a single chart and parametrized using SLIM \protect\cite{Rabinovich:2017} (left) and with our algorithm (right). Note that local-injectivity is not sufficient for this model, since the global overlaps in the highlighted region prevent this parametrization from being a UV texture map. Our result (right) is guaranteed to be bijective.}
+\caption{A mesh is cut by an artist into a single chart and parametrized using SLIM \protect\cite{rabinovich2017scalable} (left) and with our algorithm (right). Note that local-injectivity is not sufficient for this model, since the global overlaps in the highlighted region prevent this parametrization from being a UV texture map. Our result (right) is guaranteed to be bijective.}
 \label{scaf:fig:manuallycut}
 \vspace{-0.2cm}
 \end{figure}
@@ -59,7 +59,7 @@ Our algorithm can be generalized to handle mixed dimension problems, such as the
 A more challenging stress test is shown in Figure \ref{scaf:fig:rabbit}, where the bunny model is scaled up inside a box, to 30 times its original size. No self-intersections are introduced, despite the extreme, constrained deformation.
 
 \paragraph{Comparison with \cite{Smith:2015}}
-The algorithm closest to ours is \cite{Smith:2015}, which tackles a similar problem (restricted to the 2D case). We replicated the space filling curve experiment and obtained remarkably similar results, where our running time is 96s, compared with 8,472s for \cite{Smith:2015} (88 times faster). We show in Figure \ref{scaf:fig:smith} a more challenging experiment with a subdivided version of the space filling curve to emphasize the performance difference: our algorithm converges in 39 minutes, while \cite{Smith:2015} did not converge after 5 days and 21 hours. For this example, we used the procedure suggested in \cite{Rabinovich:2017}: we performed a few iterations minimizing the quadratic proxy and then switch to a traditional newton method until numerical convergence. A video of the optimization is provided in the additional material.
+The algorithm closest to ours is \cite{Smith:2015}, which tackles a similar problem (restricted to the 2D case). We replicated the space filling curve experiment and obtained remarkably similar results, where our running time is 96s, compared with 8,472s for \cite{Smith:2015} (88 times faster). We show in Figure \ref{scaf:fig:smith} a more challenging experiment with a subdivided version of the space filling curve to emphasize the performance difference: our algorithm converges in 39 minutes, while \cite{Smith:2015} did not converge after 5 days and 21 hours. For this example, we used the procedure suggested in \cite{rabinovich2017scalable}: we performed a few iterations minimizing the quadratic proxy and then switch to a traditional newton method until numerical convergence. A video of the optimization is provided in the additional material.
 
 \begin{figure}[t]
 \includegraphics[width=\columnwidth]{scaf-tex/figs/dense_hilbert}

@@ -37,7 +37,7 @@ As long as the generated mesh is a section, the projection operator $\P$ can be 
 This provides additional flexibility since it is adaptive to the density of the mesh and naturally handles models with high genus, while being numerically stable under floating-point representation (and exact if evaluated with rational arithmetic). The downside is that it is defined only for sections contained within the shell. \revision{
     The construction and optimization of our shell, and corresponding bijective mapping, is computationally more expensive than remeshing-only methods: our algorithms takes seconds to minutes on small and medium sized models, and might take hours on the large models in our tests.}
 
-We evaluate the robustness of \revision{the proposed}approach by constructing shells for a subset of the models in Thingi10k \cite{zhou2016thingi10k} and in ABC \cite{Koch_2019_CVPR} (Section \ref{prism:sec:results}). We also integrate it in six common geometry processing algorithms to demonstrate its practical applicability (Section \ref{prism:sec:applications}):
+We evaluate the robustness of \revision{the proposed}approach by constructing shells for a subset of the models in Thingi10k \cite{zhou2016thingi10k} and in ABC \cite{koch2019abc} (Section \ref{prism:sec:results}). We also integrate it in six common geometry processing algorithms to demonstrate its practical applicability (Section \ref{prism:sec:applications}):
 \begin{enumerate}
     \item \emph{Proxy}.
     The creation of a proxy, high-quality remeshed surface to solve PDEs (e.g., to compute geodesic distances or deformations), avoiding the numerical problems caused by a low-quality input in commonly used codes.

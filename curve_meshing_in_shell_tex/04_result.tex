@@ -25,7 +25,7 @@ To simplify the exposition, all meshes presented in this section are quartic mes
 
 \subsection{Large Scale Validation.}
 
-We tested the robustness and quality of the result produced by our algorithm on three datasets: (1) Thingi10k dataset \cite{zhou2016thingi10k} containing 3574 models without features; (2) the first chunk {of} the ABC dataset~\cite{Koch_2019_CVPR} with 5328 models with features marked from the STEP file and (3) the CAD dataset~\cite{Gao:2019} containing 106 models with semi-manual features.
+We tested the robustness and quality of the result produced by our algorithm on three datasets: (1) Thingi10k dataset \cite{zhou2016thingi10k} containing 3574 models without features; (2) the first chunk {of} the ABC dataset~\cite{koch2019abc} with 5328 models with features marked from the STEP file and (3) the CAD dataset~\cite{Gao:2019} containing 106 models with semi-manual features.
 %\ZJ{47 Thingi, 60 ABC out-of-time 12 hours}
 
 Note that the original datasets contain more models since, for each of them, we selected meshes satisfying our assumptions: intersection-free (using the same strategy as in~\ref{chp:shell} with a distance tolerance of $10^{-6}$ and dihedral angle of $2^\circ$) oriented, manifold triangle meshes, smallest triangle area larger than $10^{-8}$. 

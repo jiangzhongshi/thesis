@@ -18,7 +18,7 @@ The reference implementation used to generate the results is attached to the sub
 
 For each dataset, we selected the subset of meshes satisfying our input assumptions:  intersection-free, orientable, manifold triangle meshes without zero area triangles (tested using a numerical tolerance $10^{-16}$).  We test self-intersections by two criteria: a ball of radius $10^{-10}$ around each vertex does not contain non-adjacent triangles; and all the dihedral angles are larger than 0.1 degrees.
 
-We tested our algorithm on two datasets: (1) Thingi10k dataset \cite{zhou2016thingi10k} containing, after the filtering due to our input assumptions, 5018 models; and (2) the first chunk of for the ABC dataset~\cite{Koch_2019_CVPR} with 5545 models.
+We tested our algorithm on two datasets: (1) Thingi10k dataset \cite{zhou2016thingi10k} containing, after the filtering due to our input assumptions, 5018 models; and (2) the first chunk of for the ABC dataset~\cite{koch2019abc} with 5545 models.
 The only user-controlled parameter of our algorithm is the target thickness of our shell; in all our experiments (unless stated otherwise), we use 10\% of the longest edge of the bounding box. 
 In Figure~\ref{prism:fig:vary_thick}, we show how the target thickness influences the usage of the shell: a thicker shell provides a larger class of sections, thus accommodates more processing algorithms, while a thinner one offers a natural bound on the geometric fidelity of the sections.
 
@@ -32,7 +32,7 @@ In Figure~\ref{prism:fig:vary_thick}, we show how the target thickness influence
     ABC\\
     \includegraphics[width=\linewidth]{prism-tex/figs/abc_gallery}
     %
-    \caption{Gallery of shells built around models from Thingi10k \protect\cite{zhou2016thingi10k} and ABC~\protect\cite{Koch_2019_CVPR}.}
+    \caption{Gallery of shells built around models from Thingi10k \protect\cite{zhou2016thingi10k} and ABC~\protect\cite{koch2019abc}.}
     \label{prism:fig:gallery}
     
 \end{figure}
@@ -52,7 +52,7 @@ The generation and optimization of the shell takes 5min and 59s in average and u
 %     \includegraphics[width=\linewidth]{prism-tex/figs/stats10k}
 %     ABC
 %     \includegraphics[width=\linewidth]{prism-tex/figs/stats_abc}
-%     \caption{Statistics of 5018 shells in Thingi10k dataset \cite{zhou2016thingi10k} (top) and 5545 in ABC Dataset \cite{Koch_2019_CVPR} (bottom).}
+%     \caption{Statistics of 5018 shells in Thingi10k dataset \cite{zhou2016thingi10k} (top) and 5545 in ABC Dataset \cite{koch2019abc} (bottom).}
 %     \label{prism:fig:large-dataset}
 %     
 % \end{figure}
@@ -63,7 +63,7 @@ The generation and optimization of the shell takes 5min and 59s in average and u
         \includegraphics[width=0.4\linewidth,page=2]{prism-tex/figs/stats_combined}
         &\includegraphics[width=0.4\linewidth,page=1]{prism-tex/figs/stats_combined}
     \end{tabular}
-    \caption{Statistics of 5018 shells in Thingi10k dataset \cite{zhou2016thingi10k} (left) and 5545 in ABC Dataset \cite{Koch_2019_CVPR} (right).}
+    \caption{Statistics of 5018 shells in Thingi10k dataset \cite{zhou2016thingi10k} (left) and 5545 in ABC Dataset \cite{koch2019abc} (right).}
     \label{prism:fig:large-dataset}
     
 \end{figure}

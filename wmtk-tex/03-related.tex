@@ -73,7 +73,7 @@ Different designs differ vastly in API and implementation details, making it har
 %All of the aforementioned data structures store topological information about a
 %mesh, the corresponding geometric information is often stored separately as an
 %array of vertex coordinates. In contrast, Signpost data structure
-%\cite{Sharp2019} proposes to store the direction and distance to adjacent
+%\cite{sharp2019navigating} proposes to store the direction and distance to adjacent
 %vertices from a given vertex, which is sufficient to encode intrinsic
 %triangulation of 2-manifold. Both vertex coordinates and SignPost data can be
 %captured as per-element attributes in our IDSA data structure.
@@ -113,7 +113,7 @@ Different designs differ vastly in API and implementation details, making it har
 %
 %Other data structures:
 %\begin{itemize}
-%\item \cite{Sharp2019}: Signpost data structure for intrinsic Delaunay.
+%\item \cite{sharp2019navigating}: Signpost data structure for intrinsic Delaunay.
 %\end{itemize}
 %}
 
@@ -206,19 +206,19 @@ In this work, we are targeting only shared-memory parallelism, thus making the p
 
 \paragraph{Mesh Generation}
 
-Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{Shewchuk:1998:TMG,Ruppert:1995:ADR,Remacle:2017:ATL,Du:2003:TMG,Alliez:2005,Tournois:2009:IDR,MURPHY:2001:APP,CohenSteiner:2002:CDT,Chew:1987:CDT,Si:2005:MPL,Shewchuk:2002:CDT,Si:2014:ICA,Cheng:2008:APD,Boissonnat:2005:PGS,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,SHEWCHUK-triangle1,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,si2015tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
+Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{shewchuk1998tetrahedral,ruppert1995delaunay,Remacle:2017:ATL,du2003tetrahedral,alliez2005variational,tournois2009interleaving,murphy2001point,CohenSteiner:2002:CDT,chew1989constrained,si2005meshing,shewchuk2002constrained,Si:2014:ICA,cheng2008practical,boissonnat2005provably,Jamin:2015:CAG,Dey:2008:DAD,Chen:2004:ODT,Shewchuk:1996,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
 
 These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
 
 \paragraph{Constrained Meshing.}
 
-Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{Mandad:2015} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
+Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{mandad2015isotopic} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
 
 These criteria are explicitly modeled as invariants in our framework, and they can be easily swapped in and out existing implementations, as we demonstrate in Section \ref{wmtk:sec:applications}.
 
 \paragraph{Mesh Improvement.} 
 
-Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012,Chen:2004:ODT,Alliez:2005,Feng:2018:COD,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
+Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012,Chen:2004:ODT,alliez2005variational,feng2018curved,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
 %
 %
 We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
