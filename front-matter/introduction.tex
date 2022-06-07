@@ -4,32 +4,36 @@
 % We make our objects with manufacture pipeline, starting from a digital engineering design.
 % advanced manufacturing and design techniques more and more complex shapes (engineering design).
 Most of the everyday objects that we invent and interact in the physical world, ranging from electronic devices to transportation vehicles, are manufactured through a digital aided production pipeline.
+In practice, a typical product begins its lifecycle from a digital specification of the shape and material. 
+Computer simulation would then test the behavior to match the designer's intent: a car hood's deformation under pressure of collision or a steel pan's temperature distribution when heated on a stove. In this case, a robust and accurate simulation could lift many iterations of manufacturing to the digital platform. In addition, as it is safer to conduct more stress experiments in a virtual environment, a reliable simulation also promotes safety, especially in designing biomechanical equipments. 
 First, given a desirable functionality, the designer compose a shape, then prototype and test the object under specified physical conditions. e.g. stress, or heat, or fluidic. 
 Therefore, automatic computer algorithms for the design and fabrication would ensure the reliability and accessibility of medical devices. To do so requires a clear understanding of physical simulation and geometry design.
 
-% On the other hand
-On the other hand, composition of digital assets are through the similar pipeline, including human avatars, or objects that we are growing essential for the  virtual environment, thanks for 3D scanning techniques to obtain a digital shape, and then perform editing, fairing, modifications and other modeling operations. larger and larger quantites, and versatile of organic shapes beyond bunny. (scanning) and we want the dynamic deformation/collision response, in the information rich virtual environment, for interaction and physics based deformation.
+% On the other hand, digital assets.
+On the other hand, composition of digital assets are through the similar pipeline, more traditionally, as a way to reverse engineer a part into a digital format, digitalizing ancient artifacts, and recently, including human avatars, or objects that we are growing essential for the virtual environment, thanks for 3D scanning techniques to obtain a digital shape, and then perform editing, fairing, modifications and other modeling operations. larger and larger quantites, and versatile of organic shapes beyond bunny. (scanning) and we want the dynamic deformation/collision response, in the information rich virtual environment, for interaction and physics based deformation. 
+However, from raw scanning depth images to a 3D concise, editable representations would go through many steps and usually incur much manual labor to finish it.
 
 % In both sides of these processes, there is the problem of robustness. And the need to connect modeling with simulation. and to process the information back and forth.
-Researchers usually examine the computational design and physical simulation separately, leading to different computational tools for the discretized geometry. Different representations between design methods and various adaptations of simulations, even for the same shape, are not reliably correlated. In the general case, the material, attribute, or experiment setting cannot be robustly re-used on another representation without laborious manually fixing. Such a pipeline demands the engineer or designer to understand precisely the properties of the specific numerical methods of choice. It also prohibits an automatic and robust pipeline from optimizing the desired physical durability or permeability structure. 
 
-\fbox{\parbox{0.9\textwidth}{\textcolor{gray}{
-This dissertation is primarily concerned with the problem of how to effectively dealing with attributes, in various scenarios.
-\begin{itemize}
-  \item SCAF: representations to store attributes in plane, and applying such techniques to volume parameterization. This is crucial step for reliable attribute transfer between surfaces and volumes. color texture materials.
-  \emph{Robust}, \emph{Deformation}, \emph{Geometry}.
-\item SHELL: building on top, novel parameterization strategies between surfaces, for complex geometry, with nontrivial topology. \emph{Robust}. \emph{Simulations}, \emph{Geometry}. 
-\item CURVE: application of shell, transfer serving robust simulation. \emph{Robust}. \emph{Simulations}, \emph{Geometry}. 
-\item WMTK: speed up, robustness, aforementioned conditions, easily integrate constraints into new apps. \emph{Robust}
-\end{itemize}
-Some geometrical constraints suitable for computation, that guarantees properties important to various aspect of design and simulation.
-}}}
+Researchers usually examine the computational design and simulation separately, leading to different computational tools for the discretized geometry. Different representations between design methods and various adaptations of simulations, even for the same shape, are not reliably correlated. In the general case, the material, attribute, or experiment setting cannot be robustly re-used on another representation without laborious manually fixing. Such a pipeline demands the engineer or designer to understand precisely the properties of the specific numerical methods of choice. It also prohibits an automatic and robust pipeline from optimizing the desired physical durability or permeability structure. 
 
-Through this thesis, I investigate, develop, and implement computational principle to relate information across digital design and simulation pipelines reliably. 
+In contrary to the 2D representations of image, which commonly lives on grid data, there has been different candidates to represent and process information on a 3D shape have various representations. Ranging from multi-view depth images, point clouds, strucuted and unstructured meshes, and  there are different trade-off assocaited, ranging from memory efficiency, and specialized algorithms. And across different stages of the computational pipeline regarding a 3D shape, different representations might be used, to adapt to specialized algorithms: for example, 3D acquisition devices produces multiview depth images; some design and modeling tools make use the topology-flexible implicit surfaces as the representation for lattice or porous structures; digital asset modeling toolchains and industry make use of surface triangle or quadralaterial meshes extensively; physical simulation requires a spatial partitioning, as commonly tetrahedral meshes to carry out the quantities inside a volume. 
+
+
+By virtue of reliably connecting the data across different representations and at different stages, guarantees of correctness of properties can be safely uphold, which would reduce the chance of mistakes and iterations by manual labor. 
+Furthermore,  since different algorithms perform well on different representations, multiple algorithms can finally work together, and synergistically improve the performance of an overall pipeline.
+
+
+Through this thesis, I am going to develop the computational principle to relate information across digital design and simulation pipelines reliably. 
 The central technique is to leverage auxiliary geometric constructions to introduce novel constraints. 
 By integrating such geometric constraints into the parameterization, or mesh optimization pipeline,  I am able to achieve provable guarantees. 
 At the same time, geometric algorithms are often troubled with numerical problems. For this, I perform extensive experiments to back up in real.
+% 
+Outreach and impact:
+physical simulation, material design (cite Davi), 
 
+For the remainder of this dissertation,
+chapter 3 introduce bijective parameteriazations with triangulation augmentation, as a technique to speed up and guarantee the computation of bijective maps in 2d and 3D, as an crucial intermediate step for registering, storing, and processing surface and volume signals.
 I will first introduce the method of SCAF, 
 augment triangle with virtual doamin method.
 Bijective maps are commonly used in many computer graphics and scientific computing applications, including texture, displacement, and bump mapping. However, their computation is numerically challenging due to the global nature of the problem, which makes standard smooth optimization techniques prohibitively expensive.
@@ -37,36 +41,25 @@ We propose to use a scaffold structure to reduce this challenging and global pro
 Our algorithm is guaranteed to robustly compute a globally bijective map, both in 2D and 3D. To demonstrate the practical applicability, we use it to compute globally bijective single patch parametrizations, to pack multiple charts into a single UV domain, to remove self-intersections from existing models, and to deform 3D objects while preventing self-intersections.
 Our approach is simple to implement, efficient (two orders of magnitude faster than competing methods), and robust, as we demonstrate in a stress test on a parametrization dataset with over a hundred meshes.
 
+Chapter 4 transitions into shell map, a novel surface and volume mapping technique, that is suitable for attribute handlign during large scale robust processing. 
 We introduce an algorithm to convert a self-intersection free, orientable, and manifold triangle mesh $\T$ into a \emph{generalized prismatic shell} equipped with a bijective projection operator to map $\T$ to \revision{a class of} discrete surfaces contained within the shell whose normals satisfy a simple local condition. Properties can be robustly and efficiently transferred between these surfaces using the prismatic layer as a common parametrization domain. 
 The combination of the prismatic shell construction and corresponding projection operator is a robust building block readily usable in many downstream applications, including the solution of PDEs, displacement maps synthesis, Boolean operations, tetrahedral meshing, geometric textures, and nested cages.
 
 I showcased reliable, efficient, and robust simulations from an arbitrarily complex design setup using the principle. After establishing such connections, we are now ready to systematically evaluate and improve the computational bottlenecks on the entire engineering pipeline.
 The central idea in this dissertation is to develop geometric computing tools that reliably associate different representations of discrete geometry entities at diverse design and simulation stages. Instead of re-assigning properties at various phases of the design-simulation pipeline, or whenever the required budget is different, a good association between geometry at different stages gives more freedom to the design and development of automatic and adaptive solvers. The adaptation can be bi-directional: on the one hand, with coarse and concise tessellation, the algorithm utilizes the information associated with the original design to obtain more faithful simulations. On the other hand, in early-stage prototyping and automatic data generation for deep learning, the principles established to simplify the shape and retain the settings provide a fast answer. 
 
+Chapter 5 further complete the technique in Chapter 4, and discuss , along the way, we showcase an important application: how to use the shell to generate conforming tetrahedral meshes, and high order curve meshes, which is promising building block in new paradigm of scalable physical simulations. 
 We introduce a robust and automatic algorithm to convert dense piece-wise linear triangle meshes with feature annotated into coarse tetrahedral meshes with curved elements. 
 Our construction guarantees that the high-order meshes are free of element inversion or self-intersection. 
 The user can specify a maximal geometrical error from the input mesh, which  controls the density of the curved approximation. The boundary of the output mesh is in bijective correspondence to the input, enabling to transfer attributes between them, such as boundary conditions for simulations, making it an ideal replacement or complement for the original input geometry. 
-
 Our construction exploits the availability of a bijective shell around the input surface to ensure robust curving, absence of self-intersections, and compute a bijective map between the linear input and curved output surface. As necessary building blocks of our algorithm, we propose an extension of the bijective shell construction to features and a novel approach for boundary-preserving linear tetrahedral meshing.
-
 We demonstrate the robustness and effectiveness of our algorithm generating high-order meshes for a large collection of complex 3D models.
 
-
+While being useful in our various applications, such geometry constructions remains out of reach to be plugin into many existing algorithms and implementations, we abstract the problem, and introduce an new specification paradigm in Chapter 6, as a algorithm developement toolkit, aiming to make our contribution accesible for more researchers in the field between robust geometry modeling, and scalable physical simulation.
 We introduce a novel approach to describe mesh generation, mesh adaptation, and geometric modeling algorithms relying on changing mesh connectivity using a high-level abstraction. The main motivation is to enable easy customization and development of these algorithms via a declarative specification consisting of a set of per-element invariants, operation scheduling, and attribute transfer for each editing operation.
-
 We demonstrate that widely used algorithms editing surfaces and volumes can be compactly expressed with our abstraction, and their implementation within our framework is simple, automatically parallelizable on shared-memory architectures, and with guaranteed satisfaction of the prescribed invariants. These algorithms are readable and easy to customize for specific use cases.
-
 We introduce a software library implementing this abstraction and providing automatic shared memory parallelization.
 
 Additionally, we produce source code for each of the methods, and reproducible instructions.
 
-% 
-Outreach and impact:
 
-% 
-The rest of the thesis is structured as follows,
-chapter 2 discuss our contributions and related works.
-chapter 3 introduce bijective parameteriazations with triangulation augmentation, as a technique to speed up and guarantee the computation of bijective maps in 2d and 3D, as an crucial intermediate step for registering, storing, and processing surface and volume signals.
-Chapter 4 transitions into shell map, a novel surface and volume mapping technique, that is suitable for attribute handlign during large scale robust processing. 
-Chapter 5 further complete the technique in Chapter 4, and discuss , along the way, we showcase an important application: how to use the shell to generate conforming tetrahedral meshes, and high order curve meshes, which is promising building block in new paradigm of scalable physical simulations. 
-While being useful in our various applications, such geometry constructions remains out of reach to be plugin into many existing algorithms and implementations, we abstract the problem, and introduce an new specification paradigm in Chapter 6, as a algorithm developement toolkit, aiming to make our contribution accesible for more researchers in the field between robust geometry modeling, and scalable physical simulation.
