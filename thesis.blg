@@ -3,7 +3,8 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 Reallocated field_info (elt_size=4) to 12986 items from 5000.
-Database file #1: thesis.bib
+Database file #1: referenced.bib
+Warning--I didn't find a database entry for "clausen:2013"
 Warning--I didn't find a database entry for "chp:shell"
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
@@ -26,45 +27,45 @@ Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
-You've used 362 entries,
+You've used 361 entries,
             1935 wiz_defined-function locations,
-            2348 strings with 63632 characters,
-and the built_in function-call counts, 157946 in all, are:
-= -- 15641
-> -- 6763
+            2346 strings with 63484 characters,
+and the built_in function-call counts, 157570 in all, are:
+= -- 15607
+> -- 6740
 < -- 251
-+ -- 2384
-- -- 2289
-* -- 13347
-:= -- 26739
-add.period$ -- 1153
-call.type$ -- 362
-change.case$ -- 2934
-chr.to.int$ -- 355
-cite$ -- 383
-duplicate$ -- 6170
-empty$ -- 10862
-format.name$ -- 2827
-if$ -- 31544
++ -- 2376
+- -- 2281
+* -- 13312
+:= -- 26668
+add.period$ -- 1150
+call.type$ -- 361
+change.case$ -- 2925
+chr.to.int$ -- 354
+cite$ -- 382
+duplicate$ -- 6157
+empty$ -- 10841
+format.name$ -- 2818
+if$ -- 31475
 int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 353
-newline$ -- 1813
-num.names$ -- 1094
-pop$ -- 2693
+missing$ -- 352
+newline$ -- 1808
+num.names$ -- 1091
+pop$ -- 2686
 preamble$ -- 1
-purify$ -- 2946
+purify$ -- 2937
 quote$ -- 0
-skip$ -- 4754
+skip$ -- 4743
 stack$ -- 0
-substring$ -- 10811
-swap$ -- 1184
+substring$ -- 10799
+swap$ -- 1183
 text.length$ -- 107
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2148
+type$ -- 2142
 warning$ -- 21
-while$ -- 1234
+while$ -- 1232
 width$ -- 0
-write$ -- 4775
-(There were 22 warnings)
+write$ -- 4762
+(There were 23 warnings)

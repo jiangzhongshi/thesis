@@ -453,12 +453,6 @@ Cignoni, P., Montani, C., Perego, R., and Scopigno, R. (1993).
 \newblock Parallel 3d delaunay triangulation.
 \newblock {\em Computer Graphics Forum}, 12(3):129--142.
 
-\bibitem[Clausen et~al., 2013]{clausen:2013}
-Clausen, P., Wicke, M., Shewchuk, J.~R., and O'Brien, J.~F. (2013).
-\newblock Simulating liquids and solid-liquid interactions with lagrangian
-  meshes.
-\newblock {\em ACM Trans. Graph.}, 32(2).
-
 \bibitem[Cohen et~al., 1997]{cohen1997simplifying}
 Cohen, J., Manocha, D., and Olano, M. (1997).
 \newblock Simplifying polygonal models using successive mappings.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  7 JUN 2022 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  7 JUN 2022 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1647,7 +1647,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [12] [13]
-[14] [15] [16] [17]) [18]
+[14] [15]
+
+Package natbib Warning: Citation `clausen:2013' on page 16 undefined on input l
+ine 247.
+
+[16] [17]) [18]
 Chapter 3.
 (./scaf-tex/sections/introduction.tex
 <scaf-tex/figs/teaser.pdf, id=130, 4500.74492pt x 1191.82263pt>
@@ -2199,13 +2204,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41374 strings out of 478305
- 808011 string characters out of 5847251
- 1144786 words of memory out of 5000000
- 57607 multiletter control sequences out of 15000+600000
+ 41371 strings out of 478305
+ 807951 string characters out of 5847251
+ 1144751 words of memory out of 5000000
+ 57604 multiletter control sequences out of 15000+600000
  768236 words of font info for 842 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,17n,83p,1336b,1205s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,83p,1336b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
 pt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}{/opt/te
 xlive/texdir/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/opt/texlive/t
@@ -2233,7 +2238,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (159 pages, 62657228 bytes).
+Output written on docs/thesis.pdf (159 pages, 62657110 bytes).
 PDF statistics:
  1199 PDF objects out of 1200 (max. 8388607)
  501 compressed objects within 6 object streams
