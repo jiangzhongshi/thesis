@@ -877,13 +877,8 @@ Hoppe, H., DeRose, T., Duchamp, T., Halstead, M., Jin, H., McDonald, J.,
 \newblock In {\em Proceedings of the 21st annual conference on Computer
   graphics and interactive techniques}, pages 295--302.
 
-\bibitem[Hormann and Greiner, 2000a]{Hormann:2000}
-Hormann, K. and Greiner, G. (2000a).
-\newblock {MIPS}: An efficient global parametrization method.
-\newblock In {\em Curve and Surface Design: Saint-Malo 1999}, pages 153--162.
-
-\bibitem[Hormann and Greiner, 2000b]{hormann2000mips}
-Hormann, K. and Greiner, G. (2000b).
+\bibitem[Hormann and Greiner, 2000]{hormann2000mips}
+Hormann, K. and Greiner, G. (2000).
 \newblock Mips: An efficient global parametrization method.
 \newblock Technical report, ERLANGEN-NUERNBERG UNIV (GERMANY) COMPUTER GRAPHICS
   GROUP.
@@ -974,15 +969,10 @@ Jameson, A., Alonso, J., and McMullen, M. (2002).
   navier-stokes equations.
 \newblock In {\em 40th AIAA Aerospace Sciences Meeting \& Exhibit}.
 
-\bibitem[Jamin et~al., 2015a]{jamin2015cgalmesh}
-Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015a).
+\bibitem[Jamin et~al., 2015]{jamin2015cgalmesh}
+Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015).
 \newblock Cgalmesh: a generic framework for delaunay mesh generation.
 \newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(4):23.
-
-\bibitem[Jamin et~al., 2015b]{Jamin:2015:CAG}
-Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015b).
-\newblock {CGALmesh}: A generic framework for delaunay mesh generation.
-\newblock {\em ACM Transactions on Mathematical Software}, 41(4):1--24.
 
 \bibitem[Jiang et~al., 2017]{jiang2017simplicial}
 Jiang, Z., Schaefer, S., and Panozzo, D. (2017).
@@ -1766,14 +1756,8 @@ Si, H. and G{\"a}rtner, K. (2005).
   tetrahedralizations.
 \newblock In {\em IMR}, pages 147--163. Springer.
 
-\bibitem[Si and Shewchuk, 2014a]{SiS14}
-Si, H. and Shewchuk, J.~R. (2014a).
-\newblock Incrementally constructing and updating constrained delaunay
-  tetrahedralizations with finite-precision coordinates.
-\newblock {\em Eng. Comput. (Lond.)}, 30(2):253--269.
-
-\bibitem[Si and Shewchuk, 2014b]{Si:2014:ICA}
-Si, H. and Shewchuk, J.~R. (2014b).
+\bibitem[Si and Shewchuk, 2014]{Si:2014:ICA}
+Si, H. and Shewchuk, J.~R. (2014).
 \newblock Incrementally constructing and updating constrained delaunay
   tetrahedralizations with finite-precision coordinates.
 \newblock {\em Engineering with Computers}, 30(2):253--269.
