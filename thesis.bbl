@@ -71,15 +71,10 @@ Alexa, M. (2020).
 \newblock Conforming weighted delaunay triangulations.
 \newblock {\em ACM Transactions on Graphics (TOG)}, pages 1--16.
 
-\bibitem[Alliez et~al., 2005a]{alliez2005variational}
-Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005a).
+\bibitem[Alliez et~al., 2005]{alliez2005variational}
+Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005).
 \newblock Variational tetrahedral meshing.
 \newblock In {\em ACM Transactions on Graphics (TOG)}. ACM.
-
-\bibitem[Alliez et~al., 2005b]{Alliez:2005}
-Alliez, P., Cohen-Steiner, D., Yvinec, M., and Desbrun, M. (2005b).
-\newblock Variational tetrahedral meshing.
-\newblock {\em ACM Transactions on Graphics}, (3):617.
 
 \bibitem[Alliez et~al., 2003]{alliez2003isotropic}
 Alliez, P., De~Verdire, E.~C., Devillers, O., and Isenburg, M. (2003).
@@ -205,13 +200,8 @@ Boissonnat, J.-D., Devillers, O., Pion, S., Teillaud, M., and Yvinec, M.
 \newblock Triangulations in cgal.
 \newblock {\em Computational Geometry}, 22:5--19.
 
-\bibitem[Boissonnat and Oudot, 2005a]{boissonnat2005provably}
-Boissonnat, J.-D. and Oudot, S. (2005a).
-\newblock Provably good sampling and meshing of surfaces.
-\newblock {\em Graphical Models}, 67(5):405--451.
-
-\bibitem[Boissonnat and Oudot, 2005b]{Boissonnat:2005:PGS}
-Boissonnat, J.-D. and Oudot, S. (2005b).
+\bibitem[Boissonnat and Oudot, 2005]{boissonnat2005provably}
+Boissonnat, J.-D. and Oudot, S. (2005).
 \newblock Provably good sampling and meshing of surfaces.
 \newblock {\em Graphical Models}, 67(5):405--451.
 
@@ -392,17 +382,11 @@ Cheng, S.-W., Dey, T.~K., Edelsbrunner, H., Facello, M.~A., and Teng, S.-H.
 \newblock Silver exudation.
 \newblock {\em Journal of the ACM (JACM)}, 47(5):883--904.
 
-\bibitem[Cheng et~al., 2008a]{cheng2008practical}
-Cheng, S.-W., Dey, T.~K., and Levine, J.~A. (2008a).
+\bibitem[Cheng et~al., 2008]{cheng2008practical}
+Cheng, S.-W., Dey, T.~K., and Levine, J.~A. (2008).
 \newblock A practical delaunay meshing algorithm for a large class of domains.
 \newblock In {\em Proceedings of the 16th International Meshing Roundtable},
   pages 477--494. Springer.
-
-\bibitem[Cheng et~al., 2008b]{Cheng:2008:APD}
-Cheng, S.-W., Dey, T.~K., and Levine, J.~A. (2008b).
-\newblock A practical delaunay meshing algorithm for a large class of domains.
-\newblock In {\em Proceedings of the 16th International Meshing Roundtable},
-  pages 477--494, Berlin, Heidelberg. Springer, Springer Berlin Heidelberg.
 
 \bibitem[Cheng et~al., 2012]{Cheng:2012:DMG}
 Cheng, S.-W., Dey, T.~K., and Shewchuk, J. (2012).
@@ -427,15 +411,10 @@ Cheshmi, K., Kaufman, D.~M., Kamil, S., and Dehnavi, M.~M. (2020).
 \newblock Nasoq: Numerically accurate sparsity-oriented qp solver.
 \newblock {\em ACM Transactions on Graphics}, 39(4).
 
-\bibitem[Chew, 1989a]{chew1989constrained}
-Chew, L.~P. (1989a).
+\bibitem[Chew, 1989]{chew1989constrained}
+Chew, L.~P. (1989).
 \newblock Constrained delaunay triangulations.
 \newblock {\em Algorithmica}, 4(1-4):97--108.
-
-\bibitem[Chew, 1989b]{Chew:1987:CDT}
-Chew, L.~P. (1989b).
-\newblock Constrained delaunay triangulations.
-\newblock {\em Algorithmica}, 4(1):97--108.
 
 \bibitem[Chew, 1993]{chew1993guaranteed}
 Chew, L.~P. (1993).
@@ -492,14 +471,8 @@ Cohen, J., Varshney, A., Manocha, D., Turk, G., Weber, H., Agarwal, P., Brooks,
 \newblock Simplification envelopes.
 \newblock In {\em Siggraph}, volume~96, pages 119--128.
 
-\bibitem[Cohen-Steiner et~al., 2002a]{cohen2002conforming}
-Cohen-Steiner, D., De~Verdiere, E.~C., and Yvinec, M. (2002a).
-\newblock Conforming delaunay triangulations in 3d.
-\newblock In {\em Proceedings of the eighteenth annual symposium on
-  Computational geometry}, pages 199--208. ACM.
-
-\bibitem[Cohen-Steiner et~al., 2002b]{CohenSteiner:2002:CDT}
-Cohen-Steiner, D., de~Verdi\`{e}re, E.~C., and Yvinec, M. (2002b).
+\bibitem[Cohen-Steiner et~al., 2002]{CohenSteiner:2002:CDT}
+Cohen-Steiner, D., de~Verdi\`{e}re, E.~C., and Yvinec, M. (2002).
 \newblock Conforming delaunay triangulations in {3D}.
 \newblock In {\em Proceedings of the eighteenth annual symposium on
   Computational geometry - SCG '02}, number~2, pages 217 -- 233. ACM Press.
@@ -607,15 +580,8 @@ Dougherty, R., Faber, V., and Murphy, M. (2004).
 \newblock Unflippable tetrahedral complexes.
 \newblock {\em Discrete {\&} Computational Geometry}, 32(3):309--315.
 
-\bibitem[Du and Wang, 2003a]{du2003tetrahedral}
-Du, Q. and Wang, D. (2003a).
-\newblock Tetrahedral mesh generation and optimization based on centroidal
-  voronoi tessellations.
-\newblock {\em International journal for numerical methods in engineering},
-  56(9):1355--1373.
-
-\bibitem[Du and Wang, 2003b]{Du:2003:TMG}
-Du, Q. and Wang, D. (2003b).
+\bibitem[Du and Wang, 2003]{du2003tetrahedral}
+Du, Q. and Wang, D. (2003).
 \newblock Tetrahedral mesh generation and optimization based on centroidal
   voronoi tessellations.
 \newblock {\em International journal for numerical methods in engineering},
@@ -671,15 +637,10 @@ Ezuz, D., Solomon, J., and Ben-Chen, M. (2019).
 \newblock Reversible harmonic maps between discrete surfaces.
 \newblock {\em ACM Trans. Graph.}, 38(2).
 
-\bibitem[Feng et~al., 2018a]{feng2018curved}
-Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018a).
+\bibitem[Feng et~al., 2018]{feng2018curved}
+Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018).
 \newblock Curved optimal delaunay triangulation.
 \newblock {\em ACM Transactions on Graphics (TOG)}.
-
-\bibitem[Feng et~al., 2018b]{Feng:2018:COD}
-Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018b).
-\newblock Curved optimal delaunay triangulation.
-\newblock {\em ACM Trans. Graph.}, 37(4):61:1--61:16.
 
 \bibitem[Floater, 2003]{floater2003one}
 Floater, M. (2003).
@@ -714,13 +675,8 @@ Fu, X.-M. and Liu, Y. (2016).
 \newblock Computing inversion-free mappings by simplex assembly.
 \newblock {\em ACM Trans. Graph.}, 35(6):216:1--216:12.
 
-\bibitem[Fu et~al., 2015a]{Fu:2015}
-Fu, X.-M., Liu, Y., and Guo, B. (2015a).
-\newblock Computing locally injective mappings by advanced mips.
-\newblock {\em ACM Trans. Graph.}, 34(4):71:1--71:12.
-
-\bibitem[Fu et~al., 2015b]{fu2015computing}
-Fu, X.-M., Liu, Y., and Guo, B. (2015b).
+\bibitem[Fu et~al., 2015]{fu2015computing}
+Fu, X.-M., Liu, Y., and Guo, B. (2015).
 \newblock Computing locally injective mappings by advanced mips.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 34(4):71.
 
@@ -970,14 +926,8 @@ Hu, Y., Schneider, T., Gao, X., Zhou, Q., Jacobson, A., Zorin, D., and Panozzo,
 \newblock Triwild: robust triangulation with curve constraints.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 38(4):52.
 
-\bibitem[Hu et~al., 2019c]{Hu:2019:triwild}
-Hu, Y., Schneider, T., Gao, X., Zhou, Q., Jacobson, A., Zorin, D., and Panozzo,
-  D. (2019c).
-\newblock Triwild: Robust triangulation with curve constraints.
-\newblock {\em ACM Trans. Graph.}, 38(4):52:1--52:15.
-
-\bibitem[Hu et~al., 2019d]{Hu:2019:fTetWild}
-Hu, Y., Schneider, T., Wang, B., Zorin, D., and Panozzo, D. (2019d).
+\bibitem[Hu et~al., 2019c]{Hu:2019:fTetWild}
+Hu, Y., Schneider, T., Wang, B., Zorin, D., and Panozzo, D. (2019c).
 \newblock Fast tetrahedral meshing in the wild.
 \newblock {\em arXiv preprint arXiv:1908.03581}.
 
@@ -1150,12 +1100,12 @@ Kobbelt, L., Campagna, S., Vorsatz, J., and Seidel, H.-P. (1998).
 \newblock Interactive multi-resolution modeling on arbitrary meshes.
 \newblock In {\em Siggraph}, volume~98, pages 105--114.
 
-\bibitem[Koch et~al., 2019]{Koch_2019_CVPR}
+\bibitem[Koch et~al., 2019]{koch2019abc}
 Koch, S., Matveev, A., Jiang, Z., Williams, F., Artemov, A., Burnaev, E.,
   Alexa, M., Zorin, D., and Panozzo, D. (2019).
 \newblock Abc: A big cad model dataset for geometric deep learning.
-\newblock In {\em The IEEE Conference on Computer Vision and Pattern
-  Recognition (CVPR)}.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 9601--9611.
 
 \bibitem[Kovalsky et~al., 2016]{Kovalsky:2016}
 Kovalsky, S.~Z., Galun, M., and Lipman, Y. (2016).
@@ -1374,15 +1324,10 @@ Mahmoud, A.~H., Porumbescu, S.~D., and Owens, J.~D. (2021).
 \newblock Rxmesh: A gpu mesh data structure.
 \newblock {\em ACM Trans. Graph.}, 40(4).
 
-\bibitem[Mandad et~al., 2015a]{mandad2015isotopic}
-Mandad, M., Cohen-Steiner, D., and Alliez, P. (2015a).
+\bibitem[Mandad et~al., 2015]{mandad2015isotopic}
+Mandad, M., Cohen-Steiner, D., and Alliez, P. (2015).
 \newblock Isotopic approximation within a tolerance volume.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 34(4):64.
-
-\bibitem[Mandad et~al., 2015b]{Mandad:2015}
-Mandad, M., Cohen-Steiner, D., and Alliez, P. (2015b).
-\newblock Isotopic approximation within a tolerance volume.
-\newblock {\em ACM Trans. Graph.}, 34(4):64:1--64:12.
 
 \bibitem[M{\"a}ntyl{\"a}, 1987]{Maentylae1987}
 M{\"a}ntyl{\"a}, M. (1987).
@@ -1476,15 +1421,8 @@ M\"{u}ller, M., Chentanez, N., Kim, T.-Y., and Macklin, M. (2015).
 \newblock Air meshes for robust collision handling.
 \newblock {\em ACM Trans. Graph.}, 34(4).
 
-\bibitem[Murphy et~al., 2001a]{murphy2001point}
-Murphy, M., Mount, D.~M., and Gable, C.~W. (2001a).
-\newblock A point-placement strategy for conforming delaunay
-  tetrahedralization.
-\newblock {\em International Journal of Computational Geometry \&
-  Applications}, 11(06):669--682.
-
-\bibitem[Murphy et~al., 2001b]{MURPHY:2001:APP}
-Murphy, M., Mount, D.~M., and Gable, C.~W. (2001b).
+\bibitem[Murphy et~al., 2001]{murphy2001point}
+Murphy, M., Mount, D.~M., and Gable, C.~W. (2001).
 \newblock A point-placement strategy for conforming delaunay
   tetrahedralization.
 \newblock {\em International Journal of Computational Geometry \&
@@ -1639,10 +1577,10 @@ Praun, E., Sweldens, W., and Schr{\"o}der, P. (2001).
 \newblock In {\em Proceedings of the 28th annual conference on Computer
   graphics and interactive techniques}, pages 179--184.
 
-\bibitem[Rabinovich et~al., 2017]{Rabinovich:2017}
+\bibitem[Rabinovich et~al., 2017]{rabinovich2017scalable}
 Rabinovich, M., Poranne, R., Panozzo, D., and Sorkine-Hornung, O. (2017).
 \newblock Scalable locally injective mappings.
-\newblock {\em ACM Trans. Graph.}, 36(2):16:1--16:16.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 36(4):37a.
 
 \bibitem[Ragan-Kelley et~al., 2013]{ragan2013halide}
 Ragan-Kelley, J., Barnes, C., Adams, A., Paris, S., Durand, F., and
@@ -1698,17 +1636,11 @@ Ruiz-Giron\'{e}s, E., Sarrate, J., and Roca, X. (2016b).
 \newblock {\em Procedia Engineering}, 163:315 -- 327.
 \newblock 25th International Meshing Roundtable.
 
-\bibitem[Ruppert, 1995a]{ruppert1995delaunay}
-Ruppert, J. (1995a).
+\bibitem[Ruppert, 1995]{ruppert1995delaunay}
+Ruppert, J. (1995).
 \newblock A delaunay refinement algorithm for quality 2-dimensional mesh
   generation.
 \newblock {\em Journal of algorithms}, 18(3):548--585.
-
-\bibitem[Ruppert, 1995b]{Ruppert:1995:ADR}
-Ruppert, J. (1995b).
-\newblock A delaunay refinement algorithm for quality 2-dimensional mesh
-  generation.
-\newblock {\em Journal of Algorithms}, 18(3):548--585.
 
 \bibitem[Sacht et~al., 2013]{Sacht:2013}
 Sacht, L., Jacobson, A., Panozzo, D., Sch{\"u}ller, C., and Sorkine-Hornung, O.
@@ -1793,20 +1725,12 @@ Sherwin, S. and Peir{\'o}, J. (2002).
 \newblock {\em International Journal for Numerical Methods in Engineering},
   53(1):207--223.
 
-\bibitem[Shewchuk, 1996a]{Shewchuk:1996}
-Shewchuk, J. (1996a).
+\bibitem[Shewchuk, 1996]{Shewchuk:1996}
+Shewchuk, J. (1996).
 \newblock Triangle: Engineering a 2d quality mesh generator and delaunay
   triangulator.
 \newblock {\em Applied computational geometry towards geometric engineering},
   pages 203--222.
-
-\bibitem[Shewchuk, 1996b]{SHEWCHUK-triangle1}
-Shewchuk, J.~R. (1996b).
-\newblock Triangle: Engineering a 2d quality mesh generator and delaunay
-  triangulator.
-\newblock In Lin, M.~C. and Manocha, D., editors, {\em Applied Computational
-  Geometry Towards Geometric Engineering}, pages 203--222, Berlin, Heidelberg.
-  Springer Berlin Heidelberg.
 
 \bibitem[Shewchuk, 1997]{shewchuk1997adaptive}
 Shewchuk, J.~R. (1997).
@@ -1814,59 +1738,33 @@ Shewchuk, J.~R. (1997).
   geometric predicates.
 \newblock {\em Discrete \& Computational Geometry}, 18(3).
 
-\bibitem[Shewchuk, 1998a]{shewchuk1998tetrahedral}
-Shewchuk, J.~R. (1998a).
+\bibitem[Shewchuk, 1998]{shewchuk1998tetrahedral}
+Shewchuk, J.~R. (1998).
 \newblock Tetrahedral mesh generation by delaunay refinement.
 \newblock In {\em Proceedings of the fourteenth annual symposium on
   Computational geometry}, pages 86--95. ACM.
 
-\bibitem[Shewchuk, 1998b]{Shewchuk:1998:TMG}
-Shewchuk, J.~R. (1998b).
-\newblock Tetrahedral mesh generation by delaunay refinement.
-\newblock In {\em Proceedings of the fourteenth annual symposium on
-  Computational geometry - SCG '98}, pages 86--95, New York, NY, USA. ACM
-  Press.
-
-\bibitem[Shewchuk, 2002a]{shewchuk2002constrained}
-Shewchuk, J.~R. (2002a).
+\bibitem[Shewchuk, 2002]{shewchuk2002constrained}
+Shewchuk, J.~R. (2002).
 \newblock Constrained delaunay tetrahedralizations and provably good boundary
   recovery.
 \newblock In {\em IMR}, pages 193--204.
-
-\bibitem[Shewchuk, 2002b]{Shewchuk:2002:CDT}
-Shewchuk, J.~R. (2002b).
-\newblock Constrained delaunay tetrahedralizations and provably good boundary
-  recovery.
-\newblock In {\em Eleventh International Meshing Roundtable}, pages 193--204.
-  Sandia National Laboratories.
 
 \bibitem[Shoham et~al., 2019]{Shoham:2019}
 Shoham, M., Vaxman, A., and Ben-Chen, M. (2019).
 \newblock Hierarchical functional maps between subdivision surfaces.
 \newblock {\em Computer Graphics Forum}, 38(5):55--73.
 
-\bibitem[Si, 2015a]{tetgen}
-Si, H. (2015a).
+\bibitem[Si, 2015]{tetgen}
+Si, H. (2015).
 \newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
 \newblock {\em ACM Trans. Math. Softw.}, 41(2):11:1--11:36.
-
-\bibitem[Si, 2015b]{si2015tetgen}
-Si, H. (2015b).
-\newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
-\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(2):1--36.
 
 \bibitem[Si and G{\"a}rtner, 2005]{si2005meshing}
 Si, H. and G{\"a}rtner, K. (2005).
 \newblock Meshing piecewise linear complexes by constrained delaunay
   tetrahedralizations.
 \newblock In {\em IMR}, pages 147--163. Springer.
-
-\bibitem[Si and Gartner, 2005]{Si:2005:MPL}
-Si, H. and Gartner, K. (2005).
-\newblock Meshing piecewise linear complexes by constrained delaunay
-  tetrahedralizations.
-\newblock In {\em Proceedings of the 14th international meshing roundtable},
-  pages 147--163, Berlin, Heidelberg. Springer, Springer Berlin Heidelberg.
 
 \bibitem[Si and Shewchuk, 2014a]{SiS14}
 Si, H. and Shewchuk, J.~R. (2014a).
@@ -2006,17 +1904,11 @@ Toulorge, T., Lambrechts, J., and Remacle, J.-F. (2016).
 \newblock Optimizing the geometrical accuracy of curvilinear meshes.
 \newblock {\em Journal of Computational Physics}, 310:361 -- 380.
 
-\bibitem[Tournois et~al., 2009a]{tournois2009interleaving}
-Tournois, J., Wormser, C., Alliez, P., and Desbrun, M. (2009a).
+\bibitem[Tournois et~al., 2009]{tournois2009interleaving}
+Tournois, J., Wormser, C., Alliez, P., and Desbrun, M. (2009).
 \newblock Interleaving delaunay refinement and optimization for practical
   isotropic tetrahedron mesh generation.
 \newblock {\em ACM Transactions on Graphics}, 28(3):Art--No.
-
-\bibitem[Tournois et~al., 2009b]{Tournois:2009:IDR}
-Tournois, J., Wormser, C., Alliez, P., and Desbrun, M. (2009b).
-\newblock Interleaving delaunay refinement and optimization for practical
-  isotropic tetrahedron mesh generation.
-\newblock {\em ACM Transactions on Graphics}, 28(3):1.
 
 \bibitem[Tozoni et~al., 2020]{tozoni2020low}
 Tozoni, D.~C., Dumas, J., Jiang, Z., Panetta, J., Panozzo, D., and Zorin, D.
@@ -2076,7 +1968,7 @@ Wang, X., Tong, X., Lin, S., Hu, S., Guo, B., and Shum, H.-Y. (2004).
 \newblock In {\em Proceedings of the Fifteenth Eurographics conference on
   Rendering Techniques}, pages 227--233. Eurographics Association.
 
-\bibitem[Weber and Zorin, 2014]{Weber:2014}
+\bibitem[Weber and Zorin, 2014]{Weber:2014:LIP}
 Weber, O. and Zorin, D. (2014).
 \newblock Locally injective parametrization with arbitrary fixed boundaries.
 \newblock {\em ACM Trans. Graph.}, 33(4):75:1--75:12.

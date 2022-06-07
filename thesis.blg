@@ -2,11 +2,9 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 13448 items from 5000.
+Reallocated field_info (elt_size=4) to 13052 items from 5000.
 Database file #1: thesis.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "chp:shell"
-Warning--there's a number but no volume in Alliez:2005
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
 Warning--can't use both volume and number fields in botsch2003multiresolution
@@ -29,45 +27,45 @@ Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
-You've used 383 entries,
+You've used 365 entries,
             1935 wiz_defined-function locations,
-            2437 strings with 66284 characters,
-and the built_in function-call counts, 167447 in all, are:
-= -- 16613
-> -- 7103
-< -- 268
-+ -- 2522
-- -- 2401
-* -- 14158
-:= -- 28302
-add.period$ -- 1222
-call.type$ -- 383
-change.case$ -- 3094
-chr.to.int$ -- 356
-cite$ -- 406
-duplicate$ -- 6542
-empty$ -- 11564
-format.name$ -- 2970
-if$ -- 33468
-int.to.chr$ -- 28
+            2365 strings with 64176 characters,
+and the built_in function-call counts, 159305 in all, are:
+= -- 15778
+> -- 6812
+< -- 254
++ -- 2403
+- -- 2305
+* -- 13463
+:= -- 26959
+add.period$ -- 1162
+call.type$ -- 365
+change.case$ -- 2957
+chr.to.int$ -- 355
+cite$ -- 387
+duplicate$ -- 6225
+empty$ -- 10963
+format.name$ -- 2850
+if$ -- 31823
+int.to.chr$ -- 11
 int.to.str$ -- 0
-missing$ -- 374
-newline$ -- 1918
-num.names$ -- 1159
-pop$ -- 2832
+missing$ -- 356
+newline$ -- 1828
+num.names$ -- 1103
+pop$ -- 2714
 preamble$ -- 1
-purify$ -- 3106
+purify$ -- 2969
 quote$ -- 0
-skip$ -- 5013
+skip$ -- 4794
 stack$ -- 0
-substring$ -- 11599
-swap$ -- 1255
-text.length$ -- 113
+substring$ -- 10916
+swap$ -- 1196
+text.length$ -- 108
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2274
-warning$ -- 23
-while$ -- 1321
+type$ -- 2166
+warning$ -- 22
+while$ -- 1246
 width$ -- 0
-write$ -- 5059
-(There were 24 warnings)
+write$ -- 4814
+(There were 23 warnings)
