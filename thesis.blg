@@ -5,6 +5,7 @@ The style file: apalike.bst
 Reallocated field_info (elt_size=4) to 13448 items from 5000.
 Database file #1: thesis.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "tetgen"
 Warning--I didn't find a database entry for "chp:shell"
 Warning--there's a number but no volume in Alliez:2005
 Warning--empty institution in Baumgart1972
@@ -29,45 +30,45 @@ Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
-You've used 383 entries,
+You've used 382 entries,
             1935 wiz_defined-function locations,
-            2437 strings with 66284 characters,
-and the built_in function-call counts, 167460 in all, are:
-= -- 16613
-> -- 7104
-< -- 268
-+ -- 2522
-- -- 2401
-* -- 14159
-:= -- 28303
-add.period$ -- 1222
-call.type$ -- 383
-change.case$ -- 3094
+            2434 strings with 66191 characters,
+and the built_in function-call counts, 167070 in all, are:
+= -- 16572
+> -- 7097
+< -- 267
++ -- 2519
+- -- 2399
+* -- 14125
+:= -- 28238
+add.period$ -- 1219
+call.type$ -- 382
+change.case$ -- 3088
 chr.to.int$ -- 356
-cite$ -- 406
-duplicate$ -- 6544
-empty$ -- 11568
-format.name$ -- 2970
-if$ -- 33472
-int.to.chr$ -- 28
+cite$ -- 405
+duplicate$ -- 6530
+empty$ -- 11535
+format.name$ -- 2967
+if$ -- 33395
+int.to.chr$ -- 27
 int.to.str$ -- 0
-missing$ -- 373
-newline$ -- 1918
-num.names$ -- 1160
-pop$ -- 2832
+missing$ -- 372
+newline$ -- 1913
+num.names$ -- 1157
+pop$ -- 2829
 preamble$ -- 1
-purify$ -- 3106
+purify$ -- 3100
 quote$ -- 0
-skip$ -- 5013
+skip$ -- 5003
 stack$ -- 0
-substring$ -- 11599
-swap$ -- 1255
+substring$ -- 11553
+swap$ -- 1254
 text.length$ -- 113
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2274
+type$ -- 2268
 warning$ -- 23
-while$ -- 1321
+while$ -- 1317
 width$ -- 0
-write$ -- 5059
-(There were 24 warnings)
+write$ -- 5046
+(There were 25 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  6 JUN 2022 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  7 JUN 2022 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1504,30 +1504,30 @@ LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 7.
 ) [3
 
-] (./front-matter/abstract.tex) [4
+] (./front-matter/abstract.tex [4
 
-]
+])
 [5] (docs/thesis.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 1.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 7.
+ on input line 6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 7.
+(Font)              scaled to size 12.0pt on input line 6.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 7.
+(Font)              scaled to size 8.8pt on input line 6.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 7.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+(Font)              scaled to size 6.6pt on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1535,7 +1535,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1544,30 +1544,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-7.
+6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-7.
+6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-7.
+6.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 12.0pt on input line 7.
+(Font)              scaled to size 12.0pt on input line 6.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 8.8pt on input line 7.
+(Font)              scaled to size 8.8pt on input line 6.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 6.6pt on input line 7.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 7
+(Font)              scaled to size 6.6pt on input line 6.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
 .
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [6
@@ -1577,72 +1577,81 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 7
 \openout6 = `thesis.toc'.
 
  [8]
-(docs/thesis.lof [9
+[9] (docs/thesis.lof [10
 
 
-] [10]
+] [11]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 37.
- [11] [12] [13] [14] [15])
+ [12] [13] [14] [15] [16])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [16] (docs/thesis.lot)
+ [17] (docs/thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-
-[17
+[18
 
 
 ]
 Chapter 1.
 (./front-matter/introduction.tex [1
 
-] [2]) (./front-matter/combine_related.tex
-[3] [4]
-Chapter 2.
+] [2] [3]) (./front-matter/prelim.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 6.
+(Font)              scaled to size 14.4pt on input line 2.
+)
+(./front-matter/combine_related.tex [4]
+Chapter 2.
 [5
 
-] [6] [7] [8] [9] [10] [11]
+] [6] [7] [8]
+
+LaTeX Warning: Reference `prism:sec:rel:shell' on page 9 undefined on input lin
+e 99.
+
+[9] [10] [11]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 165.
+(Font)              scaled to size 8.8pt on input line 163.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 165.
+(Font)              scaled to size 10.0pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 165.
+(Font)              scaled to size 10.0pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 165.
+(Font)              scaled to size 7.3pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 165.
+(Font)              scaled to size 5.5pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.0pt on input line 165.
+(Font)              scaled to size 10.0pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 7.3pt on input line 165.
+(Font)              scaled to size 7.3pt on input line 163.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 5.5pt on input line 165.
+(Font)              scaled to size 5.5pt on input line 163.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 165.
+(Font)              size <5> substituted on input line 163.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 165.
+(Font)              scaled to size 7.3pt on input line 163.
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 16
-5.
+3.
 (/opt/texlive/texdir/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 165.
+(Font)              scaled to size 10.0pt on input line 163.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [12] [13]
-[14] [15] [16] [17]) (./front-matter/prelim.tex [18]) [19]
+ [12]
+
+Package natbib Warning: Citation `tetgen' on page 13 undefined on input line 18
+9.
+
+[13] [14] [15] [16] [17]) [18]
 Chapter 3.
 (./scaf-tex/sections/introduction.tex
 <scaf-tex/figs/teaser.pdf, id=130, 4500.74492pt x 1191.82263pt>
@@ -1668,9 +1677,9 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 5.
 
-[20
+[19
 
-]) (./scaf-tex/sections/method.tex [21]
+]) (./scaf-tex/sections/method.tex [20]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.6pt on input line 18.
 <scaf-tex/figs/scaffold_illustration.pdf, id=140, 724.7075pt x 250.9375pt>
@@ -1690,31 +1699,31 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23]
+[21] [22]
 <scaf-tex/figs/hand_weight.pdf, id=149, 724.7075pt x 403.5075pt>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24] [25]
+[23] [24]
 <scaf-tex/figs/coil-remeshing.pdf, id=157, 813.0375pt x 391.4625pt>
- [26]) (./scaf-tex/sections/results.tex
+ [25]) (./scaf-tex/sections/results.tex
 <scaf-tex/figs/database_demo.pdf, id=162, 682.55pt x 782.925pt>
- [27]
+ [26]
 <scaf-tex/figs/lucy-scalability.pdf, id=166, 808.01875pt x 642.4pt>
 <scaf-tex/figs/the_animal.pdf, id=167, 2961.0625pt x 1756.5625pt>
 <scaf-tex/figs/maneki_neko_colorful.pdf, id=168, 923.45pt x 772.8875pt>
- [28]
+ [27]
 <scaf-tex/figs/leg-flow.pdf, id=172, 3578.36874pt x 893.3375pt>
 <scaf-tex/figs/rabbit_grow.pdf, id=173, 1789.68625pt x 1104.125pt>
- [29]
+ [28]
 <scaf-tex/figs/dense_hilbert.pdf, id=177, 3462.9375pt x 1982.90813pt>
 <scaf-tex/figs/compare_smith.pdf, id=178, 1063.47313pt x 1065.50072pt>
 <scaf-tex/figs/camel_step.pdf, id=179, 1294.8375pt x 361.35pt>
 <scaf-tex/figs/random-rotate.pdf, id=180, 1047.46336pt x 1041.35043pt>
- [30]
+ [29]
 (./scaf-tex/sections/timings.tex)) (./scaf-tex/sections/conclusions.tex
-[31] [32]) [33] [34] [35] [36]
+[30] [31]) [32] [33] [34] [35]
 Chapter 4.
 (./prism-tex/01-Introduction.tex
 
@@ -1725,16 +1734,16 @@ File: prism-tex/figs/teaser_edit.pdf Graphic file (type pdf)
 <use prism-tex/figs/teaser_edit.pdf>
 Package pdftex.def Info: prism-tex/figs/teaser_edit.pdf  used on input line 4.
 (pdftex.def)             Requested size: 469.75502pt x 428.30008pt.
-[37
+[36
 
-] [38 <./prism-tex/figs/teaser_edit.pdf>]) (./prism-tex/03-Method.tex
+] [37 <./prism-tex/figs/teaser_edit.pdf>]) (./prism-tex/03-Method.tex
 <prism-tex/figs/pipeline.pdf, id=259, 498.0698pt x 184.3979pt>
 
-[39]
+[38]
 <prism-tex/figs/corona.pdf, id=263, 1024.33693pt x 567.42287pt>
- [40]
+ [39]
 <prism-tex/figs/prism_projection.pdf, id=267, 754.83604pt x 349.48567pt>
- [41]
+ [40]
 <prism-tex/figs/projection.pdf, id=272, 1347.72502pt x 329.55319pt>
 <prism-tex/figs/not-section-illustrate.pdf, id=273, 412.97488pt x 160.6pt>
 File: prism-tex/figs/not-section-illustrate.pdf Graphic file (type pdf)
@@ -1742,31 +1751,31 @@ File: prism-tex/figs/not-section-illustrate.pdf Graphic file (type pdf)
 Package pdftex.def Info: prism-tex/figs/not-section-illustrate.pdf  used on inp
 ut line 79.
 (pdftex.def)             Requested size: 375.80544pt x 146.14621pt.
- [42] [43 <./prism-tex/figs/not-section-illustrate.pdf>]
+ [41] [42 <./prism-tex/figs/not-section-illustrate.pdf>]
 
 pdfTeX warning: pdflatex (file ./prism-tex/figs/composition.pdf): PDF inclusion
 : found PDF version <1.6>, but at most version <1.5> allowed
 <prism-tex/figs/composition.pdf, id=303, 1089.04866pt x 376.48154pt>
-[44] [45]
+[43] [44]
 <prism-tex/figs/need_to_bevel.pdf, id=312, 1265.88939pt x 454.60039pt>
- [46]
+ [45]
 <prism-tex/figs/bevel.pdf, id=316, 798.88464pt x 226.75415pt>
 <prism-tex/figs/screwdriver_bevel.pdf, id=317, 914.59294pt x 602.25pt>
- [47] [48]
+ [46] [47]
 <prism-tex/figs/local-operations.pdf, id=324, 1627.23938pt x 707.15695pt>
- [49] [50]
+ [48] [49]
 <prism-tex/figs/doublewheel_pinch.pdf, id=332, 1840.28532pt x 515.21384pt>
 File: prism-tex/figs/doublewheel_pinch.pdf Graphic file (type pdf)
 <use prism-tex/figs/doublewheel_pinch.pdf>
 Package pdftex.def Info: prism-tex/figs/doublewheel_pinch.pdf  used on input li
 ne 357.
 (pdftex.def)             Requested size: 469.75502pt x 131.51537pt.
- [51 <./prism-tex/figs/doublewheel_pinch.pdf>]
+ [50 <./prism-tex/figs/doublewheel_pinch.pdf>]
 <prism-tex/figs/singular_bevel.pdf, id=651, 250.62433pt x 190.81789pt>
 <prism-tex/figs/degenerate_prism_decompose.pdf, id=652, 988.12663pt x 353.48161
 pt>
 <prism-tex/figs/boundary_singular.pdf, id=653, 320.11597pt x 108.6178pt>
- [52]
+ [51]
 <prism-tex/figs/open-hand.pdf, id=657, 724.0731pt x 244.50346pt>
 ) (./prism-tex/04-Results.tex
 <prism-tex/figs/varying_thickness.pdf, id=658, 1933.95522pt x 652.96646pt>
@@ -1775,48 +1784,48 @@ File: prism-tex/figs/varying_thickness.pdf Graphic file (type pdf)
 Package pdftex.def Info: prism-tex/figs/varying_thickness.pdf  used on input li
 ne 11.
 (pdftex.def)             Requested size: 469.75502pt x 158.59824pt.
- [53]
+ [52]
 <prism-tex/figs/10k_gallery.pdf, id=662, 1020.82379pt x 864.11633pt>
 <prism-tex/figs/abc_gallery.pdf, id=663, 1493.4897pt x 695.41808pt>
 
 
 LaTeX Warning: Float too large for page by 21.08928pt on input line 38.
 
-[54 <./prism-tex/figs/varying_thickness.pdf>] [55]
+[53 <./prism-tex/figs/varying_thickness.pdf>] [54]
 <prism-tex/figs/stats_combined.pdf, id=727, page=2, 602.25pt x 1151.512pt>
 <prism-tex/figs/stats_combined.pdf, id=728, page=1, 602.25pt x 1151.512pt>
 <prism-tex/figs/thai_comparision.pdf, id=729, 1170.30229pt x 842.09503pt>
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 76.
- [56]
+ [55]
 <prism-tex/figs/shark_accuracy.pdf, id=734, 1191.29062pt x 339.5907pt>
- [57] [58]
+ [56] [57]
 <prism-tex/figs/rockerarm_qslim.pdf, id=742, 929.97034pt x 536.13097pt>
 <prism-tex/figs/heat-in-nut.pdf, id=743, 1103.3722pt x 829.10957pt>
 <prism-tex/figs/tet-knot.pdf, id=744, 417.1876pt x 204.89449pt>
- [59]
+ [58]
 <prism-tex/figs/birdengine.pdf, id=748, 612.60968pt x 508.60513pt>
- [60]
+ [59]
 <prism-tex/figs/bunny-displacement.pdf, id=752, 1068.8934pt x 777.8089pt>
 <prism-tex/figs/chain-lizard.pdf, id=753, 915.38588pt x 225.84375pt>
 
-[61]
+[60]
 <prism-tex/figs/leg-intersect.pdf, id=757, 787.1287pt x 238.49802pt>
 <prism-tex/figs/armadillo_cage.pdf, id=758, 916.9728pt x 304.55682pt>
 <prism-tex/figs/camel.pdf, id=759, 854.50542pt x 624.96388pt>
- [62] [63] [64]
+ [61] [62] [63]
 <prism-tex/figs/blocks.pdf, id=770, 2796.48769pt x 832.62968pt>
- [65]) (./prism-tex/05-Concluding.tex [66]) [67]
+ [64]) (./prism-tex/05-Concluding.tex [65]) [66]
 Chapter 5.
 (./curve_meshing_in_shell_tex/01_intro.tex
 <curve_meshing_in_shell_tex/figs/teaser.pdf, id=780, 4578.62572pt x 1084.21063p
 t>
- [68
+ [67
 
 ])
 (./curve_meshing_in_shell_tex/03_method.tex
 
-LaTeX Warning: Reference `[' on page 69 undefined on input line 3.
+LaTeX Warning: Reference `[' on page 68 undefined on input line 3.
 
 <curve_meshing_in_shell_tex/figs/illustrations/input-output.pdf, id=785, 462.90
 341pt x 166.4629pt>
@@ -1827,10 +1836,10 @@ Overfull \hbox (3.04782pt too wide) in paragraph at lines 20--22
 fold, wa-ter-tight, self-intersection-|
  []
 
-[69]
+[68]
 <curve_meshing_in_shell_tex/figs/illustrations/high-order.pdf, id=789, 520.6993
 6pt x 98.58421pt>
- [70]
+ [69]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 50.
 <curve_meshing_in_shell_tex/figs/bunny/0001.png, id=793, 1110.1475pt x 1417.295
@@ -1851,17 +1860,17 @@ owed
 <curve_meshing_in_shell_tex/figs/intersection-free.pdf, id=798, 630.93015pt x 4
 00.62373pt>
 
-LaTeX Warning: Reference `app:local-ops' on page 71 undefined on input line 104
+LaTeX Warning: Reference `app:local-ops' on page 70 undefined on input line 104
 .
 
-[71]
+[70]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 pipeline.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
 <curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf, id=802, 405.29016p
 t x 137.00084pt>
-[72] [73]
+[71] [72]
 <curve_meshing_in_shell_tex/figs/fish/fish002.png, id=809, 1664.2175pt x 1084.0
 5pt>
 <curve_meshing_in_shell_tex/figs/fish/0003.png, id=810, 1664.2175pt x 1084.05pt
@@ -1870,10 +1879,10 @@ t x 137.00084pt>
 >
 <curve_meshing_in_shell_tex/figs/fish/0004.png, id=812, 1664.2175pt x 1084.05pt
 >
- [74]
+ [73]
 <curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=817,
  322.10138pt x 83.1905pt>
- [75] [76]) (./curve_meshing_in_shell_tex/03.1_features.tex
+ [74] [75]) (./curve_meshing_in_shell_tex/03.1_features.tex
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 input-output-feature.pdf): PDF inclusion: found PDF version <1.6>, but at most 
@@ -1898,17 +1907,17 @@ version <1.5> allowed
 
 <curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=833, 803.0pt x 803.0pt>
 
-[77] [78]
+[76] [77]
 <curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=840, 219.98888pt
  x 70.59705pt>
- [79]
+ [78]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 loc-op.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
 <curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=844, 326.8461pt x
  55.73764pt>
-) (./curve_meshing_in_shell_tex/04_result.tex [80]
+) (./curve_meshing_in_shell_tex/04_result.tex [79]
 <curve_meshing_in_shell_tex/figs/anphora/0005.png, id=849, 1027.84pt x 2069.732
 5pt>
 <curve_meshing_in_shell_tex/figs/anphora/0001.png, id=850, 1027.84pt x 2069.732
@@ -1943,7 +1952,7 @@ t x 602.25pt>
 <curve_meshing_in_shell_tex/figs/octa/0003.png, id=856, 931.48pt x 939.51pt>
 <curve_meshing_in_shell_tex/figs/octa/0002.png, id=857, 931.48pt x 939.51pt>
 <curve_meshing_in_shell_tex/figs/octa/0001.png, id=858, 931.48pt x 939.51pt>
-[81]
+[80]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_T
 hingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
@@ -1964,7 +1973,7 @@ oLyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
 <curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=864, 602.25pt x 
 602.25pt>
-[82]
+[81]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Thi
 ngi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
@@ -1993,7 +2002,7 @@ pt>
 pt>
 <curve_meshing_in_shell_tex/figs/gargo/0004.png, id=874, 873.2625pt x 1049.9225
 pt>
-[83]
+[82]
 <curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=878, 1027.84pt x 622.325p
 t>
 <curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=879, 1027.84pt x 622.325pt>
@@ -2005,7 +2014,7 @@ t>
 25pt>
 <curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=883, 1180.41pt x 1184.4
 25pt>
- [84]
+ [83]
 <curve_meshing_in_shell_tex/figs/micro/color.png, id=887, 803.0pt x 803.0pt>
 <curve_meshing_in_shell_tex/figs/spot.png, id=888, 803.0pt x 803.0pt>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -2038,7 +2047,7 @@ lyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
 allowed
 <curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=891, 602.25pt x 6
 02.25pt>
-[85] [86]
+[84] [85]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 226.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -2047,7 +2056,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 pt>
 <curve_meshing_in_shell_tex/figs/fluid/0002.png, id=900, 1270.7475pt x 1015.795
 pt>
- [87]) (./curve_meshing_in_shell_tex/05_conclude.tex) [88]
+ [86]) (./curve_meshing_in_shell_tex/05_conclude.tex) [87]
 Chapter 6.
 (./wmtk-tex/02-introduction.tex
 
@@ -2055,40 +2064,40 @@ pdfTeX warning: pdflatex (file ./wmtk-tex/figs/teaser2.pdf): PDF inclusion: fou
 nd PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/teaser2.pdf, id=908, 5017.46541pt x 1663.96657pt>
 
-LaTeX Warning: Reference `wmtk:sec:related' on page 89 undefined on input line 
+LaTeX Warning: Reference `wmtk:sec:related' on page 88 undefined on input line 
 13.
 
-[89
+[88
 
-] [90]) (./wmtk-tex/04-method.tex
+] [89]) (./wmtk-tex/04-method.tex
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/pipeline_illustration.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/pipeline_illustration.pdf, id=915, 1245.15187pt x 599.30902pt>
-[91] [92]
+[90] [91]
 
 LaTeX Warning: Float too large for page by 29.89696pt on input line 49.
 
-[93] [94] [95] [96]
+[92] [93] [94] [95]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/lock_illustration.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/lock_illustration.pdf, id=935, 2276.8863pt x 571.27025pt>
-[97]
+[96]
 
 LaTeX Warning: Float too large for page by 131.29497pt on input line 129.
 
-) (./wmtk-tex/05-results.tex [98] [99]
+) (./wmtk-tex/05-results.tex [97] [98]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-sec-statue.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/2d-sec-statue.pdf, id=947, 2975.65706pt x 1291.09354pt>
-[100]
+[99]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-qslim.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/2d-qslim.pdf, id=951, 1845.62521pt x 1511.3163pt>
-[101]
+[100]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-remeshing-lucy.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
@@ -2098,7 +2107,7 @@ usion: found PDF version <1.6>, but at most version <1.5> allowed
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-harmonic-gauss.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/3d-harmonic-gauss.pdf, id=956, 2809.00443pt x 1027.84pt>
-[102]
+[101]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-tetwild-dragon.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
@@ -2108,11 +2117,11 @@ usion: found PDF version <1.6>, but at most version <1.5> allowed
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/limitation-of-para.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/limitation-of-para.pdf, id=961, 1030.74084pt x 320.63187pt>
-[103]
+[102]
 <wmtk-tex/figs/2d-sec-envelope.pdf, id=965, 3406.56699pt x 1640.46873pt>
 <wmtk-tex/figs/2d-remeshing-headport-env.pdf, id=966, 3305.138pt x 1474.67943pt
 >
- [104] [105]
+ [103] [104]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tri2d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
@@ -2122,34 +2131,34 @@ pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tri2d-stats.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tet3d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
 <wmtk-tex/figs/tet3d-stats.pdf, id=975, 1846.97021pt x 413.89632pt>
-) (./wmtk-tex/06-concluding.tex [106]) [107]
+) (./wmtk-tex/06-concluding.tex [105]) [106]
 Chapter 7.
-(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [108
+(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [107
 
 ]
 Appendix A.
-[109
+[108
 
 ]
 <prism-tex/figs/bevel_colors.pdf, id=988, 333.19179pt x 206.48442pt>
 <prism-tex/figs/singularity-bevel-explained.pdf, id=989, 281.87608pt x 236.2205
 2pt>
- [110] [111] [112] [113]) [114]
+ [109] [110] [111] [112]) [113]
 Appendix B.
-(./curve_meshing_in_shell_tex/90-bij-proof.tex [115
+(./curve_meshing_in_shell_tex/90-bij-proof.tex [114
 
 ])
 (./curve_meshing_in_shell_tex/91-app-local-ops.tex
 
-LaTeX Warning: Reference `app:local-ops' on page 116 undefined on input line 1.
+LaTeX Warning: Reference `app:local-ops' on page 115 undefined on input line 1.
 
 
 
-Package natbib Warning: Citation `chp:shell' on page 116 undefined on input lin
+Package natbib Warning: Citation `chp:shell' on page 115 undefined on input lin
 e 2.
 
 
-LaTeX Warning: Reference `[' on page 116 undefined on input line 5.
+LaTeX Warning: Reference `[' on page 115 undefined on input line 5.
 
 ) (./curve_meshing_in_shell_tex/92-app-tetgen.tex
 
@@ -2172,17 +2181,17 @@ O.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
 <curve_meshing_in_shell_tex/figs/stats/tetgen_TO.pdf, id=1011, 602.25pt x 301.1
 25pt>
-[116]) (./curve_meshing_in_shell_tex/93-app-tetwild.tex) [117] (docs/thesis.bbl
-[118
+[115]) (./curve_meshing_in_shell_tex/93-app-tetwild.tex) [116] (docs/thesis.bbl
+[117
 
 
-] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
-[130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
-[142] [143])
+] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]
+[129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
+[141] [142])
 
 Package natbib Warning: There were undefined citations.
 
-[144] (docs/thesis.aux)
+[143] (docs/thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2196,10 +2205,10 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  41440 strings out of 478305
- 809436 string characters out of 5847251
- 1145553 words of memory out of 5000000
- 57670 multiletter control sequences out of 15000+600000
- 768490 words of font info for 844 fonts, out of 8000000 for 9000
+ 809472 string characters out of 5847251
+ 1145476 words of memory out of 5000000
+ 57667 multiletter control sequences out of 15000+600000
+ 768755 words of font info for 846 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1334b,1261s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
@@ -2229,7 +2238,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (161 pages, 62659437 bytes).
+Output written on docs/thesis.pdf (161 pages, 62660069 bytes).
 PDF statistics:
  1205 PDF objects out of 1440 (max. 8388607)
  505 compressed objects within 6 object streams
