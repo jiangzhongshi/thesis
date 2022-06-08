@@ -2,10 +2,9 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 12986 items from 5000.
+Reallocated field_info (elt_size=4) to 12964 items from 5000.
 Database file #1: referenced.bib
 Warning--I didn't find a database entry for "clausen:2013"
-Warning--I didn't find a database entry for "chp:shell"
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
 Warning--can't use both volume and number fields in botsch2003multiresolution
@@ -29,7 +28,7 @@ Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
 You've used 361 entries,
             1935 wiz_defined-function locations,
-            2346 strings with 63484 characters,
+            2345 strings with 63475 characters,
 and the built_in function-call counts, 157570 in all, are:
 = -- 15607
 > -- 6740
@@ -68,4 +67,4 @@ warning$ -- 21
 while$ -- 1232
 width$ -- 0
 write$ -- 4762
-(There were 23 warnings)
+(There were 22 warnings)

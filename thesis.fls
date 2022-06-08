@@ -511,6 +511,7 @@ INPUT /opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/amscls/amsthm.sty
