@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  8 JUN 2022 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  8 JUN 2022 20:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1273,7 +1273,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 runsystem(mkdir -p _minted-thesis)...disabled (restricted).
 
-)
+
 (/opt/texlive/texdir/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
@@ -1312,7 +1312,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count381
 \@vwid@loff=\dimen352
 \@vwid@roff=\dimen353
-))
+)))
 (docs/thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -2229,7 +2229,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (159 pages, 62655513 bytes).
+Output written on docs/thesis.pdf (159 pages, 62655510 bytes).
 PDF statistics:
  1199 PDF objects out of 1200 (max. 8388607)
  501 compressed objects within 6 object streams
