@@ -4,7 +4,8 @@
 % We make our objects with manufacture pipeline, starting from a digital engineering design.
 % advanced manufacturing and design techniques more and more complex shapes (engineering design).
 Most of the everyday objects that we invent and interact in the physical world, ranging from electronic devices to transportation vehicles, are manufactured through a digital aided production pipeline.
-In practice, a typical product begins its lifecycle from a digital specification of the shape and material. 
+In practice, a typical product begins its lifecycle from a digital specification of the shape and material.
+The numerical solution of partial differential equations (PDEs) portrays how a design would behave even before it is created. 
 Computer simulation would then test the behavior to match the designer's intent: a car hood's deformation under pressure of collision or a steel pan's temperature distribution when heated on a stove. In this case, a robust and accurate simulation could lift many iterations of manufacturing to the digital platform. In addition, as it is safer to conduct more stress experiments in a virtual environment, a reliable simulation also promotes safety, especially in designing biomechanical equipments. 
 First, given a desirable functionality, the designer compose a shape, then prototype and test the object under specified physical conditions. e.g. stress, or heat, or fluidic. 
 Therefore, automatic computer algorithms for the design and fabrication would ensure the reliability and accessibility of medical devices. To do so requires a clear understanding of physical simulation and geometry design.
@@ -13,25 +14,21 @@ Therefore, automatic computer algorithms for the design and fabrication would en
 On the other hand, composition of digital assets are through the similar pipeline, more traditionally, as a way to reverse engineer a part into a digital format, digitalizing ancient artifacts, and recently, including human avatars, or objects that we are growing essential for the virtual environment, thanks for 3D scanning techniques to obtain a digital shape, and then perform editing, fairing, modifications and other modeling operations. larger and larger quantites, and versatile of organic shapes beyond bunny. (scanning) and we want the dynamic deformation/collision response, in the information rich virtual environment, for interaction and physics based deformation. 
 However, from raw scanning depth images to a 3D concise, editable representations would go through many steps and usually incur much manual labor to finish it.
 
-% In both sides of these processes, there is the problem of robustness. And the need to connect modeling with simulation. and to process the information back and forth.
+There are various approaches to specify a shape, depending on the different geometry characteristics. Shape modeling evolves beyond smooth and regular objects like sculpture or furniture. Algorithm deduced structures have gained popularity since they deliver the promise of maximal durability with limited material. Downstream, computer simulation requires a discrete tessellation of the object. A notable example is a mesh: it contains a list of vertices for the spatial locations and a list of simple polygons or polyhedra. However, it is rarely the case where one mesh fits all. More degrees of freedom give a more accurate description of the desired shape, but it inevitably means more computational resources are needed to handle the computation.
 
 Researchers usually examine the computational design and simulation separately, leading to different computational tools for the discretized geometry. Different representations between design methods and various adaptations of simulations, even for the same shape, are not reliably correlated. In the general case, the material, attribute, or experiment setting cannot be robustly re-used on another representation without laborious manually fixing. Such a pipeline demands the engineer or designer to understand precisely the properties of the specific numerical methods of choice. It also prohibits an automatic and robust pipeline from optimizing the desired physical durability or permeability structure. 
 
 In contrary to the 2D representations of image, which commonly lives on grid data, there has been different candidates to represent and process information on a 3D shape have various representations. Ranging from multi-view depth images, point clouds, strucuted and unstructured meshes, and  there are different trade-off assocaited, ranging from memory efficiency, and specialized algorithms. And across different stages of the computational pipeline regarding a 3D shape, different representations might be used, to adapt to specialized algorithms: for example, 3D acquisition devices produces multiview depth images; some design and modeling tools make use the topology-flexible implicit surfaces as the representation for lattice or porous structures; digital asset modeling toolchains and industry make use of surface triangle or quadralaterial meshes extensively; physical simulation requires a spatial partitioning, as commonly tetrahedral meshes to carry out the quantities inside a volume. 
 
-
+This thesis aims to develop algorithms that reliably associate different representations of discrete geometry entities at diverse design and simulation stages. Instead of re-assigning properties at various phases of the design-simulation pipeline, or whenever the required budget is different, a good association between geometry at different stages gives more freedom to the design and development of automatic and adaptive solvers. The adaptation can be bi-directional: on the one hand, with coarse and concise tessellation, the algorithm utilizes the information associated with the original design to obtain more faithful simulations. On the other hand, in early-stage prototyping, and automatic data generation for deep learning, the principles I established allows for simplifying the shape and retaining the settings, providing a fast answer. In addition, I use the same principle to design the first large-scale and robust approach for curved mesh representation, which provides accurate representation as well as efficient physical simulations.
 By virtue of reliably connecting the data across different representations and at different stages, guarantees of correctness of properties can be safely uphold, which would reduce the chance of mistakes and iterations by manual labor. 
 Furthermore,  since different algorithms perform well on different representations, multiple algorithms can finally work together, and synergistically improve the performance of an overall pipeline.
+Such a contribution outreach to 3d model design and acquisition pipeline, as well as their physical behavior predication, adn manufactured.
 
-
-Through this thesis, I am going to develop the computational principle to relate information across digital design and simulation pipelines reliably. 
+The thesis develop the computational principle to relate information across digital design and simulation pipelines reliably. 
 The central technique is to leverage auxiliary geometric constructions to introduce novel constraints. 
 By integrating such geometric constraints into the parameterization, or mesh optimization pipeline,  I am able to achieve provable guarantees. 
-At the same time, geometric algorithms are often troubled with numerical problems. For this, I perform extensive experiments to back up in real.
-% 
-Outreach and impact:
-physical simulation, material design (cite Davi), 
-
+In the meantime, geometric algorithms are often troubled with numerical problems. For this, I perform extensive experiments to back up in real.
 For the remainder of this dissertation,
 chapter 3 introduce bijective parameteriazations with triangulation augmentation, as a technique to speed up and guarantee the computation of bijective maps in 2d and 3D, as an crucial intermediate step for registering, storing, and processing surface and volume signals.
 I will first introduce the method of SCAF, 
