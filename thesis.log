@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  10 JUN 2022 16:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  10 JUN 2022 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1953,7 +1953,7 @@ tx/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pf
 b></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/te
 xlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texd
 ir/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (61 pages, 653566 bytes).
+Output written on docs/thesis.pdf (61 pages, 655063 bytes).
 PDF statistics:
  314 PDF objects out of 1000 (max. 8388607)
  206 compressed objects within 3 object streams
