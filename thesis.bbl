@@ -968,6 +968,27 @@ Jamin, C., Alliez, P., Yvinec, M., and Boissonnat, J.-D. (2015).
 \newblock Cgalmesh: a generic framework for delaunay mesh generation.
 \newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 41(4):23.
 
+\bibitem[Jiang, 2017]{githubScaffoldMap}
+Jiang, Z. (2017).
+\newblock {G}it{H}ub - jiangzhongshi/{S}caffold-{M}ap: {R}obust, efficient and
+  low distortion bijective mapping in 2{D} and 3{D} --- github.com.
+\newblock \url{https://github.com/jiangzhongshi/Scaffold-Map}.
+
+\bibitem[Jiang, 2021a]{githubbichon}
+Jiang, Z. (2021a).
+\newblock {G}it{H}ub - jiangzhongshi/bichon: {R}obust {C}oarse {C}urved
+  {T}et{M}esh {G}eneration --- github.com.
+\newblock \url{https://github.com/jiangzhongshi/bichon}.
+\newblock [Accessed 09-Jun-2022].
+
+\bibitem[Jiang, 2021b]{githubshell}
+Jiang, Z. (2021b).
+\newblock {G}it{H}ub - jiangzhongshi/bijective-projection-shell: {A}
+  projection-based bijective map definition and a robust algorithm to construct
+  the prismatic shell domain.
+  https://cs.nyu.edu/~zhongshi/files/{B}ijective{P}rism.pdf --- github.com.
+\newblock \url{https://github.com/jiangzhongshi/bijective-projection-shell}.
+
 \bibitem[Jiang et~al., 2017]{jiang2017simplicial}
 Jiang, Z., Schaefer, S., and Panozzo, D. (2017).
 \newblock Simplicial complex augmentation framework for bijective maps.
