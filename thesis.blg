@@ -2,21 +2,18 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 13030 items from 5000.
+Reallocated field_info (elt_size=4) to 11644 items from 5000.
 Database file #1: referenced.bib
 Warning--I didn't find a database entry for "clausen:2013"
 Warning--empty institution in Baumgart1972
-Warning--can't use both volume and number fields in bommes2013quad
 Warning--can't use both volume and number fields in botsch2003multiresolution
 Warning--there's a number but no series in botsch2006primo
-Warning--empty journal in botsch2002openmesh
 Warning--can't use both volume and number fields in boubekeur2008phong
 Warning--can't use both volume and number fields in chen2004shell
 Warning--there's a number but no series in CohenSteiner:2002:CDT
 Warning--empty booktitle in dunyach2013adaptive
 Warning--empty journal in dyer2007delaunay
 Warning--empty school in Garland:1999
-Warning--can't use both volume and number fields in hass2020approximating
 Warning--empty booktitle in Klingner07aggressive
 Warning--empty journal in mezger2007finite
 Warning--empty journal in moxeynekmesh
@@ -24,47 +21,46 @@ Warning--empty journal in okusanya1996parallel
 Warning--empty booktitle in Peir2015OnCH
 Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
-Warning--empty institution in SALARI:2000:CVB
 Warning--can't use both volume and number fields in wang2003view
-You've used 364 entries,
+You've used 301 entries,
             1935 wiz_defined-function locations,
-            2357 strings with 64201 characters,
-and the built_in function-call counts, 158314 in all, are:
-= -- 15687
-> -- 6761
-< -- 254
-+ -- 2383
-- -- 2287
-* -- 13357
-:= -- 26817
-add.period$ -- 1160
-call.type$ -- 364
-change.case$ -- 2943
-chr.to.int$ -- 356
-cite$ -- 385
-duplicate$ -- 6187
-empty$ -- 10886
-format.name$ -- 2827
-if$ -- 31612
-int.to.chr$ -- 9
+            2073 strings with 54652 characters,
+and the built_in function-call counts, 132112 in all, are:
+= -- 13085
+> -- 5644
+< -- 205
++ -- 1991
+- -- 1911
+* -- 11210
+:= -- 22341
+add.period$ -- 964
+call.type$ -- 301
+change.case$ -- 2448
+chr.to.int$ -- 295
+cite$ -- 318
+duplicate$ -- 5141
+empty$ -- 9099
+format.name$ -- 2352
+if$ -- 26395
+int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 352
-newline$ -- 1824
-num.names$ -- 1100
-pop$ -- 2694
+missing$ -- 291
+newline$ -- 1513
+num.names$ -- 911
+pop$ -- 2219
 preamble$ -- 1
-purify$ -- 2955
+purify$ -- 2456
 quote$ -- 0
-skip$ -- 4769
+skip$ -- 3958
 stack$ -- 0
-substring$ -- 10835
-swap$ -- 1183
-text.length$ -- 107
+substring$ -- 9151
+swap$ -- 989
+text.length$ -- 88
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2160
-warning$ -- 21
-while$ -- 1238
+type$ -- 1794
+warning$ -- 17
+while$ -- 1030
 width$ -- 0
-write$ -- 4800
-(There were 22 warnings)
+write$ -- 3987
+(There were 18 warnings)
