@@ -1,18 +1,20 @@
-In this dissertation, we have examined problems with meshes, and mappings. By robust association of attributes between different representations, our constructions have benefit robust geometric modeling and scalable physical simulation.
+This dissertation covers several problems on to the bijective mappings between different spatial domains. Computational principles are introduced to guarantee the validity of attribute association and robust algorithms are presented to efficiently process information across digital shapes. I argue that these principles are important, not only for the robust and scalable processing of digital geometry shapes, but also for the development of next generation pipeline of geometric modeling and physical simulation. To this end, there are still much to be done.
 
-However, there are still much to be done.
+% Chapter~\ref{chp:scaf} concerns primarily with the mapping problem in the context of creative modeling.
 
-Fast boolean.
+In chapter~\ref{chp:curve}, we have mostly demonstrated the benefit of surface and volume simplification, in the context of scalable visualization and efficient physical simulation. On the other hand, our framework can be further extended to adaptively refine a given geometry, adding detail and smoothness. Such features combined with Adaptive Mesh Refinement pipeline, is important for scientific computing and computational design.
 
-This chapter relates to the outlook and conclusions.
+Next, in order to guarantee strictly bijective attribute transfer, the theory on the shell is mostly confined in the context of manifold meshes. However, a blended framework with envelope \cite{hu2018tetrahedral, Wang:2021} can open the door to  data that are partially corrupted or occluded. Such data, only partially information rich, is commonly seen in 3d scanned dataset, or MRI medical datasets.
 
-\paragraph*{Post publication trivia}
-Bijective Parameterization has received follow ups.
+High order finite element method is not a brand new concept, but we believe that the availability of more high order surface and volume meshes (chapter~\ref{chp:curve}) would benefit its adoption and release the potential in efficient physical computations. In addition, resolving frictional contact with curved representations \cite{Li2020IPC} can make dynamic simulations more scalable and efficient. 
+Due to historical reasons, much of geometric modeling software have the capability of some curved format (e.g. B{\'e}zier and NURBS), but they typically lack robustness. In this aspect, our contribution of robust and intersection-free curve surface modeling can contribute to a more systematically robust industrial design and simulation pipeline.
 
-Geometry + Simulations
+The chapters have introduced building the robust association between design and simulation representations. A closely related concept with attribute transfer is differentiability. Combined with new advance and algorithms for differetiable physical simulation, we will automatically tweak the design space to the desirably simulation results, making it possible to design medical devices with tailored need in a fully automatic way.
 
-Geometry + Vision construction
+% Furthermore, the exploration of efficient mesh generation methods.
 
-Finally, the availability of data is essential to algorithm verification and data-driven algorithm development. In collaboration with OnShape Inc. and colleagues at NYU, we collected and curated large-scale computed-aided design (CAD) models created by mechanical engineers. The dataset contains one million geometry shapes with rich information. 
+Finally, such advance of new processing algorithms and data collection techniques is the stepping stone to fully leverage information from the large scale dataset, and have the dataset to accomplish tasks, including segmentation, feature detection, physics understanding, and robotics manipulation.
+%Mesh generation with fast boolean.
+%Finally, the availability of data is essential to algorithm verification and data-driven algorithm development. In collaboration with OnShape Inc. and colleagues at NYU, we collected and curated large-scale computed-aided design (CAD) models created by mechanical engineers. The dataset contains one million geometry shapes with rich information. 
 %The dataset is publicly online, and the result is presented in “A Big CAD Model Dataset For Geometric Deep Learning,” Koch et al., CVPR, 2019. 
-Physical simulation on a large scale of datasets allows for machine learning techniques to take advantage, in order to assist the generative design or practical simulations.
+%Physical simulation on a large scale of datasets allows for machine learning techniques to take advantage, in order to assist the generative design or practical simulations.
