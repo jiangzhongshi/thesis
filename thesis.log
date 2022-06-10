@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  10 JUN 2022 02:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  10 JUN 2022 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2202,7 +2202,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  41370 strings out of 478305
  807853 string characters out of 5847251
- 1144841 words of memory out of 5000000
+ 1144842 words of memory out of 5000000
  57612 multiletter control sequences out of 15000+600000
  762427 words of font info for 836 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
