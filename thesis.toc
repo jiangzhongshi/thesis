@@ -60,7 +60,7 @@
 \contentsline {section}{\numberline {A.3}Reduction to a Standard QP}{27}{section.A.3}%
 \contentsline {section}{\numberline {A.4}Bijectivity of the Nonlinear Prismatic Transformation}{28}{section.A.4}%
 \contentsline {section}{\numberline {A.5}Double Slab}{28}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Unpublished Material}{28}{section.A.6}%
+\contentsline {section}{\numberline {A.6}Variants}{28}{section.A.6}%
 \contentsline {subsection}{\numberline {A.6.1}Pointless Variant}{29}{subsection.A.6.1}%
 \contentsline {subsection}{\numberline {A.6.2}Dynamic Intersection Check}{29}{subsection.A.6.2}%
 \contentsline {subsection}{\numberline {A.6.3}Feature Snapping Shell}{29}{subsection.A.6.3}%
