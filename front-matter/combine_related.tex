@@ -1,5 +1,3 @@
-\chapter{Related Works}
-\label{sec:related}
 
 
 \section{Meshes in Computer Graphics}
@@ -135,8 +133,31 @@ The work that is closer to Chapter~\ref{chp:scaf} in term of application (but ve
 In Chapter~\ref{chp:shell} and ~\ref{chp:curve}
 Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \cite{botsch2006primo,botsch2003multiresolution} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface.
 
+Curved tetrahedral meshes have also gained popularity in the context of fast animation. With fewer degrees of freedom and preserved geometric fidelity, 
+\cite{mezger2007finite} observe the benefit of quadratic tetrahedra in the pipeline of physically based animation.
+\cite{Suwelack2013} further investigate the transfer problem when using curved meshes as a proxy.
+
 
 \section{Mesh Generation}\label{cumin:sec:related}
+
+
+\subsection{Curved Surface Meshes}
+There are many algorithms for fitting curved \emph{surfaces} to dense 3D triangle meshes. The most popular approaches fit spline patches, usually on top of a quadrangular grid. Since generating quadrilateral meshes is a challenging problem for which robust solutions do not exist yet, we refer to \cite{QUADSTAR2012} for an overview, and only review in this section algorithms for unstructured curve{d} mesh generation, which are more similar to our algorithm. We note that the focus of our paper is volumetric meshing: while we generate an intermediate curved surface mesh, this is not the goal of our algorithm, especially since the generated surface is only $C^0$ on edges.
+
+\cite{hoppe1994piecewise} fits a smooth surface represented by a point cloud to a curved triangle mesh based on a subdivision surface scheme and an interleaving mesh simplification and fitting pipeline that preserves sharp features. 
+The algorithm does not provide explicit correspondence to the input: they are defined using distance closest point, which is not bijective far from the surface. 
+
+\cite{krishnamurthy1996fitting} converts dense irregular polygon meshes of arbitrary topology into coarse tensor product B-spline surface patches with accompanying displacement maps. Based on the work \cite{LIN2007adap} that fits triangle surface meshes with B\'ezier patches, \cite{Zhang2011multi} fits triangle surface meshes with high-order B-spline quadrilateral patches and adaptively subdivide the patches to reduce the fitting error. These methods produce smooth surfaces but do not have feature preservation.
+
+Another related topic is the definition of smooth parametric surfaces interpolating triangle meshes. We refer to \cite{zorin2000subdivision} for an overview of subdivision methods and discuss here the approaches closer to our contribution.
+
+\cite{Hahmann2003} proposed to use triangular B{\'e}zier patches to define smooth surfaces over arbitrary triangle meshes ensuring tangent plane continuity by relaxing the constraint of the first derivatives at the input vertices.
+%
+Following Hahmann's work, \cite{yvart2005smooth} presents a more complete pipeline: perform QEM simplifications, trace the coarse mesh onto the dense one and perform parameterization relaxing and smoothing. Then it fits a hierarchical triangular spline~\cite{Yvart2005hier} to the surface.
+%
+More recent work \cite{TONG2009} approximates the triangulation of an implicit surface with a $G^1$ surface.
+%
+These schemes are usually designed to interpolate existing meshes rather than simplifying a dense linear mesh into a coarse curved mesh and are thus orthogonal to our contribution.
 
 \subsection{Curved Tetrahedral Mesh Generation}
 
@@ -159,16 +180,12 @@ Their algorithm starts with a point cloud sampled from triangle meshes. However,
 
 \paragraph{Software Implementation.}
 Despite the large literature on curve{d} meshing generation, there are very few implementations available. 
-
-Nektar~\cite{moxeynekmesh} is a finite element software with a meshing component, which can generate high-order elements. We do not explicitly compare as their documentation (Section 4.5.1.5 Mesh Correction\footnote{\url{https://doc.nektar.info/userguide/5.0.0/user-guidese17.html}}) states that the algorithm is not fully automatic and not designed to process robustly large collections of models.
+Nektar~\cite{moxeynekmesh} is a finite element software with a meshing component, which can generate high-order elements.
 Gmsh~\cite{Geuzaine:2009:gmsh} is an open source software that supports the curved meshing of CAD models, but it does not support dense linear meshes as input. Despite the difference in the input type, we provide a comparison with Gmsh in Section \ref{cumin:sec:comparison}, as it is the only method that we could run on a large collection of shapes.
-
+%
 To the best of our knowledge, the commercial software that support curved meshing (Pointwise \cite{pointwise,Steve2016}) are also requiring a CAD model as input.
 
-\paragraph{Animation}
-Curved tetrahedral meshes have also gained popularity in the context of fast animation. With fewer degrees of freedom and preserved geometric fidelity, 
-\cite{mezger2007finite} observe the benefit of quadratic tetrahedra in the pipeline of physically based animation.
-\cite{Suwelack2013} further investigate the transfer problem when using curved meshes as a proxy.
+
 
 \subsection{Curved Structured Mesh Generation}
 
@@ -203,23 +220,6 @@ A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrah
 
 Due to these issues, we propose a novel boundary-preserving tetrahedral meshing algorithm specifically tailored for the shell mesh generated by our curved meshing algorithm.
 
-\subsection{Curved Surface Meshes}
-There are many algorithms for fitting curved \emph{surfaces} to dense 3D triangle meshes. The most popular approaches fit spline patches, usually on top of a quadrangular grid. Since generating quadrilateral meshes is a challenging problem for which robust solutions do not exist yet, we refer to \cite{QUADSTAR2012} for an overview, and only review in this section algorithms for unstructured curve{d} mesh generation, which are more similar to our algorithm. We note that the focus of our paper is volumetric meshing: while we generate an intermediate curved surface mesh, this is not the goal of our algorithm, especially since the generated surface is only $C^0$ on edges.
-
-\cite{hoppe1994piecewise} fits a smooth surface represented by a point cloud to a curved triangle mesh based on a subdivision surface scheme and an interleaving mesh simplification and fitting pipeline that preserves sharp features. 
-The algorithm does not provide explicit correspondence to the input: they are defined using distance closest point, which is not bijective far from the surface. 
-
-\cite{krishnamurthy1996fitting} converts dense irregular polygon meshes of arbitrary topology into coarse tensor product B-spline surface patches with accompanying displacement maps. Based on the work \cite{LIN2007adap} that fits triangle surface meshes with B\'ezier patches, \cite{Zhang2011multi} fits triangle surface meshes with high-order B-spline quadrilateral patches and adaptively subdivide the patches to reduce the fitting error. These methods produce smooth surfaces but do not have feature preservation.
-
-Another related topic is the definition of smooth parametric surfaces interpolating triangle meshes. We refer to \cite{zorin2000subdivision} for an overview of subdivision methods and discuss here the approaches closer to our contribution.
-
-\cite{Hahmann2003} proposed to use triangular B\'ezier patches to define smooth surfaces over arbitrary triangle meshes ensuring tangent plane continuity by relaxing the constraint of the first derivatives at the input vertices.
-%
-Following Hahmann's work, \cite{yvart2005smooth} presents a more complete pipeline: perform QEM simplifications, trace the coarse mesh onto the dense one and perform parameterization relaxing and smoothing. Then it fits a hierarchical triangular spline~\cite{Yvart2005hier} to the surface.
-%
-More recent work \cite{TONG2009} approximates the triangulation of an implicit surface with a $G^1$ surface.
-%
-These schemes are usually designed to interpolate existing meshes rather than simplifying a dense linear mesh into a coarse curved mesh and are thus orthogonal to our contribution.
 
 \subsection{Tetrahedral Mesh Generation}
 
@@ -227,7 +227,7 @@ Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most
 
 These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
 
-\subsection{Constrained Meshing.}
+\subsection{Constraints in Meshing.}
 
 Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{mandad2015isotopic} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
 
