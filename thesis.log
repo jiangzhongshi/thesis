@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  10 JUN 2022 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  11 JUN 2022 00:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1904,141 +1904,169 @@ t x 137.00084pt>
  [75]
 <curve_meshing_in_shell_tex/figs/illustrations/conforming-overview.pdf, id=819,
  322.10138pt x 83.1905pt>
- [76] [77]) (./curve_meshing_in_shell_tex/03.1_features.tex
+
+
+LaTeX Warning: Reference `app:tetgen' on page 76 undefined on input line 211.
+
+[76]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 242.
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
+eanE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> al
+lowed
+<curve_meshing_in_shell_tex/figs/stats/tetgen_meanE.pdf, id=823, 602.25pt x 301
+.125pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
+axE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
+owed
+<curve_meshing_in_shell_tex/figs/stats/tetgen_maxE.pdf, id=824, 602.25pt x 301.
+125pt>
+
+
+pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_T
+O.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
+ed
+<curve_meshing_in_shell_tex/figs/stats/tetgen_TO.pdf, id=825, 602.25pt x 301.12
+5pt>
+[77]) (./curve_meshing_in_shell_tex/03.1_features.tex [78]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 input-output-feature.pdf): PDF inclusion: found PDF version <1.6>, but at most 
 version <1.5> allowed
-<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=826
+<curve_meshing_in_shell_tex/figs/illustrations/input-output-feature.pdf, id=832
 , 249.71594pt x 91.11229pt>
-<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=827, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0001.png, id=833, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=828, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0002.png, id=834, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=829, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0003.png, id=835, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=830, 1084.05pt x 1084.05pt
+<curve_meshing_in_shell_tex/figs/sphere/0004.png, id=836, 1084.05pt x 1084.05pt
 >
-<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=831, 253.8
+<curve_meshing_in_shell_tex/figs/illustrations/not-feat-pres.pdf, id=837, 253.8
 6043pt x 85.87082pt>
-<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=832, 237.78537pt
+[79]
+<curve_meshing_in_shell_tex/figs/illustrations/stage-1.pdf, id=841, 237.78537pt
  x 74.09421pt>
-<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=833, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0001.png, id=842, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=834, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0002.png, id=843, 803.0pt x 803.0pt>
 
-<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=835, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/snap_abc6/0003.png, id=844, 803.0pt x 803.0pt>
 
-[78] [79]
-<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=842, 219.98888pt
- x 70.59705pt>
  [80]
+<curve_meshing_in_shell_tex/figs/illustrations/feat-gr.pdf, id=848, 219.98888pt
+ x 70.59705pt>
+ [81]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/illustrations/
 loc-op.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=846, 326.8461pt x
+<curve_meshing_in_shell_tex/figs/illustrations/loc-op.pdf, id=853, 326.8461pt x
  55.73764pt>
-) (./curve_meshing_in_shell_tex/04_result.tex [81]
-<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=851, 1027.84pt x 2069.732
+) (./curve_meshing_in_shell_tex/04_result.tex
+<curve_meshing_in_shell_tex/figs/anphora/0005.png, id=854, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=852, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0001.png, id=855, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=853, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0002.png, id=856, 1027.84pt x 2069.732
 5pt>
-<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=854, 1027.84pt x 2069.732
+<curve_meshing_in_shell_tex/figs/anphora/0003.png, id=857, 1027.84pt x 2069.732
 5pt>
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 45.
-
+ [82]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_Thingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version 
 <1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=855, 602.25
+<curve_meshing_in_shell_tex/figs/stats/edgelength_Thingi10k.pdf, id=861, 602.25
 pt x 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_ABC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=856, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/edgelength_ABC.pdf, id=862, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/edgeleng
 th_PolyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
 1.5> allowed
-<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=857, 602.25p
+<curve_meshing_in_shell_tex/figs/stats/edgelength_PolyCube.pdf, id=863, 602.25p
 t x 602.25pt>
-<curve_meshing_in_shell_tex/figs/octa/0003.png, id=858, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0002.png, id=859, 931.48pt x 939.51pt>
-<curve_meshing_in_shell_tex/figs/octa/0001.png, id=860, 931.48pt x 939.51pt>
-[82]
+<curve_meshing_in_shell_tex/figs/octa/0003.png, id=864, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0002.png, id=865, 931.48pt x 939.51pt>
+<curve_meshing_in_shell_tex/figs/octa/0001.png, id=866, 931.48pt x 939.51pt>
+
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_T
 hingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5
 > allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=864, 602.25pt x
+<curve_meshing_in_shell_tex/figs/stats/energy_Thingi10k.pdf, id=867, 602.25pt x
  602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_A
 BC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allo
 wed
-<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=865, 602.25pt x 602.2
+<curve_meshing_in_shell_tex/figs/stats/energy_ABC.pdf, id=868, 602.25pt x 602.2
 5pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/energy_P
 oLyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=866, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/energy_PoLyCube.pdf, id=869, 602.25pt x 
 602.25pt>
 [83]
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Thi
 ngi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=870, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/time_Thingi10k.pdf, id=873, 602.25pt x 6
 02.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_ABC
 .pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowe
 d
-<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=871, 602.25pt x 602.25p
+<curve_meshing_in_shell_tex/figs/stats/time_ABC.pdf, id=874, 602.25pt x 602.25p
 t>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/time_Pol
 yCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> a
 llowed
-<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=872, 602.25pt x 60
+<curve_meshing_in_shell_tex/figs/stats/time_PoLyCube.pdf, id=875, 602.25pt x 60
 2.25pt>
-<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=873, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0001.png, id=876, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=874, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0002.png, id=877, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=875, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0003.png, id=878, 873.2625pt x 1049.9225
 pt>
-<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=876, 873.2625pt x 1049.9225
+<curve_meshing_in_shell_tex/figs/gargo/0004.png, id=879, 873.2625pt x 1049.9225
 pt>
-[84]
-<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=880, 1027.84pt x 622.325p
+[84] [85]
+<curve_meshing_in_shell_tex/figs/gmsh/not-bij.png, id=886, 1027.84pt x 622.325p
 t>
-<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=881, 1027.84pt x 622.325pt>
-<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=882, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/bij.png, id=887, 1027.84pt x 622.325pt>
+<curve_meshing_in_shell_tex/figs/gmsh/torus.png, id=888, 1027.84pt x 622.325pt>
 
-<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=883, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0001.png, id=889, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=884, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0002.png, id=890, 1180.41pt x 1184.4
 25pt>
-<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=885, 1180.41pt x 1184.4
+<curve_meshing_in_shell_tex/figs/gmsh/step/0003.png, id=891, 1180.41pt x 1184.4
 25pt>
- [85]
-<curve_meshing_in_shell_tex/figs/micro/color.png, id=889, 803.0pt x 803.0pt>
-<curve_meshing_in_shell_tex/figs/spot.png, id=890, 803.0pt x 803.0pt>
+ [86]
+<curve_meshing_in_shell_tex/figs/micro/color.png, id=895, 803.0pt x 803.0pt>
+<curve_meshing_in_shell_tex/figs/spot.png, id=896, 803.0pt x 803.0pt>
+ [87]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 203.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
@@ -2053,159 +2081,130 @@ Overfull \hbox (1.96512pt too wide) in paragraph at lines 203--203
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Th
 ingi10k.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5>
  allowed
-<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=891, 602.25pt x 
+<curve_meshing_in_shell_tex/figs/stats/error_Thingi10k.pdf, id=901, 602.25pt x 
 602.25pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_AB
 C.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
 ed
-<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=892, 602.25pt x 602.25
+<curve_meshing_in_shell_tex/figs/stats/error_ABC.pdf, id=902, 602.25pt x 602.25
 pt>
 
 
 pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/error_Po
 lyCube.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
-<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=893, 602.25pt x 6
+<curve_meshing_in_shell_tex/figs/stats/error_PolyCube.pdf, id=903, 602.25pt x 6
 02.25pt>
-[86] [87]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 226.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 226.
-<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=901, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0003.png, id=904, 1270.7475pt x 1015.795
 pt>
-<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=902, 1270.7475pt x 1015.795
+<curve_meshing_in_shell_tex/figs/fluid/0002.png, id=905, 1270.7475pt x 1015.795
 pt>
- [88]) (./curve_meshing_in_shell_tex/05_conclude.tex) [89]
+[88]) (./curve_meshing_in_shell_tex/05_conclude.tex [89]) [90]
 Chapter 6.
 (./wmtk-tex/02-introduction.tex
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/teaser2.pdf): PDF inclusion: fou
 nd PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/teaser2.pdf, id=910, 5017.46541pt x 1663.96657pt>
+<wmtk-tex/figs/teaser2.pdf, id=916, 5017.46541pt x 1663.96657pt>
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 4.
 
-LaTeX Warning: Reference `wmtk:sec:related' on page 90 undefined on input line 
+LaTeX Warning: Reference `wmtk:sec:related' on page 91 undefined on input line 
 13.
 
-[90
+[91
 
-] [91]) (./wmtk-tex/04-method.tex
+] [92]) (./wmtk-tex/04-method.tex
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/pipeline_illustration.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/pipeline_illustration.pdf, id=917, 1245.15187pt x 599.30902pt>
-[92] [93]
+<wmtk-tex/figs/pipeline_illustration.pdf, id=923, 1245.15187pt x 599.30902pt>
+[93] [94]
 
 LaTeX Warning: Float too large for page by 29.89696pt on input line 49.
 
-[94] [95] [96] [97]
+[95] [96] [97] [98]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/lock_illustration.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/lock_illustration.pdf, id=937, 2276.8863pt x 571.27025pt>
-[98]
+<wmtk-tex/figs/lock_illustration.pdf, id=944, 2276.8863pt x 571.27025pt>
+[99]
 
 LaTeX Warning: Float too large for page by 131.29497pt on input line 129.
 
-) (./wmtk-tex/05-results.tex [99] [100]
+) (./wmtk-tex/05-results.tex [100] [101]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-sec-statue.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-sec-statue.pdf, id=949, 2975.65706pt x 1291.09354pt>
-[101]
+<wmtk-tex/figs/2d-sec-statue.pdf, id=955, 2975.65706pt x 1291.09354pt>
+[102]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-qslim.pdf): PDF inclusion: fo
 und PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-qslim.pdf, id=953, 1845.62521pt x 1511.3163pt>
-[102]
+<wmtk-tex/figs/2d-qslim.pdf, id=959, 1845.62521pt x 1511.3163pt>
+[103]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/2d-remeshing-lucy.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/2d-remeshing-lucy.pdf, id=957, 3889.19994pt x 1764.76318pt>
+<wmtk-tex/figs/2d-remeshing-lucy.pdf, id=963, 3889.19994pt x 1764.76318pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-harmonic-gauss.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/3d-harmonic-gauss.pdf, id=958, 2809.00443pt x 1027.84pt>
-[103]
+<wmtk-tex/figs/3d-harmonic-gauss.pdf, id=964, 2809.00443pt x 1027.84pt>
+[104]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/3d-tetwild-dragon.pdf): PDF incl
 usion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/3d-tetwild-dragon.pdf, id=962, 1793.64096pt x 1307.58508pt>
+<wmtk-tex/figs/3d-tetwild-dragon.pdf, id=968, 1793.64096pt x 1307.58508pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/limitation-of-para.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/limitation-of-para.pdf, id=963, 1030.74084pt x 320.63187pt>
-[104]
-<wmtk-tex/figs/2d-sec-envelope.pdf, id=967, 3406.56699pt x 1640.46873pt>
-<wmtk-tex/figs/2d-remeshing-headport-env.pdf, id=968, 3305.138pt x 1474.67943pt
+<wmtk-tex/figs/limitation-of-para.pdf, id=969, 1030.74084pt x 320.63187pt>
+[105]
+<wmtk-tex/figs/2d-sec-envelope.pdf, id=974, 3406.56699pt x 1640.46873pt>
+<wmtk-tex/figs/2d-remeshing-headport-env.pdf, id=975, 3305.138pt x 1474.67943pt
 >
- [105] [106]
+ [106] [107]
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tri2d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/tri2d-stats.pdf, id=976, 1928.5249pt x 422.97923pt>
+<wmtk-tex/figs/tri2d-stats.pdf, id=982, 1928.5249pt x 422.97923pt>
 
 
 pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tet3d-stats.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<wmtk-tex/figs/tet3d-stats.pdf, id=977, 1846.97021pt x 413.89632pt>
-) (./wmtk-tex/06-concluding.tex [107]) [108]
+<wmtk-tex/figs/tet3d-stats.pdf, id=983, 1846.97021pt x 413.89632pt>
+) (./wmtk-tex/06-concluding.tex [108]) [109]
 Chapter 7.
-(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [109
+(./front-matter/conclusion.tex) (./prism-tex/11-Appendix.tex [110
 
 ]
-Appendix A.
 
-LaTeX Warning: Reference `app:invariant-checks' on page 110 undefined on input 
-line 8.
+LaTeX Warning: Reference `app:invariant-checks' on page 111 undefined on input 
+line 6.
 
 
-LaTeX Warning: Reference `app:bevel' on page 110 undefined on input line 17.
+LaTeX Warning: Reference `app:bevel' on page 111 undefined on input line 15.
 
-[110
-
-] [111]) [112]
-Appendix B.
-(./curve_meshing_in_shell_tex/90-bij-proof.tex [113
-
-])
+[111] [112]) (./curve_meshing_in_shell_tex/90-bij-proof.tex [113])
 (./curve_meshing_in_shell_tex/91-app-local-ops.tex
 
 LaTeX Warning: Reference `[' on page 114 undefined on input line 6.
 
-) (./curve_meshing_in_shell_tex/92-app-tetgen.tex
-
-pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
-eanE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> al
-lowed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_meanE.pdf, id=1000, 602.25pt x 30
-1.125pt>
+) [114] [115] (docs/thesis.bbl [116
 
 
-pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_m
-axE.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> all
-owed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_maxE.pdf, id=1001, 602.25pt x 301
-.125pt>
-
-
-pdfTeX warning: pdflatex (file ./curve_meshing_in_shell_tex/figs/stats/tetgen_T
-O.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allow
-ed
-<curve_meshing_in_shell_tex/figs/stats/tetgen_TO.pdf, id=1002, 602.25pt x 301.1
-25pt>
-[114]) (./curve_meshing_in_shell_tex/93-app-tetwild.tex) [115] (docs/thesis.bbl
-[116
-
-
-] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127]
-[128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139])
+] [117] [118] [119] [120] [121] [122]
+[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
+[135] [136] [137] [138] [139])
 
 Package natbib Warning: There were undefined citations.
 
@@ -2222,11 +2221,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41381 strings out of 478305
- 808158 string characters out of 5847251
- 1144659 words of memory out of 5000000
- 57614 multiletter control sequences out of 15000+600000
- 768212 words of font info for 842 fonts, out of 8000000 for 9000
+ 41377 strings out of 478305
+ 807879 string characters out of 5847251
+ 1144633 words of memory out of 5000000
+ 57610 multiletter control sequences out of 15000+600000
+ 768807 words of font info for 846 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1336b,1209s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
@@ -2256,7 +2255,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (156 pages, 62654989 bytes).
+Output written on docs/thesis.pdf (156 pages, 62655046 bytes).
 PDF statistics:
  1188 PDF objects out of 1200 (max. 8388607)
  494 compressed objects within 5 object streams
