@@ -1,5 +1,3 @@
-\chapter{Shell Specifics}
-
 \section{Extension to meshes with Singularities}\label{app:singularity}
 Most of the proofs and definition in Section~\ref{prism:sec:method} easily extends to meshes with singularity or pinched shells. For instance,
 \revision{both} Theorem~\ref{thm:projection} and Definition~\ref{def:validshell} apply to pinched shells by just considering a prism made of 4 (2 for the top and 2 for the bottom slab) instead of 6. Propositions~\ref{thm:I1} and~\ref{thm:thickness} both rely on per-vertex properties; by just excluding singular vertices (and neighboring prism) from the statements the proofs (and our algorithm) still holds.
@@ -32,14 +30,6 @@ $$\max_t t;\; d_v n_f \geq t, \|d_v\| = 1, t \geq {\epsilon}.$$
 In the admissible region, substituting $t = 1/s$, 
 $$\min_s s;\; s d_v n_f \geq 1, \|d_v\| = 1, {0< s \leq 1/\epsilon}.$$
 Substituting $x=s d_v$ (thus $\|x\| = s\|d\| = s$), we obtain the QP problem \ref{eq:QP}. Note that the lower bound on $s$ is implied from $s d_v n_f \geq 1$, and the upper bound $\|x\| < 1/\epsilon$ is checked a posteriori.
-
-%   convex.  The objective is convex, because we can write it as linear inequality constraints $d_v \cdot n_f \geq t$, and the objective is simply $t$.
-% }
-% \DZ{ Continuing the remark above, consider the problem in a (more) standard form, i.e. 
-% $\max t,\;  d_v \cdot n_f > t,\;  d_v \cdot n_f > 0,\; \| d_v \| \leq 1$. We can replace the constraints 
-% $d_v \cdot n_f > 0$ with a single constraint $t > 0$.  Furthermore, replacing $t$ with $s^2$, 
-% we eliminate the need for that constraint entirely; the probem becomes  $\max s^2,\; d_v \cdot n_f > s^2, \| d_v \| \leq 1$.  Define $x = d_v/s$,  then the problem is $\min \|x \|^2, x \cdot n_f >  1, \| x s \| \leq 1$. As $s$ does not  enter any other equation in the problem, it can always be used to satisfy the last inequality; thus we obtain the equivalent problem \eqref{eq:QP}.  This proves equivalence.  However, as the orignal problem was immediately equivalent to a QP in the first place, there is no point}
-%
 
 \section{Bijectivity of the Nonlinear Prismatic Transformation}
 \label{app:bilinear}

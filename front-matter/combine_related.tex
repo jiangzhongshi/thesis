@@ -214,7 +214,7 @@ There are many variants of {Delaunay-based} meshing algorithms including
 \cite{murphy2001point,CohenSteiner:2002:CDT}, {\em constrained Delaunay tetrahedralization}
 \cite{chew1989constrained,si2005meshing,shewchuk2002constrained,Si:2014:ICA}, and {\em Restricted Delaunay tetrahedralization}\ \cite{cheng2008practical,boissonnat2005provably,Engwirda16}.
 
-To the best of our knowledge, all these methods are designed to allow some modifications of the input surface (either refinement, resampling, or approximation). One exception is the constrained Delaunay implementation in TetGen \cite{tetgen} that allows disabling any modification to the boundary. However, this comes at the cost of much lower quality and potential robustness issues, as we show in Appendix \ref{app:tetgen}. 
+To the best of our knowledge, all these methods are designed to allow some modifications of the input surface (either refinement, resampling, or approximation). One exception is the constrained Delaunay implementation in TetGen \cite{tetgen} that allows disabling any modification to the boundary. However, this comes at the cost of much lower quality and potential robustness issues, as we show in Section~\ref{cumin:sec:tets}.
 
 A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrahedral}, and its variants \cite{Hu:2020:fTetWild,hu2019triwild}, where the problem is relaxed to generate a mesh that is close to the input to increase robustness. However, these approaches are not directly usable in our setting, as we require boundary preservation.
 

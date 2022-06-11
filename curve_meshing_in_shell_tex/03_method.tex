@@ -106,7 +106,6 @@ To achieve this goal, our algorithm uses two stages: (1) curved shell generation
 
 \begin{figure}
     \centering
-    % \includegraphics[width=\linewidth]{curve_meshing_in_shell_tex/figs/pipeline1}
     \includegraphics[width=\linewidth]{curve_meshing_in_shell_tex/figs/illustrations/pipeline.pdf}
     \caption{Overview of curved mesh generation pipeline.}
     \label{bichon:fig:pipeline}
@@ -211,8 +210,7 @@ The outcome of the previous stage is a curved tetrahedralization of $\prS$ that 
 
 Several solution exists for this problem (Section~\ref{cumin:sec:rel:linear}) and the most common implementation is TetGen~\cite{tetgen}. Most algorithms refine the boundary, which allows {deriving} bounds on the quality of the tetrahedral mesh. However, in our setting, this is problematic, as any change will have to be propagated to the curved shell. To avoid coupling the volumetric meshing problem with the curved shell coarsening, while technically possible it is very challenging to implement robustly, we opt for using a tetrahedral meshing algorithm that preserves the boundary exactly. Not many algorithms support this additional constraint, the only one with a public implementation is the widely used TetGen algorithm. However, we discovered that, when this option is used, it suffers from robustness issues, which we detail in Appendix \ref{app:tetgen}.
 %
-To solve this problem in our specific setting, we propose in the following five step algorithm (Figure~\ref{bichon:fig:conforming-overview}) taking advantage of the availability of a shell, based on the  TetWild~\cite{hu2018tetrahedral} algorithm. %\DP{Can we avoid it?} We refer to Appendix~\ref{app:tetwild} for a brief overview of the TetWild algorithm.
-% Without loss of generality we focus the explanation to the bottom surface, as for the top surface it is equivalent.
+To solve this problem in our specific setting, we propose in the following five step algorithm (Figure~\ref{bichon:fig:conforming-overview}) taking advantage of the availability of a shell, based on the  TetWild~\cite{hu2018tetrahedral} algorithm.
 
 \paragraph{Step 1.}
 To generate a boundary preserving linear mesh, we first exploit the shell to extrude the bottom surface $B$ (and top $T$) {further} by a positive (potentially small) constant $\delta$ such that the newly extruded bottom surface $B_e$ (and top $T_e$) does not self-intersect. The space between $B$ and $B_e$ (and between $T$ and $T_e$) consists of prisms {divided} into positive tetrahedra. 
@@ -233,6 +231,36 @@ Every prism $P$, made by a bottom triangle $B^T$ and a bottom extruded triangle 
 
 \paragraph{Step 5.}
 The tetrahedra generated in the previous step will have rational coordinates and will also likely have low quality. To round the coordinates to floating-point representation and to improve their quality, we use the mesh optimization stage of TetWild, with the minor variant of keeping the vertices and edges on $B$ and $T$ frozen. Note that the vertices in $B$ and $T$ are already roundable to floating-point representation, as they were part of the input.
+
+
+\begin{figure}
+    \centering
+    \parbox{0.02\linewidth}{~}\hfill\hfill
+    \parbox{.47\linewidth}{\centering Mean}\hfill
+    \parbox{.47\linewidth}{\centering Max}\par
+    %%%%%
+    \parbox{0.02\linewidth}{\centering\rotatebox{90}{\scriptsize{Model Count}}}\hfill\hfill
+    \parbox{.47\linewidth}{\includegraphics[width=\linewidth]{curve_meshing_in_shell_tex/figs/stats/tetgen_meanE}}\hfill
+    \parbox{.47\linewidth}{\includegraphics[width=\linewidth]{curve_meshing_in_shell_tex/figs/stats/tetgen_maxE}}\par
+     \scriptsize{AMIPS Energy}
+    \caption{Histogram of mean and maximum conformal AMIPS energy~\cite{rabinovich2017scalable} of the output of our method and TetGen.}
+    \label{bichon:fig:energy-max-avg}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \parbox{.7\linewidth}{\centering
+    \parbox{0.02\linewidth}{\centering\rotatebox{90}{\scriptsize{Model Count}}}\hfill
+    \parbox{.95\linewidth}{\includegraphics[width=\linewidth]{curve_meshing_in_shell_tex/figs/stats/tetgen_TO}}\par
+    \scriptsize{Tetrahedra Number}
+    }
+    \caption{Histogram of output tetrahedra number for TetGen and {our} method. }
+    \label{bichon:fig:numt}
+\end{figure}
+
+\paragraph{Boundary preserving TetGen comparison}
+We compared our conforming tetrahedral meshing algorithm (Section~\ref{cumin:sec:tets}) with TetGen on the linear shells (triangle meshes) of 3522 models from the Thingi10k dataset, giving each model sufficient computing resources (2 hours maximum running time and 32GB memory usage). Inheriting the robustness from TetWild, our method successfully processed all the inputs while preserving the triangulation, while TetGen fails on 224 models (215 models are not conforming, and 9 models have no output).  In Figure~\ref{bichon:fig:energy-max-avg}, we show the average and maximum element quality of the output of our method and TetGen. Our method has {a} better average and maximum output quality than TetGen. Note that in the quality plot, the ``tail'' of TetGen's distribution is longer than ours. The maximum average energy of TetGen's output and ours are $3\times 10^8$ and $3 \times 10^5$ respectively. The largest maximum energy of TetGen's output and ours are $3\times 10^{12}$ and $7 \times 10^6$ respectively. Our method generates denser output (Figure~\ref{bichon:fig:numt}), but our focus is on robustness instead of efficiency in this step.
+
 
 
 \paragraph{Curved Tetrahedral Mesh Optimization}
