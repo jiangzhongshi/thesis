@@ -1,4 +1,4 @@
-\section{Limitations}
+\section{Limitations and Remarks}
 
 Currently, our algorithm is limited to manifold and orientable surfaces: its extension to non-manifold and/or non-orientable meshes is a potential venue for future work. With such an extension, the integration of shells with robust tetrahedral meshers \protect{\cite{hu2018tetrahedral, Hu:2019:fTetWild}} would allow to solve PDEs on imperfect triangle meshes without ever exposing the user to the volumetric mesh, allowing them to directly work on the boundary representation to specify boundary conditions and to analyze the solution of the desired PDE.
 %
@@ -14,17 +14,12 @@ QSlim \cite{garland1997surface} might not be able to reach the desired target nu
 {Our shell is ideal for triangle remeshing algorithms employing incremental changes: not every geometry processing algorithm requiring a bijective map can use our construction. For example, it is unclear how isosurface-extraction methods \cite{hass2020approximating} could use our shell or how global parametrization algorithms \cite{kraevoy2004cross,Schreiner:2004,alliez2003isotropic,bommes2013quad} could benefit from our method since they already compute a map to a common domain.}
 
 
-\section{Concluding Remarks}
 
 We introduce an algorithm to construct shells around triangular {meshes} and define bijections between surfaces inside the shell. We proposed a robust algorithm to compute the shell,
 validated it on a large collection of models, and demonstrated its practical applicability in common applications in graphics and geometry processing. 
 
 
 We believe that many applications in geometry processing could benefit from bijectively mapping spatially close surfaces, and that the idea of using an explicit mesh as a common parametrization domain could be extended to the more general case of computing cross-parametrizations between arbitrary surfaces. To foster research in this direction, we will release our reference implementation as an open-source project.
-
-% \ZJ{Since our algorithm relies on geometric predicates for an exact answer, a way to accelerate the strategy would be considering more efficient and conservative constructions. 2. Composite mapping for boundary and singularity.
-% 4. Directly integrate into Quad mesh Hex mesh, and Tet mesh.
-% 5. Theoretical analysis on the convergence and approximation for the transferred solution space.}
 
 
 

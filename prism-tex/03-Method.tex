@@ -163,7 +163,16 @@ they must have a positive dot product with the normals of all incident faces. Mo
 \end{split}
 \end{equation}
 
-A solution, if it exists, can be found solving the following quadratic programming problem (Appendix \ref{app:qp})
+With slack variable $t$, Problem \ref{eq:OPT} can be rewritten as
+
+$$\max_t t;\; d_v n_f \geq t, \|d_v\| = 1, t \geq {\epsilon}.$$
+
+In the admissible region, substituting 
+$t = 1/s$, 
+$$\min_s s;\; s d_v n_f \geq 1, \|d_v\| = 1, {0< s \leq 1/\epsilon}.$$
+Substituting $x=s d_v$ (thus $\|x\| = s\|d\| = s$), we obtain the QP problem \ref{eq:QP}. Note that the lower bound on $s$ is implied from $s d_v n_f \geq 1$, and the upper bound $\|x\| < 1/\epsilon$ is checked a posteriori.
+
+A solution, if it exists, can be found solving the following quadratic programming problem
 \begin{equation}
 \label{eq:QP}
 \begin{split}
@@ -171,7 +180,10 @@ A solution, if it exists, can be found solving the following quadratic programmi
     \text{s.t.}&\quad \mathbf{C} x \geq 1,
 \end{split}
 \end{equation}
-with $d_v = x / \|x\|$ and $\mathbf{C}$ the matrix whose rows are the normals $n_f$ of the faces in the 1-ring $N_v$ of vertex $v$. Solutions not satisfying $\|x\| \leq 1/\epsilon$ needs to be discarded (Appendix \ref{app:qp}). The QP can be solved with an off-the-shelf solver\cite{osqp,cheshmi2020nasoq}, and in particular it can be solved exactly \cite{gartner2000efficient} to avoid numerical problems. Note that the Problem \eqref{eq:OPT} is studied in a similar formulation in~\cite{aubry2008most} but their solution requires tolerances in multiple stages of the algorithm to handle cospherical point configurations.
+with $d_v = x / \|x\|$ and $\mathbf{C}$ the matrix whose rows are the normals $n_f$ of the faces in the 1-ring $N_v$ of vertex $v$. Solutions not satisfying $\|x\| \leq 1/\epsilon$ needs to be discarded. The QP can be solved with an off-the-shelf solver\cite{osqp,cheshmi2020nasoq}, and in particular it can be solved exactly \cite{gartner2000efficient} to avoid numerical problems. Note that the Problem \eqref{eq:OPT} is studied in a similar formulation in~\cite{aubry2008most} but their solution requires tolerances in multiple stages of the algorithm to handle cospherical point configurations.
+
+
+
 
 The admissible set of \eqref{eq:OPT} might be empty for a vertex $v$,
 that is, no vector $d_v$ satisfies $\mathbf{C}d_v\geq\epsilon$. 
@@ -318,14 +330,14 @@ and (2) for {each prism $\Prism$} and every point $p\in M_\Prism$ the dot produc
 
 
 To prove (2), consider the dot products of the normals of each of the triangles in the beveled region sharing at least a vertex with $M_\Prism$, and the vectors along the pillars of $M_\Prism$.
-We use colors to refer to the triangles of beveled prisms as shown in Fig\remove(ure)~\ref{prism:fig:bevel-explain} left. 
+We use colors to refer to the triangles of beveled prisms as shown in Figure~\ref{prism:fig:bevel-explain} left. 
 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{prism-tex/figs/bevel_colors}
     \includegraphics[width=0.4\linewidth]{prism-tex/figs/singularity-bevel-explained}
-    \caption{Bevel patterns used in the proofs in Appendix~\ref{app:bevel} and Appendix~\ref{app:singularity}}
+    \caption{Bevel patterns used in the proofs in Appendix~\ref{app:bevel} and Section~\ref{sec:extend-singularity}}
     
     \label{prism:fig:bevel-explain}
     \vspace{-1em}
@@ -441,10 +453,6 @@ and check their respective normals against all the three pillars of $\Prism_i$. 
 Note that the vertex smoothing operation is continuous, in the sense that any point between the current position and the optimal one improves the shell. 
 We, however, handle it as a discrete operation to check our conditions: we attempt a full step, and if I1 is not satisfied, we perform a bisection search for a displacement that does. We avoid bisection for the other two conditions since they are expensive to evaluate.
 
-% \DZ{Is smoothing included in checked operations? It is not clear how checks are applied for smoothing, is the whole smoothing operation rejected, or e.g. the positions are interpolated between smoothed and original positions and a search is performed to find a position for which the invariants are satisfied?} 
-% - pan (MIPS) bisection on cond 2, 1 is always satisfied. 3 just reject
-% - zoom bisection on 1. 2-3 just reject
-% - rotate bisection on 1. 2-3 just reject
 
 
 \paragraph{Projection Distortion} 
@@ -492,7 +500,7 @@ The second one is a pocket-like mesh artifact, often produced as a result of mes
 
 While singularities might seem fixable by applying local smoothing or subdivision as a pre-process, it is not desirable in the case of a feature point, and is likely to introduce self-intersection or more serious geometric inconsistency.
 %in the presence of the meshing artifacts.
-Therefore, due to the above reasons and observing that they are very uncommon, we propose to extend our theory (Appendix~\ref{app:singularity}) and algorithm to handle isolated singularities  by \emph{pinching} the thickness of the shell. Note that in the rare case where two singular points are sharing the same edge, they are \emph{automatically} separated by our topological beveling.
+Therefore, due to the above reasons and observing that they are very uncommon, we propose to extend our theory (Section~\ref{sec:extend-singularity}) and algorithm to handle isolated singularities  by \emph{pinching} the thickness of the shell. Note that in the rare case where two singular points are sharing the same edge, they are \emph{automatically} separated by our topological beveling.
 
 \paragraph{Pinching.} 
 We extend our definition of the shell by allowing it to have zero thickness on singularities, thus tessellating the degenerate prism with 4 instead of 6 tetrahedra (Figure~\ref{prism:fig:singularity-illustration}). We further remark that these isolated points must be excluded from Definition~\ref{def:section}. In the implementation, this requires to change the intersection predicates to skip the singular vertices.
@@ -520,7 +528,28 @@ Therefore, we assign to the orange vertices the average normal of the two adjace
 
 
 Additionally, the edges connecting singularities will always be beveled/split after beveling. Therefore no prism will contain more than one singular point.
-We discuss the technical extensions for our proofs to shells with pinched prisms in Appendix~\ref{app:singularity}.
+We discuss the technical extensions for our proofs to shells with pinched prisms as follows,
+
+\subsection{Extension to meshes with Singularities}\label{sec:extend-singularity}
+Most of the proofs and definition in Section~\ref{prism:sec:method} easily extends to meshes with singularity or pinched shells. For instance,
+{both} Theorem~\ref{thm:projection} and Definition~\ref{def:validshell} apply to pinched shells by just considering a prism made of 4 (2 for the top and 2 for the bottom slab) instead of 6. Propositions~\ref{thm:I1} and~\ref{thm:thickness} both rely on per-vertex properties; by just excluding singular vertices (and neighboring prism) from the statements the proofs (and our algorithm) still holds.
+
+
+Theorem~\ref{thm:invariants} requires some minor additional considerations. As a consequence of beveling, no two singularities are adjacent. Therefore, we can always find a point $q \in \partial \T_C$ that belongs to a single prism (Appendix~\ref{app:invariant-checks}) since every prism will have a positive volume
+because no singularities are adjacent.
+
+
+Finally Proposition~\ref{thm:bevel} requires a new proof since the beveling pattern used for singularities is different.
+% \begin{proposition}
+% For a prism $\Prism$ with one singularity, 
+% \end{proposition}
+\begin{proof}
+In  Figure~\ref{prism:fig:bevel-explain} right, we highlight in red and orange the triangles not covered by the discussion in Appendix~\ref{app:bevel}. 
+The prism corresponding to an orange middle triangle intersects the edge-adjacent triangle. And since the new pillars are computed as the average of the normals of the two adjacent triangles with dihedral angle strictly less than $360^\circ$ 
+ (Section~\ref{prism:sec:singularities} inset), each dot product is positive. 
+The prism {for} a pink middle triangle intersects only the interior of the original triangle, and the dot product between the pillars and the triangle normal are positive by construction. 
+\end{proof}
+
 
 
 \begin{figure}
@@ -556,23 +585,4 @@ We thus freeze these vertices and never allow them to move or be affected by any
 
 
 
-% \paragraph{Boundary Singularity.}
-%(0.3 \%)}
-
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=\linewidth]{prism-tex/figs/blocks}
-%     % \includegraphics[0.5\linewidth]{prism-tex/figs/block_singular}
-%     \caption{We generate a pinched shell for a model with a singularity (left). Optionally, we can complete the shell using our Boolean construction.}
-%     \label{prism:fig:singularity_resolve}
-% \end{figure}
-
-
-
-% \paragraph{Simpler Derivation}
-% The following was derived in the general case. For piecewise-linear case, suppose the map, keeping the base, and make the pillar orthogonal is $T$, (note, not from the current tet) and a frame on the swimming face is $\mathbf{t}_1, \mathbf{t}_2$, then the final Jacobian is $\text{Proj}_{x-y}(\mathbf{t}_1,\mathbf{t}_2)$ from the swimming plane to base.
-
-
-% \subsubsection{Track}
-% Responsible triangles require to be found. Let's try to record them. Aggressive prism to triangle map (may contain more triangle than is actually needed).
+.

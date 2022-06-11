@@ -1,4 +1,4 @@
-\section{Meshes Data Structure in Computer Graphics}
+\section{Mesh Data Structure in Computer Graphics}
 
 Efficient data structures for representing solid geometry have been an intriguing
 research topic since the early days of computer graphics \cite{Requicha1980}. As
@@ -90,9 +90,9 @@ Our approach uses a coarse triangular domain embedded in ambient space as the pa
 
  We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
 
-\subsection{Shell Overview}
-\label{prism:sec:related}
-We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{prism:sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{prism:sec:rel:shell}), which are closest to our work.
+% \subsection{Shell Overview}
+% \label{prism:sec:related}
+%We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{prism:sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{prism:sec:rel:shell}), which are closest to our work.
 
 \subsection{Attribute Transfer}
 \label{prism:sec:rel:transfer}
@@ -113,25 +113,38 @@ Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{h
 {Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
 where our optimized shells can be used for similar purposes.}
 
-\subsection{Mesh Arrangements/Boolean Operations} 
-
-Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{wmtk:sec:applications}) can be extended for a similar purpose.
-
-\subsection{Collision and Animation}
-While not directly related to our approach, bijective maps inherently  involve some form of collision detection and response to avoid overlaps.  The field on collision detection is vast, and we refer the reader to a survey~\cite{jimenez:2001}. 
-In terms of simulations, methods such as asynchronous contact mechanics~\cite{Harmon:2009,harmon2010robust,Ainsley:2012} ensure the bijective property but are very expensive and designed to operate as part of a simulation. Our approach in Chapter~\ref{chp:scaf} is specialized for geometric optimization, where we are interested in a  quasi-static solution (i.e. we do not want to explicitly simulate a dynamic system, but only find an equilibrium solution).
-
-The work that is closer to Chapter~\ref{chp:scaf} in term of application (but very different in term of formulation) is \cite{Harmon:2011}, where collision detection and response is used to interactively deform shapes while avoiding self-intersections. Similarly to the previous methods, the explicit detection and iterative response is expensive when many collisions happen at the same time.  Our work avoids these expensive computations, and can robustly handle hundreds of simultaneous collisions while still making large steps in the optimization.
-
-In Chapter~\ref{chp:shell} and ~\ref{chp:curve}
-Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \cite{botsch2006primo,botsch2003multiresolution} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface.
-
-Curved tetrahedral meshes have also gained popularity in the context of fast animation. With fewer degrees of freedom and preserved geometric fidelity, 
-\cite{mezger2007finite} observe the benefit of quadratic tetrahedra in the pipeline of physically based animation.
-\cite{Suwelack2013} further investigate the transfer problem when using curved meshes as a proxy.
-
 
 \section{Mesh Generation}\label{cumin:sec:related}
+
+
+\subsection{Tetrahedral Mesh Generation}
+
+Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{shewchuk1998tetrahedral,ruppert1995delaunay,Remacle:2017:ATL,du2003tetrahedral,alliez2005variational,tournois2009interleaving,murphy2001point,CohenSteiner:2002:CDT,chew1989constrained,si2005meshing,shewchuk2002constrained,Si:2014:ICA,cheng2008practical,boissonnat2005provably,jamin2015cgalmesh,Dey:2008:DAD,Chen:2004:ODT,Shewchuk:1996,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
+
+These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
+
+\subsection{Constraints in Meshing.}
+
+Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{mandad2015isotopic} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
+
+These criteria are explicitly modeled as invariants in our framework, and they can be easily swapped in and out existing implementations, as we demonstrate in Section \ref{wmtk:sec:applications}.
+
+\subsection{Mesh Improvement.} 
+
+Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012,Chen:2004:ODT,alliez2005variational,feng2018curved,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
+%
+%
+We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
+
+\subsection{Dynamic Remeshing and Refinement} 
+
+Simulations involving large deformations are common in computer graphics, and if the surface or volume deformed is represented by a mesh, it is inevitable that after a large deformation the quality of the elements will deteriorate, and the mesh will have to be updated. Additionally, it is often required to concentrate more elements in regions of interest whose location is changing during the simulation, for example to capture a fold in a cloth simulation, or a fracture in a brittle material.
+%
+These two challenges are tackled in elastoplastic and viscoplastic simulations \cite{Hutchinson:1996,Bargteil:2007,Wicke:2010,Wojtan:2008}, in fluid simulations \cite{Misztal:2012,Klingner:2006,Ando:2013,Chentanez:2007,clausen:2013}, in cloth simulation \cite{Villard:2002,Bender:2013,Li:2005,Narain:2012,Narain:2013,Pfaff:2014,Simnett:2009}, and fracture simulation \cite{Busaryev:2013}. All these algorithms could benefit from our contribution, to simplify their implementation and obtaining speedup due to the automatic parallelization offered by our approach.
+
+A different approach is discussed in \cite{Grinspun:2002}, where the refinement is performed on the basis to avoid the difficulties with explicit remeshing. However, this approach cannot coarsen a dense input, and also cannot increase the quality of elements, making it usable only for specific scenarios \cite{Grinspun:2002}. Our approach aims at lowering the barrier for integrating explicit remeshing algorithms in simulation applications, thus allowing to directly use standard simulation methods on adaptive meshes without having to pay the high implementation cost for the mesh generation.
+
+When remeshing is paired with algorithms simulating contacts that do not tolerate interpenetrations (for example \cite{Li2020IPC}), it is necessary to ensure that adaptive remeshing does not break this invariant. This can be achieved adding non-penetration constraints to each local mesh editing operations, as proposed in \cite{Brochu:2012}. Our framework is ideal for developing such methods, as additional constraints can be added to existing mesh editing algorithms with minimal modifications, as we demonstrate in Section \ref{wmtk:sec:applications}.
 
 
 \subsection{Curved Surface Meshes}
@@ -214,35 +227,6 @@ A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrah
 Due to these issues, we propose a novel boundary-preserving tetrahedral meshing algorithm specifically tailored for the shell mesh generated by our curved meshing algorithm.
 
 
-\subsection{Tetrahedral Mesh Generation}
-
-Tetrahedral meshing algorithms heavily rely on mesh editing operations. The most common approaches are Delaunay methods \cite{shewchuk1998tetrahedral,ruppert1995delaunay,Remacle:2017:ATL,du2003tetrahedral,alliez2005variational,tournois2009interleaving,murphy2001point,CohenSteiner:2002:CDT,chew1989constrained,si2005meshing,shewchuk2002constrained,Si:2014:ICA,cheng2008practical,boissonnat2005provably,jamin2015cgalmesh,Dey:2008:DAD,Chen:2004:ODT,Shewchuk:1996,Cheng:2012:DMG,Bishop2016,Busaryev:RMI:2009,triangulation_in_cgal,tetgen}, which strive to generate meshes satisfying the Delaunay condition, grid methods \cite{Yerry1983,BERN1994,Molino:2003:TMG,Bronson:2013:LCC,Labelle:2007:ISF,Doran:2013:ISI,code:quartet}, which start from a regular lattice or with a hierarchical space partitioning and optionally intersect the background mesh with the input surface, and front-advancing methods \cite{Sadek1980,Cuilliere:2013:ADM,Alauzet:2014:ACA,Haimes:2014:MMO}, which insert one element at a time, growing the volumetric mesh (i.e. marching in space), until the entire volume is filled .
-
-These algorithms rely on local operations on mesh data-structures, and benefit from our framework to simplify the implementation and gain automatic parallelization. We discuss an implementation of one the more recent algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} in Section \ref{wmtk:sec:applications}. Note that some of these algorithms use local operation that are not implemented yet (such as 5-6 swap), but they could be added to our framework.
-
-\subsection{Constraints in Meshing.}
-
-Downstream applications often require meshes to satisfy either quality (avoidance of zero volume elements) or geometric (distance to the input surface) constraints. For example, \citet{mandad2015isotopic} creates a surface approximation within a tolerance volume, the TetWild algorithms \cite{hu2018tetrahedral,Hu:2019:fTetWild} use an envelope \cite{Wang:2021} to restricts the geometry of the boundary of the tetrahedral mesh, \cite{Brochu:2012} adds constraints to local remeshing to avoid interpenetrations in simulations, and \cite{gumhold2003intersection} extends mesh simplification \cite{Garland:1999,Popovic:1997} to ensure a non self-intersecting result. 
-
-These criteria are explicitly modeled as invariants in our framework, and they can be easily swapped in and out existing implementations, as we demonstrate in Section \ref{wmtk:sec:applications}.
-
-\subsection{Mesh Improvement.} 
-
-Mesh improvements modifies an existing mesh by changing its connectivity and position of the vertices to improve the quality of its elements \cite{Canann1996,CANANN1993185,Lori1998,Lipman:2012,Chen:2004:ODT,alliez2005variational,feng2018curved,hu2018tetrahedral,Alexa:2019,Klingner07aggressive}.
-%
-%
-We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa:2019} in IDAS form.
-
-\subsection{Dynamic Remeshing and Refinement} 
-
-Simulations involving large deformations are common in computer graphics, and if the surface or volume deformed is represented by a mesh, it is inevitable that after a large deformation the quality of the elements will deteriorate, and the mesh will have to be updated. Additionally, it is often required to concentrate more elements in regions of interest whose location is changing during the simulation, for example to capture a fold in a cloth simulation, or a fracture in a brittle material.
-%
-These two challenges are tackled in elastoplastic and viscoplastic simulations \cite{Hutchinson:1996,Bargteil:2007,Wicke:2010,Wojtan:2008}, in fluid simulations \cite{Misztal:2012,Klingner:2006,Ando:2013,Chentanez:2007,clausen:2013}, in cloth simulation \cite{Villard:2002,Bender:2013,Li:2005,Narain:2012,Narain:2013,Pfaff:2014,Simnett:2009}, and fracture simulation \cite{Busaryev:2013}. All these algorithms could benefit from our contribution, to simplify their implementation and obtaining speedup due to the automatic parallelization offered by our approach.
-
-A different approach is discussed in \cite{Grinspun:2002}, where the refinement is performed on the basis to avoid the difficulties with explicit remeshing. However, this approach cannot coarsen a dense input, and also cannot increase the quality of elements, making it usable only for specific scenarios \cite{Grinspun:2002}. Our approach aims at lowering the barrier for integrating explicit remeshing algorithms in simulation applications, thus allowing to directly use standard simulation methods on adaptive meshes without having to pay the high implementation cost for the mesh generation.
-
-When remeshing is paired with algorithms simulating contacts that do not tolerate interpenetrations (for example \cite{Li2020IPC}), it is necessary to ensure that adaptive remeshing does not break this invariant. This can be achieved adding non-penetration constraints to each local mesh editing operations, as proposed in \cite{Brochu:2012}. Our framework is ideal for developing such methods, as additional constraints can be added to existing mesh editing algorithms with minimal modifications, as we demonstrate in Section \ref{wmtk:sec:applications}.
-
 
 \subsection{Parallel Meshing}
 
@@ -311,5 +295,25 @@ which is more efficient than the extrinsic techniques \cite{liu2015efficient} si
 
 TetWild \cite{hu2018tetrahedral,Hu:2019:fTetWild}
 can robustly convert triangle soups into high-quality tetrahedral meshes, suitable for FEM analysis. Their approach does not provide a way to transfer boundary conditions from the input surface to the boundary of the tetrahedral mesh. Our approach, when combined with a tetrahedral mesher that does not modify the boundary, enables to remesh low-quality surface, create a tetrahedral mesh, solve a PDE, and transfer back the solution (Figure \ref{prism:fig:teaser}). However, our method does not support triangle soups, and it is limited to manifold and orientable surfaces.
+
+\subsection{Large Scale Dataset Collection} 
+
+\subsection{Mesh Arrangements/Boolean Operations} 
+
+Boolean operations are basic algorithms often used in geometry processing applications. Recently, \cite{zhou2016mesh} proposed a robust way to compute them by constructing a space arrangement, and then filtering the result using the generalized winding number \cite{Jacobson:2013}. A similar approach, using an approximated meshing algorithm, has been extended in \cite{Hu:2019:fTetWild}, using a tetrahedral mesher to create the initial arrangement. The reimplementation of TetWild introduced in this paper (Section \ref{wmtk:sec:applications}) can be extended for a similar purpose.
+
+\subsection{Collision and Animation}
+While not directly related to our approach, bijective maps inherently  involve some form of collision detection and response to avoid overlaps.  The field on collision detection is vast, and we refer the reader to a survey~\cite{jimenez:2001}. 
+In terms of simulations, methods such as asynchronous contact mechanics~\cite{Harmon:2009,harmon2010robust,Ainsley:2012} ensure the bijective property but are very expensive and designed to operate as part of a simulation. Our approach in Chapter~\ref{chp:scaf} is specialized for geometric optimization, where we are interested in a  quasi-static solution (i.e. we do not want to explicitly simulate a dynamic system, but only find an equilibrium solution).
+
+The work that is closer to Chapter~\ref{chp:scaf} in term of application (but very different in term of formulation) is \cite{Harmon:2011}, where collision detection and response is used to interactively deform shapes while avoiding self-intersections. Similarly to the previous methods, the explicit detection and iterative response is expensive when many collisions happen at the same time.  Our work avoids these expensive computations, and can robustly handle hundreds of simultaneous collisions while still making large steps in the optimization.
+
+In Chapter~\ref{chp:shell} and ~\ref{chp:curve}
+Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \cite{botsch2006primo,botsch2003multiresolution} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface.
+
+Curved tetrahedral meshes have also gained popularity in the context of fast animation. With fewer degrees of freedom and preserved geometric fidelity, 
+\cite{mezger2007finite} observe the benefit of quadratic tetrahedra in the pipeline of physically based animation.
+\cite{Suwelack2013} further investigate the transfer problem when using curved meshes as a proxy.
+
 
 % And cite more of our labs work, as ABC, etc.
