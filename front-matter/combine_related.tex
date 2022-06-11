@@ -1,7 +1,4 @@
-
-
-\section{Meshes in Computer Graphics}
-\subsection{Mesh Data Structures}
+\section{Meshes Data Structure in Computer Graphics}
 
 Efficient data structures for representing solid geometry have been an intriguing
 research topic since the early days of computer graphics \cite{Requicha1980}. As
@@ -15,20 +12,21 @@ winged-edge \cite{Baumgart1972}, quad-edge \cite{Guibas1985}, cell-tuple
 \cite{Brisson1989}, etc., view meshes as graphs, where each element contains
 links to its adjacent elements. This design allows for efficient local query
 and update, making it ideal for algorithms like mesh simplification
-\cite{garland1997surface}. Linear-algebra-based mesh data structures, such as
+\cite{garland1997surface}. 
+{Closely related, is the concept of generalized combinatorial maps \cite{lienhardt1994n, dufourd1991obj3}, and the CGoGN library \cite{kraemer2014cgogn} provide an efficient implementation which provide parallel traversal of the mesh.}
+Linear-algebra-based mesh data structures, such as
 \cite{Dicarlo2014,Zayer2017,Mahmoud2021}, encode adjacency information as sparse
 matrices.  This design elegantly reduces neighborhood query and local operations
 to sparse matrix computations, which are highly optimized for modern parallel
-computing architecture. \revision{Closely related, is the concept of generalized combinatorial maps \cite{lienhardt1994n, dufourd1991obj3}, and the CGoGN library \cite{kraemer2014cgogn} provide an efficient implementation which provide parallel traversal of the mesh.}
+computing architecture. 
+
 %
-By design, mesh data structures provide a low-level interface to
+Our algorthim implementation in chapters~\ref{chp:scaf, chp:shell, chp:curve} make extensive use of matrix-based coordinate and connectivity representations. 
+However, by design, mesh data structures provide a low-level interface to
 manipulate vertices, edges, faces, and tetrahedra.
 Different designs differ vastly in API and implementation details, making it hard to port algorithm from one data structure to another. 
-Our contribution mostly focus on algorithm specification, and is benefitial regardless of the choice of underlying mesh data structure. 
 
-
-\subsection{Domain specific languages in graphics}
-
+Our contribution in chapter~\ref{chp:wmtk} mostly focus on algorithm specification, and is benefitial regardless of the choice of underlying mesh data structure. 
 In our final chapter~\ref*{chp:wmtk}, the abstraction model of mesh processing algorithms draw inspiration from domain
 specific languages (DSL) in graphics.  For dense regularly structured data such
 as images, Halide \cite{ragan2013halide} popularized the idea of decoupling image
@@ -45,7 +43,7 @@ architecture can also be found in other DSLs such as Simit
 
 \subsection*{Injective Surface Parameterizatons}
 Bijective maps find a host of applications in a variety of fields including physical simulation, surface deformation, and parametrization.  We review only the most relevant prior works here and refer to the following surveys for more details~\cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007}.
- There are many methods that focus on creating \revision{locally} injective maps, which amounts to requiring that triangles maintain their orientation (i.e. they do not flip). In mesh parameterization, many flip-preventing metrics have been developed: the idea is to force the metric to diverge to infinity as triangles become degenerate, inhibiting flips.  These metrics optimize various geometric properties such as angle~\cite{hormann2000mips,Degener:2003} or length~\cite{Sander:2001,Sorkine:2002,Aigerman:2014,Poranne:2014,Smith:2015} preservation.  Similar techniques in the context of deformation have been used to add barrier functions to enforce local injectivity in deformations~\cite{Schuller:2013}. Our method uses these techniques to prevent flips in the scaffold.
+ There are many methods that focus on creating {locally} injective maps, which amounts to requiring that triangles maintain their orientation (i.e. they do not flip). In mesh parameterization, many flip-preventing metrics have been developed: the idea is to force the metric to diverge to infinity as triangles become degenerate, inhibiting flips.  These metrics optimize various geometric properties such as angle~\cite{hormann2000mips,Degener:2003} or length~\cite{Sander:2001,Sorkine:2002,Aigerman:2014,Poranne:2014,Smith:2015} preservation.  Similar techniques in the context of deformation have been used to add barrier functions to enforce local injectivity in deformations~\cite{Schuller:2013}. Our method uses these techniques to prevent flips in the scaffold.
 
 Many methods have also been developed to optimize these distortion energies including moving one vertex at a time~\cite{hormann2000mips}, parallel gradient descent~\cite{fu2015computing}, as well as other quasi-newton approaches~\cite{Smith:2015,Kovalsky:2016,rabinovich2017scalable}.  Other approaches construct such maps by performing a change of basis, projecting to an inversion free space, and then constructing a parametrization from the result~\cite{Fu:2016}. While our method could potentially use any of these optimization methods, we use \cite{rabinovich2017scalable} for its large step sizes. We elaborate on this choice in Section~\ref{sec:general_form}.
 
@@ -67,13 +65,13 @@ Conformal mesh parametrization algorithms adapt the mesh during optimization, as
 
 All these methods require changing the mesh connectivity of a triangle mesh, and could thus benefit from our framework in Chapter~\ref{chp:wmtk} to simplify their implementation and parallelize the mesh editing operations. 
 
-\subsection*{Texture Seam Creation.}
+\paragraph{Texture Seam Creation.}
 In the context of parametrization, some approaches optimize the connectivity of the charts of the surface during parametrization to obtain a bijective map.  \cite{Levy:2002,Zhou:2004} parameterize the surface and then split charts based on whether they intersect~\cite{Levy:2002} or based on a level of distortion~\cite{Zhou:2004}.  Sorkine et al.~\cite{Sorkine:2002} employ a bottom-up approach and add triangles to a parametrization chart until bijectivity would be violated. The problem we are solving is more general (seams are only useful for texture mapping applications) and constrained (we preserve the prescribed seams). Our algorithm could be used by these algorithms to parametrize single charts, which could reduce the number of additional seams.
 
 
-\subsection{Isotopy between surfaces}
+\paragraph{Isotopy between surfaces}
 
-\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.
+{\cite{chazal2005condition,chazal2010ball}} presents conditions for two {sufficiently} smooth surfaces {to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they {did} not realize a map suitable for {transferring attributes}.
 
 
 \paragraph{Shell Maps}
@@ -108,16 +106,11 @@ Projections along a continuously-varying normal field has been used to define co
 
 \paragraph{Attribute Tracking}
 
-In the specific context of remeshing or mesh optimization, algorithms have been proposed to explicitly track properties defined on the surface \cite{garland1997surface,cohen1997simplifying,dunyach2013adaptive} after every local operation. By following the operations in reverse order, it is possible to resample the attributes defined on the input surface. These methods are algorithm specific, and provide limited control over the distortion introduced in the mapping. Our algorithm provides a generic tool that enables any remeshing technique to obtain such a map with minimal modifications.%, and can explicitly reduce the integrated map distortion via refinement.
-
-
-% \subsection{Mesh Generation}
-% \label{prism:sec:rel:shell}
-% The generation of shells (boundary layer meshes) around triangle meshes has been studied in graphics and scientific computing.
+In the specific context of remeshing or mesh optimization, algorithms have been proposed to explicitly track properties defined on the surface \cite{garland1997surface,cohen1997simplifying,dunyach2013adaptive} after every local operation. By following the operations in reverse order, it is possible to resample the attributes defined on the input surface. These methods are algorithm specific, and provide limited control over the distortion introduced in the mapping. Our algorithm provides a generic tool that enables any remeshing technique to obtain such a map with minimal modifications.
 
 \subsection{Envelopes}
 Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{hu2016error} envelopes have been used to control geometric error in planar \cite{hu2019triwild}, surface {\cite{gueziec1996surface,hu2017, Cheng2019}}, and volumetric \cite{hu2018tetrahedral,Hu:2019:fTetWild} remeshing algorithms. Our shells can be similarly used to control the geometric error introduced during remeshing, but they offer the advantage of providing a bijection between the two surfaces, enabling to transfer attributes between them without explicit tracking \cite{cohen1997simplifying}. We show examples of both surface and volumetric remeshing in Section~\ref{prism:sec:applications}.
-\revision{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
+{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
 where our optimized shells can be used for similar purposes.}
 
 \subsection{Mesh Arrangements/Boolean Operations} 

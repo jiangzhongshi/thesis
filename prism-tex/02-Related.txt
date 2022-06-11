@@ -35,7 +35,7 @@ The generation of shells (boundary layer meshes) around triangle meshes has been
 
 \paragraph{Envelopes}
 Explicit \cite{cohen1996simplification,cohen1997simplifying} or implicit \cite{hu2016error} envelopes have been used to control geometric error in planar \cite{hu2019triwild}, surface {\cite{gueziec1996surface,hu2017, Cheng2019}}, and volumetric \cite{hu2018tetrahedral,Hu:2019:fTetWild} remeshing algorithms. Our shells can be similarly used to control the geometric error introduced during remeshing, but they offer the advantage of providing a bijection between the two surfaces, enabling to transfer attributes between them without explicit tracking \cite{cohen1997simplifying}. We show examples of both surface and volumetric remeshing in Section~\ref{prism:sec:applications}.
-\revision{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
+{Also, \cite{barnhill_opitz_pottmann_1992,bajaj2002hierarchical} utilize envelopes for function interpolation and reconstruction, 
 where our optimized shells can be used for similar purposes.}
 
 \paragraph{Shell Maps}
@@ -50,7 +50,7 @@ Boundary layers are commonly used in computational fluid dynamics simulations re
 
 \paragraph{Collision and Animation}
 
-Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). \revision{\cite{botsch2006primo,botsch2003multiresolution}} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface. %We are not aware of any other method providing such a map.
+Converting triangle meshes into coarse cages is useful for many applications in graphics \cite{sacht2015nested}, including proxies for collision detection \cite{Calderon:2017} and animation cages \cite{Thiery:2012}. While not designed for this application, our shells can be computed recursively to create increasingly coarse nested cages. We hypothesize that a bijective map defined between all surfaces of the nested cages could be used to transfer forces from the cages to the object (for collision proxies), or to transfer handle selections (for animation cages). {\cite{botsch2006primo,botsch2003multiresolution}} uses a prismatic layer to define volumetric deformation energy, however their prisms are disconnected and only used to measure distortion. Our prisms could be used for a similar purpose since they explicitly tesselate a shell around the input surface. %We are not aware of any other method providing such a map.
 
 \subsection{Robust Geometry Processing}
 
@@ -58,14 +58,14 @@ The closest works, in terms of applications, to our contribution are the recent 
 
 %\ZJ{New attempt to rewrite the paragraph. If Rewrite}
 
-\revision{\cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
+{\cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
 benefiting the numerical stability of some surface based geometry processing algorithms.
 These algorithms are orders of magnitude faster than our pipeline, but, since they are refinement methods, cannot coarsen dense input models.
 %\cite{yi2018delaunay} further offers an optimization procedure to simplify the meshes while keeping the Delaunay property, making it more suitable for efficient downstream computation. However, since the geometry changes, the correspondence with the input surface is nontrivial to maintain. Our method could be used in such an approach to easily compute this correspondence.
 %
 While targeting a different application, \cite{sharp2019navigating} offers an alternative solution, %with special basis constructed on the input polyhedral geometry. This construction
 which is more efficient than the extrinsic techniques \cite{liu2015efficient} since it avoids the realization of the extrinsic mesh (thus naturally maintaining the correspondence to the input, but limiting its applicability to non-volumetric problems) and it alleviates the introduction of additional degrees of freedom.}
-\revision{\cite{Sharp:2020:LNT} further generalizes \cite{sharp2019navigating} to handle non-manifold and non-orientable inputs, which our approach currently does not support.}
+{\cite{Sharp:2020:LNT} further generalizes \cite{sharp2019navigating} to handle non-manifold and non-orientable inputs, which our approach currently does not support.}
 
 % \ZJ{Original Else}
 % \ZJ{End}
@@ -76,4 +76,4 @@ can robustly convert triangle soups into high-quality tetrahedral meshes, suitab
 
 \subsection{Isotopy between surfaces}
 
-\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.
+{\cite{chazal2005condition,chazal2010ball}} presents conditions for two {sufficiently} smooth surfaces {to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they {did} not realize a map suitable for {transferring attributes}.

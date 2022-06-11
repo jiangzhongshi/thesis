@@ -1,6 +1,6 @@
 \section{Extension to meshes with Singularities}\label{app:singularity}
 Most of the proofs and definition in Section~\ref{prism:sec:method} easily extends to meshes with singularity or pinched shells. For instance,
-\revision{both} Theorem~\ref{thm:projection} and Definition~\ref{def:validshell} apply to pinched shells by just considering a prism made of 4 (2 for the top and 2 for the bottom slab) instead of 6. Propositions~\ref{thm:I1} and~\ref{thm:thickness} both rely on per-vertex properties; by just excluding singular vertices (and neighboring prism) from the statements the proofs (and our algorithm) still holds.
+{both} Theorem~\ref{thm:projection} and Definition~\ref{def:validshell} apply to pinched shells by just considering a prism made of 4 (2 for the top and 2 for the bottom slab) instead of 6. Propositions~\ref{thm:I1} and~\ref{thm:thickness} both rely on per-vertex properties; by just excluding singular vertices (and neighboring prism) from the statements the proofs (and our algorithm) still holds.
 
 
 Theorem~\ref{thm:invariants} requires some minor additional considerations. As a consequence of beveling, no two singularities are adjacent. Therefore, we can always find a point $q \in \partial \T_C$ that belongs to a single prism (Appendix~\ref{app:invariant-checks}) since every prism will have a positive volume
@@ -15,7 +15,7 @@ Finally Proposition~\ref{thm:bevel} requires a new proof since the beveling patt
 In  Figure~\ref{prism:fig:bevel-explain} right, we highlight in red and orange the triangles not covered by the discussion in Appendix~\ref{app:bevel}. 
 The prism corresponding to an orange middle triangle intersects the edge-adjacent triangle. And since the new pillars are computed as the average of the normals of the two adjacent triangles with dihedral angle strictly less than $360^\circ$ 
  (Section~\ref{prism:sec:singularities} inset), each dot product is positive. 
-The prism \revision{for} a pink middle triangle intersects only the interior of the original triangle, and the dot product between the pillars and the triangle normal are positive by construction. 
+The prism {for} a pink middle triangle intersects only the interior of the original triangle, and the dot product between the pillars and the triangle normal are positive by construction. 
 \end{proof}
 
 
@@ -39,12 +39,12 @@ that the isoparametric transformation of prismatic finite element \cite{ciarlet1
 We follow the notation from {Appendix~\ref{app:I1}.} 
 The map is defined as (for the top slab)
 \begin{align*}
-    f(u,v,\eta) &= u e_1 + v e_2  + \eta n_0 + u \eta \revision{n_{01}} +
-    v \eta \revision{n_{02}},\\
-    \det J_f &=  \langle (1-u-v) n_0 + u n_1 + v n_2, e_1 + \eta \revision{n_{01}},
-    e_2 + \eta \revision{n_{02} \rangle,}
+    f(u,v,\eta) &= u e_1 + v e_2  + \eta n_0 + u \eta {n_{01}} +
+    v \eta {n_{02}},\\
+    \det J_f &=  \langle (1-u-v) n_0 + u n_1 + v n_2, e_1 + \eta {n_{01}},
+    e_2 + \eta {n_{02} \rangle,}
 \end{align*}
-where $\eta$ is the variable corresponding to the thickness direction\revision{, and $n_{ij} = n_j - n_i$.}
+where $\eta$ is the variable corresponding to the thickness direction{, and $n_{ij} = n_j - n_i$.}
 Observe that $\det J_f(u,v,\eta_0)$ is linear in $u,v$ for fixed $\eta_0$, the extrema will only be achieved at the corner points \cite{knabner2001invertibility}. Therefore, it is sufficient to check the signs at three edges
 $(0,0,\eta)$, $(1,0,\eta)$, $(0,1,\eta)$ for $\eta \in [0,1]$.
 \begin{align*}
@@ -58,9 +58,9 @@ $(0,0,\eta)$, $(1,0,\eta)$, $(0,1,\eta)$ for $\eta \in [0,1]$.
 \end{align*}
 
 By symmetry, 
-it is easy to verify \revision{that the following are positive},
+it is easy to verify {that the following are positive},
 \begin{align*}
-    \det& J_f(1,0,\eta) = (1-\eta)^2 \text{vol}_6 + (1-\eta)\eta (\text{vol}_7 +\text{vol}_5) + \eta^2 \text{vol}_8\revision{,} \\
+    \det& J_f(1,0,\eta) = (1-\eta)^2 \text{vol}_6 + (1-\eta)\eta (\text{vol}_7 +\text{vol}_5) + \eta^2 \text{vol}_8{,} \\
     \det& J_f(0,1,\eta) = (1-\eta)^2 \text{vol}_{11} + (1-\eta)\eta (\text{vol}_9 +\text{vol}_{10}) + \eta^2 \text{vol}_{12}.\\
 \end{align*}
 

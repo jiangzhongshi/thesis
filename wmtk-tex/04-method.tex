@@ -1,20 +1,20 @@
 \begin{figure}
     \centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/pipeline_illustration.pdf}
-    \caption{\revision{Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph{automatically} rollback the operation and restore the mesh to its previous \emph{valid} state.}}
+    \caption{{Overview of the components behind our specification. A mesh is represented trough its topology, implemented by our library, and a list of user provided attributes. Before an operation is attempted, we explicitly perform a pre-check, and, if successful, we generate a mesh (attributes and topology). At this point, we trigger the after check to validate the operation (e.g., check if the newly generate mesh has positive volume). In case the after check fails, we \emph{automatically} rollback the operation and restore the mesh to its previous \emph{valid} state.}}
     \label{fig:pipeline}
 \end{figure}
 
 \section{Method}
 
-Our declarative specification is designed to remove the burden of low-level management of the mesh connectivity \revision{and attributes}, allowing an algorithm designer to focus only on high-level requirements. The design consists of five components. 
+Our declarative specification is designed to remove the burden of low-level management of the mesh connectivity {and attributes}, allowing an algorithm designer to focus only on high-level requirements. The design consists of five components. 
 
-\subsection{\revision{Mesh editing components}}
+\subsection{{Mesh editing components}}
 
 \paragraph{Operation Rollback.}
 It is common to perform mesh editing to improve a given energy functional, such as mesh quality or element size. However, due to the discrete nature of the operations, it is not possible to use standard smooth optimization techniques, and instead the effect of the energy is evaluated before and after every operation to measure its effect on the energy. This is commonly implemented using an ad-hoc energy evaluation that ``simulates'' the operation only for the purpose of measuring the energy change. This simulation is complex (especially in 3D), and error-prone, as not only the connectivity changes, but the energy likely depends on properties attached to mesh elements, which needs to be updated accordingly.
 
-We propose instead to make this process \revision{opaque} to the user, providing to the user-code an explicit copy of the  mesh (and up to date attributes) \emph{before and after} the operation is performed to allow an easy and reliable energy evaluation. The correctness and efficiency of this process is handled by the runtime. This reduces the complexity of mesh editing considerably in our experience, as it makes them more similar to traditional finite difference approaches where the energy is evaluated on different points on the domain to approximate its derivative.
+We propose instead to make this process {opaque} to the user, providing to the user-code an explicit copy of the  mesh (and up to date attributes) \emph{before and after} the operation is performed to allow an easy and reliable energy evaluation. The correctness and efficiency of this process is handled by the runtime. This reduces the complexity of mesh editing considerably in our experience, as it makes them more similar to traditional finite difference approaches where the energy is evaluated on different points on the domain to approximate its derivative.
 
 \paragraph{Explicit Invariants.}
 It is common to have a set of desiderata on the mesh that needs to be satisfied, such as avoiding triangle insertions or self-intersections. Given the complexity of a mesh editing algorithm it is difficult to ensure that they are satisfied, as these conditions needs to be checked after every operation is applied (and they often depend on attributes too, such as vertex positions).
@@ -97,20 +97,20 @@ We implement a runtime for our specification in C++, using Intel oneTBB for para
 
 \begin{figure}\centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/lock_illustration}
-    \caption{\revision{Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g.,  for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.}}
+    \caption{{Example of the locking region for two edges. In the example the operation requires locking a two-ring neighborhood (e.g.,  for the edge collapse operation). If the two edges are sufficiently far (right) both operations can be safely executed in parallel. When the two edges are close (left) the operations might fail acquiring the mutexes in the shared area.}}
     \label{fig:lock-example}
 \end{figure}
 
 Each mesh vertex is associated with a mutex. Whenever a thread wants to access (read/write) any attribute stored in a vertex, edge, triangle, or tetrahedron it must first acquire a lock on \emph{all} the vertices of the tetrahedron containing the element(s) storing the attribute (Figure~\ref{fig:lock-example}). For example, if a thread wants to read a value on an edge of a 3D mesh, it first needs to acquire a lock on all vertices of all the tetrahedra containing that edge. This mechanism is used also for mesh navigation, and for updating the mesh connectivity. 
 
 At a first look, this mechanism might seem cumbersome and expensive. However, we rely on asynchronous, tentative lock acquisition operations. We \emph{try} to acquire the lock, and give up if the lock is already taken by another thread. These operations are efficient on modern hardware and dramatically improve the performance, while avoiding deadlocks. A downside is that an operation might be skipped due to impossibility of acquiring a mutex. These operations are retried for several times (by default 10 times) and run serially if the still do not succeed. Before performing any local operation, we try to acquire the lock on vertices in the 1-ring or 2-ring of the vertex involved in the operation. For example, a vertex smoothing operation requires acquiring the 1-ring vertex neighborhood of the smoothed vertex, while an edge-collapse operation on an edge $(v_1, v_2)$ requires acquiring the lock on the 2-ring vertex neighborhood of both $v_1$ and $v_2$
-(\revision{Figure ~\ref{fig:lock-example}}).
+({Figure ~\ref{fig:lock-example}}).
 
-Finally, since we partition the input mesh using \revision{Morton Encoding} \cite{karras2012maximizing}, the amount of conflicts (and skipped operations) is low.
+Finally, since we partition the input mesh using {Morton Encoding} \cite{karras2012maximizing}, the amount of conflicts (and skipped operations) is low.
 
 
 
-\subsection{\revision{Example: Shortest Edge Collapse}}
+\subsection{{Example: Shortest Edge Collapse}}
 
 We show how the library is used in a classical example, shortest edge collapse. In this case, we add a 3D position to every vertex as a vertex attribute (by default, there are no attributes attached to mesh elements). For every attribute and for every operation we plan to use in the scheduler, we need to provide a function that updates such attribute (Algorithm~\ref{algo:shortest}). In the \texttt{collapse\_before} function, we cache the two vertex coordinates associated with the collapsed edge represented by \texttt{Tuple t}. In the \texttt{collapse\_after} function, we generate a new vertex in the middle of the two endpoints of the collapsed edge. %For instance, this method can be changed to collapse to \texttt{v1p} by simply assigning \texttt{p} to \texttt{v1p}.
 
@@ -120,7 +120,7 @@ We show how the library is used in a classical example, shortest edge collapse. 
 \label{algo:shortest}
 \end{algorithm}
 
-Equipped with the 3D position attribute, which at this point will be automatically kept up to date by the library, we can now schedule the collapse operation (Algorithm \ref{algo:shortest-sced}). For shortest edge collapse, we want to attempt to collapse all edges, prioritizing the shortest ones, until we reach a fixed number of collapses \texttt{n\_collapse}: in the code we registering the operation type (\texttt{ops}), specify how to update the queue after an operation (\texttt{renew}) by adding all the neighbouring edges, and specifying the edge length as a priority (\texttt{priority}). Note that the \revision{outdated} elements in the queue that are affected by a local operation are automatically invalidated using a tagging mechanism on the tuples which is opaque to the user.
+Equipped with the 3D position attribute, which at this point will be automatically kept up to date by the library, we can now schedule the collapse operation (Algorithm \ref{algo:shortest-sced}). For shortest edge collapse, we want to attempt to collapse all edges, prioritizing the shortest ones, until we reach a fixed number of collapses \texttt{n\_collapse}: in the code we registering the operation type (\texttt{ops}), specify how to update the queue after an operation (\texttt{renew}) by adding all the neighbouring edges, and specifying the edge length as a priority (\texttt{priority}). Note that the {outdated} elements in the queue that are affected by a local operation are automatically invalidated using a tagging mechanism on the tuples which is opaque to the user.
 
 \begin{algorithm}
 \inputminted{cpp}{wmtk-tex/code/shortest-sched.cpp}

@@ -16,7 +16,7 @@ The simplest algorithm for simplifying a triangle edge is shortest edge collapse
     \parbox{.15\linewidth}{\centering Output}\hfill
     \parbox{.3\linewidth}{\centering Timing}\par
     \caption{
-    Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. \revision{Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times$), while libigl runs in 2.74s.}}
+    Comparison of our parallel implementation (32 threads) of shortest edge collapse (scalability plot on the right, from 1 to 32 threads) of a model with $281,724$ faces with the serial version in libigl. {Both libigl and our output have $28,168$ faces and comparable edge length (1.058 for libigl versus 1.061 for ours). Our serial method runs in 4.9s (5.84s on a single thread, 0.52s with 32 thread, leading to a speedup of $11\times$), while libigl runs in 2.74s.}}
     
     % 0 thread: 4.9s
     % 1 thread: 5.84s
@@ -29,13 +29,13 @@ The simplest algorithm for simplifying a triangle edge is shortest edge collapse
 \end{figure}
 
 \paragraph{QSlim}
-\revision{We use our framework to implement QSlim~\cite{garland1997surface}. 
+{We use our framework to implement QSlim~\cite{garland1997surface}. 
 QSlim collapse edges based on the planarity of the two adjacent faces measured with an error quadric. The algorithm continues to collapse until it reaches a target number of edges. We compare our implementation with the QSlim implementation in libigl \cite{jacobson2016libigl}. The serial libigl implementation is 8 times faster than our implementation, due to their direct manipulations of elements in the queue with each collapse. But our parallel implementation is twice as fast when using 16 threads (Figure \ref{fig:qslim})}.
 
 \begin{figure}
     \centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/2d-qslim.pdf}
-    \caption{\revision{Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s.  Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times$ speedup).}
+    \caption{{Comparison of our parallel implementation of QSlim with the serial version in libigl for a model with $1,909,755$ faces. Top right, the libigl output has $17,891$ faces and takes 41.26s. Bottom left, our output has $17,906$ faces and runs in 306.59s.  Our implementation scales well: 347.59s with one thread and 13.88s with 32 (25$\times$ speedup).}
     }
     \label{fig:qslim}
 \end{figure}
@@ -50,7 +50,7 @@ QSlim collapse edges based on the planarity of the two adjacent faces measured w
 
 \paragraph{Isotropic Remeshing}
 
-We implemented the \revision{widely used} algorithm for isotropic remeshing proposed in \cite{botsch2004remeshing}. This algorithm alternates edge collapse, edge flips, edge splits, and tangential smoothing to obtain a mesh that is isotropic (i.e. all elements have the same size) and where all triangles are close to equilateral. The process is guided by a user-provided target edge length $L$, and terminates when no local operation leads to either an improvement in the desired edge lengths or an improvement in vertex valence \cite{botsch2004remeshing}.
+We implemented the {widely used} algorithm for isotropic remeshing proposed in \cite{botsch2004remeshing}. This algorithm alternates edge collapse, edge flips, edge splits, and tangential smoothing to obtain a mesh that is isotropic (i.e. all elements have the same size) and where all triangles are close to equilateral. The process is guided by a user-provided target edge length $L$, and terminates when no local operation leads to either an improvement in the desired edge lengths or an improvement in vertex valence \cite{botsch2004remeshing}.
 
 In Figure~\ref{fig:uniform}, we compare our implementation of \cite{botsch2004remeshing} with the implementation in OpenFlipper~\cite{mobius2010openflipper}.
 The OpenFlipper implementation is 2.5 times faster when running on a single thread, and our implementation becomes faster after 4 threads are used (Figure \ref{fig:uniform}).
@@ -91,7 +91,7 @@ The code provided by the authors implements a reduced version of the algorithm p
     \parbox{.2\linewidth}{\centering Output}\hfill
     % \\\#T = 6MM, 3.82 s (32 threads) \\Mean Harmonic Index 0.554}\hfill
     \parbox{.3\linewidth}{\centering Timing}\par
-    \caption{Example of \emph{Harmonic Triangulations} starting with one million Gaussian distributed random points. \revision{Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times$), while the reference serial implementation takes 6.37s.}}
+    \caption{Example of \emph{Harmonic Triangulations} starting with one million Gaussian distributed random points. {Both our and the reference implementation reach a similar target number of tetrahedra (5.9 million for the reference and 6.1 million for ours, due to a difference in operation ordering) and a similar Mean Harmonic Index (0.547 for the reference and 0.554 for ours). Our method takes 3.82s with 32 threads (15.49s serial, 40.49s on a single thread, speedup of 11$\times$), while the reference serial implementation takes 6.37s.}}
     \label{fig:harmonic}
     
     % harmonic: 
@@ -108,7 +108,7 @@ The code provided by the authors implements a reduced version of the algorithm p
 
 \paragraph{Tetrahedral Meshing}
 
-The TetWild algorithm is a tetrahedral meshing algorithm with minimal input requirements: given an input triangle soup, it can generate a tetrahedral mesh which approximates its volume. We \revision{take inspiration from} the original algorithm introduced in \cite{hu2018tetrahedral,Hu:2019:fTetWild} with a few modifications: (1) we use the insertion operation \cite{Hu:2019:fTetWild} (using rational coordinates) as a replacement for their BSP partitioning, as this simplifies the implementation, (2) we use the envelope proposed in \cite{Wang:2020:FE} instead of sampling, and (3) we use 2-3 face swapping, 3-2 and 4-4 edge swapping operations, to simplify the implementation. We show results on two models in Figure \ref{fig:tetwild}: the results are very similar to the original implementation, and our version is 2 times faster when using 8 threads. \revision{We experimentally observe that our framework scales well up to 8 threads, after that the algorithm becomes slower. This is because, as we increase the number of threads and partitions, the frequent conflict in tetrahedral mesh edge operations affects the parallel performance. We believe that this observation might be useful for the future design of high performance concurrent mesh generation algorithms.}
+The TetWild algorithm is a tetrahedral meshing algorithm with minimal input requirements: given an input triangle soup, it can generate a tetrahedral mesh which approximates its volume. We {take inspiration from} the original algorithm introduced in \cite{hu2018tetrahedral,Hu:2019:fTetWild} with a few modifications: (1) we use the insertion operation \cite{Hu:2019:fTetWild} (using rational coordinates) as a replacement for their BSP partitioning, as this simplifies the implementation, (2) we use the envelope proposed in \cite{Wang:2020:FE} instead of sampling, and (3) we use 2-3 face swapping, 3-2 and 4-4 edge swapping operations, to simplify the implementation. We show results on two models in Figure \ref{fig:tetwild}: the results are very similar to the original implementation, and our version is 2 times faster when using 8 threads. {We experimentally observe that our framework scales well up to 8 threads, after that the algorithm becomes slower. This is because, as we increase the number of threads and partitions, the frequent conflict in tetrahedral mesh edge operations affects the parallel performance. We believe that this observation might be useful for the future design of high performance concurrent mesh generation algorithms.}
 % faster now!
 % latest.  original: 287.577s
 
@@ -137,17 +137,17 @@ The TetWild algorithm is a tetrahedral meshing algorithm with minimal input requ
 \end{figure}
 
 \subsection{Parallelization}
-\revision{
+{
 Enabling the parallelization mechanism introduces a minor slowdown as visible in the difference between the pure serial and one thread timings on our applications, due to the additional cost of allocating mutexes and to acquired them. The algorithm scales well in all 5 applications (figures \ref{fig:decimate}, \ref{fig:qslim}, \ref{fig:uniform}, \ref{fig:harmonic}, \ref{fig:tetwild}), obtaining a scaling speedup. 
 %Our speedup is 11 \DP{check, 11 in both?} in triangular mesh applications with 32 threads and 11 \DP{11 gain?} in tetrahedral mesh applications using 32 threads. 
 We would like to remark that thanks to our specification and our runtime, the serial and parallel implementation of the 5 algorithms above is almost identical.}
 
-\revision{An inevitable drawback of parallelization is that the algorithms cannot efficiently preserve ordering. For instance, in shortest edge collapse, every thread will try collapse edges in its own partition independently from the others. If one of these collapses append on the partition's interface, the thread will need to acquire a lock. In case of failure the collapse is postponed to a later stage thus not respecting the order (Figure~\ref{fig:limitation}). This is a rare event that is more problematic for fast operations.}
+{An inevitable drawback of parallelization is that the algorithms cannot efficiently preserve ordering. For instance, in shortest edge collapse, every thread will try collapse edges in its own partition independently from the others. If one of these collapses append on the partition's interface, the thread will need to acquire a lock. In case of failure the collapse is postponed to a later stage thus not respecting the order (Figure~\ref{fig:limitation}). This is a rare event that is more problematic for fast operations.}
 
 
 \begin{figure}\centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/limitation-of-para.pdf}
-    \caption{\revision{Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.}}
+    \caption{{Example of splitting the longest edge on the bottom of the triangle. On the left, the edge can be split to generate the dark blue edge. In the next iteration, the left edge is split (by the light blue edge) leading to a decreasing maximum edge-length. On the left, the bottom edge is locked illustrated by a dashed line. In this case the next iteration splits the left edge (dark blue edge) and so on. As long as the dashed edge is locked it will never be split preventing the maximum edge length to decrease.}}
     \label{fig:limitation}
 \end{figure}
 
@@ -161,7 +161,7 @@ A major motivation to invent and develop this declarative language is enabling e
     \parbox{.3\linewidth}{\centering Input}\hfill
     \parbox{.3\linewidth}{\centering Output}\hfill
     \parbox{.3\linewidth}{\centering Timing}\par
-    \caption{Shortest edge collapse with envelope containment of a model with $857,976$ faces. \revision{Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times$).}}
+    \caption{Shortest edge collapse with envelope containment of a model with $857,976$ faces. {Our method successfully generates a mesh with $71,298$ faces in 37.49s with 32 threads (731.32s serial, 725.34s on a single thread, speedup of $20\times$).}}
     \label{fig:decimate_envelope}
     
     % 0 thread: 731.32s
@@ -181,7 +181,7 @@ A major motivation to invent and develop this declarative language is enabling e
     \parbox{.3\linewidth}{\centering Input}\hfill
     \parbox{.3\linewidth}{\centering Output}\hfill
     \parbox{.3\linewidth}{\centering Timing}\par
-    \caption{Uniform remeshing with envelope containment check of a model with $198,918$ faces. \revision{Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times$.}}
+    \caption{Uniform remeshing with envelope containment check of a model with $198,918$ faces. {Our method produces a mesh with $68,202$ faces in 29.11s with 32 threads and 493.54s for a single thread (483.68s for the serial version) leading to a speedup of 16$\times$.}}
     \label{fig:uniform_envelope}
     
     % 0 thread: 483.68s
@@ -197,13 +197,13 @@ A major motivation to invent and develop this declarative language is enabling e
 
 
 
-\subsection{\revision{Large-scale dataset validation}}
+\subsection{{Large-scale dataset validation}}
 
-\revision{To validate our framework we run our reimplementation of uniform remeshing and tetrahedral meshing on the Thingi10k dataset~\cite{zhou2016thingi10k}. We run all experiments serially on an individual node of an HPC cluster an Intel Xeon Platinum 8268 24C 205W 2.9GHz Processors limiting the runtime to 15 hours.}
+{To validate our framework we run our reimplementation of uniform remeshing and tetrahedral meshing on the Thingi10k dataset~\cite{zhou2016thingi10k}. We run all experiments serially on an individual node of an HPC cluster an Intel Xeon Platinum 8268 24C 205W 2.9GHz Processors limiting the runtime to 15 hours.}
 
-\revision{For uniform remeshing,  Figure~\ref{fig:2d-datasaet} shows the time, average edge length normalized by the target, and average valence of isotropic remeshing on the ten thousand models. Most of our models finish within 10 seconds with only a few requiring more than a minute. For almost all meshes, the algorithm succeeds at reaching the target edge length and valence of 6.}
+{For uniform remeshing,  Figure~\ref{fig:2d-datasaet} shows the time, average edge length normalized by the target, and average valence of isotropic remeshing on the ten thousand models. Most of our models finish within 10 seconds with only a few requiring more than a minute. For almost all meshes, the algorithm succeeds at reaching the target edge length and valence of 6.}
 
-\revision{For TetWild we limit the number of iterations to 25 (Figure~\ref{fig:3d-datasaet}). 
+{For TetWild we limit the number of iterations to 25 (Figure~\ref{fig:3d-datasaet}). 
 We note that within the 15 hours limit only 2.5\% models did not finish, and after 25 iterations 3\% of the models still have some rational coordinates. Among the successful models, most finish within 20 minutes and succeed in achieving high-quality meshes (only 8 models have average AMIPS larger than 10). 
 }
 
@@ -211,7 +211,7 @@ We note that within the 15 hours limit only 2.5\% models did not finish, and aft
 \begin{figure}
     \centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/tri2d-stats.pdf}
-    \caption{\revision{Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.}}
+    \caption{{Timings, target edge length ratio, and valence for every model in the dataset. Most models finish within a minute. The target edge length ratio measure how well our algorithm simplifies the meshes to reach the desired edge length, with an optimal value of 1. Since uniform remeshing strives to generate regular meshes, for most model our algorithm is able to obtain the optimal valence of 6.}}
     \label{fig:2d-datasaet}
 \end{figure}
 
@@ -219,6 +219,6 @@ We note that within the 15 hours limit only 2.5\% models did not finish, and aft
 \begin{figure}
     \centering\footnotesize
     \includegraphics[width=\linewidth]{wmtk-tex/figs/tet3d-stats.pdf}
-    \caption{\revision{Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.}}
+    \caption{{Timing, max and average AMIPS energy (capped at 20) for maximum 25 iterations of tetrahedral meshing. Most models finish withing 20 minutes with only a few taking up to a day. Even by limiting the iterations to 25, most models reach an average AMIPS energy lower than 10, with optimal value at 3.}}
     \label{fig:3d-datasaet}
 \end{figure}

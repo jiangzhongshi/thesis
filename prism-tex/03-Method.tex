@@ -55,11 +55,11 @@ the constant vector field defined by the only edge of $\Tet_j^{\Prism}$ which is
     \V(p) = t_i - b_i,
 \end{equation}
 where $i$ is the index of the vertex corresponding to the pillar edge of $\Tet_j^{\Prism}$.
-Note that \revision{$\V$ is constant on each tetrahedron and might be discontinuous on the boundary: we formally define the value of $\V$ on the boundary as any of the values of the incident tetrahedra. This choice does not affect our construction.}
-\revision{T}here is exactly one \revision{integral (poly-)line} passing through each point of the prism if
+Note that {$\V$ is constant on each tetrahedron and might be discontinuous on the boundary: we formally define the value of $\V$ on the boundary as any of the values of the incident tetrahedra. This choice does not affect our construction.}
+{T}here is exactly one {integral (poly-)line} passing through each point of the prism if
 all the decomposed tetrahedra have positive volumes
 (Theorem~\ref{thm:projection}). This allows us to define
-the \emph{projection operator} $\P(p)$ for a point $p \in \Prism$ as the intersection of the \revision{integral line} $f_p(t)$ of the vector field $\V$ passing through $p$, with the middle surface of $\Prism$ (Figure~\ref{prism:fig:advection}). 
+the \emph{projection operator} $\P(p)$ for a point $p \in \Prism$ as the intersection of the {integral line} $f_p(t)$ of the vector field $\V$ passing through $p$, with the middle surface of $\Prism$ (Figure~\ref{prism:fig:advection}). 
 %
 \begin{figure}
     \includegraphics[width=\linewidth]{prism-tex/figs/projection}
@@ -263,7 +263,7 @@ Given a closed, orientable, self-intersection free triangle mesh $\T$ such that 
 
 To find a valid per-vertex thickness $\delta_i$ to construct the top surface, we initially cast a ray in the direction of $\N$ for each vertex and measure the distance to the first collision with $\T$ (and cap it to a user-defined parameter $\delta_{max}$ if no collision is found).
 An initial top mesh is built with this extrusion thickness; then we test whether any triangle in the top surface intersects $\T$, through triangle-triangle overlap test \cite{guigue2003fast},
-and iteratively shrink $\delta_i$ in this triangle by 20\% until we find a thickness that prevents intersections between the input and the top surface. Analogously, we build the bottom shell along the opposite direction. \revision{Note that the thickness of a vertex for the top and bottom surface can be different.}
+and iteratively shrink $\delta_i$ in this triangle by 20\% until we find a thickness that prevents intersections between the input and the top surface. Analogously, we build the bottom shell along the opposite direction. {Note that the thickness of a vertex for the top and bottom surface can be different.}
 
 \paragraph{Validity of the Initial Shell}
 Proposition~\ref{thm:I1} and Theorem~\ref{thm:thickness} ensure that the initial shell constructed using a displacement field $\N$ obtained by solving \eqref{eq:QP}, satisfies property I1. However, $\T$ might not formally satisfy the conditions for being a section of $\S$, despite being identical to the middle surface of $\S$, due to our definition of the projection operator $\P$.
@@ -271,7 +271,7 @@ Proposition~\ref{thm:I1} and Theorem~\ref{thm:thickness} ensure that the initial
 The reason for this can be seen in Figure \ref{prism:fig:closed}.
 After the initialization, the middle surface is the input mesh. Thus every prism $\Prism$ corresponds to a triangle $T_\Prism$ of $\T$. The intersection $\Prism \cap \T$, required to check if $\T$ is a section of $\Prism$ (Definition \ref{def:section}) contains points from both $T_\Prism$ and its 1-ring neighborhood.
 
-The projection operator (and thus the definition of the section) is based on all tetrahedral decompositions of $\Prism$\revision{;} it is possible that multiple tetrahedra (with different vector field values in $\V$) overlap on the boundary of $\Prism$. 
+The projection operator (and thus the definition of the section) is based on all tetrahedral decompositions of $\Prism${;} it is possible that multiple tetrahedra (with different vector field values in $\V$) overlap on the boundary of $\Prism$. 
 
 
 \begin{figure}\centering
@@ -350,7 +350,7 @@ The output of this stage is a valid shell with respect to $\T$ (Section \ref{pri
 During shell optimization, we perform local operations
 (Figure \ref{prism:fig:local_operations})
 on a valid shell to reduce its complexity and increase the quality. Before applying every operation, we check the validity of the operation to ensure that: (1) the resulting middle surface will be manifold \cite{dey1999topology} and (2) the shell will be valid with respect to $\T$ (to ensure a bijective projection). We forbid any operation that does not pass these checks.  
-\revision{We would like to remark that, 
+{We would like to remark that, 
 while there are different choices to guide the shell modification, we
 experimentally discovered that allowing shell simplification and optimization consistently leads to thicker shells with a richer space of sections.} 
 
@@ -393,7 +393,7 @@ In other words, $\T$ is a section of the new shell $\S'$ obtained by applying th
     %
     Note that in both cases, the map transforms the vector field $\V(p)$ to the constant vector field $e_z = (0,0,2)$, and the projection is $\P_z$, as defined in the proof of Theorem~\ref{thm:projection}. 
     
-    The dot product condition (Assumption 3) ensures that $\P_z$ defines a bijection between $D$ and $\psi(\T_C)$\revision{;} and further, the image \revision{satisfies} $\P_z(\psi(\Prism_i'\cap \T)) = \psi(M_i')$ where $M_i'$ is the middle surface (a single triangle) of $\Prism_i'$.
+    The dot product condition (Assumption 3) ensures that $\P_z$ defines a bijection between $D$ and $\psi(\T_C)${;} and further, the image {satisfies} $\P_z(\psi(\Prism_i'\cap \T)) = \psi(M_i')$ where $M_i'$ is the middle surface (a single triangle) of $\Prism_i'$.
     Therefore, since $\psi$ and $\P_z$ are both continuous and bijective, they are homeomorphisms which preserve topology, 
     thus $\Prism_i'\cap \T $ is a simply connected topological disk.
 \end{proof}
@@ -422,7 +422,7 @@ This energy is invariant to scaling, thus allowing the local operations to coars
 \paragraph{Shell Connectivity Modifications.} We translate three operations for triangular meshes to the shell settings (Figure~\ref{prism:fig:local_operations} top). Edge collapse, split, and flip operations can be performed by simultaneously modifying the top and bottom surfaces
 and retrieve the positions for the middle surface through the intersection. We only accept the operations if they pass the invariant check.
 
-\paragraph{Vertex Smoothing.} Due to the additional degree of freedom on vertex-pairs (position, direction, and thickness), we decompose the smoothing operations into three \revision{components} (Figure~\ref{prism:fig:local_operations} bottom). 
+\paragraph{Vertex Smoothing.} Due to the additional degree of freedom on vertex-pairs (position, direction, and thickness), we decompose the smoothing operations into three {components} (Figure~\ref{prism:fig:local_operations} bottom). 
 \emph{Pan} moves the positions of the top and bottom vertex at the same time, 
 minimizing the MIPS quality of the middle surface. Neither the thickness or direction will be changed. 
 \emph{Rotate} re-aligns the local direction to be the average of the neighboring ones while keeping the position of the middle vertex fixed. 
@@ -448,7 +448,7 @@ We, however, handle it as a discrete operation to check our conditions: we attem
 
 
 \paragraph{Projection Distortion} 
-An optional invariant to maintain (not \revision{necessary} for guaranteeing bijectivity, but useful for applications), 
+An optional invariant to maintain (not {necessary} for guaranteeing bijectivity, but useful for applications), 
 is a bound  on the maximal distortion $\D_\P(\Prism) $ of $\P$ for a prism $\Prism$. 
 We measure it as  the maximal angle between the normals of the set $\C$ containing the faces of $\T$ intersecting $\Prism$ and $\V$:
 \begin{equation*}
@@ -457,7 +457,7 @@ We measure it as  the maximal angle between the normals of the set $\C$ containi
 where $\angle$ is the unsigned angle in degrees. This quantity is bounded from below by the smallest dihedral angle of $\T$, making it impossible to control exactly. However, we can prevent it from increasing by measuring it and discarding the operations that increase it. In our experiments, we use a threshold of $89.95$ degrees.
 
 \paragraph{Scheduling and Termination}
-Our optimization algorithm is composed of two nested loops. The outer loop repeats a set of local operations until the face count between two successive iteration decreases by less than 0.01\%. In the inner loop we: (1) flip every edge of $\S$ decreasing  the MIPS energy and avoiding high and low vertex valences \cite{dunyach2013adaptive}; (2) smooth all vertices which include pan, zoom, and rotate; and (3) collapse every edge of $\S$ not increasing the MIPS energy over \revision{30}. Note that for every operation, we check the invariants, the projection distortion, and manifold preservation and reject any operation violating them.
+Our optimization algorithm is composed of two nested loops. The outer loop repeats a set of local operations until the face count between two successive iteration decreases by less than 0.01\%. In the inner loop we: (1) flip every edge of $\S$ decreasing  the MIPS energy and avoiding high and low vertex valences \cite{dunyach2013adaptive}; (2) smooth all vertices which include pan, zoom, and rotate; and (3) collapse every edge of $\S$ not increasing the MIPS energy over {30}. Note that for every operation, we check the invariants, the projection distortion, and manifold preservation and reject any operation violating them.
 %
 After the outer iteration terminates (i.e.  the shell cannot be coarsened anymore), we further optimize the shell with 20 additional iterations of flips and vertex smoothing.
 

@@ -2,8 +2,8 @@
 \usepackage{ifthen}
 
 \definecolor{Violet}{rgb}{.6, .35, .7}
-\newcommand{\revision}[1]{\textcolor{Violet}{#1}}
-\newcommand{\revision}[1]{\textcolor{Violet}{#1}}
+\newcommand{}[1]{\textcolor{Violet}{#1}}
+\newcommand{}[1]{\textcolor{Violet}{#1}}
 % define colors
 \definecolor{DenisColor}{rgb}{0.15, 0.38, 0.68}
 \definecolor{TeseoColor}{rgb}{0.15, 0.68, 0.38}
@@ -48,8 +48,8 @@
 \providecommand{\norevision}{1} % <-- change to 1 to disable comments
 \ifthenelse{\equal{\norevision}{1}}
 {
-\renewcommand{\revision}[1]{#1}
-\renewcommand{\revision}[1]{#1}
+\renewcommand{}[1]{#1}
+\renewcommand{}[1]{#1}
 }
 {}
 
