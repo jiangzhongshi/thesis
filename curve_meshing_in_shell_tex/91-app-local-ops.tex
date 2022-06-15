@@ -3,7 +3,7 @@
 Figure~\ref{prism:fig:local_operations} introduce a set of \emph{valid} local operations to modify the shell, including edge split, edge collapse, edge flip and vertex smoothing. 
 The operations are an analogue of the triangle mesh edit operations \cite{dunyach2013adaptive}, 
 by simultaneously editing the shared connectivity of bottom, middle and top surface of the shell.
-\ref[Theorem 3.7]{chp:shell} outlines invariant conditions, which maintains the shell projection to be bijective. 
+Chapter~\ref{chp:shell} Theorem 3.7 outlines invariant conditions, which maintains the shell projection to be bijective. 
 
 Our algorithm adopts and extends the local operations therein to the high order setting. In addition to the existing conditions, we also validate the curved volumetric mesh in the shell.
 The algorithm maintains the global intersection free bottom (top) surface with a dynamic hash grid \cite{teschner2003optimized}. Then for each prism, we check the positivity (defined by the determinant of Jacobian of the geometric map) of the prismatic element (each decomposed into three tetrahedra).
@@ -12,8 +12,3 @@ In the presence of feature annotation and feature straightening (Section \ref{cu
 edge flip is disabled on the edges annotated as features; collapse is only allowed when it does not degenerate the chain, and the two endpoints of the edge is on the same chain. 
 Since we require a map from the original input edges, we insert additional degree of freedoms in the input mesh. When performing edge split, the insertion of the new vertex is queried among the pre-image of the current edge, as an existing vertex of the input. For vertex smoothing (more specifically pan), the target location is limited to the set of input vertices.
 
-
-
-% (e.g., smoothing will ``move'' some edges from $\overline f_1$ to $\overline f_2$
-% \DZ{it should not be "e.g.", unless you describe what exactly you are doing elsewhere; or refer to appendix. Moving edges from one set to another as a result of smoothing is unclear} 
-% collapse will merge all edges in a unique feature)
