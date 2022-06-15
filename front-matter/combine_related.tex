@@ -25,10 +25,11 @@ Our algorthim implementation in chapters~\ref{chp:scaf, chp:shell, chp:curve} ma
 However, by design, mesh data structures provide a low-level interface to
 manipulate vertices, edges, faces, and tetrahedra.
 Different designs differ vastly in API and implementation details, making it hard to port algorithm from one data structure to another. 
+Our contribution in this dissertation focus on algorithm specification, and would be integrated regardless of the choice of underlying mesh data structure. We further address in chapter~\ref{chp:wmtk} for the practical challenges in incorporating into the implementations. 
 
-Our contribution in chapter~\ref{chp:wmtk} mostly focus on algorithm specification, and is benefitial regardless of the choice of underlying mesh data structure. 
-In our final chapter~\ref*{chp:wmtk}, the abstraction model of mesh processing algorithms draw inspiration from domain
-specific languages (DSL) in graphics.  For dense regularly structured data such
+\paragraph{Domain specific languages in graphics}
+For severeal subfields of computer graphics, there has been a variety of domain
+specific languages (DSL) developed, that has proven to be useful for researchers and practitioners. For dense regularly structured data such
 as images, Halide \cite{ragan2013halide} popularized the idea of decoupling image
 processing operations from low level scheduling tasks. Similar abstraction that
 separates algorithm description from low level data structure and/or parallel
@@ -37,15 +38,16 @@ architecture can also be found in other DSLs such as Simit
 \cite{kjolstad2017taco} for dense and sparse tensor algebra, Taichi
 \cite{hu2019taichi} for simulation over sparse volumetric data, and Penrose
 \cite{ye2020penrose} for generating diagrams from math notation.
-
+For mesh editing and modeling, due to the complexity of the data structure, there has been few effort.
+In our final chapter~\ref*{chp:wmtk}, we take a first step towards an abstraction model of mesh processing algorithms. Our contribution is more of a software development kit, instead of a full language but I believe it would be beneficial for further efficient mesh editing algorithms.
 
 \section{Maps and Parameterizations}
 
 \subsection*{Injective Surface Parameterizatons}
-Bijective maps find a host of applications in a variety of fields including physical simulation, surface deformation, and parametrization.  We review only the most relevant prior works here and refer to the following surveys for more details~\cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007}.
- There are many methods that focus on creating {locally} injective maps, which amounts to requiring that triangles maintain their orientation (i.e. they do not flip). In mesh parameterization, many flip-preventing metrics have been developed: the idea is to force the metric to diverge to infinity as triangles become degenerate, inhibiting flips.  These metrics optimize various geometric properties such as angle~\cite{hormann2000mips,Degener:2003} or length~\cite{Sander:2001,Sorkine:2002,Aigerman:2014,Poranne:2014,Smith:2015} preservation.  Similar techniques in the context of deformation have been used to add barrier functions to enforce local injectivity in deformations~\cite{Schuller:2013}. Our method uses these techniques to prevent flips in the scaffold.
+We review only the most relevant prior works here and refer to the following surveys for more details~\cite{FloaterSurvey:2005,Sheffer:2006,Hormann:2007}.
+ There are many methods that focus on creating locally injective maps, which amounts to requiring that triangles maintain their orientation (i.e. they do not flip). In mesh parameterization, many flip-preventing metrics have been developed: the idea is to force the metric to diverge to infinity as triangles become degenerate, inhibiting flips.  These metrics optimize various geometric properties such as angle~\cite{hormann2000mips,Degener:2003} or length~\cite{Sander:2001,Sorkine:2002,Aigerman:2014,Poranne:2014,Smith:2015} preservation.  Similar techniques in the context of deformation have been used to add barrier functions to enforce local injectivity in deformations~\cite{Schuller:2013}. Our method uses these techniques to prevent flips in the scaffold.
 
-Many methods have also been developed to optimize these distortion energies including moving one vertex at a time~\cite{hormann2000mips}, parallel gradient descent~\cite{fu2015computing}, as well as other quasi-newton approaches~\cite{Smith:2015,Kovalsky:2016,rabinovich2017scalable}.  Other approaches construct such maps by performing a change of basis, projecting to an inversion free space, and then constructing a parametrization from the result~\cite{Fu:2016}. While our method could potentially use any of these optimization methods, we use \cite{rabinovich2017scalable} for its large step sizes. We elaborate on this choice in Section~\ref{sec:general_form}.
+Many methods have also been developed to optimize these distortion energies including moving one vertex at a time~\cite{hormann2000mips}, parallel gradient descent~\cite{fu2015computing}, as well as other quasi-newton approaches~\cite{Smith:2015,Kovalsky:2016,rabinovich2017scalable}. Other approaches construct such maps by performing a change of basis, projecting to an inversion free space, and then constructing a parametrization from the result~\cite{Fu:2016}. While our method could potentially use any of these optimization methods, we use \cite{rabinovich2017scalable} for its large step sizes. We elaborate on this choice in Section~\ref{sec:general_form}.
 
 In addition to (locally) injective constraints, bijective maps have the additional requirement that the boundary does not intersect.  One simple method for creating a bijective map in 2D involves constraining the boundary to a convex shape such as a circle~\cite{Tutte:1963,Floater:97}. Strictly speaking, such bijective is actually injective.  
 Such parametrizations guarantee a bijective map in 2D but create significant distortion.  Even so, these methods are commonly used to create a valid starting point for further optimization \cite{Schuller:2013,Smith:2015,rabinovich2017scalable}. 
@@ -57,42 +59,33 @@ The Deformable Simplicial Complex (DSC) method~\cite{Misztal:2012} utilize a tri
 
 Air meshes~\cite{Muller:2015} extends the technique of Zhang et al.~\cite{Zhang:2005} to add the concept of triangle flipping based on a quality measure during the optimization instead of simply retriangulating at the first sign of a degeneracy. However, this method does not maintain bijective maps as boundaries are allowed to inter-penetrate during optimization: the scaffold is only used to efficiently detect problematic regions, and the local injectivity requirement is a soft constraint in the optimization. The problem tackled in this chapter is much harder, because we do not allow any overlap during any stage of the optimization to guarantee that the resulting maps will be bijective.
 
-\citep{Smith:2015} take a different approach: instead of using a scaffold triangulation, the authors introduce a locally supported barrier function for the boundary to prevent intersection and explicitly limit the line search by computing the singularities of both the distortion energy and the boundary barrier function. Such an approach is inspired by traditional collision detection and response methods that are discussed below. Given a  bijective starting point, this approach never leaves the space of bijective maps during optimization.  Its main limitation is that it is computationally expensive, especially for large models. Our method is two order of magnitude faster (Figure \ref{scaf:fig:smith}).
+\citep{Smith:2015} take a different approach: instead of using a scaffold triangulation, the authors introduce a locally supported barrier function for the boundary to prevent intersection and explicitly limit the line search by computing the singularities of both the distortion energy and the boundary barrier function. Such an approach is inspired by traditional collision detection and response methods that are discussed below. Given a  bijective starting point, this approach never leaves the space of bijective maps during optimization.  Its main limitation is that it is computationally expensive, especially for large models. Our method is two order of magnitude faster in chapter~\ref{chp:scaf} (Figure \ref{scaf:fig:smith}).
 
 \paragraph{Global Parametrization} 
 
-Conformal mesh parametrization algorithms adapt the mesh during optimization, as a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric.
+Conformal mesh parametrization algorithms adapt the mesh during optimization, as a fixed triangulation restricts the space of metrics realizable \cite{luo2004combinatorial,Campen:2017:SimilarityMaps,campen2018seamless,gu2018discrete,gu2018discrete2,springborn2019ideal,sun2015discrete}. Two very recent works \cite{Gillespie:2021:DCE,Campen:2021} introduce robust algorithms based on Ptolemy flips to compute conformal maps satisfying a prescribed metric. These methods require changing the mesh connectivity of a triangle mesh, and could additionally benefit from our framework in Chapter~\ref{chp:wmtk} to simplify their implementation and parallelize the mesh editing operations. 
 
-All these methods require changing the mesh connectivity of a triangle mesh, and could thus benefit from our framework in Chapter~\ref{chp:wmtk} to simplify their implementation and parallelize the mesh editing operations. 
+\subsection*{Texture Seam Creation.}
+In the context of parametrization, some approaches optimize the connectivity of the charts of the surface during parametrization to obtain a bijective map.  \cite{Levy:2002,Zhou:2004} parameterize the surface and then split charts based on whether they intersect~\cite{Levy:2002} or based on a level of distortion~\cite{Zhou:2004}.  Sorkine et al.~\cite{Sorkine:2002} employ a bottom-up approach and add triangles to a parametrization chart until bijectivity would be violated. The problem we are solving is more general (seams are only useful for texture mapping applications) and constrained (we preserve the prescribed seams). Our algorithm in Chapter~\ref{chp:scaf} could be used by these algorithms to parametrize single charts, which could reduce the number of additional seams. Also, \cite{li2018optcuts} incorporates our method to automatically produce seams from a given geometry.
 
-\paragraph{Texture Seam Creation.}
-In the context of parametrization, some approaches optimize the connectivity of the charts of the surface during parametrization to obtain a bijective map.  \cite{Levy:2002,Zhou:2004} parameterize the surface and then split charts based on whether they intersect~\cite{Levy:2002} or based on a level of distortion~\cite{Zhou:2004}.  Sorkine et al.~\cite{Sorkine:2002} employ a bottom-up approach and add triangles to a parametrization chart until bijectivity would be violated. The problem we are solving is more general (seams are only useful for texture mapping applications) and constrained (we preserve the prescribed seams). Our algorithm could be used by these algorithms to parametrize single charts, which could reduce the number of additional seams.
-
-
-\paragraph{Isotopy between surfaces}
-
-{\cite{chazal2005condition,chazal2010ball}} presents conditions for two {sufficiently} smooth surfaces {to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they {did} not realize a map suitable for {transferring attributes}.
-
-
-\paragraph{Shell Maps}
+\subsection*{Shell Maps}
 2.5D geometric textures, defined around a surface, are commonly used in rendering applications \cite{wang2003view,wang2004generalized,porumbescu2005shell,peng2004interactive,lengyel2001real,chen2004shell,huang2007gradient,jin2019shell}. The requirement is to have a thin shell around the surface that can be used to map an explicit mesh copied from a texture, or a volumetric density field used for ray marching. Our shells are naturally equipped with a 2.5D parametrization that can be used for these purposes, and have the advantage of allowing users to  generate coarse shells which are efficient to evaluate in real-time. The bijectivity of our map ensures that the  volumetric texture is mapped in the shell without discontinuities. We show one example in Section \ref{prism:sec:applications}.
 
-\section{Attribute Association and Transfer}
-\paragraph{Common Domains}
-Or cross parameterizations?
+\paragraph{Isotopy between surfaces}
+\revision{\cite{chazal2005condition,chazal2010ball}} presents conditions for two \revision{sufficiently} smooth surfaces \revision{to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they \revision{did} not realize a map suitable for \revision{transferring attributes}.
 
-A different approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
+\section{Attribute Association and Transfer}
+\paragraph{Common Domains Cross Parameterization}
+
+An approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
 \cite{maron2017convolutional,Aigerman:2015b,Aigerman:2014,Schuller:2013,Smith:2015,rabinovich2017scalable,jiang2017simplicial,Weber:2014:LIP,Campen:2016,Muller:2015,Gotsman:2001,surazhsky2001morphing,Zhang:2005,Fu:2016,litke2005image,schmidt2019distortion}, a canonical coarse polyhedra \cite{kraevoy2004cross,praun2001consistent}, orbifolds \cite{Aigerman:2015,Aigerman:2017,Aigerman:2016}, Poincare disk \cite{Springborn:2008,stephenson2005introduction,Kharevych:2006,Jin:2008}, spectral basis \cite{Ovsjanikov:2012,Shoham:2019,Ovsjanikov:2017}, and abstract domains \cite{kraevoy2004cross,Schreiner:2004,Pietroni:2010}.
 While these approaches allow mappings between completely different surfaces, this is a hard problem to tackle in full generality fully automatically, with guarantees on the output (even some instances of the problem of global parametrization, i.e. maps from a specific type of almost everywhere flat domains to surfaces, lack a fully robust automatic solution).
 
 %
-Our approach uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
+Our approach in chapters~\ref{chp:shell, chp:curve} uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
 
- We see our method not as a replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
+ Our construction in Chapter~\ref{chp:shell} is not a full replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
 
-% \subsection{Shell Overview}
-% \label{prism:sec:related}
-%We review works in computer graphics spanning both the realization of maps for attribute transfer (Section \ref{prism:sec:rel:transfer}), and the explicit generation of boundary cages (Section \ref{prism:sec:rel:shell}), which are closest to our work.
 
 \subsection{Attribute Transfer}
 \label{prism:sec:rel:transfer}
@@ -222,7 +215,7 @@ There are many variants of {Delaunay-based} meshing algorithms including
 
 To the best of our knowledge, all these methods are designed to allow some modifications of the input surface (either refinement, resampling, or approximation). One exception is the constrained Delaunay implementation in TetGen \cite{tetgen} that allows disabling any modification to the boundary. However, this comes at the cost of much lower quality and potential robustness issues, as we show in Section~\ref{cumin:sec:tets}.
 
-A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrahedral}, and its variants \cite{Hu:2020:fTetWild,hu2019triwild}, where the problem is relaxed to generate a mesh that is close to the input to increase robustness. However, these approaches are not directly usable in our setting, as we require boundary preservation.
+A different tetrahedral meshing approach has been proposed in \cite{hu2018tetrahedral}, and its variants \cite{hu2019triwild,Hu:2020:fTetWild}, where the problem is relaxed to generate a mesh that is close to the input to increase robustness. However, these approaches are not directly usable in our setting, as we require boundary preservation.
 
 Due to these issues, we propose a novel boundary-preserving tetrahedral meshing algorithm specifically tailored for the shell mesh generated by our curved meshing algorithm.
 
@@ -282,7 +275,7 @@ Boundary layers are commonly used in computational fluid dynamics simulations re
 
 \section{Robust Geometry Processing}
 
-The closest works, in terms of applications, to our contribution are the recent algorithms enabling black-box geometry processing pipelines to solve PDEs on meshes \emph{in the wild}. 
+Some works related to our contribution are the recent algorithms enabling black-box geometry processing pipelines to solve PDEs on meshes \emph{in the wild}. 
 
 \cite{dyer2007delaunay,liu2015efficient} refines arbitrary triangle meshes to satisfy the Delaunay mesh condition,
 benefiting the numerical stability of some surface based geometry processing algorithms.
@@ -296,7 +289,6 @@ which is more efficient than the extrinsic techniques \cite{liu2015efficient} si
 TetWild \cite{hu2018tetrahedral,Hu:2019:fTetWild}
 can robustly convert triangle soups into high-quality tetrahedral meshes, suitable for FEM analysis. Their approach does not provide a way to transfer boundary conditions from the input surface to the boundary of the tetrahedral mesh. Our approach, when combined with a tetrahedral mesher that does not modify the boundary, enables to remesh low-quality surface, create a tetrahedral mesh, solve a PDE, and transfer back the solution (Figure \ref{prism:fig:teaser}). However, our method does not support triangle soups, and it is limited to manifold and orientable surfaces.
 
-\subsection{Large Scale Dataset Collection} 
 
 \subsection{Mesh Arrangements/Boolean Operations} 
 
@@ -315,5 +307,7 @@ Curved tetrahedral meshes have also gained popularity in the context of fast ani
 \cite{mezger2007finite} observe the benefit of quadratic tetrahedra in the pipeline of physically based animation.
 \cite{Suwelack2013} further investigate the transfer problem when using curved meshes as a proxy.
 
+\subsection{Large Scale Dataset Collection} 
 
+In addition, the availability of recent datasets \cite{koch2019abc, zhou2016thingi10k}
 % And cite more of our labs work, as ABC, etc.
