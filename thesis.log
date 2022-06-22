@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  11 JUN 2022 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.1)  22 JUN 2022 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1501,35 +1501,31 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 24.88pt on input line 247.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 24.88pt on input line 247.
- (./front-matter/acknowledge.tex
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 7.
-) [3
+ [3
 
-] (./front-matter/abstract.tex) [4
+] [4
 
-]
-(docs/thesis.toc
+] (docs/thesis.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 1.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 6.
+ on input line 7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 6.
+(Font)              scaled to size 12.0pt on input line 7.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 6.
+(Font)              scaled to size 8.8pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+(Font)              scaled to size 6.6pt on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1537,7 +1533,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/opt/texlive/texdir/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1546,30 +1542,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-6.
+7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-6.
+7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-6.
+7.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 12.0pt on input line 6.
+(Font)              scaled to size 12.0pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 8.8pt on input line 6.
+(Font)              scaled to size 8.8pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 6.6pt on input line 6.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
+(Font)              scaled to size 6.6pt on input line 7.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 7
 .
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [5
@@ -1603,15 +1599,8 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 Chapter 1.
 (./front-matter/introduction.tex [1
 
-] [2] [3]) (./front-matter/prelim.tex
-Overfull \hbox (2.84048pt too wide) in paragraph at lines 47--1
-\T1/LinuxLibertineT-TLF/m/n/12 (-20) source im-ple-men-ta-tions for the al-go-r
-ithms in the the-sis. Ad-di-tion-ally, we pro-duce source code [Jiang|
- []
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 2.
-) [4]
+] [2] [3]) (./front-matter/prelim.tex)
+[4]
 Chapter 2.
 (./front-matter/combine_related.tex
 
@@ -1620,10 +1609,18 @@ n input line 24.
 
 [5
 
-] [6] [7] [8] [9] [10]
+]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 14.4pt on input line 46.
+ [6] [7]
+
+LaTeX Warning: Reference `chp:shell, chp:curve' on page 8 undefined on input li
+ne 85.
+
+[8] [9] [10]
 
 Package natbib Warning: Citation `clausen:2013' on page 11 undefined on input l
-ine 143.
+ine 136.
 
 [11] [12] [13] [14] [15] [16] [17]) [18]
 Chapter 3.
@@ -1663,12 +1660,16 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 
 [19
 
-]) (./scaf-tex/sections/method.tex [20]
+]
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 31.
+ [20]) (./scaf-tex/sections/method.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.8pt on input line 18.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.6pt on input line 18.
-<scaf-tex/figs/scaffold_illustration.pdf, id=133, 724.7075pt x 250.9375pt>
+ [21]
+<scaf-tex/figs/scaffold_illustration.pdf, id=137, 724.7075pt x 250.9375pt>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -1681,12 +1682,8 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 8.0pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 (Font)              scaled to size 6.1pt on input line 28.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[21] [22]
-<scaf-tex/figs/hand_weight.pdf, id=143, 724.7075pt x 403.5075pt>
+ [22]
+<scaf-tex/figs/hand_weight.pdf, id=141, 724.7075pt x 403.5075pt>
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1697,22 +1694,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <scaf-tex/figs/database_demo.pdf, id=155, 682.55pt x 782.925pt>
  [26]
 <scaf-tex/figs/lucy-scalability.pdf, id=159, 808.01875pt x 642.4pt>
-<scaf-tex/figs/the_animal.pdf, id=160, 2961.0625pt x 1756.5625pt>
-<scaf-tex/figs/maneki_neko_colorful.pdf, id=161, 923.45pt x 772.8875pt>
  [27]
-<scaf-tex/figs/leg-flow.pdf, id=166, 3578.36874pt x 893.3375pt>
-<scaf-tex/figs/rabbit_grow.pdf, id=167, 1789.68625pt x 1104.125pt>
+<scaf-tex/figs/the_animal.pdf, id=164, 2961.0625pt x 1756.5625pt>
+<scaf-tex/figs/maneki_neko_colorful.pdf, id=165, 923.45pt x 772.8875pt>
  [28]
+<scaf-tex/figs/leg-flow.pdf, id=169, 3578.36874pt x 893.3375pt>
+<scaf-tex/figs/rabbit_grow.pdf, id=170, 1789.68625pt x 1104.125pt>
 <scaf-tex/figs/dense_hilbert.pdf, id=171, 3462.9375pt x 1982.90813pt>
 <scaf-tex/figs/compare_smith.pdf, id=172, 1063.47313pt x 1065.50072pt>
 
 
-LaTeX Warning: Reference `sec:related' on page 29 undefined on input line 84.
+LaTeX Warning: Reference `sec:related' on page 29 undefined on input line 91.
 
-<scaf-tex/figs/camel_step.pdf, id=173, 1294.8375pt x 361.35pt>
-<scaf-tex/figs/random-rotate.pdf, id=174, 1047.46336pt x 1041.35043pt>
-[29] (./scaf-tex/sections/timings.tex)) (./scaf-tex/sections/conclusions.tex
-[30] [31]
+[29]
+<scaf-tex/figs/camel_step.pdf, id=176, 1294.8375pt x 361.35pt>
+<scaf-tex/figs/random-rotate.pdf, id=177, 1047.46336pt x 1041.35043pt>
+ [30] (./scaf-tex/sections/timings.tex))
+(./scaf-tex/sections/conclusions.tex [31]
 
 LaTeX Warning: Reference `curve' on page 32 undefined on input line 8.
 
@@ -2197,28 +2195,35 @@ pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tet3d-stats.pdf): PDF inclusion:
 <wmtk-tex/figs/tet3d-stats.pdf, id=986, 1846.97021pt x 413.89632pt>
 ) (./wmtk-tex/06-concluding.tex [109]) [110]
 Chapter 7.
-(./front-matter/conclusion.tex) [111
+(./front-matter/conclusion.tex
+
+LaTeX Warning: Reference `chp:shell,chp:curve' on page 111 undefined on input l
+ine 14.
+
+[111
 
 ]
+
+Package natbib Warning: Citation `Koch_2019_CVPR' on page 112 undefined on inpu
+t line 19.
+
+) [112]
 Appendix A.
-(./prism-tex/11-Appendix.tex [112
+(./prism-tex/11-Appendix.tex [113
 
 ])
-(./curve_meshing_in_shell_tex/90-bij-proof.tex [113])
-(./curve_meshing_in_shell_tex/91-app-local-ops.tex
-
-LaTeX Warning: Reference `[' on page 114 undefined on input line 6.
-
-[114]) [115] (docs/thesis.bbl [116
+(./curve_meshing_in_shell_tex/90-bij-proof.tex [114])
+(./curve_meshing_in_shell_tex/91-app-local-ops.tex [115]) [116]
+(docs/thesis.bbl [117
 
 
-] [117] [118] [119] [120] [121] [122]
-[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
-[135] [136] [137] [138] [139])
+] [118] [119] [120] [121] [122] [123] [124] [125] [126]
+[127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138]
+[139] [140])
 
 Package natbib Warning: There were undefined citations.
 
-[140] (docs/thesis.aux)
+[141] (docs/thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2231,10 +2236,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41374 strings out of 478305
- 807884 string characters out of 5847251
- 1144495 words of memory out of 5000000
- 57607 multiletter control sequences out of 15000+600000
+ 41371 strings out of 478305
+ 807730 string characters out of 5847251
+ 1143565 words of memory out of 5000000
+ 57609 multiletter control sequences out of 15000+600000
  768788 words of font info for 846 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1327b,1209s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2265,10 +2270,10 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (156 pages, 62654552 bytes).
+Output written on docs/thesis.pdf (157 pages, 62656640 bytes).
 PDF statistics:
- 1188 PDF objects out of 1200 (max. 8388607)
- 494 compressed objects within 5 object streams
+ 1192 PDF objects out of 1200 (max. 8388607)
+ 497 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  157817 words of extra memory for PDF output out of 184870 (max. 10000000)
 

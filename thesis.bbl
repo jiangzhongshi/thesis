@@ -636,6 +636,12 @@ Feng, L., Alliez, P., Bus{\'e}, L., Delingette, H., and Desbrun, M. (2018).
 \newblock Curved optimal delaunay triangulation.
 \newblock {\em ACM Transactions on Graphics (TOG)}.
 
+\bibitem[Ferguson et~al., 2022]{ferguson2022high}
+Ferguson, Z., Jain, P., Zorin, D., Schneider, T., and Panozzo, D. (2022).
+\newblock High-order incremental potential contact for elastodynamic simulation
+  on curved meshes.
+\newblock {\em arXiv preprint arXiv:2205.13727}.
+
 \bibitem[Floater, 2003]{floater2003one}
 Floater, M. (2003).
 \newblock One-to-one piecewise linear mappings over triangulations.
@@ -974,20 +980,20 @@ Jiang, Z. (2017).
   low distortion bijective mapping in 2{D} and 3{D} --- github.com.
 \newblock \url{https://github.com/jiangzhongshi/Scaffold-Map}.
 
-\bibitem[Jiang, 2021a]{githubbichon}
-Jiang, Z. (2021a).
-\newblock {G}it{H}ub - jiangzhongshi/bichon: {R}obust {C}oarse {C}urved
-  {T}et{M}esh {G}eneration --- github.com.
-\newblock \url{https://github.com/jiangzhongshi/bichon}.
-\newblock [Accessed 09-Jun-2022].
-
-\bibitem[Jiang, 2021b]{githubshell}
-Jiang, Z. (2021b).
+\bibitem[Jiang, 2020]{githubshell}
+Jiang, Z. (2020).
 \newblock {G}it{H}ub - jiangzhongshi/bijective-projection-shell: {A}
   projection-based bijective map definition and a robust algorithm to construct
   the prismatic shell domain.
   https://cs.nyu.edu/~zhongshi/files/{B}ijective{P}rism.pdf --- github.com.
 \newblock \url{https://github.com/jiangzhongshi/bijective-projection-shell}.
+
+\bibitem[Jiang, 2021]{githubbichon}
+Jiang, Z. (2021).
+\newblock {G}it{H}ub - jiangzhongshi/bichon: {R}obust {C}oarse {C}urved
+  {T}et{M}esh {G}eneration --- github.com.
+\newblock \url{https://github.com/jiangzhongshi/bichon}.
+\newblock [Accessed 09-Jun-2022].
 
 \bibitem[Jiang et~al., 2017]{jiang2017simplicial}
 Jiang, Z., Schaefer, S., and Panozzo, D. (2017).
@@ -1915,6 +1921,11 @@ Tozoni, D.~C., Dumas, J., Jiang, Z., Panetta, J., Panozzo, D., and Zorin, D.
 \newblock A low-parametric rhombic microstructure family for irregular
   lattices.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 39(4):101--1.
+
+\bibitem[Trettner et~al., 2022]{ember2022}
+Trettner, P., Nehring-Wirxel, J., and Kobbelt, L. (2022).
+\newblock Exact mesh booleans via efficient and robust local arrangements.
+\newblock {\em ACM Transactions on Graphics (TOG)}, (4).
 
 \bibitem[Turner, 2017]{turner2017high}
 Turner, M. (2017).

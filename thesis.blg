@@ -2,9 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Reallocated field_info (elt_size=4) to 13030 items from 5000.
+Reallocated field_info (elt_size=4) to 13096 items from 5000.
 Database file #1: referenced.bib
 Warning--I didn't find a database entry for "clausen:2013"
+Warning--I didn't find a database entry for "Koch_2019_CVPR"
 Warning--empty institution in Baumgart1972
 Warning--can't use both volume and number fields in bommes2013quad
 Warning--can't use both volume and number fields in botsch2003multiresolution
@@ -17,6 +18,7 @@ Warning--empty booktitle in dunyach2013adaptive
 Warning--empty journal in dyer2007delaunay
 Warning--empty school in Garland:1999
 Warning--can't use both volume and number fields in hass2020approximating
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty booktitle in Klingner07aggressive
 Warning--empty journal in mezger2007finite
 Warning--empty journal in moxeynekmesh
@@ -25,46 +27,47 @@ Warning--empty booktitle in Peir2015OnCH
 Warning--can't use both volume and number fields in peng2004interactive
 Warning--can't use both volume and number fields in porumbescu2005shell
 Warning--empty institution in SALARI:2000:CVB
+Warning--there's a number but no volume in ember2022
 Warning--can't use both volume and number fields in wang2003view
-You've used 364 entries,
+You've used 366 entries,
             1935 wiz_defined-function locations,
-            2357 strings with 64201 characters,
-and the built_in function-call counts, 158314 in all, are:
-= -- 15687
-> -- 6761
+            2367 strings with 64592 characters,
+and the built_in function-call counts, 159059 in all, are:
+= -- 15754
+> -- 6807
 < -- 254
-+ -- 2383
-- -- 2287
-* -- 13357
-:= -- 26817
-add.period$ -- 1160
-call.type$ -- 364
-change.case$ -- 2943
-chr.to.int$ -- 356
-cite$ -- 385
-duplicate$ -- 6187
-empty$ -- 10886
-format.name$ -- 2827
-if$ -- 31612
-int.to.chr$ -- 9
++ -- 2398
+- -- 2303
+* -- 13424
+:= -- 26958
+add.period$ -- 1166
+call.type$ -- 366
+change.case$ -- 2961
+chr.to.int$ -- 359
+cite$ -- 388
+duplicate$ -- 6213
+empty$ -- 10927
+format.name$ -- 2845
+if$ -- 31748
+int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 352
-newline$ -- 1824
-num.names$ -- 1100
-pop$ -- 2694
+missing$ -- 354
+newline$ -- 1834
+num.names$ -- 1106
+pop$ -- 2711
 preamble$ -- 1
-purify$ -- 2955
+purify$ -- 2973
 quote$ -- 0
-skip$ -- 4769
+skip$ -- 4789
 stack$ -- 0
-substring$ -- 10835
-swap$ -- 1183
+substring$ -- 10859
+swap$ -- 1185
 text.length$ -- 107
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2160
-warning$ -- 21
-while$ -- 1238
+type$ -- 2172
+warning$ -- 22
+while$ -- 1242
 width$ -- 0
-write$ -- 4800
-(There were 22 warnings)
+write$ -- 4825
+(There were 24 warnings)
