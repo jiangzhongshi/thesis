@@ -1,22 +1,35 @@
-This dissertation covers several problems on to the bijective mappings between different spatial domains. Computational principles are introduced to guarantee the validity of attribute association and robust algorithms are presented to efficiently process information across digital shapes. I argue that these principles are important, not only for the robust and scalable processing of digital geometry shapes, but also for the development of next generation pipeline of geometric modeling and physical simulation. To this end, there are still many open problems.
+In the prior chapters, my dissertation have introduced several problems on to the bijective mappings between different spatial domains.
+And relevant computational principles are introduced to guarantee the validity of attribute association and robust algorithms are presented to efficiently process information across digital shapes. 
+In this concluding chapter, I argue that the significance of these principles lies not only during the robust and scalable processing of digital geometry shapes, but also for the development of next generation pipeline of geometric modeling and physical simulation. 
+To this boarder goal, there are still many open and exciting problems to solve.
 
-% Chapter~\ref{chp:scaf} concerns primarily with the mapping problem in the context of creative modeling.
-
+\begin{enumerate}
+  \item \emph{Shape-Aware Adaptive Mesh Refinement (AMR)}
 In chapter~\ref{chp:curve}, we have showcased the benefit of surface and volume simplification in the context of scalable visualization and efficient physical simulation. On the other hand, our framework can be further extended to adaptively refine a given geometry, adding detail and smoothness. Such features, combined with an Adaptive Mesh Refinement (AMR) pipeline, are important for scientific computing and computational design.
 
-To guarantee strictly bijective attribute transfer, the proposed theory on the shell can be easily extended to manifold meshes.
-%\DP{I don't understand the point here, I suggest to say that it is possible to extend it and provide a brief technical explanation of how to do it. }
+\item \emph{Bijective Shell in the Wild} % partial shell parsely
+In chapter~\ref{chp:shell}, our shell is formulated on manifold meshes, 
+to guarantee strictly bijective attribute transfer everywhere.
 However, a blended framework with envelope \cite{hu2018tetrahedral, Wang:2021} can open the door to  data that are partially corrupted or occluded. Such data, only partially information rich, is commonly seen in 3d scanned dataset, or MRI medical datasets.
+So that point cloud and implicit represented surface data can all be processed within the same framework.
 
+\item \emph{High-Order reduced FEM simulations}
 High order finite element method is a concept already with decades of development, but we believe that the availability of more high order surface and volume meshes (chapter~\ref{chp:curve}) would benefit its adoption and release the potential in efficient physical computations. In addition, resolving frictional contact with curved representations \cite{ferguson2022high} can make dynamic simulations more scalable and efficient. 
 Due to historical reasons, much of geometric modeling software have the capability of some curved format (e.g. B{\'e}zier and NURBS), but they typically lack robustness. In this aspect, our contribution of robust and intersection-free curve surface modeling can contribute to a more systematically robust industrial design and simulation pipeline.
 
+\item \emph{Improved Computational Fabrication of Customized Devices}
 The chapters~\ref{chp:shell,chp:curve} have introduced building the robust association between design and simulation representations. A closely related concept with attribute transfer is differentiability. Combined with new advance and algorithms for differentiable physical simulation, we will automatically tweak the design space to the desirably simulation results, making it possible to design medical devices with tailored need in a fully automatic way.
 
-% Furthermore, the exploration of efficient mesh generation methods.
-Another venue of interesting future works, is tetrahedral-based geometry processing. Similar to the principle we explained in chapter~\ref{chp:scaf}, a background mesh provides implicit and easy ways to check for the geometry validity, for example it turns global surface self intersection into locally inversion checks and would unify the framework in different shape and order of finite element cells. With tetrahedral based virtual domain, traditional geometry processing algorithms, including smoothing, fairing, and animation, can all be more efficient and reliable under topology constrains. A notable example is surface insertion, or mesh arrangement problem we used in chapter~\ref{chp:wmtk}: the exact version is still the bottleneck of our tetrahedral mesh generation algorithm, but recent advance in mesh arrangement~\cite{Hu:2019:fTetWild,zhou2016mesh,ember2022} is promising on this path.
+\item \emph{Volume-Aware 3D Geometry Processing}
+can be another venue of interesting future works. Similar to the principle we explained in chapter~\ref{chp:scaf}, a background mesh provides implicit and easy ways to check for the geometry validity, for example it turns global surface self intersection into locally inversion checks and would unify the framework in different shape and order of finite element cells. With tetrahedral based virtual domain, traditional geometry processing algorithms, including smoothing, fairing, and animation, can all be more efficient and reliable under topology constrains. A notable example is surface insertion, or mesh arrangement problem we used in chapter~\ref{chp:wmtk}: the exact version is still the bottleneck of our tetrahedral mesh generation algorithm, but recent advance in mesh arrangement~\cite{Hu:2019:fTetWild,zhou2016mesh,ember2022} is promising on this path.
 
+\item \emph{Robust Large-Scale Geometry Dataset Processing}
 Finally, such advance of new processing algorithms and data collection techniques is the stepping stone to fully leverage information from the large scale dataset\cite{Koch_2019_CVPR,zhou2016thingi10k}, and have the dataset to accomplish tasks, including segmentation, feature detection, physics understanding, and robotics manipulation.
+
+\item \emph{Large-Scale Physical Data Validation}
+\end{enumerate}
+
+
 %Mesh generation with fast boolean.
 %Finally, the availability of data is essential to algorithm verification and data-driven algorithm development. In collaboration with OnShape Inc. and colleagues at NYU, we collected and curated large-scale computed-aided design (CAD) models created by mechanical engineers. The dataset contains one million geometry shapes with rich information. 
 %The dataset is publicly online, and the result is presented in “A Big CAD Model Dataset For Geometric Deep Learning,” Koch et al., CVPR, 2019. 
