@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 14:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2257,7 +2257,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  41459 strings out of 478037
  809723 string characters out of 5841058
- 1155042 words of memory out of 5000000
+ 1156042 words of memory out of 5000000
  57956 multiletter control sequences out of 15000+600000
  769159 words of font info for 848 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2289,7 +2289,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (157 pages, 62659304 bytes).
+Output written on docs/thesis.pdf (157 pages, 62659377 bytes).
 PDF statistics:
  1192 PDF objects out of 1200 (max. 8388607)
  497 compressed objects within 5 object streams
