@@ -1674,6 +1674,13 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tl
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-t1.vf
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
+INPUT ./front-matter/abstract.tex
+INPUT ./front-matter/abstract.tex
+INPUT ./front-matter/abstract.tex
+INPUT front-matter/abstract.tex
+INPUT ./front-matter/abstract.tex
+INPUT ./front-matter/abstract.tex
+INPUT front-matter/abstract.tex
 INPUT docs/thesis.toc
 INPUT docs/thesis.toc
 INPUT docs/thesis.toc

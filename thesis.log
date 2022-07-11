@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  8 JUL 2022 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 13:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1520,7 +1520,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 24.88pt on input line 247.
  [3
 
-] [4
+] (./front-matter/abstract.tex) [4
 
 ] (docs/thesis.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -2255,10 +2255,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41454 strings out of 478037
- 809576 string characters out of 5841058
- 1155042 words of memory out of 5000000
- 57953 multiletter control sequences out of 15000+600000
+ 41459 strings out of 478037
+ 809723 string characters out of 5841058
+ 1156042 words of memory out of 5000000
+ 57956 multiletter control sequences out of 15000+600000
  769159 words of font info for 848 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1327b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2289,7 +2289,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (157 pages, 62657238 bytes).
+Output written on docs/thesis.pdf (157 pages, 62658564 bytes).
 PDF statistics:
  1192 PDF objects out of 1200 (max. 8388607)
  497 compressed objects within 5 object streams
