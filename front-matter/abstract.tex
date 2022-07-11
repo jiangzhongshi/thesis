@@ -1,19 +1,13 @@
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "thesis"
-%%% End:
-
 In various applications from artistic creation, scientific computing, mechanical engineering, and next generation fabrication pipelines, 
 the modeling of 3D geometric shapes, materials, and texture, and the simulation of their deformation and interactions within the virtual environment serve as important building blocks.
-% Of the process, the central representation is the geometry and associated data.
 Depending on the application-dependent goal, and optimal algorithmic design, the geometry data may be represented as planar, surface, volume and even through higher order basis.
 Across planar, volume, surface, and curved representations, each of them are more desirable for different applications. However, the robust ways to associate them, and moreoever leverage the association to has been scarce.
-This thesis investigates the problem related to the representations of data on 3D shapes, and the association data across some different representations. The thesis propose the use of new geometrical principles in various stages of geometric modeling and processing. The principles can be integrated on top of existing algorithms, in order to guarantee the validity and effectiveness of algorithmic stages in surface parameterization, surface deformation, and scientific simulation.
+This thesis investigates the problem related to the representations of data on 3D shapes, and the association data across some different representations. 
 
+The thesis propose the use of new geometrical principles in various stages of geometric modeling and processing. The principles can be integrated on top of existing algorithms, in order to guarantee the validity and effectiveness of algorithmic stages in surface parameterization, surface deformation, and scientific simulation.
 Such guards enhance the robustness and easier to build assertions for correctness throughout the error-prone process. It is also useful for reliably accelearte bottleneck of computation. 
-% The two central technical object in this thesis is the interaction between mesh: discretization of spatial domain, and map: the bijective associations across such domains. I will showcase how they can be closely connected to each other.
-In addition, with robust association of geometry, the thesis further leverage such principles to search for suitable applications: simplified and coarsened modeling surface mesh, and coarse and bijective high order tetrahedral meshes.
+In addition, the thesis further leverage such principles to explore improved solutions for modeling and simulation. 
+For example, an algorithm that reliably creates coarsened surface mesh to accelerate the common geometric modeling operations, and another builds coarse and bijective high order tetrahedral meshes for fast animation and scientific simulations.
 Furthermore, for the practical adoption of such methodology, the thesis also provides a novel way to formulate mesh processing and adapation algorithm, which makes it easier to implement robust and reliable algorithm, with a slight overhead cost that can be easily remedied through built in prallellization structure.
 
 Besides the algorithm design, the thesis also explore the underpinning theory to provide guarantees, along with extensive numerical validations with the implemented software, involving tens of thousands of complex different geometry shapes. Finally, in an effort of reproducibility, and foster further research on this direction, I also release the program implementation and detailed specifications to be open source and accessible.
