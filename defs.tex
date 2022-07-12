@@ -7,7 +7,11 @@
 %
 
 % Graphics:
+\ifdefined\draftversion
 \usepackage[draft]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
