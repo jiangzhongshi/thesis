@@ -11,20 +11,20 @@
 %% easily spot "overfull boxes" in the output. Use the second
 %% line for the final version.
 %\documentclass[12pt,draft,letterpaper]{report}
-\documentclass[12pt,oneside,letterpaper, draft]{report}
+\documentclass[12pt,oneside,letterpaper]{report}
 % \usepackage[UTF8]{ctex}
-
+% \def\draftversion{}
+% Use or comment this to enable/disable draft version
+\newcommand{\draftfinal}[2]{\ifdefined\draftversion#1\else#2\fi}
+\newcommand{\draftonly}[1]{\draftfinal{#1}{}}
+\newcommand{\finalonly}[1]{\draftfinal{}{#1}}
 
 
 % ----------------------------------------
 % Macro to switch between draft version and final version
 % ----------------------------------------
 
-% Use or comment this to enable/disable draft version
-\def\draftversion{}
-\newcommand{\draftfinal}[2]{\ifdefined\draftversion#1\else#2\fi}
-\newcommand{\draftonly}[1]{\draftfinal{#1}{}}
-\newcommand{\finalonly}[1]{\draftfinal{}{#1}}
+
 
 
 % ----------------------------------------
