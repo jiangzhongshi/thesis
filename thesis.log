@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  12 JUL 2022 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.1)  12 JUL 2022 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2216,15 +2216,19 @@ pdfTeX warning: pdflatex (file ./wmtk-tex/figs/tet3d-stats.pdf): PDF inclusion:
 Chapter 7.
 (./front-matter/conclusion.tex
 
-LaTeX Warning: Reference `chp:shell,chp:curve' on page 111 undefined on input l
-ine 21.
+LaTeX Warning: Reference `chp:shell, chp:curve' on page 111 undefined on input 
+line 10.
 
 [111
 
 ]
 
+LaTeX Warning: Reference `chp:shell,chp:curve' on page 112 undefined on input l
+ine 26.
+
+
 Package natbib Warning: Citation `Koch_2019_CVPR' on page 112 undefined on inpu
-t line 27.
+t line 34.
 
 ) [112]
 Appendix A.
@@ -2255,11 +2259,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41459 strings out of 478037
- 809723 string characters out of 5841058
+ 41456 strings out of 478037
+ 809645 string characters out of 5841058
  1155041 words of memory out of 5000000
  57956 multiletter control sequences out of 15000+600000
- 769159 words of font info for 848 fonts, out of 8000000 for 9000
+ 768788 words of font info for 846 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,17n,83p,1327b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/o
@@ -2289,7 +2293,7 @@ x/txexs.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></opt/texlive/texdi
 r/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on docs/thesis.pdf (157 pages, 62659532 bytes).
+Output written on docs/thesis.pdf (157 pages, 62660547 bytes).
 PDF statistics:
  1192 PDF objects out of 1200 (max. 8388607)
  497 compressed objects within 5 object streams
