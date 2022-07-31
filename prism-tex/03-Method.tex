@@ -6,6 +6,7 @@
     
 \end{figure}
 
+
 \section{Method}\label{prism:sec:method}
 Our algorithm (Figure~\ref{prism:fig:pipeline}) converts a self-intersection free, orientable, manifold triangle mesh $\T = \{V_\T,F_\T\}$, where $V_\T$ are the vertex coordinates and
 $F_\T$ the connectivity of the mesh, into a shell composed of generalized prisms $\S = \{(B_\S,M_\S,T_\S),F_\S\}$, where $B_\S$, $M_\S$, $T_\S$ are bottom, middle, and top surfaces of the shell, 
@@ -30,8 +31,12 @@ we initially assume that our input triangle mesh does not contain \emph{singular
 \subsection{Shell and Projection}
 \label{prism:sec:projection}
 
-Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{prism:fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab} (we refer to Appendix~\ref{app:dblayer} for an explanation on why we need two slabs).
-For brevity, we will refer to a generalized prism as a prism.
+Let us consider a single generalized prism $\Prism$ in a prismatic layer $\S$ (Figure \ref{prism:fig:prism_decomposition} left). The generalized prism $\Prism$ is defined by the position of the vertices of three triangles, one at the top, with coordinates $t_1,t_2,t_3$, one at the bottom, with coordinates $b_1,b_2,b_3$, and one in the middle, implicitly defined by a per-vertex parameter $\alpha_i \in [0, 1]$, with coordinates $m_i = \alpha_i t_i + (1-\alpha_i) b_i, i=1,2,3$. We will call the top (bottom) ``half'' of the prism \emph{top (bottom) slab}. For brevity, we will refer to a generalized prism as a prism.
+
+Note that we want to ensure that our shell validity is independent from the enumeration of the faces; for this reason, we require that the conditions I1 and I2 are satisfied for all possible decompositions. Without using the double slab, different decompositions of the prism will result in  different intersections with the middle surface. In other words, the projection operator will project the input mesh to a different set of triangles on the middle surface. 
+The double slab makes the middle surface independent of the decomposition by construction. 
+We note that Theorem~\ref{thm:bevel} is valid only for double-slab prisms since the statement requires that one prism contains only one triangle.
+
 
 % Without loss of generality, we will describe our algorithm only for the top half of the prism $\Prism$ denoted $\H$ since the other half of the construction is symmetric.
 
