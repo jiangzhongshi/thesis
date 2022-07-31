@@ -117,7 +117,6 @@ A theoretical downside of this modification {is that} it affects the distortion 
 {Our formulation naturally unifies bijective geometric optimization problems in 2D and 3D, so the} algorithm readily extends to the 3D case with only one major difference: the scaffold becomes a tetrahedral mesh, which is computationally more challenging to create and update.
 \paragraph{{Mesh Improvement}}
 We use TetGen \cite{tetgen} to generate the initial scaffold and the local operations proposed in \cite{Klingner:2009} to optimize the scaffold's quality in the subsequent iterations. 
-%We describe our mesh improvement algorithm in details in Appendix \ref{appendix:improvement} \DP{TODO}.
 %
 It is unfortunately not possible to directly use TetGen at every iteration as we did with Triangle in the 2D case, since TetGen fails when boundaries get too close, which is common in our experiments.
 

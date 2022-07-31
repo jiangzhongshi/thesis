@@ -43,7 +43,7 @@ Figure~\ref{bichon:fig:high-order} shows the position of the control points $c_j
 In particular, for $k=1$, since $g$ is affine, $J_{g^\tau}$ is constant and the positivity reduces to the positive orientation of the vertices \cite{shewchuk1997adaptive}.
 
 Note that, while bijectivity of the geometric map $g^\tau$ implies positivity, the reverse is not true. 
-Therefore, our algorithm not only checks for $\det(J_{g^\tau}) > 0$, but also ensures that the boundary $\partial\T^k$ does not intersect; we show in Appendix~\ref{cumin:sec:bij-proof} that these two conditions guarantee the bijectivity of $g^\tau$.
+Therefore, our algorithm not only checks for $\det(J_{g^\tau}) > 0$, but also ensures that the boundary $\partial\T^k$ does not intersect; we show in section~\ref{cumin:sec:bij-proof} that these two conditions guarantee the bijectivity of $g^\tau$.
 Furthermore, our algorithm ensures that the distance from any point in $\P$ to $\partial\T^k$ (the surface of $\T^k$) is smaller than an user-controlled parameter $\varepsilon$.
 
 \begin{figure}
@@ -101,7 +101,7 @@ We call a curved mesh $\T^k$ and its mapping $\phi^k$ to $\M$ \emph{valid} if it
 \end{definition}
 
 \paragraph{Overview.} 
-Our algorithm starts by creating a valid mesh (i.e., it satisfies~\ref{def:curved-mesh}), then it performs local operations (Appendix~\ref{app:local-ops}) to improve $\T^k$ (i.e., coarsen it and improve its quality) while ensuring all the conditions remain valid with respect to local modification. 
+Our algorithm starts by creating a valid mesh (i.e., it satisfies~\ref{def:curved-mesh}), then it performs local operations (section~\ref{app:local-ops}) to improve $\T^k$ (i.e., coarsen it and improve its quality) while ensuring all the conditions remain valid with respect to local modification. 
 To achieve this goal, our algorithm uses two stages: (1) curved shell generation and (2) tetrahedral mesh generation and optimization.
 
 \begin{figure}
@@ -208,7 +208,7 @@ The outcome of the previous stage is a curved tetrahedralization of $\prS$ that 
     \label{bichon:fig:conforming-overview}
 \end{figure}
 
-Several solution exists for this problem (Section~\ref{cumin:sec:rel:linear}) and the most common implementation is TetGen~\cite{tetgen}. Most algorithms refine the boundary, which allows {deriving} bounds on the quality of the tetrahedral mesh. However, in our setting, this is problematic, as any change will have to be propagated to the curved shell. To avoid coupling the volumetric meshing problem with the curved shell coarsening, while technically possible it is very challenging to implement robustly, we opt for using a tetrahedral meshing algorithm that preserves the boundary exactly. Not many algorithms support this additional constraint, the only one with a public implementation is the widely used TetGen algorithm. However, we discovered that, when this option is used, it suffers from robustness issues, which we detail in Appendix \ref{app:tetgen}.
+Several solution exists for this problem (Section~\ref{cumin:sec:rel:linear}) and the most common implementation is TetGen~\cite{tetgen}. Most algorithms refine the boundary, which allows {deriving} bounds on the quality of the tetrahedral mesh. However, in our setting, this is problematic, as any change will have to be propagated to the curved shell. To avoid coupling the volumetric meshing problem with the curved shell coarsening, while technically possible it is very challenging to implement robustly, we opt for using a tetrahedral meshing algorithm that preserves the boundary exactly. Not many algorithms support this additional constraint, the only one with a public implementation is the widely used TetGen algorithm. However, we discovered that, when this option is used, it suffers from robustness issues.
 %
 To solve this problem in our specific setting, we propose in the following five step algorithm (Figure~\ref{bichon:fig:conforming-overview}) taking advantage of the availability of a shell, based on the  TetWild~\cite{hu2018tetrahedral} algorithm.
 
@@ -273,3 +273,5 @@ We then perform gradient descent {for} all high-order nodes in the one-ring neig
 
 \paragraph{Collapse and Swap}
 The collapse and swap are the same as in a linear mesh, and we place the high-order nodes of the newly created face on the linear flat face.
+
+\input{curve_meshing_in_shell_tex/91-app-local-ops.tex}

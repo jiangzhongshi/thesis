@@ -206,12 +206,12 @@ By interleaving a remeshing step performed with our algorithm after every operat
 \begin{figure}
     \centering
     \includegraphics[width=0.95\linewidth]{prism-tex/figs/bunny-displacement}
-    \caption{Top: an input mesh decimated to create a coarse base mesh, and the details are encoded in a displacement map (along the normal) with correspondences computed with Phong projection \cite{kobbelt1998interactive}. Bottom: the decimation is done within our shell while using the same projection as above. With our construction, this projection becomes bijective (Appendix \ref{app:bilinear}), avoiding the artifacts visible on the ears of  the bunny in the top row.}
+    \caption{Top: an input mesh decimated to create a coarse base mesh, and the details are encoded in a displacement map (along the normal) with correspondences computed with Phong projection \cite{kobbelt1998interactive}. Bottom: the decimation is done within our shell while using the same projection as above. With our construction, this projection becomes bijective (Section \ref{app:bilinear}), avoiding the artifacts visible on the ears of  the bunny in the top row.}
     \label{prism:fig:displacement-mapping}
     
 \end{figure}
 \paragraph{Displacement Mapping}
-The middle surface of the shell is a coarse triangular mesh that can be directly used to compress the geometry of the input mesh, storing only the coarse mesh connectivity and adding the details using normal and displacement maps (Figure \ref{prism:fig:displacement-mapping}). A common way to build such displacement is to project {\cite{kobbelt1998interactive,collins2002mesh}} the dense mesh on the coarser version. As shown in Appendix \ref{app:bilinear}, our method guarantees that this natural projection is also bijective as long as the coarse mesh is a section. This 
+The middle surface of the shell is a coarse triangular mesh that can be directly used to compress the geometry of the input mesh, storing only the coarse mesh connectivity and adding the details using normal and displacement maps (Figure \ref{prism:fig:displacement-mapping}). A common way to build such displacement is to project {\cite{kobbelt1998interactive,collins2002mesh}} the dense mesh on the coarser version. As shown in Section \ref{app:bilinear}, our method guarantees that this natural projection is also bijective as long as the coarse mesh is a section. This 
 {alleviates the loss of information}
 % ensures that no information is lost 
 even on challenging geometry configurations, and our shell can thus be used to automate the creation of projection cages and displacement maps.

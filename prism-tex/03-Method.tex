@@ -150,7 +150,8 @@ We say that a prismatic shell $\S$ is \emph{valid with respect to a mesh $\hat\T
 \end{definition}
 If a shell is valid, from I1, I2, then by Theorem \ref{thm:projection}, it follows that any map between sections induced by the projection operator $\P$ is bijective.
 
-I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition, that is, we require the dot product to be positive with respect to all \emph{three} pillars of a prism inside the convex hull. An interesting and useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Appendix \ref{app:bilinear}, Figure~\ref{prism:fig:displacement-mapping}).
+I2 ensures that the input mesh is a \emph{valid section} independently from the decomposition; that is, we require the dot product to be positive concerning all \emph{three} pillars of a prism inside the convex hull. 
+A useful side effect of this validity condition is that it ensures the bijectivity of a natural nonlinear parametrization of the prism interior (Section \ref{app:bilinear}, Figure~\ref{prism:fig:displacement-mapping}).
 
 \subsection{Shell Initialization}
 \label{prism:sec:initialization}
@@ -544,12 +545,12 @@ Theorem~\ref{thm:invariants} requires some minor additional considerations. As a
 because no singularities are adjacent.
 
 
-Finally Proposition~\ref{thm:bevel} requires a new proof since the beveling pattern used for singularities is different.
+Finally, Proposition~\ref{thm:bevel} requires a new proof since the beveling pattern used for singularities is different.
 % \begin{proposition}
 % For a prism $\Prism$ with one singularity, 
 % \end{proposition}
 \begin{proof}
-In  Figure~\ref{prism:fig:bevel-explain} right, we highlight in red and orange the triangles not covered by the discussion in Appendix~\ref{app:bevel}. 
+In  Figure~\ref{prism:fig:bevel-explain} right, we highlight in red and orange the triangles not covered by the discussion. 
 The prism corresponding to an orange middle triangle intersects the edge-adjacent triangle. And since the new pillars are computed as the average of the normals of the two adjacent triangles with dihedral angle strictly less than $360^\circ$ 
  (Section~\ref{prism:sec:singularities} inset), each dot product is positive. 
 The prism {for} a pink middle triangle intersects only the interior of the original triangle, and the dot product between the pillars and the triangle normal are positive by construction. 
@@ -589,5 +590,39 @@ We thus freeze these vertices and never allow them to move or be affected by any
 
 
 
+\subsection{Bijectivity of the Nonlinear Prismatic Transformation}
+\label{app:bilinear}
+In this section, we show
+the isoparametric transformation of prismatic finite element \cite{ciarlet1991basic} is also bijective if I1 holds.
 
-.
+We follow the notation from {Appendix~\ref{app:I1}.} 
+The map is defined as (for the top slab)
+\begin{align*}
+    f(u,v,\eta) &= u e_1 + v e_2  + \eta n_0 + u \eta {n_{01}} +
+    v \eta {n_{02}},\\
+    \det J_f &=  \langle (1-u-v) n_0 + u n_1 + v n_2, e_1 + \eta {n_{01}},
+    e_2 + \eta {n_{02} \rangle,}
+\end{align*}
+where $\eta$ is the variable corresponding to the thickness direction{, and $n_{ij} = n_j - n_i$.}
+Observe that $\det J_f(u,v,\eta_0)$ is linear in $u,v$ for fixed $\eta_0$, the extrema will only be achieved at the corner points \cite{knabner2001invertibility}. Therefore, it is sufficient to check the signs at three edges
+$(0,0,\eta)$, $(1,0,\eta)$, $(0,1,\eta)$ for $\eta \in [0,1]$.
+\begin{align*}
+    & \det J_f(0,0,\eta) \\
+    &= \langle n_0, (1-\eta)e_1 +\eta (e_1 + n_1 - n_0),(1-\eta)e_2 +\eta (e_2 + n_2 - n_0) \rangle \\
+    &= (1-\eta)^2\langle n_0, e_1, e_2 \rangle + 
+    (1-\eta)\eta \langle n_0,e_1, e_2+n_2\rangle \\&+ 
+    (1-\eta)\eta \langle n_0, e_1+n_1, e_2\rangle + 
+    \eta^2\langle n_0, e_1+n_1, e_2 + n_2\rangle\\
+    &= (1-\eta)^2 \text{vol}_4 + (1-\eta)\eta (\text{vol}_3 +\text{vol}_1) + \eta^2 \text{vol}_2 > 0.
+\end{align*}
+
+By symmetry, 
+it is easy to verify {that the following are positive},
+\begin{align*}
+    \det& J_f(1,0,\eta) = (1-\eta)^2 \text{vol}_6 + (1-\eta)\eta (\text{vol}_7 +\text{vol}_5) + \eta^2 \text{vol}_8{,} \\
+    \det& J_f(0,1,\eta) = (1-\eta)^2 \text{vol}_{11} + (1-\eta)\eta (\text{vol}_9 +\text{vol}_{10}) + \eta^2 \text{vol}_{12}.\\
+\end{align*}
+
+Furthermore, we observe that, for a quadratic bezier curve piece $a t^2 + b t (1-t) + c (1-t)^2, t\in [0,1]$, the sufficient and necessary condition is $a>0, c>0, b > - 2 \sqrt{a c}$, and the last relation is equivalent to (but more clearly stated as) $b > 0 || b^2 - 4 a c < 0$.
+Note that the current condition (all 12 positive tetra) imposes an unnatural constraint on edge splits: in the case of an aggressively positive prism (all decompositions are all-positive), the sub-prism may not be positive in the same check. 
+While this will not break anything, forbidding edge split may lead to unexpected quality loss in the later optimization procedure.

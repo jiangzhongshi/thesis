@@ -1,53 +1,11 @@
-
-\section{Bijectivity of the Nonlinear Prismatic Transformation}
-\label{app:bilinear}
-In this section, we show
-that the isoparametric transformation of prismatic finite element \cite{ciarlet1991basic} is also bijective if I1 holds.%(on each half of the shell).
-
-We follow the notation from {Appendix~\ref{app:I1}.} 
-The map is defined as (for the top slab)
-\begin{align*}
-    f(u,v,\eta) &= u e_1 + v e_2  + \eta n_0 + u \eta {n_{01}} +
-    v \eta {n_{02}},\\
-    \det J_f &=  \langle (1-u-v) n_0 + u n_1 + v n_2, e_1 + \eta {n_{01}},
-    e_2 + \eta {n_{02} \rangle,}
-\end{align*}
-where $\eta$ is the variable corresponding to the thickness direction{, and $n_{ij} = n_j - n_i$.}
-Observe that $\det J_f(u,v,\eta_0)$ is linear in $u,v$ for fixed $\eta_0$, the extrema will only be achieved at the corner points \cite{knabner2001invertibility}. Therefore, it is sufficient to check the signs at three edges
-$(0,0,\eta)$, $(1,0,\eta)$, $(0,1,\eta)$ for $\eta \in [0,1]$.
-\begin{align*}
-    & \det J_f(0,0,\eta) \\
-    &= \langle n_0, (1-\eta)e_1 +\eta (e_1 + n_1 - n_0),(1-\eta)e_2 +\eta (e_2 + n_2 - n_0) \rangle \\
-    &= (1-\eta)^2\langle n_0, e_1, e_2 \rangle + 
-    (1-\eta)\eta \langle n_0,e_1, e_2+n_2\rangle \\&+ 
-    (1-\eta)\eta \langle n_0, e_1+n_1, e_2\rangle + 
-    \eta^2\langle n_0, e_1+n_1, e_2 + n_2\rangle\\
-    &= (1-\eta)^2 \text{vol}_4 + (1-\eta)\eta (\text{vol}_3 +\text{vol}_1) + \eta^2 \text{vol}_2 > 0.
-\end{align*}
-
-By symmetry, 
-it is easy to verify {that the following are positive},
-\begin{align*}
-    \det& J_f(1,0,\eta) = (1-\eta)^2 \text{vol}_6 + (1-\eta)\eta (\text{vol}_7 +\text{vol}_5) + \eta^2 \text{vol}_8{,} \\
-    \det& J_f(0,1,\eta) = (1-\eta)^2 \text{vol}_{11} + (1-\eta)\eta (\text{vol}_9 +\text{vol}_{10}) + \eta^2 \text{vol}_{12}.\\
-\end{align*}
-
-
-
-
 \section{Variants}
 \subsection{Pointless Variant}
-We extend the framework, by allowing the relaxation of definition of a section. 
+We extend the framework by allowing the relaxation of the definition of a section. 
 Originally, any intersection between the triangle and the (different decomposition of the) prism is counted. Here, we explicitly forgive when the intersection is only one point on the vertex of mid surface and the triangle. 
 This predicate can be easily implemented, making use of the bitwise equal coordinates.
-Therefore, the initial tracking section only follows edge-adjacency relationship, instead of the vertex adjacent one in the main text. 
+Therefore, the initial tracking section only follows the edge-adjacency relationship, instead of the vertex adjacent one in the main text. 
 With such adjusted condition for section, the optimization can be trivially accomodated. The only thing that is different (simpler) is the part for bevel, since we have less triangles to consider.
-The existing one is still valid, however, we can get away with simpler red-green intersection
+The existing one is still valid, however, we can get away with a simpler red-green intersection
 
 \subsection{Dynamic Intersection Check}
-To make easier the guarantee of a self-intersection-free shell, substitue the AABB tree collision check with a dynamic hashgrid. We initialize two hashgrids at the beginning, one for top surface and another one for bottom surface. This is followed by additional shrinking to make sure they are clear. Each local opeartion is responsible to trial and keep the validity of the surfaces. Furthermore, the top/bottom surface should not interfere with the reference input surface, this can be accelerated through the maintainance of the tracking list, and is trial checked before a local operation is performed.
-
-\subsection{Positive Detereminant for Natural Prism Map}
-This section follows and extends Appendix~\ref{app:bilinear}
-In fact, we observe that, for a quadratic bezier curve piece $a t^2 + b t (1-t) + c (1-t)^2, t\in [0,1]$, the sufficient and necessary condition is $a>0, c>0, b > - 2 \sqrt{a c}$, and the last relation is equivalent to (but more clearly stated as) $b > 0 || b^2 - 4 a c < 0$.
-The current text (all 12 positive tetra) impose an unnatural constraint on edge splits: in the case of an agressively positive prism (all decompositions are all-positive), sub-prism may not be positive in the same sense. While this will not break anything, forbidding edge split will lead to unexpected lower quality in the optimization procedure.
+To make it easier to guarantee a self-intersection-free shell, we substitute the AABB tree collision check with a dynamic hash grid. We initialize two hash grids at the beginning, one for the top surface and another one for the bottom surface. This is followed by additional shrinking to make sure they are clear. Each local opeartion is responsible to trial and keep the validity of the surfaces. Furthermore, the top/bottom surface should not interfere with the reference input surface, this can be accelerated through the maintainance of the tracking list, and is trial checked before a local operation is performed.
