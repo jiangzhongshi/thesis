@@ -1,7 +1,6 @@
 class TetMesh
 {
 public:
-
     bool split_edge(const Tuple& t, 
         std::vector<Tuple>& new_tets);
     bool collapse_edge(const Tuple& t,
@@ -17,7 +16,6 @@ public:
         const std::vector<Tuple>& intersected_edges);
 
 protected:
-
     bool invariants(const std::vector<Tuple>& tets);
     
     bool split_before(const Tuple& t);

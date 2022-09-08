@@ -244,21 +244,10 @@ Our curved meshes can be directly used to solve different partial differential e
 
 %took 5.01566s
 
-% \begin{figure}
-%     \centering
-%     % \includegraphics{}
-%     \TODO{do me}
-%     \caption{Example of using a curved mesh as animation proxy.}
-%     \label{bichon:fig:anim}
-% \end{figure}
 \paragraph{Fast Animation}
 Our coarse curved meshes can be {used} as animation proxies as in~\cite{mezger2007finite,Suwelack2013}. We first compute an as-coarse-as-possible curved mesh (i.e., we set $\varepsilon$ to infinity). Then we apply the boundary condition to simulate an elastic distortion of the curved mesh using linear elements. Finally, we use our bijective map $\varphi^4$ to map the displacement back to the input high-detailed surface mesh (Figure~\ref{bichon:fig:teaser}). The results are almost indistinguishable {to} a classical pipeline (i.e., mesh the input mesh), but the runtime is 400 times faster (8s versus over 50 minutes). 
 
 
-
-% \paragraph{Tessellation Shading}
-% \TODO{probably skip, if we do, we can rename the section}
-% rendering example, as coarse as possible, high error is ok, simplifying seams
 
 %\subsection{Rendering}
 % \subsection{Reverse Engineering}

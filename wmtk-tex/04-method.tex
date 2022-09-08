@@ -122,8 +122,9 @@ We show how the library is used in a classical example, shortest edge collapse. 
 
 Equipped with the 3D position attribute, which at this point will be automatically kept up to date by the library, we can now schedule the collapse operation (Algorithm \ref{algo:shortest-sced}). For shortest edge collapse, we want to attempt to collapse all edges, prioritizing the shortest ones, until we reach a fixed number of collapses \texttt{n\_collapse}: in the code we registering the operation type (\texttt{ops}), specify how to update the queue after an operation (\texttt{renew}) by adding all the neighbouring edges, and specifying the edge length as a priority (\texttt{priority}). Note that the {outdated} elements in the queue that are affected by a local operation are automatically invalidated using a tagging mechanism on the tuples which is opaque to the user.
 
-\begin{algorithm}
+% TODO code too long 
+\begin{longlisting}
 \inputminted{cpp}{wmtk-tex/code/shortest-sched.cpp}
 \caption{Scheduler setup for the schedule shortest edge collapse.}
 \label{algo:shortest-sced}
-\end{algorithm}
+\end{longlisting}
