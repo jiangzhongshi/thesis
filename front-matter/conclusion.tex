@@ -6,7 +6,7 @@ To achieve this broader goal, there are still many open and exciting problems to
   \item \emph{Shape-Aware Adaptive Mesh Refinement}:
 In chapter~\ref{chp:curve}, we showcased the benefit of surface and volume simplification in the context of scalable visualization and efficient physical simulation. 
 On the other hand, we can further extend the pipeline to refine back towards a given geometry by adding detail and smoothness adaptively. Combined with an Adaptive Mesh Refinement (AMR) pipeline, such features are essential for scientific computing and computational design.
-Specifically, given a detailed reference shape with material assignment, the algorithm in chapters~\ref{chp:shell, chp:curve} coarsen the volume domain with drastically fewer elements. 
+Specifically, given a detailed reference shape with material assignment, the algorithm in chapters~\ref{chp:shell},\ref{chp:curve} coarsen the volume domain with drastically fewer elements. 
 The governing equations with transferred boundary conditions may be efficiently solved in such a simplified domain. The geometry might refine where needed depending on the current solution's smoothness or accuracy. 
 Note that such refinement should always converge to the reference shape to bring the geometry error down, and finally, we can achieve an adaptive solution on an otherwise dense geometry. 
 
