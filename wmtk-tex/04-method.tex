@@ -42,11 +42,11 @@ Both invariant and attribute updates require navigating a mesh. Instead of relyi
 
 Our API provides two abstractions: a \texttt{TetMesh} (and \texttt{TriMesh} class for 2D) (Algorithm \ref{algo:tetmesh}), and a \texttt{Scheduler} (Algorithm~\ref{algo:scheduler}).
 
-\begin{algorithm}
+\begin{longlisting}
 \inputminted{cpp}{wmtk-tex/code/tetmesh.cpp}
 \caption{API of our \texttt{TetMesh} class.}
 \label{algo:tetmesh}
-\end{algorithm}
+\end{longlisting}
 
 % \begin{algorithm}
 % \inputminted{cpp}{wmtk-tex/code/trimesh.cpp}
@@ -55,11 +55,11 @@ Our API provides two abstractions: a \texttt{TetMesh} (and \texttt{TriMesh} clas
 % \end{algorithm}
 
 
-\begin{algorithm}
+\begin{longlisting}
 \inputminted{cpp}{wmtk-tex/code/scheduler.cpp}
 \caption{API of our \texttt{Scheduler}.}
 \label{algo:scheduler}
-\end{algorithm}
+\end{longlisting}
 
 \paragraph{Mesh Classes}
 Both the \texttt{TetMesh} and \texttt{TriMesh} classes provide the basic local operations (e.g., edge split or collapse) and, for each operation, their corresponding \emph{before} and \emph{after} methods. The mesh class is responsible of implementing the operations changing the topology, and the application code must \emph{only} override the before and after methods to update attributes. The before method has a view of the mesh before the operation, and can thus navigate it to cache local attributes, while the after method has a view after the operation is performed, and it is responsible for updating attributes. In the simple case of regular subdivision of a triangle mesh, the \texttt{split\_before} caches the coordinates of the two edge endpoints, and the \texttt{split\_after} computes the position of the newly inserted vertex by averaging them. 
@@ -114,11 +114,11 @@ Finally, since we partition the input mesh using {Morton Encoding} \cite{karras2
 
 We show how the library is used in a classical example, shortest edge collapse. In this case, we add a 3D position to every vertex as a vertex attribute (by default, there are no attributes attached to mesh elements). For every attribute and for every operation we plan to use in the scheduler, we need to provide a function that updates such attribute (Algorithm~\ref{algo:shortest}). In the \texttt{collapse\_before} function, we cache the two vertex coordinates associated with the collapsed edge represented by \texttt{Tuple t}. In the \texttt{collapse\_after} function, we generate a new vertex in the middle of the two endpoints of the collapsed edge. %For instance, this method can be changed to collapse to \texttt{v1p} by simply assigning \texttt{p} to \texttt{v1p}.
 
-\begin{algorithm}
+\begin{longlisting}
 \inputminted{cpp}{wmtk-tex/code/shortest.cpp}
 \caption{Overridden methods in \texttt{TriMesh} sub-class to implement shortest edge collapse.}
 \label{algo:shortest}
-\end{algorithm}
+\end{longlisting}
 
 Equipped with the 3D position attribute, which at this point will be automatically kept up to date by the library, we can now schedule the collapse operation (Algorithm \ref{algo:shortest-sced}). For shortest edge collapse, we want to attempt to collapse all edges, prioritizing the shortest ones, until we reach a fixed number of collapses \texttt{n\_collapse}: in the code we registering the operation type (\texttt{ops}), specify how to update the queue after an operation (\texttt{renew}) by adding all the neighbouring edges, and specifying the edge length as a priority (\texttt{priority}). Note that the {outdated} elements in the queue that are affected by a local operation are automatically invalidated using a tagging mechanism on the tuples which is opaque to the user.
 
