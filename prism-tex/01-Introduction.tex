@@ -22,10 +22,11 @@ Triangular meshes are the most popular representation for discrete surfaces, due
 %
 For this reason, the adaptation of a triangle mesh to a specific set of criteria (surface remeshing) is a core building block in geometry processing, graphics, physical simulation, and scientific computing.
 
-In most applications, the triangular mesh is equipped with attributes, such as textures, displacements, physical properties, and boundary conditions (Figure~\ref{prism:fig:teaser}). Whenever remeshing is needed, these properties must be transferred on the new mesh, a task which has been extensively studied in the literature and for which robust and generic solutions are still lacking (Section \ref{prism:sec:related}). 
+In most applications, the triangular mesh is equipped with attributes, such as textures, displacements, physical properties, and boundary conditions (Figure~\ref{prism:fig:teaser}). 
+Whenever remeshing is needed, these properties must be transferred on the new mesh, a task which has been extensively studied in the literature and for which robust and generic solutions are still lacking (Section \ref{related:transfer}). 
 Defining a {continuous} bijective map, {more precisely, a homeomorphism where the inverse is also continuous,} between two {geometrically close}  piecewise-linear meshes of the same topology is a difficult problem, even in its basic form, when one of these meshes is obtained by adapting the other in some way (e.g., coarsening, refining, or improving triangle shape).a
 Common approaches to this problem are Euclidean projection
-\cite{jiao2004overlaying}, parametrization on a common domain \cite{praun2001consistent,kraevoy2004cross,lee1998maps}, functional maps \cite{Ovsjanikov:2012}, and generalized barycentric coordinates \cite{Hormann:2017:GBC}.  However, the problem is not fully solved, as all existing methods, as we discuss in greater detail in Section~\ref{prism:sec:related},
+\cite{jiao2004overlaying}, parametrization on a common domain \cite{praun2001consistent,kraevoy2004cross,lee1998maps}, functional maps \cite{Ovsjanikov:2012}, and generalized barycentric coordinates \cite{Hormann:2017:GBC}.  However, the problem is not fully solved, as all existing methods
  often fail to achieve bijectivity and/or sufficient quality of the resulting maps when applied to complex geometries. %geometrical models.
 {Our focus is on correspondences between meshes obtained during a remeshing procedure, instead of solving the more general problem of processing arbitrary mesh pairs.}
 

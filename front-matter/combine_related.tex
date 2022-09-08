@@ -21,7 +21,7 @@ to sparse matrix computations, which are highly optimized for modern parallel
 computing architecture. 
 
 %
-Our algorthim implementation in chapters~\ref{chp:scaf, chp:shell, chp:curve} make extensive use of matrix-based coordinate and connectivity representations. 
+Our algorthim implementation in chapters~\ref{chp:scaf},~\ref{chp:shell},~\ref{chp:curve} make extensive use of matrix-based coordinate and connectivity representations. 
 However, by design, mesh data structures provide a low-level interface to
 manipulate vertices, edges, faces, and tetrahedra.
 Different designs differ vastly in API and implementation details, making it hard to port algorithm from one data structure to another. 
@@ -75,6 +75,7 @@ In the context of parametrization, some approaches optimize the connectivity of 
 {\cite{chazal2005condition,chazal2010ball}} presents conditions for two {sufficiently} smooth surfaces {to be isotopic. Specifically, the projection operator is a homeomorphism.} \cite{mandad2015isotopic} extends this idea to make an approximation mesh that is isotopic to a region. However, they {did} not realize a map suitable for {transferring attributes}.
 
 \section{Attribute Association and Transfer}
+\label{related:transfer}
 \paragraph{Common Domains Cross Parameterization}
 
 An approach to transfer attributes is to map both the source and the target to a common parametrization domain, and to compose the parametrization of the source domain with the inverse parametrization of the target domain to define a map from source to target. In the literature, there are methods that map triangular meshes to disks \cite{Tutte:1963,Floater:97}, region of a plane 
@@ -82,7 +83,7 @@ An approach to transfer attributes is to map both the source and the target to a
 While these approaches allow mappings between completely different surfaces, this is a hard problem to tackle in full generality fully automatically, with guarantees on the output (even some instances of the problem of global parametrization, i.e. maps from a specific type of almost everywhere flat domains to surfaces, lack a fully robust automatic solution).
 
 %
-Our approach in chapters~\ref{chp:shell, chp:curve} uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
+Our approach in chapters~\ref{chp:shell},~\ref{chp:curve} uses a coarse triangular domain embedded in ambient space as the parametrization domain, and uses a vector field-aligned projection within an envelope to parametrize close-by surfaces bijectively to the coarse triangular domain. Compared to the methods listed above, our approach has both pros and cons. Its limitation is that it can only bijectively map surfaces that are similar to the domain, but on the positive side, it: (1) is efficient to evaluate, (2)  guarantees an exact bijection (it is closed under rational computation), (3)  works on complex, high-genus models, even with low-quality triangulations, (4) less likely to suffer from high distortion (and the related numerical problems associated with it), often introduced by the above methods.
 
  Our construction in Chapter~\ref{chp:shell} is not a full replacement for the fully general surface-to-surface maps (since it cannot map surfaces with large geometric differences), but as a complement designed to work robustly and automatically for the specific case of close surfaces, which is common in many geometry processing algorithms, as well as serve as a foundation for generating such close surfaces (e.g., surface simplification and improvement, see Section \ref{prism:sec:applications})
 
@@ -133,7 +134,10 @@ We show in Section \ref{wmtk:sec:applications} a reimplementation of \cite{Alexa
 
 Simulations involving large deformations are common in computer graphics, and if the surface or volume deformed is represented by a mesh, it is inevitable that after a large deformation the quality of the elements will deteriorate, and the mesh will have to be updated. Additionally, it is often required to concentrate more elements in regions of interest whose location is changing during the simulation, for example to capture a fold in a cloth simulation, or a fracture in a brittle material.
 %
-These two challenges are tackled in elastoplastic and viscoplastic simulations \cite{Hutchinson:1996,Bargteil:2007,Wicke:2010,Wojtan:2008}, in fluid simulations \cite{Misztal:2012,Klingner:2006,Ando:2013,Chentanez:2007,clausen:2013}, in cloth simulation \cite{Villard:2002,Bender:2013,Li:2005,Narain:2012,Narain:2013,Pfaff:2014,Simnett:2009}, and fracture simulation \cite{Busaryev:2013}. All these algorithms could benefit from our contribution, to simplify their implementation and obtaining speedup due to the automatic parallelization offered by our approach.
+These two challenges are tackled in elastoplastic and viscoplastic simulations \cite{Hutchinson:1996,Bargteil:2007,Wicke:2010,Wojtan:2008}, 
+in fluid simulations \cite{Misztal:2012,Klingner:2006,Ando:2013,Chentanez:2007,Clausen:2013}, 
+in cloth simulation~\cite{Villard:2002,Bender:2013,Li:2005,Narain:2012,Narain:2013,Pfaff:2014,Simnett:2009}, and fracture simulation \cite{Busaryev:2013}. 
+All these algorithms could benefit from our contribution, to simplify their implementation and obtaining speedup due to the automatic parallelization offered by our approach.
 
 A different approach is discussed in \cite{Grinspun:2002}, where the refinement is performed on the basis to avoid the difficulties with explicit remeshing. However, this approach cannot coarsen a dense input, and also cannot increase the quality of elements, making it usable only for specific scenarios \cite{Grinspun:2002}. Our approach aims at lowering the barrier for integrating explicit remeshing algorithms in simulation applications, thus allowing to directly use standard simulation methods on adaptive meshes without having to pay the high implementation cost for the mesh generation.
 
